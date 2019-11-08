@@ -1,0 +1,1375 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Notes on Comparison of Bayesian Predictive Methods for Model Selection
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\expect}{\mathbb{E}}
+{\mathbb{E}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\var}{\mathrm{Var}}
+{\mathrm{Var}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ypred}{\tilde{y}}
+{\tilde{y}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Models
+\end_layout
+
+\begin_layout Standard
+We're going to be talking about model selection in the linear model (eq
+ 24)
+\begin_inset Formula 
+\begin{align*}
+y_{n}\vert x,w,\sigma^{2} & \sim\mathcal{N}\left(w^{T}x_{n},\sigma^{2}\right)\\
+w\vert\sigma^{2},\tau^{2} & \sim\mathcal{N}\left(0,\tau^{2}\sigma^{2}I\right)\\
+\sigma^{-2} & \sim\mathrm{Gamma}\left(\alpha_{\sigma},\beta_{\sigma}\right)\\
+\tau^{-2} & \sim\mathrm{Gamma}\left(\alpha_{\tau},\beta_{\tau}\right).
+\end{align*}
+
+\end_inset
+
+For a fixed 
+\begin_inset Formula $\tau$
+\end_inset
+
+, this has a closed-form posterior.
+ They authors give 
+\begin_inset Formula $\tau$
+\end_inset
+
+ a weakly informative prior and integrate over it numerically (this is feasible
+ because it's one-dimensional).
+ They will also consider binary classification
+\begin_inset Formula 
+\begin{align*}
+y_{n}\vert x_{n},w & \sim\mathrm{Bernoulli}\left(\Phi\left(w^{T}x_{n}\right)\right)\\
+... & \textrm{with the same other priors as before (note no }\text{\ensuremath{\sigma}\textrm{)}.}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first entry of 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ is 
+\begin_inset Formula $1$
+\end_inset
+
+, i.e.
+ the model always includes an intercept.
+ The 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ are all centered and scaled to have unit variance.
+\end_layout
+
+\begin_layout Standard
+Sub-models are described by 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, which is a vector of binary vectors indicating which columns of 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ are used for prediction.
+ The prior is
+\begin_inset Formula 
+\begin{align*}
+\gamma^{j}\vert\pi & \sim\mathrm{Bernoulli}\left(\pi\right)\\
+\pi & \sim\mathrm{Beta}\left(a,b\right).
+\end{align*}
+
+\end_inset
+
+The values 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are fixed, and 
+\begin_inset Formula $\gamma^{0}=1$
+\end_inset
+
+ so that the intercept is always included.
+\end_layout
+
+\begin_layout Standard
+We will denote by 
+\begin_inset Formula $D$
+\end_inset
+
+ the dataset (
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+) and by 
+\begin_inset Formula $M$
+\end_inset
+
+ the model chosen (
+\begin_inset Formula $\gamma$
+\end_inset
+
+).
+ This notation allows us to discuss the selection methods in generality.
+ But the context will always be linear regression.
+\end_layout
+
+\begin_layout Section
+Objectives
+\end_layout
+
+\begin_layout Standard
+We are going to be looking to find
+\end_layout
+
+\begin_layout Itemize
+The most parsimonious model that
+\end_layout
+
+\begin_layout Itemize
+Gives good enough predictive performance.
+\end_layout
+
+\begin_layout Standard
+By 
+\begin_inset Quotes eld
+\end_inset
+
+parsimonious
+\begin_inset Quotes erd
+\end_inset
+
+ we mean 
+\begin_inset Quotes eld
+\end_inset
+
+uses the fewest variables
+\begin_inset Quotes erd
+\end_inset
+
+.
+ By 
+\begin_inset Quotes eld
+\end_inset
+
+good enough
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+predictive performance
+\begin_inset Quotes erd
+\end_inset
+
+ we will mean various things.
+ Though there is obviously a tradeoff, the parameters of this tradeoff will
+ not be articulated.
+\end_layout
+
+\begin_layout Standard
+We will be considering a number of different procedures for choosing the
+ model.
+ See Table 2 of the paper.
+ In my view, these procedures fall into two categories — ones that require
+ sampling the model space and ones that do not.
+ They also make various levels of assumption concerning the accuracy of
+ your model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Abbreviation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Method
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Computation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Class
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+CV-10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10-fold CV
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Forward stepwise + multi-fold
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-open
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+WAIC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Widely Applicable Information Criterion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Forward stepwise
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-open
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+DIC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Deviance Information Criterion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Forward stepwise
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-open
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+L2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+In-sample L2 loss
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Forward stepwise
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-mixed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+L2-CV
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Leave-one-out CV L2 loss
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Forward stepwise + multi-fold
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-mixed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+L2-k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+L2-CV with up-weighted variance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Forward stepwise + multi-fold
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-mixed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MAP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Single most probable model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MCMC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-closed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MPP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+All variables with posterior probability > 0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MCMC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-closed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+BMA-ref
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Smallest single model with 95% explanatory power
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MCMC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-completed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+BMA-proj
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Smallest projected model with 95% explanatory power
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MCMC + KL projection
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-completed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+BMA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Bayesian model averaging
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+MCMC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+M-closed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+What do we mean 
+\begin_inset Quotes eld
+\end_inset
+
+predictive performance
+\begin_inset Quotes erd
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+We're going to assume that there is a true data generating distribution
+ 
+\begin_inset Formula $p_{t}\left(\tilde{y}\right)$
+\end_inset
+
+ for a new datapoint 
+\begin_inset Formula $\tilde{y}$
+\end_inset
+
+.
+ (We always condition on 
+\begin_inset Formula $x$
+\end_inset
+
+ implicitly.) We will target the KL divergence between 
+\begin_inset Formula $p\left(\tilde{y}\vert D,M\right)$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $p_{t}\left(\tilde{y}\right)$
+\end_inset
+
+ (eq 2):
+\begin_inset Formula 
+\begin{align*}
+\bar{u}\left(M\right) & =KL\left(p_{t}\left(\tilde{y}\right)||p\left(\tilde{y}\vert D,M\right)\right)\\
+ & =\expect_{p_{t}\left(\tilde{y}\right)}\left[\log p\left(\tilde{y}\vert D,M\right)\right]+C.
+\end{align*}
+
+\end_inset
+
+Note that there may be no 
+\begin_inset Formula $p\left(\tilde{y}\vert D,M\right)$
+\end_inset
+
+ such that this divergence is zero; in this sense, this is an M-open setting.
+ Of course, we cannot calculate this because we don't know 
+\begin_inset Formula $p_{t}\left(\tilde{y}\right)$
+\end_inset
+
+.
+ Each method amounts to a different way to estimate this intractable expectation.
+ There may also be differences in what 
+\begin_inset Formula $D$
+\end_inset
+
+ and 
+\begin_inset Formula $M$
+\end_inset
+
+ are allowed to be.
+\end_layout
+
+\begin_layout Subsubsection
+Methods that do not require a reference model
+\end_layout
+
+\begin_layout Standard
+What about
+\begin_inset Formula 
+\begin{align*}
+\textrm{Training:}\quad\bar{u}\left(M\right)\approx & \frac{1}{N}\sum_{n}\log p\left(y_{n}\vert D,M\right)?
+\end{align*}
+
+\end_inset
+
+This is using the empirical distribution to replace 
+\begin_inset Formula $p_{t}\left(\ypred\right)$
+\end_inset
+
+.
+ Watanabe (2010) (and earlier actually, but that's the one I looked at)
+ showed that this is biased in the sense that, even as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+\expect_{p_{t}\left(\ypred\right)}\left[\frac{1}{N}\sum_{n}\log p\left(y_{n}\vert D,M\right)\right] & \ne\expect_{p_{t}\left(\tilde{y}\right)}\left[\log p\left(\tilde{y}\vert D,M\right)\right].
+\end{align*}
+
+\end_inset
+
+ They key problem is that this uses the observed data twice: once to form
+ the posterior predictive 
+\begin_inset Formula $p\left(y_{n}\vert D,M\right)$
+\end_inset
+
+, and once to approximate 
+\begin_inset Formula $p_{t}\left(\ypred\right)$
+\end_inset
+
+.
+ We'll see more in the WAIC.
+\end_layout
+
+\begin_layout Standard
+To avoid double-using the data (term by term) we can consider (eq 3)
+\begin_inset Formula 
+\begin{align*}
+\textrm{CV-10: }\quad\bar{u}\left(M\right)\approx & \frac{1}{N}\sum_{n}\log p\left(y_{n}\vert D_{-s\left(n\right)},M\right),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $D_{-s\left(n\right)}$
+\end_inset
+
+ is the data with some set 
+\begin_inset Formula $s\left(n\right)$
+\end_inset
+
+ left out.
+ When 
+\begin_inset Formula $\left|s\left(n\right)\right|=1$
+\end_inset
+
+ this is nearly unbiased, but then you have to fit 
+\begin_inset Formula $N$
+\end_inset
+
+ models.
+ They use 10 folds (mostly).
+ Still, there may be high variance.
+\end_layout
+
+\begin_layout Standard
+It would be nice to approximate the CV loss without having to fit many differenc
+e models.
+ This is the role of the 
+\begin_inset Quotes eld
+\end_inset
+
+widely applicable information criterion
+\begin_inset Quotes erd
+\end_inset
+
+, WAIC.
+ Define (eq 5)
+\begin_inset Formula 
+\begin{align*}
+V & :=\sum_{n}\var_{p\left(\theta\vert D,M\right)}\left(\log p\left(y_{n}\vert\theta,D,M\right)\right)\\
+\textrm{WAIC: \ensuremath{\quad\bar{u}\left(M\right)\approx}} & \frac{1}{N}\sum_{n}\log p\left(y_{n}\vert D,M\right)-\frac{V}{N}.
+\end{align*}
+
+\end_inset
+
+This is the training set loss from above, but penalized by the average posterior
+ variance of the log probability.
+ Watanabe showed that WAIC is equivalent to leave-one-out CV asymptotically,
+ but without the need to re-fit the model.
+ In particular, he showed (Watanabe 2010, eq 6),
+\begin_inset Formula 
+\begin{align*}
+\expect\left[\textrm{WAIC}\right] & =\expect_{p_{t}\left(\tilde{y}\right)}\left[\log p\left(\tilde{y}\vert D,M\right)\right]+o\left(\frac{1}{N}\right).
+\end{align*}
+
+\end_inset
+
+Observing that 
+\begin_inset Formula $V/N=O\left(1\right)$
+\end_inset
+
+, this also implies that the training utility is biased upwards.
+\end_layout
+
+\begin_layout Standard
+The DIC seems strange and a little ad-hoc.
+ Even reading 
+\begin_inset Quotes eld
+\end_inset
+
+The deviance information criterion: 12 years on
+\begin_inset Quotes erd
+\end_inset
+
+ by the original authors, it seems a bit ad-hoc, a way of coming up with
+ a different notion of 
+\begin_inset Quotes eld
+\end_inset
+
+number of variables
+\begin_inset Quotes erd
+\end_inset
+
+ to plug into what is very similar to an AIC-like correction.
+ The authors say 
+\begin_inset Quotes eld
+\end_inset
+
+The success of DIC has rested largely on its ease of computation and availabilit
+y in standard software.
+\begin_inset Quotes erd
+\end_inset
+
+ Note that DIC preceded WAIC, which might be thought of as just better,
+ although DIC does allow for expectations of log predictives rather than
+ of predictives, which is nice.
+ Also Christian Robert does not like DIC.
+ DIC may be most useful as a lesson in the relative value of implementing
+ something in software vs doing careful theoretical work.
+ Anyway, here it is:
+\begin_inset Formula 
+\begin{align*}
+\bar{\theta} & :=\expect\left[\theta\vert D,M\right]\\
+p_{eff} & :=2\sum_{n=1}^{N}\left(\log p\left(y_{n}\vert\bar{\theta},D,M\right)-\expect_{p\left(\theta\vert D,M\right)}\left[\log p\left(y_{n}\vert\theta,D,M\right)\right]\right)\\
+\textrm{DIC:}\quad\bar{u}\left(M\right) & \approx\frac{1}{N}\sum_{n}\log p\left(y_{n}\vert\bar{\theta},D,M\right)-\frac{p_{eff}}{N}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now let's consider some approximate utilities that simple change the loss
+ function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\textrm{L2}:\quad\bar{u}\left(M\right) & \approx-\left(\frac{1}{N}\sum_{n}\left(y_{n}-\expect\left[\ypred_{n}\vert x_{n},D,M\right]\right)^{2}+\frac{1}{N}\var\left(\ypred\vert x_{n},D,M\right)\right).
+\end{align*}
+
+\end_inset
+
+This is like a bias-variance decomposition for the loss 
+\begin_inset Formula $\expect_{p_{t}\left(\ypred\right)p\left(y\vert D,M\right)}\left[\left(y-\ypred\right)^{2}\right]$
+\end_inset
+
+.
+ Apparently this is asymptotically between the training loss and CV.
+ You can also do a cross-validated version of L2, as well as a version that
+ up-weights the variance term for some reason.
+ These are L2-CV and L2-k respectively.
+\end_layout
+
+\begin_layout Subsubsection
+Methods that require a reference model
+\end_layout
+
+\begin_layout Standard
+Wouldn't it be great if we just had a good estimate of 
+\begin_inset Formula $p_{t}\left(\ypred\right)$
+\end_inset
+
+? Suppose we had an 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ which we are willing to accepts as a perfectly good predictive model.
+ Then we can simply plug in 
+\begin_inset Formula 
+\begin{align*}
+KL\left(p_{t}\left(\ypred\vert x\right)||p\left(\ypred\vert x,D,M\right)\right) & \approx-\int p\left(\ypred\vert x,D,M_{*}\right)\log p\left(\ypred\vert x,D,M\right)d\ypred+C.
+\end{align*}
+
+\end_inset
+
+(Remember that we get a different prediction for each 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+.) This requires an integral over the space of 
+\begin_inset Formula $\ypred$
+\end_inset
+
+, but that's typically low-dimensional.
+ In practice, we average this over all the observed regressors.
+\begin_inset Formula 
+\begin{align*}
+\textrm{BMA-ref}:\quad & \bar{u}\left(M\right)\approx\frac{1}{N}\sum_{n}\int p\left(\ypred\vert x_{n},D,M_{*}\right)\log p\left(\ypred\vert x_{n},D,M\right)d\ypred.
+\end{align*}
+
+\end_inset
+
+Why BMA? Because they use Bayesian model averaging (BMA) over the full model
+ as 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+.
+ More interesting, I think, would be using some other computationally efficient
+ but purely predictive system (regression trees, for instance) as 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ but they don't consider this for some reason.
+\end_layout
+
+\begin_layout Standard
+Of course, once we have BMA for 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ we also have two more natural model guesses:
+\begin_inset Formula 
+\begin{align*}
+\textrm{MAP}:\quad & M=\mathrm{argmax}P\left(M\vert D\right)\\
+\textrm{MPP}:\quad & M=\left\{ \textrm{all regressors such that }P\left(\gamma_{d}\vert D,M_{*}\right)>0.5\right\} .
+\end{align*}
+
+\end_inset
+
+These models do not, I think, directly maximize any version of 
+\begin_inset Formula $\bar{u}\left(M\right)$
+\end_inset
+
+, though they make some intuitive sense.
+ You couldn't get these naturally from a different choice of 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ like regression trees.
+\end_layout
+
+\begin_layout Standard
+Note that maximizing BMA-ref amounts to minimizing the average KL divergence
+ between 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ It will be useful to give this a name:
+\begin_inset Formula 
+\begin{align*}
+\delta\left(M_{*}||M\right) & :=\frac{1}{N}\sum_{n}KL\left(p\left(\ypred\vert x_{n},D,M_{*}\right)||p\left(\ypred\vert x_{n},D,M\right)\right).
+\end{align*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ is an acceptable model, why not choose 
+\begin_inset Formula $M^{*}$
+\end_inset
+
+? Because maybe we actually we want a simpler model that is 
+\begin_inset Quotes eld
+\end_inset
+
+not too far from 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Now, the absolute scale of KL divergence is not something particularly
+ meaningful for continuous distributions, so how far is too far? Dupuis
+ and Robert (2003) recommend specifying a scale using the 
+\begin_inset Quotes eld
+\end_inset
+
+empty model
+\begin_inset Quotes erd
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\textrm{Explanatory power: }\quad\phi\left(M\right) & :=1-\frac{\delta\left(M_{*}||M\right)}{\delta\left(M_{*}||M_{0}\right)}.
+\end{align*}
+
+\end_inset
+
+A bit like a reference model, this requires some notion of 
+\begin_inset Quotes eld
+\end_inset
+
+empty model
+\begin_inset Quotes erd
+\end_inset
+
+ which need not be in the space of models considered, though of course it
+ should be further from 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ than any 
+\begin_inset Formula $M$
+\end_inset
+
+ or the explanatory power can be negative.
+ For regression there is, again, a natural empty model, though in general
+ it seems like any easily-computed naive model could work.
+\end_layout
+
+\begin_layout Standard
+Note that, in BMA-ref, 
+\begin_inset Formula $p\left(\ypred\vert x_{n},D,M\right)$
+\end_inset
+
+ is still formed from the posterior over the parameters 
+\begin_inset Formula $\theta$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+p\left(\ypred\vert x_{n},D,M\right) & =\int p\left(\ypred\vert x_{n},\theta,D,M\right)p\left(\theta\vert D,M\right)d\theta.
+\end{align*}
+
+\end_inset
+
+However, the benefit of 
+\begin_inset Formula $M$
+\end_inset
+
+ is its parsimony, not its posterior, as all we really care about is closeness
+ to 
+\begin_inset Formula $p\left(\ypred\vert x_{n},D,M_{*}\right)$
+\end_inset
+
+.
+ So why not abandon the posterior and simply find the closest predictive
+ distribution to 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ given the constraints of 
+\begin_inset Formula $M$
+\end_inset
+
+? Specifically, for each 
+\begin_inset Formula $\theta^{*}$
+\end_inset
+
+ in the model space of 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+, we define
+\begin_inset Formula 
+\begin{align*}
+\theta^{\perp}\left(\theta^{*}\right) & :=\mathrm{argmin}_{\theta}\frac{1}{N}\sum_{n}KL\left(p\left(\ypred\vert\theta^{*},x_{n},D,M_{*}\right)||p\left(\ypred\vert\theta,x_{n},D,M\right)\right).
+\end{align*}
+
+\end_inset
+
+Of course, despite the suggestive notation, 
+\begin_inset Formula $\theta^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta^{\perp}$
+\end_inset
+
+ may live in utterly different spaces.
+ Indeed, 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ would not even need to be representable as a marginal over some 
+\begin_inset Formula $\theta^{*}$
+\end_inset
+
+, in which case we could just minimize the KL divergence directly:
+\begin_inset Formula 
+\begin{align*}
+\theta^{\perp} & :=\mathrm{argmin}_{\theta}\frac{1}{N}\sum_{n}KL\left(p\left(\ypred\vert x_{n},D,M_{*}\right)||p\left(\ypred\vert\theta,x_{n},D,M\right)\right).
+\end{align*}
+
+\end_inset
+
+ We then have
+\begin_inset Formula 
+\begin{align*}
+\delta\left(M_{*}||M\right) & =\frac{1}{N}\sum_{n}\expect_{p\left(\theta^{*}\vert D,M^{*}\right)}\left[KL\left(p\left(\ypred\vert x_{n},D,M_{*}\right)||p\left(\ypred\vert\theta^{\perp}\left(\theta^{*}\right),x_{n},D,M\right)\right)\right].
+\end{align*}
+
+\end_inset
+
+One might ask if this is actually changing the goalposts.
+ In fact, it seems that what we want is
+\begin_inset Formula 
+\begin{align*}
+KL\left(\expect_{p\left(\theta^{*}\vert D,M^{*}\right)}\left[p\left(\ypred\vert x_{n},\theta^{*},D,M_{*}\right)\right]||\expect_{p\left(\theta^{*}\vert D,M^{*}\right)}\left[p\left(\ypred\vert\theta^{\perp}\left(\theta^{*}\right),x_{n},D,M\right)\right]\right) & ,
+\end{align*}
+
+\end_inset
+
+and why should the expectation and the log commute? As far as I can tell,
+ Dupuis and Robert (2003) do not comment on this discrepancy (see Section
+ 6.1).
+\end_layout
+
+\end_body
+\end_document
