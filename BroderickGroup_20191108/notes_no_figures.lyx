@@ -79,6 +79,10 @@
 Notes on Comparison of Bayesian Predictive Methods for Model Selection
 \end_layout
 
+\begin_layout Author
+Ryan Giordano, Nov 2019
+\end_layout
+
 \begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\expect}{\mathbb{E}}
@@ -101,6 +105,15 @@ Notes on Comparison of Bayesian Predictive Methods for Model Selection
 \begin_inset FormulaMacro
 \newcommand{\ypred}{\tilde{y}}
 {\tilde{y}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\mlpd}{\mathrm{MLPD}}
+{\mathrm{MLPD}}
 \end_inset
 
 
@@ -1164,6 +1177,14 @@ Why BMA? Because they use Bayesian model averaging (BMA) over the full model
 \end_inset
 
  but they don't consider this for some reason.
+ Note sampling from 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ uses MCMC.
+ They use a reversible jump MCMC algorithm (basically MH with consideration
+ for jumping between spaces of different dimensions).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1232,44 +1253,15 @@ not too far from
 \end_inset
 
 .
- Now, the absolute scale of KL divergence is not something particularly
- meaningful for continuous distributions, so how far is too far? Dupuis
- and Robert (2003) recommend specifying a scale using the 
+ More in a minute about what we mean by 
 \begin_inset Quotes eld
 \end_inset
 
-empty model
+not too far
 \begin_inset Quotes erd
 \end_inset
 
-:
-\begin_inset Formula 
-\begin{align*}
-\textrm{Explanatory power: }\quad\phi\left(M\right) & :=1-\frac{\delta\left(M_{*}||M\right)}{\delta\left(M_{*}||M_{0}\right)}.
-\end{align*}
-
-\end_inset
-
-A bit like a reference model, this requires some notion of 
-\begin_inset Quotes eld
-\end_inset
-
-empty model
-\begin_inset Quotes erd
-\end_inset
-
- which need not be in the space of models considered, though of course it
- should be further from 
-\begin_inset Formula $M_{*}$
-\end_inset
-
- than any 
-\begin_inset Formula $M$
-\end_inset
-
- or the explanatory power can be negative.
- For regression there is, again, a natural empty model, though in general
- it seems like any easily-computed naive model could work.
+.
 \end_layout
 
 \begin_layout Standard
@@ -1324,6 +1316,17 @@ However, the benefit of
 
 \end_inset
 
+This may seem heavy, but it turns out to be equivalent to an MLE with observatio
+ns 
+\begin_inset Formula $\expect_{p\left(\ypred\vert\theta^{*},x_{n},D,M_{*}\right)}\left[\ypred\right]$
+\end_inset
+
+.
+ So for simple distributions closed forms or efficient software will already
+ exist.
+\end_layout
+
+\begin_layout Standard
 Of course, despite the suggestive notation, 
 \begin_inset Formula $\theta^{*}$
 \end_inset
@@ -1352,12 +1355,12 @@ Of course, despite the suggestive notation,
  We then have
 \begin_inset Formula 
 \begin{align*}
-\delta\left(M_{*}||M\right) & =\frac{1}{N}\sum_{n}\expect_{p\left(\theta^{*}\vert D,M^{*}\right)}\left[KL\left(p\left(\ypred\vert x_{n},D,M_{*}\right)||p\left(\ypred\vert\theta^{\perp}\left(\theta^{*}\right),x_{n},D,M\right)\right)\right].
+\delta\left(M_{*}||M\right) & \approx\frac{1}{N}\sum_{n}\expect_{p\left(\theta^{*}\vert D,M^{*}\right)}\left[KL\left(p\left(\ypred\vert x_{n},D,M_{*}\right)||p\left(\ypred\vert\theta^{\perp}\left(\theta^{*}\right),x_{n},D,M\right)\right)\right].
 \end{align*}
 
 \end_inset
 
-One might ask if this is actually changing the goalposts.
+Note that this actually is not our purported loss.
  In fact, it seems that what we want is
 \begin_inset Formula 
 \begin{align*}
@@ -1366,9 +1369,256 @@ KL\left(\expect_{p\left(\theta^{*}\vert D,M^{*}\right)}\left[p\left(\ypred\vert 
 
 \end_inset
 
-and why should the expectation and the log commute? As far as I can tell,
- Dupuis and Robert (2003) do not comment on this discrepancy (see Section
- 6.1).
+and in general the log and expectation don't commute.
+ As far as I can tell, Dupuis and Robert (2003) do not comment on this discrepan
+cy (see Section 6.1).
+ However, in the extended survey that forms the basis of this paper, Vehtari
+ and Ojanen (2012) do comment on the difference (page 204).
+ This loss is called the Gibbs loss; the difference is the order of the
+ expectation and logarithm.
+ In this paper, only BMA-proj and DIC target the Gibbs loss.
+ As with BMA-ref, we choose the 
+\begin_inset Quotes eld
+\end_inset
+
+smallest
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ with acceptable explanatory power, which we now define.
+\end_layout
+
+\begin_layout Subsubsection
+Explanatory power defined
+\end_layout
+
+\begin_layout Standard
+We're going to choose a model that is 
+\begin_inset Quotes eld
+\end_inset
+
+close
+\begin_inset Quotes erd
+\end_inset
+
+ in KL divergence to the predictive model of 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+.
+ Let's define what 
+\begin_inset Quotes eld
+\end_inset
+
+close
+\begin_inset Quotes erd
+\end_inset
+
+ means.
+ Now, the absolute scale of KL divergence is not something particularly
+ meaningful for continuous distributions, so how far is too far? Dupuis
+ and Robert (2003) recommend specifying a scale using the 
+\begin_inset Quotes eld
+\end_inset
+
+empty model
+\begin_inset Quotes erd
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\textrm{Explanatory power: }\quad\phi\left(M\right) & :=1-\frac{\delta\left(M_{*}||M\right)}{\delta\left(M_{*}||M_{0}\right)}.
+\end{align*}
+
+\end_inset
+
+Note that to calculate 
+\begin_inset Formula $\delta$
+\end_inset
+
+ for this formula you need the entropy of the 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ predictive distribution; this is not invariant to additive constants.
+ Also, the authors note that distances to a true generating model may give
+ quite different results, so that this measure of explanatory power doesn't
+ seem to have very good predictive performance.
+\end_layout
+
+\begin_layout Standard
+A bit like a reference model, this requires some notion of 
+\begin_inset Quotes eld
+\end_inset
+
+empty model
+\begin_inset Quotes erd
+\end_inset
+
+ which need not be in the space of models considered, though of course it
+ should be further from 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ than any 
+\begin_inset Formula $M$
+\end_inset
+
+ or the explanatory power can be negative.
+ For regression there is, again, a natural empty model, though in general
+ it seems like any easily-computed naive model could work.
+\end_layout
+
+\begin_layout Standard
+Given this, the authors try to find 
+\begin_inset Formula 
+\begin{align*}
+M & =\textrm{Smallest }M\textrm{ such that }\phi\left(M\right)\ge0.95.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Alternatively, we could do ALL THE THINGS.
+ The authors describe (the end of section 2.4 and especially 4.4) the following
+ modifications to BMA-PROJ.
+ Rather than use 
+\begin_inset Formula $\delta\left(M_{*}||M\right)$
+\end_inset
+
+ as the accuracy, do 10-fold CV to estimate the out-of sample error — that
+ is, we use CV-10 with the models 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ to estimate 
+\begin_inset Formula $\Delta\mathrm{MLPD}$
+\end_inset
+
+ (
+\begin_inset Quotes eld
+\end_inset
+
+mean log predictive density
+\begin_inset Quotes erd
+\end_inset
+
+).
+\begin_inset Formula 
+\begin{align*}
+\Delta\mathrm{MLPD} & =\frac{1}{N_{CV}}\sum_{n=1}^{N_{CV}}\left(\log\left(\ypred_{n}\vert\tilde{x}_{n},D,M\right)-\log\left(\ypred_{n}\vert\tilde{x}_{n},D,M_{*}\right)\right).
+\end{align*}
+
+\end_inset
+
+(The authors find that 
+\begin_inset Formula $\Delta\mlpd$
+\end_inset
+
+ is always positive; more on that later.) Within each fold, 
+\begin_inset Formula $\Delta\mlpd$
+\end_inset
+
+ is a random variable, and we want to choose the smallest model that is
+ 
+\begin_inset Quotes eld
+\end_inset
+
+statistically indistinguishable
+\begin_inset Quotes erd
+\end_inset
+
+ from 
+\begin_inset Formula $M_{t}$
+\end_inset
+
+\SpecialChar endofsentence
+ For that we need an estimate of the variability of 
+\begin_inset Formula $\Delta\mlpd$
+\end_inset
+
+ , which they propose estimating using the Bayesian bootstrap.
+ With all this in hand, we choose the smallest model so that
+\begin_inset Formula 
+\begin{align*}
+P\left(\Delta\mlpd\ge U\right) & \ge\alpha,
+\end{align*}
+
+\end_inset
+
+for some 
+\begin_inset Formula $U$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ As you can imagine, there is a computational price to be paid.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+Look at the graphs from the paper.
+ In summary:
+\end_layout
+
+\begin_layout Itemize
+BMA does best at predicting
+\end_layout
+
+\begin_layout Itemize
+BMA-proj does best at reducing the model, though the other BMA-derived estimates
+ doing reasonably well
+\end_layout
+
+\begin_layout Itemize
+All the M-open methods do a fairly poor job (relatively) at doing forward
+ stepwise regression due to their variability.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I would like to have seen some different experiments.
+ Because the simulations were all done in M-closed, they may have been unfair
+ to the M-open methods.
+ Furthermore, it would be interesting to combine the M-open methods with
+ something more sophisticated than forward stepwise regression.
+ Similarly, it would be interesting to try the BMA-derived approaches using
+ something less heavy than MCMC, such as draws from an approximate VB posterior.
+ Finally, the really interesting idea seems to be combining the BMA-proj
+ with an 
+\begin_inset Formula $M_{*}$
+\end_inset
+
+ derived from something more interesting and expressive like a regression
+ tree or neural net.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
