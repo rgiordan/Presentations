@@ -22,6 +22,8 @@ be best served by applying these ideas to practical problems in close
 collaboration with practicing scientists.  For this reason, I am applying to
 become an Alvarez Fellow.
 
+\subsection*{An Example Problem from Astronomy.}
+
 During the initial years of my PhD I collaborated on an LBNL project that can
 provide a useful practical context for describing potential applications of my
 PhD work.  Astronomers build catalogues of celestial objects from sky surveys
@@ -48,9 +50,11 @@ images' different resolutions affects the amount of information they give.
 Ideally, we would take all these tangled uncertainties into account when stating
 our final probabilistic belief about the identity of the object(s).
 
+\subsection*{Linear Response Covariances.}
+
 On small problems, one would typically quantify all this uncertainty with Markov
 Chain Monte Carlo (MCMC).  However, with the vast amount of data contained in a
-sky survey, MCMC is far too computationally expensive. Researchers instead turn
+sky survey, MCMC is far too computationally expensive.  Researchers instead turn
 to ``mean field variational Bayes'' (VB), an optimzation-based approximation to
 the full Bayesian solution.\footnote{ The frequentist
 ``expectation-maximization'', or EM algorithm, can in fact be understood as a
@@ -71,21 +75,30 @@ wide set of typical models (taken from the Stan Examples datasets), LRVB allows
 Bayesian posterior covariances to be accurately approximated orders of magnitude
 faser than MCMC.
 
-The LRVB covariance estimate has a crucial computational property that are
-common to all of my PhD research, which is that the required sensitivity can be
-computed without ever re-solving the initial optimization problem.  What is
-needed, instead, is the solution to a system of linear equations involving the
+The LRVB covariance estimate has a crucial computational property common to all
+of my PhD research, which is that the required sensitivity can be computed
+without ever re-solving the initial optimization problem.  What is needed,
+instead, is the solution to a system of linear equations involving the
 derivatives of the MFVB objective function at the optimum.  In the case of the
 sky survey, this means LRVB requires the solution of only one optimization
 problem---the original MFVB fit.  Since most of the inferred parameters don't
-affect one another (e.g., the value of PSF on one night does not affect
-the classicificaiton of a star on a different night), the linear system is
-sparse.  Furthermore, even storing the full covariance matrix would be
-prohibitively expensive, but individual covariance estimates can be queried
-using iterative methods such as the conjugate gradient algorithm.  Finally,
-the required derivatives, which would be tedious and error-prone to compute
-by hand, can be quickly and faultlessly computed automatically by modern
-automatic differentiation.
+affect one another (e.g., the value of PSF on one night does not affect the
+classicificaiton of a star on a different night), the linear system is sparse.
+Furthermore, though even storing the full covariance matrix would be
+prohibitively expensive, individual covariance estimates can be queried using
+iterative methods such as the conjugate gradient algorithm.  Finally, the
+required derivatives, which would be tedious and error-prone to compute by hand,
+can be quickly and faultlessly computed automatically by modern automatic
+differentiation.
+
+\subsection*{Cross Validation.}
+
+Modern automatic differentiation and scalable, iterative linear solvers
+allow the automatic computation of the sensitivity needed to compute the LRVB
+covariance estimates of the previous section.  It turns out that many other
+key statistical tasks can also be accurately approximated by linear sensitivty
+analysis.  In this section,
+
 
 
 \bibliography{references}
