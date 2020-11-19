@@ -32,6 +32,21 @@ My guiding motivation is uncertainty quantification, providing easy-to-use,
 general tools that allow analysts to reason about both aleatoric and epistemic
 uncertainty in their analysis tasks.
 
+Sensitivity analysis is traditionally construed both more broadly and more
+narrowly than the methods I investigate.  Traditional sensitivity analysis
+encompasses both local methods, which are based on extrapolations from
+a given model fit, and global methods, which typically require fitting a model
+multiple times at a variety of configurations (though exceptions exist
+in cases with special structure).  Traditionally, sensitivity analysis focuses
+only on assessing whether small changes in arbitrary modeling decisions
+can affect the outcome.  Due to the computational expense of re-fitting
+many modern statistical models, and the relative ease of computing
+derivatives (especially with modern automatic differentiation tools),
+I focus on local sensitivity analysis.  And a core theme of my work is that
+the domain of sensitivity analysis in fact encompasses much of classical
+frequentist uncertainty quantification, and can provide valuable insights
+into Bayesian uncertainty quantification as well.
+
 
 \subsection*{Prior Sensitivity in Bayesian Analysis}
 
@@ -71,10 +86,124 @@ the number of distinct inferred populations is in fact quite sensitive
 to the prior.
 
 
-\subsubsection*{Parital Pooling in Econometrics Meta-analysis}
+\subsubsection*{Partial Pooling in Meta-analysis}
+
+A popular form of meta-analysis is to place a hierarchial model on a set of
+related experimental results, which both ``shrinks'' the individual estimates
+towards a common mean, potentially decreasing mean squared error, and
+allowing direct estimation of the average effect and diversity of effects.
+These advantages come at the cost of positing a precise generative
+process for the effects in question, however, and it is reasonable to
+interrogate whether the estimation procedure is robust to varaibility
+in these effects.  In CITE, we apply sensitivity analysis to a published
+meta-analysis of the effectiveness of microcredit interventions in seven
+developing countries.  We find that the conclusion are highly sensitive
+to the assumed covaraince structure between the base level of business
+profitability and the microcredit effect, a covariance which is a priori
+difficult to ascertain.  In this way, we were able to easily diagnose
+a conceptual problem in a model which was time-consuming to fit.
 
 
-\subsection*{Cross Validation and Data Sensitivity}
+\subsubsection*{Hyperparameter Sensitivity for MCMC}
+
+A classical result in Bayesian sensitivity analysis states that derivatives
+of posterior expectations take the form of particular posterior covariances.
+The resulting sensitivities can be automatically computed in a black-box
+manner when the posterior is implemented in software that supports
+automatic differentiation, such as the popular Hamiltonian Monte Carlo
+sampler and modleing language, Stan.  I have written an R package CITE
+that allows Stan users to specify a ``hyperparameters'' modeling block,
+from which one can automatically compute hyperparameter sensitivity from
+a single MCMC run with no additional computation.  I apply these principles
+in a related work on frequentist variance below.
+
+
+\subsection*{Data Sensitivity, Cross Validation, and Frequentist Variance}
+
+Frequentist variability is ultimately concerned with the value of an
+estimation procedure if the data were different than that observed.  A classical
+mainfestiation of this idea is the nonparametric bootstrap, which estimates
+frequentist variability by evaluating a particular estimator at pseudo-datasets
+with observations draw with replacement from the observed dataset.  Similarly,
+cross-validation (CV) in its various forms evaluates how a statistical procedure
+performs on data that were not included as part of estimation, and can be
+thought of as a non-parametric estimator of the bias induced by evaluating
+a loss function using the same data that were used to fit a model.
+
+Both the bootstrap and CV require re-fitting a model with new, nearby datasets
+multiple times.  When the model is differentiable, and model re-fitting is
+expensive, it can be advantageous to approximate the effect of re-fitting rather
+than perform actual re-fitting.  One way of doing so it so is to perform a
+Taylor series expansion of the estimator, as a funciton of the empirical
+distribution, around the original empirical distribution.  This is the core
+concept behind the related classical tools known as the ``infinitesimal
+jackknife,'' ``von-Mises Expansion,'' and ``empirical influence function,''
+though until recently these differnetial approximations were used most
+prominently to facilitate theoretical analysis.
+
+
+\subsubsection*{Accuracy Bounds for leave-k-out CV}
+
+We, and several other authors, obsevered that these differnetial methods
+could speed up the evaluation of cross validation in large machine learning
+models which are expensive to re-fit.  In CITE, we bridged the gap from
+some of the classical literature, providing finite-sample accuracy bounds
+for approximate leave-k-out cross validation, even when the derivatives of
+the objective function are unbounded.
+
+
+\subsubsection*{Higher orders, k-fold CV, and the bootstrap}
+
+A follow-on work in progress (CITE) expands the results to higher-order
+expansions and to larger perturbations, including k-fold CV and the bootstrap.
+They key to all this work is a set complexity condition, in light of which it is
+clear that one can provide accuracy bounds uniformly over small perturbations,
+and over randomly-chosen large perturbations, but not for uniform bounds over
+large perturbations.  Because we show that the linear approximation approaches
+the bootstrap closer than the bootstrap approaches the truth, our work
+should allow for practical differential approximations to prohibitively
+expensive procedures such as the bootstrap-after-the-bootstrap.
+
+
+\subsubsection*{Frequentist properties of Bayesian posteriors}
+
+By combining the above approach to frequentist variance with the MCMC-based
+measures of sensitivity, we are able to derive the Bayesian infinitesimal
+jackknife (IJ), which can be used to compute the frequentist variability
+of Bayeisan posterior means without bootstrapping or computing a maximum
+a-posteriori (MAP) estimate.  Such frequentist variances are particularly
+important when there is a possibility of model misspecification (in which
+case the Bayesian posterior variance is not particularly meaningful),
+or when the data comes from a random sample, the variability of which
+is meaningful in its own right.  In CITE, we prove the consistency
+of the Bayesian IJ and show its accuracy as an approximation to the bootstrap
+for a larger number of examples.
+
+
+\subsubsection*{Adversarial Sensitivity for M-Estimators}
+
+In the social sciences, it is common to run randomized trials on a particular
+population to esitmate an effect that we hope generalizes to different
+populations.  Classical standard errors measure the variability that one
+would expect from random sampling from the same distribution as that that
+gave rise to the observed data.  However, in order to generalize to radically
+different contexts, one might expect the conclusions to be robust to more
+adversarial perturbations.  In CITE, co-authors an I ask whether some
+common econometrics analyses are robust to the removal of a small proportion
+(e.g. one tenth of one percent of the data).  Again using the empirical
+influence function, we provide an automated method and software package
+to answer this question.
+
+We found that some common ``gold-standard'' applied econometrics papers
+can have central claims reversed by removing only a very small number of
+data points, even though there is no clear evidence of misspecification.
+A key theoretical takeaway of our work is that datsets with a low signal
+to noise ratio (defined as the effect size over the estimator standard
+deviation times $\sqrt{N}$) will always be sensitive to adversarial removal
+of a very small number of datapoints.  Though the precise meaning will
+depend on the context, the broad implication is that studies which
+attempt to overcome low SNR with large sample sizes will be inherently
+non-robust, even in the absence of misspecification or gross errors.
 
 
 \subsection*{Propagation of Uncertainty in Variational Bayes}
