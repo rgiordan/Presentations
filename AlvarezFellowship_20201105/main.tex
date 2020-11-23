@@ -9,7 +9,7 @@
 \begin{document}
 
 
-\section{Overview}
+\subsection*{Overview}
 
 Deriving scientific information from large, complex datasets can motivate large,
 complex statistical models; below we will give examples from our work on
@@ -33,53 +33,54 @@ a single model fit, computed using either optimization or MCMC, to extrapolate
 to alternatives.  In this way, I provide approximations to Bayesian posterior
 uncertainty, CV loss, and model sensitivity, while avoiding expensive
 re-estimation.  Sensitivity analysis is a venerable idea with a rich existing
-literatur, and I show that it has wide-ranging and fundamental applications in
-modern, computationally intensive statistical problems, and that certain
-theoretical ideas concerning the role of differential approximations in
-statistical analysis deserve re-examination as practical tools in the age of big
-data and big computing.
+literature, and I show that it has wide-ranging and fundamental applications in
+modern, computationally intensive statistical problems.  Furthermore, I motivate
+the re-examination of theoretical ideas concerning the role of differential
+approximations in statistical analysis as practical tools in the age of big data
+and big computing.
+
+I will divide my research statement into three parts: first, I will cover a more
+traditional application of sensitivity analysis to the assessment of prior
+sensitivity in Bayesian and variational Bayesian analysis.  I will then discuss
+approximate CV and bootstrapping, which can be viewed as a kind of sensitivity
+analysis.  Finally, I discuss how sensitivity analysis can recover accurate
+posterior covariances from variational Bayesian approximations, tying sensitiity
+analysis to the uniquitous scientific goal of uncertainty propagation.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Prior sensitivity in Bayesian analysis}
 
-
-\section{Projects}
-
-\subsection{Prior sensitivity in Bayesian analysis}
-
-Bayesian analysis allows analysts to reason coherently about unknown parameters,
-but only if the user specifies a complete generating process for the parameters
-and data, including both prior distributions for the parameters and precise
-likelihoods for the data.  Often aspects of this model are at best a considered
-simplifcation, and at worst chosen only for computational convenience.  It is
-critical to ask whether the analysis would have changed substantively had
-different modeling choices been made.
+Bayesian techniques allows analysts to reason coherently about unknown
+parameters, but only if the user specifies a complete generating process for the
+parameters and data, including both prior distributions for the parameters and
+precise likelihoods for the data.  Often, aspects of this model are at best a
+considered simplifcation, and at worst chosen only for computational
+convenience.  It is critical to ask whether the analysis would have changed
+substantively had different modeling choices been made.
 
 \paragraph{Bayesian nonparametrics.}
 
-A commonly asked question in unsupervised clustering is how many distinct
-clusters are present in a dataset.  Discrete Bayesian nonparametrics allows the
-question to be addressed using Bayesian inference, but one must specify a prior
-on how distinct clusters are generated.  A particularly common choice is
-the stick-breaking representation of a Dirichlet process prior, a mathematical
-abstraction arguably better justified by its mathematical convenience than
-its realism.  The prior must be specified in terms of random stick lengths
-to be broken off successively, the lengths of the sticks determining
-the a priori cluster sizes.  The standard approach is to model the stick
-lengths with $Beta(1, \alpha)$ distribution, the $\alpha$ being a scalar
-tuning parameters.  Other classes of distributions are possible in principle
-but hardly ever considered in practice, in part because the Beta distribution
-enjoys some computational conveniences.
+A commonly question in unsupervised clustering is how many distinct clusters are
+present in a dataset.  Discrete Bayesian nonparametrics (BNP) allows the answer
+to be inferred using Bayesian inference, but one must specify a prior on how
+distinct clusters are generated \citep{ghosh:2003:bnp,
+gershman:2012:bnptutorial}.  A particularly common modeling choice is the
+stick-breaking representation of a Dirichlet process prior
+\citep{sethuraman:1994:constructivedp}, a mathematical abstraction which is
+arguably better justified by its computational convenience than its realism. Our
+workshop paper, \citet{giordano:2018:bnpsensitivity}, fits a BNP model with
+variational Bayes \citep{blei:2006:dirichletbnp} using the standard,
+computationally convenient stick-breaking prior, but then uses sensitivity
+analysis to allow the user to explore alternative functional forms an order of
+magnitude faster than would be possible with refitting. In work currently in
+progress, we apply our method to a human genome dataset in phylogenetics taken
+from \citep{huang:2011:haplotype}, and find that our method accurately discovers
+real excess prior sensitivity in a BNP version of the model
+\texttt{fastSTRUCTURE} \citep{raj:2014:faststructure}.
 
-In CITE, we provide sensitivity measures that allow the user to explore
-alternative stick breaking distributions from a single fit using the standard
-and convenient Beta prior.  We linearly approximating the dependence of the
-optimum on the functional form of a parameterized class of priors.  A natural
-parameterized class is the set of $Beta(1, \alpha)$ distributions (parameterized
-by $\alpha$), but we also consider arbitrarily functional perturbations.
-In current work in progress, we evaluate the worst-case perturbations.
-On a real-world clustering problem, a human genome dataset, we find that
-the number of distinct inferred populations is in fact quite sensitive
-to the prior.
 
 
 \paragraph{Partial pooling in meta-analysis.}
@@ -100,20 +101,30 @@ difficult to ascertain.  In this way, we were able to easily diagnose
 a conceptual problem in a model which was time-consuming to fit.
 
 
+
 \paragraph{Hyperparameter sensitivity for MCMC.}
 
-A classical result in Bayesian sensitivity analysis states that derivatives
-of posterior expectations take the form of particular posterior covariances.
-The resulting sensitivities can be automatically computed in a black-box
-manner when the posterior is implemented in software that supports
-automatic differentiation, such as the popular Hamiltonian Monte Carlo
-sampler and modleing language, Stan.  I have written an R package CITE
-that allows Stan users to specify a ``hyperparameters'' modeling block,
-from which one can automatically compute hyperparameter sensitivity from
-a single MCMC run with no additional computation.  I apply these principles
-in a related work on frequentist variance below.
+MCMC is arguably the most commonly used computational tool to estimate Bayesian
+posteriors, and modern black-box MCMC tools such as \texttt{Stan} \citep{rstan,
+carpenter:2017:stan}.  However, MCMC still often takes a long time to run, and
+systematically exploring alternative prior parameterizations by re-running MCMC
+would be computationally prohibitive for all but the simplest models. A
+classical result from Bayesian robustness states that the sensitivity of a
+posterior expectation is given by a particular posterior covariance
+\citep{gustafson:1996:localposterior, basu:1996:local}, though the result has
+not been widely used, arguably due in part to the lack of an automatic
+implementation. In my software package, \citet{giordano:2020:rstansensitivity},
+I take advantage of the automatic differentiation capacities of
+\texttt{Stan} to provide automatic hyperparameter sensitivity for
+generic Stan models.  In examples in the package \texttt{git} repository,
+I demonstrate the efficacy of the package in detecting excess prior
+sensitivity, particularly in a social sciences model taken from
+\citet[Chapter 13.5]{gelman:2006:arm}.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data sensitivity: cross validation and frequentist variance}
 
 Frequentist variability is ultimately concerned with the value of an

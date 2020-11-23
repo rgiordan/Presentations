@@ -1,0 +1,75 @@
+\begin{thebibliography}{}
+
+\bibitem[Basu et~al., 1996]{basu:1996:local}
+Basu, S., Jammalamadaka, S.~R., and Liu, W. (1996).
+\newblock Local posterior robustness with parametric priors: Maximum and
+  average sensitivity.
+\newblock In {\em Maximum Entropy and {Bayesian} Methods}, pages 97--106.
+  Springer.
+
+\bibitem[Blei and Jordan, 2006]{blei:2006:dirichletbnp}
+Blei, D.~M. and Jordan, M.~I. (2006).
+\newblock Variational inference for {D}irichlet process mixtures.
+\newblock {\em {B}ayesian Analysis}, 1(1):121--143.
+
+\bibitem[Carpenter et~al., 2017]{carpenter:2017:stan}
+Carpenter, B., Gelman, A., Hoffman, M., Lee, D., Goodrich, B., Betancourt, M.,
+  Brubaker, M., Guo, J., Li, P., and Riddell, A. (2017).
+\newblock {S}tan: {A} probabilistic programming language.
+\newblock {\em Journal of statistical software}, 76(1).
+
+\bibitem[Gelman and Hill, 2006]{gelman:2006:arm}
+Gelman, A. and Hill, J. (2006).
+\newblock {\em Data analysis using regression and multilevel/hierarchical
+  models}.
+\newblock Cambridge university press.
+
+\bibitem[Gershman and Blei, 2012]{gershman:2012:bnptutorial}
+Gershman, S. and Blei, D. (2012).
+\newblock A tutorial on bayesian nonparametric models.
+\newblock {\em Journal of Mathematical Psychology}, 56(1):1--12.
+
+\bibitem[Ghosh and Ramamoorthi, 2003]{ghosh:2003:bnp}
+Ghosh, J. and Ramamoorthi, R. (2003).
+\newblock {\em Bayesian nonparametrics}.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Giordano, 2020]{giordano:2020:rstansensitivity}
+Giordano, R. (2020).
+\newblock Stansensitivity: automated hyperparameter sensitivity for {Stan}
+  models.
+
+\bibitem[Giordano et~al., 2018]{giordano:2018:bnpsensitivity}
+Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018).
+\newblock Evaluating sensitivity to the stick breaking prior in {B}ayesian
+  nonparametrics.
+\newblock {\em arXiv preprint arXiv:1810.06587}.
+
+\bibitem[Gustafson, 1996]{gustafson:1996:localposterior}
+Gustafson, P. (1996).
+\newblock Local sensitivity of posterior expectations.
+\newblock {\em The Annals of Statistics}, 24(1):174--195.
+
+\bibitem[Huang et~al., 2011]{huang:2011:haplotype}
+Huang, L., Jakobsson, M., Pemberton, T., Ibrahim, M., Nyambo, T., Omar, S.,
+  Pritchard, J., Tishkoff, S., and Rosenberg, N. (2011).
+\newblock Haplotype variation and genotype imputation in {A}frican populations.
+\newblock {\em Genetic epidemiology}, 35(8):766--780.
+
+\bibitem[Raj et~al., 2014]{raj:2014:faststructure}
+Raj, A., Stephens, M., and Pritchard, J. (2014).
+\newblock {fastSTRUCTURE}: variational inference of population structure in
+  large {SNP} data sets.
+\newblock {\em Genetics}, 197(2):573--589.
+
+\bibitem[Sethuraman, 1994]{sethuraman:1994:constructivedp}
+Sethuraman, J. (1994).
+\newblock A constructive definition of {D}irichlet priors.
+\newblock {\em Statistica {S}inica}, pages 639--650.
+
+\bibitem[{Stan Development Team}, 2020]{rstan}
+{Stan Development Team} (2020).
+\newblock {RStan}: the {R} interface to {Stan}.
+\newblock R package version 2.21.2.
+
+\end{thebibliography}

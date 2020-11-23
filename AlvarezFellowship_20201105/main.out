@@ -1,6 +1,3 @@
-\BOOKMARK [1][-]{section.1}{Overview}{}% 1
-\BOOKMARK [1][-]{section.2}{Projects}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Prior sensitivity in Bayesian analysis}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Data sensitivity: cross validation and frequentist variance}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Propagation of uncertainty in scalable Bayesian inference}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{Selected Future work}{}% 6
+\BOOKMARK [2][-]{subsection.0.1}{Data sensitivity: cross validation and frequentist variance}{}% 1
+\BOOKMARK [2][-]{subsection.0.2}{Propagation of uncertainty in scalable Bayesian inference}{}% 2
+\BOOKMARK [1][-]{section.1}{Selected Future work}{}% 3

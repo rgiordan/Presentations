@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.29)  23 NOV 2020 14:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.29)  23 NOV 2020 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -413,7 +413,7 @@ Package: amsthm 2017/10/31 v2.20.4
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-))
+)
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
 
@@ -446,7 +446,14 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen140
 \l_MT_above_shortintertext_sep=\dimen141
 \l_MT_below_shortintertext_sep=\dimen142
-) (./main.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip61
+\bibsep=\skip62
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count127
+)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -480,16 +487,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
+\scratchcounter=\count128
 \scratchdimen=\dimen143
 \scratchbox=\box28
-\nofMPsegments=\count128
-\nofMParguments=\count129
+\nofMPsegments=\count129
+\nofMParguments=\count130
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count130
+\MPscratchCnt=\count131
 \MPscratchDim=\dimen144
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
 \everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -517,7 +524,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count133
+\c@section@level=\count134
 LaTeX Info: Redefining \Ref on input line 515.
 )
 LaTeX Info: Redefining \ref on input line 9.
@@ -529,15 +536,27 @@ LaTeX Info: Redefining \nameref on input line 9.
 \openout3 = `main.out'.
 
 LaTeX Info: Redefining \Ref on input line 9.
-LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [1
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (0.48152pt too wide) in paragraph at lines 164--173
+ []\OT1/cmr/bx/n/10 Higher or-ders, k-fold CV, and the boot-strap[] \OT1/cmr/m/
+n/10 (-20) A follow-on work in progress
+ []
+
+[3]
+LaTeX Font Info:    Try loading font information for U+msa on input line 209.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+LaTeX Font Info:    Try loading font information for U+msb on input line 209.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -545,37 +564,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 65.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 209.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (0.48152pt too wide) in paragraph at lines 150--159
- []\OT1/cmr/bx/n/10 Higher or-ders, k-fold CV, and the boot-strap[] \OT1/cmr/m/
-n/10 (-20) A follow-on work in progress
- []
-
-[3] [4] [5]
-No file main.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
+) [4] [5] (./main.bbl [6])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 316.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 316.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 316.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 316.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 511429FC5A0FD33791FC37A7147636A5;442.
+(rerunfilecheck)             Checksum: EDE6522788E0278D7A11A74AC48493F0;251.
  ) 
 Here is how much of TeX's memory you used:
- 10025 strings out of 494805
- 147851 string characters out of 6178000
- 285432 words of memory out of 5000000
- 13103 multiletter control sequences out of 15000+600000
- 13479 words of font info for 89 fonts, out of 8000000 for 9000
+ 10399 strings out of 494805
+ 153132 string characters out of 6178000
+ 292602 words of memory out of 5000000
+ 13457 multiletter control sequences out of 15000+600000
+ 13710 words of font info for 89 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 33i,8n,41p,790b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,8n,41p,790b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -584,11 +594,12 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti10.pfb>
-Output written on main.pdf (6 pages, 122892 bytes).
+fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt10.pfb>
+Output written on main.pdf (7 pages, 145899 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
- 11825 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 12313 words of extra memory for PDF output out of 14400 (max. 10000000)
 
