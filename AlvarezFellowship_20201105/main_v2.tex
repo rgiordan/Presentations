@@ -11,35 +11,44 @@
 
 \section{Overview}
 
-Deriving scientific information from large, complex datasets can motivate large,
-complex statistical models; below we will give examples from our work on
-problems in astronomy, genomics, phylogenetics, econometrics, internet
-advertising, and ecology.  As models grow in complexity, the need to interrogate
-their assumptions, to propagate uncertainty amongst their components, and to
-perform non-parametric checks on their data sensitivity grows commensurately.
-However, so does the computational cost of doing so using traditional
-statistical methods. Many classical procedures designed to address these
-concerns, such as Markov Chain Monte Carlo (MCMC), cross validation (CV), or
-re-estimating a model under a range of modeling assumptions, can be
-prohibitively expensive in many modern problems.
+Data analysts ask increasingly sophisticated questions of larger and more
+complex datasets, statistical models are becoming both more complex and more
+time-consuming to estimate.   For problems as disparate as the production of
+astronomical catalogues, analysis of internet user data, to the meta-analysis of
+randomized controlled trials in development economics.
 
-To help fill this gap, my research focuses on applications of {\em sensitivity
-analysis}, applied not merely in the traditional sense of assessing sensitivity
-to imprecise modeling assumptions (though I do pursue this traditional role as
-well), but also to assess freqeuntist sampling properties and propagate
-uncertainty in Bayesian procedures.  At its core, my methodological work is all
-based on using Taylor series approximations, constructed only from properties of
-a single model fit, computed using either optimization or MCMC, to extrapolate
-to alternatives.  In this way, I provide approximations to Bayesian posterior
-uncertainty, CV loss, and model sensitivity, while avoiding expensive
-re-estimation.  Sensitivity analysis is a venerable idea with a rich existing
-literatur, and I show that it has wide-ranging and fundamental applications in
-modern, computationally intensive statistical problems, and that certain
-theoretical ideas concerning the role of differential approximations in
-statistical analysis deserve re-examination as practical tools in the age of big
-data and big computing.
+As models grow in complexity, the need to interrogate their assumptions,
+to propagate uncertainty amongst their components, and to perform non-parametric
+checks on their data sensitivity grows commensurately, but so does the
+computational cost of doing so.
 
+Classical procedures such as Markov Chain Monte Carlo (MCMC) or the bootstrap,
+which require evaluating a model for many distinct parameter values or datasets,
+respectively, can be prohibitively expensive.
 
+My research focuses on applications of sensitivity analysis that use only
+properties of a single model fit to extrapolate to alternatives without
+expensive re-running.  My work is conceptually unified around a single theme,
+but disparate in applications.
+
+My guiding motivation is uncertainty quantification, providing easy-to-use,
+general tools that allow analysts to reason about both aleatoric and epistemic
+uncertainty in their analysis tasks.
+
+Sensitivity analysis is traditionally construed both more broadly and more
+narrowly than the methods I investigate.  Traditional sensitivity analysis
+encompasses both local methods, which are based on extrapolations from
+a given model fit, and global methods, which typically require fitting a model
+multiple times at a variety of configurations (though exceptions exist
+in cases with special structure).  Traditionally, sensitivity analysis focuses
+only on assessing whether small changes in arbitrary modeling decisions
+can affect the outcome.  Due to the computational expense of re-fitting
+many modern statistical models, and the relative ease of computing
+derivatives (especially with modern automatic differentiation tools),
+I focus on local sensitivity analysis.  And a core theme of my work is that
+the domain of sensitivity analysis in fact encompasses much of classical
+frequentist uncertainty quantification, and can provide valuable insights
+into Bayesian uncertainty quantification as well.
 
 
 \section{Projects}
