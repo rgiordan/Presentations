@@ -24,6 +24,11 @@ Gelman, A. and Hill, J. (2006).
   models}.
 \newblock Cambridge university press.
 
+\bibitem[Gelman and Rubin, 1992]{gelman:1992:inference}
+Gelman, A. and Rubin, D. (1992).
+\newblock Inference from iterative simulation using multiple sequences.
+\newblock {\em Statistical science}, pages 457--472.
+
 \bibitem[Gershman and Blei, 2012]{gershman:2012:bnptutorial}
 Gershman, S. and Blei, D. (2012).
 \newblock A tutorial on bayesian nonparametric models.
@@ -38,6 +43,11 @@ Ghosh, J. and Ramamoorthi, R. (2003).
 Giordano, R. (2020).
 \newblock Stansensitivity: automated hyperparameter sensitivity for {Stan}
   models.
+
+\bibitem[Giordano et~al., 2016]{giordano:2016:microcredit}
+Giordano, R., Broderick, T., Meager, R., Huggins, J., and Jordan, M.~I. (2016).
+\newblock Fast robustness quantification with variational {B}ayes.
+\newblock {\em arXiv preprint arXiv:1606.07153}.
 
 \bibitem[Giordano et~al., 2018]{giordano:2018:bnpsensitivity}
 Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018).
@@ -56,11 +66,23 @@ Huang, L., Jakobsson, M., Pemberton, T., Ibrahim, M., Nyambo, T., Omar, S.,
 \newblock Haplotype variation and genotype imputation in {A}frican populations.
 \newblock {\em Genetic epidemiology}, 35(8):766--780.
 
+\bibitem[Meager, 2019]{meager:2019:microcredit}
+Meager, R. (2019).
+\newblock Understanding the average impact of microcredit expansions: A
+  {B}ayesian hierarchical analysis of seven randomized experiments.
+\newblock {\em American Economic Journal: Applied Economics}, 11(1):57--91.
+
 \bibitem[Raj et~al., 2014]{raj:2014:faststructure}
 Raj, A., Stephens, M., and Pritchard, J. (2014).
 \newblock {fastSTRUCTURE}: variational inference of population structure in
   large {SNP} data sets.
 \newblock {\em Genetics}, 197(2):573--589.
+
+\bibitem[Rubin, 1981]{rubin:1981:estimation}
+Rubin, D. (1981).
+\newblock Estimation in parallel randomized experiments.
+\newblock {\em Journal of Educational and Behavioral Statistics},
+  6(4):377--401.
 
 \bibitem[Sethuraman, 1994]{sethuraman:1994:constructivedp}
 Sethuraman, J. (1994).

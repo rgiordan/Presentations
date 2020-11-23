@@ -85,21 +85,21 @@ real excess prior sensitivity in a BNP version of the model
 
 \paragraph{Partial pooling in meta-analysis.}
 
-A popular form of meta-analysis is to place a hierarchial model on a set of
-related experimental results, which both ``shrinks'' the individual estimates
-towards a common mean, potentially decreasing mean squared error, and
-allowing direct estimation of the average effect and diversity of effects.
-These advantages come at the cost of positing a precise generative
-process for the effects in question, however, and it is reasonable to
-interrogate whether the estimation procedure is robust to varaibility
-in these effects.  In CITE, we apply sensitivity analysis to a published
-meta-analysis of the effectiveness of microcredit interventions in seven
-developing countries.  We find that the conclusion are highly sensitive
-to the assumed covaraince structure between the base level of business
-profitability and the microcredit effect, a covariance which is a priori
-difficult to ascertain.  In this way, we were able to easily diagnose
-a conceptual problem in a model which was time-consuming to fit.
-
+A popular form of meta-analysis in econometrics is to place a hierarchial model
+on a set of related experimental results, which both ``shrinks'' the individual
+estimates towards a common mean, potentially decreasing mean squared error, and
+allowing direct estimation of the average effect and diversity of effects
+\citep{rubin:1981:estimation,gelman:1992:inference}. These advantages come at
+the cost of positing a precise generative process for the effects in question,
+and it is reasonable to interrogate whether the estimation procedure is robust
+to varaibility in these effects.  In \citet{giordano:2016:microcredit}, we apply
+sensitivity analysis to a published meta-analysis of the effectiveness of
+microcredit interventions in seven developing countries
+\citep{meager:2019:microcredit}.  We find that the conclusion are highly
+sensitive to the assumed covariance structure between the base level of business
+profitability and the microcredit effect, a covariance which is {\em a priori}
+difficult to ascertain, automatically diagnosing an important source of
+epistemic uncertainty not captured by the Bayesian posterior.
 
 
 \paragraph{Hyperparameter sensitivity for MCMC.}
