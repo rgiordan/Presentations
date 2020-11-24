@@ -125,41 +125,25 @@ sensitivity, particularly in a social sciences model taken from
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Data sensitivity: cross validation and frequentist variance}
+\subsection*{Data sensitivity: cross validation and frequentist variance}
 
-Frequentist variability is ultimately concerned with the value of an
-estimation procedure if the data were different than that observed.  A classical
-mainfestiation of this idea is the nonparametric bootstrap, which estimates
-frequentist variability by evaluating a particular estimator at pseudo-datasets
-with observations draw with replacement from the observed dataset.  Similarly,
-cross-validation (CV) in its various forms evaluates how a statistical procedure
-performs on data that were not included as part of estimation, and can be
-thought of as a non-parametric estimator of the bias induced by evaluating
-a loss function using the same data that were used to fit a model.
-
-Both the bootstrap and CV require re-fitting a model with new, nearby datasets
-multiple times.  When the model is differentiable, and model re-fitting is
-expensive, it can be advantageous to approximate the effect of re-fitting rather
-than perform actual re-fitting.  One way of doing so it so is to perform a
-Taylor series expansion of the estimator, as a funciton of the empirical
-distribution, around the original empirical distribution.  This is the core
-concept behind the related classical tools known as the ``infinitesimal
-jackknife,'' ``von-Mises Expansion,'' and ``empirical influence function,''
-though until recently these differnetial approximations were used most
-prominently to facilitate theoretical analysis.
+Frequentist variability is ultimately concerned with the outcome of an
+estimation procedure if the data were drawn from the same distribution as but
+different from that observed.  Similarly, all forms of cross-validation (CV)
+evaluates a statistic if parts of the observed data had been ablated.  Both of
+these procedures can be treated by sensitivity analysis, where sensitivity
+is to the dataset itself.
 
 
-\paragraph{Accuracy bounds for leave-k-out CV.}
+\paragraph{Accuracy bounds for approximate cross validation.}
 
-We, and several other authors, obsevered that these differnetial methods
-could speed up the evaluation of cross validation in large machine learning
-models which are expensive to re-fit.  In CITE, we bridged the gap from
-some of the classical literature, providing finite-sample accuracy bounds
-for approximate leave-k-out cross validation, even when the derivatives of
-the objective function are unbounded.
-
-
-\paragraph{Higher orders, k-fold CV, and the bootstrap}
+Our paper: \citet{giordano:2019:ij}
+See IJ section for more potential references.
+We observed that these differnetial methods could speed up the evaluation of
+cross validation in large machine learning models which are expensive to re-fit.
+In CITE, we bridged the gap from some of the classical literature, providing
+finite-sample accuracy bounds for approximate leave-k-out cross validation, even
+when the derivatives of the objective function are unbounded.
 
 A follow-on work in progress (CITE) expands the results to higher-order
 expansions and to larger perturbations, including k-fold CV and the bootstrap.
@@ -170,21 +154,9 @@ large perturbations.  Because we show that the linear approximation approaches
 the bootstrap closer than the bootstrap approaches the truth, our work
 should allow for practical differential approximations to prohibitively
 expensive procedures such as the bootstrap-after-the-bootstrap.
-
-
-\paragraph{Frequentist properties of Bayesian posteriors}
-
-By combining the above approach to frequentist variance with the MCMC-based
-measures of sensitivity, we are able to derive the Bayesian infinitesimal
-jackknife (IJ), which can be used to compute the frequentist variability
-of Bayeisan posterior means without bootstrapping or computing a maximum
-a-posteriori (MAP) estimate.  Such frequentist variances are particularly
-important when there is a possibility of model misspecification (in which
-case the Bayesian posterior variance is not particularly meaningful),
-or when the data comes from a random sample, the variability of which
-is meaningful in its own right.  In CITE, we prove the consistency
-of the Bayesian IJ and show its accuracy as an approximation to the bootstrap
-for a larger number of examples.
+\citet{giordano2019:hoij}
+\citet{efron:1994:bootstrap}
+\citet{hall:2013:bootstrap}
 
 
 \paragraph{Adversarial sensitivity for M-estimators.}
@@ -213,7 +185,31 @@ attempt to overcome low SNR with large sample sizes will be inherently
 non-robust, even in the absence of misspecification or gross errors.
 
 
-\subsection{Propagation of uncertainty in scalable Bayesian inference}
+
+\paragraph{Frequentist properties of Bayesian posteriors}
+
+By combining the above approach to frequentist variance with the MCMC-based
+measures of sensitivity, we are able to derive the Bayesian infinitesimal
+jackknife (IJ), which can be used to compute the frequentist variability
+of Bayeisan posterior means without bootstrapping or computing a maximum
+a-posteriori (MAP) estimate.  Such frequentist variances are particularly
+important when there is a possibility of model misspecification (in which
+case the Bayesian posterior variance is not particularly meaningful),
+or when the data comes from a random sample, the variability of which
+is meaningful in its own right.  In a work in progress, we prove the consistency
+of the Bayesian IJ and show its accuracy as an approximation to the bootstrap
+for a larger number of examples.
+\citet{huggins:2019:bayesbag}
+\citet{waddell:2002:bayesphyloboot}
+\citet{kleijn:2006:misspecification}
+\citet{kass:1990:posteriorexpansions} % Same expansion, stricter conditions
+\citet[Chapter 6]{lehman:1983:pointestimation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Propagation of uncertainty in scalable Bayesian inference}
 
 Complex scientific inference procedures, such as the creation of astronomical
 catalogues, often exhibit uncertainty in many aspects of the model.  For
@@ -252,7 +248,7 @@ social sciences, and demonstrated accurate posterior covariances computed
 over an order of magnitude faster than MCMC.
 
 
-\section{Selected Future work}
+\subsection*{Selected Future work}
 
 There is a lot to be done simply applying the above methodology to
 applied problems in conjuction with collaborators with domain expertise.
