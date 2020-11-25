@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[Angelucci and De~Giorgi, 2009]{angelucci:2009:indirect}
+Angelucci, M. and De~Giorgi, G. (2009).
+\newblock Indirect effects of an aid program: how do cash transfers affect
+  ineligibles' consumption?
+\newblock {\em American Economic Review}, 99(1):486--508.
+
 \bibitem[Basu et~al., 1996]{basu:1996:local}
 Basu, S., Jammalamadaka, S.~R., and Liu, W. (1996).
 \newblock Local posterior robustness with parametric priors: Maximum and
@@ -17,6 +23,17 @@ Carpenter, B., Gelman, A., Hoffman, M., Lee, D., Goodrich, B., Betancourt, M.,
   Brubaker, M., Guo, J., Li, P., and Riddell, A. (2017).
 \newblock {S}tan: {A} probabilistic programming language.
 \newblock {\em Journal of statistical software}, 76(1).
+
+\bibitem[Efron and Tibshirani, 1994]{efron:1994:bootstrap}
+Efron, B. and Tibshirani, R. (1994).
+\newblock {\em An Introduction to the Bootstrap}.
+\newblock CRC press.
+
+\bibitem[Finkelstein et~al., 2012]{finkelstein:2012:oregon}
+Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
+  J., Allen, H., Baicker, K., and {O}regon {H}ealth~{S}tudy {G}roup (2012).
+\newblock The oregon health insurance experiment: evidence from the first year.
+\newblock {\em The Quarterly journal of economics}, 127(3):1057--1106.
 
 \bibitem[Gelman and Hill, 2006]{gelman:2006:arm}
 Gelman, A. and Hill, J. (2006).
@@ -49,16 +66,33 @@ Giordano, R., Broderick, T., Meager, R., Huggins, J., and Jordan, M.~I. (2016).
 \newblock Fast robustness quantification with variational {B}ayes.
 \newblock {\em arXiv preprint arXiv:1606.07153}.
 
+\bibitem[Giordano et~al., 2019a]{giordano2019:hoij}
+Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
+\newblock A higher-order swiss army infinitesimal jackknife.
+\newblock {\em arXiv preprint arXiv:1907.12116}.
+
 \bibitem[Giordano et~al., 2018]{giordano:2018:bnpsensitivity}
 Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018).
 \newblock Evaluating sensitivity to the stick breaking prior in {B}ayesian
   nonparametrics.
 \newblock {\em arXiv preprint arXiv:1810.06587}.
 
+\bibitem[Giordano et~al., 2019b]{giordano:2019:ij}
+Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
+  (2019b).
+\newblock A {S}wiss army infinitesimal jackknife.
+\newblock In {\em The 22nd International Conference on Artificial Intelligence
+  and Statistics}, pages 1139--1147. PMLR.
+
 \bibitem[Gustafson, 1996]{gustafson:1996:localposterior}
 Gustafson, P. (1996).
 \newblock Local sensitivity of posterior expectations.
 \newblock {\em The Annals of Statistics}, 24(1):174--195.
+
+\bibitem[Hall, 2013]{hall:2013:bootstrap}
+Hall, P. (2013).
+\newblock {\em The Bootstrap and {Edgeworth} Expansion}.
+\newblock Springer Science \& Business Media.
 
 \bibitem[Huang et~al., 2011]{huang:2011:haplotype}
 Huang, L., Jakobsson, M., Pemberton, T., Ibrahim, M., Nyambo, T., Omar, S.,
@@ -66,11 +100,42 @@ Huang, L., Jakobsson, M., Pemberton, T., Ibrahim, M., Nyambo, T., Omar, S.,
 \newblock Haplotype variation and genotype imputation in {A}frican populations.
 \newblock {\em Genetic epidemiology}, 35(8):766--780.
 
+\bibitem[Huggins and Miller, 2019]{huggins:2019:bayesbag}
+Huggins, J. and Miller, J. (2019).
+\newblock Using bagged posteriors for robust inference and model criticism.
+\newblock {\em arXiv preprint arXiv:1912.07104}.
+
+\bibitem[Jaeckel, 1972]{jaeckel:1972:infinitesimal}
+Jaeckel, L. (1972).
+\newblock The infinitesimal jackknife, memorandum.
+\newblock Technical report, MM 72-1215-11, Bell Lab. Murray Hill, NJ.
+
+\bibitem[Kleijn and van~der Vaart, 2006]{kleijn:2006:misspecification}
+Kleijn, B. and van~der Vaart, A. (2006).
+\newblock Misspecification in infinite-dimensional {B}ayesian statistics.
+\newblock {\em The Annals of Statistics}, 34(2):837--877.
+
+\bibitem[Koh and Liang, 2017]{koh:2017:blackbox}
+Koh, P.~W. and Liang, P. (2017).
+\newblock Understanding black-box predictions via influence functions.
+\newblock In {\em International Conference on Machine Learning (ICML)}.
+
+\bibitem[Lehmann and Casella, 2006]{lehman:1983:pointestimation}
+Lehmann, E. and Casella, G. (2006).
+\newblock {\em Theory of point estimation}.
+\newblock Springer Science \& Business Media.
+
 \bibitem[Meager, 2019]{meager:2019:microcredit}
 Meager, R. (2019).
 \newblock Understanding the average impact of microcredit expansions: A
   {B}ayesian hierarchical analysis of seven randomized experiments.
 \newblock {\em American Economic Journal: Applied Economics}, 11(1):57--91.
+
+\bibitem[Rad and Maleki, 2018]{rad:2018:scalableloo}
+Rad, K. and Maleki, A. (2018).
+\newblock A scalable estimate of the extra-sample prediction error via
+  approximate leave-one-out.
+\newblock {\em arXiv Preprint}.
 
 \bibitem[Raj et~al., 2014]{raj:2014:faststructure}
 Raj, A., Stephens, M., and Pritchard, J. (2014).
@@ -89,9 +154,28 @@ Sethuraman, J. (1994).
 \newblock A constructive definition of {D}irichlet priors.
 \newblock {\em Statistica {S}inica}, pages 639--650.
 
+\bibitem[Shao and Tu, 2012]{shao:2012:jackknife}
+Shao, J. and Tu, D. (2012).
+\newblock {\em The Jackknife and Bootstrap}.
+\newblock Springer Series in Statistics.
+
+\bibitem[Shoemaker et~al., 2015]{shoemaker:2015:ultrasensitive}
+Shoemaker, J.~E., Fukuyama, S., Eisfeld, A.~J., Zhao, D., Kawakami, E., Sakabe,
+  S., Maemura, T., Gorai, T., Katsura, H., Muramoto, Y., Watanabe, S.,
+  Watanabe, T., Fuji, K., Matsuoka, Y., Kitano, H., and Kawaoka, Y. (2015).
+\newblock An ultrasensitive mechanism regulates influenza virus-induced
+  inflammation.
+\newblock {\em PLoS Pathogens}, 11(6):1--25.
+
 \bibitem[{Stan Development Team}, 2020]{rstan}
 {Stan Development Team} (2020).
 \newblock {RStan}: the {R} interface to {Stan}.
 \newblock R package version 2.21.2.
+
+\bibitem[Waddell et~al., 2002]{waddell:2002:bayesphyloboot}
+Waddell, P., Kishino, H., and Ota, R. (2002).
+\newblock Very fast algorithms for evaluating the stability of ml and bayesian
+  phylogenetic trees from sequence data.
+\newblock {\em Genome Informatics}, 13:82--92.
 
 \end{thebibliography}

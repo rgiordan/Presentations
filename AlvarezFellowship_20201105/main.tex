@@ -134,32 +134,36 @@ evaluates a statistic if parts of the observed data had been ablated.  Both of
 these procedures can be treated by sensitivity analysis, where sensitivity
 is to the dataset itself.
 
-
 \paragraph{Accuracy bounds for approximate cross validation.}
 
-Our paper: \citet{giordano:2019:ij}
-See IJ section for more potential references.
-We observed that these differnetial methods could speed up the evaluation of
-cross validation in large machine learning models which are expensive to re-fit.
-In CITE, we bridged the gap from some of the classical literature, providing
-finite-sample accuracy bounds for approximate leave-k-out cross validation, even
-when the derivatives of the objective function are unbounded.
+To perform leave-one-out CV (LOO-CV), one re-runs an estimation procedure with
+each datapoint left out.  In full, LOO-CV requires as many re-runs procedures as
+there are datapoints, and each re-run is expected to be quite close to the
+original fit.  Rather than re-running exactly, one can use a Taylor series to
+approximate the effect of removing a single data point; since the dataset with
+one point left out is, in some sense, ``close'' to the original dataset, the
+Taylor series can be expected to perform well.  Prior to our work, this idea had
+been suggested both in the machine learning literature
+\citep{rad:2018:scalableloo, koh:2017:blackbox} as well as in the classical
+statistical literature under the name ``infinitesimal jackknife''
+\citep{jaeckel:1972:infinitesimal, shao:2012:jackknife}.  However, both
+treatments required unrealistic theoretical conditions for the accuracy of the
+Taylor series: specifically, that the gradients of the objective function be
+uniformly bounded, a condition that is rarely satisfied in scientific practice,
+even in the simplest possible example of using maximum likelihood to estimate
+the sample mean of a normal distribution. In \citet{giordano:2019:ij}, we
+synthesized the classical statistics and ML literatures and provided a more
+realistic set complexity condition under which the Taylor series is accurate,
+eschewing the need for bounded gradients.  We additionally demonstrated the
+accuracy of the technique on a dataset from genomics \citep{shoemaker:2015:ultrasensitive}.
 
-A follow-on work in progress (CITE) expands the results to higher-order
-expansions and to larger perturbations, including k-fold CV and the bootstrap.
-They key to all this work is a set complexity condition, in light of which it is
-clear that one can provide accuracy bounds uniformly over small perturbations,
-and over randomly-chosen large perturbations, but not for uniform bounds over
-large perturbations.  Because we show that the linear approximation approaches
-the bootstrap closer than the bootstrap approaches the truth, our work
-should allow for practical differential approximations to prohibitively
-expensive procedures such as the bootstrap-after-the-bootstrap.
-\citet{giordano2019:hoij}
-\citet{efron:1994:bootstrap}
-\citet{hall:2013:bootstrap}
 
 
 \paragraph{Adversarial sensitivity for M-estimators.}
+
+
+\citet{angelucci:2009:indirect}
+\citep{finkelstein:2012:oregon}
 
 In the social sciences, it is common to run randomized trials on a particular
 population to esitmate an effect that we hope generalizes to different
@@ -183,7 +187,6 @@ of a very small number of datapoints.  Though the precise meaning will
 depend on the context, the broad implication is that studies which
 attempt to overcome low SNR with large sample sizes will be inherently
 non-robust, even in the absence of misspecification or gross errors.
-
 
 
 \paragraph{Frequentist properties of Bayesian posteriors}
@@ -303,6 +306,9 @@ did not shrink the spline regressions too much.
 
 \paragraph{Bootstrapping simulation-based inference.}
 
+\citet{giordano2019:hoij}
+\citet{efron:1994:bootstrap}
+\citet{hall:2013:bootstrap}
 
 
 
