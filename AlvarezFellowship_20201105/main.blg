@@ -2,75 +2,80 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 102 of file main.aux
+Illegal, another \bibstyle command---line 116 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-Repeated entry---line 575 of file references.bib
+Repeated entry---line 648 of file references.bib
  : @inproceedings{giordano:2019:ij
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 591 of file references.bib
+Repeated entry---line 664 of file references.bib
  : @article{shoemaker:2015:ultrasensitive
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 744 of file references.bib
+Repeated entry---line 738 of file references.bib
+ : @phdthesis{reeds:1976:thesis
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 817 of file references.bib
  : @book{shao:2012:jackknife
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 761 of file references.bib
+Repeated entry---line 834 of file references.bib
  : @techreport{jaeckel:1972:infinitesimal
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 882 of file references.bib
+Repeated entry---line 955 of file references.bib
  : @inproceedings{koh:2017:blackbox
  :                                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 891 of file references.bib
+Repeated entry---line 964 of file references.bib
  : @article{rad:2018:scalableloo
  :                              ,
 I'm skipping whatever remains of this entry
+Warning--empty publisher in giordano:2020:bayesij
 Warning--empty publisher in giordano:2020:amip
-You've used 39 entries,
+You've used 47 entries,
             1935 wiz_defined-function locations,
-            688 strings with 10163 characters,
-and the built_in function-call counts, 15323 in all, are:
-= -- 1474
-> -- 710
-< -- 30
-+ -- 270
-- -- 240
-* -- 1272
-:= -- 2705
-add.period$ -- 118
-call.type$ -- 39
-change.case$ -- 307
-chr.to.int$ -- 37
-cite$ -- 40
-duplicate$ -- 572
-empty$ -- 1005
-format.name$ -- 309
-if$ -- 2952
+            731 strings with 11602 characters,
+and the built_in function-call counts, 18615 in all, are:
+= -- 1791
+> -- 888
+< -- 33
++ -- 332
+- -- 302
+* -- 1578
+:= -- 3300
+add.period$ -- 141
+call.type$ -- 47
+change.case$ -- 377
+chr.to.int$ -- 45
+cite$ -- 49
+duplicate$ -- 677
+empty$ -- 1201
+format.name$ -- 383
+if$ -- 3564
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 42
-newline$ -- 196
-num.names$ -- 119
-pop$ -- 292
+missing$ -- 48
+newline$ -- 235
+num.names$ -- 143
+pop$ -- 348
 preamble$ -- 1
-purify$ -- 314
+purify$ -- 385
 quote$ -- 0
-skip$ -- 441
+skip$ -- 521
 stack$ -- 0
-substring$ -- 934
-swap$ -- 71
+substring$ -- 1140
+swap$ -- 78
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 218
-warning$ -- 1
-while$ -- 117
+type$ -- 266
+warning$ -- 2
+while$ -- 143
 width$ -- 0
-write$ -- 489
-(There were 7 error messages)
+write$ -- 589
+(There were 8 error messages)
