@@ -16,7 +16,7 @@ complex statistical models, in fields as diverse as astronomy
 \citep{regier:2019:cataloging}, economics \citep{meager:2019:microcredit},
 phylogenetics \citep{pritchard:2000:inference}, and many more.  As models grow
 in complexity, the need to interrogate their assumptions and to propagate
-uncertainty amongst their components grows, as does the computational
+uncertainty among their components grows, as does the computational
 cost of doing so using traditional statistical methods. Many classical
 procedures designed to address these concerns, such as Markov Chain Monte Carlo
 (MCMC), cross validation, or re-estimating a model under a range of
@@ -25,7 +25,7 @@ modeling assumptions, can be prohibitively expensive in many modern problems.
 To address this gap, my work employs {\em sensitivity analysis}, applied not
 merely in the traditional sense of assessing the risk of to imprecise modeling
 assumptions (though I do pursue this traditional role as well), but also to
-quantify freqeuntist sampling properties and propagate uncertainty in Bayesian
+quantify frequentist sampling properties and propagate uncertainty in Bayesian
 procedures. Though conceptually unified, my work is diverse in applications,
 touching many of the core activities of modern data analysis, from
 cross-validation \citep{giordano:2019:ij, giordano2019:hoij}, scalable Bayesian
@@ -86,7 +86,7 @@ Prior to our work, this idea had been suggested both in the machine learning
 literature \citep{rad:2018:scalableloo, koh:2017:blackbox} as well as in the
 classical statistical literature under the name ``infinitesimal jackknife''
 \citep{jaeckel:1972:infinitesimal, shao:2012:jackknife}.  However, the machine
-learning work developed independently of the statisical precedent, and both
+learning work developed independently of the statistical precedent, and both
 treatments required unrealistic theoretical conditions for the accuracy of the
 Taylor series: specifically, that the gradients of the objective function be
 uniformly bounded, a condition that is rarely satisfied in scientific practice,
@@ -94,20 +94,20 @@ even in the simplest possible example of using maximum likelihood to estimate
 the sample mean of a normal distribution.
 
 In \citet{giordano:2019:ij}, we synthesized the classical statistics and machine
-learning devlopments, providing a more realistic set complexity condition under
+learning developments, providing a more realistic set complexity condition under
 which the Taylor series is accurate, eschewing the need for bounded gradients.
 Unlike previous work, our theory was purely finite sample, implying the
-asymptotica results of prior work as a corollary.  We demonstrated the accuracy
+asymptotic results of prior work as a corollary.  We demonstrated the accuracy
 of the technique on an unsupervised clustering problem from genomics
 \citep{shoemaker:2015:ultrasensitive}.
 
 
 \paragraph{Sensitivity to removal of a small fraction of the data.} Classical
 frequentist standard errors estimate the variability in an estimator that would
-result from the rarified thought experiment of re-sampling datsets from the same
+result from the rarefied thought experiment of re-sampling datasets from the same
 distribution that gave rise to the observed data.  In the social sciences, this
 rarefied experiment rarely closely corresponds to reality, and one might be
-concerned if substantive conclusions could be overtuned by other minor
+concerned if substantive conclusions could be overturned by other minor
 perturbations to the data.
 
 In \citet{giordano:2020:amip}, we provide an easily-computed approximation to
@@ -124,7 +124,7 @@ overturned by dropping only a small number of datapoints
 
 \paragraph{Frequentist variability of Bayesian posteriors.}
 
-Bayesian statistcs provides powerful tools for coherently treating uncertainty
+Bayesian statistics provides powerful tools for coherently treating uncertainty
 in complex problems, though, when the model is misspecified, the estimated
 posterior uncertainty may not be meaningful.  In principle, however, one might
 always compute the frequentist sampling variability of a Bayesian posterior
@@ -139,7 +139,7 @@ By combining the frequentist IJ \citep{jaeckel:1972:infinitesimal,
 shao:2012:jackknife, giordano:2019:ij} approach to frequentist variance with the
 MCMC-based measures of sensitivity \citep{gustafson:2012:localrobustnessbook,
 giordano:2018:covariances}, we derive the Bayesian infinitesimal jackknife (IJ),
-which can be used to compute the frequentist variability of Bayeisan posterior
+which can be used to compute the frequentist variability of Bayesian posterior
 means without bootstrapping or computing a maximum a-posteriori (MAP) estimate.
 In a work in progress \citep{giordano:2020:bayesij}, we extend the Bayesian
 central limit theorem of \citet{lehman:1983:pointestimation,
@@ -186,7 +186,7 @@ Bayesian techniques allows analysts to reason coherently about unknown
 parameters, but only if the user specifies a complete generating process for the
 parameters and data, including both prior distributions for the parameters and
 precise likelihoods for the data.  Often, aspects of this model are at best a
-considered simplifcation, and at worst chosen only for computational
+considered simplification, and at worst chosen only for computational
 convenience.  It is critical to ask whether the analysis would have changed
 substantively had different modeling choices been made.
 
