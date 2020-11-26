@@ -2,80 +2,80 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 109 of file main.aux
+Illegal, another \bibstyle command---line 125 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-Repeated entry---line 648 of file references.bib
+Repeated entry---line 692 of file references.bib
  : @inproceedings{giordano:2019:ij
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 664 of file references.bib
+Repeated entry---line 708 of file references.bib
  : @article{shoemaker:2015:ultrasensitive
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 738 of file references.bib
+Repeated entry---line 782 of file references.bib
  : @phdthesis{reeds:1976:thesis
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 817 of file references.bib
+Repeated entry---line 861 of file references.bib
  : @book{shao:2012:jackknife
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 834 of file references.bib
+Repeated entry---line 878 of file references.bib
  : @techreport{jaeckel:1972:infinitesimal
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 955 of file references.bib
+Repeated entry---line 999 of file references.bib
  : @inproceedings{koh:2017:blackbox
  :                                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 964 of file references.bib
+Repeated entry---line 1008 of file references.bib
  : @article{rad:2018:scalableloo
  :                              ,
 I'm skipping whatever remains of this entry
 Warning--empty publisher in giordano:2020:bayesij
 Warning--empty publisher in giordano:2020:amip
-You've used 44 entries,
+You've used 50 entries,
             1935 wiz_defined-function locations,
-            713 strings with 11120 characters,
-and the built_in function-call counts, 17359 in all, are:
-= -- 1664
-> -- 840
-< -- 30
-+ -- 316
-- -- 286
-* -- 1478
-:= -- 3088
-add.period$ -- 132
-call.type$ -- 44
-change.case$ -- 354
-chr.to.int$ -- 42
-cite$ -- 46
-duplicate$ -- 627
-empty$ -- 1116
-format.name$ -- 362
-if$ -- 3313
+            749 strings with 12022 characters,
+and the built_in function-call counts, 19983 in all, are:
+= -- 1920
+> -- 957
+< -- 35
++ -- 362
+- -- 326
+* -- 1702
+:= -- 3532
+add.period$ -- 150
+call.type$ -- 50
+change.case$ -- 402
+chr.to.int$ -- 48
+cite$ -- 52
+duplicate$ -- 722
+empty$ -- 1291
+format.name$ -- 414
+if$ -- 3827
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 45
-newline$ -- 220
-num.names$ -- 134
-pop$ -- 329
+missing$ -- 53
+newline$ -- 250
+num.names$ -- 152
+pop$ -- 375
 preamble$ -- 1
-purify$ -- 362
+purify$ -- 412
 quote$ -- 0
-skip$ -- 477
+skip$ -- 554
 stack$ -- 0
-substring$ -- 1047
-swap$ -- 66
-text.length$ -- 4
+substring$ -- 1243
+swap$ -- 83
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 248
+type$ -- 280
 warning$ -- 2
-while$ -- 132
+while$ -- 153
 width$ -- 0
-write$ -- 551
+write$ -- 627
 (There were 8 error messages)

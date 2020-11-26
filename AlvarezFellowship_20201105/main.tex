@@ -36,41 +36,18 @@ more. A recurrent theme of my work is adapting classical {\em theoretical tools}
 computing environments} equipped with scalable, general purpose automatic
 differentiation software \citep{baydin:2015:automatic, carpenter:2015:stanmath}.
 
-%   At its core, my methodological work is all
-% based on using Taylor series approximations, constructed only from properties of
-% a single model fit, computed using either optimization or MCMC, to extrapolate
-% to alternatives.
-% In my work, provide practical
-% approximations to Bayesian posterior uncertainty, CV loss, and model
-% sensitivity, all while avoiding expensive model re-estimation.
-% Sensitivity analysis is a venerable idea with a rich existing
-% literature, and I show that it has wide-ranging and fundamental applications in
-% modern, computationally intensive statistical problems.
-% Furthermore, I motivate the re-examination of theoretical ideas concerning the
-% role of differential approximations in statistical analysis as practical tools,
-% particularly given the promulgation of scalable, general purpose automatic
-% differentiation software \citep{baydin:2015:automatic, carpenter:2015:stanmath}.
-
-% I will divide my research statement into three parts: first, I will cover a more
-% traditional application of sensitivity analysis to the assessment of prior
-% sensitivity in Bayesian and variational Bayesian analysis.  I will then discuss
-% approximate CV and bootstrapping, which can be viewed as a kind of sensitivity
-% analysis.  Finally, I discuss how sensitivity analysis can recover accurate
-% posterior covariances from variational Bayesian approximations, tying sensitiity
-% analysis to the uniquitous scientific goal of uncertainty propagation.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Data sensitivity: cross validation and frequentist variance}
 
-Frequentist variability is ultimately concerned with the outcome of an
-estimation procedure if the data were drawn from the same distribution as but
-different from that observed.  Similarly, all forms of cross-validation (CV)
-evaluates a statistic if parts of the observed data had been ablated.  Both of
-these procedures can be treated by sensitivity analysis, where sensitivity
-is to the dataset itself.
+% Frequentist variability is ultimately concerned with the outcome of an
+% estimation procedure if the data were drawn from the same distribution as but
+% different from that observed.  Similarly, all forms of cross-validation (CV)
+% evaluates a statistic if parts of the observed data had been ablated.  Both of
+% these procedures can be treated by sensitivity analysis, where sensitivity
+% is to the dataset itself.
 
 \paragraph{Accuracy bounds for approximate cross validation.}
 
@@ -156,7 +133,23 @@ stan-examples:2017}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Propagation of uncertainty in scalable Bayesian inference}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Sensitivity for Bayesian analysis}
+
+% Bayesian techniques allows analysts to reason coherently about unknown
+% parameters, but only if the user specifies a complete generating process for the
+% parameters and data, including both prior distributions for the parameters and
+% precise likelihoods for the data.  Often, aspects of this model are at best a
+% considered simplification, and at worst chosen only for computational
+% convenience.  It is critical to ask whether the analysis would have changed
+% substantively had different modeling choices been made.
+
+\paragraph{Propagation of uncertainty in scalable Bayesian inference}
 
 One popular technique to scale Bayesian inference to massive problems is mean
 field variational Bayes (MFVB) \citep{wainwright:2008:graphical,
@@ -176,19 +169,25 @@ models from the social sciences \citep{gelman:2006:arm}, demonstrating accurate
 posterior covariances computed over an order of magnitude faster than MCMC.
 
 
+\paragraph{Hyperparameter sensitivity for MCMC.}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Prior sensitivity in Bayesian analysis}
+MCMC is arguably the most commonly used computational tool to estimate Bayesian
+posteriors, and modern black-box MCMC tools such as \texttt{Stan} \citep{rstan,
+carpenter:2017:stan}.  However, MCMC still often takes a long time to run, and
+systematically exploring alternative prior parameterizations by re-running MCMC
+would be computationally prohibitive for all but the simplest models. A
+classical result from Bayesian robustness states that the sensitivity of a
+posterior expectation is given by a particular posterior covariance
+\citep{gustafson:1996:localposterior, basu:1996:local}, though the result has
+not been widely used, arguably due in part to the lack of an automatic
+implementation. In my software package, \citet{giordano:2020:rstansensitivity},
+I take advantage of the automatic differentiation capacities of
+\texttt{Stan} to provide automatic hyperparameter sensitivity for
+generic Stan models.  In examples in the package \texttt{git} repository,
+I demonstrate the efficacy of the package in detecting excess prior
+sensitivity, particularly in a social sciences model taken from
+\citet[Chapter 13.5]{gelman:2006:arm}.
 
-Bayesian techniques allows analysts to reason coherently about unknown
-parameters, but only if the user specifies a complete generating process for the
-parameters and data, including both prior distributions for the parameters and
-precise likelihoods for the data.  Often, aspects of this model are at best a
-considered simplification, and at worst chosen only for computational
-convenience.  It is critical to ask whether the analysis would have changed
-substantively had different modeling choices been made.
 
 \paragraph{Bayesian nonparametrics.}
 
@@ -230,71 +229,78 @@ real excess prior sensitivity in a BNP version of the model
 % epistemic uncertainty not captured by the Bayesian posterior.
 
 
-\paragraph{Hyperparameter sensitivity for MCMC.}
+%
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\subsection*{Selected Future work}
 
-MCMC is arguably the most commonly used computational tool to estimate Bayesian
-posteriors, and modern black-box MCMC tools such as \texttt{Stan} \citep{rstan,
-carpenter:2017:stan}.  However, MCMC still often takes a long time to run, and
-systematically exploring alternative prior parameterizations by re-running MCMC
-would be computationally prohibitive for all but the simplest models. A
-classical result from Bayesian robustness states that the sensitivity of a
-posterior expectation is given by a particular posterior covariance
-\citep{gustafson:1996:localposterior, basu:1996:local}, though the result has
-not been widely used, arguably due in part to the lack of an automatic
-implementation. In my software package, \citet{giordano:2020:rstansensitivity},
-I take advantage of the automatic differentiation capacities of
-\texttt{Stan} to provide automatic hyperparameter sensitivity for
-generic Stan models.  In examples in the package \texttt{git} repository,
-I demonstrate the efficacy of the package in detecting excess prior
-sensitivity, particularly in a social sciences model taken from
-\citet[Chapter 13.5]{gelman:2006:arm}.
-%
-%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% \subsection*{Selected Future work}
-%
-% My future work will be
-%
-% \paragraph{Bootstrapping simulation-based inference.}
-%
-%
-% \citet{giordano2019:hoij}
-% \citet{efron:1994:bootstrap}
-% \citet{hall:2013:bootstrap}
-%
-%
-% \paragraph{Preprocessing Sensitivity.}
-%
-% Our work on the higher-order infinitesimal jackknife could be applied to other
-% random reweighting schemes, particularly the bootstrap.  The bootstrap is known
-% to have frequentist properties that are asymptotically more accurate than the
-% normal approximation in certain circumstances CITE, but the bootstrap requires
-% re-computing an estimator as many time as there are bootstrap samples. However,
-% a sufficiently high-order IJ estimate will approach the bootstrap estimator at a
-% rate faster than the bootstrap's extra accuracy, strongly suggesting that the IJ
-% will inherit all of the bootstrap's attractive properties at a fraction of the
-% computational cost.  The IJ is particularly appealing for
-% bootstrap-after-bootstrap procedures, which have attractive theoretical
-% properties but are computationally prohibitive even on medium-sized statistical
-% problems.  It seems plausible that the HOIJ could open up a range of bootstrap
-% applications that are presently out of reach.
-%
-%
-% \paragraph{Partitioned Bayesian inference with theoretical bounds.}
-%
-% Given a large, complicated problem, it is often computationally convenient to
-% perform inference in separate computatoinal steps, while still propagating
-% uncertainty from one step to another.  For example, in CITE, we first fit spline
-% regressions to time series of gene expression data, and then clustered the
-% spline fits to group together genes with similar behavior.  The Bayesian ideal,
-% which is the simultaneous estimation of the clusters and spline regression, was
-% too computationally prohibitive, and would intuitively have given a similar
-% result to the sequential analysis, to the extent that the cluster center priors
-% did not shrink the spline regressions too much.
-%
+My research is driven by the needs of my scientific collaborators, and
+so my future work will be determined to a large part by my colleagues.
+Here, I will discuss a few directions that I find promising and interesting,
+and which I believe could be applicable to a diverse set of problems.
+
+\paragraph{Bootstrapping and bootstrapping after bootstrapping.}
+
+We extend the ideas of \citet{giordano:2020:bayesij} to higher-order Taylor
+series approximations in \citet{giordano2019:hoij}, provding a family of
+estimators which we collectively call the higher-order infintiesimal jackknife
+(HOIJ).  In addition to providing higher-quality approximations to CV and
+extending our results to k-fold CV, the higher-order approach promises to
+provide a scalable alternative to the bootstrap, a procedure that estimates
+frequentist variability by repeatedly re-evaluating a model at datasets drawn
+with replacement from the observed data. The bootstrap is known to enjoy
+higher-order accuracy in certain circumstances \citet{hall:2013:bootstrap}, and
+the HOIJ can approach the bootstrap at a rate faster than the bootstrap
+approaches the truth.  The HOIJ thus promises to make bootstrap inference
+available to models which are differentiable but too expensive to re-evaluate
+(e.g. simulation-based models \citep{gourieroux:1993:simulation}), but also to
+allow efficient bootstrap-after-bootstrap procedures which that are currently
+out of reach for all but the simplest statsitics \citet{efron:1994:bootstrap}.
+
+
+\paragraph{Preprocessing Sensitivity.}
+
+Analyses in genomics often begin with a pre-processing step in observation units
+are clustered together according to ad-hoc measures of similarity across a large
+number of feature vectors \citep{xu:2015:identification,
+stuart:2019:comprehensive}.  Quickly assessing the sensitivity of these
+procedures to the inclusion or exclusion of individual features would allow the
+researcher to identify high-leverage observations and avoid imposing structure
+via arbitrary modeling assumptions.   Sensitivity anlaysis cannot be applied
+directly to such similarity measures, as they are typically non-differentiable.
+With a colleague from biology, we are investigating using a probabilisitic
+relaxation only of the initial distance measure, drawing random datasets, and
+applying the non-differential similarity measure to these random datasets,
+taking the average similarity across draws as the output of the procedure. We
+can then assess the sensitivity of the original sample's probability to
+inclusion or exclusion of particular features, and assess in turn the
+sensitivity of the importance sampling estimate of the average output, providing
+a sensitivity analysis of the whole non-differentiable procedure.  Conceptually,
+approach is attractive because it would allow sensitivity analysis to be applied
+to black-box procedures without having to design and validate custom continuous
+relaxations.
+
+
+\paragraph{Partitioned Bayesian inference.}
+
+The ideas of \citep{giordano:2018:covariances} can be naturally extended to
+approximately propagate uncertainty amongst separately estimated components of
+an inference problem.  For example, astronomical catalogues are customarily
+produced with MFVB-like algorithms \citep{lang:2016:tractor,
+regier:2019:cataloging}, which take inputs such as the sky background
+and optical point spread function as fixed inputs, though these quantities
+are themselves inferred with uncertainty.  Viewing all the separate inference
+procedures as a sequential quasi-MFVB objective, one could directly apply
+the techniques of LRVB to propagate the uncertainty from the modeling inputs
+to the astronomical catalogue's uncertainty.  Doing so would require the
+approximate solution of a very large, but very sparse, linear system,
+which is itself an interesting computational challenge.
+
+
+
 
 
 

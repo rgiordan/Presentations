@@ -46,6 +46,11 @@ Carpenter, B., Hoffman, M., Brubaker, M., Lee, D., Li, P., and Betancourt, M.
 \newblock Criteo conversion logs dataset.
 \newblock Downloaded on July 27th, 2017.
 
+\bibitem[Efron and Tibshirani, 1994]{efron:1994:bootstrap}
+Efron, B. and Tibshirani, R. (1994).
+\newblock {\em An Introduction to the Bootstrap}.
+\newblock CRC press.
+
 \bibitem[Finkelstein et~al., 2012]{finkelstein:2012:oregon}
 Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
   J., Allen, H., Baicker, K., and {O}regon {H}ealth~{S}tudy {G}roup (2012).
@@ -110,6 +115,12 @@ Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
 \newblock In {\em The 22nd International Conference on Artificial Intelligence
   and Statistics}, pages 1139--1147. PMLR.
 
+\bibitem[Gourieroux and Monfort, 1993]{gourieroux:1993:simulation}
+Gourieroux, C. and Monfort, A. (1993).
+\newblock Simulation-based inference: {A} survey with special reference to
+  panel data models.
+\newblock {\em Journal of Econometrics}, 59(1-2):5--33.
+
 \bibitem[Gustafson, 1996]{gustafson:1996:localposterior}
 Gustafson, P. (1996).
 \newblock Local sensitivity of posterior expectations.
@@ -120,6 +131,11 @@ Gustafson, P. (2000).
 \newblock Local robustness in {Bayesian} analysis.
 \newblock In Insua, D.~R. and Ruggeri, F., editors, {\em Robust {Bayesian}
   Analysis}, volume 152. Springer Science \& Business Media.
+
+\bibitem[Hall, 2013]{hall:2013:bootstrap}
+Hall, P. (2013).
+\newblock {\em The Bootstrap and {Edgeworth} Expansion}.
+\newblock Springer Science \& Business Media.
 
 \bibitem[Huang et~al., 2011]{huang:2011:haplotype}
 Huang, L., Jakobsson, M., Pemberton, T., Ibrahim, M., Nyambo, T., Omar, S.,
@@ -158,6 +174,12 @@ Kleijn, B. and van~der Vaart, A. (2006).
 Koh, P.~W. and Liang, P. (2017).
 \newblock Understanding black-box predictions via influence functions.
 \newblock In {\em International Conference on Machine Learning (ICML)}.
+
+\bibitem[Lang et~al., 2016]{lang:2016:tractor}
+Lang, D., Hogg, D., and Mykytyn, D. (2016).
+\newblock The {T}ractor: {P}robabilistic astronomical source detection and
+  measurement.
+\newblock {\em ascl}, pages ascl--1604.
 
 \bibitem[Lehmann and Casella, 2006]{lehman:1983:pointestimation}
 Lehmann, E. and Casella, G. (2006).
@@ -232,6 +254,12 @@ Shoemaker, J.~E., Fukuyama, S., Eisfeld, A.~J., Zhao, D., Kawakami, E., Sakabe,
 \newblock Stan example models wiki.
 \newblock Referenced on June 5th, 2020.
 
+\bibitem[Stuart et~al., 2019]{stuart:2019:comprehensive}
+Stuart, T., Butler, A., Hoffman, P., Hafemeister, C., Papalexi, E., Mauck, W.,
+  Hao, Y., Stoeckius, M., Smibert, P., and Satija, R. (2019).
+\newblock Comprehensive integration of single-cell data.
+\newblock {\em Cell}, 177(7):1888--1902.
+
 \bibitem[Waddell et~al., 2002]{waddell:2002:bayesphyloboot}
 Waddell, P., Kishino, H., and Ota, R. (2002).
 \newblock Very fast algorithms for evaluating the stability of ml and bayesian
@@ -242,5 +270,11 @@ Waddell, P., Kishino, H., and Ota, R. (2002).
 Wainwright, M. and Jordan, M.~I. (2008).
 \newblock Graphical models, exponential families, and variational inference.
 \newblock {\em Machine Learning}, 1(1-2):1--305.
+
+\bibitem[Xu and Su, 2015]{xu:2015:identification}
+Xu, C. and Su, Z. (2015).
+\newblock Identification of cell types from single-cell transcriptomes using a
+  novel clustering method.
+\newblock {\em Bioinformatics}, 31(12):1974--1980.
 
 \end{thebibliography}
