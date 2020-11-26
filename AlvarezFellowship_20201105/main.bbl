@@ -63,11 +63,6 @@ Gelman, A. and Hill, J. (2006).
   models}.
 \newblock Cambridge university press.
 
-\bibitem[Gelman and Rubin, 1992]{gelman:1992:inference}
-Gelman, A. and Rubin, D. (1992).
-\newblock Inference from iterative simulation using multiple sequences.
-\newblock {\em Statistical science}, pages 457--472.
-
 \bibitem[Gershman and Blei, 2012]{gershman:2012:bnptutorial}
 Gershman, S. and Blei, D. (2012).
 \newblock A tutorial on bayesian nonparametric models.
@@ -91,11 +86,6 @@ Giordano, R. and Broderick, T. (2020).
 Giordano, R., Broderick, T., and Jordan, M. (2018a).
 \newblock Covariances, robustness and variational {B}ayes.
 \newblock {\em The Journal of Machine Learning Research}, 19(1):1981--2029.
-
-\bibitem[Giordano et~al., 2016]{giordano:2016:microcredit}
-Giordano, R., Broderick, T., Meager, R., Huggins, J., and Jordan, M.~I. (2016).
-\newblock Fast robustness quantification with variational {B}ayes.
-\newblock {\em arXiv preprint arXiv:1606.07153}.
 
 \bibitem[Giordano et~al., 2019a]{giordano2019:hoij}
 Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
@@ -213,12 +203,6 @@ Regier, J., Fischer, K., Pamnany, K., Noack, A., Revels, J., Lam, M., Howard,
 \newblock Cataloging the visible universe through bayesian inference in julia
   at petascale.
 \newblock {\em Journal of Parallel and Distributed Computing}, 127:89--104.
-
-\bibitem[Rubin, 1981]{rubin:1981:estimation}
-Rubin, D. (1981).
-\newblock Estimation in parallel randomized experiments.
-\newblock {\em Journal of Educational and Behavioral Statistics},
-  6(4):377--401.
 
 \bibitem[Sethuraman, 1994]{sethuraman:1994:constructivedp}
 Sethuraman, J. (1994).

@@ -85,18 +85,18 @@ Taylor series can be expected to perform well.
 Prior to our work, this idea had been suggested both in the machine learning
 literature \citep{rad:2018:scalableloo, koh:2017:blackbox} as well as in the
 classical statistical literature under the name ``infinitesimal jackknife''
-\citep{jaeckel:1972:infinitesimal, shao:2012:jackknife}.  However, the ML work
-appeared unaware of the statisical precedent, and both treatments required
-unrealistic theoretical conditions for the accuracy of the Taylor series:
-specifically, that the gradients of the objective function be uniformly bounded,
-a condition that is rarely satisfied in scientific practice, even in the
-simplest possible example of using maximum likelihood to estimate the sample
-mean of a normal distribution.
+\citep{jaeckel:1972:infinitesimal, shao:2012:jackknife}.  However, the machine
+learning work developed independently of the statisical precedent, and both
+treatments required unrealistic theoretical conditions for the accuracy of the
+Taylor series: specifically, that the gradients of the objective function be
+uniformly bounded, a condition that is rarely satisfied in scientific practice,
+even in the simplest possible example of using maximum likelihood to estimate
+the sample mean of a normal distribution.
 
-In \citet{giordano:2019:ij}, we provide a more realistic set complexity
-condition under which the Taylor series is accurate, eschewing the need for
-bounded gradients, and synthesizing the classical statistics and ML literatures.
-Also unlike previous work, our theory was purely finite sample, implying the
+In \citet{giordano:2019:ij}, we synthesized the classical statistics and machine
+learning devlopments, providing a more realistic set complexity condition under
+which the Taylor series is accurate, eschewing the need for bounded gradients.
+Unlike previous work, our theory was purely finite sample, implying the
 asymptotica results of prior work as a corollary.  We demonstrated the accuracy
 of the technique on an unsupervised clustering problem from genomics
 \citep{shoemaker:2015:ultrasensitive}.
@@ -108,52 +108,48 @@ result from the rarified thought experiment of re-sampling datsets from the same
 distribution that gave rise to the observed data.  In the social sciences, this
 rarefied experiment rarely closely corresponds to reality, and one might be
 concerned if substantive conclusions could be overtuned by other minor
-perturbations to the data.  For example, if a top-line conclusion of a study of
-the efficacy of cash transfers in a particular country
-\citep{angelucci:2009:indirect} could be reversed by removing a small percentage
-(say, $0.1\%$) of a dataset, one might hesitate to generalize one's conclusions
-to other countries, even if the result was ``statistically significant''
-according to classical frequentist standard errors.
+perturbations to the data.
 
-In \citet{giordano:2020:amip}, we address this fundamental question, extending
-our earlier results in \citet{giordano:2019:ij}.  We find that problems with
-small signal-to-noise ratio but large datasets will be particularly non-robust
-to the removal of a small proportion of the data. Such a situation that obtains
+In \citet{giordano:2020:amip}, we provide an easily-computed approximation to
+quantify the effect of ablating a small proportion of a dataset, with
+open-source software and finite-sample accuracy bounds for ordinary least
+squares and instrumental variables regression. We find that problems with small
+signal-to-noise ratio but large datasets will be particularly non-robust to the
+removal of a small proportion of the data. Such a situation that obtains
 commonly in econometrics, and we find that the sign and statistical significance
 of estimated effects in a number of large, prominent econometric studies can be
 overturned by dropping only a small number of datapoints
-\citep{angelucci:2009:indirect, finkelstein:2012:oregon}.  Our robustness metric
-can be computed easily and automatically for any Z-estimator; we provide
-software and tractable finite-sample accuracy bounds for ordinary least squares
-and instrumental variables regression.  More broadly, our work points to the
-importance of considering ``practical significance'' of effects in the social
-sciences rather than mere statistical significance.
+\citep{angelucci:2009:indirect, finkelstein:2012:oregon, meager:2019:microcredit}.
 
 
-\paragraph{Frequentist properties of Bayesian posteriors}
+\paragraph{Frequentist variability of Bayesian posteriors.}
 
-Bayesian measures is a powerful tool for coherently treating uncertainty in
-complex problems, but, when the model is misspecified, the estimated  posterior
-uncertainty may not be meaningful.  One can, however, always compute the
-frequentist sampling variability of a Bayesian posterior quantity, and such a
-quantity always remains meaningful, even if conceptually distinct from a
-posterior uncertainty \citet{waddell:2002:bayesphyloboot,
-kleijn:2006:misspecification, huggins:2019:bayesbag}.
+Bayesian statistcs provides powerful tools for coherently treating uncertainty
+in complex problems, though, when the model is misspecified, the estimated
+posterior uncertainty may not be meaningful.  In principle, however, one might
+always compute the frequentist sampling variability of a Bayesian posterior
+quantity, and such a quantity always remains meaningful, even if conceptually
+distinct from a posterior uncertainty \citep{waddell:2002:bayesphyloboot,
+kleijn:2006:misspecification}.  However, standard tools for evaluating
+frequentist uncertainty, such as the bootstrap \citep{huggins:2019:bayesbag},
+are extremely computationally intensive, as they typically require re-running an
+MCMC procedure hundreds of times.
 
 By combining the frequentist IJ \citep{jaeckel:1972:infinitesimal,
 shao:2012:jackknife, giordano:2019:ij} approach to frequentist variance with the
 MCMC-based measures of sensitivity \citep{gustafson:2012:localrobustnessbook,
-giordano:2018:covariances}, we are able to derive the Bayesian infinitesimal
-jackknife (IJ), which can be used to compute the frequentist variability of
-Bayeisan posterior means without bootstrapping or computing a maximum
-a-posteriori (MAP) estimate.  In a work in progress, we extend the Bayesian
+giordano:2018:covariances}, we derive the Bayesian infinitesimal jackknife (IJ),
+which can be used to compute the frequentist variability of Bayeisan posterior
+means without bootstrapping or computing a maximum a-posteriori (MAP) estimate.
+In a work in progress \citep{giordano:2020:bayesij}, we extend the Bayesian
 central limit theorem of \citet{lehman:1983:pointestimation,
 kass:1990:posteriorexpansions} to prove the consistency of the Bayesian IJ and
 show its accuracy as an approximation to the bootstrap for a larger number of
 examples, effectively allowing estimation of frequentist covariances orders of
 magnitude faster than the bootstrap.  We demonstrate the accuracy of our method
-on datasets from election modeling \citep{economist:2020:election}, ecology \citep{kery:2011:bayesian}, and most of
-the models from \citep{gelman:2006:arm, stan-examples:2017}.
+on datasets from election modeling \citep{economist:2020:election}, ecology
+\citep{kery:2011:bayesian}, and most of the models from \citep{gelman:2006:arm,
+stan-examples:2017}.
 
 
 
@@ -169,16 +165,15 @@ notoriously innacurate posterior uncertainty estimates, even in situations when
 it estimates the posterior means accurately. In
 \citep{giordano:2018:covariances}, we develop a method to recover accurate
 posterior uncertainties from MFVB approximations without needing to fit a more
-complex model, or indeed to re-fit the original model. Computing the LRVB
-covaraince requires solving a linear system, which in scientific applications is
-often sparse and can be solved using iterative techniques such as conjugate
-gradient \citep[Chapter 5]{nocedal:2006:numerical}.  We compare LRVB covariances
-to MCMC on a large number of real-world datasets, including logistic regression
-on an internet advertising dataset \citep{criteo:2014:dataset}, the
-Cormack-Jolly-Seber model from ecology \citep{kery:2011:bayesian}, and
-hierarchical generalized linear models from the social sciences
-\citep{gelman:2006:arm}, demonstrating accurate posterior covariances computed
-over an order of magnitude faster than MCMC.
+complex model or run MCMC. Computing the LRVB covariance requires solving a
+linear system, which in scientific applications is often sparse and can be
+solved using iterative techniques such as conjugate gradient \citep[Chapter
+5]{nocedal:2006:numerical}.  We compare LRVB covariances to MCMC on a large
+number of real-world datasets, including logistic regression on an internet
+advertising dataset \citep{criteo:2014:dataset}, the Cormack-Jolly-Seber model
+from ecology \citep{kery:2011:bayesian}, and hierarchical generalized linear
+models from the social sciences \citep{gelman:2006:arm}, demonstrating accurate
+posterior covariances computed over an order of magnitude faster than MCMC.
 
 
 
@@ -216,23 +211,23 @@ real excess prior sensitivity in a BNP version of the model
 \texttt{fastSTRUCTURE} \citep{raj:2014:faststructure}.
 
 
-\paragraph{Partial pooling in meta-analysis.}
-
-A popular form of meta-analysis in econometrics is to place a hierarchial model
-on a set of related experimental results, which both ``shrinks'' the individual
-estimates towards a common mean, potentially decreasing mean squared error, and
-allowing direct estimation of the average effect and diversity of effects
-\citep{rubin:1981:estimation,gelman:1992:inference}. These advantages come at
-the cost of positing a precise generative process for the effects in question,
-and it is reasonable to interrogate whether the estimation procedure is robust
-to varaibility in these effects.  In \citet{giordano:2016:microcredit}, we apply
-sensitivity analysis to a published meta-analysis of the effectiveness of
-microcredit interventions in seven developing countries
-\citep{meager:2019:microcredit}.  We find that the conclusion are highly
-sensitive to the assumed covariance structure between the base level of business
-profitability and the microcredit effect, a covariance which is {\em a priori}
-difficult to ascertain, automatically diagnosing an important source of
-epistemic uncertainty not captured by the Bayesian posterior.
+% \paragraph{Partial pooling in meta-analysis.}
+%
+% A popular form of meta-analysis in econometrics is to place a hierarchial model
+% on a set of related experimental results, which both ``shrinks'' the individual
+% estimates towards a common mean, potentially decreasing mean squared error, and
+% allowing direct estimation of the average effect and diversity of effects
+% \citep{rubin:1981:estimation,gelman:1992:inference}. These advantages come at
+% the cost of positing a precise generative process for the effects in question,
+% and it is reasonable to interrogate whether the estimation procedure is robust
+% to varaibility in these effects.  In \citet{giordano:2016:microcredit}, we apply
+% sensitivity analysis to a published meta-analysis of the effectiveness of
+% microcredit interventions in seven developing countries
+% \citep{meager:2019:microcredit}.  We find that the conclusion are highly
+% sensitive to the assumed covariance structure between the base level of business
+% profitability and the microcredit effect, a covariance which is {\em a priori}
+% difficult to ascertain, automatically diagnosing an important source of
+% epistemic uncertainty not captured by the Bayesian posterior.
 
 
 \paragraph{Hyperparameter sensitivity for MCMC.}
