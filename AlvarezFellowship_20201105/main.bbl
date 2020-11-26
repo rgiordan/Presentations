@@ -35,6 +35,11 @@ Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
 \newblock The oregon health insurance experiment: evidence from the first year.
 \newblock {\em The Quarterly journal of economics}, 127(3):1057--1106.
 
+\bibitem[Gelman and Heidemanns, 2020]{economist:2020:election}
+Gelman, A. and Heidemanns, M. (2020).
+\newblock The {Economist}: Forecasting the us elections.
+\newblock Data and model accessed Oct., 2020.
+
 \bibitem[Gelman and Hill, 2006]{gelman:2006:arm}
 Gelman, A. and Hill, J. (2006).
 \newblock {\em Data analysis using regression and multilevel/hierarchical
@@ -61,6 +66,11 @@ Giordano, R. (2020).
 \newblock Stansensitivity: automated hyperparameter sensitivity for {Stan}
   models.
 
+\bibitem[Giordano et~al., 2018a]{giordano:2018:covariances}
+Giordano, R., Broderick, T., and Jordan, M. (2018a).
+\newblock Covariances, robustness and variational {B}ayes.
+\newblock {\em The Journal of Machine Learning Research}, 19(1):1981--2029.
+
 \bibitem[Giordano et~al., 2016]{giordano:2016:microcredit}
 Giordano, R., Broderick, T., Meager, R., Huggins, J., and Jordan, M.~I. (2016).
 \newblock Fast robustness quantification with variational {B}ayes.
@@ -71,11 +81,16 @@ Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
 \newblock A higher-order swiss army infinitesimal jackknife.
 \newblock {\em arXiv preprint arXiv:1907.12116}.
 
-\bibitem[Giordano et~al., 2018]{giordano:2018:bnpsensitivity}
-Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018).
+\bibitem[Giordano et~al., 2018b]{giordano:2018:bnpsensitivity}
+Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018b).
 \newblock Evaluating sensitivity to the stick breaking prior in {B}ayesian
   nonparametrics.
 \newblock {\em arXiv preprint arXiv:1810.06587}.
+
+\bibitem[Giordano et~al., 2020]{giordano:2020:amip}
+Giordano, R., Meager, R., and Broderick, T. (2020).
+\newblock {\em An Automatic Finite-Sample Robustness Metric: Can Dropping a
+  Little Data Change Conclusions?}
 
 \bibitem[Giordano et~al., 2019b]{giordano:2019:ij}
 Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
@@ -88,6 +103,12 @@ Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
 Gustafson, P. (1996).
 \newblock Local sensitivity of posterior expectations.
 \newblock {\em The Annals of Statistics}, 24(1):174--195.
+
+\bibitem[Gustafson, 2000]{gustafson:2012:localrobustnessbook}
+Gustafson, P. (2000).
+\newblock Local robustness in {Bayesian} analysis.
+\newblock In Insua, D.~R. and Ruggeri, F., editors, {\em Robust {Bayesian}
+  Analysis}, volume 152. Springer Science \& Business Media.
 
 \bibitem[Hall, 2013]{hall:2013:bootstrap}
 Hall, P. (2013).
@@ -109,6 +130,18 @@ Huggins, J. and Miller, J. (2019).
 Jaeckel, L. (1972).
 \newblock The infinitesimal jackknife, memorandum.
 \newblock Technical report, MM 72-1215-11, Bell Lab. Murray Hill, NJ.
+
+\bibitem[Kass et~al., 1990]{kass:1990:posteriorexpansions}
+Kass, R., Tierney, L., and Kadane, J. (1990).
+\newblock The validity of posterior expansions based on {L}aplace's method.
+\newblock {\em {B}ayesian and Likelihood Methods in Statistics and
+  Econometrics}.
+
+\bibitem[K{\'e}ry and Schaub, 2011]{kery:2011:bayesian}
+K{\'e}ry, M. and Schaub, M. (2011).
+\newblock {\em Bayesian population analysis using {WinBUGS}: a hierarchical
+  perspective}.
+\newblock Academic Press.
 
 \bibitem[Kleijn and van~der Vaart, 2006]{kleijn:2006:misspecification}
 Kleijn, B. and van~der Vaart, A. (2006).
@@ -171,6 +204,11 @@ Shoemaker, J.~E., Fukuyama, S., Eisfeld, A.~J., Zhao, D., Kawakami, E., Sakabe,
 {Stan Development Team} (2020).
 \newblock {RStan}: the {R} interface to {Stan}.
 \newblock R package version 2.21.2.
+
+\bibitem[{Stan Team}, 2017]{stan-examples:2017}
+{Stan Team} (2017).
+\newblock Stan example models wiki.
+\newblock Referenced on June 5th, 2020.
 
 \bibitem[Waddell et~al., 2002]{waddell:2002:bayesphyloboot}
 Waddell, P., Kishino, H., and Ota, R. (2002).

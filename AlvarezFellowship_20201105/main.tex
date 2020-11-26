@@ -142,71 +142,80 @@ there are datapoints, and each re-run is expected to be quite close to the
 original fit.  Rather than re-running exactly, one can use a Taylor series to
 approximate the effect of removing a single data point; since the dataset with
 one point left out is, in some sense, ``close'' to the original dataset, the
-Taylor series can be expected to perform well.  Prior to our work, this idea had
-been suggested both in the machine learning literature
-\citep{rad:2018:scalableloo, koh:2017:blackbox} as well as in the classical
-statistical literature under the name ``infinitesimal jackknife''
-\citep{jaeckel:1972:infinitesimal, shao:2012:jackknife}.  However, both
-treatments required unrealistic theoretical conditions for the accuracy of the
-Taylor series: specifically, that the gradients of the objective function be
-uniformly bounded, a condition that is rarely satisfied in scientific practice,
-even in the simplest possible example of using maximum likelihood to estimate
-the sample mean of a normal distribution. In \citet{giordano:2019:ij}, we
-synthesized the classical statistics and ML literatures and provided a more
-realistic set complexity condition under which the Taylor series is accurate,
-eschewing the need for bounded gradients.  We additionally demonstrated the
-accuracy of the technique on a dataset from genomics \citep{shoemaker:2015:ultrasensitive}.
+Taylor series can be expected to perform well.
+
+Prior to our work, this idea had been suggested both in the machine learning
+literature \citep{rad:2018:scalableloo, koh:2017:blackbox} as well as in the
+classical statistical literature under the name ``infinitesimal jackknife''
+\citep{jaeckel:1972:infinitesimal, shao:2012:jackknife}.  However, the ML work
+appeared unaware of the statisical precedent, and both treatments required
+unrealistic theoretical conditions for the accuracy of the Taylor series:
+specifically, that the gradients of the objective function be uniformly bounded,
+a condition that is rarely satisfied in scientific practice, even in the
+simplest possible example of using maximum likelihood to estimate the sample
+mean of a normal distribution.
+
+In \citet{giordano:2019:ij}, we provide a more realistic set complexity
+condition under which the Taylor series is accurate, eschewing the need for
+bounded gradients, and synthesizing the classical statistics and ML literatures.
+Also unlike previous work, our theory was purely finite sample, implying the
+asymptotica results of prior work as a corollary.  We demonstrated the accuracy
+of the technique on an unsupervised clustering problem from genomics
+\citep{shoemaker:2015:ultrasensitive}.
 
 
+\paragraph{Sensitivity to removal of a small fraction of the data.} Classical
+frequentist standard errors estimate the variability in an estimator that would
+result from the rarified thought experiment of re-sampling datsets from the same
+distribution that gave rise to the observed data.  In the social sciences, this
+rarefied experiment rarely closely corresponds to reality, and one might be
+concerned if substantive conclusions could be overtuned by other minor
+perturbations to the data.  For example, if a top-line conclusion of a study of
+the efficacy of cash transfers in a particular country
+\citep{angelucci:2009:indirect} could be reversed by removing a small percentage
+(say, $0.1\%$) of a dataset, one might hesitate to generalize one's conclusions
+to other countries, even if the result was ``statistically significant''
+according to classical frequentist standard errors.
 
-\paragraph{Adversarial sensitivity for M-estimators.}
-
-
-\citet{angelucci:2009:indirect}
-\citep{finkelstein:2012:oregon}
-
-In the social sciences, it is common to run randomized trials on a particular
-population to esitmate an effect that we hope generalizes to different
-populations.  Classical standard errors measure the variability that one
-would expect from random sampling from the same distribution as that that
-gave rise to the observed data.  However, in order to generalize to radically
-different contexts, one might expect the conclusions to be robust to more
-adversarial perturbations.  In CITE, co-authors an I ask whether some
-common econometrics analyses are robust to the removal of a small proportion
-(e.g. one tenth of one percent of the data).  Again using the empirical
-influence function, we provide an automated method and software package
-to answer this question.
-
-We found that some common ``gold-standard'' applied econometrics papers
-can have central claims reversed by removing only a very small number of
-data points, even though there is no clear evidence of misspecification.
-A key theoretical takeaway of our work is that datsets with a low signal
-to noise ratio (defined as the effect size over the estimator standard
-deviation times $\sqrt{N}$) will always be sensitive to adversarial removal
-of a very small number of datapoints.  Though the precise meaning will
-depend on the context, the broad implication is that studies which
-attempt to overcome low SNR with large sample sizes will be inherently
-non-robust, even in the absence of misspecification or gross errors.
+In \citet{giordano:2020:amip}, we address this fundamental question, extending
+our earlier results in \citet{giordano:2019:ij}.  We find that problems with
+small signal-to-noise ratio but large datasets will be particularly non-robust
+to the removal of a small proportion of the data. Such a situation that obtains
+commonly in econometrics, and we find that the sign and statistical significance
+of estimated effects in a number of large, prominent econometric studies can be
+overturned by dropping only a small number of datapoints
+\citep{angelucci:2009:indirect, finkelstein:2012:oregon}.  Our robustness metric
+can be computed easily and automatically for any Z-estimator; we provide
+software and tractable finite-sample accuracy bounds for ordinary least squares
+and instrumental variables regression.  More broadly, our work points to the
+importance of considering ``practical significance'' of effects in the social
+sciences rather than mere statistical significance.
 
 
 \paragraph{Frequentist properties of Bayesian posteriors}
 
-By combining the above approach to frequentist variance with the MCMC-based
-measures of sensitivity, we are able to derive the Bayesian infinitesimal
-jackknife (IJ), which can be used to compute the frequentist variability
-of Bayeisan posterior means without bootstrapping or computing a maximum
-a-posteriori (MAP) estimate.  Such frequentist variances are particularly
-important when there is a possibility of model misspecification (in which
-case the Bayesian posterior variance is not particularly meaningful),
-or when the data comes from a random sample, the variability of which
-is meaningful in its own right.  In a work in progress, we prove the consistency
-of the Bayesian IJ and show its accuracy as an approximation to the bootstrap
-for a larger number of examples.
-\citet{huggins:2019:bayesbag}
-\citet{waddell:2002:bayesphyloboot}
-\citet{kleijn:2006:misspecification}
-\citet{kass:1990:posteriorexpansions} % Same expansion, stricter conditions
-\citet[Chapter 6]{lehman:1983:pointestimation}
+Bayesian measures is a powerful tool for coherently treating uncertainty in
+complex problems, but, when the model is misspecified, the estimated  posterior
+uncertainty may not be meaningful.  One can, however, always compute the
+frequentist sampling variability of a Bayesian posterior quantity, and such a
+quantity always remains meaningful, even if conceptually distinct from a
+posterior uncertainty \citet{waddell:2002:bayesphyloboot,
+kleijn:2006:misspecification, huggins:2019:bayesbag}.
+
+By combining the frequentist IJ \citep{jaeckel:1972:infinitesimal,
+shao:2012:jackknife, giordano:2019:ij} approach to frequentist variance with the
+MCMC-based measures of sensitivity \citep{gustafson:2012:localrobustnessbook,
+giordano:2018:covariances}, we are able to derive the Bayesian infinitesimal
+jackknife (IJ), which can be used to compute the frequentist variability of
+Bayeisan posterior means without bootstrapping or computing a maximum
+a-posteriori (MAP) estimate.  In a work in progress, we extend the Bayesian
+central limit theorem of \citet{lehman:1983:pointestimation,
+kass:1990:posteriorexpansions} to prove the consistency of the Bayesian IJ and
+show its accuracy as an approximation to the bootstrap for a larger number of
+examples, effectively allowing estimation of frequentist covariances orders of
+magnitude faster than the bootstrap.  We demonstrate the accuracy of our method
+on datasets from election modeling \citep{economist:2020:election}, ecology \citep{kery:2011:bayesian}, and most of
+the models from \citep{gelman:2006:arm, stan-examples:2017}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
