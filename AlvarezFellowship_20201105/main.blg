@@ -2,80 +2,86 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 125 of file main.aux
+Illegal, another \bibstyle command---line 122 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-Repeated entry---line 692 of file references.bib
+Repeated entry---line 746 of file references.bib
  : @inproceedings{giordano:2019:ij
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 708 of file references.bib
+Repeated entry---line 762 of file references.bib
  : @article{shoemaker:2015:ultrasensitive
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 782 of file references.bib
+Repeated entry---line 836 of file references.bib
  : @phdthesis{reeds:1976:thesis
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 861 of file references.bib
+Repeated entry---line 915 of file references.bib
  : @book{shao:2012:jackknife
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 878 of file references.bib
+Repeated entry---line 932 of file references.bib
  : @techreport{jaeckel:1972:infinitesimal
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 999 of file references.bib
+Repeated entry---line 1053 of file references.bib
  : @inproceedings{koh:2017:blackbox
  :                                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1008 of file references.bib
+Repeated entry---line 1062 of file references.bib
  : @article{rad:2018:scalableloo
  :                              ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 1165 of file references.bib
+ : @article{barnard:1974:cvchoicediscussion
+ :                                         ,
+I'm skipping whatever remains of this entry
+Warning--can't use both volume and number fields in friedman:2001:esl
 Warning--empty publisher in giordano:2020:bayesij
 Warning--empty publisher in giordano:2020:amip
-You've used 50 entries,
+Warning--empty publisher in turner:2011:two
+You've used 51 entries,
             1935 wiz_defined-function locations,
-            749 strings with 12022 characters,
-and the built_in function-call counts, 19983 in all, are:
-= -- 1920
-> -- 957
-< -- 35
-+ -- 362
-- -- 326
-* -- 1702
-:= -- 3532
-add.period$ -- 150
-call.type$ -- 50
-change.case$ -- 402
-chr.to.int$ -- 48
-cite$ -- 52
-duplicate$ -- 722
-empty$ -- 1291
-format.name$ -- 414
-if$ -- 3827
+            751 strings with 12107 characters,
+and the built_in function-call counts, 19916 in all, are:
+= -- 1905
+> -- 935
+< -- 38
++ -- 353
+- -- 315
+* -- 1673
+:= -- 3526
+add.period$ -- 153
+call.type$ -- 51
+change.case$ -- 398
+chr.to.int$ -- 49
+cite$ -- 55
+duplicate$ -- 740
+empty$ -- 1305
+format.name$ -- 406
+if$ -- 3822
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 53
-newline$ -- 250
-num.names$ -- 152
-pop$ -- 375
+missing$ -- 56
+newline$ -- 255
+num.names$ -- 157
+pop$ -- 384
 preamble$ -- 1
-purify$ -- 412
+purify$ -- 410
 quote$ -- 0
-skip$ -- 554
+skip$ -- 563
 stack$ -- 0
-substring$ -- 1243
-swap$ -- 83
-text.length$ -- 5
+substring$ -- 1195
+swap$ -- 86
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 280
-warning$ -- 2
-while$ -- 153
+type$ -- 282
+warning$ -- 4
+while$ -- 152
 width$ -- 0
-write$ -- 627
-(There were 8 error messages)
+write$ -- 638
+(There were 9 error messages)

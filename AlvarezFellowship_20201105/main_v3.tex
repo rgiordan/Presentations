@@ -10,60 +10,28 @@
 
 \maketitle
 
-As statistical models grow in complexity to service complex scientific datasets,
-the need grows to propagate uncertainty among their components, to interrogate
-their assumptions, and to evaluate their predictive peformance.  However, the
-computational cost of doing so using traditional statistical methods grows as
-well.  My research uses {\em sensitivity analysis} to provide fast, accurate
-approximations to these fundamental tasks of data science, providing modern
-theory and practical software to provide orders-of-magnitude speedup over
-classical methods --- all with modern theoretical guarantees.
+Deriving scientific information from large, complex datasets can motivate large,
+complex statistical models, in fields as diverse as astronomy
+\citep{regier:2019:cataloging}, economics \citep{meager:2019:microcredit},
+phylogenetics \citep{pritchard:2000:inference}, and many more.  As models grow
+in complexity, the need to interrogate their assumptions and to propagate
+uncertainty among their components grows, as does the computational
+cost of doing so using traditional statistical methods. Many classical
+procedures designed to address these concerns, such as Markov Chain Monte Carlo
+(MCMC), cross validation, or re-estimating a model under a range of
+modeling assumptions, can be prohibitively expensive in many modern problems.
 
-Consider uncertainty propagation in the construction of astronomical catalogues
-from telescopic image data. State-of-the art techniques employ a fast Bayesian
-posterior approximation known as ``mean-field variational Bayes''
-\citep{regier:2019:cataloging} which is known to fail to propagate uncertainty
-and underestimate standard errors \citep{turner:2011:two}; full posterior
-inference using classical Markov Chain Monte Carlo (MCMC) techniques being too
-computationally demanding for such a large-scale problem.
-
-The problem of prior specification is fundamental to Bayesian statistics. The
-Bayesian approach provides powerful tools for quanitifying uncertainty of
-complex quantities, such as the number of distinct clusters in a human genomics
-dataset \citep{huang:2011:haplotype, raj:2014:faststructure}.  However, in
-complicated Bayesian models, it can be hard to know {\em a priori} how sensitive
-one's conclusions are to one's prior speicification.  When even a single
-posterior approximation is extremely expensive, running for a large number of
-alternative prior specifications is prohibitive.
-
-The technique of ``cross validation'' is a ubiquitous machine learning tool
-for evaluating predictive performance and tuning hyperparameters, but it
-requires evaluating one's model at many slightly different datasets, each with
-different datapoints left out \citep{barnard:1974:cvchoicediscussion,
-friedman:2001:esl}.  For example, in order to select a smoothing parameter in a
-preprocessing step for clustering the time series of gene expression levels in
-mice \citep{shoemaker:2015:ultrasensitive}, one would typically choose an amount
-of smoothing which gives the best predictive performance according to a large
-number of CV fits.
-
-These three problems of uncertainty propagation, prior sensitivity, and cross
-validation may seem superfically distinct, other than that all are fundamental
-to the practice of data science.  But they share the common property that they
-are computationally demanding due to requiring the evaluation or estimation of a
-statistical model multiple times: once for each draw of an MCMC chain, once for
-each prior specification, or once for each cross validation sample. In turn, I
-show in my work that this commonality implies that they are all amendable to
-{\em sensitivity analysis}, in which the evaluation of a model at alternative
-inputs is approximated by a Taylor series, evaluated at a single initial model
-fit.
-
-My research employs sensitivity analysis to provide accurate approximations to
-uncertainty propagation, prior sensitivity, cross validation and other
-fundamental data science problems, typically providing good accuracy and
-orders-of-magnitude speedups over classical approaches.  A recurrent theme of my
-work is adapting venerable classical theoretical tools build on Taylor Series
-expansions  \citep{reeds:1976:thesis, gustafson:1996:localposterior,
-opper:2001:advancedmeanfield} to {\em modern computing environments} equipped
+To address this gap, my work employs {\em sensitivity analysis}, not merely to
+the traditional end of assessing the risk of to imprecise modeling assumptions
+(though I do pursue this goal as well), but also to quantify frequentist
+sampling properties and propagate uncertainty in Bayesian procedures. Though
+conceptually unified, my work is diverse in applications, touching many of the
+core activities of modern data analysis, from cross-validation
+\citep{giordano:2019:ij, giordano2019:hoij}, scalable Bayesian posterior
+inference \citep{giordano:2018:covariances, giordano:2018:bnpsensitivity}, the
+bootstrap \citep{giordano:2020:bayesij}, and more. A recurrent theme of my work
+is adapting classical {\em theoretical tools} \citep{reeds:1976:thesis,
+gustafson:1996:localposterior} to {\em modern computing environments} equipped
 with scalable, general purpose automatic differentiation software
 \citep{baydin:2015:automatic, carpenter:2015:stanmath}.
 

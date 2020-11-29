@@ -6,6 +6,13 @@ Angelucci, M. and De~Giorgi, G. (2009).
   ineligibles' consumption?
 \newblock {\em American Economic Review}, 99(1):486--508.
 
+\bibitem[Barnard, 1974]{barnard:1974:cvchoicediscussion}
+Barnard, G. (1974).
+\newblock Discussion of ``{C}ross-validatory choice and assessment of
+  statistical predictions''.
+\newblock {\em Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 36(2):133--135.
+
 \bibitem[Basu et~al., 1996]{basu:1996:local}
 Basu, S., Jammalamadaka, S.~R., and Liu, W. (1996).
 \newblock Local posterior robustness with parametric priors: Maximum and
@@ -57,6 +64,11 @@ Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
 \newblock The oregon health insurance experiment: evidence from the first year.
 \newblock {\em The Quarterly journal of economics}, 127(3):1057--1106.
 
+\bibitem[Friedman et~al., 2001]{friedman:2001:esl}
+Friedman, J., Hastie, T., and Tibshirani, R. (2001).
+\newblock {\em The elements of statistical learning}, volume~1.
+\newblock Springer series in statistics New York.
+
 \bibitem[Gelman and Heidemanns, 2020]{economist:2020:election}
 Gelman, A. and Heidemanns, M. (2020).
 \newblock The {Economist}: Forecasting the us elections.
@@ -80,12 +92,12 @@ Ghosh, J. and Ramamoorthi, R. (2003).
 
 \bibitem[Giordano, 2020]{giordano:2020:rstansensitivity}
 Giordano, R. (2020).
-\newblock Stansensitivity: automated hyperparameter sensitivity for {Stan}
+\newblock {StanSensitivity}: automated hyperparameter sensitivity for {Stan}
   models.
 
 \bibitem[Giordano and Broderick, 2020]{giordano:2020:bayesij}
 Giordano, R. and Broderick, T. (2020).
-\newblock {\em The Bayesian Infinitesimal Jackknife for Variance.}
+\newblock {\em The {B}ayesian Infinitesimal Jackknife for Variance.}
 
 \bibitem[Giordano et~al., 2018a]{giordano:2018:covariances}
 Giordano, R., Broderick, T., and Jordan, M. (2018a).
@@ -94,7 +106,7 @@ Giordano, R., Broderick, T., and Jordan, M. (2018a).
 
 \bibitem[Giordano et~al., 2019a]{giordano2019:hoij}
 Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
-\newblock A higher-order swiss army infinitesimal jackknife.
+\newblock A higher-order {Swiss} army infinitesimal jackknife.
 \newblock {\em arXiv preprint arXiv:1907.12116}.
 
 \bibitem[Giordano et~al., 2018b]{giordano:2018:bnpsensitivity}
@@ -161,7 +173,7 @@ Kass, R., Tierney, L., and Kadane, J. (1990).
 
 \bibitem[K{\'e}ry and Schaub, 2011]{kery:2011:bayesian}
 K{\'e}ry, M. and Schaub, M. (2011).
-\newblock {\em Bayesian population analysis using {WinBUGS}: a hierarchical
+\newblock {\em {Bayesian} population analysis using {WinBUGS}: a hierarchical
   perspective}.
 \newblock Academic Press.
 
@@ -197,10 +209,10 @@ Nocedal, J. and Wright, S. (2006).
 \newblock {\em Numerical optimization}.
 \newblock Springer Science \& Business Media.
 
-\bibitem[Pritchard et~al., 2000]{pritchard:2000:inference}
-Pritchard, J., Stephens, M., and Donnelly, P. (2000).
-\newblock Inference of population structure using multilocus genotype data.
-\newblock {\em Genetics}, 155(2):945--959.
+\bibitem[Opper and Saad, 2001]{opper:2001:advancedmeanfield}
+Opper, M. and Saad, D. (2001).
+\newblock {\em Advanced Mean Field Methods: Theory and Practice}.
+\newblock MIT press.
 
 \bibitem[Rad and Maleki, 2018]{rad:2018:scalableloo}
 Rad, K. and Maleki, A. (2018).
@@ -222,8 +234,8 @@ Reeds, J. (1976).
 \bibitem[Regier et~al., 2019]{regier:2019:cataloging}
 Regier, J., Fischer, K., Pamnany, K., Noack, A., Revels, J., Lam, M., Howard,
   S., Giordano, R., Schlegel, D., and McAuliffe, J. (2019).
-\newblock Cataloging the visible universe through bayesian inference in julia
-  at petascale.
+\newblock Cataloging the visible universe through {Bayesian} inference in
+  {Julia} at petascale.
 \newblock {\em Journal of Parallel and Distributed Computing}, 127:89--104.
 
 \bibitem[Sethuraman, 1994]{sethuraman:1994:constructivedp}
@@ -254,27 +266,22 @@ Shoemaker, J.~E., Fukuyama, S., Eisfeld, A.~J., Zhao, D., Kawakami, E., Sakabe,
 \newblock Stan example models wiki.
 \newblock Referenced on June 5th, 2020.
 
-\bibitem[Stuart et~al., 2019]{stuart:2019:comprehensive}
-Stuart, T., Butler, A., Hoffman, P., Hafemeister, C., Papalexi, E., Mauck, W.,
-  Hao, Y., Stoeckius, M., Smibert, P., and Satija, R. (2019).
-\newblock Comprehensive integration of single-cell data.
-\newblock {\em Cell}, 177(7):1888--1902.
+\bibitem[Turner and Sahani, 2011]{turner:2011:two}
+Turner, R.~E. and Sahani, M. (2011).
+\newblock Two problems with variational expectation maximisation for
+  time-series models.
+\newblock In Barber, D., Cemgil, A.~T., and Chiappa, S., editors, {\em
+  {Bayesian} Time Series Models}.
 
 \bibitem[Waddell et~al., 2002]{waddell:2002:bayesphyloboot}
 Waddell, P., Kishino, H., and Ota, R. (2002).
-\newblock Very fast algorithms for evaluating the stability of ml and bayesian
-  phylogenetic trees from sequence data.
+\newblock Very fast algorithms for evaluating the stability of ml and
+  {Bayesian} phylogenetic trees from sequence data.
 \newblock {\em Genome Informatics}, 13:82--92.
 
 \bibitem[Wainwright and Jordan, 2008]{wainwright:2008:graphical}
 Wainwright, M. and Jordan, M.~I. (2008).
 \newblock Graphical models, exponential families, and variational inference.
 \newblock {\em Machine Learning}, 1(1-2):1--305.
-
-\bibitem[Xu and Su, 2015]{xu:2015:identification}
-Xu, C. and Su, Z. (2015).
-\newblock Identification of cell types from single-cell transcriptomes using a
-  novel clustering method.
-\newblock {\em Bioinformatics}, 31(12):1974--1980.
 
 \end{thebibliography}
