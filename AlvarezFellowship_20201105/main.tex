@@ -1,5 +1,8 @@
 \input{_headers.tex}
 
+\usepackage{enumitem}
+\setlist{nolistsep}
+
 \title{Research Statement}
 
 \author{
@@ -8,11 +11,18 @@
 
 \begin{document}
 
-\maketitle
+%\maketitle
+\section*{Research Statement}
 
 As statistical models grow in size and complexity to service modern scientific
-datasets and questions, key data science tasks become both more important and
-more computationally onerous.
+datasets and questions, fundamental data science tasks become more
+computationally onerous, due to the need of classical procedures to evaluate or
+fit a model multiple times.  My research uses {\em sensitivity analysis} to
+provide fast, accurate approximations to such fundamental data science tasks,
+providing modern theory and practical software, often giving good accuracy and
+orders-of-magnitude speedup over classical methods.
+
+Consider the following data science tasks.
 %
 \begin{itemize}
 %
@@ -53,14 +63,38 @@ more computationally onerous.
 \end{itemize}
 %
 
+% The more complicated a model is, the more likely it is that
+% it may overfit the data (remedied by CV), the more difficult it is
+% to reason subjectively about the prior (remedied by experimenting with
+% a range of priors), and the more likely it is to model multiple, mutually
+% dependent, uncertain quantities (remedied by uncertainty propagation).
+
+These three central data science problems may seem superfically distinct.  But
+they share the common property that they are computationally demanding due to
+requiring the evaluation or estimation of a statistical model multiple times:
+once for each draw of an MCMC chain, once for each prior specification, or once
+for each cross validation sample.
+
+I show in my work that this commonality implies that they are all amendable to
+{\em sensitivity analysis}, in which the evaluation of a model at alternative
+inputs is approximated by a Taylor series, evaluated at a single initial model
+fit.
+
+My research employs sensitivity analysis to provide accurate approximations to
+uncertainty propagation, prior sensitivity, cross validation and other
+fundamental data science problems, typically providing good accuracy and
+orders-of-magnitude speedups over classical approaches.  A recurrent theme of my
+work is adapting venerable classical theoretical tools build on Taylor Series
+expansions  \citep{reeds:1976:thesis, gustafson:1996:localposterior,
+opper:2001:advancedmeanfield} to {\em modern computing environments} equipped
+with scalable, general purpose automatic differentiation software
+\citep{baydin:2015:automatic, carpenter:2015:stanmath}.
 
 
 
 
- My research uses {\em sensitivity analysis} to provide
-fast, accurate approximations to these fundamental tasks of data science,
-providing modern theory and practical software to provide orders-of-magnitude
-speedup over classical methods --- all with modern theoretical guarantees.
+
+\newpage
 
 Consider uncertainty propagation in the construction of astronomical catalogues
 from telescopic image data. State-of-the art techniques employ a fast Bayesian
