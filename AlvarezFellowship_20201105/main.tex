@@ -99,101 +99,80 @@ the above three data science tasks and more, both in practice and and in theory.
 
 \newpage
 
-My research employs sensitivity analysis to provide accurate approximations to
-uncertainty propagation, prior sensitivity, cross validation and other
-fundamental data science problems, typically providing good accuracy and
-orders-of-magnitude speedups over classical approaches.  A recurrent theme of my
-work is adapting venerable classical theoretical tools build on Taylor Series
-expansions  \citep{reeds:1976:thesis, gustafson:1996:localposterior,
-opper:2001:advancedmeanfield} to {\em modern computing environments} equipped
-with scalable, general purpose automatic differentiation software
-\citep{baydin:2015:automatic, carpenter:2015:stanmath}.
-
-
-
-
-Consider uncertainty propagation in the construction of astronomical catalogues
-from telescopic image data. State-of-the art techniques employ a fast Bayesian
-posterior approximation known as ``mean-field variational Bayes''
-\citep{regier:2019:cataloging} which is known to fail to propagate uncertainty
-and underestimate standard errors \citep{turner:2011:two}; full posterior
-inference using classical Markov Chain Monte Carlo (MCMC) techniques being too
-computationally demanding for such a large-scale problem.
-
-The problem of prior specification is fundamental to Bayesian statistics. The
-Bayesian approach provides powerful tools for quanitifying uncertainty of
-complex quantities, such as the number of distinct clusters in a human genomics
-dataset \citep{huang:2011:haplotype, raj:2014:faststructure}.  However, in
-complicated Bayesian models, it can be hard to know {\em a priori} how sensitive
-one's conclusions are to one's prior speicification.  When even a single
-posterior approximation is extremely expensive, running for a large number of
-alternative prior specifications is prohibitive.
-
-The technique of ``cross validation'' is a ubiquitous machine learning tool
-for evaluating predictive performance and tuning hyperparameters, but it
-requires evaluating one's model at many slightly different datasets, each with
-different datapoints left out \citep{barnard:1974:cvchoicediscussion,
-friedman:2001:esl}.  For example, in order to select a smoothing parameter in a
-preprocessing step for clustering the time series of gene expression levels in
-mice \citep{shoemaker:2015:ultrasensitive}, one would typically choose an amount
-of smoothing which gives the best predictive performance according to a large
-number of CV fits.
-
-These three problems of uncertainty propagation, prior sensitivity, and cross
-validation may seem superfically distinct, other than that all are fundamental
-to the practice of data science.  But they share the common property that they
-are computationally demanding due to requiring the evaluation or estimation of a
-statistical model multiple times: once for each draw of an MCMC chain, once for
-each prior specification, or once for each cross validation sample. In turn, I
-show in my work that this commonality implies that they are all amendable to
-{\em sensitivity analysis}, in which the evaluation of a model at alternative
-inputs is approximated by a Taylor series, evaluated at a single initial model
-fit.
-
-My research employs sensitivity analysis to provide accurate approximations to
-uncertainty propagation, prior sensitivity, cross validation and other
-fundamental data science problems, typically providing good accuracy and
-orders-of-magnitude speedups over classical approaches.  A recurrent theme of my
-work is adapting venerable classical theoretical tools build on Taylor Series
-expansions  \citep{reeds:1976:thesis, gustafson:1996:localposterior,
-opper:2001:advancedmeanfield} to {\em modern computing environments} equipped
-with scalable, general purpose automatic differentiation software
-\citep{baydin:2015:automatic, carpenter:2015:stanmath}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Data sensitivity: cross validation and frequentist variance}
-
-% Frequentist variability is ultimately concerned with the outcome of an
-% estimation procedure if the data were drawn from the same distribution as but
-% different from that observed.  Similarly, all forms of cross-validation (CV)
-% evaluates a statistic if parts of the observed data had been ablated.  Both of
-% these procedures can be treated by sensitivity analysis, where sensitivity
-% is to the dataset itself.
-
 \paragraph{Accuracy bounds for approximate cross validation.}
 
-To perform leave-one-out CV (LOO-CV), one re-runs an estimation procedure with
-each datapoint left out.  In full, LOO-CV requires as many re-runs procedures as
-there are datapoints, and each re-run is expected to be quite close to the
-original fit.  Rather than re-running exactly, one can use a Taylor series to
-approximate the effect of removing a single data point; since the dataset with
-one point left out is, in some sense, ``close'' to the original dataset, the
-Taylor series can be expected to perform well.
+The error or variability of machine learning algorithms is often assessed by
+repeatedly re-fitting a model with different weighted versions of the observed
+data; cross-validation (CV) and the bootstrap can be thought of as examples of
+this technique.
 
-In \citet{giordano:2019:ij}, we synthesized the classical statistics and machine
-learning treatment of this idea \citep{jaeckel:1972:infinitesimal,
-shao:2012:jackknife, rad:2018:scalableloo, koh:2017:blackbox}, adapting the
-classical theory to the demands of modern machine learning.  In particular, we
-provide finite-sample accuracy bounds on the accuracy of the Taylor series (from
-which previous asymptotic results followed as a corollary), and remove the
-classical assumption of bounded gradients, a condition that almost never obtains
-in practice, but which was required by almost all previous theoretical work. We
-demonstrated the accuracy of the technique on an unsupervised clustering problem
-from genomics \citep{shoemaker:2015:ultrasensitive}.
+In \citet{giordano:2019:ij}, I use a linear approximation to the
+dependence of the fitting procedure on the weights, producing results that can
+be faster than repeated re-fitting by an order of magnitude. I provide explicit
+finite-sample error bounds for the approximation in terms of a small number of
+simple, verifiable assumptions.  My results apply whether the weights and data
+are stochastic or deterministic, and so can be used as a tool for proving the
+accuracy of the infinitesimal jackknife on a wide variety of problems. As a
+corollary, I state mild regularity conditions under which our approximation
+consistently estimates true leave-$k$-out cross-validation for any fixed $k$. I
+demonstrate the accuracy of our methods on a range of simulated and real
+datasets, including an unsupervised clustering problem from genomics
+\citep{Luan:2003:clustering, shoemaker:2015:ultrasensitive}.
 
+
+\paragraph{Prior sensitivity for Markov Chain Monte Carlo.}
+
+MCMC is arguably the most commonly used computational tool to estimate Bayesian
+posteriors, which is made still easier by modern black-box MCMC tools such as
+\texttt{Stan} \citep{carpenter:2017:stan, rstan}.  However, a single run of MCMC
+typically remains time-consuming, and systematically exploring alternative prior
+parameterizations by re-running MCMC would be computationally prohibitive for
+all but the simplest models.
+
+My software package, \texttt{rstansensitivity},
+\citep{giordano:2020:rstansensitivity, giordano:2018:mcmchyper}, takes advantage
+of the automatic differentiation capacities of \texttt{Stan}
+\citep{carpenter:2015:stanmath} together with a classical result from  Bayesian
+robustness \citep{gustafson:1996:localposterior, basu:1996:local,
+giordano:2018:covariances} to provide automatic hyperparameter sensitivity for
+generic \texttt{Stan} models from only a single MCMC run.  I demonstrate the
+speed and utility of the package in detecting excess prior sensitivity,
+particularly in a social sciences model taken from \citet[Chapter
+13.5]{gelman:2006:arm}.
+
+
+\paragraph{Prior sensitivity for discrete Bayesian nonparameterics.}
+
+% From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
+A central question in many probabilistic clustering problems is how many
+distinct clusters are present in a particular dataset. A Bayesian nonparametric
+(BNP) model addresses this question by placing a generative process on cluster
+assignment, making the number of distinct clusters present amenable to Bayesian
+inference.  However, like all Bayesian approaches, BNP requires the
+specification of a prior, and this prior may favor a greater or lesser number of
+distinct clusters.
+% In practice, it is important to quantitatively establish that
+% the prior is not too informative, particularly when---as is often the case in
+% BNP---the particular form of the prior is chosen for mathematical convenience
+% rather than because of a considered subjective belief.
+
+In \citep{giordano:2018:bnpsensitivity}, I derive prior sensitivity measures for
+a truncated variational Bayes (VB) approximation based on the Kullback-Leibler
+(KL) divergence using ideas from \citep{gustafson:1996:localposterior,
+giordano:2018:covariances}. Unlike previous work on local Bayesian sensitivity
+for BNP \citep{Basu:2000:BNP_robustness}, we pay special attention to the
+ability of our sensitivity measures to \emph{extrapolate} to different priors,
+rather than treating the sensitivity as a measure of robustness \textit{per se}.
+In work currently in progress, my co-author and I apply the approximation from
+\citep{giordano:2018:bnpsensitivity} to an unsupervised clustering problem on a
+human genome dataset \citep{huang:2011:haplotype, raj:2014:faststructure},
+demonstrating that the approximate is accurate, orders of magnitude faster than
+re-fitting, and capable of detecting meaningful prior sensitivity.
+
+
+
+
+\newpage
 
 \paragraph{Sensitivity to removal of a small fraction of the data.} Classical
 frequentist standard errors estimate the variability in an estimator that would
@@ -285,24 +264,6 @@ including logistic regression on an internet advertising dataset
 social sciences \citep{gelman:2006:arm}, demonstrating accurate posterior
 covariances computed over an order of magnitude faster than MCMC.
 
-
-\paragraph{Hyperparameter sensitivity for MCMC.}
-
-MCMC is arguably the most commonly used computational tool to estimate Bayesian
-posteriors, and modern black-box MCMC tools such as \texttt{Stan} \citep{rstan,
-carpenter:2017:stan}.  However, MCMC is typically still time-consuming, and
-systematically exploring alternative prior parameterizations by re-running MCMC
-would be computationally prohibitive for all but the simplest models. A
-classical result from Bayesian robustness states that the sensitivity of a
-posterior expectation is given by a particular posterior covariance
-\citep{gustafson:1996:localposterior, basu:1996:local}, though the result has
-not been widely used, arguably due in part to the lack of an automatic
-implementation. In my software package, \citet{giordano:2020:rstansensitivity},
-I take advantage of the automatic differentiation capacities of \texttt{Stan} to
-provide automatic hyperparameter sensitivity for generic Stan models.  In
-examples in the package \texttt{git} repository, I demonstrate the efficacy of
-the package in detecting excess prior sensitivity, particularly in a social
-sciences model taken from \citet[Chapter 13.5]{gelman:2006:arm}.
 
 
 \paragraph{Bayesian nonparametrics.}

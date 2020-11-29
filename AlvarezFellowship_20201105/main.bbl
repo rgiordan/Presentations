@@ -6,12 +6,11 @@ Angelucci, M. and De~Giorgi, G. (2009).
   ineligibles' consumption?
 \newblock {\em American Economic Review}, 99(1):486--508.
 
-\bibitem[Barnard, 1974]{barnard:1974:cvchoicediscussion}
-Barnard, G. (1974).
-\newblock Discussion of ``{C}ross-validatory choice and assessment of
-  statistical predictions''.
-\newblock {\em Journal of the Royal Statistical Society: Series B
-  (Methodological)}, 36(2):133--135.
+\bibitem[Basu, 2000]{Basu:2000:BNP_robustness}
+Basu, S. (2000).
+\newblock {B}ayesian robustness and {B}ayesian nonparametrics.
+\newblock In Insua, D.~R. and Ruggeri, F., editors, {\em Robust {Bayesian}
+  Analysis}, volume 152. Springer Science \& Business Media.
 
 \bibitem[Basu et~al., 1996]{basu:1996:local}
 Basu, S., Jammalamadaka, S.~R., and Liu, W. (1996).
@@ -64,11 +63,6 @@ Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
 \newblock The oregon health insurance experiment: evidence from the first year.
 \newblock {\em The Quarterly journal of economics}, 127(3):1057--1106.
 
-\bibitem[Friedman et~al., 2001]{friedman:2001:esl}
-Friedman, J., Hastie, T., and Tibshirani, R. (2001).
-\newblock {\em The elements of statistical learning}, volume~1.
-\newblock Springer series in statistics New York.
-
 \bibitem[Gelman and Heidemanns, 2020]{economist:2020:election}
 Gelman, A. and Heidemanns, M. (2020).
 \newblock The {Economist}: Forecasting the us elections.
@@ -104,13 +98,19 @@ Giordano, R., Broderick, T., and Jordan, M. (2018a).
 \newblock Covariances, robustness and variational {B}ayes.
 \newblock {\em The Journal of Machine Learning Research}, 19(1):1981--2029.
 
+\bibitem[Giordano et~al., 2018b]{giordano:2018:mcmchyper}
+Giordano, R., Broderick, T., and Jordan, M.~I. (2018b).
+\newblock Automatic robustness measures in stan.
+\newblock Presentation at Stancon 2018
+  https://docs.google.com/presentation/d/1bxeFy-awELpGlDXNcdJ3r-lrKAqNCZZggD8Xmz9Omg0/edit?usp=sharing.
+
 \bibitem[Giordano et~al., 2019a]{giordano2019:hoij}
 Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
 \newblock A higher-order {Swiss} army infinitesimal jackknife.
 \newblock {\em arXiv preprint arXiv:1907.12116}.
 
-\bibitem[Giordano et~al., 2018b]{giordano:2018:bnpsensitivity}
-Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018b).
+\bibitem[Giordano et~al., 2018c]{giordano:2018:bnpsensitivity}
+Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018c).
 \newblock Evaluating sensitivity to the stick breaking prior in {B}ayesian
   nonparametrics.
 \newblock {\em arXiv preprint arXiv:1810.06587}.
@@ -182,11 +182,6 @@ Kleijn, B. and van~der Vaart, A. (2006).
 \newblock Misspecification in infinite-dimensional {B}ayesian statistics.
 \newblock {\em The Annals of Statistics}, 34(2):837--877.
 
-\bibitem[Koh and Liang, 2017]{koh:2017:blackbox}
-Koh, P.~W. and Liang, P. (2017).
-\newblock Understanding black-box predictions via influence functions.
-\newblock In {\em International Conference on Machine Learning (ICML)}.
-
 \bibitem[Lang et~al., 2016]{lang:2016:tractor}
 Lang, D., Hogg, D., and Mykytyn, D. (2016).
 \newblock The {T}ractor: {P}robabilistic astronomical source detection and
@@ -197,6 +192,12 @@ Lang, D., Hogg, D., and Mykytyn, D. (2016).
 Lehmann, E. and Casella, G. (2006).
 \newblock {\em Theory of point estimation}.
 \newblock Springer Science \& Business Media.
+
+\bibitem[Luan and Li, 2003]{Luan:2003:clustering}
+Luan, Y. and Li, H. (2003).
+\newblock Clustering of time-course gene expression data using a mixed-effects
+  model with {B}-splines.
+\newblock {\em Bioinformatics}, 19(4):474--482.
 
 \bibitem[Meager, 2019]{meager:2019:microcredit}
 Meager, R. (2019).
@@ -209,27 +210,11 @@ Nocedal, J. and Wright, S. (2006).
 \newblock {\em Numerical optimization}.
 \newblock Springer Science \& Business Media.
 
-\bibitem[Opper and Saad, 2001]{opper:2001:advancedmeanfield}
-Opper, M. and Saad, D. (2001).
-\newblock {\em Advanced Mean Field Methods: Theory and Practice}.
-\newblock MIT press.
-
-\bibitem[Rad and Maleki, 2018]{rad:2018:scalableloo}
-Rad, K. and Maleki, A. (2018).
-\newblock A scalable estimate of the extra-sample prediction error via
-  approximate leave-one-out.
-\newblock {\em arXiv Preprint}.
-
 \bibitem[Raj et~al., 2014]{raj:2014:faststructure}
 Raj, A., Stephens, M., and Pritchard, J. (2014).
 \newblock {fastSTRUCTURE}: variational inference of population structure in
   large {SNP} data sets.
 \newblock {\em Genetics}, 197(2):573--589.
-
-\bibitem[Reeds, 1976]{reeds:1976:thesis}
-Reeds, J. (1976).
-\newblock {\em Ill (1976). On the definition of von {Mises} functionals}.
-\newblock PhD thesis, Ph. D. Thesis, Statistics, Harvard University.
 
 \bibitem[Regier et~al., 2019]{regier:2019:cataloging}
 Regier, J., Fischer, K., Pamnany, K., Noack, A., Revels, J., Lam, M., Howard,
