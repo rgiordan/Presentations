@@ -73,9 +73,15 @@ Giordano, R. (2020b).
 \newblock zaminfluence.
 \newblock GitHub repository \url{https://github.com/rgiordan/zaminfluence}.
 
-\bibitem[Giordano and Broderick, 2020]{giordano:2020:bayesij}
-Giordano, R. and Broderick, T. (2020).
+\bibitem[Giordano and Broderick, 2020a]{giordano:2020:bayesij}
+Giordano, R. and Broderick, T. (2020a).
 \newblock {\em The {B}ayesian Infinitesimal Jackknife for Variance.}
+
+\bibitem[Giordano and Broderick, 2020b]{giordano:2020:stanconbayesij}
+Giordano, R. and Broderick, T. (2020b).
+\newblock Effortless frequentist covariances of posterior expectations in stan.
+\newblock Presentation at Stancon 2020
+  https://docs.google.com/presentation/d/17Gr8Mqi1yVWliC3SDuHwigCKj1s7RLXgsBhVCEyT5i4/edit?usp=sharing.
 
 \bibitem[Giordano et~al., 2018a]{giordano:2018:covariances}
 Giordano, R., Broderick, T., and Jordan, M. (2018a).

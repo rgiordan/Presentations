@@ -2,73 +2,73 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 119 of file main.aux
+Illegal, another \bibstyle command---line 117 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-Repeated entry---line 802 of file references.bib
+Repeated entry---line 811 of file references.bib
  : @inproceedings{giordano:2019:ij
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 818 of file references.bib
+Repeated entry---line 827 of file references.bib
  : @article{shoemaker:2015:ultrasensitive
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 834 of file references.bib
+Repeated entry---line 843 of file references.bib
  : @article{Luan:2003:clustering
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 971 of file references.bib
+Repeated entry---line 980 of file references.bib
  : @book{shao:2012:jackknife
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 988 of file references.bib
+Repeated entry---line 997 of file references.bib
  : @techreport{jaeckel:1972:infinitesimal
  :                                       ,
 I'm skipping whatever remains of this entry
 Warning--empty publisher in giordano:2020:bayesij
 Warning--empty publisher in giordano:2020:amip
 Warning--empty publisher in turner:2011:two
-You've used 45 entries,
+You've used 46 entries,
             1935 wiz_defined-function locations,
-            714 strings with 11435 characters,
-and the built_in function-call counts, 18193 in all, are:
-= -- 1743
-> -- 886
-< -- 32
-+ -- 333
-- -- 301
-* -- 1529
-:= -- 3207
-add.period$ -- 136
-call.type$ -- 45
-change.case$ -- 365
+            717 strings with 11660 characters,
+and the built_in function-call counts, 18479 in all, are:
+= -- 1773
+> -- 899
+< -- 33
++ -- 338
+- -- 305
+* -- 1550
+:= -- 3262
+add.period$ -- 139
+call.type$ -- 46
+change.case$ -- 372
 chr.to.int$ -- 41
-cite$ -- 48
-duplicate$ -- 670
-empty$ -- 1176
-format.name$ -- 374
-if$ -- 3507
-int.to.chr$ -- 5
+cite$ -- 49
+duplicate$ -- 680
+empty$ -- 1191
+format.name$ -- 381
+if$ -- 3560
+int.to.chr$ -- 6
 int.to.str$ -- 0
 missing$ -- 45
-newline$ -- 225
-num.names$ -- 141
-pop$ -- 352
+newline$ -- 230
+num.names$ -- 144
+pop$ -- 356
 preamble$ -- 1
-purify$ -- 372
+purify$ -- 379
 quote$ -- 0
-skip$ -- 510
+skip$ -- 518
 stack$ -- 0
-substring$ -- 1095
+substring$ -- 1107
 swap$ -- 88
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 254
+type$ -- 260
 warning$ -- 3
-while$ -- 138
+while$ -- 140
 width$ -- 0
-write$ -- 564
+write$ -- 576
 (There were 6 error messages)

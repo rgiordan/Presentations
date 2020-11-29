@@ -224,26 +224,39 @@ robust, in others the sign of a treatment effect can be changed by dropping less
 than 1\% of the sample even when standard errors are small.
 
 
+\paragraph{Frequentist variability of Bayesian posteriors.}
+
+The frequentist (i.e., sampling) variance of Bayesian posterior expectations
+differs in general from the posterior variance even for large datasets,
+particularly when the model is misspecified or contains many latent variables
+\citep{kleijn:2006:misspecification}.
+Knowing the frequentist variance of a posterior expectation can be useful even
+to a committed Bayesian, particularly when the data is known to arise from
+random sampling and there is a possibility of model misspecification
+\citep{waddell:2002:bayesphyloboot}.  However, the
+principal existing approach for computing the frequentist variability from MCMC
+procedures is the bootstrap, which can be extremely computationally intensive
+due to the need to run hundreds of extra MCMC procedures
+\citep{huggins:2019:bayesbag}.
+
+In \citep{giordano:2020:bayesij, giordano:2020:stanconbayesij}, I propose an
+efficient alternative to bootstrapping an MCMC procedure which is based on the
+influence function from sensitivity analysis.  Using results from
+\citep{giordano:2018:covariances, giordano:2019:ij}, I show that the influence
+function for posterior expectations has the form of a simple posterior
+covariance, easily computed from the posterior samples of a single MCMC
+procedure. Furthermore, when a Bayesian central limit theorem applies, I show
+that the variance estimate derived from the influence function is asymptotically
+equivalent to that of the bootstrap.  I demonstrate the accuracy and
+computational benefits of the influence function variance estimates on array of
+experiments including an election forecasting model
+\citep{economist:2020:election}, the Cormack-Jolly-Seber model from ecology
+\citep{kery:2011:bayesian}, and a large collection of models and datasets from
+the social sciences \citep{gelman:2006:arm}.
+
+
+
 \newpage
-
-\paragraph{Sensitivity to removal of a small fraction of the data.} Classical
-frequentist standard errors estimate the variability in an estimator that would
-result from the rarefied thought experiment of re-sampling datasets from the same
-distribution that gave rise to the observed data.  In the social sciences, this
-rarefied experiment rarely closely corresponds to reality, and one might be
-concerned if substantive conclusions could be overturned by other minor
-perturbations to the data.
-
-In \citet{giordano:2020:amip}, we provide an easily-computed approximation to
-quantify the effect of ablating a small proportion of a dataset, with
-open-source software and finite-sample accuracy bounds for ordinary least
-squares and instrumental variables regression. We find that problems with small
-signal-to-noise ratio but large datasets will be particularly non-robust to the
-removal of a small proportion of the data. Such a situation that obtains
-commonly in econometrics, and we find that the sign and statistical significance
-of estimated effects in a number of large, prominent econometric studies can be
-overturned by dropping only a small number of datapoints
-\citep{angelucci:2009:indirect, finkelstein:2012:oregon, meager:2019:microcredit}.
 
 
 \paragraph{Frequentist variability of Bayesian posteriors.}
