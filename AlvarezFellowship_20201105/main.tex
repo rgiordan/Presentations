@@ -10,14 +10,57 @@
 
 \maketitle
 
-As statistical models grow in complexity to service complex scientific datasets,
-the need grows to propagate uncertainty among their components, to interrogate
-their assumptions, and to evaluate their predictive peformance.  However, the
-computational cost of doing so using traditional statistical methods grows as
-well.  My research uses {\em sensitivity analysis} to provide fast, accurate
-approximations to these fundamental tasks of data science, providing modern
-theory and practical software to provide orders-of-magnitude speedup over
-classical methods --- all with modern theoretical guarantees.
+As statistical models grow in size and complexity to service modern scientific
+datasets and questions, key data science tasks become both more important and
+more computationally onerous.
+%
+\begin{itemize}
+%
+        \item Cross validation (CV) is used ubiquitously in machine learning to
+        evaluate model predictive performance and tune hyperparameters, but
+        requires fitting a model multiple times with different data subsets left
+        out.
+        % For example, when clustering the time series profiles of mice gene
+        % expression data, one may need to choose how much to smooth the time
+        % series prior to clustering, and one would typically choose the smoothing
+        % with the best predictive performance as evaluated by CV
+        % \citep{friedman:2001:esl, shoemaker:2015:ultrasensitive}.
+        %
+        \item  Prior specification is a necessary step in Bayesian statistics, a
+        statistical paradigm that provides interpretable, coherent uncertainty
+        quantification for scientific questions.  But Bayesian inference can be
+        sensitive to the prior specification, and evaluating the model for
+        multiple plausible prior choices can be computationally prohibitive.
+        % For
+        % example, one might use Bayesian nonparametrics to ask how many distinct
+        % genotypes are found in a human genome dataset
+        % \citep{huang:2011:haplotype, raj:2014:faststructure}; forming the
+        % estimate for a single prior can take hours.
+        %
+        \item Uncertainty propagation, i.e., allowing the inferential
+        uncertainty in one modeling quantity to inform the inferential
+        uncertainty in another, is a key advantage of Bayesian statistics.
+        However, the classical tool for Bayesian estimation, Markov Chain Monte
+        Carlo (MCMC), requires evaluating a statistical model many times, and so
+        can be prohibitively computationally expensive.
+        % For example, in the
+        % inference of astronomical catalogues, the non-scalability of MCMC leads
+        % researchers to turn to scalable ``variational Bayes'' posterior
+        % approximations, which are computationally tractable, but known to fail
+        % to propagate uncertainty amongst components of the model
+        % \citep{turner:2011:two, regier:2019:cataloging}.
+%
+\end{itemize}
+%
+
+
+
+
+
+ My research uses {\em sensitivity analysis} to provide
+fast, accurate approximations to these fundamental tasks of data science,
+providing modern theory and practical software to provide orders-of-magnitude
+speedup over classical methods --- all with modern theoretical guarantees.
 
 Consider uncertainty propagation in the construction of astronomical catalogues
 from telescopic image data. State-of-the art techniques employ a fast Bayesian
