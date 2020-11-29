@@ -198,6 +198,32 @@ models from ecology \citep{kery:2011:bayesian}, the social sciences
 
 
 
+\paragraph{Data ablation.}
+
+In \citet{giordano:2020:amip}, I propose a method to assess the sensitivity of
+statistical analyses to the removal of a small fraction of the sample. Analyzing
+all possible data subsets of a certain size is computationally prohibitive, so I
+provide a finite-sample metric to approximately compute the number (or fraction)
+of observations that has the greatest influence on a given result when dropped.
+I provide explicit finite-sample error bounds on our approximation for linear
+and instrumental variables regressions. At minimal computational cost, the
+metric provides an exact finite-sample lower bound on sensitivity for any
+estimator, so any non-robustness our metric finds is conclusive. I demonstrate
+that non-robustness to data ablation is driven by a low signal-to-noise ratio in
+the inference problem, is not reflected in standard errors, does not disappear
+asymptotically, and is not a product of misspecification.
+
+The approximation is automatically computable and works for common estimators
+(including OLS, IV, GMM, MLE, and variational Bayes), and I provide an
+easy-to-use \texttt{R} package to compute the approximation
+\citep{zaminfluence}. Several empirical applications based on published
+econometric analyses \citep{angelucci:2009:indirect, finkelstein:2012:oregon,
+meager:2019:microcredit} show that even 2-parameter linear regression analyses
+of randomized trials can be highly sensitive. While I find some applications are
+robust, in others the sign of a treatment effect can be changed by dropping less
+than 1\% of the sample even when standard errors are small.
+
+
 \newpage
 
 \paragraph{Sensitivity to removal of a small fraction of the data.} Classical
@@ -269,72 +295,6 @@ magnitude less compute time.
 % convenience.  It is critical to ask whether the analysis would have changed
 % substantively had different modeling choices been made.
 
-\paragraph{Propagation of uncertainty in scalable Bayesian inference}
-
-One popular technique to scale Bayesian inference to massive problems is mean
-field variational Bayes (MFVB) \citep{wainwright:2008:graphical,
-blei:2017:variational, regier:2019:cataloging}.  However, MFVB provides
-notoriously innacurate posterior uncertainty estimates, even in situations when
-it estimates the posterior means accurately \citep{turner:2011:two}. In
-\citet{giordano:2018:covariances}, we develop a method to recover accurate
-posterior uncertainties from MFVB approximations without needing to fit a more
-complex model or run MCMC. Computing the LRVB covariance requires solving a
-linear system, which in scientific applications is often sparse and can be
-solved using iterative techniques such as conjugate gradient \citep[Chapter
-5]{nocedal:2006:numerical}.
-
-We compare LRVB covariances to MCMC on a large number of real-world datasets,
-including logistic regression on an internet advertising dataset
-\citep{criteo:2014:dataset}, the Cormack-Jolly-Seber model from ecology
-\citep{kery:2011:bayesian}, and hierarchical generalized linear models from the
-social sciences \citep{gelman:2006:arm}, demonstrating accurate posterior
-covariances computed over an order of magnitude faster than MCMC.
-
-
-
-\paragraph{Bayesian nonparametrics.}
-
-A commonly question in unsupervised clustering is how many distinct clusters are
-present in a dataset.  Discrete Bayesian nonparametrics (BNP) allows the answer
-to be inferred using Bayesian inference, but one must specify a prior on how
-distinct clusters are generated \citep{ghosh:2003:bnp,
-gershman:2012:bnptutorial}.  A particularly common modeling choice is the
-stick-breaking representation of a Dirichlet process prior
-\citep{sethuraman:1994:constructivedp}, a mathematical abstraction which is
-arguably better justified by its computational convenience than its realism.
-
-In \citet{giordano:2018:bnpsensitivity}, we fit a BNP model with variational
-Bayes \citep{blei:2006:dirichletbnp} using the standard, computationally
-convenient stick-breaking prior, but then use sensitivity analysis to allow the
-user to explore alternative functional forms an order of magnitude faster than
-would be possible with refitting. In work currently in progress, we apply our
-method to a human genome dataset in phylogenetics taken from
-\citep{huang:2011:haplotype}, and find that our method accurately discovers
-meaningful prior sensitivity in a BNP version of the model
-\texttt{fastSTRUCTURE} \citep{raj:2014:faststructure}.
-
-
-% \paragraph{Partial pooling in meta-analysis.}
-%
-% A popular form of meta-analysis in econometrics is to place a hierarchial model
-% on a set of related experimental results, which both ``shrinks'' the individual
-% estimates towards a common mean, potentially decreasing mean squared error, and
-% allowing direct estimation of the average effect and diversity of effects
-% \citep{rubin:1981:estimation,gelman:1992:inference}. These advantages come at
-% the cost of positing a precise generative process for the effects in question,
-% and it is reasonable to interrogate whether the estimation procedure is robust
-% to varaibility in these effects.  In \citet{giordano:2016:microcredit}, we apply
-% sensitivity analysis to a published meta-analysis of the effectiveness of
-% microcredit interventions in seven developing countries
-% \citep{meager:2019:microcredit}.  We find that the conclusion are highly
-% sensitive to the assumed covariance structure between the base level of business
-% profitability and the microcredit effect, a covariance which is {\em a priori}
-% difficult to ascertain, automatically diagnosing an important source of
-% epistemic uncertainty not captured by the Bayesian posterior.
-
-
-%
-%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

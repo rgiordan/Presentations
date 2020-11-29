@@ -24,17 +24,6 @@ Baydin, A., Pearlmutter, B., Radul, A., and Siskind, J. (2017).
 \newblock Automatic differentiation in machine learning: a survey.
 \newblock {\em Journal of Machine Learning Research}, 18(153):1--153.
 
-\bibitem[Blei and Jordan, 2006]{blei:2006:dirichletbnp}
-Blei, D.~M. and Jordan, M.~I. (2006).
-\newblock Variational inference for {D}irichlet process mixtures.
-\newblock {\em {B}ayesian Analysis}, 1(1):121--143.
-
-\bibitem[Blei et~al., 2017]{blei:2017:variational}
-Blei, D.~M., Kucukelbir, A., and McAuliffe, J.~D. (2017).
-\newblock Variational inference: A review for statisticians.
-\newblock {\em Journal of the American statistical Association},
-  112(518):859--877.
-
 \bibitem[Carpenter et~al., 2017]{carpenter:2017:stan}
 Carpenter, B., Gelman, A., Hoffman, M., Lee, D., Goodrich, B., Betancourt, M.,
   Brubaker, M., Guo, J., Li, P., and Riddell, A. (2017).
@@ -74,20 +63,15 @@ Gelman, A. and Hill, J. (2006).
   models}.
 \newblock Cambridge university press.
 
-\bibitem[Gershman and Blei, 2012]{gershman:2012:bnptutorial}
-Gershman, S. and Blei, D. (2012).
-\newblock A tutorial on bayesian nonparametric models.
-\newblock {\em Journal of Mathematical Psychology}, 56(1):1--12.
-
-\bibitem[Ghosh and Ramamoorthi, 2003]{ghosh:2003:bnp}
-Ghosh, J. and Ramamoorthi, R. (2003).
-\newblock {\em Bayesian nonparametrics}.
-\newblock Springer Science \& Business Media.
-
-\bibitem[Giordano, 2020]{giordano:2020:rstansensitivity}
-Giordano, R. (2020).
+\bibitem[Giordano, 2020a]{giordano:2020:rstansensitivity}
+Giordano, R. (2020a).
 \newblock {StanSensitivity}: automated hyperparameter sensitivity for {Stan}
   models.
+
+\bibitem[Giordano, 2020b]{zaminfluence}
+Giordano, R. (2020b).
+\newblock zaminfluence.
+\newblock GitHub repository \url{https://github.com/rgiordan/zaminfluence}.
 
 \bibitem[Giordano and Broderick, 2020]{giordano:2020:bayesij}
 Giordano, R. and Broderick, T. (2020).
@@ -217,11 +201,6 @@ Meager, R. (2019).
   {B}ayesian hierarchical analysis of seven randomized experiments.
 \newblock {\em American Economic Journal: Applied Economics}, 11(1):57--91.
 
-\bibitem[Nocedal and Wright, 2006]{nocedal:2006:numerical}
-Nocedal, J. and Wright, S. (2006).
-\newblock {\em Numerical optimization}.
-\newblock Springer Science \& Business Media.
-
 \bibitem[Raj et~al., 2014]{raj:2014:faststructure}
 Raj, A., Stephens, M., and Pritchard, J. (2014).
 \newblock {fastSTRUCTURE}: variational inference of population structure in
@@ -234,11 +213,6 @@ Regier, J., Fischer, K., Pamnany, K., Noack, A., Revels, J., Lam, M., Howard,
 \newblock Cataloging the visible universe through {Bayesian} inference in
   {Julia} at petascale.
 \newblock {\em Journal of Parallel and Distributed Computing}, 127:89--104.
-
-\bibitem[Sethuraman, 1994]{sethuraman:1994:constructivedp}
-Sethuraman, J. (1994).
-\newblock A constructive definition of {D}irichlet priors.
-\newblock {\em Statistica {S}inica}, pages 639--650.
 
 \bibitem[Shao and Tu, 2012]{shao:2012:jackknife}
 Shao, J. and Tu, D. (2012).
@@ -275,11 +249,6 @@ Waddell, P., Kishino, H., and Ota, R. (2002).
 \newblock Very fast algorithms for evaluating the stability of ml and
   {Bayesian} phylogenetic trees from sequence data.
 \newblock {\em Genome Informatics}, 13:82--92.
-
-\bibitem[Wainwright and Jordan, 2008]{wainwright:2008:graphical}
-Wainwright, M. and Jordan, M.~I. (2008).
-\newblock Graphical models, exponential families, and variational inference.
-\newblock {\em Machine Learning}, 1(1-2):1--305.
 
 \bibitem[Wang and Titterington, 2004]{wang:2005:inadequacy}
 Wang, B. and Titterington, M. (2004).
