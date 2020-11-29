@@ -22,11 +22,11 @@ provide fast, accurate approximations to such fundamental data science tasks,
 providing modern theory and practical software, often giving good accuracy and
 orders-of-magnitude speedup over classical methods.
 
-Consider the following data science tasks.
+Consider, as examples, the following ubiquitous data science tasks.
 %
 \begin{itemize}
 %
-        \item Cross validation (CV) is used ubiquitously in machine learning to
+        \item Cross validation (CV) is a fundamental tool in machine learning to
         evaluate model predictive performance and tune hyperparameters, but
         requires fitting a model multiple times with different data subsets left
         out.
@@ -52,7 +52,7 @@ Consider the following data science tasks.
         uncertainty in another, is a key advantage of Bayesian statistics.
         However, the classical tool for Bayesian estimation, Markov Chain Monte
         Carlo (MCMC), requires evaluating a statistical model many times, and so
-        can be prohibitively computationally expensive.
+        can be computationally expensive.
         % For example, in the
         % inference of astronomical catalogues, the non-scalability of MCMC leads
         % researchers to turn to scalable ``variational Bayes'' posterior
@@ -72,13 +72,25 @@ Consider the following data science tasks.
 These three central data science problems may seem superfically distinct.  But
 they share the common property that they are computationally demanding due to
 requiring the evaluation or estimation of a statistical model multiple times:
-once for each draw of an MCMC chain, once for each prior specification, or once
-for each cross validation sample.
+once for each cross validation sample,once for each prior specification, or
+once for each draw of an MCMC chain.
 
-I show in my work that this commonality implies that they are all amendable to
-{\em sensitivity analysis}, in which the evaluation of a model at alternative
-inputs is approximated by a Taylor series, evaluated at a single initial model
-fit.
+I show that this commonality implies that all these tasks are amendable to {\em
+sensitivity analysis}, in which the evaluation of a model at alternative inputs
+is approximated by a Taylor series.  By evaluating the derivatives necessary to
+form the Taylor series at a {\em single model fit}, I avoid the re-fitting that
+makes the above procedures computationally prohibitive.  In exchange, evaluating
+the necessary derivatives often require solving a large but sparse linear
+system, a tradeoff that can be quite favorable in practice.
+%   The solution of
+% such linear systems in large, practical problems is an interesting practical
+% and theoretical task in its own right.
+
+
+
+
+
+\newpage
 
 My research employs sensitivity analysis to provide accurate approximations to
 uncertainty propagation, prior sensitivity, cross validation and other
@@ -92,9 +104,6 @@ with scalable, general purpose automatic differentiation software
 
 
 
-
-
-\newpage
 
 Consider uncertainty propagation in the construction of astronomical catalogues
 from telescopic image data. State-of-the art techniques employ a fast Bayesian
