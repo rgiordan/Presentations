@@ -98,6 +98,13 @@ Giordano, R., Broderick, T., and Jordan, M. (2018a).
 \newblock Covariances, robustness and variational {B}ayes.
 \newblock {\em The Journal of Machine Learning Research}, 19(1):1981--2029.
 
+\bibitem[Giordano et~al., 2015]{giordano:2015:linear}
+Giordano, R., Broderick, T., and Jordan, M.~I. (2015).
+\newblock Linear response methods for accurate covariance estimates from mean
+  field variational {Bayes}.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  1441--1449.
+
 \bibitem[Giordano et~al., 2018b]{giordano:2018:mcmchyper}
 Giordano, R., Broderick, T., and Jordan, M.~I. (2018b).
 \newblock Automatic robustness measures in stan.
@@ -181,6 +188,11 @@ K{\'e}ry, M. and Schaub, M. (2011).
 Kleijn, B. and van~der Vaart, A. (2006).
 \newblock Misspecification in infinite-dimensional {B}ayesian statistics.
 \newblock {\em The Annals of Statistics}, 34(2):837--877.
+
+\bibitem[Kucukelbir et~al., 2017]{kucukelbir:2017:advi}
+Kucukelbir, A., Tran, D., Ranganath, R., Gelman, A., and Blei, D. (2017).
+\newblock Automatic differentiation variational inference.
+\newblock {\em The Journal of Machine Learning Research}, 18(1):430--474.
 
 \bibitem[Lang et~al., 2016]{lang:2016:tractor}
 Lang, D., Hogg, D., and Mykytyn, D. (2016).
@@ -268,5 +280,12 @@ Waddell, P., Kishino, H., and Ota, R. (2002).
 Wainwright, M. and Jordan, M.~I. (2008).
 \newblock Graphical models, exponential families, and variational inference.
 \newblock {\em Machine Learning}, 1(1-2):1--305.
+
+\bibitem[Wang and Titterington, 2004]{wang:2005:inadequacy}
+Wang, B. and Titterington, M. (2004).
+\newblock Inadequacy of interval estimates corresponding to variational
+  {B}ayesian approximations.
+\newblock In {\em Workshop on Artificial Intelligence and Statistics}, pages
+  373--380.
 
 \end{thebibliography}

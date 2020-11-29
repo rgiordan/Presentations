@@ -99,7 +99,7 @@ the above three data science tasks and more, both in practice and and in theory.
 
 \newpage
 
-\paragraph{Accuracy bounds for approximate cross validation.}
+\paragraph{Approximate cross validation.}
 
 The error or variability of machine learning algorithms is often assessed by
 repeatedly re-fitting a model with different weighted versions of the observed
@@ -115,7 +115,7 @@ are stochastic or deterministic, and so can be used as a tool for proving the
 accuracy of the infinitesimal jackknife on a wide variety of problems. As a
 corollary, I state mild regularity conditions under which our approximation
 consistently estimates true leave-$k$-out cross-validation for any fixed $k$. I
-demonstrate the accuracy of our methods on a range of simulated and real
+demonstrate the accuracy of the approximation on a range of simulated and real
 datasets, including an unsupervised clustering problem from genomics
 \citep{Luan:2003:clustering, shoemaker:2015:ultrasensitive}.
 
@@ -157,8 +157,7 @@ distinct clusters.
 % rather than because of a considered subjective belief.
 
 In \citep{giordano:2018:bnpsensitivity}, I derive prior sensitivity measures for
-a truncated variational Bayes (VB) approximation based on the Kullback-Leibler
-(KL) divergence using ideas from \citep{gustafson:1996:localposterior,
+a truncated variational Bayes approximation using ideas from \citep{gustafson:1996:localposterior,
 giordano:2018:covariances}. Unlike previous work on local Bayesian sensitivity
 for BNP \citep{Basu:2000:BNP_robustness}, we pay special attention to the
 ability of our sensitivity measures to \emph{extrapolate} to different priors,
@@ -169,6 +168,33 @@ human genome dataset \citep{huang:2011:haplotype, raj:2014:faststructure},
 demonstrating that the approximate is accurate, orders of magnitude faster than
 re-fitting, and capable of detecting meaningful prior sensitivity.
 
+
+\paragraph{Uncertainty propagation in mean-field variational Bayes.}
+
+Mean-field Variational Bayes (MFVB) is an approximate Bayesian posterior
+inference technique that is increasingly popular due to its fast runtimes on
+large-scale scientific data sets (e.g., \citet{raj:2014:faststructure,
+kucukelbir:2017:advi, regier:2019:cataloging}). However, even when MFVB provides
+accurate posterior means for certain parameters, it often mis-estimates
+variances and covariances \citep{wang:2005:inadequacy, turner:2011:two} due to
+its inability to propagate Bayesian uncertainty between statistical parameters.
+
+In \citet{giordano:2015:linear, giordano:2018:covariances}, I derive a simple
+formula for the effect of infinitesimal model perturbations on MFVB posterior
+means, thus providing improved covariance estimates and greatly expanding the
+practical usefulness of MFVB posterior approximations. The estimates for MFVB
+posterior covariances rely on a result from the classical Bayesian robustness
+literature that relates derivatives of posterior expectations to posterior
+covariances and includes the Laplace approximation as a special case.
+% The key condition is that the MFVB
+% approximation provides good estimates of a select subset of posterior means---an
+% assumption that has been shown to hold in many practical settings.
+In our experiments, we demonstrate that our methods are simple, general, and
+fast, providing accurate posterior uncertainty estimates and robustness measures
+with runtimes that can be an order of magnitude faster than MCMC, including
+models from ecology \citep{kery:2011:bayesian}, the social sciences
+\citep{gelman:2006:arm}, and on a massive internet advertising dataset
+\citep{criteo:2014:dataset}.
 
 
 
