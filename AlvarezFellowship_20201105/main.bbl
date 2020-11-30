@@ -12,6 +12,23 @@ Angelucci, M. and De~Giorgi, G. (2009).
   ineligibles' consumption?
 \newblock {\em American Economic Review}, 99(1):486--508.
 
+\bibitem[ASCAC, 2020]{committee:2020:report}
+ASCAC (2020).
+\newblock {US Department of Energy} {Advanced Scientific Computing Advisory
+  Committee (ASCAC)} {Subcommittee} on {AI/ML} {Data-intensive Science and
+  High-Performance Computing}, {Final} draft of report to the committee.
+\newblock Technical report, USDOE Office of Science (SC), Washington, DC
+  (United States).
+
+\bibitem[Baker et~al., 2019]{baker:2019:workshop}
+Baker, N., Alexander, F., Bremer, T., Hagberg, A., Kevrekidis, Y., Najm, H.,
+  Parashar, M., Patra, A., Sethian, J., Wild, S., Wilcox, K., and Lee, S.
+  (2019).
+\newblock Workshop report on basic research needs for scientific machine
+  learning: {C}ore technologies for artificial intelligence.
+\newblock Technical report, USDOE Office of Science (SC), Washington, DC
+  (United States).
+
 \bibitem[Basu, 2000]{Basu:2000:BNP_robustness}
 Basu, S. (2000).
 \newblock {B}ayesian robustness and {B}ayesian nonparametrics.
@@ -225,6 +242,12 @@ Shoemaker, J.~E., Fukuyama, S., Eisfeld, A.~J., Zhao, D., Kawakami, E., Sakabe,
 \newblock {RStan}: the {R} interface to {Stan}.
 \newblock R package version 2.21.2.
 
+\bibitem[Stuart et~al., 2019]{stuart:2019:comprehensive}
+Stuart, T., Butler, A., Hoffman, P., Hafemeister, C., Papalexi, E., Mauck, W.,
+  Hao, Y., Stoeckius, M., Smibert, P., and Satija, R. (2019).
+\newblock Comprehensive integration of single-cell data.
+\newblock {\em Cell}, 177(7):1888--1902.
+
 \bibitem[Turner and Sahani, 2011]{turner:2011:two}
 Turner, R.~E. and Sahani, M. (2011).
 \newblock Two problems with variational expectation maximisation for
@@ -244,5 +267,11 @@ Wang, B. and Titterington, M. (2004).
   {B}ayesian approximations.
 \newblock In {\em Workshop on Artificial Intelligence and Statistics}, pages
   373--380.
+
+\bibitem[Xu and Su, 2015]{xu:2015:identification}
+Xu, C. and Su, Z. (2015).
+\newblock Identification of cell types from single-cell transcriptomes using a
+  novel clustering method.
+\newblock {\em Bioinformatics}, 31(12):1974--1980.
 
 \end{thebibliography}

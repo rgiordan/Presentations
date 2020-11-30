@@ -14,13 +14,16 @@
 %\maketitle
 \section*{Research Statement}
 
-In order to address the needs of twenty-first century scientific computing, the
-US Department of Energy, machine learning models must be able to ``expose
-biases, and to quantify uncertainties, errors, and precision.''
-\citep{committee:2020:report}  However, uncertainty quantification and model
-interrogation can can become quite expensive in high-dimensional machine
-learning models \citep[Section 2.4]{baker:2019:workshop}. Consider, as
-motivating examples, the following ubiquitous data science tasks.
+
+As statistical models grow in size and complexity to serve modern scientific
+datasets and questions, fundamental data science tasks become more
+computationally onerous due to the need of many classical procedures to evaluate
+or fit a model multiple times.  My research uses {\em sensitivity analysis} to
+provide fast, accurate approximations to such fundamental data science tasks,
+often exhibiting good accuracy and orders-of-magnitude speedup over classical
+methods.
+
+Consider, as motivating examples, the following ubiquitous data science tasks.
 %
 \begin{itemize}
 %
@@ -34,12 +37,11 @@ motivating examples, the following ubiquitous data science tasks.
         % with the best predictive performance as evaluated by CV
         % \citep{friedman:2001:esl, shoemaker:2015:ultrasensitive}.
         %
-        \item  Prior specification encodes key assumptions in Bayesian
-        statistics, a paradigm for coherently solving statistical
-        inverse problems.  But Bayesian inference can be sensitive to prior
-        specification, particularly in high-dimensional models, and solving the
-        inverse problem for multiple plausible prior choices can be
-        computationally prohibitive.
+        \item  Prior specification is a necessary step in Bayesian statistics, a
+        statistical paradigm that provides interpretable, coherent uncertainty
+        quantification for scientific questions.  But Bayesian inference can be
+        sensitive to the prior specification, and evaluating the model for
+        multiple plausible prior choices can be computationally prohibitive.
         % For
         % example, one might use Bayesian nonparametrics to ask how many distinct
         % genotypes are found in a human genome dataset
@@ -68,32 +70,30 @@ motivating examples, the following ubiquitous data science tasks.
 % a range of priors), and the more likely it is to model multiple, mutually
 % dependent, uncertain quantities (remedied by uncertainty propagation).
 
-These three central data science problems share the common property that they
-are computationally demanding due to requiring the evaluation or estimation of a
-statistical model multiple times: once for each cross validation sample, once
-for each prior specification, or once for each draw of an MCMC chain.
+These three central data science problems may seem superficially distinct.  But
+they share the common property that they are computationally demanding due to
+requiring the evaluation or estimation of a statistical model multiple times:
+once for each cross validation sample, once for each prior specification, or
+once for each draw of an MCMC chain.
 
-In my research, I circumvent the computational difficulties of these and other
-core tasks in data science by using {\em Taylor series approximations} to
-extrapolate to nearby couterfactual model inputs (e.g., a new dataset with some
-points left out, or a new prior specification). By evaluating the derivatives
-necessary to form the Taylor series at a {\em single model estimate}, I avoid
-the re-estimation or re-evaluation that makes the above procedures
-computationally prohibitive.  In exchange, evaluating the necessary derivatives
-typically requires solving a large but sparse linear system, a tradeoff that can
-be quite favorable in practice, providing good accuracy orders of magnitude
-faster than the corresponding classical procedures.
+I show that this commonality implies that all these tasks are amendable to {\em
+sensitivity analysis}, in which the evaluation of a model at alternative inputs
+is approximated by a Taylor series.  By evaluating the derivatives necessary to
+form the Taylor series at a {\em single model estimate}, I avoid the
+re-estimation or re-evaluation that makes the above procedures computationally
+prohibitive.  In exchange, evaluating the necessary derivatives often requires
+solving a large but sparse linear system, a tradeoff that can be quite favorable
+in practice.
 
-The idea of extrapolating with Taylor series expansions is a venerable one,
-though the breadth of its potential for contemporary data science problems is
-arguably underappreciated. My work advances existing research by providing
-practical implementations of classical methods, particularly using automatic
-differentiation \citep{baydin:2015:automatic}, by updating classical theory to
-apply in finite sample and under more realistic conditions, and by drawing
-connections between superficially disparate applications of sensitivity
-analysis. For the remainder of the essay, I will discuss in more detail my
-contributions to the above three data science tasks and more, both in practice
-and in theory.
+Sensitivity analysis is a venerable topic, though the breadth of its
+applications to contemporary problems is arguably underappreciated.  My work
+advances existing work by providing practical implementations of classical
+methods, particularly using automatic differentiation
+\citep{baydin:2015:automatic}, by updating classical theory to apply in finite
+sample and under more realistic conditions, and by drawing connections between
+superficially disparate applications of sensitivity analysis. For the remainder
+of the essay, I will discuss in more detail how I apply sensitivity analysis to
+the above three data science tasks and more, both in practice and and in theory.
 
 
 
@@ -207,11 +207,9 @@ all possible data subsets of a certain size is computationally prohibitive, so I
 provide a finite-sample metric to approximately compute the number (or fraction)
 of observations that has the greatest influence on a given result when dropped.
 I provide explicit finite-sample error bounds on my approximation for linear
-and instrumental variables regressions.
-% At minimal computational cost, the
-% metric provides an exact finite-sample lower bound on sensitivity for any
-% estimator, so any non-robustness my metric finds is conclusive.
-I demonstrate
+and instrumental variables regressions. At minimal computational cost, the
+metric provides an exact finite-sample lower bound on sensitivity for any
+estimator, so any non-robustness my metric finds is conclusive. I demonstrate
 that non-robustness to data ablation is driven by a low signal-to-noise ratio in
 the inference problem, is not reflected in standard errors, does not disappear
 asymptotically, and is not a product of misspecification.
@@ -246,13 +244,16 @@ In \citep{giordano:2020:bayesij, giordano:2020:stanconbayesij}, I propose an
 efficient alternative to bootstrapping an MCMC procedure which is based on the
 influence function from sensitivity analysis.  Using results from
 \citep{giordano:2018:covariances, giordano:2019:ij}, I show that the influence
-function for posterior expectations can be easily computed from the posterior
-samples of a single MCMC procedure and consistently estimates the bootstrap
-variance. I demonstrate the accuracy and computational benefits of the influence
-function variance estimates on array of experiments including an election
-forecasting model \citep{economist:2020:election}, the Cormack-Jolly-Seber model
-from ecology \citep{kery:2011:bayesian}, and a large collection of models and
-datasets from the social sciences \citep{gelman:2006:arm}.
+function for posterior expectations has the form of a simple posterior
+covariance, easily computed from the posterior samples of a single MCMC
+procedure. Furthermore, when a Bayesian central limit theorem applies, I show
+that the variance estimate derived from the influence function is asymptotically
+equivalent to that of the bootstrap.  I demonstrate the accuracy and
+computational benefits of the influence function variance estimates on array of
+experiments including an election forecasting model
+\citep{economist:2020:election}, the Cormack-Jolly-Seber model from ecology
+\citep{kery:2011:bayesian}, and a large collection of models and datasets from
+the social sciences \citep{gelman:2006:arm}.
 
 
 
@@ -307,6 +308,7 @@ computation other than clustering the original similarity ensemble.  Ideally,
 this sensitivity analysis would allow for quick exploration of the
 high-dimensional space of feature inclusion, similar to our work in
 \citet{giordano:2020:amip}.
+
 
 \paragraph{Scaling sensitivity measures.}
 
