@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.29)  30 NOV 2020 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.29)  30 NOV 2020 14:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -640,21 +640,21 @@ Underfull \hbox (badness 6001) in paragraph at lines 135--139
  []
 
 [7] [8])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 366.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 366.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 366.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 366.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11007 strings out of 494805
- 163888 string characters out of 6178000
+ 11009 strings out of 494805
+ 163902 string characters out of 6178000
  305092 words of memory out of 5000000
  14021 multiletter control sequences out of 15000+600000
- 11384 words of font info for 80 fonts, out of 8000000 for 9000
+ 11435 words of font info for 81 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  33i,11n,43p,786b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -665,7 +665,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (9 pages, 145099 bytes).
+Output written on main.pdf (9 pages, 145091 bytes).
 PDF statistics:
  285 PDF objects out of 1000 (max. 8388607)
  263 compressed objects within 3 object streams

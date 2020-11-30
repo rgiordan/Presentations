@@ -104,8 +104,8 @@ practical implementations of classical methods, particularly using automatic
 differentiation \citep{baydin:2015:automatic}, by updating classical theory to
 apply in finite sample and under more realistic conditions, and by demonstrating
 unifying ideas underlying superficially disparate applications. For the
-remainder of the statement, I will discuss in more detail my contributions to
-the above three data science tasks and more, both in practice and in theory.
+remainder of the statement, I will discuss in more detail my contributions, both
+in practice and in theory, to the above three data science tasks and more.
 
 
 
@@ -272,14 +272,13 @@ datasets from the social sciences \citep{gelman:2006:arm}.
 
 My research is driven by the needs of my scientific collaborators, and so my
 future work will be determined to a large part by my colleagues. Based on my
-work with cosmologists at the Berkeley Lab \citep{regier:2019:cataloging}, the
-explicit need for uncertainty quantification expressed by multiple Berkeley Lab
-research groups \citep[Section 6.2]{committee:2020:report}, and the high
-priority given to uncertainty quantification at the US DOE
-\citep{lbnl:2019:foa}, I am confident that productive collaborations can be
-found at the Berkeley Lab. I will now discuss a few directions that I find
-promising and interesting, and which I believe could be applicable to a diverse
-set of problems.
+work with cosmologists \citep{regier:2019:cataloging}, the explicit need for
+uncertainty quantification expressed by multiple Berkeley Lab research groups
+\citep[Section 6.2]{committee:2020:report}, and the high priority given to
+uncertainty quantification at the US DOE \citep{lbnl:2019:foa}, I am confident
+that productive collaborations can be found at the Berkeley Lab. I will now
+discuss a few directions that I find promising and interesting, and which I
+believe could be applicable to a diverse set of problems.
 
 \paragraph{The higher-order infinitesimal jackknife for the bootstrap.}
 
@@ -346,15 +345,15 @@ the production of astronomical catalogs, which I will now discuss.
 \paragraph{Partitioned Bayesian inference.}
 
 The ideas of \citep{giordano:2018:covariances} can be naturally extended to
-approximately propagate uncertainty among separately estimated components of
-an inference problem.  For example, astronomical catalogs are customarily
-produced with MFVB-like algorithms \citep{lang:2016:tractor,
-regier:2019:cataloging}, which take inputs such as the sky background
-and optical point spread function as fixed inputs, though these quantities
-are themselves inferred with uncertainty.  Viewing all the separate inference
-procedures as a sequential quasi-MFVB objective, one could directly apply
-the techniques of LRVB to propagate the uncertainty from the modeling inputs
-to the astronomical catalog's uncertainty.
+approximately propagate uncertainty among separately estimated components of an
+inference problem.  For example, astronomical catalogs are customarily produced
+with MFVB-like algorithms \citep{lang:2016:tractor, regier:2019:cataloging},
+which take inputs such as the sky background and optical point spread function
+as fixed inputs, though these quantities are themselves inferred with
+uncertainty.  Viewing all the separate inference procedures as a sequential
+quasi-MFVB objective, one could directly apply the techniques of
+\citep{giordano:2018:covariances} to propagate the uncertainty from the modeling
+inputs to the astronomical catalog's uncertainty.
 
 
 
