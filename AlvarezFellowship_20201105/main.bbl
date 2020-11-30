@@ -69,6 +69,12 @@ Carpenter, B., Hoffman, M., Brubaker, M., Lee, D., Li, P., and Betancourt, M.
 \newblock Criteo conversion logs dataset.
 \newblock Downloaded on July 27th, 2017.
 
+\bibitem[DE-FOA-0002122, 2019]{lbnl:2019:foa}
+DE-FOA-0002122 (2019).
+\newblock Scientific machine learning and artificial intelligence:
+  {Uncertainty} quantification.
+\newblock Downloaded on Nov 20th, 2020.
+
 \bibitem[Efron and Tibshirani, 1994]{efron:1994:bootstrap}
 Efron, B. and Tibshirani, R. (1994).
 \newblock {\em An Introduction to the Bootstrap}.
@@ -154,12 +160,6 @@ Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
 \newblock A {S}wiss army infinitesimal jackknife.
 \newblock In {\em The 22nd International Conference on Artificial Intelligence
   and Statistics}, pages 1139--1147. PMLR.
-
-\bibitem[Gourieroux and Monfort, 1993]{gourieroux:1993:simulation}
-Gourieroux, C. and Monfort, A. (1993).
-\newblock Simulation-based inference: {A} survey with special reference to
-  panel data models.
-\newblock {\em Journal of Econometrics}, 59(1-2):5--33.
 
 \bibitem[Gustafson, 1996]{gustafson:1996:localposterior}
 Gustafson, P. (1996).
