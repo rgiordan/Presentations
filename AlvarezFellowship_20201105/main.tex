@@ -75,7 +75,7 @@ for each prior specification, or once for each draw of an MCMC chain.
 
 In my research, I circumvent the computational difficulties of these and other
 core tasks in data science by using {\em Taylor series approximations} to
-extrapolate to nearby couterfactual model inputs (e.g., a new dataset with some
+extrapolate to nearby counterfactual model inputs (e.g., a new dataset with some
 points left out, or a new prior specification). By evaluating the derivatives
 necessary to form the Taylor series at a {\em single model estimate}, I avoid
 the re-estimation or re-evaluation that makes the above procedures
@@ -301,7 +301,7 @@ cannot be applied directly to the clustering step, which is typically
 non-differentiable.  With a colleague from biology, I am currently investigating
 an importance sampling technique that would allow us to apply sensitivity
 analysis using a continuous relaxation only of the distance measure, while
-retaining the non-differentible clustering step. Ideally, this sensitivity
+retaining the non-differentiable clustering step. Ideally, this sensitivity
 analysis would allow for quick exploration of the high-dimensional space of
 feature inclusion, similar to our work in \citet{giordano:2020:amip}.
 
