@@ -116,8 +116,7 @@ Giordano, R. and Broderick, T. (2020a).
 \bibitem[Giordano and Broderick, 2020b]{giordano:2020:stanconbayesij}
 Giordano, R. and Broderick, T. (2020b).
 \newblock Effortless frequentist covariances of posterior expectations in stan.
-\newblock Presentation at Stancon 2020
-  https://docs.google.com/presentation/d/17Gr8Mqi1yVWliC3SDuHwigCKj1s7RLXgsBhVCEyT5i4/edit?usp=sharing.
+\newblock Presentation at Stancon 2020 \url{https://tinyurl.com/y2e2ucp3}.
 
 \bibitem[Giordano et~al., 2018a]{giordano:2018:covariances}
 Giordano, R., Broderick, T., and Jordan, M. (2018a).
@@ -134,8 +133,7 @@ Giordano, R., Broderick, T., and Jordan, M.~I. (2015).
 \bibitem[Giordano et~al., 2018b]{giordano:2018:mcmchyper}
 Giordano, R., Broderick, T., and Jordan, M.~I. (2018b).
 \newblock Automatic robustness measures in stan.
-\newblock Presentation at Stancon 2018
-  https://docs.google.com/presentation/d/1bxeFy-awELpGlDXNcdJ3r-lrKAqNCZZggD8Xmz9Omg0/edit?usp=sharing.
+\newblock Presentation at Stancon 2018 \url{https://tinyurl.com/yyqwpowc}.
 
 \bibitem[Giordano et~al., 2019a]{giordano2019:hoij}
 Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
@@ -203,6 +201,12 @@ Lang, D., Hogg, D., and Mykytyn, D. (2016).
 \newblock The {T}ractor: {P}robabilistic astronomical source detection and
   measurement.
 \newblock {\em ascl}, pages ascl--1604.
+
+\bibitem[Liu et~al., 2020]{liu:2020:bnpjisba}
+Liu, R., Giordano, R., and Broderick, T. (2020).
+\newblock Evaluating sensitivity to the stick breaking prior in bayesian
+  nonparametrics.
+\newblock Presentation at BAYESM:O 2020 \url{https://tinyurl.com/y2qgofgl}.
 
 \bibitem[Luan and Li, 2003]{Luan:2003:clustering}
 Luan, Y. and Li, H. (2003).
