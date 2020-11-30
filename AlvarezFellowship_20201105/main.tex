@@ -1,5 +1,4 @@
 \input{_headers.tex}
-
 \usepackage{enumitem}
 \setlist{nolistsep}
 
@@ -12,15 +11,29 @@
 \begin{document}
 
 %\maketitle
-\section*{Research Statement}
+%\section*{Research Statement}
+% \begin{tabularx}{\textwidth}{ >{\raggedright\arraybackslash}X  >{\raggedleft}X }
+% Research Statement & Ryan Giordano
+% \end{tabularx}
 
-In order to address the needs of twenty-first century scientific computing, the
-US Department of Energy, machine learning models must be able to ``expose
-biases, and to quantify uncertainties, errors, and precision.''
-\citep{committee:2020:report}  However, uncertainty quantification and model
-interrogation can can become quite expensive in high-dimensional machine
-learning models \citep[Section 2.4]{baker:2019:workshop}. Consider, as
-motivating examples, the following ubiquitous data science tasks.
+\begin{minipage}[t]{0.5\textwidth}
+\hspace{-2em} % Easier than doing it right!
+{\bf \LARGE Reseach Statement}\\
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+%    \begin{flushright}
+        \hspace{4.5em} % Easier than doing it right!
+        {\LARGE Ryan Giordano}
+%    \end{flushright}
+\end{minipage}
+
+In order to address the needs of twenty-first century scientific computing,
+statistical models must be able to ``expose biases, and to quantify
+uncertainties, errors, and precision.'' \citep{committee:2020:report} However,
+uncertainty quantification and model interrogation can can become quite
+expensive in high-dimensional machine learning models \citep[Section
+2.4]{baker:2019:workshop}. Consider, as motivating examples, the following
+ubiquitous data science tasks.
 %
 \begin{itemize}
 %
@@ -89,11 +102,10 @@ though the breadth of its potential for contemporary data science problems is
 arguably underappreciated. My work advances existing research by providing
 practical implementations of classical methods, particularly using automatic
 differentiation \citep{baydin:2015:automatic}, by updating classical theory to
-apply in finite sample and under more realistic conditions, and by drawing
-connections between superficially disparate applications of sensitivity
-analysis. For the remainder of the essay, I will discuss in more detail my
-contributions to the above three data science tasks and more, both in practice
-and in theory.
+apply in finite sample and under more realistic conditions, and by demonstrating
+unifying ideas underlying superficially disparate applications. For the
+remainder of the statement, I will discuss in more detail my contributions to
+the above three data science tasks and more, both in practice and in theory.
 
 
 
