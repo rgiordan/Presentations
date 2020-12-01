@@ -1,12 +1,14 @@
 \documentclass{letter}
 %\usepackage{fancyhdr}
 
-\oddsidemargin=.2in
-\evensidemargin=.2in
-\textwidth=5.9in
-\topmargin=-.5in
-\textheight=9in
+% \oddsidemargin=1in
+% \evensidemargin=1in
+% \textwidth=7.0in
+%\topmargin=-2.2in
+% \textheight=9in
 
+\usepackage{geometry}
+\geometry{margin=1in}
 
 % \pagestyle{fancy}
 % \fancyhf{}
@@ -48,7 +50,7 @@ Berkeley, CA, 94720}
 
 \opening{Dear Alvarez-Hopper Selection Committee,}
 
-I am writing to enthusiastically apply for the 2021 Alvarez-Hopper postdoctoral
+I am writing to enthusiastically apply for the 2021 Alvarez postdoctoral
 fellowship.  Through my work as an engineer at Google, my PhD in statistics at
 Berkeley, and my current postdoctoral position at the Massachusetts Institute of
 Technology, my academic ambition has consistently been to bring conceptually
@@ -66,18 +68,17 @@ methodological advances in data science.
 My work on large-scale data problems, both at Google and on the Celeste project
 (producing astronomical catalogs on the NERSC supercomputing cluster), have
 acquainted me with the difficulty of applying traditional statistical ideas at
-modern scales.  My research has been devoted to easing these difficulties.
-My PhD began with an effort to overcome the fact that classical Bayesian Markov
-Chain Monte Carlo (MCMC) techniques would not scale to the problems I
-encountered at Google. This research question led me to develop the linear
-response correction for variational Bayes approximations, a perturbative
-correction which provides reliable, approximate Bayesian inference on problems
-far too massive for MCMC (like the construction of astronomical catalogs).
-During the second half of my PhD, I found that similar perturbative ideas
-provide scalable solutions to a wide array of practical machine learning
-problems involving uncertainty quantification or model checking, including cross
-validation, prior sensitivity, adversarial data sensitivity, and sensitivity to
-prior or model specification.
+large scale.  My research has been devoted to easing these difficulties. My PhD
+began with an effort to overcome the fact that classical Bayesian Markov Chain
+Monte Carlo (MCMC) techniques would not scale to the problems I encountered at
+Google. This research question led me to develop the linear response correction
+for variational Bayes approximations, a perturbative correction which provides
+reliable, approximate Bayesian inference on problems far too massive for MCMC
+(like the construction of astronomical catalogs). During the second half of my
+PhD, I found that similar perturbative ideas provide scalable solutions to a
+wide array of practical machine learning problems involving uncertainty
+quantification or model checking, including cross validation, prior sensitivity,
+adversarial data sensitivity, and sensitivity to prior or model specification.
 
 Good ideas are made better by being put into practice, and I believe that the my
 research will be best developed and advanced in the context of massive,
@@ -90,18 +91,21 @@ Science Initiative'' in the above-mentioned report.  As the report states,
 understanding  their accuracy  and stability in complex environments have not.''
 I believe that collaboration between statisticians such as myself and scientists
 is the best way to fill this need, and it is for this reason that I am applying
-to become an Alvarez-Hopper fellow.
+to become an Alvarez fellow.
 
 
 \closing{Sincerely,}
 
-Ryan Giordano\\
-Department of Computer Science\\
-Massachusetts Institute of Technology\\
-Cambridge, MA\\
-(805) 501-6754 (cell)\\
-rgiordan@mit.edu\\
-\url{https://rgiordan.github.io/}
+\vspace{-5em}
+\includegraphics[width=2.5in]{sig.png}
+
+Ryan Giordano
+% Department of Computer Science\\
+% Massachusetts Institute of Technology\\
+% Cambridge, MA\\
+% (805) 501-6754 (cell)\\
+% rgiordan@mit.edu\\
+% \url{https://rgiordan.github.io/}
 \end{letter}
 
 % \bibliography{references}
