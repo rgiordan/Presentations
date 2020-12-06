@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  6 DEC 2020 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  6 DEC 2020 14:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -692,12 +692,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [2] [3] [4]
 [5] (./main.bbl [6] [7])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 354.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 354.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 354.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 354.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
@@ -717,10 +717,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (8 pages, 138329 bytes).
+Output written on main.pdf (8 pages, 137718 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
+ 286 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
  68 named destinations out of 1000 (max. 500000)
  11265 words of extra memory for PDF output out of 12000 (max. 10000000)
 
