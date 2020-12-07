@@ -2,63 +2,63 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 78 of file main.aux
+Illegal, another \bibstyle command---line 123 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-Repeated entry---line 872 of file references.bib
+Repeated entry---line 883 of file references.bib
  : @inproceedings{giordano:2019:ij
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 888 of file references.bib
+Repeated entry---line 899 of file references.bib
  : @article{shoemaker:2015:ultrasensitive
  :                                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 904 of file references.bib
+Repeated entry---line 915 of file references.bib
  : @article{Luan:2003:clustering
  :                              ,
 I'm skipping whatever remains of this entry
 Warning--empty publisher in turner:2011:two
-You've used 47 entries,
+You've used 44 entries,
             1935 wiz_defined-function locations,
-            726 strings with 12462 characters,
-and the built_in function-call counts, 19667 in all, are:
-= -- 1895
-> -- 1010
-< -- 30
-+ -- 377
-- -- 349
-* -- 1685
-:= -- 3479
-add.period$ -- 144
-call.type$ -- 47
-change.case$ -- 405
-chr.to.int$ -- 43
-cite$ -- 48
-duplicate$ -- 687
-empty$ -- 1219
-format.name$ -- 422
-if$ -- 3769
+            712 strings with 11863 characters,
+and the built_in function-call counts, 18478 in all, are:
+= -- 1781
+> -- 943
+< -- 28
++ -- 353
+- -- 325
+* -- 1581
+:= -- 3257
+add.period$ -- 135
+call.type$ -- 44
+change.case$ -- 377
+chr.to.int$ -- 40
+cite$ -- 45
+duplicate$ -- 652
+empty$ -- 1152
+format.name$ -- 395
+if$ -- 3550
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 40
-newline$ -- 238
-num.names$ -- 145
-pop$ -- 362
+missing$ -- 39
+newline$ -- 223
+num.names$ -- 136
+pop$ -- 342
 preamble$ -- 1
-purify$ -- 407
+purify$ -- 380
 quote$ -- 0
-skip$ -- 532
+skip$ -- 504
 stack$ -- 0
-substring$ -- 1211
-swap$ -- 91
+substring$ -- 1138
+swap$ -- 90
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 274
+type$ -- 256
 warning$ -- 1
-while$ -- 148
+while$ -- 140
 width$ -- 0
-write$ -- 596
+write$ -- 558
 (There were 4 error messages)

@@ -2,9 +2,6 @@
 \usepackage{enumitem}
 \setlist{nolistsep}
 
-\geometry{margin=1.2in}
-
-
 \title{Ryan Giordano Research Statement}
 
 \author{
@@ -25,53 +22,49 @@
 \end{minipage}
 
 
+
 In order to address the needs of twenty-first century scientific computing,
 statistical models must often be able to quantify uncertainty, interrogate
 modeling modeling assumptions, and evaluate predictive performance. However,
 classical techniques to provied these desiderata can can become quite expensive,
 especially in in high-dimensional machine learning and Bayesian models.
-
-Consider, as a motivating example, using Bayesian nonparametrics (BNP)  to
-estimate the identity and number of components in a human genome dataset, e.g.,
-using the dataset from \citet{huang:2011:haplotype}, with 1107 individuals and
-2810 single nucleotide pairs.
-
+Consider, as motivating examples, the following ubiquitous data science tasks.
+%
 \begin{itemize}
 %
-\item Markov Chain Monte Carlo (MCMC) is computationally prohibitive due to the
-large size of the dataset and parameter space, so practitioners turn to
-relatively fast but approximate mean field variational Bayes (MFVB)
-approximations \citep{blei:2006:bnp, raj:2014:faststructure}. However, MFVB is
-known to provide poor estimates of posterior uncertainty
-\citep{turner:2011:two}.
-%
-\item Cross validation (CV) is a ubiquitous tool for validating modeling
-assumptions, but requires fitting a model multiple times with different data
-subsets left out.  On the dataset from \citet{huang:2011:haplotype}, an MFVB
-approximation to a BNP posterior can take several hours.  Leave-one-out CV, for
-example, might re-fit the model once with each of the 1107 individuals, which
-could require on order of a thousand of hours of compute time for each model
-configuration evaluated with CV.
-%
-\item  Priors encode key assumptions in Bayesian statistics, and inference can
-be sensitive to prior specification.
-% Checking for prior sensitivity is
-% particularly important in high-dimensional models such as BNP, where the choice
-% of prior is typically guided by mathematical convenience rather than subjective
-% belief.
-Re-evaluating the MFVB approximation for a representative set of
-plausible priors can be computationally prohibitive, especially given that the
-space of possible BNP priors is infinite-dimensional.
+        \item Cross validation (CV) is a fundamental tool in machine learning to
+        evaluate model predictive performance and tune hyperparameters, but
+        requires fitting a model multiple times with different data subsets left
+        out.
+
+        \item Uncertainty propagation, i.e., allowing the inferential
+        uncertainty in one modeling quantity to inform the inferential
+        uncertainty in another, is a key advantage of Bayesian statistics.
+        However, the classical tool for Bayesian estimation, Markov Chain Monte
+        Carlo (MCMC), requires evaluating a statistical model many times, and so
+        can be computationally expensive.
+
+        \item  Prior specification encodes key assumptions in Bayesian
+        statistics, a paradigm for coherently solving statistical
+        inverse problems.  But Bayesian inference can be sensitive to prior
+        specification, particularly in high-dimensional models, and solving the
+        inverse problem for multiple plausible prior choices can be
+        computationally prohibitive.
 %
 \end{itemize}
+%
 
-Though motivated here by a particular BNP analysis, these three
-tasks---uncertainty quantification, predictive checks, and model specification
-checks---are ubiquitous in machine learning and statistics.  And they share the
-following commonality: their computational demands are driven by the evaluation
-or estimation of a statistical model multiple times for inputs that are, in some
-sense, ``close'' to one another. Datasets chosen for cross-validation, for
-example, are typically not too different from the original dataset.
+% The more complicated a model is, the more likely it is that
+% it may overfit the data (remedied by CV), the more difficult it is
+% to reason subjectively about the prior (remedied by experimenting with
+% a range of priors), and the more likely it is to model multiple, mutually
+% dependent, uncertain quantities (remedied by uncertainty propagation).
+
+These three central data science problems share the following commonality:
+their computational demands are driven by the evaluation or estimation of a
+statistical model multiple times for inputs that are, in some sense,
+``close'' to one another.  Datasets chosen for cross-validation, for example,
+are typically not too different from the original dataset.
 
 In my research, I exploit this commonality to circumvent the computational
 difficulties of these and other core tasks in data science by using {\em
@@ -84,10 +77,10 @@ giordano:2019:ij}.  Other connections, e.g. between sensitivity analysis and
 Bayesian posterior covariances \citep{giordano:2018:covariances}, are less
 direct, but rely on the same conceptual and computational tools.
 
-By evaluating the derivatives necessary to perform sensitivity analysis at a
-{\em single model estimate}, I avoid the re-estimation or re-evaluation that
-makes the above procedures computationally prohibitive.  In exchange, evaluating
-the derivatives typically requires solving a large but sparse linear system, a
+By evaluating the derivatives necessary to perform sensitivity analysis {\em
+single model estimate}, I avoid the re-estimation or re-evaluation that makes
+the above procedures computationally prohibitive.  In exchange, evaluating the
+derivatives typically requires solving a large but sparse linear system, a
 tradeoff that can be quite favorable in practice, providing good accuracy orders
 of magnitude faster than the corresponding classical procedures.
 
