@@ -49,6 +49,14 @@ Blei, D. and Jordan, M.~I. (2006).
 \newblock Variational inference for {Dirichlet} process mixtures.
 \newblock {\em Bayesian Analysis}, 1(1):121--143.
 
+\bibitem[Broderick et~al., 2020]{giordano:2020:amip}
+Broderick, T., Giordano, R., and Meager, R. (2020).
+\newblock An automatic finite-sample robustness metric: {Can} dropping a little
+  data change conclusions?
+\newblock {\em arXiv preprint arXiv:2011.14999}.
+\newblock Authors listed alphabetically. Giordano, R. and Meager, R. are equal
+  contribution primary authors.
+
 \bibitem[Carpenter et~al., 2017]{carpenter:2017:stan}
 Carpenter, B., Gelman, A., Hoffman, M., Lee, D., Goodrich, B., Betancourt, M.,
   Brubaker, M., Guo, J., Li, P., and Riddell, A. (2017).
@@ -139,12 +147,6 @@ Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018c).
 \newblock Evaluating sensitivity to the stick breaking prior in {B}ayesian
   nonparametrics.
 \newblock {\em arXiv preprint arXiv:1810.06587}.
-
-\bibitem[Giordano et~al., 2020]{giordano:2020:amip}
-Giordano, R., Meager, R., and Broderick, T. (2020).
-\newblock An automatic finite-sample robustness metric: {Can} dropping a little
-  data change conclusions?
-\newblock {\em arXiv preprint arXiv:2011.14999}.
 
 \bibitem[Giordano et~al., 2019b]{giordano:2019:ij}
 Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.

@@ -10,16 +10,16 @@ Database file #1: references.bib
 Warning--empty publisher in turner:2011:two
 You've used 44 entries,
             1935 wiz_defined-function locations,
-            712 strings with 11919 characters,
-and the built_in function-call counts, 18468 in all, are:
-= -- 1778
+            713 strings with 12017 characters,
+and the built_in function-call counts, 18477 in all, are:
+= -- 1780
 > -- 943
 < -- 28
 + -- 353
 - -- 325
 * -- 1580
-:= -- 3255
-add.period$ -- 134
+:= -- 3257
+add.period$ -- 135
 call.type$ -- 44
 change.case$ -- 377
 chr.to.int$ -- 40
@@ -27,13 +27,13 @@ cite$ -- 45
 duplicate$ -- 652
 empty$ -- 1152
 format.name$ -- 395
-if$ -- 3547
+if$ -- 3549
 int.to.chr$ -- 5
 int.to.str$ -- 0
 missing$ -- 39
-newline$ -- 223
+newline$ -- 224
 num.names$ -- 136
-pop$ -- 343
+pop$ -- 342
 preamble$ -- 1
 purify$ -- 380
 quote$ -- 0
@@ -48,5 +48,5 @@ type$ -- 256
 warning$ -- 1
 while$ -- 140
 width$ -- 0
-write$ -- 557
+write$ -- 559
 (There was 1 error message)

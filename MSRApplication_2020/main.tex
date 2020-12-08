@@ -127,27 +127,6 @@ datasets, including an unsupervised clustering problem from genomics
 \citep{Luan:2003:clustering, shoemaker:2015:ultrasensitive}.
 
 
-\paragraph{Prior sensitivity for Markov Chain Monte Carlo.}
-
-MCMC is arguably the most commonly used computational tool to estimate Bayesian
-posteriors, which is made still easier by modern black-box MCMC tools such as
-\texttt{Stan} \citep{carpenter:2017:stan, rstan}.  However, a single run of MCMC
-typically remains time-consuming, and systematically exploring alternative prior
-parameterizations by re-running MCMC would be computationally prohibitive for
-all but the simplest models.
-
-My software package, \texttt{rstansensitivity},
-\citep{giordano:2020:rstansensitivity, giordano:2018:mcmchyper}, takes advantage
-of the automatic differentiation capacities of \texttt{Stan}
-\citep{carpenter:2015:stanmath} together with a classical result from  Bayesian
-robustness \citep{gustafson:1996:localposterior, basu:1996:local,
-giordano:2018:covariances} to provide automatic hyperparameter sensitivity for
-generic \texttt{Stan} models from only a single MCMC run.  I demonstrate the
-speed and utility of the package in detecting excess prior sensitivity,
-particularly in a social sciences model taken from \citet[Chapter
-13.5]{gelman:2006:arm}.
-
-
 \paragraph{Prior sensitivity for discrete Bayesian nonparametrics.}
 
 % From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
@@ -233,6 +212,28 @@ meager:2019:microcredit} show that even 2-parameter linear regression analyses
 of randomized trials can be highly sensitive. While I find some applications are
 robust, in others the sign of a treatment effect can be changed by dropping less
 than 1\% of the sample even when standard errors are small.
+
+
+
+\paragraph{Prior sensitivity for Markov Chain Monte Carlo.}
+
+MCMC is arguably the most commonly used computational tool to estimate Bayesian
+posteriors, which is made still easier by modern black-box MCMC tools such as
+\texttt{Stan} \citep{carpenter:2017:stan, rstan}.  However, a single run of MCMC
+typically remains time-consuming, and systematically exploring alternative prior
+parameterizations by re-running MCMC would be computationally prohibitive for
+all but the simplest models.
+
+My software package, \texttt{rstansensitivity},
+\citep{giordano:2020:rstansensitivity, giordano:2018:mcmchyper}, takes advantage
+of the automatic differentiation capacities of \texttt{Stan}
+\citep{carpenter:2015:stanmath} together with a classical result from  Bayesian
+robustness \citep{gustafson:1996:localposterior, basu:1996:local,
+giordano:2018:covariances} to provide automatic hyperparameter sensitivity for
+generic \texttt{Stan} models from only a single MCMC run.  I demonstrate the
+speed and utility of the package in detecting excess prior sensitivity,
+particularly in a social sciences model taken from \citet[Chapter
+13.5]{gelman:2006:arm}.
 
 
 \paragraph{Frequentist variability of Bayesian posteriors.}
