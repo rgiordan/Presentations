@@ -2,8 +2,11 @@
 \usepackage{enumitem}
 \setlist{nolistsep}
 
-\geometry{margin=1.2in}
-
+\usepackage{geometry}
+%\geometry{margin=1.2in}
+\geometry{top=1.in}
+\geometry{left=1.5in}
+\geometry{right=1.5in}
 
 \title{Ryan Giordano Research Statement}
 
@@ -19,7 +22,7 @@
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
 %    \begin{flushright}
-        \hspace{4.5em} % Easier than doing it right!
+        \hspace{7.5em} % Easier than doing it right!
         {\LARGE Ryan Giordano}
 %    \end{flushright}
 \end{minipage}
@@ -36,23 +39,21 @@ estimate the identity and number of components in a human genome dataset, e.g.,
 using the dataset from \citet{huang:2011:haplotype}, with 1107 individuals and
 2810 single nucleotide pairs.
 
-\begin{itemize}
-%
-\item Markov Chain Monte Carlo (MCMC) is computationally prohibitive due to the
-large size of the dataset and parameter space, so practitioners turn to
-relatively fast but approximate mean field variational Bayes (MFVB)
-approximations \citep{blei:2006:bnp, raj:2014:faststructure}. However, MFVB is
-known to provide poor estimates of posterior uncertainty
-\citep{turner:2011:two}.
-%
-\item Cross validation (CV) is a ubiquitous tool for validating modeling
+{\em Markov Chain Monte Carlo} (MCMC) is
+computationally prohibitive due to the large size of the dataset and parameter
+space, so practitioners turn to relatively fast but approximate mean field
+variational Bayes (MFVB) approximations \citep{blei:2006:bnp,
+raj:2014:faststructure}. However, MFVB is known to provide poor estimates of
+posterior uncertainty \citep{turner:2011:two}.
+
+{\em Cross validation} (CV) is a ubiquitous tool for validating modeling
 assumptions, but requires fitting a model multiple times with different data
 subsets left out.  On the above dataset, forming a single MFVB approximation to
 a BNP posterior can take several hours.  A single run of leave-one-out CV, for
 example, would re-fit the model once with each of the 1107 individuals, which
 could require on order of a thousand of hours of compute time.
-%
-\item  Priors encode key assumptions in Bayesian statistics, and inference can
+
+{\em Priors} encode key assumptions in Bayesian statistics, and inference can
 be sensitive to prior specification, especially in high-dimensional models
 like those of BNP.
 % Checking for prior sensitivity is
@@ -62,14 +63,41 @@ like those of BNP.
 Re-evaluating the MFVB approximation for a representative set of
 plausible priors can be computationally prohibitive, especially given that the
 space of possible BNP priors is infinite-dimensional.
-%
-\end{itemize}
 
-Though motivated here by a particular BNP analysis, these three
-tasks---uncertainty quantification, predictive checks, and model specification
-checks---are ubiquitous in machine learning and statistics.  And they share the
-following commonality: their computational demands are driven by the evaluation
-or estimation of a statistical model multiple times for inputs that are, in some
+%
+% \begin{itemize}
+% %
+% \item Markov Chain Monte Carlo (MCMC) is computationally prohibitive due to the
+% large size of the dataset and parameter space, so practitioners turn to
+% relatively fast but approximate mean field variational Bayes (MFVB)
+% approximations \citep{blei:2006:bnp, raj:2014:faststructure}. However, MFVB is
+% known to provide poor estimates of posterior uncertainty
+% \citep{turner:2011:two}.
+% %
+% \item Cross validation (CV) is a ubiquitous tool for validating modeling
+% assumptions, but requires fitting a model multiple times with different data
+% subsets left out.  On the above dataset, forming a single MFVB approximation to
+% a BNP posterior can take several hours.  A single run of leave-one-out CV, for
+% example, would re-fit the model once with each of the 1107 individuals, which
+% could require on order of a thousand of hours of compute time.
+% %
+% \item  Priors encode key assumptions in Bayesian statistics, and inference can
+% be sensitive to prior specification, especially in high-dimensional models
+% like those of BNP.
+% % Checking for prior sensitivity is
+% % particularly important in high-dimensional models such as BNP, where the choice
+% % of prior is typically guided by mathematical convenience rather than subjective
+% % belief.
+% Re-evaluating the MFVB approximation for a representative set of
+% plausible priors can be computationally prohibitive, especially given that the
+% space of possible BNP priors is infinite-dimensional.
+% %
+% \end{itemize}
+
+Variants of these three tasks are not particular to our BNP example; they are
+ubiquitous in machine learning and statistics.  And they share the following
+commonality: their computational demands are driven by the evaluation or
+estimation of a statistical model multiple times for inputs that are, in some
 sense, ``close'' to one another. Datasets chosen for cross-validation, for
 example, are typically not too different from the original dataset.
 
@@ -185,6 +213,7 @@ models from ecology \citep{kery:2011:bayesian}, the social sciences
 \citep{criteo:2014:dataset}.
 
 
+\newpage
 
 \paragraph{Data ablation.}
 
@@ -264,6 +293,7 @@ from ecology \citep{kery:2011:bayesian}, and a large collection of models and
 datasets from the social sciences \citep{gelman:2006:arm}.
 
 
+\newpage
 
 \subsection*{Selected Future work}
 
@@ -325,15 +355,13 @@ all but the simplest statistics \citep{efron:1994:bootstrap}.
 \paragraph{Scaling sensitivity measures.}
 
 Sensitivity analysis typically avoids the expense of re-fitting a model, but
-incurs the expense of solving one or several linear systems.  Thus, extending
+incurs the expense of solving a large linear system.  Thus, extending
 the benefits of the sensitivity analysis to increasingly large scientific
 problems requires developing methods to efficiently solve correspondingly large
 linear systems.  Stochastic second-order methods are currently an active
 research topic in optimization \citep{agarwal:2017:secondorder,
 berahas:2020:newtonsketch}, and methods developed therein should apply
-directly to sensitivity analysis.  I believe these methods would be most
-fruitfully explored in the context of a particular application, e.g.
-the production of astronomical catalogs, which I will now discuss.
+directly to sensitivity analysis.
 
 \paragraph{Partitioned Bayesian inference.}
 
