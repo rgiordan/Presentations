@@ -12,6 +12,12 @@ Angelucci, M. and De~Giorgi, G. (2009).
   ineligibles' consumption?
 \newblock {\em American Economic Review}, 99(1):486--508.
 
+\bibitem[Angelucci et~al., 2015]{angelucci:2015:microcredit}
+Angelucci, M., Karlan, D., and Zinman, J. (2015).
+\newblock Microcredit impacts: {E}vidence from a randomized microcredit program
+  placement experiment by {C}ompartamos {B}anco.
+\newblock {\em American Economic Journal: Applied Economics}, 7(1):151--82.
+
 \bibitem[Baker et~al., 2019]{baker:2019:workshop}
 Baker, N., Alexander, F., Bremer, T., Hagberg, A., Kevrekidis, Y., Najm, H.,
   Parashar, M., Patra, A., Sethian, J., Wild, S., Wilcox, K., and Lee, S.
@@ -43,11 +49,6 @@ Baydin, A., Pearlmutter, B., Radul, A., and Siskind, J. (2017).
 Berahas, A., Bollapragada, R., and Nocedal, J. (2020).
 \newblock An investigation of {Newton}-sketch and subsampled {Newton} methods.
 \newblock {\em Optimization Methods and Software}, pages 1--20.
-
-\bibitem[Blei and Jordan, 2006]{blei:2006:bnp}
-Blei, D. and Jordan, M.~I. (2006).
-\newblock Variational inference for {Dirichlet} process mixtures.
-\newblock {\em Bayesian Analysis}, 1(1):121--143.
 
 \bibitem[Broderick et~al., 2020]{giordano:2020:amip}
 Broderick, T., Giordano, R., and Meager, R. (2020).
@@ -209,6 +210,11 @@ Luan, Y. and Li, H. (2003).
 \newblock Clustering of time-course gene expression data using a mixed-effects
   model with {B}-splines.
 \newblock {\em Bioinformatics}, 19(4):474--482.
+
+\bibitem[Maclaurin et~al., 2017]{autograd}
+Maclaurin, D., Duvenaud, D., and Johnson, M. (2017).
+\newblock autograd.
+\newblock GitHub repository \url{https://github.com/HIPS/autograd}.
 
 \bibitem[Meager, 2019]{meager:2019:microcredit}
 Meager, R. (2019).

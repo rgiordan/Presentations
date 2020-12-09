@@ -27,49 +27,109 @@
 %    \end{flushright}
 \end{minipage}
 
-Many researchers would be concerned if they learned that some core conclusion of
-their statistical analysis (such as the sign or statistical significance of some
-key effect) could be overturned by removing a small fraction, say 0.1\%, of
-their data.  Such non-robustness would be particularly concerning if the data
-was not actually drawn randomly from precisely the population of interest, or if
-the model may have been misspecified---circumstances that often obtain in  the
-social sciences, for example.  Nevertheless, analysts do not routinely check
-whether ablation of such a small set could overturn their results, in part
-because the number of possible subsets containing 0.1\% of the data points is
-combinatorially large.  To find the worst-case subset of a given size that, when
-removed, induces the largest change in a statistical estimate is, in general, a
-difficult discrete optimization problem.
 
-I address this problem in \citet{giordano:2020:amip} by forming a {\em linear
-approximation} to how statistical estimators depend on their datsets. In
-particular, our approximation works for estimators that can be expressed as the
-root of a smooth estimating equation---a broad class that includes maximum
-likelihood (MLE), ordinary least squares (OLS), instrumental variable (IV),
-generalized method of moments (GMM), and variational Bayes (VB) estimators,
-among others.  The approximation can be computed quickly and automatically using
-automatic differentiation \citep{baydin:2015:automatic, autograd}, and I provide
-an \texttt{R} package to do so, \texttt{zaminfluence} \citep{zaminfluence}.
-% In my \texttt{R} package, \texttt{zaminfluence}
-% \citep{zaminfluence}, I use automatic differentiation
-% \citep{baydin:2015:automatic, autograd} to compute the approximation quickly and
-% automatically for any user-supplied estimating equation; the approximations for
-% OLS and IV are provided by default.
-By ablating the subset identified by the approximation re-computing the
-estimator only once, one can form a lower bound on the sensitivity since, at
-worst, the approximation identified a sub-optimal subset.
+In order to address the needs of twenty-first century scientific computing,
+statistical models must often be able to quantify uncertainty, interrogate
+modeling modeling assumptions, and evaluate predictive performance. However,
+classical techniques to provide these desiderata can can become quite expensive,
+especially in in high-dimensional machine learning and Bayesian models.
+%
+Consider, as a motivating example, using Bayesian nonparametrics (BNP)  to
+estimate the identity and number of components in a human genome dataset, e.g.,
+using the dataset from \citet{huang:2011:haplotype}, with 1107 individuals and
+2810 single nucleotide pairs.
 
-My co-authors and I applied the approximation to a number of published studies
-in econometrics.  Though some outcomes were robust to the ablation of small
-subsets of the data, others were not. For example, in a study of microcredit in
-Mexico \citep{angelucci:2015:microcredit}, we find that, by removing just 15
-households out of 16,561 studied (a change of less than 0.1\%), the estimated
-effect of microcredit changes from negative and statistically insignificant to
-positive and statistically significant.
+{\em Markov Chain Monte Carlo} (MCMC) is
+computationally prohibitive due to the large size of the dataset and parameter
+space, so practitioners turn to relatively fast but approximate mean field
+variational Bayes (MFVB) approximations \citep{blei:2006:bnp,
+raj:2014:faststructure}. However, MFVB is known to provide poor estimates of
+posterior uncertainty \citep{turner:2011:two}.
 
-The key to our approximation is the
+{\em Cross validation} (CV) is a ubiquitous tool for validating modeling
+assumptions, but requires fitting a model multiple times with different data
+subsets left out.  On the above dataset, forming a single MFVB approximation to
+a BNP posterior can take several hours.  A single run of leave-one-out CV, for
+example, would re-fit the model once with each of the 1107 individuals, which
+could require on order of a thousand of hours of compute time.
 
+{\em Priors} encode key assumptions in Bayesian statistics, and inference can
+be sensitive to prior specification, especially in high-dimensional models
+like those of BNP.
+% Checking for prior sensitivity is
+% particularly important in high-dimensional models such as BNP, where the choice
+% of prior is typically guided by mathematical convenience rather than subjective
+% belief.
+Re-evaluating the MFVB approximation for a representative set of
+plausible priors can be computationally prohibitive, especially given that the
+space of possible BNP priors is infinite-dimensional.
 
+%
+% \begin{itemize}
+% %
+% \item Markov Chain Monte Carlo (MCMC) is computationally prohibitive due to the
+% large size of the dataset and parameter space, so practitioners turn to
+% relatively fast but approximate mean field variational Bayes (MFVB)
+% approximations \citep{blei:2006:bnp, raj:2014:faststructure}. However, MFVB is
+% known to provide poor estimates of posterior uncertainty
+% \citep{turner:2011:two}.
+% %
+% \item Cross validation (CV) is a ubiquitous tool for validating modeling
+% assumptions, but requires fitting a model multiple times with different data
+% subsets left out.  On the above dataset, forming a single MFVB approximation to
+% a BNP posterior can take several hours.  A single run of leave-one-out CV, for
+% example, would re-fit the model once with each of the 1107 individuals, which
+% could require on order of a thousand of hours of compute time.
+% %
+% \item  Priors encode key assumptions in Bayesian statistics, and inference can
+% be sensitive to prior specification, especially in high-dimensional models
+% like those of BNP.
+% % Checking for prior sensitivity is
+% % particularly important in high-dimensional models such as BNP, where the choice
+% % of prior is typically guided by mathematical convenience rather than subjective
+% % belief.
+% Re-evaluating the MFVB approximation for a representative set of
+% plausible priors can be computationally prohibitive, especially given that the
+% space of possible BNP priors is infinite-dimensional.
+% %
+% \end{itemize}
 
+Variants of these three tasks are not particular to our BNP example; they are
+ubiquitous in machine learning and statistics.  And they share the following
+commonality: their computational demands are driven by the evaluation or
+estimation of a statistical model multiple times for inputs that are, in some
+sense, ``close'' to one another. Datasets chosen for cross-validation, for
+example, are typically not too different from the original dataset.
+
+In my research, I exploit this commonality to circumvent the computational
+difficulties of these and other core tasks in data science by using {\em
+sensitivity analysis}, by which I mean differential approximations to the
+dependence of statistical models on their inputs.  In its most straightforward
+form, sensitivity analysis amounts to forming {\em Taylor series approximations}
+to extrapolate to nearby counterfactual model inputs, such as a new dataset with
+some points left out for cross-validation \citep{giordano:2018:bnpsensitivity,
+giordano:2019:ij}.  Other connections, e.g. between sensitivity analysis and
+Bayesian posterior uncertainty, are less direct, but rely on the same conceptual
+and computational tools \citep{giordano:2018:covariances}.
+
+By evaluating the derivatives necessary to perform sensitivity analysis at a
+{\em single model estimate}, I avoid the re-estimation or re-evaluation that
+makes the above procedures computationally prohibitive.  In exchange, evaluating
+the derivatives typically requires solving a large but sparse linear system, a
+tradeoff that can be quite favorable in practice, providing good accuracy orders
+of magnitude faster than the corresponding classical procedures.
+
+The idea of sensitivity analysis is a venerable one, though the breadth of its
+potential for contemporary data science problems is arguably underappreciated.
+My work advances existing research by providing practical implementations of
+classical methods, particularly using automatic differentiation
+\citep{baydin:2015:automatic}, by updating classical theory to apply in finite
+sample and under more realistic conditions, and by demonstrating unifying ideas
+underlying superficially disparate applications.
+
+For the remainder of the statement, I will discuss in more detail my
+contributions, both in practice and in theory, to the above three data science
+tasks and more.
 
 
 \newpage
