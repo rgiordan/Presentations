@@ -6,12 +6,6 @@ Agarwal, N., Bullins, B., and Hazan, E. (2017).
   time.
 \newblock {\em The Journal of Machine Learning Research}, 18(1):4148--4187.
 
-\bibitem[Angelucci and De~Giorgi, 2009]{angelucci:2009:indirect}
-Angelucci, M. and De~Giorgi, G. (2009).
-\newblock Indirect effects of an aid program: {How} do cash transfers affect
-  ineligibles' consumption?
-\newblock {\em American Economic Review}, 99(1):486--508.
-
 \bibitem[Angelucci et~al., 2015]{angelucci:2015:microcredit}
 Angelucci, M., Karlan, D., and Zinman, J. (2015).
 \newblock Microcredit impacts: {E}vidence from a randomized microcredit program
@@ -81,13 +75,6 @@ Efron, B. and Tibshirani, R. (1994).
 \newblock {\em An Introduction to the Bootstrap}.
 \newblock CRC press.
 
-\bibitem[Finkelstein et~al., 2012]{finkelstein:2012:oregon}
-Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
-  J., Allen, H., Baicker, K., and {O}regon {H}ealth~{S}tudy {G}roup (2012).
-\newblock The {Oregon} health insurance experiment: {Evidence} from the first
-  year.
-\newblock {\em The Quarterly Journal of Economics}, 127(3):1057--1106.
-
 \bibitem[Gelman and Heidemanns, 2020]{economist:2020:election}
 Gelman, A. and Heidemanns, M. (2020).
 \newblock The {Economist}: {Forecasting} the {US} elections.
@@ -138,7 +125,7 @@ Giordano, R., Broderick, T., and Jordan, M.~I. (2018b).
 \newblock Automatic robustness measures in {Stan}.
 \newblock Presentation at Stancon 2018 \url{https://tinyurl.com/yyqwpowc}.
 
-\bibitem[Giordano et~al., 2019a]{giordano2019:hoij}
+\bibitem[Giordano et~al., 2019a]{giordano:2019:hoij}
 Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
 \newblock A higher-order {Swiss} army infinitesimal jackknife.
 \newblock {\em arXiv preprint arXiv:1907.12116}.
@@ -215,12 +202,6 @@ Luan, Y. and Li, H. (2003).
 Maclaurin, D., Duvenaud, D., and Johnson, M. (2017).
 \newblock autograd.
 \newblock GitHub repository \url{https://github.com/HIPS/autograd}.
-
-\bibitem[Meager, 2019]{meager:2019:microcredit}
-Meager, R. (2019).
-\newblock Understanding the average impact of microcredit expansions: A
-  {B}ayesian hierarchical analysis of seven randomized experiments.
-\newblock {\em American Economic Journal: Applied Economics}, 11(1):57--91.
 
 \bibitem[Raj et~al., 2014]{raj:2014:faststructure}
 Raj, A., Stephens, M., and Pritchard, J. (2014).

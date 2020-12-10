@@ -2,51 +2,51 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 118 of file main.aux
+Illegal, another \bibstyle command---line 115 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
 Warning--empty publisher in turner:2011:two
-You've used 45 entries,
+You've used 42 entries,
             1935 wiz_defined-function locations,
-            715 strings with 12155 characters,
-and the built_in function-call counts, 18804 in all, are:
-= -- 1811
-> -- 966
-< -- 27
-+ -- 361
-- -- 333
-* -- 1608
-:= -- 3323
-add.period$ -- 138
-call.type$ -- 45
-change.case$ -- 386
-chr.to.int$ -- 41
-cite$ -- 46
-duplicate$ -- 662
-empty$ -- 1166
-format.name$ -- 402
-if$ -- 3606
+            697 strings with 11491 characters,
+and the built_in function-call counts, 17418 in all, are:
+= -- 1676
+> -- 898
+< -- 25
++ -- 335
+- -- 309
+* -- 1475
+:= -- 3083
+add.period$ -- 129
+call.type$ -- 42
+change.case$ -- 359
+chr.to.int$ -- 38
+cite$ -- 43
+duplicate$ -- 620
+empty$ -- 1076
+format.name$ -- 373
+if$ -- 3344
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 39
-newline$ -- 229
-num.names$ -- 139
-pop$ -- 350
+missing$ -- 36
+newline$ -- 214
+num.names$ -- 130
+pop$ -- 331
 preamble$ -- 1
-purify$ -- 389
+purify$ -- 362
 quote$ -- 0
-skip$ -- 511
+skip$ -- 479
 stack$ -- 0
-substring$ -- 1147
-swap$ -- 90
+substring$ -- 1034
+swap$ -- 87
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 262
+type$ -- 244
 warning$ -- 1
-while$ -- 142
+while$ -- 130
 width$ -- 0
-write$ -- 571
+write$ -- 532
 (There was 1 error message)
