@@ -36,32 +36,13 @@ the model may have been misspecified---circumstances that often obtain in  the
 social sciences, for example.  Nevertheless, analysts do not routinely check
 whether ablation of such a small set could overturn their results, in part
 because the number of possible subsets containing 0.1\% of the data points is
-combinatorially large.
-% To find the worst-case subset of a given size that, when
-% removed, induces the largest change in a statistical estimate is, in general, a
-% difficult discrete optimization problem.
+combinatorially large.  To find the worst-case subset of a given size that, when
+removed, induces the largest change in a statistical estimate is, in general, a
+difficult discrete optimization problem.
 
 In \citet{giordano:2020:amip}, I identify problematic subsets of the data by
-forming a {\em linear approximation} to how a wide class of statistical
-estimators depend on their datasets.  The key idea is that, although there are a
-very large number of subsets containing 0.1\% of the data points, none of them
-are very different from the original dataset, so the linear approximation will
-be accurate for precisely the sort of small proportions that are worrying for
-robustness.  I provide finite-sample accuracy bounds for the approximation, an
-\texttt{R} package to compute the approximation automatically using automatic
-differentiation \citep{baydin:2015:automatic, autograd, zaminfluence}, and
-we show that the approximation is capable of detecting meaningful non-robustness
-in published econometrics studies.  For example, in a study of
-microcredit in Mexico \citep{angelucci:2015:microcredit}, we find that, by
-removing just 15 households out of 16,561 studied (a change of less than 0.1\%),
-the estimated effect of microcredit changes from negative and statistically
-insignificant to positive and statistically significant.
-
-
-\newpage
-
-
-In particular, I form an approximation for estimators that can be
+forming a {\em linear approximation} to how statistical estimators depend on
+their datasets. In particular, I form an approximation for estimators that can be
 expressed as the root of a smooth estimating equation---a broad class that
 includes maximum likelihood (MLE), ordinary least squares (OLS), instrumental
 variable (IV), generalized method of moments (GMM), and variational Bayes (VB)
