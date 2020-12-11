@@ -5,8 +5,8 @@
 \usepackage{geometry}
 %\geometry{margin=1.2in}
 \geometry{top=0.9in}
-\geometry{left=1.3in}
-\geometry{right=1.3in}
+\geometry{left=1.4in}
+\geometry{right=1.4in}
 
 \title{Ryan Giordano Research Statement}
 
@@ -22,7 +22,7 @@
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
 %    \begin{flushright}
-        \hspace{7.5em} % Easier than doing it right!
+        \hspace{8em} % Easier than doing it right!
         {\LARGE Ryan Giordano}
 %    \end{flushright}
 \end{minipage}
@@ -299,7 +299,7 @@ bootstrap at a rate faster than the bootstrap approaches the truth.  The HOIJ
 thus promises to make bootstrap inference available to models which are
 differentiable but too expensive to re-evaluate (e.g. simulation-based models
 \citep[Section 2.6]{baker:2019:workshop}), but also to allow efficient
-bootstrap-after-bootstrap procedures which that are currently out of reach for
+bootstrap-after-bootstrap procedures that are currently out of reach for
 all but the simplest statistics \citep{efron:1994:bootstrap}.
 
 
@@ -333,16 +333,16 @@ all but the simplest statistics \citep{efron:1994:bootstrap}.
 % high-dimensional space of feature inclusion, similar to our work in
 % \citet{giordano:2020:amip}.
 
-\paragraph{Scaling sensitivity measures.}
+\paragraph{Scaling sensitivity measures to high dimensions.}
 
 Sensitivity analysis typically avoids the expense of re-fitting a model, but
-incurs the expense of solving a large linear system.  Thus, extending
-the benefits of the sensitivity analysis to increasingly large scientific
-problems requires developing methods to efficiently solve correspondingly large
-linear systems.  Stochastic second-order methods are currently an active
-research topic in optimization \citep{agarwal:2017:secondorder,
-berahas:2020:newtonsketch}, and methods developed therein should apply
-directly to sensitivity analysis.
+incurs the expense of solving a large linear system, the size of which is
+determined by the dimensionality of the inferred parameter.  Thus, extending the
+benefits of the sensitivity analysis to increasingly large scientific problems
+requires developing methods to efficiently solve correspondingly large linear
+systems. Stochastic second-order methods are currently an active research topic
+in optimization \citep{agarwal:2017:secondorder, berahas:2020:newtonsketch}, and
+methods developed therein should apply directly to sensitivity analysis.
 
 \paragraph{Partitioned Bayesian inference.}
 

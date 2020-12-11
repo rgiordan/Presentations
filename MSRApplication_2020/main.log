@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  10 DEC 2020 21:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  11 DEC 2020 09:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -623,14 +623,14 @@ LaTeX Info: Redefining \Ref on input line 17.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(93.95122pt, 426.39256pt, 93.95122pt)
+* h-part:(L,W,R)=(101.17755pt, 411.9399pt, 101.17755pt)
 * v-part:(T,H,B)=(65.04256pt, 634.53006pt, 95.39737pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=426.39256pt
+* \textwidth=411.9399pt
 * \textheight=634.53006pt
-* \oddsidemargin=21.68123pt
-* \evensidemargin=21.68123pt
+* \oddsidemargin=28.90756pt
+* \evensidemargin=28.90756pt
 * \topmargin=-44.22743pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -702,12 +702,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  11950 strings out of 483065
- 179556 string characters out of 5963550
+ 179548 string characters out of 5963550
  503420 words of memory out of 5000000
  26597 multiletter control sequences out of 15000+600000
- 540621 words of font info for 95 fonts, out of 8000000 for 9000
+ 540564 words of font info for 95 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 37i,5n,47p,786b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,5n,47p,786b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.
 600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
@@ -716,10 +716,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (7 pages, 136879 bytes).
+Output written on main.pdf (7 pages, 137414 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 275 compressed objects within 3 object streams
+ 298 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
  66 named destinations out of 1000 (max. 500000)
  11265 words of extra memory for PDF output out of 12000 (max. 10000000)
 
