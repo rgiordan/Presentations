@@ -4,9 +4,9 @@
 
 \usepackage{geometry}
 %\geometry{margin=1.2in}
-\geometry{top=1.in}
-\geometry{left=1.5in}
-\geometry{right=1.5in}
+\geometry{top=0.9in}
+\geometry{left=1.3in}
+\geometry{right=1.3in}
 
 \title{Ryan Giordano Research Statement}
 
@@ -41,56 +41,68 @@ combinatorially large.
 % removed, induces the largest change in a statistical estimate is, in general, a
 % difficult discrete optimization problem.
 
-In \citet{giordano:2020:amip}, I identify problematic subsets of the data using
-{\em sensitivtiy analysis}---that is, by forming a linear approximation to how a
-wide class of statistical estimators depend on their datasets.  The key idea is
-that, although there are a very large number of subsets containing 0.1\% of the
-data points, none of them are very different from the original dataset, and so
-we expect the linear approximation to work well.  I confirm this intuition with
-finite-sample accuracy bounds in terms of intuitive and verifiable assumptions.
-I provide an \texttt{R} package to compute the approximation quickly and
-automatically using automatic differentiation \citep{baydin:2015:automatic,
-autograd, zaminfluence}.  With my co-authors, I show that the approximation is
-capable of detecting meaningful non-robustness in several published econometrics
-analyses.  For example, in a study of microcredit in Mexico
-\citep{angelucci:2015:microcredit}, we find that, by removing just 15 households
-out of 16,561 studied (a change of less than 0.1\%), the estimated effect of
-microcredit changes from negative and statistically insignificant to positive
-and statistically significant.
+In \citet{zaminfluence, giordano:2020:amip}, I identify problematic subsets of
+the data using {\em sensitivtiy analysis}---that is, by forming a linear
+approximation to how a wide class of statistical estimators depend on their
+datasets.  The key idea is that, although there are a very large number of
+subsets containing 0.1\% of the data points, none of them are very different
+from the original dataset, and so we expect the linear approximation to work
+well.  I confirm this intuition with finite-sample accuracy bounds in terms of
+intuitive and verifiable assumptions.  I provide an \texttt{R} package
+\citet{zaminfluence} to compute the approximation quickly and automatically
+using automatic differentiation \citep{baydin:2015:automatic, autograd}.  And,
+with my co-authors, I show that the approximation is capable of detecting
+meaningful non-robustness in several published econometrics analyses. For
+example, in a study of microcredit in Mexico \citep{angelucci:2015:microcredit},
+we find that, by removing just 15 households out of 16,561 studied (a change of
+less than 0.1\%), the estimated effect of microcredit changes from negative and
+statistically insignificant to positive and statistically significant.
 
-It turns out that many other standard, computationally demanding data analysis
-tasks are amenable to fast, automatic approximation using sensitivity analysis:
+In fact, my research shows that many standard, computationally demanding data
+analysis tasks are also amenable to fast, automatic approximation using
+sensitivity analysis. For example:
 %
 \begin{itemize}
     %
 \item Cross validation (CV) requires repeatedly leaving out subsets of the
 observed data and re-evaluating a statistical estimator. By forming a Taylor
-series approximation on the dependence of the estimator on the left-out set, we
+series approximation on the dependence of the estimator on the left-out set, I
 provide fast approximations to CV with finite-sample accuracy guarantees
 \citep{giordano:2019:ij}.
 %
-\item Evaluating the sensitivty of Bayesian posterior expectations to prior
-specification by re-fitting for a range of plausible priors is typically
-computationally prohibitive due both to the large (often infinite dimensional)
-set of possible priors, as well as the high computational cost of evaluating
-even a single posterior approximation.  By forming a Taylor series approximation
-to the dependence of the posterior mean on the prior, we can explore the
-consequences of alternative prior functional forms at a small fraction of the
-cost of exact re-fitting \citep{giordano:2018:bnpsensitivity}.
+\item Prior specification encodes key assumptions in Bayesian statistics.  But
+Bayesian inference can be sensitive to prior specification, and evaluating the
+sensitivty of Bayesian posterior expectations to prior specification by
+re-fitting is typically computationally prohibitive due both to the large space
+of possible priors (often infinite dimensional), as well as the high
+computational cost of evaluating even a single posterior approximation.  By
+forming a Taylor series approximation to the dependence of the posterior mean on
+the prior, I can explore the consequences of alternative prior functional forms
+at a small fraction of the cost of exact re-fitting
+\citep{giordano:2018:bnpsensitivity}.
 %
-\item When Bayesian inference using Markov Chain Monte Carlo (MCMC) is
-computationally prohibitive, researchers often turn to mean field variational
-Bayes (MFVB) approximations \citep{blei:2017:variational,
-regier:2019:cataloging}.  However, MFVB approximations provide notoriously poor
-estimates of posterior uncertainty \citep{turner:2011:two}.  It turns out that
-accurate posterior covariances can be recovered from MFVB approximations using
-sensitivity analysis \citep{giordano:2018:covariances}, though the connection is
-subtler than the other examples.
+\item Evaluating the frequentist variability of Bayesian estimators formed using
+Markov Chain Monte Carlo (MCMC) can be particularly important when there is
+concern about model misspecification.  This frequentist variability can be
+evaluated by the bootstrap, but at the considerable cost of re-running the MCMC
+chain hundreds of times.  By approximating the dependence of the posterior on
+the data with sensitivity analysis, one can compute consistent estimates of the
+frequentist variance using only a single MCMC chain---orders of magnitude faster
+than the bootstrap \citep{giordano:2020:stanconbayesij}.
+%
+\item Mean field variational Bayes (MFVB) is a popular posterior approximation
+method for Bayesian problems which are too large to be tractable by Markov Chain
+Monte Carlo \citep{blei:2017:variational, regier:2019:cataloging}.  However,
+MFVB approximations provide notoriously poor estimates of posterior uncertainty
+\citep{turner:2011:two}.  It turns out that accurate posterior covariances can
+be recovered from MFVB approximations using sensitivity analysis
+\citep{giordano:2018:covariances} using a classical duality between Bayesian
+covariances and senstivity.
 %
 \end{itemize}
 
-For the remainder of this essay, I will discuss each of these applications in
-turn, emphasizing the ways in which I update classical results with intuitive,
+For the remainder of this essay, I will discuss each of these applications,
+emphasizing the ways in which I update classical results with intuitive,
 relevant theory and easy-to-use computational tools.
 
 \newpage
@@ -99,31 +111,30 @@ relevant theory and easy-to-use computational tools.
 
 \subsection*{Robustness to data ablation.}
 
-In \citet{giordano:2020:amip}, I propose a method to assess the sensitivity of
-statistical analyses to the removal of a small fraction of the sample. Analyzing
-all possible data subsets of a certain size is computationally prohibitive, so I
-provide a finite-sample metric to approximately compute the number (or fraction)
-of observations that has the greatest influence on a given result when dropped.
-I provide explicit finite-sample error bounds on my approximation for linear
-and instrumental variables regressions.
-% At minimal computational cost, the
-% metric provides an exact finite-sample lower bound on sensitivity for any
-% estimator, so any non-robustness my metric finds is conclusive.
-I demonstrate
-that non-robustness to data ablation is driven by a low signal-to-noise ratio in
-the inference problem, is not reflected in standard errors, does not disappear
-asymptotically, and is not a product of misspecification.
+In \citet{zaminfluence, giordano:2020:amip}, I propose a method to assess the
+sensitivity of statistical analyses to the removal of a small fraction of the
+sample. Analyzing all possible data subsets of a certain size is computationally
+prohibitive, so I provide a finite-sample metric to approximately compute the
+number (or fraction) of observations that has the greatest influence on a given
+result when dropped. I provide explicit finite-sample error bounds on my
+approximation for linear and instrumental variables regressions.
+At minimal computational cost, the metric provides an exact finite-sample lower
+bound on sensitivity for any estimator, so any non-robustness my metric finds is
+conclusive. I demonstrate that non-robustness to data ablation is driven by a low
+signal-to-noise ratio in the inference problem, is not reflected in standard
+errors, does not disappear asymptotically, and is not a product of
+misspecification.
 
-The approximation is automatically computable and works for common estimators
-(including OLS, IV, GMM, MLE, and variational Bayes), and I provide an
-easy-to-use \texttt{R} package to compute the approximation
-\citep{zaminfluence}. Several empirical applications based on published
+The approximation works for Z-estimators based on smooth estimating equations, a
+class which includes ordinary least squares, instrumental variables, variational
+Bayes, and many maximum liklihood estimators. Using my \texttt{R} package
+\citep{zaminfluence}, the approximation is automatically computable from the
+specification of the estimating equation alone.  By analyzing several published
 econometric analyses \citep{angelucci:2009:indirect, finkelstein:2012:oregon,
-meager:2019:microcredit} show that even 2-parameter linear regression analyses
-of randomized trials can be highly sensitive. While I find some applications are
-robust, in others the sign of a treatment effect can be changed by dropping less
-than 1\% of the sample even when standard errors are small.
-
+meager:2019:microcredit}, I show that even 2-parameter linear regression
+analyses of randomized trials can be highly sensitive.  While I find some
+applications are robust, in others the sign of a treatment effect can be changed
+by dropping less than 1\% of the sample even when standard errors are small.
 
 
 \subsection*{Approximate cross validation.}
@@ -154,15 +165,13 @@ datasets, including an unsupervised clustering problem from genomics
 The frequentist (i.e., sampling) variance of Bayesian posterior expectations
 differs in general from the posterior variance even for large datasets,
 particularly when the model is misspecified or contains many latent variables
-\citep{kleijn:2006:misspecification}.
-Knowing the frequentist variance of a posterior expectation can be useful even
-to a committed Bayesian, particularly when the data is known to arise from
-random sampling and there is a possibility of model misspecification
-\citep{waddell:2002:bayesphyloboot}.  However, the
-principal existing approach for computing the frequentist variability from MCMC
-procedures is the bootstrap, which can be extremely computationally intensive
-due to the need to run hundreds of extra MCMC procedures
-\citep{huggins:2019:bayesbag}.
+\citep{kleijn:2006:misspecification}. Unlike the posterior variance, the
+frequentist variance is meaningful even in the presence of misspecification,
+particularly when the data is known to arise from random sampling
+\citep{waddell:2002:bayesphyloboot}.  However, the principal existing approach
+for computing the frequentist variability from MCMC procedures is the bootstrap,
+which can be extremely computationally intensive due to the need to run hundreds
+of extra MCMC procedures \citep{huggins:2019:bayesbag}.
 
 In \citep{giordano:2020:bayesij, giordano:2020:stanconbayesij}, I propose an
 efficient alternative to bootstrapping an MCMC procedure which is based on the
@@ -177,35 +186,6 @@ from ecology \citep{kery:2011:bayesian}, and a large collection of models and
 datasets from the social sciences \citep{gelman:2006:arm}.
 
 \subsection*{Bayesian prior sensitivity.}
-
-\paragraph{Prior sensitivity for discrete Bayesian nonparametrics.}
-
-% From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
-A central question in many probabilistic clustering problems is how many
-distinct clusters are present in a particular dataset. A Bayesian nonparametric
-(BNP) model addresses this question by placing a generative process on cluster
-assignment, making the number of distinct clusters present amenable to Bayesian
-inference.  However, like all Bayesian approaches, BNP requires the
-specification of a prior, and this prior may favor a greater or lesser number of
-distinct clusters.
-% In practice, it is important to quantitatively establish that
-% the prior is not too informative, particularly when---as is often the case in
-% BNP---the particular form of the prior is chosen for mathematical convenience
-% rather than because of a considered subjective belief.
-
-In \citep{giordano:2018:bnpsensitivity}, I derive prior sensitivity measures for
-a truncated variational Bayes approximation using ideas from
-\citep{gustafson:1996:localposterior, giordano:2018:covariances}. Unlike
-previous work on local Bayesian sensitivity for BNP
-\citep{Basu:2000:BNP_robustness}, I pay special attention to the ability of the
-sensitivity measures to \emph{extrapolate} to different priors, rather than
-treating the sensitivity as a measure of robustness \textit{per se}. In work
-currently in progress \citep{liu:2020:bnpjisba}, my co-author and I apply the
-approximation from \citep{giordano:2018:bnpsensitivity} to an unsupervised
-clustering problem on a human genome dataset \citep{huang:2011:haplotype,
-raj:2014:faststructure}, demonstrating that the approximate is accurate, orders
-of magnitude faster than re-fitting, and capable of detecting meaningful prior
-sensitivity.
 
 
 
@@ -228,6 +208,36 @@ generic \texttt{Stan} models from only a single MCMC run.  I demonstrate the
 speed and utility of the package in detecting excess prior sensitivity,
 particularly in a social sciences model taken from \citet[Chapter
 13.5]{gelman:2006:arm}.
+
+
+\paragraph{Prior sensitivity for discrete Bayesian nonparametrics.}
+
+% From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
+A central question in many probabilistic clustering problems is how many
+distinct clusters are present in a particular dataset. Discrete Bayesian
+nonparametric (BNP) mixture models address this question by placing a generative
+process on cluster assignment, making the number of distinct clusters present
+amenable to Bayesian inference.  However, like all Bayesian approaches, BNP
+requires the specification of a prior, and this prior may favor a greater or
+lesser number of distinct clusters.
+% In practice, it is important to quantitatively establish that
+% the prior is not too informative, particularly when---as is often the case in
+% BNP---the particular form of the prior is chosen for mathematical convenience
+% rather than because of a considered subjective belief.
+
+In \citep{giordano:2018:bnpsensitivity}, I derive prior sensitivity measures for
+a truncated variational Bayes approximation using ideas from
+\citep{gustafson:1996:localposterior, giordano:2018:covariances}. Unlike
+previous work on local Bayesian sensitivity for BNP
+\citep{Basu:2000:BNP_robustness}, I pay special attention to the ability of the
+sensitivity measures to \emph{extrapolate} to different priors, rather than
+treating the sensitivity as a measure of robustness \textit{per se}. In work
+currently in progress \citep{liu:2020:bnpjisba}, my co-authors and I apply the
+approximation from \citep{giordano:2018:bnpsensitivity} to an unsupervised
+clustering problem on a human genome dataset \citep{huang:2011:haplotype,
+raj:2014:faststructure}, demonstrating that the approximate is accurate, orders
+of magnitude faster than re-fitting, and capable of detecting meaningful prior
+sensitivity.
 
 
 \subsection*{Uncertainty propagation in mean-field variational Bayes.}

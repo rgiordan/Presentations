@@ -61,8 +61,8 @@ Broderick, T., Giordano, R., and Meager, R. (2020).
 \newblock An automatic finite-sample robustness metric: {Can} dropping a little
   data change conclusions?
 \newblock {\em arXiv preprint arXiv:2011.14999}.
-\newblock Authors listed alphabetically. Giordano, R. and Meager, R. are equal
-  contribution primary authors.
+\newblock Note: Following conventions in econometrics, the authors are listed
+  alphabetically. Giordano and Meager are equal contribution primary authors.
 
 \bibitem[Carpenter et~al., 2017]{carpenter:2017:stan}
 Carpenter, B., Gelman, A., Hoffman, M., Lee, D., Goodrich, B., Betancourt, M.,
