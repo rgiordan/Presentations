@@ -6,6 +6,12 @@ Agarwal, N., Bullins, B., and Hazan, E. (2017).
   time.
 \newblock {\em The Journal of Machine Learning Research}, 18(1):4148--4187.
 
+\bibitem[Angelucci and De~Giorgi, 2009]{angelucci:2009:indirect}
+Angelucci, M. and De~Giorgi, G. (2009).
+\newblock Indirect effects of an aid program: {How} do cash transfers affect
+  ineligibles' consumption?
+\newblock {\em American Economic Review}, 99(1):486--508.
+
 \bibitem[Angelucci et~al., 2015]{angelucci:2015:microcredit}
 Angelucci, M., Karlan, D., and Zinman, J. (2015).
 \newblock Microcredit impacts: {E}vidence from a randomized microcredit program
@@ -44,6 +50,12 @@ Berahas, A., Bollapragada, R., and Nocedal, J. (2020).
 \newblock An investigation of {Newton}-sketch and subsampled {Newton} methods.
 \newblock {\em Optimization Methods and Software}, pages 1--20.
 
+\bibitem[Blei et~al., 2017]{blei:2017:variational}
+Blei, D., Kucukelbir, A., and McAuliffe, J. (2017).
+\newblock Variational inference: {A} review for statisticians.
+\newblock {\em Journal of the American Statistical Association},
+  112(518):859--877.
+
 \bibitem[Broderick et~al., 2020]{giordano:2020:amip}
 Broderick, T., Giordano, R., and Meager, R. (2020).
 \newblock An automatic finite-sample robustness metric: {Can} dropping a little
@@ -74,6 +86,13 @@ Carpenter, B., Hoffman, M., Brubaker, M., Lee, D., Li, P., and Betancourt, M.
 Efron, B. and Tibshirani, R. (1994).
 \newblock {\em An Introduction to the Bootstrap}.
 \newblock CRC press.
+
+\bibitem[Finkelstein et~al., 2012]{finkelstein:2012:oregon}
+Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
+  J., Allen, H., Baicker, K., and {O}regon {H}ealth~{S}tudy {G}roup (2012).
+\newblock The {Oregon} health insurance experiment: {Evidence} from the first
+  year.
+\newblock {\em The Quarterly Journal of Economics}, 127(3):1057--1106.
 
 \bibitem[Gelman and Heidemanns, 2020]{economist:2020:election}
 Gelman, A. and Heidemanns, M. (2020).
@@ -202,6 +221,12 @@ Luan, Y. and Li, H. (2003).
 Maclaurin, D., Duvenaud, D., and Johnson, M. (2017).
 \newblock autograd.
 \newblock GitHub repository \url{https://github.com/HIPS/autograd}.
+
+\bibitem[Meager, 2019]{meager:2019:microcredit}
+Meager, R. (2019).
+\newblock Understanding the average impact of microcredit expansions: A
+  {B}ayesian hierarchical analysis of seven randomized experiments.
+\newblock {\em American Economic Journal: Applied Economics}, 11(1):57--91.
 
 \bibitem[Raj et~al., 2014]{raj:2014:faststructure}
 Raj, A., Stephens, M., and Pritchard, J. (2014).

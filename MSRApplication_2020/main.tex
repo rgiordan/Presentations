@@ -41,81 +41,90 @@ combinatorially large.
 % removed, induces the largest change in a statistical estimate is, in general, a
 % difficult discrete optimization problem.
 
-In \citet{giordano:2020:amip}, I identify problematic subsets of the data by
-forming a {\em linear approximation} to how a wide class of statistical
-estimators depend on their datasets.  The key idea is that, although there are a
-very large number of subsets containing 0.1\% of the data points, none of them
-are very different from the original dataset, so the linear approximation will
-be accurate for precisely the sort of small proportions that are worrying for
-robustness.  I provide finite-sample accuracy bounds for the approximation, an
-\texttt{R} package to compute the approximation automatically using automatic
-differentiation \citep{baydin:2015:automatic, autograd, zaminfluence}, and
-we show that the approximation is capable of detecting meaningful non-robustness
-in published econometrics studies.  For example, in a study of
-microcredit in Mexico \citep{angelucci:2015:microcredit}, we find that, by
-removing just 15 households out of 16,561 studied (a change of less than 0.1\%),
-the estimated effect of microcredit changes from negative and statistically
-insignificant to positive and statistically significant.
-
-
-\newpage
-
-
-In particular, I form an approximation for estimators that can be
-expressed as the root of a smooth estimating equation---a broad class that
-includes maximum likelihood (MLE), ordinary least squares (OLS), instrumental
-variable (IV), generalized method of moments (GMM), and variational Bayes (VB)
-estimators, among others.  The approximation can be computed quickly and
+In \citet{giordano:2020:amip}, I identify problematic subsets of the data using
+{\em sensitivtiy analysis}---that is, by forming a linear approximation to how a
+wide class of statistical estimators depend on their datasets.  The key idea is
+that, although there are a very large number of subsets containing 0.1\% of the
+data points, none of them are very different from the original dataset, and so
+we expect the linear approximation to work well.  I confirm this intuition with
+finite-sample accuracy bounds in terms of intuitive and verifiable assumptions.
+I provide an \texttt{R} package to compute the approximation quickly and
 automatically using automatic differentiation \citep{baydin:2015:automatic,
-autograd}, and I provide an \texttt{R} package to do so (\texttt{zaminfluence}
-\citep{zaminfluence}).
-% In my \texttt{R} package, \texttt{zaminfluence}
-% \citep{zaminfluence}, I use automatic differentiation
-% \citep{baydin:2015:automatic, autograd} to compute the approximation quickly and
-% automatically for any user-supplied estimating equation; the approximations for
-% OLS and IV are provided by default.
-By ablating the subset identified by the approximation re-computing the
-estimator only once, one can form a lower bound on the sensitivity since, at
-worst, the approximation identified a sub-optimal subset.
-
-An approximation is only as useful as its accuracy.  Using techniques from
-\citet{giordano:2019:hoij}, I provide finite-sample accuracy bounds for the
-approximation  in terms of the set complexity of the estimating equation and its
-derivatives; for OLS and IV, our error bounds are exactly computable using only
-the regression output.  I show that the approximation's relative error is small
-when the proportion of data removed, even if the total number of data points
-removed is very large.
-
-By studying properties of the approximation, I show that our metric captures a
-type of non-robustness that is qualitatively different from classical
-robustness.  Non-robustness to the ablation of small datasets is driven by low
-signal-to-noise ratio in the inference problem, is not reflected in standard
-errors, does not disappear asymptotically, and is not a product of
-misspecification.
-
-To show that we can detect meaningful non-robustness in real datasets, my
-co-authors and I applied our methods to a number of published studies in
-econometrics.  Though some results were robust to the ablation of small subsets
-of the data, others were not. For example, in a study of microcredit in Mexico
+autograd, zaminfluence}.  With my co-authors, I show that the approximation is
+capable of detecting meaningful non-robustness in several published econometrics
+analyses.  For example, in a study of microcredit in Mexico
 \citep{angelucci:2015:microcredit}, we find that, by removing just 15 households
 out of 16,561 studied (a change of less than 0.1\%), the estimated effect of
 microcredit changes from negative and statistically insignificant to positive
 and statistically significant.
 
-The core idea underlying the above work underlies all of my current research,
-and it is this: many tasks in data science are computationally difficult because
-they require re-computation of a statistical estimator on inputs that are, in
-some sense, ``near'' the original inputs, and Taylor series approximations can
-provide fast and accurate approximations to expensive re-computation.  In my
-work, I show that essentially the same ideas can provide fast approximations to
-cross validation, the bootstrap, Bayesian prior sensitivity, and even posterior
-covariance estimation for mean field variational Bayes.  For the remainder
-of this essay, I will discuss each of these applications in turn, emphasizing
-the ways in which I update classical results with intuitive, relevant theory
-and easy-to-use computational tools.
+It turns out that many other standard, computationally demanding data analysis
+tasks are amenable to fast, automatic approximation using sensitivity analysis:
+%
+\begin{itemize}
+    %
+\item Cross validation (CV) requires repeatedly leaving out subsets of the
+observed data and re-evaluating a statistical estimator. By forming a Taylor
+series approximation on the dependence of the estimator on the left-out set, we
+provide fast approximations to CV with finite-sample accuracy guarantees
+\citep{giordano:2019:ij}.
+%
+\item Evaluating the sensitivty of Bayesian posterior expectations to prior
+specification by re-fitting for a range of plausible priors is typically
+computationally prohibitive due both to the large (often infinite dimensional)
+set of possible priors, as well as the high computational cost of evaluating
+even a single posterior approximation.  By forming a Taylor series approximation
+to the dependence of the posterior mean on the prior, we can explore the
+consequences of alternative prior functional forms at a small fraction of the
+cost of exact re-fitting \citep{giordano:2018:bnpsensitivity}.
+%
+\item When Bayesian inference using Markov Chain Monte Carlo (MCMC) is
+computationally prohibitive, researchers often turn to mean field variational
+Bayes (MFVB) approximations \citep{blei:2017:variational,
+regier:2019:cataloging}.  However, MFVB approximations provide notoriously poor
+estimates of posterior uncertainty \citep{turner:2011:two}.  It turns out that
+accurate posterior covariances can be recovered from MFVB approximations using
+sensitivity analysis \citep{giordano:2018:covariances}, though the connection is
+subtler than the other examples.
+%
+\end{itemize}
 
+For the remainder of this essay, I will discuss each of these applications in
+turn, emphasizing the ways in which I update classical results with intuitive,
+relevant theory and easy-to-use computational tools.
 
 \newpage
+
+
+
+\subsection*{Robustness to data ablation.}
+
+In \citet{giordano:2020:amip}, I propose a method to assess the sensitivity of
+statistical analyses to the removal of a small fraction of the sample. Analyzing
+all possible data subsets of a certain size is computationally prohibitive, so I
+provide a finite-sample metric to approximately compute the number (or fraction)
+of observations that has the greatest influence on a given result when dropped.
+I provide explicit finite-sample error bounds on my approximation for linear
+and instrumental variables regressions.
+% At minimal computational cost, the
+% metric provides an exact finite-sample lower bound on sensitivity for any
+% estimator, so any non-robustness my metric finds is conclusive.
+I demonstrate
+that non-robustness to data ablation is driven by a low signal-to-noise ratio in
+the inference problem, is not reflected in standard errors, does not disappear
+asymptotically, and is not a product of misspecification.
+
+The approximation is automatically computable and works for common estimators
+(including OLS, IV, GMM, MLE, and variational Bayes), and I provide an
+easy-to-use \texttt{R} package to compute the approximation
+\citep{zaminfluence}. Several empirical applications based on published
+econometric analyses \citep{angelucci:2009:indirect, finkelstein:2012:oregon,
+meager:2019:microcredit} show that even 2-parameter linear regression analyses
+of randomized trials can be highly sensitive. While I find some applications are
+robust, in others the sign of a treatment effect can be changed by dropping less
+than 1\% of the sample even when standard errors are small.
+
+
 
 \subsection*{Approximate cross validation.}
 
