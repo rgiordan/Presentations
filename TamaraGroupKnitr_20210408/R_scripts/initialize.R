@@ -50,7 +50,7 @@ DefineMacro <- function(macro_name, value, digits=3) {
 }
 
 ##############################################################
-# ggplot options and defaults
+# ggplot options, defaults, and helper functions
 
 theme_set(theme_bw())
 
@@ -59,24 +59,40 @@ axis_ticksize = 4
 axis_title_size = 7
 title_size = 7
 
-get_fontsizes <- function(scaling = 1){
+GetFontsizes <- function(scaling = 1){
   axis_ticksize = axis_ticksize * scaling
   axis_title_size = axis_title_size * scaling
   title_size = title_size * scaling
 
-  fontsize_theme <- theme(axis.text.x = element_text(size = axis_ticksize),
-                          axis.text.y = element_text(size = axis_ticksize),
-                          axis.title.x = element_text(size = axis_title_size),
-                          axis.title.y = element_text(size = axis_title_size),
-                          legend.text = element_text(size=axis_title_size),
-                          plot.title = element_text(size = title_size),
-                          axis.ticks.length = unit(0.05, "cm"),
-                          strip.text = element_text(size = axis_title_size,
-                                                    margin = margin(.05, 0, .05, 0, "cm")),
-                          legend.margin=margin(-10,-10,-10,-10))
+  fontsize_theme <- theme(
+    axis.text.x = element_text(size=axis_ticksize),
+    axis.text.y = element_text(size=axis_ticksize),
+    axis.title.x = element_text(size=axis_title_size),
+    axis.title.y = element_text(size=axis_title_size),
+    legend.text = element_text(size=axis_title_size),
+    plot.title = element_text(size=title_size),
+    axis.ticks.length = unit(0.05, "cm"),
+    strip.text = element_text(size=axis_title_size,
+                              margin=margin(.05, 0, .05, 0, "cm")),
+    legend.margin=margin(-10,-10,-10,-10))
 
   return(fontsize_theme)
 }
+
+
+# A convenient function for extracting only the legend from a ggplot.  This
+# is useful when you have multiple side-by-side images and you don't want
+# to repeat a legend.
+#
+# Taken from
+# http://www.sthda.com/english/wiki/ggplot2-easy-way-to-mix-multiple-graphs-on-the-same-page-r-software-and-data-visualization
+GetLegend <- function(myggplot){
+  tmp <- ggplot_gtable(ggplot_build(myggplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)
+}
+
 
 ##############################################################
 # Image size wrangling
@@ -122,18 +138,3 @@ SetImageSize()
 #
 # # Default to a full image.
 # SetFullImageSize()
-
-
-
-# A convenient function for extracting only the legend from a ggplot.  This
-# is useful when you have multiple side-by-side images and you don't want
-# to repeat a legend.
-#
-# Taken from
-# http://www.sthda.com/english/wiki/ggplot2-easy-way-to-mix-multiple-graphs-on-the-same-page-r-software-and-data-visualization
-GetLegend <- function(myggplot){
-  tmp <- ggplot_gtable(ggplot_build(myggplot))
-  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
-  legend <- tmp$grobs[[leg]]
-  return(legend)
-}

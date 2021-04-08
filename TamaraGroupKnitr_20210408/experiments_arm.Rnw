@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not edit the TeX file your work
+% will be overwritten.  Edit the RnW
+% file instead.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<set_single_column, echo=FALSE>>=
+# We can't use the for_arxiv toggle because knitr processes before main is
+# run.  So set the appropriate variable here.
+single_column <- TRUE       # for the arxiv
+#single_column <- FALSE      # for a two-column conference paper.
+@
+
+<<setup, include=FALSE, cache=FALSE>>=
+knitr_debug <- FALSE # Set to true to see error output
+knitr_cache <- FALSE # Set to true to cache knitr output for this analysis.
+source("R_scripts/initialize.R", echo=FALSE)
+@
+
+<<load_data>>=
+source("R_scripts/ARM/load_data.R")
+@
+
+<<define_macros, results="asis">>=
+source("R_scripts/ARM/define_macros.R")
+@
+
+\subsubsection{Models and data}
+
+\begin{table}[h]
+<<arm_model_table, cache=knitr_cache, results='asis'>>=
+source("R_scripts/ARM/model_table.R", echo=knitr_debug, print.eval=TRUE)
+@
+\caption{Models from \citet{gelman:2006:arm}\tablabel{arm_models}}
+\end{table}
+
+We ran the experiments from \citet{gelman:2006:arm} for which data was available
+in the Stan examples repository \citep{stan-examples:2017}, and for which
+\texttt{rstanarm} \citep{rstanarm} was able to run in a reasonable amount of
+time, resulting in comparisons between $\armNumCovsEstimated$ distinct
+covariance estimates from $\armNumModels$ different models using
+$\armNumDatasets$ distinct datasets. The median number of obseravations amongst
+the models was $\armMedianNumObs$, and the range was from $\armMinNumObs$ to
+$\armMaxNumObs$ exchangable observations.  Since we fit our models in
+\texttt{rstanarm}, we were able to use the function \texttt{rstanarm::log\_lik}
+to compute $\ell(\x_n \vert \z, \theta)$, so $\gcovijhat$ required essentially
+no additional coding.  We used the default priors provided by \texttt{rstanarm}.
+
+% What are our parameters of interest?
+Every model we considered from \citet{gelman:2006:arm} were instances of
+generalized linear models, including both ordinary and logistic regression as
+well as models with only fixed effects and models that include random effects,
+as shown in \tabref{arm_models}.  For parameters of interest, $g(\theta)$, we
+took all fixed-effect regression parameters, the log of the residual variance
+(when applicable), and the log of the random effect variance (when applicable).
+We did not examine random effects, nor the random effect covariances for the few
+models with multiple random effects, out of concern that a BCLT might not be
+expected to hold for these parameters; these parameters might be considered part
+of latent parameters $\z$ in our notation.
+
+% What is the exchangeable unit?
+For models with no random effects, we define an exchangeable unit to be a tuple
+containing a particular response and a regressor.  For random effects models, we
+had to choose an exchangeable unit.  When the random effect had many distinct
+levels, we considered the groups of observations within a level to be a single
+exchangeable unit.  For models whose random effects had few distinct levels, we
+took the exchangable unit to either be a more fine-grained partition of the
+data, or, in some cases treated the observations as fully independent.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%JINGLE%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Reporting metrics}
+
+
+% What different types of covariances do we estimate?
+% In addition to separately reporting results for different sizes of datasets and
+% model types, we separately report the accuracy of different types of covariances
+% in the covariance matrix of $g(\theta)$.
+% First, we separately report results
+% for terms on the diagonal, which we call ``variance estimates'', and terms off
+% the diagonal, which we call ``cross-covariance estimates.''  Examples of
+% cross-covariance estimates would be the covariance between two distinct
+% regression parameters, or between a regression parameter and the log of the
+% random effect variance.
+% We will additionaly split out our results by whether the
+% covariance involves at least one log scale parameter (either for a random effect
+% or a residual), versus whether the covariance estimate is purely between
+% regression parameters.
+
+
+% Why do we need summary metrics
+With $\armNumCovsEstimated$ covariances to report, we need to summarize our
+results into a few high-level accuracy summaries.  We report the following two
+summary measures, intended to capture the statistical and practical significance
+of discrepancies between $\gcovbayeshat$, $\gcovijhat$ and $\gcovboot$.
+
+% Statistical difference
+First, to quantify the ``statistical signifiance'' of $\gcovijhat - \gcovboot$,
+we compute the matrix $\zdiff$, whose $i,j$-th entry is simply the z-statistic
+which we would compute to test equality between $\gcovijhat_{ij}$ and
+$\gcovboot_{ij}$:
+%
+\begin{align*}
+%
+\zdiff_{ij} :=
+\frac{\gcovijhat_{ij} - \gcovboothat_{ij}}
+     {\sqrt{(\seij_{ij})^2 + (\seboot_{ij})^2}}.
+%
+\end{align*}
+%
+Of course, the z-statistics are not independent within the matrix $\zdiff$, so
+we should think of aggregate summaries of elements of the various models'
+$\zdiff$ matrices as heuristics which summarize the error $\gcovijhat -
+\gcovboot$ relative to Monte Carlo error rather than formal hypothesis tests. We
+do not compute a version of $\zdiff$ for the Bayesian estimator both because we
+are interested more in the size of practical differences between $\gcovbayeshat$
+and $\gcovboothat$, and because the relative sizes of $\zdiff$ and a
+corresponding statistic for $\gcovbayeshat$ would be affected by different
+noise estimates $\sebayes$ and $\seboot$.
+
+% Practical difference
+Second, we wish to quantify the ``practical significance'' of the differences
+$\gcovijhat - \gcovboot$.  For example, if the Monte Carlo error is very small,
+then $\zdiff$ might be very large even when $\gcovijhat - \gcovboot$ is small
+for practical purposes.  Conversely, $\zdiff$ can be very small simply because
+the Monte Carlo error is high, and we don't necessarily want to reward large
+$\seij$.  To quantify the practical significance, we compute the relative
+errors,
+%
+\begin{align*}
+%
+\normdiffij_{ij} :=
+     \frac{\gcovijhat_{ij} - \gcovboothat_{ij}}
+     {\left| \gcovboothat_{ij} \right| + \seboot_{ij}}
+\mathand
+\normdiffbayes_{ij} :=
+  \frac{\gcovbayeshat_{ij} - \gcovboothat_{ij}}
+  {\left| \gcovboothat_{ij} \right| + \seboot_{ij}}.
+%
+\end{align*}
+%
+The matrices $\normdiffij$ and $\normdiffbayes$ measure the relative differences
+between the bootstrap and $\gcovijhat$ or $\gcovbayeshat$, respectively.  We add
+the standard deviation $\seboot$ in the denominator to avoid problems dividing
+by zero.
+
+Note that the relative errors $\normdiffij$ and $\normdiffbayes$ do not attempt
+to remove or account for Monte Carlo error.  One might imagine computing the
+relative error after deconvolving the Monte Carlo error and covariance estimates
+using, say, nonparametric empirical Bayes.  We investigated such an approach,
+but the resulting procedure was complicated and the results qualitatively
+similar to \figref{normerr_graph} below, so we will report only the relatively
+simple metrics $\normdiffij$ and $\normdiffbayes$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%JINGLE%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Results}
+
+% number of samples and timing
+We computed $M = \armNumMCMCSamples$ MCMC draws from each model, which took a
+range of times, from $\armMinMCMCTimeSecs$ seconds to $\armMaxMCMCTimeMins$
+minutes. The total sampling for the initial MCMC and IJ computation was
+$\armTotalMCMCTimeMins$ minutes.  For each model, we computed $B =
+\armNumBootstraps$ bootstrap samples, for a total bootstrap compute time of
+approximately $\armTotalBootTimeHours$ hours.
+
+The distribution of the measure of practical significance, $\normdiffij$ and
+$\normdiffbayes$, is shown in \figref{normerr_graph}.  For smaller datasets, the
+IJ covariance is not meaningfully closer to the bootstrap than the Bayesian
+covariance is. However, for larger datasets, the IJ is a notably better
+approximation to the bootstrap than is the Bayesian posterior covaraince,
+particularly for covariances involving at least one scale parameter.  Most of
+the IJ covariance estimates are well within 50\% of the bootstrap covariance,
+particularly for regression parameters.
+%
+<<graph_fig_cap2>>=
+figcap <- paste(
+    "The distribution of the relative errors $\\normdiffij$ and",
+    "$\\normdiffbayes$.",
+    "Log scale parameters include all variances or covariances that involve ",
+    "at least one log scale parameters.",
+    sep="")
+SetFullImageSize()
+@
+<<normerr_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/ARM/standardized_difference_graph.R", echo=knitr_debug, print.eval=TRUE)
+@
+
+The comparsions for $\zdiff$, our informal test of statistical significance are
+shown in \figref{relerr_graph}. The IJ produces results similar to the bootstrap
+for models with $N$ greater than the median and for regression parameters.  For
+datasets with fewer exchangable units, the IJ and bootstrap often differ to a
+degree greater than can be accounted for by the standard error, probably because
+there is not enough data for a BCLT to practically apply.  For larger datasets,
+the tests lie outside the standard rejection region at roughtly the nominal
+rate, suggesting that the differences between $\gcovijhat$ and $\gcovboothat$
+can mostly be accounted for by Monte Carlo error.  We stress again that the
+tests are correlated within a matrix $\zdiff$, and such collective measures
+should not be expected to be a valid family of hypothesis tests.
+%
+% \begin{table}[h]
+% %
+% <<arm_reldiff_table, cache=knitr_cache, results='asis'>>=
+% source("R_scripts/ARM/reldiff_table.R", echo=knitr_debug, print.eval=TRUE)
+% @
+% %
+% \caption{Proportion of rejections with level $0.1$ within parameter types and
+% dataset sizes when testing for equivalence between the IJ and the bootstrap. \tablabel{arm_reldiff_table}}
+% %
+% \end{table}
+%
+<<graph_fig_cap1>>=
+figcap <- paste(
+    "The distribution of the z-statistics $\\zdiff$.  ",
+    "Red lines indicate the boundaries of a normal test for significance ",
+    "with level $0.1$, and ``Rejected'' counts the number of covariances ",
+    "in the rejection region.  ",
+    "Log scale parameters include all variances or covariances that involve ",
+    "at least one log scale parameters.",
+    sep="")
+SetFullImageSize()
+@
+<<relerr_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/ARM/z_score_graph.R", echo=knitr_debug, print.eval=TRUE)
+@
+%
