@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+
+% my added packages: copied from the swiss IJ paper
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{xargs}[2008/03/08]
+
+% Documentation
+% http://ftp.math.purdue.edu/mirrors/ctan.org/macros/latex/contrib/refstyle/refstyle.pdf
+\usepackage{refstyle}
+\usepackage{varioref} % Use refstyle instead of varioref directly.
+\usepackage[authoryear]{natbib}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{algpseudocode, algorithm} %typical alg typesetting packages
+
+\usepackage{listings}
+\usepackage{pdfpages}
+
+% This picks up the knitr boilerplate, allowing us to \input partial knitr
+% documents.
+\input{_knitr_header.tex}
+
+% This defines math macros.
+\input{_math_defs.tex}
+
+% This specifies the formatting for references (sections, theorems, etc.)
+\input{_reference_defs.tex}
+
+\begin{document}
+
+\title{Maybe You Should Use Knitr}
+
+\author{Ryan Giordano \texttt{rgiordan@mit.edu}}
+
+\maketitle
+
+\begin{abstract}
+This is an abstract.
+\end{abstract}
+
+\section{Introduction}\seclabel{introduction}
+\input{introduction.tex}
+
+\section{Experiment One}\seclabel{experiement_one}
+\input{experiment_one.tex}
+
+\section{Experiment Two}\seclabel{experiement_two}
+\input{experiment_two.tex}
+
+\bibliography{references}
+\end{document}
