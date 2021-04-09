@@ -10,6 +10,18 @@
 
 git_repo_dir <- "/home/rgiordan/Documents/git_repos/Presentations/"
 data_dir <- file.path(git_repo_dir, "TamaraGroupKnitr_20210408/R_scripts/data")
-x <- rnorm(1000)
-y <- rnorm(1000)
-save(x, y, file=file.path(data_dir, "experiment_data.Rdata"))
+num_obs <- 1000
+x <- rnorm(num_obs)
+eps <- rnorm(num_obs)
+beta <- 5
+y <- eps + 5 * x
+
+table_df <- rbind(
+  data.frame(metric="mean", x=mean(x), y=mean(y)),
+  data.frame(metric="sd", x=sd(x), y=sd(y)),
+  data.frame(metric="max", x=max(x), y=max(y))
+)
+
+
+save(x, eps, num_obs, file=file.path(data_dir, "experiment_one_data.Rdata"))
+save(table_df, num_obs, beta, file=file.path(data_dir, "experiment_two_data.Rdata"))

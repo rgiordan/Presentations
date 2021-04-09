@@ -8,9 +8,7 @@ library(reshape2)
 library(ggplot2)
 library(ggforce)
 library(xtable)
-
 library(gridExtra)
-library(patchwork)
 
 library(latex2exp)
 
