@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not edit the TeX file your work
-% will be overwritten.  Edit the RnW
+% will be overwritten.  Edit the Rnw
 % file instead.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,6 +9,9 @@
 <<setup, include=FALSE, cache=FALSE>>=
 knitr_debug <- FALSE # Set to true to see error output
 knitr_cache <- FALSE # Set to true to cache knitr output for this analysis.
+
+# initialize.R has boilerplate R functions used for every knitr document
+# in the project.
 source("R_scripts/initialize.R", echo=FALSE)
 @
 
@@ -20,9 +23,23 @@ source("R_scripts/experiment_one/load_data.R")
 source("R_scripts/experiment_one/define_macros.R")
 @
 
-We generated $\EoneNumObs$ observations.  They looked like a mess,
-as you can see in \figref{eone_scatter}.
+In between the knitr chunks, this is just an ordinary LaTeX document. The
+content inside the code chunks gets run in R.  By default, the code runs
+silently.  If you add the option \texttt{results="asis"} then the output gets
+inserted verbatim into the tex document.  This can be used to make tables or
+define macros.  Figure insertion uses a special set of semantics --- see below
+for examples.
 
+For this experiment, we generated $\EoneNumObs$ observations.  They looked like
+a mess, as you can see in \figref{eone_scatter}.
+
+% In theory you can set a figure caption using R code in the fig.cap
+% argument, but I find it's awkward, especially with line wrapping.
+% So instead I just store the caption in a variable in a chunk just
+% before the image.  Conveniently, that's a good place to set the size
+% of the subsequent image as well.  Note that the SetImageSize() sets
+% chunk defaults, and so must be run in a chunk /before/ the chunk with
+% the image whose size you want to set.
 <<graph_fig_cap>>=
 figcap <- paste(
     "It's nice to have a long figure caption that ",
@@ -36,8 +53,10 @@ SetImageSize()
 source("R_scripts/experiment_one/graph.R", echo=knitr_debug, print.eval=TRUE)
 @
 
+% Knitr automatically labels figures with fig:chunk_name.
 And \figref{eone_hist} as well.  What garbage.
 
+% Note that chunk names cannot be repeated.
 <<graph_fig_cap1>>=
 figcap <- "You can reuse this variable for other captions."
 SetImageSize(aspect_ratio=0.5 * base_aspect_ratio)

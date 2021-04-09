@@ -24,6 +24,5 @@ table_df <- rbind(
   data.frame(metric="max", x=max(x), y=max(y))
 )
 
-
 save(x, eps, num_obs, file=file.path(data_dir, "experiment_one_data.Rdata"))
 save(table_df, num_obs, beta, file=file.path(data_dir, "experiment_two_data.Rdata"))

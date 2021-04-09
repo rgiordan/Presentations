@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  8 APR 2021 20:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  8 APR 2021 21:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,164 +636,148 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 \c@conj=\count329
 \c@defn=\count330
 \c@examplex=\count331
-Package refstyle Info: New reference template \newref{event} on input line 35.
-Package refstyle Info: \eventkey created on input line 35.
-Package refstyle Info: \eventlabel created on input line 35.
-Package refstyle Info: \eventref created on input line 35.
-Package refstyle Info: \Eventref created on input line 35.
-Package refstyle Info: \eventrangeref created on input line 35.
-Package refstyle Info: \Eventrangeref created on input line 35.
-Package refstyle Info: \eventpageref created on input line 35.
-Package refstyle Info: New reference template \newref{item} on input line 42.
-Package refstyle Info: \itemkey created on input line 42.
-Package refstyle Info: \itemlabel created on input line 42.
-Package refstyle Info: \itemref created on input line 42.
-Package refstyle Info: \Itemref created on input line 42.
-Package refstyle Info: \itemrangeref created on input line 42.
-Package refstyle Info: \Itemrangeref created on input line 42.
-Package refstyle Info: \itempageref created on input line 42.
 Package refstyle Info: Reference template \newref{fig} redefined on input line 
-47.
-Package refstyle Info: \figkey created on input line 47.
-Package refstyle Info: \figlabel created on input line 47.
-Package refstyle Info: \figref created on input line 47.
-Package refstyle Info: \Figref created on input line 47.
-Package refstyle Info: \figrangeref created on input line 47.
-Package refstyle Info: \Figrangeref created on input line 47.
-Package refstyle Info: \figpageref created on input line 47.
+33.
+Package refstyle Info: \figkey created on input line 33.
+Package refstyle Info: \figlabel created on input line 33.
+Package refstyle Info: \figref created on input line 33.
+Package refstyle Info: \Figref created on input line 33.
+Package refstyle Info: \figrangeref created on input line 33.
+Package refstyle Info: \Figrangeref created on input line 33.
+Package refstyle Info: \figpageref created on input line 33.
 Package refstyle Info: Reference template \newref{tab} redefined on input line 
-52.
-Package refstyle Info: \tabkey created on input line 52.
-Package refstyle Info: \tablabel created on input line 52.
-Package refstyle Info: \tabref created on input line 52.
-Package refstyle Info: \Tabref created on input line 52.
-Package refstyle Info: \tabrangeref created on input line 52.
-Package refstyle Info: \Tabrangeref created on input line 52.
-Package refstyle Info: \tabpageref created on input line 52.
+39.
+Package refstyle Info: \tabkey created on input line 39.
+Package refstyle Info: \tablabel created on input line 39.
+Package refstyle Info: \tabref created on input line 39.
+Package refstyle Info: \Tabref created on input line 39.
+Package refstyle Info: \tabrangeref created on input line 39.
+Package refstyle Info: \Tabrangeref created on input line 39.
+Package refstyle Info: \tabpageref created on input line 39.
 Package refstyle Info: Reference template \newref{sec} redefined on input line 
-59.
-Package refstyle Info: \seckey created on input line 59.
-Package refstyle Info: \seclabel created on input line 59.
-Package refstyle Info: \secref created on input line 59.
-Package refstyle Info: \Secref created on input line 59.
-Package refstyle Info: \secrangeref created on input line 59.
-Package refstyle Info: \Secrangeref created on input line 59.
-Package refstyle Info: \secpageref created on input line 59.
-Package refstyle Info: New reference template \newref{app} on input line 64.
-Package refstyle Info: \appkey created on input line 64.
-Package refstyle Info: \applabel created on input line 64.
-Package refstyle Info: \appref created on input line 64.
-Package refstyle Info: \Appref created on input line 64.
-Package refstyle Info: \apprangeref created on input line 64.
-Package refstyle Info: \Apprangeref created on input line 64.
-Package refstyle Info: \apppageref created on input line 64.
-Package refstyle Info: Reference template \newref{eq} redefined on input line 7
-1.
-Package refstyle Info: \eqkey created on input line 71.
-Package refstyle Info: \eqlabel created on input line 71.
-Package refstyle Info: \eqref created on input line 71.
-Package refstyle Info: \Eqref created on input line 71.
-Package refstyle Info: \eqrangeref created on input line 71.
-Package refstyle Info: \Eqrangeref created on input line 71.
-Package refstyle Info: \eqpageref created on input line 71.
+46.
+Package refstyle Info: \seckey created on input line 46.
+Package refstyle Info: \seclabel created on input line 46.
+Package refstyle Info: \secref created on input line 46.
+Package refstyle Info: \Secref created on input line 46.
+Package refstyle Info: \secrangeref created on input line 46.
+Package refstyle Info: \Secrangeref created on input line 46.
+Package refstyle Info: \secpageref created on input line 46.
+Package refstyle Info: New reference template \newref{app} on input line 51.
+Package refstyle Info: \appkey created on input line 51.
+Package refstyle Info: \applabel created on input line 51.
+Package refstyle Info: \appref created on input line 51.
+Package refstyle Info: \Appref created on input line 51.
+Package refstyle Info: \apprangeref created on input line 51.
+Package refstyle Info: \Apprangeref created on input line 51.
+Package refstyle Info: \apppageref created on input line 51.
+Package refstyle Info: Reference template \newref{eq} redefined on input line 5
+8.
+Package refstyle Info: \eqkey created on input line 58.
+Package refstyle Info: \eqlabel created on input line 58.
+Package refstyle Info: \eqref created on input line 58.
+Package refstyle Info: \Eqref created on input line 58.
+Package refstyle Info: \eqrangeref created on input line 58.
+Package refstyle Info: \Eqrangeref created on input line 58.
+Package refstyle Info: \eqpageref created on input line 58.
 Package refstyle Info: Reference template \newref{fig} redefined on input line 
-76.
-Package refstyle Info: \figkey created on input line 76.
-Package refstyle Info: \figlabel created on input line 76.
-Package refstyle Info: \figref created on input line 76.
-Package refstyle Info: \Figref created on input line 76.
-Package refstyle Info: \figrangeref created on input line 76.
-Package refstyle Info: \Figrangeref created on input line 76.
-Package refstyle Info: \figpageref created on input line 76.
-Package refstyle Info: New reference template \newref{def} on input line 81.
-Package refstyle Info: \defkey created on input line 81.
-Package refstyle Info: \deflabel created on input line 81.
-Package refstyle Info: \defref created on input line 81.
-Package refstyle Info: \Defref created on input line 81.
-Package refstyle Info: \defrangeref created on input line 81.
-Package refstyle Info: \Defrangeref created on input line 81.
-Package refstyle Info: \defpageref created on input line 81.
-Package refstyle Info: New reference template \newref{assu} on input line 88.
-Package refstyle Info: \assukey created on input line 88.
-Package refstyle Info: \assulabel created on input line 88.
-Package refstyle Info: \assuref created on input line 88.
-Package refstyle Info: \Assuref created on input line 88.
-Package refstyle Info: \assurangeref created on input line 88.
-Package refstyle Info: \Assurangeref created on input line 88.
-Package refstyle Info: \assupageref created on input line 88.
-Package refstyle Info: New reference template \newref{cond} on input line 95.
-Package refstyle Info: \condkey created on input line 95.
-Package refstyle Info: \condlabel created on input line 95.
-Package refstyle Info: \condref created on input line 95.
-Package refstyle Info: \Condref created on input line 95.
-Package refstyle Info: \condrangeref created on input line 95.
-Package refstyle Info: \Condrangeref created on input line 95.
-Package refstyle Info: \condpageref created on input line 95.
-Package refstyle Info: New reference template \newref{prop} on input line 102.
-Package refstyle Info: \propkey created on input line 102.
-Package refstyle Info: \proplabel created on input line 102.
-Package refstyle Info: \propref created on input line 102.
-Package refstyle Info: \Propref created on input line 102.
-Package refstyle Info: \proprangeref created on input line 102.
-Package refstyle Info: \Proprangeref created on input line 102.
-Package refstyle Info: \proppageref created on input line 102.
-Package refstyle Info: New reference template \newref{lem} on input line 109.
-Package refstyle Info: \lemkey created on input line 109.
-Package refstyle Info: \lemlabel created on input line 109.
-Package refstyle Info: \lemref created on input line 109.
-Package refstyle Info: \Lemref created on input line 109.
-Package refstyle Info: \lemrangeref created on input line 109.
-Package refstyle Info: \Lemrangeref created on input line 109.
-Package refstyle Info: \lempageref created on input line 109.
-Package refstyle Info: New reference template \newref{ex} on input line 113.
-Package refstyle Info: \exkey created on input line 113.
-Package refstyle Info: \exlabel created on input line 113.
-Package refstyle Info: \exref created on input line 113.
-Package refstyle Info: \Exref created on input line 113.
-Package refstyle Info: \exrangeref created on input line 113.
-Package refstyle Info: \Exrangeref created on input line 113.
-Package refstyle Info: \expageref created on input line 113.
-Package refstyle Info: New reference template \newref{cor} on input line 118.
-Package refstyle Info: \corkey created on input line 118.
-Package refstyle Info: \corlabel created on input line 118.
-Package refstyle Info: \corref created on input line 118.
-Package refstyle Info: \Corref created on input line 118.
-Package refstyle Info: \corrangeref created on input line 118.
-Package refstyle Info: \Corrangeref created on input line 118.
-Package refstyle Info: \corpageref created on input line 118.
-Package refstyle Info: New reference template \newref{thm} on input line 125.
-Package refstyle Info: \thmkey created on input line 125.
-Package refstyle Info: \thmlabel created on input line 125.
-Package refstyle Info: \thmref created on input line 125.
-Package refstyle Info: \Thmref created on input line 125.
-Package refstyle Info: \thmrangeref created on input line 125.
-Package refstyle Info: \Thmrangeref created on input line 125.
-Package refstyle Info: \thmpageref created on input line 125.
-Package refstyle Info: New reference template \newref{proof} on input line 130.
+63.
+Package refstyle Info: \figkey created on input line 63.
+Package refstyle Info: \figlabel created on input line 63.
+Package refstyle Info: \figref created on input line 63.
+Package refstyle Info: \Figref created on input line 63.
+Package refstyle Info: \figrangeref created on input line 63.
+Package refstyle Info: \Figrangeref created on input line 63.
+Package refstyle Info: \figpageref created on input line 63.
+Package refstyle Info: New reference template \newref{def} on input line 68.
+Package refstyle Info: \defkey created on input line 68.
+Package refstyle Info: \deflabel created on input line 68.
+Package refstyle Info: \defref created on input line 68.
+Package refstyle Info: \Defref created on input line 68.
+Package refstyle Info: \defrangeref created on input line 68.
+Package refstyle Info: \Defrangeref created on input line 68.
+Package refstyle Info: \defpageref created on input line 68.
+Package refstyle Info: New reference template \newref{assu} on input line 75.
+Package refstyle Info: \assukey created on input line 75.
+Package refstyle Info: \assulabel created on input line 75.
+Package refstyle Info: \assuref created on input line 75.
+Package refstyle Info: \Assuref created on input line 75.
+Package refstyle Info: \assurangeref created on input line 75.
+Package refstyle Info: \Assurangeref created on input line 75.
+Package refstyle Info: \assupageref created on input line 75.
+Package refstyle Info: New reference template \newref{cond} on input line 82.
+Package refstyle Info: \condkey created on input line 82.
+Package refstyle Info: \condlabel created on input line 82.
+Package refstyle Info: \condref created on input line 82.
+Package refstyle Info: \Condref created on input line 82.
+Package refstyle Info: \condrangeref created on input line 82.
+Package refstyle Info: \Condrangeref created on input line 82.
+Package refstyle Info: \condpageref created on input line 82.
+Package refstyle Info: New reference template \newref{prop} on input line 89.
+Package refstyle Info: \propkey created on input line 89.
+Package refstyle Info: \proplabel created on input line 89.
+Package refstyle Info: \propref created on input line 89.
+Package refstyle Info: \Propref created on input line 89.
+Package refstyle Info: \proprangeref created on input line 89.
+Package refstyle Info: \Proprangeref created on input line 89.
+Package refstyle Info: \proppageref created on input line 89.
+Package refstyle Info: New reference template \newref{lem} on input line 96.
+Package refstyle Info: \lemkey created on input line 96.
+Package refstyle Info: \lemlabel created on input line 96.
+Package refstyle Info: \lemref created on input line 96.
+Package refstyle Info: \Lemref created on input line 96.
+Package refstyle Info: \lemrangeref created on input line 96.
+Package refstyle Info: \Lemrangeref created on input line 96.
+Package refstyle Info: \lempageref created on input line 96.
+Package refstyle Info: New reference template \newref{ex} on input line 100.
+Package refstyle Info: \exkey created on input line 100.
+Package refstyle Info: \exlabel created on input line 100.
+Package refstyle Info: \exref created on input line 100.
+Package refstyle Info: \Exref created on input line 100.
+Package refstyle Info: \exrangeref created on input line 100.
+Package refstyle Info: \Exrangeref created on input line 100.
+Package refstyle Info: \expageref created on input line 100.
+Package refstyle Info: New reference template \newref{cor} on input line 105.
+Package refstyle Info: \corkey created on input line 105.
+Package refstyle Info: \corlabel created on input line 105.
+Package refstyle Info: \corref created on input line 105.
+Package refstyle Info: \Corref created on input line 105.
+Package refstyle Info: \corrangeref created on input line 105.
+Package refstyle Info: \Corrangeref created on input line 105.
+Package refstyle Info: \corpageref created on input line 105.
+Package refstyle Info: New reference template \newref{thm} on input line 112.
+Package refstyle Info: \thmkey created on input line 112.
+Package refstyle Info: \thmlabel created on input line 112.
+Package refstyle Info: \thmref created on input line 112.
+Package refstyle Info: \Thmref created on input line 112.
+Package refstyle Info: \thmrangeref created on input line 112.
+Package refstyle Info: \Thmrangeref created on input line 112.
+Package refstyle Info: \thmpageref created on input line 112.
+Package refstyle Info: New reference template \newref{proof} on input line 117.
 
-Package refstyle Info: \proofkey created on input line 130.
-Package refstyle Info: \prooflabel created on input line 130.
-Package refstyle Info: \proofref created on input line 130.
-Package refstyle Info: \Proofref created on input line 130.
-Package refstyle Info: \proofrangeref created on input line 130.
-Package refstyle Info: \Proofrangeref created on input line 130.
-Package refstyle Info: \proofpageref created on input line 130.
-Package refstyle Info: New reference template \newref{conj} on input line 135.
-Package refstyle Info: \conjkey created on input line 135.
-Package refstyle Info: \conjlabel created on input line 135.
-Package refstyle Info: \conjref created on input line 135.
-Package refstyle Info: \Conjref created on input line 135.
-Package refstyle Info: \conjrangeref created on input line 135.
-Package refstyle Info: \Conjrangeref created on input line 135.
-Package refstyle Info: \conjpageref created on input line 135.
-Package refstyle Info: New reference template \newref{algr} on input line 142.
-Package refstyle Info: \algrkey created on input line 142.
-Package refstyle Info: \algrlabel created on input line 142.
-Package refstyle Info: \algrref created on input line 142.
-Package refstyle Info: \Algrref created on input line 142.
-Package refstyle Info: \algrrangeref created on input line 142.
-Package refstyle Info: \Algrrangeref created on input line 142.
-Package refstyle Info: \algrpageref created on input line 142.
+Package refstyle Info: \proofkey created on input line 117.
+Package refstyle Info: \prooflabel created on input line 117.
+Package refstyle Info: \proofref created on input line 117.
+Package refstyle Info: \Proofref created on input line 117.
+Package refstyle Info: \proofrangeref created on input line 117.
+Package refstyle Info: \Proofrangeref created on input line 117.
+Package refstyle Info: \proofpageref created on input line 117.
+Package refstyle Info: New reference template \newref{conj} on input line 122.
+Package refstyle Info: \conjkey created on input line 122.
+Package refstyle Info: \conjlabel created on input line 122.
+Package refstyle Info: \conjref created on input line 122.
+Package refstyle Info: \Conjref created on input line 122.
+Package refstyle Info: \conjrangeref created on input line 122.
+Package refstyle Info: \Conjrangeref created on input line 122.
+Package refstyle Info: \conjpageref created on input line 122.
+Package refstyle Info: New reference template \newref{algr} on input line 129.
+Package refstyle Info: \algrkey created on input line 129.
+Package refstyle Info: \algrlabel created on input line 129.
+Package refstyle Info: \algrref created on input line 129.
+Package refstyle Info: \Algrref created on input line 129.
+Package refstyle Info: \algrrangeref created on input line 129.
+Package refstyle Info: \Algrrangeref created on input line 129.
+Package refstyle Info: \algrpageref created on input line 129.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
@@ -977,10 +961,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 16658 strings out of 483065
- 285773 string characters out of 5963550
- 587987 words of memory out of 5000000
- 31355 multiletter control sequences out of 15000+600000
+ 16563 strings out of 483065
+ 284247 string characters out of 5963550
+ 586817 words of memory out of 5000000
+ 31260 multiletter control sequences out of 15000+600000
  542853 words of font info for 74 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  40i,8n,47p,424b,722s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -991,10 +975,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (2 pages, 153564 bytes).
+Output written on main.pdf (2 pages, 153601 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  9 named destinations out of 1000 (max. 500000)
  16419 words of extra memory for PDF output out of 17280 (max. 10000000)
 

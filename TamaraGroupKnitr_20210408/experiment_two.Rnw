@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not edit the TeX file your work
-% will be overwritten.  Edit the RnW
+% will be overwritten.  Edit the Rnw
 % file instead.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,14 +20,14 @@ source("R_scripts/experiment_two/load_data.R")
 source("R_scripts/experiment_two/define_macros.R")
 @
 
-We generated $\ETwoNumObs$ observations again, but now we used
-an offset $\beta = \ETwoBeta$.  They looked better, but we already
-showed you how to make a graph, so instead we'll show a table.
+We generated $\ETwoNumObs$ observations again, but now we used an offset $\beta =
+\ETwoBeta$.  They looked better, but we already showed you how to make a graph,
+so instead we'll show it in \tabref{amazing_table}.
 
 
 \begin{table}[h]
 <<amazing_table, cache=knitr_cache, results='asis'>>=
 source("R_scripts/experiment_two/table.R", echo=knitr_debug, print.eval=TRUE)
 @
-\caption{Amazing summary stats\tablabel{arm_models}}
+\caption{Amazing summary stats\tablabel{amazing_table}}
 \end{table}
