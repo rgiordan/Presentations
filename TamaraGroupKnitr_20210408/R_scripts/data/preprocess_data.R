@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+#
 # This file would typically load experimental results and save a single
 # Rdata file for each experiment containing the minimal amount of data needed
 # to produce the paper.

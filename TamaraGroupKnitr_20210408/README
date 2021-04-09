@@ -1,0 +1,7 @@
+To generate the paper,
+
+- Run R_scripts/data/preprocess_data.R to generate the data files.
+- Run knit_to_tex.sh to generate the experiment tex files.
+- Run pdflatex main.tex (a couple of times) to generate the paper.
+
+To remove all auto-generated content, run clean.sh.
