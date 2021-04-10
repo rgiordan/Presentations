@@ -41,16 +41,19 @@ ComputeCDF <- function(x) {
     return(list(x=sort(x), cdf=(1:n)/n))
 }
 
-num_outer_sims <- 100
-num_boots <- 1000
+num_outer_sims <- 500
+num_boots <- 500
 num_sims <- 1000
 
-num_obs_min <- 20
-num_obs_max <- 1000
-num_obs_length <- 20
-num_obs_vec <- floor(seq(sqrt(num_obs_min), sqrt(num_obs_max), length.out=num_obs_length)^2)
+num_obs_min <- 50
+num_obs_max <- 500
+num_obs_length <- 10
+#num_obs_vec <- floor(seq(sqrt(num_obs_min), sqrt(num_obs_max), length.out=num_obs_length)^2)
+num_obs_vec <- floor(1 / seq(1 / sqrt(num_obs_min), 1 / sqrt(num_obs_max), length.out=num_obs_length)^2)
 rhoinf_df <- data.frame()
+1 / sqrt(num_obs_vec) %>% diff()
 
+sim_time <- Sys.time()
 pb <- txtProgressBar(style=3, min=1, max=num_obs_length * num_outer_sims)
 pb_i <- 1
 for (num_obs in num_obs_vec) {
@@ -85,11 +88,22 @@ for (num_obs in num_obs_vec) {
     }
 }
 close(pb)
+sim_time <- Sys.time() - sim_time
+print(sim_time)
 
 
-ggplot(rhoinf_df) +
+rhoinf_df %>%
+    group_by(metric, method, num_obs) %>%
+    summarize(rhoinf=median(rhoinf)) %>%
+    ggplot() +
+    geom_line(aes(x=1/sqrt(num_obs), y=rhoinf, color=method)) +
+    scale_x_log10() + scale_y_log10() +
+    facet_grid(metric ~ ., scales="free")
+
+
+ggplot(rhoinf_df %>% filter(num_obs == num_obs_vec[1])) +
     geom_density(aes(x=rhoinf, color=method, fill=method, group=method), alpha=0.5) +
-    facet_grid(num_obs ~ metric) +
+    facet_grid(num_obs ~ metric, scales="free") +
     scale_x_log10()
 
 
