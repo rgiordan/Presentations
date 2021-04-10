@@ -4,12 +4,10 @@
 library(tidyverse)
 library(knitr)
 library(dplyr)
-library(reshape2)
 library(ggplot2)
 library(ggforce)
 library(xtable)
 library(gridExtra)
-
 library(latex2exp)
 
 # Set variables containing absolute paths to the files.

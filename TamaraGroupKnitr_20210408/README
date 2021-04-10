@@ -6,3 +6,21 @@ To generate the paper,
 - Run `pdflatex main.tex` (a couple of times) to generate the paper.
 
 To remove all auto-generated content, run `clean.sh`.
+
+You'll need the following R packages:
+
+packages <- c(
+    "tidyverse",
+    "knitr",
+    "dplyr",
+    "ggplot2",
+    "ggforce",
+    "xtable",
+    "gridExtra",
+    "latex2exp")
+
+for (package in packages) {
+    if (!(package %in% rownames(installed.packages()))) {
+        install.packages(package)
+    }
+}
