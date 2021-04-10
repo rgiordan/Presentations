@@ -24,7 +24,6 @@ opts_chunk$set(fig.pos='!h', fig.align='center', dev='png', dpi=300)
 # lots of helpful R output will be in your tex.
 opts_chunk$set(echo=knitr_debug, message=knitr_debug, warning=knitr_debug)
 
-
 ##############################################################
 # Helper functions for knitr
 
