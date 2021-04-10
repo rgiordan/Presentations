@@ -1,6 +1,8 @@
+# Run simulations using a model from Shao and Tu chapter 3.4
+# based on Hinkley and Wei (1984).
+
 library(tidyverse)
 library(gridExtra)
-
 
 ComputeStatistics <- function(y, z, delta) {
     delta_hat <- mean(y) / mean(z)
