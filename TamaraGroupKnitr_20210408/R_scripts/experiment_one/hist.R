@@ -7,7 +7,7 @@ PlotHist <- function(x) {
 grid.arrange(
   PlotHist(e1_data$x) + ggtitle("X histogram") + xlab("x"),
   PlotHist(e1_data$eps) +
-    ggtitle(TeX("$\\epsilon$ histogram")) +
+    ggtitle("Epsilon histogram") +
     xlab(TeX("$\\epsilon$")),
   ncol=2
 )

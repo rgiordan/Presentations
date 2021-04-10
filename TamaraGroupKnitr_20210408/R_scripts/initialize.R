@@ -52,32 +52,6 @@ DefineMacro <- function(macro_name, value, digits=3) {
 
 theme_set(theme_bw())
 
-# Set ggplot fontsizes
-axis_ticksize = 4
-axis_title_size = 7
-title_size = 7
-
-GetFontsizes <- function(scaling = 1){
-  axis_ticksize = axis_ticksize * scaling
-  axis_title_size = axis_title_size * scaling
-  title_size = title_size * scaling
-
-  fontsize_theme <- theme(
-    axis.text.x = element_text(size=axis_ticksize),
-    axis.text.y = element_text(size=axis_ticksize),
-    axis.title.x = element_text(size=axis_title_size),
-    axis.title.y = element_text(size=axis_title_size),
-    legend.text = element_text(size=axis_title_size),
-    plot.title = element_text(size=title_size),
-    axis.ticks.length = unit(0.05, "cm"),
-    strip.text = element_text(size=axis_title_size,
-                              margin=margin(.05, 0, .05, 0, "cm")),
-    legend.margin=margin(-10,-10,-10,-10))
-
-  return(fontsize_theme)
-}
-
-
 # A convenient function for extracting only the legend from a ggplot.  This
 # is useful when you have multiple side-by-side images and you don't want
 # to repeat a legend.
@@ -130,9 +104,3 @@ SetImageSize <- function(aspect_ratio=base_aspect_ratio, image_width=1.0) {
 
 # Use the defaults by default.
 SetImageSize()
-
-# SetFullImageSize <- function() SetImageSize(
-#     aspect_ratio=base_aspect_ratio, image_width=base_image_width)
-#
-# # Default to a full image.
-# SetFullImageSize()

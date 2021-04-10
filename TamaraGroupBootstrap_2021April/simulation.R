@@ -45,8 +45,8 @@ num_outer_sims <- 500
 num_boots <- 500
 num_sims <- 1000
 
-num_obs_min <- 50
-num_obs_max <- 500
+num_obs_min <- 10
+num_obs_max <- 100
 num_obs_length <- 10
 #num_obs_vec <- floor(seq(sqrt(num_obs_min), sqrt(num_obs_max), length.out=num_obs_length)^2)
 num_obs_vec <- floor(1 / seq(1 / sqrt(num_obs_min), 1 / sqrt(num_obs_max), length.out=num_obs_length)^2)
