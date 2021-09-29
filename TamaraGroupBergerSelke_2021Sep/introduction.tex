@@ -31,6 +31,7 @@ What is a p-value?
 
 This is the offical position of the American Statistical Association.
 
+\pause
 Its executive director writes:
 
 \vspace{1em}
@@ -55,7 +56,19 @@ Just...don’t.''  \citep{wasserstein:2019:beyondp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}{Tables}
+
+\begin{frame}
+
+\begin{figure}[t]
+\Large
+Whiteboard
+\centering
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Table: Fixed Normal prior}
 
 \begin{figure}[t]
 \includegraphics[width=0.8\textwidth]{figures/table1}
@@ -65,18 +78,18 @@ Just...don’t.''  \citep{wasserstein:2019:beyondp}
 \end{frame}
 
 
-\begin{frame}{Tables}
+% table2 is effectively a duplicate of table5
+% \begin{frame}{Tables}
+%
+% \begin{figure}[t]
+% \includegraphics[width=0.8\textwidth]{figures/table2}
+% \centering
+% \end{figure}
+%
+% \end{frame}
 
-\begin{figure}[t]
-\includegraphics[width=0.8\textwidth]{figures/table2}
-\centering
-\end{figure}
 
-\end{frame}
-
-
-
-\begin{frame}{Tables}
+\begin{frame}{Table: All priors}
 
 \begin{figure}[t]
 \includegraphics[width=0.8\textwidth]{figures/table4}
@@ -87,7 +100,7 @@ Just...don’t.''  \citep{wasserstein:2019:beyondp}
 
 
 
-\begin{frame}{Tables}
+\begin{frame}{Table: Symmetric priors centered at $\theta_0$}
 
 \begin{figure}[t]
 \includegraphics[width=0.8\textwidth]{figures/table5}
@@ -98,7 +111,7 @@ Just...don’t.''  \citep{wasserstein:2019:beyondp}
 
 
 
-\begin{frame}{Tables}
+\begin{frame}{Table: Unimodal symmetric priors centered at $\theta_0$}
 
 \begin{figure}[t]
 \includegraphics[width=0.8\textwidth]{figures/table6}
@@ -109,7 +122,7 @@ Just...don’t.''  \citep{wasserstein:2019:beyondp}
 
 
 
-\begin{frame}{Tables}
+\begin{frame}{Table: Normal priors centered at $\theta_0$}
 
 \begin{figure}[t]
 \includegraphics[width=0.8\textwidth]{figures/table7}
@@ -120,7 +133,7 @@ Just...don’t.''  \citep{wasserstein:2019:beyondp}
 
 
 
-\begin{frame}{Tables}
+\begin{frame}{Figure}
 
 \begin{figure}[t]
 \includegraphics[width=0.65\textheight]{figures/figure3}
@@ -131,11 +144,59 @@ Just...don’t.''  \citep{wasserstein:2019:beyondp}
 
 
 
-\begin{frame}{Tables}
+\begin{frame}{Figure}
 
 \begin{figure}[t]
 \includegraphics[height=0.8\textheight]{figures/figure4}
 \centering
 \end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Table for Cauchy}
+
+\#notalldistributions
+
+\begin{figure}[t]
+\includegraphics[width=0.8\textwidth]{figures/table8}
+\centering
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}{Where are we at?}
+
+How do p-values and Bayesian model selection stack up in terms of:
+
+\begin{itemize}
+    \item Interpretability?
+    \item Ease of use?
+        \begin{itemize}
+        \item Theoretical (understanding behavior)
+        \item Analytical (coming up with a design in practice)
+        \item Computational (computing what is needed)
+        \end{itemize}
+    \item Counterintuitive behavior?
+        \begin{itemize}
+        \item Is counterintuitive behavior possible?
+        \item Is counterintuitive behavior detectable?
+        \item Is counterintuitive behavior easy to understand?
+        \end{itemize}
+\end{itemize}
+% \begin{figure}[t]
+% \begin{tabular}{|c|c|}
+%     \hline
+%     \textbf{P-values}        &   \textbf{Bayesian model selection} \\ \hline
+%     Need to specify fewer things & Need to specify a lot \\
+%     (Test statistic and rejection region) & (Full distribution over alternatives) \\ \hline
+%
+%     Easy to confuse semantically & Means exactly what it says \\
+%      & (Full distribution over alternatives) \\ \hline
+% \end{tabular}
+% \centering
+% \end{figure}
 
 \end{frame}
