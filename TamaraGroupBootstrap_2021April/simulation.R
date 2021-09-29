@@ -3,6 +3,7 @@
 
 library(tidyverse)
 library(gridExtra)
+library(latex2exp)
 
 ComputeStatistics <- function(y, z, delta) {
     delta_hat <- mean(y) / mean(z)
@@ -16,7 +17,7 @@ ComputeStatistics <- function(y, z, delta) {
 
 
 # Making z (the second variable) closer to zero will give more pathological results
-DrawData <- function(num_obs, mean1=1.0, mean2=1.0, sd1=0.3, sd2=0.6) {
+DrawData <- function(num_obs, mean1=1.0, mean2=0.5, sd1=0.3, sd2=0.6) {
     y <- rnorm(num_obs, mean=mean1, sd=sd1)
     z <- rnorm(num_obs, mean=mean2, sd=sd2)
     delta <- mean1 / mean2
@@ -36,12 +37,20 @@ DrawBootstrap <- function(data) {
 }
 
 
+QQPlot <- function(x, y) {
+    qq_stats <- qqplot(x, y);
+    ggplot(data.frame(x=qq_stats$x, y=qq_stats$y, plot=FALSE)) +
+        geom_point(aes(x=x, y=y)) +
+        geom_abline(aes(slope=1, intercept=0))
+}
+
+
 ComputeCDF <- function(x) {
     n <- length(x)
     return(list(x=sort(x), cdf=(1:n)/n))
 }
 
-num_outer_sims <- 500
+num_outer_sims <- 5
 num_boots <- 500
 num_sims <- 1000
 
@@ -53,6 +62,7 @@ num_obs_vec <- floor(1 / seq(1 / sqrt(num_obs_min), 1 / sqrt(num_obs_max), lengt
 rhoinf_df <- data.frame()
 1 / sqrt(num_obs_vec) %>% diff()
 
+# TODO: Rao Blackwellize the dataset to reduce noise?
 sim_time <- Sys.time()
 pb <- txtProgressBar(style=3, min=1, max=num_obs_length * num_outer_sims)
 pb_i <- 1
@@ -108,14 +118,6 @@ ggplot(rhoinf_df %>% filter(num_obs == num_obs_vec[1])) +
 
 
 # Look at the QQplots using the last outer sim
-QQPlot <- function(x, y) {
-    qq_stats <- qqplot(x, y);
-    ggplot(data.frame(x=qq_stats$x, y=qq_stats$y)) +
-        geom_point(aes(x=x, y=y)) +
-        geom_abline(aes(slope=1, intercept=0))
-}
-
-
 grid.arrange(
     QQPlot(t_hat_sims, t_hat_boot) + ggtitle("t_hat boot"),
     QQPlot(t_hat_sims, t_hat_norm) + ggtitle("t_hat norm"),
@@ -126,4 +128,79 @@ grid.arrange(
     ncol=2    
 )
 
+
+
+
+
+# Do a single examples to make plots for the presentation
+
+num_obs <- 100
+num_boots <- 1000
+num_sims <- 10000
+
+data <- DrawData(num_obs)
+data_boot_list <- lapply(1:num_boots, function(...) { DrawBootstrap(data) })
+data_sim_list <- lapply(1:num_sims, function(...) { DrawData(num_obs) })
+data_sim_truth_list <- lapply(1:num_sims, function(...) { DrawData(5000) })
+
+t_hat_truth <- map_dbl(data_sim_truth_list, pluck("t_hat"))
+t_hat_sims <- map_dbl(data_sim_list, pluck("t_hat"))
+t_hat_boot <- map_dbl(data_boot_list, pluck("t_hat"))
+t_hat_norm <- rnorm(num_sims)
+
+
+GetCDF <- function(x, x_grid=NULL) {
+    if (is.null(x_grid)) {
+        num_points <- length(x) *4
+        x_grid <- seq(min(x), max(x), length.out=num_points)
+    }
+    x_sort <- sort(x)
+    fhat <- sapply(x_grid, function(x) { mean(x_sort <= x)})
+    return(data.frame(x=x_grid, fhat=fhat))
+}
+
+x_grid <- seq(min(t_hat_truth), max(t_hat_truth), length.out=1000)
+
+cdf_df <- bind_rows(
+    GetCDF(t_hat_truth, x_grid) %>% mutate(stat="truth"),
+    GetCDF(t_hat_boot, x_grid) %>% mutate(stat="boot"),
+    GetCDF(t_hat_norm, x_grid) %>% mutate(stat="norm"),
+    GetCDF(t_hat_sims, x_grid) %>% mutate(stat="sim")) %>%
+    pivot_wider(id_cols=x, names_from=stat, values_from=fhat)
+head(cdf_df)
+
+
+png("~/Downloads/cdf_w_norm.png", width=8, height=4, units="in", res=300)
+grid.arrange(
+    ggplot(cdf_df) +
+        geom_line(aes(x=x, y=boot, color="H_boot")) +
+        geom_line(aes(x=x, y=norm, color="H_norm")) +
+        geom_line(aes(x=x, y=sim, color="H_N")) +
+        ylab("P(T <= x)") +
+        ggtitle("Distribution functions")
+    ,
+    ggplot(cdf_df) +
+        geom_line(aes(x=x, y=(boot - sim), color="H_boot - H_N")) +
+        geom_line(aes(x=x, y=(sim - norm), color="H_N - H_norm"))  +
+        ggtitle("Distribution functions differences") +
+        ylab(NULL)
+    , ncol=2
+)
+dev.off()
+
+png("~/Downloads/cdf_no_norm.png", width=8, height=4, units="in", res=300)
+grid.arrange(
+    ggplot(cdf_df) +
+        geom_line(aes(x=x, y=boot, color="H_boot")) +
+        geom_line(aes(x=x, y=sim, color="H_N")) +
+        ylab("P(T <= x)") +
+        ggtitle("Distribution functions")
+    ,
+    ggplot(cdf_df) +
+        geom_line(aes(x=x, y=(boot - sim), color="H_boot - H_N")) +
+        ggtitle("Distribution functions differences") +
+        ylab(NULL)
+    , ncol=2
+)
+dev.off()
 

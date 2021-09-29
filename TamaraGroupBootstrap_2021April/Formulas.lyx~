@@ -1,0 +1,1016 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1cm
+\headsep 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset FormulaMacro
+\newcommand{\expect}{\mathbb{E}}
+{\mathbb{E}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset FormulaMacro
+\newcommand{\norm}[1]{\left\Vert #1\right\Vert _{\infty}}
+{\left\Vert #1\right\Vert _{\infty}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A statistic 
+\begin_inset Formula $T_{N}$
+\end_inset
+
+ with 
+\begin_inset Formula $H_{N}\left(x\right)=P\left(T_{N}\le x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Bootstrap statistic 
+\begin_inset Formula $T_{N}^{*}$
+\end_inset
+
+ with 
+\begin_inset Formula $H_{boot}\left(x\right)=P^{*}\left(T_{N}^{*}\le x\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H_{N}\left(x\right)= & P\left(T_{N}\le x\right)\\
+H_{boot}\left(x\right)= & P^{*}\left(T_{N}^{*}\le x\right)\\
+H_{norm}\left(x\right)= & \Phi\left(\left(x-\hat{\mu}\right)/\hat{\sigma}\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\norm{H_{boot}-H_{N}} & =\sup_{x}\left|H_{boot}\left(x\right)-H_{N}\left(x\right)\right|
+\end{align*}
+
+\end_inset
+
+So why not just use 
+\begin_inset Formula $H_{norm}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+Normal approximation 
+\begin_inset Formula $H_{norm}\left(x\right)=\Phi\left(\left(x-\hat{\mu}\right)/\hat{\sigma}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Recall our definitions
+\begin_inset Formula 
+\begin{align*}
+H_{N}\left(x\right) & =P\left(\sqrt{N}\left(T_{N}-\mu\right)\le x\right)\\
+H_{boot}\left(x\right) & =P^{*}\left(\sqrt{N}\left(T_{N}^{*}-T_{N}\right)\le x\right)\\
+\Phi\left(x\right) & =\textrm{Standard normal d.f.}
+\end{align*}
+
+\end_inset
+
+Our reasoning so far has been something like this:
+\begin_inset Formula 
+\begin{align*}
+\norm{H_{N}\left(x\right)-\Phi\left(\frac{x-\mu}{\sigma}\right)} & \rightarrow0\\
+\norm{H_{boot}\left(x\right)-\Phi\left(\frac{x-\hat{\mu}}{\hat{\sigma}}\right)} & \rightarrow0\\
+\norm{\Phi\left(\frac{x-\hat{\mu}}{\hat{\sigma}}\right)-\Phi\left(\frac{x-\mu}{\sigma}\right)} & \rightarrow0\Rightarrow\\
+\norm{H_{N}\left(x\right)-H_{N}\left(x\right)} & \rightarrow0.
+\end{align*}
+
+\end_inset
+
+Given this, why not just use 
+\begin_inset Formula $\Phi\left(\frac{x-\hat{\mu}}{\hat{\sigma}}\right)$
+\end_inset
+
+? One answer: simplicity.
+ But there are other answers.
+ To understand them, we need a more refined version of 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\\
+\norm{H_{N}\left(x\right)-\Phi\left(\frac{x-\mu}{\sigma}\right)} & \rightarrow0.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+The tool is the Edgeworth expansion.
+ Recall the proof of the CLT.
+ Let 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ be mean zero unit variance random variables, and let
+\begin_inset Formula 
+\begin{align*}
+\mu & :=\expect\left[X_{1}\right]\\
+\sigma^{2} & :=\expect\left[X_{1}^{2}\right]-\expect\left[X_{1}\right]^{2}\\
+\mu_{3} & :=\expect\left[\left(X_{1}-\mu\right)^{3}\right]\\
+Z_{n} & :=\frac{X_{n}-\mu}{\sigma}\\
+\bar{Z} & :=\frac{1}{N}\sum_{n=1}^{N}Z_{n}\\
+T_{N} & =\sqrt{N}\bar{Z}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\hat{\mu} & :=\bar{X}\\
+\hat{\sigma}^{2} & :=\frac{1}{N}\sum_{n=1}^{N}\left(X_{n}-\hat{\mu}\right)^{2}\\
+\hat{\mu}_{3} & :=\frac{1}{N}\sum_{n=1}^{N}\left(X_{n}-\hat{\mu}\right)^{3}\\
+Z_{n}^{*} & :=\frac{X_{n}^{*}-\hat{\mu}}{\hat{\sigma}}\\
+\bar{Z}^{*} & :=\frac{1}{N}\sum_{n=1}^{N}Z_{n}^{*}\\
+T_{N}^{*} & =\sqrt{N}\bar{Z}^{*}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\norm{H_{N}\left(z\right)-\Phi\left(z\right)} & \rightarrow0.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset Formula 
+\begin{align*}
+\Psi\left(t\right) & =\expect\left[\exp\left(itT_{N}\right)\right]\\
+\log\Psi\left(t\right) & =-t^{2}+\frac{\kappa_{3}}{\sqrt{N}}t^{3}+\frac{\kappa_{4}}{N}t^{4}+\ldots & \rightarrow & -t^{2}\\
+P\left(T_{N}\le z\right) & =\frac{1}{2\pi}\int\Psi\left(t\right)\exp\left(-it\right)dt & \rightarrow & \Phi\left(z\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+The Edgeworth expansion just keeps the extra powers of 
+\begin_inset Formula $N^{-1/2}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+P\left(T_{N}\le z\right) & =\frac{1}{2\pi}\int\Psi\left(t\right)\exp\left(-it\right)dt & = & \Phi\left(z\right)+\frac{1}{\sqrt{N}}\frac{\mu_{3}}{\sigma^{3}}\left(1-z^{2}\right)\phi\left(z\right)+\frac{1}{N}\left(\mathrm{...}\right)+...
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Where we will get to is, for mean zero, unit variance, 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+,s
+\begin_inset Formula 
+\begin{align*}
+\norm{P\left(T_{N}\le z\right)-\Phi\left(z\right)} & =O\left(N^{-1/2}\right).\\
+\norm{P\left(T_{N}\le z\right)-\left(\Phi\left(z\right)+\frac{1}{\sqrt{N}}\frac{\mu_{3}}{\sigma^{3}}\left(1-z^{2}\right)\phi\left(z\right)\right)} & =o\left(N^{-1/2}\right)\\
+\norm{P\left(T_{N}\le z\right)-\left(\Phi\left(z\right)+\frac{1}{\sqrt{N}}\frac{\mu_{3}}{\sigma^{3}}\left(1-z^{2}\right)\phi\left(z\right)+\frac{1}{N}\cdot\mathrm{Stuff}\cdot\phi\left(z\right)\right)} & =o\left(N^{-1}\right).
+\end{align*}
+
+\end_inset
+
+Exercise:
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{\sqrt{N}}\frac{\mu_{3}}{\sigma^{3}}\left(1-z^{2}\right)\phi\left(z\right) & =O\left(N^{-1/2}\right)\\
+\norm{\frac{1}{\sqrt{N}}\frac{\mu_{3}}{\sigma^{3}}\left(1-z^{2}\right)\phi\left(z\right)} & =O\left(N^{-1/2}\right)\\
+\frac{1}{\sqrt{N}}\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}\left(1-z^{2}\right)\phi\left(z\right) & =O\left(N^{-1/2}\right)\\
+\norm{\frac{1}{\sqrt{N}}\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}\left(1-z^{2}\right)\phi\left(z\right)} & =O\left(N^{-1/2}\right)\\
+\norm{\frac{1}{\sqrt{N}}\left(\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}-\frac{\mu_{3}}{\sigma^{3}}\right)\left(1-z^{2}\right)\phi\left(z\right)} & =O\left(N^{-1}\,\,\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+The technical difficulty (as I understand it) is in the Fourier inversion.
+ However, we take Peter Hall's word for the fact that a similar expansion
+ exists for the bootstrap distribution
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset Formula 
+\begin{align*}
+Z_{n}^{*} & :=\frac{X_{n}-\bar{X}}{\hat{\sigma}}\\
+\bar{Z}^{*} & :=\frac{1}{N}\sum_{n=1}^{N}Z_{n}^{*}\\
+\norm{P^{*}\left(T_{N}^{*}\le z\right)-\left(\Phi\left(z\right)+\frac{1}{\sqrt{N}}\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}\left(1-z^{2}\right)\phi\left(z\right)\right)} & =o\left(N^{-1/2}\right).\quad\textrm{(almost surely)}\\
+\norm{P^{*}\left(T_{N}^{*}\le z\right)-\left(\Phi\left(z\right)+\frac{1}{\sqrt{N}}\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}\left(1-z^{2}\right)\phi\left(z\right)+\frac{1}{N}\cdot\mathrm{Stuff}\cdot\phi\left(z\right)\right)} & =o\left(N^{-1}\right).\quad\textrm{(almost surely)}
+\end{align*}
+
+\end_inset
+
+From this we get
+\begin_inset Formula 
+\begin{align*}
+\norm{P^{*}\left(T_{N}^{*}\le z\right)-P\left(T_{N}\le z\right)} & \le\frac{1}{\sqrt{N}}\norm{\left(1-z^{2}\right)\phi\left(z\right)}\left(\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}-\frac{\mu_{3}}{\sigma^{3}}\right)+o\left(N^{-1/2}\right)=o\left(N^{-1/2}\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \norm{P^{*}\left(T_{N}^{*}\le z\right)-P\left(T_{N}\le z\right)}\\
+ & \quad\le\frac{1}{\sqrt{N}}\norm{\left(1-z^{2}\right)\phi\left(z\right)}\left(\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}-\frac{\mu_{3}}{\sigma^{3}}\right)+o\left(N^{-1/2}\right)\\
+ & \quad=o\left(N^{-1/2}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+What if we try to do it for the non-pivoted case?
+\begin_inset Formula 
+\begin{align*}
+P\left(\sqrt{N}\bar{X}\le x\right) & =P\left(\sqrt{N}\frac{\bar{X}}{\sigma}\le\frac{x}{\sigma}\right)=P\left(\sqrt{N}\bar{Z}\le z\right)\\
+P^{*}\left(\sqrt{N}\bar{X}^{*}\le x\right) & =P^{*}\left(\sqrt{N}\frac{\bar{X}}{\hat{\sigma}}\le\frac{x}{\hat{\sigma}}\right)=P\left(\sqrt{N}\bar{Z}^{*}\le z\right).
+\end{align*}
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset Formula 
+\begin{align*}
+ & \norm{P^{*}\left(\sqrt{N}\left(\bar{X}^{*}-\hat{\mu}\right)\le x\right)-P\left(\sqrt{N}\bar{X}\le x\right)}\\
+ & \quad=\norm{P^{*}\left(\sqrt{N}\bar{Z}^{*}\le\frac{x}{\hat{\sigma}}\right)-P\left(\sqrt{N}\bar{Z}\le\frac{x}{\sigma}\right)}\\
+ & \quad\le\norm{\Phi\left(\frac{x}{\hat{\sigma}}\right)-\Phi\left(\frac{x}{\sigma}\right)}+\frac{1}{\sqrt{N}}\norm{\left(1-z^{2}\right)\phi\left(z\right)}\left(\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}-\frac{\mu_{3}}{\sigma^{3}}\right)+o\left(N^{-1/2}\right)\\
+ & \quad=Const\cdot\left|\hat{\sigma}-\sigma\right|+Const\cdot\frac{1}{\sqrt{N}}\left(\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}-\frac{\mu_{3}}{\sigma^{3}}\right)+o\left(N^{-1/2}\right)\\
+ & \quad=O\left(N^{-1/2}\right).
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\hat{Z}_{n} & =\frac{X_{n}-\mu}{\hat{\sigma}}\\
+\hat{Z}_{n}^{*} & =\frac{X_{n}-\hat{\mu}}{\hat{\sigma}^{*}}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H_{Edg}\left(z\right) & :=\Phi\left(z\right)+\frac{1}{\sqrt{N}}\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}\left(1-z^{2}\right)\phi\left(z\right)
+\end{align*}
+
+\end_inset
+
+Why don't we get anything from adding another term?
+\begin_inset Formula 
+\begin{align*}
+\norm{P\left(\sqrt{N}\bar{Z}\le z\right)-\left(\Phi\left(z\right)+\frac{1}{\sqrt{N}}\frac{\mu_{3}}{\sigma^{3}}\left(1-z^{2}\right)\phi\left(z\right)+\frac{1}{N}\cdot\mathrm{Stuff}\cdot\phi\left(z\right)\right)} & =o\left(N^{-1}\right)\\
+\norm{P^{*}\left(\sqrt{N}\bar{Z}^{*}\le z\right)-\left(\Phi\left(z\right)+\frac{1}{\sqrt{N}}\frac{\hat{\mu}_{3}}{\hat{\sigma}^{3}}\left(1-z^{2}\right)\phi\left(z\right)+\frac{1}{N}\cdot\mathrm{Stuff}\cdot\phi\left(z\right)\right)} & =o\left(N^{-1}\right).\quad\textrm{(almost surely)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Exercise:
+\begin_inset Formula 
+\begin{align*}
+\norm{P^{*}\left(\sqrt{N}\bar{Z}^{*}\le z\right)-P\left(\sqrt{N}\bar{Z}\le z\right)} & \stackrel{?}{\le}o\left(N^{-1}\right)\textrm{.... ?}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Note
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Target
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Result
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reference
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample mean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{norm}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(N^{-1/2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample mean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pivot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{boot}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $o\left(N^{-1/2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Theorem 3.11 (iii)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample mean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-pivot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{boot}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(N^{-1/2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Theorem 3.11 (i)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample mean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lattice
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{boot}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(N^{-1/2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Theorem 3.11 (ii)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample mean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Studentized
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{boot}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $o\left(N^{-1/2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Theorem 3.12
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample mean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pivot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{Edg}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $o\left(N^{-1/2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(in text)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantile
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{norm}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(N^{-1/2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantile
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-pivot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{boot}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(N^{-1/4}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Theorem 3.13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantile
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pivot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{boot}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(N^{-1/2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Discussion of 3.13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantile
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Studentized
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\norm{H_{boot}-H_{N}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unknown
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Discussion of 3.13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

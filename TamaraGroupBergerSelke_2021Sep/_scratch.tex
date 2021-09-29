@@ -1,0 +1,85 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Classical Hypothesis Testing}
+
+% \section{Classical Hypothesis Testing}
+
+Suppose we have data, $X$.  Today, we will assume that the distribution has the
+form $p(X | \theta)$ for $\theta \in \mathbb{R}$, where distinct $\theta$ mean
+distinct distributions.
+
+Today, our ``null hypothesis'' will be that $\theta = \theta_0$ for some given
+$\theta_0$.  Write $H_0$ for the null hypothesis.
+
+A valid ``hypothesis test'' for $H_0$ with ``level'' $\alpha$ is a (possibly
+randomized) statistic, $T(X)$, and  region, $A(\alpha)$, such that
+%
+\begin{align*}
+%
+p(T(X) \in A(\alpha) | H_0) \le \alpha.
+%
+\end{align*}
+
+If we observe $T(x) \in A(\alpha)$, we ``reject'' $H_0$, since we have observed
+something unlikely under $H_0$.
+
+Typically the rejection regions are nested, so that $\alpha < \alpha'
+\Rightarrow A(\alpha) \subset A(\alpha')$.  When this is the case, the $p-$value
+is the smallest level $\alpha$ at which we would reject the observed $x$.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Running example}
+%
+The paper's running example is
+%
+\begin{align*}
+%
+X ={}& (X_1, ..., X_i, ..., X_n) \textrm{ are IID}\\
+X_i | \theta \sim{}& \mathcal{N}(\theta, \sigma^2)\textrm{, where }\sigma\textrm{ is known}.
+%
+\end{align*}
+%
+
+
+The paper's running example is the familiar test using the sample mean
+$\bar{X}$:
+%
+\begin{align*}
+%
+T(X) ={}& \sqrt{n} \frac{|\bar{X} - \theta_0|}{\sigma}
+\quad\textrm{and}\quad
+A = \left\{x: T(x) > \Phi^{-1}\left(1 - \frac{\alpha}{2}\right) \right\}.
+%
+\end{align*}
+
+\end{frame}
+
+
+\begin{frame}{What is a p-value?}
+
+\section{P-values}
+
+
+\textbf{Example 2.}
+%
+\begin{align*}
+%
+T(X) \sim{}& \mathrm{Uniform}[0,1]
+\quad\textrm{and}\quad
+A = \{x: T(x) < \alpha \}.
+%
+\end{align*}
+
+\end{frame}

@@ -1,0 +1,148 @@
+% Paper-specific math macros.
+
+
+% Operators
+\def\mbe{\mathbb{E}}%
+\def\ind#1{\mathbb{I}\left(#1\right)}
+\def\norm#1{\left\Vert #1\right\Vert }
+\def\evalat#1#2{\left.#1\right|_{#2}}
+\def\fracat#1#2#3{\left.\frac{#1}{#2}\right\vert_{#3}}
+\def\iid{\overset{iid}{\sim}}
+\def\indep{\overset{indep}{\sim}}
+%\def\argsup{\mathrm{argsup}\,}
+%\def\argmax{\mathrm{argmax}\,}
+\DeclareMathOperator*{\argmax}{\mathrm{argmax}}
+\DeclareMathOperator*{\argsup}{\mathrm{argsup}}
+\DeclareMathOperator*{\esssup}{\mathrm{esssup}}
+
+% Dimension of g(\theta)
+\def\gdim{D_g}
+
+% Expectation and centering
+\def\expect#1#2{\underset{#1}{\mathbb{E}}\left[#2\right]}
+%\def\cent#1#2{\underset{#1}{\mathbb{C}}\left[#2\right]}
+\def\cov#1#2{\underset{#1}{\mathrm{Cov}}\left(#2\right)}
+\def\var#1#2{\underset{#1}{\mathrm{Var}}\left(#2\right)}
+\def\covhat#1#2{\underset{#1}{\widehat{\mathrm{Cov}}}\left(#2\right)}
+\def\varhat#1#2{\underset{#1}{\widehat{\mathrm{Var}}}\left(#2\right)}
+
+\def\post{p(\theta | \xvec)}
+\def\postz{p(\theta, \z | \xvec)}
+\def\postpert#1{p(\theta | #1)}
+\def\postzpert#1{p(\theta, \z | #1)}
+\def\sumn{\sum_{n=1}^N}
+\def\meann{\frac{1}{N}\sum_{n=1}^N}
+\def\r{r}
+\def\y{y}
+\def\x{x}
+\def\xvec{X}
+\def\z{z}
+\def\w{w}
+\def\onevec{1_N}
+
+\def\fdist{\mathbb{F}}
+\def\xfdist{\xvec\iid\fdist}
+
+% von Mises stuff
+\def\gdist{\mathbb{G}}
+\def\fndist{\mathbb{F}_N}
+\def\fwdist{\mathbb{F}_{N}^{w}}
+\def\distdiff{\Delta}
+
+\def\thetadom{\Omega_\theta}
+\def\thetaball#1{B_{#1}}
+\def\deltaulln{\delta_{LLN}}
+
+% Information matrix stuff
+\def\info{\mathcal{I}}
+\def\infoev{\lambda_\mathcal{I}}
+\def\infoevhat{\hat{\lambda}_\mathcal{I}}
+\def\infohat{\hat{\mathcal{I}}}
+
+% Optima and related features of the log likelihood
+\def\scorecov{\Sigma}
+\def\scorecovhat{\hat\Sigma}
+\def\thetatrue{\theta_0}
+\def\thetahat{\hat\theta}
+\def\zhat{\hat\z}
+\def\thetatil{\tilde{\theta}}
+
+% BCLT residuals
+\def\resid#1{\mathscr{R}_{#1}}
+
+% Taylor series residual
+\def\tresid#1#2{\mathscr{T}_{(#1)}\left(#2\right)}
+
+% The regular event
+\def\regevent{\mathfrak{R}}
+
+% Covariances of g(\theta)
+\def\gcovtrue{V_{\fdist}}
+\def\gcovlim{V_{\infty}}
+\def\gcovmaphat{\hat{V}^{\mathrm{MAP}}}
+\def\gcovhat{\hat{V}_{\mathrm{CLT}}}
+\def\gcovij{V_{\mathrm{IJ}}}
+\def\gcovijhat{\hat{V}_{\mathrm{IJ}}}
+\def\gcovboothat{\hat{V}_{\mathrm{Boot}}}
+\def\gcovboot{V_{\mathrm{Boot}}}
+\def\gcovbayeshat{\hat{V}_{\mathrm{Bayes}}}
+\def\gcovbayes{V_{\mathrm{Bayes}}}
+
+% Influence function)
+\def\infl{\psi}
+\def\inflalt#1{\psi^{#1}}
+\def\inflx{\phi}
+\def\inflhat{\hat{\psi}}
+
+% Modes of convergence
+%\stackrel{p}{\rightarrow}
+\def\plim{\xrightarrow[N\rightarrow\infty]{prob}\,}
+\def\dlim{\xrightarrow[N\rightarrow\infty]{dist}\,}
+
+% Taylor expansion and gradient notation
+\def\ggrad#1{g_{(#1)}}
+\def\psigrad#1{\psi_{(#1)}}
+\def\ellgrad#1{\ell_{(#1)}}
+\def\phigrad#1{\phi_{(#1)}}
+\def\psigrad#1{\psi_{(#1)}}
+%\def\tgrad{T_{(1)}}
+\def\tgrad{\mathfrak{d}T}
+
+% Order notatoin
+\def\ord#1{O\left(#1\right)}
+\def\ordlog#1{\tilde{O}\left(#1\right)}
+\def\ordlogp#1{\tilde{O}_p\left(#1\right)}
+
+% Log likelihood
+\def\lik{\mathscr{L}}
+\def\likhat{\hat{\mathscr{L}}}
+\def\likk#1{\mathscr{L}_{(#1)}}
+\def\likhatk#1{\hat{\mathscr{L}}_{(#1)}}
+
+% Distributions and normals
+\def\prior{\pi}
+\def\logprior{\log\pi}
+\def\normdist{\mathcal{N}}
+\def\normhatarg#1{\hat{\mathcal{G}}(#1)}
+%\def\normhat{\hat{\mathcal{G}}(\tau)}
+\def\normresid#1#2{\mathcal{G}_{#1}^{#2}}
+\def\normhat{\normhatarg{\tau}}
+\def\normlim{\mathcal{G}(\tau)}
+\def\normalizer{\hat{Z}}  % Normalizing constant for the Normal approximation
+
+
+% Experiments and MCMC notation
+\def\thetadraw#1{\theta_{\cdot#1}}
+\def\zdraw#1{\z_{\cdot#1}}
+\def\seboot{\Xi^{\textrm{boot}}}
+\def\seijfreq{\Xi^{\textrm{IJ:freq}}}
+\def\seijmcmc{\Xi^{\textrm{IJ:mcmc}}}
+\def\seij{\Xi^{\textrm{IJ}}}
+\def\sebayes{\Xi^{\textrm{bayes}}}
+\def\zdiff{Z}
+\def\normdiffij{\Delta^{\mathrm{IJ}}}
+\def\normdiffbayes{\Delta^{\mathrm{Bayes}}}
+
+% Equation formatting
+\def\mathand{\quad\quad\textrm{and}\quad\quad}%
+\def\mathwhere{\quad\quad\textrm{where}\quad\quad}%
