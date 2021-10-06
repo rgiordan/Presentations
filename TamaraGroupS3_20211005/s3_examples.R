@@ -36,8 +36,17 @@ sloop::s3_get_method(print.data.frame)
 
 #################
 
-foo <- structure(list(foo=1:3, bar=c("a", "b")), class="FooType")
+
+
+foo <- structure(
+    list(foo=1:3, bar=c("a", "b")),
+    class="FooType")
+
+foo <- list(foo=1:3, bar=c("a", "b"))
+attr(foo, "class") <- "FooType"
+
 rm(print.FooType)
+
 print(foo)
 
 
@@ -55,10 +64,12 @@ foo_bad <- foo
 class(foo_bad) <- "data.frame"
 print(foo_bad)
 
+library(Matrix)
+s3_class(Matrix(c(1,1)))
+
 sloop::s3_dispatch(print(foo))
 sloop::s3_dispatch(print(df))
 sloop::s3_dispatch(print(structure(list(foo=1:3), class="BarType")))
-
 
 print.data.frame <- function(x) {
     cat("THIS IS A DATAFRAME", "\n")
@@ -75,7 +86,6 @@ rm(print.data.frame, envir=baseenv())
 
 
 #################
-
 
 new_FooType <- function(foo_content, bar_content) {
     structure(list(foo=foo_content, bar=bar_content), class="FooType") 
