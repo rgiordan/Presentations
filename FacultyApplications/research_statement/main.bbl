@@ -1,0 +1,277 @@
+\begin{thebibliography}{}
+
+\bibitem[Agarwal et~al., 2017]{agarwal:2017:secondorder}
+Agarwal, N., Bullins, B., and Hazan, E. (2017).
+\newblock Second-order stochastic optimization for machine learning in linear
+  time.
+\newblock {\em The Journal of Machine Learning Research}, 18(1):4148--4187.
+
+\bibitem[Angelucci and De~Giorgi, 2009]{angelucci:2009:indirect}
+Angelucci, M. and De~Giorgi, G. (2009).
+\newblock Indirect effects of an aid program: {How} do cash transfers affect
+  ineligibles' consumption?
+\newblock {\em American Economic Review}, 99(1):486--508.
+
+\bibitem[Angelucci et~al., 2015]{angelucci:2015:microcredit}
+Angelucci, M., Karlan, D., and Zinman, J. (2015).
+\newblock Microcredit impacts: {E}vidence from a randomized microcredit program
+  placement experiment by {C}ompartamos {B}anco.
+\newblock {\em American Economic Journal: Applied Economics}, 7(1):151--82.
+
+\bibitem[Baker et~al., 2019]{baker:2019:workshop}
+Baker, N., Alexander, F., Bremer, T., Hagberg, A., Kevrekidis, Y., Najm, H.,
+  Parashar, M., Patra, A., Sethian, J., Wild, S., Wilcox, K., and Lee, S.
+  (2019).
+\newblock Workshop report on basic research needs for scientific machine
+  learning: {C}ore technologies for artificial intelligence.
+\newblock Technical report, USDOE Office of Science (SC), Washington, DC
+  (United States).
+
+\bibitem[Basu, 2000]{Basu:2000:BNP_robustness}
+Basu, S. (2000).
+\newblock {B}ayesian robustness and {B}ayesian nonparametrics.
+\newblock In Insua, D.~R. and Ruggeri, F., editors, {\em Robust {Bayesian}
+  Analysis}, volume 152. Springer Science \& Business Media.
+
+\bibitem[Basu et~al., 1996]{basu:1996:local}
+Basu, S., Jammalamadaka, S.~R., and Liu, W. (1996).
+\newblock Local posterior robustness with parametric priors: {Maximum} and
+  average sensitivity.
+\newblock In {\em Maximum Entropy and {Bayesian} Methods}, pages 97--106.
+  Springer.
+
+\bibitem[Baydin et~al., 2017]{baydin:2015:automatic}
+Baydin, A., Pearlmutter, B., Radul, A., and Siskind, J. (2017).
+\newblock Automatic differentiation in machine learning: {A} survey.
+\newblock {\em Journal of Machine Learning Research}, 18(153):1--153.
+
+\bibitem[Berahas et~al., 2020]{berahas:2020:newtonsketch}
+Berahas, A., Bollapragada, R., and Nocedal, J. (2020).
+\newblock An investigation of {Newton}-sketch and subsampled {Newton} methods.
+\newblock {\em Optimization Methods and Software}, pages 1--20.
+
+\bibitem[Blei et~al., 2017]{blei:2017:variational}
+Blei, D., Kucukelbir, A., and McAuliffe, J. (2017).
+\newblock Variational inference: {A} review for statisticians.
+\newblock {\em Journal of the American Statistical Association},
+  112(518):859--877.
+
+\bibitem[Broderick et~al., 2020]{giordano:2020:amip}
+Broderick, T., Giordano, R., and Meager, R. (2020).
+\newblock An automatic finite-sample robustness metric: {Can} dropping a little
+  data change conclusions?
+\newblock {\em arXiv preprint arXiv:2011.14999}.
+\newblock Note: Following conventions in econometrics, the authors are listed
+  alphabetically. Giordano and Meager are equal contribution primary authors.
+
+\bibitem[Carpenter et~al., 2017]{carpenter:2017:stan}
+Carpenter, B., Gelman, A., Hoffman, M., Lee, D., Goodrich, B., Betancourt, M.,
+  Brubaker, M., Guo, J., Li, P., and Riddell, A. (2017).
+\newblock {S}tan: {A} probabilistic programming language.
+\newblock {\em Journal of statistical software}, 76(1).
+
+\bibitem[Carpenter et~al., 2015]{carpenter:2015:stanmath}
+Carpenter, B., Hoffman, M., Brubaker, M., Lee, D., Li, P., and Betancourt, M.
+  (2015).
+\newblock The {Stan} math library: {Reverse}-mode automatic differentiation in
+  {C++}.
+\newblock {\em arXiv preprint arXiv:1509.07164}.
+
+\bibitem[{Criteo Labs}, 2014]{criteo:2014:dataset}
+{Criteo Labs} (2014).
+\newblock Criteo conversion logs dataset.
+\newblock Downloaded on July 27th, 2017.
+
+\bibitem[Efron and Tibshirani, 1994]{efron:1994:bootstrap}
+Efron, B. and Tibshirani, R. (1994).
+\newblock {\em An Introduction to the Bootstrap}.
+\newblock CRC press.
+
+\bibitem[Finkelstein et~al., 2012]{finkelstein:2012:oregon}
+Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
+  J., Allen, H., Baicker, K., and {O}regon {H}ealth~{S}tudy {G}roup (2012).
+\newblock The {Oregon} health insurance experiment: {Evidence} from the first
+  year.
+\newblock {\em The Quarterly Journal of Economics}, 127(3):1057--1106.
+
+\bibitem[Gelman and Heidemanns, 2020]{economist:2020:election}
+Gelman, A. and Heidemanns, M. (2020).
+\newblock The {Economist}: {Forecasting} the {US} elections.
+\newblock Data and model accessed Oct., 2020.
+
+\bibitem[Gelman and Hill, 2006]{gelman:2006:arm}
+Gelman, A. and Hill, J. (2006).
+\newblock {\em Data analysis using regression and multilevel/hierarchical
+  models}.
+\newblock Cambridge University Press.
+
+\bibitem[Giordano, 2018]{giordano:2020:rstansensitivity}
+Giordano, R. (2018).
+\newblock {StanSensitivity}: {Automated} hyperparameter sensitivity for {Stan}
+  models.
+\newblock GitHub repository \url{https://github.com/rgiordan/StanSensitivity}.
+
+\bibitem[Giordano, 2020]{zaminfluence}
+Giordano, R. (2020).
+\newblock Zaminfluence.
+\newblock GitHub repository \url{https://github.com/rgiordan/zaminfluence}.
+
+\bibitem[Giordano and Broderick, 2020a]{giordano:2020:bayesij}
+Giordano, R. and Broderick, T. (2020a).
+\newblock The {B}ayesian infinitesimal jackknife for variance.
+\newblock {\em In preparation.}
+
+\bibitem[Giordano and Broderick, 2020b]{giordano:2020:stanconbayesij}
+Giordano, R. and Broderick, T. (2020b).
+\newblock Effortless frequentist covariances of posterior expectations in
+  {Stan}.
+\newblock Presentation at Stancon 2020 \url{https://tinyurl.com/y2e2ucp3}.
+
+\bibitem[Giordano et~al., 2018a]{giordano:2018:covariances}
+Giordano, R., Broderick, T., and Jordan, M. (2018a).
+\newblock Covariances, robustness and variational {B}ayes.
+\newblock {\em The Journal of Machine Learning Research}, 19(1):1981--2029.
+
+\bibitem[Giordano et~al., 2015]{giordano:2015:linear}
+Giordano, R., Broderick, T., and Jordan, M.~I. (2015).
+\newblock Linear response methods for accurate covariance estimates from mean
+  field variational {Bayes}.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  1441--1449.
+
+\bibitem[Giordano et~al., 2018b]{giordano:2018:mcmchyper}
+Giordano, R., Broderick, T., and Jordan, M.~I. (2018b).
+\newblock Automatic robustness measures in {Stan}.
+\newblock Presentation at Stancon 2018 \url{https://tinyurl.com/yyqwpowc}.
+
+\bibitem[Giordano et~al., 2019a]{giordano:2019:hoij}
+Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
+\newblock A higher-order {Swiss} army infinitesimal jackknife.
+\newblock {\em arXiv preprint arXiv:1907.12116}.
+
+\bibitem[Giordano et~al., 2018c]{giordano:2018:bnpsensitivity}
+Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018c).
+\newblock Evaluating sensitivity to the stick breaking prior in {B}ayesian
+  nonparametrics.
+\newblock {\em arXiv preprint arXiv:1810.06587}.
+
+\bibitem[Giordano et~al., 2019b]{giordano:2019:ij}
+Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
+  (2019b).
+\newblock A {S}wiss army infinitesimal jackknife.
+\newblock In {\em The 22nd International Conference on Artificial Intelligence
+  and Statistics}, pages 1139--1147.
+
+\bibitem[Gustafson, 1996]{gustafson:1996:localposterior}
+Gustafson, P. (1996).
+\newblock Local sensitivity of posterior expectations.
+\newblock {\em The Annals of Statistics}, 24(1):174--195.
+
+\bibitem[Hall, 2013]{hall:2013:bootstrap}
+Hall, P. (2013).
+\newblock {\em The Bootstrap and {Edgeworth} Expansion}.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Huang et~al., 2011]{huang:2011:haplotype}
+Huang, L., Jakobsson, M., Pemberton, T., Ibrahim, M., Nyambo, T., Omar, S.,
+  Pritchard, J., Tishkoff, S., and Rosenberg, N. (2011).
+\newblock Haplotype variation and genotype imputation in {A}frican populations.
+\newblock {\em Genetic epidemiology}, 35(8):766--780.
+
+\bibitem[Huggins and Miller, 2019]{huggins:2019:bayesbag}
+Huggins, J. and Miller, J. (2019).
+\newblock Using bagged posteriors for robust inference and model criticism.
+\newblock {\em arXiv preprint arXiv:1912.07104}.
+
+\bibitem[K{\'e}ry and Schaub, 2011]{kery:2011:bayesian}
+K{\'e}ry, M. and Schaub, M. (2011).
+\newblock {\em {Bayesian} population analysis using {WinBUGS}: {A} hierarchical
+  perspective}.
+\newblock Academic Press.
+
+\bibitem[Kleijn and van~der Vaart, 2006]{kleijn:2006:misspecification}
+Kleijn, B. and van~der Vaart, A. (2006).
+\newblock Misspecification in infinite-dimensional {B}ayesian statistics.
+\newblock {\em The Annals of Statistics}, 34(2):837--877.
+
+\bibitem[Kucukelbir et~al., 2017]{kucukelbir:2017:advi}
+Kucukelbir, A., Tran, D., Ranganath, R., Gelman, A., and Blei, D. (2017).
+\newblock Automatic differentiation variational inference.
+\newblock {\em The Journal of Machine Learning Research}, 18(1):430--474.
+
+\bibitem[Lang et~al., 2016]{lang:2016:tractor}
+Lang, D., Hogg, D., and Mykytyn, D. (2016).
+\newblock The {T}ractor: {P}robabilistic astronomical source detection and
+  measurement.
+\newblock {\em ascl}, pages ascl--1604.
+
+\bibitem[Liu et~al., 2020]{liu:2020:bnpjisba}
+Liu, R., Giordano, R., and Broderick, T. (2020).
+\newblock Evaluating sensitivity to the stick breaking prior in {Bayesian}
+  nonparametrics.
+\newblock Presentation at BAYESM:O 2020 \url{https://tinyurl.com/y2qgofgl}.
+
+\bibitem[Luan and Li, 2003]{Luan:2003:clustering}
+Luan, Y. and Li, H. (2003).
+\newblock Clustering of time-course gene expression data using a mixed-effects
+  model with {B}-splines.
+\newblock {\em Bioinformatics}, 19(4):474--482.
+
+\bibitem[Maclaurin et~al., 2017]{autograd}
+Maclaurin, D., Duvenaud, D., and Johnson, M. (2017).
+\newblock autograd.
+\newblock GitHub repository \url{https://github.com/HIPS/autograd}.
+
+\bibitem[Meager, 2019]{meager:2019:microcredit}
+Meager, R. (2019).
+\newblock Understanding the average impact of microcredit expansions: A
+  {B}ayesian hierarchical analysis of seven randomized experiments.
+\newblock {\em American Economic Journal: Applied Economics}, 11(1):57--91.
+
+\bibitem[Raj et~al., 2014]{raj:2014:faststructure}
+Raj, A., Stephens, M., and Pritchard, J. (2014).
+\newblock {fastSTRUCTURE}: {Variational} inference of population structure in
+  large {SNP} data sets.
+\newblock {\em Genetics}, 197(2):573--589.
+
+\bibitem[Regier et~al., 2019]{regier:2019:cataloging}
+Regier, J., Fischer, K., Pamnany, K., Noack, A., Revels, J., Lam, M., Howard,
+  S., Giordano, R., Schlegel, D., and McAuliffe, J. (2019).
+\newblock Cataloging the visible universe through {Bayesian} inference in
+  {Julia} at petascale.
+\newblock {\em Journal of Parallel and Distributed Computing}, 127:89--104.
+
+\bibitem[Shoemaker et~al., 2015]{shoemaker:2015:ultrasensitive}
+Shoemaker, J.~E., Fukuyama, S., Eisfeld, A.~J., Zhao, D., Kawakami, E., Sakabe,
+  S., Maemura, T., Gorai, T., Katsura, H., Muramoto, Y., Watanabe, S.,
+  Watanabe, T., Fuji, K., Matsuoka, Y., Kitano, H., and Kawaoka, Y. (2015).
+\newblock An ultrasensitive mechanism regulates influenza virus-induced
+  inflammation.
+\newblock {\em PLoS Pathogens}, 11(6):1--25.
+
+\bibitem[{Stan Development Team}, 2020]{rstan}
+{Stan Development Team} (2020).
+\newblock {RStan}: the {R} interface to {Stan}.
+\newblock R package version 2.21.2.
+
+\bibitem[Turner and Sahani, 2011]{turner:2011:two}
+Turner, R.~E. and Sahani, M. (2011).
+\newblock Two problems with variational expectation maximisation for
+  time-series models.
+\newblock In Barber, D., Cemgil, A.~T., and Chiappa, S., editors, {\em
+  {Bayesian} Time Series Models}.
+
+\bibitem[Waddell et~al., 2002]{waddell:2002:bayesphyloboot}
+Waddell, P., Kishino, H., and Ota, R. (2002).
+\newblock Very fast algorithms for evaluating the stability of {ML} and
+  {Bayesian} phylogenetic trees from sequence data.
+\newblock {\em Genome Informatics}, 13:82--92.
+
+\bibitem[Wang and Titterington, 2004]{wang:2005:inadequacy}
+Wang, B. and Titterington, M. (2004).
+\newblock Inadequacy of interval estimates corresponding to variational
+  {B}ayesian approximations.
+\newblock In {\em Workshop on Artificial Intelligence and Statistics}, pages
+  373--380.
+
+\end{thebibliography}
