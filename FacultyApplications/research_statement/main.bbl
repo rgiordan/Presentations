@@ -64,6 +64,12 @@ Broderick, T., Giordano, R., and Meager, R. (2020).
 \newblock Note: Following conventions in econometrics, the authors are listed
   alphabetically. Giordano and Meager are equal contribution primary authors.
 
+\bibitem[Burnham and Overton, 1978]{burnham:1978:jackknifebias}
+Burnham, K. and Overton, W. (1978).
+\newblock Estimation of the size of a closed population when capture
+  probabilities vary among animals.
+\newblock {\em Biometrika}, 65(3):625--633.
+
 \bibitem[Carpenter et~al., 2017]{carpenter:2017:stan}
 Carpenter, B., Gelman, A., Hoffman, M., Lee, D., Goodrich, B., Betancourt, M.,
   Brubaker, M., Guo, J., Li, P., and Riddell, A. (2017).
@@ -104,6 +110,12 @@ Gelman, A. and Hill, J. (2006).
 \newblock {\em Data analysis using regression and multilevel/hierarchical
   models}.
 \newblock Cambridge University Press.
+
+\bibitem[Gill et~al., 1989]{gill:1989:mises}
+Gill, R., Wellner, J., and Pr{\ae}stgaard, J. (1989).
+\newblock Non-and semi-parametric maximum likelihood estimators and the von
+  mises method (part 1).
+\newblock {\em Scandinavian journal of statistics}, pages 97--128.
 
 \bibitem[Giordano, 2018]{giordano:2020:rstansensitivity}
 Giordano, R. (2018).
@@ -172,6 +184,12 @@ Hall, P. (2013).
 \newblock {\em The Bootstrap and {Edgeworth} Expansion}.
 \newblock Springer Science \& Business Media.
 
+\bibitem[Hampel, 1986]{hampel:1986:robustbook}
+Hampel, F. (1986).
+\newblock {\em Robust statistics: {The} approach based on influence functions},
+  volume 196.
+\newblock Wiley-Interscience.
+
 \bibitem[Huggins and Miller, 2019]{huggins:2019:bayesbag}
 Huggins, J. and Miller, J. (2019).
 \newblock Using bagged posteriors for robust inference and model criticism.
@@ -193,12 +211,6 @@ Kucukelbir, A., Tran, D., Ranganath, R., Gelman, A., and Blei, D. (2017).
 \newblock Automatic differentiation variational inference.
 \newblock {\em The Journal of Machine Learning Research}, 18(1):430--474.
 
-\bibitem[Lang et~al., 2016]{lang:2016:tractor}
-Lang, D., Hogg, D., and Mykytyn, D. (2016).
-\newblock The {T}ractor: {P}robabilistic astronomical source detection and
-  measurement.
-\newblock {\em ascl}, pages ascl--1604.
-
 \bibitem[Luan and Li, 2003]{Luan:2003:clustering}
 Luan, Y. and Li, H. (2003).
 \newblock Clustering of time-course gene expression data using a mixed-effects
@@ -216,11 +228,22 @@ Meager, R. (2019).
   {B}ayesian hierarchical analysis of seven randomized experiments.
 \newblock {\em American Economic Journal: Applied Economics}, 11(1):57--91.
 
+\bibitem[Mises, 1947]{mises:1947:asymptotic}
+Mises, R. (1947).
+\newblock On the asymptotic distribution of differentiable statistical
+  functions.
+\newblock {\em The Annals of Mathematical Statistics}, 18(3):309--348.
+
 \bibitem[Raj et~al., 2014]{raj:2014:faststructure}
 Raj, A., Stephens, M., and Pritchard, J. (2014).
 \newblock {fastSTRUCTURE}: {Variational} inference of population structure in
   large {SNP} data sets.
 \newblock {\em Genetics}, 197(2):573--589.
+
+\bibitem[Reeds, 1976]{reeds:1976:thesis}
+Reeds, J. (1976).
+\newblock {\em On the definition of von {Mises} functionals}.
+\newblock PhD thesis, Ph. D. Thesis, Statistics, Harvard University.
 
 \bibitem[Regier et~al., 2019]{regier:2019:cataloging}
 Regier, J., Fischer, K., Pamnany, K., Noack, A., Revels, J., Lam, M., Howard,
@@ -228,6 +251,16 @@ Regier, J., Fischer, K., Pamnany, K., Noack, A., Revels, J., Lam, M., Howard,
 \newblock Cataloging the visible universe through {Bayesian} inference in
   {Julia} at petascale.
 \newblock {\em Journal of Parallel and Distributed Computing}, 127:89--104.
+
+\bibitem[Serfling, 2009]{serfling:2009:approximation}
+Serfling, R. (2009).
+\newblock {\em Approximation theorems of mathematical statistics}, volume 162.
+\newblock John Wiley \& Sons.
+
+\bibitem[Shao and Tu, 2012]{shao:2012:jackknife}
+Shao, J. and Tu, D. (2012).
+\newblock {\em The Jackknife and Bootstrap}.
+\newblock Springer Series in Statistics.
 
 \bibitem[Shoemaker et~al., 2015]{shoemaker:2015:ultrasensitive}
 Shoemaker, J.~E., Fukuyama, S., Eisfeld, A.~J., Zhao, D., Kawakami, E., Sakabe,

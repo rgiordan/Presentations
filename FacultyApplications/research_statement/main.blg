@@ -2,51 +2,63 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 119 of file main.aux
+Illegal, another \bibstyle command---line 133 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
+Repeated entry---line 975 of file references.bib
+ : @article{mises:1947:asymptotic
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 986 of file references.bib
+ : @phdthesis{reeds:1976:thesis
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1065 of file references.bib
+ : @book{shao:2012:jackknife
+ :                          ,
+I'm skipping whatever remains of this entry
 Warning--empty publisher in turner:2011:two
-You've used 44 entries,
+You've used 50 entries,
             1935 wiz_defined-function locations,
-            711 strings with 11901 characters,
-and the built_in function-call counts, 18307 in all, are:
-= -- 1768
-> -- 918
-< -- 27
-+ -- 341
-- -- 315
-* -- 1559
-:= -- 3227
-add.period$ -- 135
-call.type$ -- 44
-change.case$ -- 372
-chr.to.int$ -- 42
-cite$ -- 45
-duplicate$ -- 652
-empty$ -- 1151
-format.name$ -- 383
-if$ -- 3520
+            745 strings with 12708 characters,
+and the built_in function-call counts, 20158 in all, are:
+= -- 1947
+> -- 972
+< -- 35
++ -- 357
+- -- 331
+* -- 1705
+:= -- 3566
+add.period$ -- 153
+call.type$ -- 50
+change.case$ -- 406
+chr.to.int$ -- 48
+cite$ -- 51
+duplicate$ -- 730
+empty$ -- 1292
+format.name$ -- 409
+if$ -- 3874
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 39
-newline$ -- 224
-num.names$ -- 136
-pop$ -- 338
+missing$ -- 47
+newline$ -- 254
+num.names$ -- 154
+pop$ -- 372
 preamble$ -- 1
-purify$ -- 375
+purify$ -- 413
 quote$ -- 0
-skip$ -- 504
+skip$ -- 562
 stack$ -- 0
-substring$ -- 1135
-swap$ -- 90
-text.length$ -- 7
+substring$ -- 1244
+swap$ -- 94
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 256
+type$ -- 286
 warning$ -- 1
-while$ -- 140
+while$ -- 156
 width$ -- 0
-write$ -- 559
-(There was 1 error message)
+write$ -- 636
+(There were 4 error messages)
