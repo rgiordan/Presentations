@@ -116,16 +116,16 @@ Giordano, R. (2020).
 \newblock Zaminfluence.
 \newblock GitHub repository \url{https://github.com/rgiordan/zaminfluence}.
 
-\bibitem[Giordano and Broderick, 2020a]{giordano:2020:bayesij}
-Giordano, R. and Broderick, T. (2020a).
-\newblock The {B}ayesian infinitesimal jackknife for variance.
-\newblock {\em In preparation.}
-
-\bibitem[Giordano and Broderick, 2020b]{giordano:2020:stanconbayesij}
-Giordano, R. and Broderick, T. (2020b).
+\bibitem[Giordano and Broderick, 2020]{giordano:2020:stanconbayesij}
+Giordano, R. and Broderick, T. (2020).
 \newblock Effortless frequentist covariances of posterior expectations in
   {Stan}.
 \newblock Presentation at Stancon 2020 \url{https://tinyurl.com/y2e2ucp3}.
+
+\bibitem[Giordano and Broderick, 2021]{giordano:2021:bayesij}
+Giordano, R. and Broderick, T. (2021).
+\newblock The {B}ayesian infinitesimal jackknife for variance.
+\newblock {\em In preparation.}
 
 \bibitem[Giordano et~al., 2018a]{giordano:2018:covariances}
 Giordano, R., Broderick, T., and Jordan, M. (2018a).
@@ -149,11 +149,11 @@ Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
 \newblock A higher-order {Swiss} army infinitesimal jackknife.
 \newblock {\em arXiv preprint arXiv:1907.12116}.
 
-\bibitem[Giordano et~al., 2018c]{giordano:2018:bnpsensitivity}
-Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2018c).
+\bibitem[Giordano et~al., 2021]{giordano:2021:bnpsensitivity}
+Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2021).
 \newblock Evaluating sensitivity to the stick breaking prior in {B}ayesian
   nonparametrics.
-\newblock {\em arXiv preprint arXiv:1810.06587}.
+\newblock {\em https://arxiv.org/abs/2107.03584}.
 
 \bibitem[Giordano et~al., 2019b]{giordano:2019:ij}
 Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
@@ -171,12 +171,6 @@ Gustafson, P. (1996).
 Hall, P. (2013).
 \newblock {\em The Bootstrap and {Edgeworth} Expansion}.
 \newblock Springer Science \& Business Media.
-
-\bibitem[Huang et~al., 2011]{huang:2011:haplotype}
-Huang, L., Jakobsson, M., Pemberton, T., Ibrahim, M., Nyambo, T., Omar, S.,
-  Pritchard, J., Tishkoff, S., and Rosenberg, N. (2011).
-\newblock Haplotype variation and genotype imputation in {A}frican populations.
-\newblock {\em Genetic epidemiology}, 35(8):766--780.
 
 \bibitem[Huggins and Miller, 2019]{huggins:2019:bayesbag}
 Huggins, J. and Miller, J. (2019).
@@ -204,12 +198,6 @@ Lang, D., Hogg, D., and Mykytyn, D. (2016).
 \newblock The {T}ractor: {P}robabilistic astronomical source detection and
   measurement.
 \newblock {\em ascl}, pages ascl--1604.
-
-\bibitem[Liu et~al., 2020]{liu:2020:bnpjisba}
-Liu, R., Giordano, R., and Broderick, T. (2020).
-\newblock Evaluating sensitivity to the stick breaking prior in {Bayesian}
-  nonparametrics.
-\newblock Presentation at BAYESM:O 2020 \url{https://tinyurl.com/y2qgofgl}.
 
 \bibitem[Luan and Li, 2003]{Luan:2003:clustering}
 Luan, Y. and Li, H. (2003).

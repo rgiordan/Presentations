@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  8 OCT 2021 13:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  11 OCT 2021 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**diversity_statement.tex
+**diversity_statement
 (./diversity_statement.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (./_headers.tex
@@ -624,15 +624,15 @@ LaTeX Info: Redefining \Ref on input line 18.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(101.17755pt, 411.9399pt, 101.17755pt)
-* v-part:(T,H,B)=(65.04256pt, 634.53006pt, 95.39737pt)
+* h-part:(L,W,R)=(93.95122pt, 426.39256pt, 93.95122pt)
+* v-part:(T,H,B)=(50.58878pt, 648.98384pt, 95.39737pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=411.9399pt
-* \textheight=634.53006pt
-* \oddsidemargin=28.90756pt
-* \evensidemargin=28.90756pt
-* \topmargin=-44.22743pt
+* \textwidth=426.39256pt
+* \textheight=648.98384pt
+* \oddsidemargin=21.68123pt
+* \evensidemargin=21.68123pt
+* \topmargin=-58.68121pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -660,35 +660,34 @@ Overfull \hbox (17.2222pt too wide) in paragraph at lines 20--30
 [][] [] 
  []
 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 
 (./diversity_statement.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `diversity_statement.out' has not changed.
-(rerunfilecheck)             Checksum: B897894F96ACFF9E7132AB37CFDECE07;103.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11589 strings out of 483065
- 172109 string characters out of 5963550
- 499944 words of memory out of 5000000
- 26391 multiletter control sequences out of 15000+600000
- 535445 words of font info for 51 fonts, out of 8000000 for 9000
+ 11558 strings out of 483065
+ 171786 string characters out of 5963550
+ 499939 words of memory out of 5000000
+ 26381 multiletter control sequences out of 15000+600000
+ 533864 words of font info for 39 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 37i,5n,47p,805b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on diversity_statement.pdf (2 pages, 58503 bytes).
+ 37i,5n,47p,801b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on diversity_statement.pdf (1 page, 57826 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 6673 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 3585 words of extra memory for PDF output out of 10000 (max. 10000000)
 

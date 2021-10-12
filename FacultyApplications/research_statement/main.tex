@@ -4,9 +4,9 @@
 
 \usepackage{geometry}
 %\geometry{margin=1.2in}
-\geometry{top=0.9in}
-\geometry{left=1.4in}
-\geometry{right=1.4in}
+\geometry{top=0.8in}
+\geometry{left=1.2in}
+\geometry{right=1.2in}
 
 \title{Ryan Giordano Research Statement}
 
@@ -37,26 +37,24 @@ social sciences, for example.  Nevertheless, analysts do not routinely check
 whether ablation of such a small set could overturn their results, in part
 because the number of possible subsets containing 0.1\% of the data points is
 combinatorially large.
-% To find the worst-case subset of a given size that, when
-% removed, induces the largest change in a statistical estimate is, in general, a
-% difficult discrete optimization problem.
 
-In \citet{zaminfluence} and \citet{giordano:2020:amip}, I identify problematic
-subsets of the data using {\em sensitivity analysis}---that is, by forming a
-linear approximation to how a wide class of statistical estimators depend on
-their datasets.  The key idea is that, although there are a very large number of
-subsets containing 0.1\% of the data points, none of them are very different
-from the original dataset, and so we expect the linear approximation to work
-well.  I confirm this intuition with finite-sample accuracy bounds in terms of
-intuitive and verifiable assumptions.  I provide an \texttt{R} package
-\citep{zaminfluence} to compute the approximation quickly and automatically
-using automatic differentiation \citep{baydin:2015:automatic, autograd}.  And,
-with my co-authors, I show that the approximation is capable of detecting
-meaningful non-robustness in several published econometrics analyses. For
-example, in a study of microcredit in Mexico \citep{angelucci:2015:microcredit},
-we find that, by removing just 15 households out of 16,561 studied (a change of
-less than 0.1\%), the estimated effect of microcredit changes from negative and
-statistically insignificant to positive and statistically significant.
+In \citet{giordano:2020:amip} (the author order is alphabetical; I am a lead
+author), I identify problematic subsets of the data using {\em sensitivity
+analysis}---that is, by forming a linear approximation to how a wide class of
+statistical estimators depend on their datasets.  The key idea is that, although
+there are a very large number of subsets containing 0.1\% of the data points,
+none of them are very different from the original dataset, and so we expect the
+linear approximation to work well.  I confirm this intuition with finite-sample
+accuracy bounds in terms of intuitive and verifiable assumptions.  I provide an
+\texttt{R} package \citep{zaminfluence} to compute the approximation quickly and
+automatically using automatic differentiation \citep{baydin:2015:automatic,
+autograd}.  And, with my co-authors, I show that the approximation is capable of
+detecting meaningful non-robustness in several published econometrics analyses.
+For example, in a study of microcredit in Mexico
+\citep{angelucci:2015:microcredit}, we find that, by removing just 15 households
+out of 16,561 studied (a change of less than 0.1\%), the estimated effect of
+microcredit changes from negative and statistically insignificant to positive
+and statistically significant.
 
 In fact, my research shows that many standard, computationally demanding data
 analysis tasks are also amenable to fast, automatic approximation using
@@ -79,16 +77,19 @@ computational cost of evaluating even a single posterior approximation.  By
 forming a Taylor series approximation to the dependence of the posterior mean on
 the prior, I can explore the consequences of alternative prior functional forms
 at a small fraction of the cost of exact re-fitting
-\citep{giordano:2018:bnpsensitivity, giordano:2020:rstansensitivity}.
+\citep{giordano:2020:rstansensitivity, giordano:2021:bnpsensitivity}.
 %
-\item Evaluating the frequentist variability of Bayesian estimators formed using
-Markov Chain Monte Carlo (MCMC) can be particularly important when there is
-concern about model misspecification.  This frequentist variability can be
-evaluated by the bootstrap, but at the considerable cost of re-running the MCMC
-chain hundreds of times.  By approximating the dependence of the posterior on
-the data with sensitivity analysis, I compute consistent estimates of the
-frequentist variance using only a single MCMC chain---orders of magnitude faster
-than the bootstrap \citep{giordano:2020:stanconbayesij}.
+\item When analyzing randomly sampled data using possibly misspecified Bayesian
+posteriors, frequentist variability in excess of posterior variability is
+symptomatic of \emph{data non-robustness}. For example, one might worry that a
+new random sample of poll respondents in the presidential forecast model of
+\citet{economist:2020:election} would lead to a different prediction.  This
+frequentist variability can be evaluated by the bootstrap, but at the
+considerable cost of re-running Markov Chain Monte Carlo (MCMC) hundreds of
+times.  By approximating the dependence of the posterior on the data with
+sensitivity analysis, I compute accurate estimates of the frequentist variance
+using only a single MCMC chain---orders of magnitude faster than the bootstrap
+\citep{giordano:2020:stanconbayesij}.
 %
 \item Mean field variational Bayes (MFVB) is a popular posterior approximation
 method for Bayesian problems which are too large to be tractable by Markov Chain
@@ -116,14 +117,12 @@ assess the sensitivity of statistical analyses to the removal of a small
 fraction of the sample. Analyzing all possible data subsets of a certain size is
 computationally prohibitive, so I provide a finite-sample metric to
 approximately compute the number (or fraction) of observations that has the
-greatest influence on a given result when dropped. I provide explicit
-finite-sample error bounds on my approximation for linear and instrumental
-variables regressions. At minimal computational cost, the metric provides an
-exact finite-sample lower bound on sensitivity for any estimator, so any
-non-robustness my metric finds is conclusive. I demonstrate that non-robustness
-to data ablation is driven by a low signal-to-noise ratio in the inference
-problem, is not reflected in standard errors, does not disappear asymptotically,
-and is not inherently a product of outliers or misspecification.
+greatest influence on a given result when dropped.  At minimal computational
+cost, our method provides an exact finite-sample lower bound on sensitivity for
+any estimator, so any non-robustness one finds is conclusive. I demonstrate that
+non-robustness to data ablation is driven by a low signal-to-noise ratio in the
+inference problem, is not reflected in standard errors, does not disappear
+asymptotically, and is not inherently a product of outliers or misspecification.
 
 The approximation works for Z-estimators based on smooth estimating equations, a
 class which includes ordinary least squares, instrumental variables, generalized
@@ -159,8 +158,6 @@ datasets, including an unsupervised clustering problem from genomics
 \citep{Luan:2003:clustering, shoemaker:2015:ultrasensitive}.
 
 
-
-
 \subsection*{Approximately bootstrapping Bayesian posterior means.}
 
 The frequentist (i.e., sampling) variance of Bayesian posterior expectations
@@ -174,7 +171,7 @@ for computing the frequentist variability of MCMC procedures is the bootstrap,
 which can be extremely computationally intensive due to the need to run hundreds
 of extra MCMC procedures \citep{huggins:2019:bayesbag}.
 
-In \citet{giordano:2020:bayesij, giordano:2020:stanconbayesij}, I propose an
+In \citet{giordano:2021:bayesij, giordano:2020:stanconbayesij}, I propose an
 efficient alternative to bootstrapping an MCMC procedure.  My approach is based
 on the Bayesian analogue of the influence function from the classical
 frequentist robustness literature.  Using results from
@@ -187,9 +184,8 @@ forecasting model \citep{economist:2020:election}, the Cormack-Jolly-Seber model
 from ecology \citep{kery:2011:bayesian}, and a large collection of models and
 datasets from the social sciences \citep{gelman:2006:arm}.
 
-\subsection*{Bayesian prior sensitivity.}
-
-
+\clearpage
+\subsection*{Bayesian sensitivity analysis.}
 
 \paragraph{Prior sensitivity for Markov Chain Monte Carlo.}
 
@@ -216,31 +212,29 @@ particularly in a social sciences model taken from \citet[Chapter
 
 % From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
 A central question in many probabilistic clustering problems is how many
-distinct clusters are present in a particular dataset. Discrete Bayesian
-nonparametric (BNP) mixture models address this question by placing a generative
-process on cluster assignment, making the number of distinct clusters present
-amenable to Bayesian inference.  However, like all Bayesian approaches, BNP
-requires the specification of a prior, and this prior may favor a greater or
-lesser number of distinct clusters.
-% In practice, it is important to quantitatively establish that
-% the prior is not too informative, particularly when---as is often the case in
-% BNP---the particular form of the prior is chosen for mathematical convenience
-% rather than because of a considered subjective belief.
+distinct clusters are present in a particular dataset and which observations
+cluster together. Discrete Bayesian nonparametric (BNP) mixture models address
+this question by placing a generative process on cluster assignment, making the
+number of distinct clusters present amenable to Bayesian inference.  However,
+like all Bayesian approaches, BNP requires the specification of a prior, and
+this prior may favor a greater or lesser number of distinct clusters.
 
-In \citet{giordano:2018:bnpsensitivity}, I derive prior sensitivity measures for
-a truncated variational Bayes approximation using ideas from
-\citep{gustafson:1996:localposterior, giordano:2018:covariances}. Unlike
-previous work on local Bayesian sensitivity for BNP
-\citep{Basu:2000:BNP_robustness}, I pay special attention to the ability of the
-sensitivity measures to \emph{extrapolate} to different priors, rather than
-treating the sensitivity as a measure of robustness \textit{per se}. In work
-currently in progress \citep{liu:2020:bnpjisba}, my co-authors and I apply the
-approximation from \citep{giordano:2018:bnpsensitivity} to an unsupervised
-clustering problem on a human genome dataset \citep{huang:2011:haplotype,
-raj:2014:faststructure}, demonstrating that the approximate is accurate, orders
-of magnitude faster than re-fitting, and capable of detecting meaningful prior
-sensitivity.
-
+In \citet{giordano:2021:bnpsensitivity}, I derive and analyze prior sensitivity
+measures for variational Bayes approximations in general, with a focus on
+discrete BNP models. Unlike much previous work on local Bayesian sensitivity for
+BNP (e.g. \citet{Basu:2000:BNP_robustness}), I pay special attention to the
+ability of the sensitivity measures to \emph{extrapolate} to different priors,
+rather than treating the sensitivity as a measure of robustness \textit{per se}.
+Further, though there are many valid choices for measuring the ``size'' of a
+prior perturbation for exact Bayesian posteriors
+\citep{gustafson:1996:localposterior}, I prove that, for variational Bayes
+approximations, local approximations are valid only when based on the largest
+point-wise change in the log density.  My co-authors and I apply our sensitivity
+measures to a number of real-world problems, including an unsupervised
+clustering problem from genomics using fastSTRUCTURE
+\citep{raj:2014:faststructure}, demonstrating that the approximation is
+accurate, orders of magnitude faster than re-fitting, and capable of detecting
+meaningful prior sensitivity.
 
 \subsection*{Uncertainty propagation in mean-field variational Bayes.}
 
@@ -253,12 +247,12 @@ variances and covariances \citep{wang:2005:inadequacy, turner:2011:two} due to
 its inability to propagate Bayesian uncertainty between statistical parameters.
 
 In \citet{giordano:2015:linear, giordano:2018:covariances}, I derive a simple
-formula for the effect of infinitesimal model perturbations on MFVB posterior
-means, thus providing improved covariance estimates and greatly expanding the
-practical usefulness of MFVB posterior approximations. The estimates for MFVB
-posterior covariances rely on a result from the classical Bayesian robustness
-literature that relates derivatives of posterior expectations to posterior
-covariances and includes the Laplace approximation as a special case.
+formula for the effect of infinitesimal perturbations on MFVB posterior means,
+thus providing improved covariance estimates and greatly expanding the practical
+usefulness of MFVB posterior approximations. The estimates for MFVB posterior
+covariances rely on a result from the classical Bayesian robustness literature
+that relates derivatives of posterior expectations to posterior covariances and
+includes the Laplace approximation as a special case.
 % The key condition is that the MFVB
 % approximation provides good estimates of a select subset of posterior means---an
 % assumption that has been shown to hold in many practical settings.
@@ -276,6 +270,7 @@ models from ecology \citep{kery:2011:bayesian}, the social sciences
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage
 
+\clearpage
 \subsection*{Selected Future work}
 
 My research is ideally driven by the needs of my scientific and industry
@@ -302,36 +297,6 @@ differentiable but too expensive to re-evaluate (e.g. simulation-based models
 bootstrap-after-bootstrap procedures that are currently out of reach for
 all but the simplest statistics \citep{efron:1994:bootstrap}.
 
-
-% \paragraph{Sensitivity for non-differentiable preprocessing.}
-%
-% Analyses in genomics often begin with a pre-processing step in observation units
-% are clustered together according to ad-hoc measures of similarity across a large
-% number of feature vectors \citep{xu:2015:identification,
-% stuart:2019:comprehensive}.  Quickly assessing the sensitivity of such
-% procedures to the inclusion or exclusion of individual features would allow the
-% researcher to identify high-leverage observations and avoid imposing structure
-% via arbitrary modeling assumptions.  However, ordinary sensitivity analysis
-% cannot be applied directly to the clustering step, which is typically
-% non-differentiable.  With a colleague from biology, I am currently investigating
-% an importance sampling technique that would allow us to apply sensitivity
-% analysis using a continuous relaxation only of the distance measure, while
-% retaining the non-differentiable clustering step. Ideally, this sensitivity
-% analysis would allow for quick exploration of the high-dimensional space of
-% feature inclusion, similar to our work in \citet{giordano:2020:amip}.
-
-% With a colleague from biology, I am currently investigating a technique that
-% would use importance sampling to compute the sensitivity of such a
-% non-differentiable pre-processing step.  We first form a probabilistic
-% relaxation only of the similarity measures, and then run the non-differentiable
-% clustering for an ensemble of Monte Carlo samples of the similarities.  Removing
-% a feature would change the probabilities of the similarity measure draws.  By
-% differentiating the importance sampling estimate of the effect of the changing
-% probabilities, we can form black-box sensitivity measures with little extra
-% computation other than clustering the original similarity ensemble.  Ideally,
-% this sensitivity analysis would allow for quick exploration of the
-% high-dimensional space of feature inclusion, similar to our work in
-% \citet{giordano:2020:amip}.
 
 \paragraph{Scaling sensitivity measures to high dimensions.}
 
