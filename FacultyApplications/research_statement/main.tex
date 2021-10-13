@@ -275,9 +275,17 @@ models from ecology \citep{kery:2011:bayesian}, the social sciences
 
 My research is ideally driven by the needs of my scientific and industry
 collaborators, and so I expect my future work will be determined to a large part
-by my colleagues.  However, I will now discuss a few
-general directions that I find promising and interesting, and which I believe
-could be applicable to a diverse set of problems.
+by my colleagues, and so inherently difficult to predict in advance.
+Additionally, many of my existing papers can be easily ``crossed'' with one
+another, producing relatively straightforward projects suitable for more junior
+researchers.  For example, by combining the Bayesian influence function of
+\citet{giordano:2021:bayesij} with the adversarial data ablation metrics of
+\citet{giordano:2020:amip}, one can automatically find influential data subsets
+from MCMC output.  (I am presently pursuing this idea with the \texttt{R}
+package \texttt{rstanarm} together with a PhD student.)
+
+That aside, there are a few interesting directions that I find promising
+and interesting.
 
 
 \paragraph{The empirical influence function (EIF).}
@@ -323,50 +331,61 @@ but which are combinatorially difficult to compute in all but special
 circumstances \citep{burnham:1978:jackknifebias}.
 
 
+\paragraph{Sensitivity analysis in difficult situations.}
 
-%
-% \paragraph{The higher-order infinitesimal jackknife for the bootstrap.}
-%
-% In the preprint \citet{giordano:2019:hoij}, I extend \citet{giordano:2019:ij} to
-% higher-order Taylor series approximations, providing a family of estimators
-% which I collectively call the higher-order infinitesimal jackknife (HOIJ).  In
-% addition to providing higher-quality approximations to CV and extending the
-% results to k-fold CV, the higher-order approach promises to provide a scalable
-% alternative to the bootstrap, a procedure that estimates frequentist variability
-% by repeatedly re-evaluating a model at datasets drawn with replacement from the
-% observed data. The bootstrap is known to enjoy higher-order accuracy in certain
-% circumstances \citep{hall:2013:bootstrap}, and the HOIJ can approach the
-% bootstrap at a rate faster than the bootstrap approaches the truth.  The HOIJ
-% thus promises to make bootstrap inference available to models which are
-% differentiable but too expensive to re-evaluate (e.g. simulation-based models
-% \citep[Section 2.6]{baker:2019:workshop}), but also to allow efficient
-% bootstrap-after-bootstrap procedures that are currently out of reach for
-% all but the simplest statistics \citep{efron:1994:bootstrap}.
+It is not always as easy to apply sensitivity analysis in practice as it is in
+theory.  I have found that a few key problems tend to recur, and I will discuss
+them in turn, as well as potential solutions which draw connections to the
+optimization literature.
+% %
+\begin{itemize}
+    %
+    \item Non-smooth objectives (e.g., the lasso penalty),
+    \item Incomplete optimization, and / or
+    \item Large and / or difficult to compute matrices of second derivatives.
+    %
+\end{itemize}
+% %
+% To some extent, high dimensionality and complex models can exacerbate all
+% of these problems, rendering sensitivity analysis most difficult precisely when
+% it is needed the most.
 
+For non-smooth objectives, a promising idea is to use local approximations to
+speed up computationally intensive but smooth components in non-smooth problems.
+Consider, for example, cross-validating linear regression with a lasso penalty:
+the optimal squared error is a smooth function and the lasso penalty is
+non-smooth. As observed by \citet{wilson:2020:approximatecv}, one can then form
+a fast approximation to the cross-validated loss by forming a fast approximation
+to the effect on the optimal squared error of leaving out a single datapoint,
+and retaining non-smoothness in the lasso penalty intact.
 
-\paragraph{Scaling sensitivity measures to high dimensions.}
+A collaborator from biostatistics is currently working with me to apply my work
+in \citet{giordano:2020:amip} to single-cell sequencing data in hopes of
+flagging small groups of highly influential cells.  Careful analysis of the
+output of the \texttt{R} package \texttt{DESeq2} \citep{deseq2} shows that the
+package's iteratively reweighted least squares algorithm may not be finding a
+high-quality optimum of the objective function.  The ``sensitivity'' of
+incomplete optimization is not well-defined, but we ideally do not want to
+require end-users to to re-implement their optimization algorithm to use
+sensitivity analysis.  One potential solution using higher-order expansions
+could be to represent incomplete optimization as a constrained optimization
+problem in which the gradient is set not to zero, but to the value numerically
+observed in the incomplete optimization.  Representing the constraint with a
+Lagrange multiplier, one can then use a second-order expansion to estimate the
+effect of simultaneously removing the constraint (setting the multiplier to
+zero) and perturbing the objective (e.g., removing some data).
 
-Sensitivity analysis typically avoids the expense of re-fitting a model, but
-incurs the expense of solving a large linear system, the size of which is
-determined by the dimensionality of the inferred parameter.  Thus, extending the
-benefits of the sensitivity analysis to increasingly large scientific problems
-requires developing methods to efficiently solve correspondingly large linear
-systems. Stochastic second-order methods are currently an active research topic
-in optimization \citep{agarwal:2017:secondorder, berahas:2020:newtonsketch}, and
-methods developed therein should apply directly to sensitivity analysis.
-
-
-
-\paragraph{Intersecting existing work.}
-
-Much of my existing papers can be easily ``crossed'' with one another, producing
-relatively straightforward projects suitable for more junior researchers.  For
-example, by combining the Bayesian influence function of
-\citet{giordano:2021:bayesij} with the adversarial data ablation metrics of
-\citet{giordano:2020:amip}, one can automatically find influential data subsets
-from MCMC output.  (I am presently pursuing this idea with the \texttt{R}
-package \texttt{rstanarm} together with a PhD student.)
-
+Finally, the key computational bottleneck in sensitivity analysis for
+M-estimators is the solution of linear systems involving the inverse Hessian of
+the objective function.  Indeed, as I show in \citet{giordano:2019:hoij},
+influence functions of all orders share essentially the same bottleneck. When
+the Hessian matrix is too large to store in memory (much less factorize), I have
+gotten good results using off-the-shelf iterative algorithms like the
+conjugate-gradient algorithm \citep{nocedal:2006:numerical}, but there is surely
+more work to be done speeding up this step of the procedure.  Stochastic
+second-order methods are currently an active research topic in optimization
+\citep{agarwal:2017:secondorder, berahas:2020:newtonsketch}, and methods
+developed therein should apply directly to sensitivity analysis.
 
 \newpage
 

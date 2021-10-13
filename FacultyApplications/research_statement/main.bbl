@@ -18,15 +18,6 @@ Angelucci, M., Karlan, D., and Zinman, J. (2015).
   placement experiment by {C}ompartamos {B}anco.
 \newblock {\em American Economic Journal: Applied Economics}, 7(1):151--82.
 
-\bibitem[Baker et~al., 2019]{baker:2019:workshop}
-Baker, N., Alexander, F., Bremer, T., Hagberg, A., Kevrekidis, Y., Najm, H.,
-  Parashar, M., Patra, A., Sethian, J., Wild, S., Wilcox, K., and Lee, S.
-  (2019).
-\newblock Workshop report on basic research needs for scientific machine
-  learning: {C}ore technologies for artificial intelligence.
-\newblock Technical report, USDOE Office of Science (SC), Washington, DC
-  (United States).
-
 \bibitem[Basu, 2000]{Basu:2000:BNP_robustness}
 Basu, S. (2000).
 \newblock {B}ayesian robustness and {B}ayesian nonparametrics.
@@ -87,11 +78,6 @@ Carpenter, B., Hoffman, M., Brubaker, M., Lee, D., Li, P., and Betancourt, M.
 {Criteo Labs} (2014).
 \newblock Criteo conversion logs dataset.
 \newblock Downloaded on July 27th, 2017.
-
-\bibitem[Efron and Tibshirani, 1994]{efron:1994:bootstrap}
-Efron, B. and Tibshirani, R. (1994).
-\newblock {\em An Introduction to the Bootstrap}.
-\newblock CRC press.
 
 \bibitem[Finkelstein et~al., 2012]{finkelstein:2012:oregon}
 Finkelstein, A., Taubman, S., Wright, B., Bernstein, M., Gruber, J., Newhouse,
@@ -179,11 +165,6 @@ Gustafson, P. (1996).
 \newblock Local sensitivity of posterior expectations.
 \newblock {\em The Annals of Statistics}, 24(1):174--195.
 
-\bibitem[Hall, 2013]{hall:2013:bootstrap}
-Hall, P. (2013).
-\newblock {\em The Bootstrap and {Edgeworth} Expansion}.
-\newblock Springer Science \& Business Media.
-
 \bibitem[Hampel, 1986]{hampel:1986:robustbook}
 Hampel, F. (1986).
 \newblock {\em Robust statistics: {The} approach based on influence functions},
@@ -211,6 +192,12 @@ Kucukelbir, A., Tran, D., Ranganath, R., Gelman, A., and Blei, D. (2017).
 \newblock Automatic differentiation variational inference.
 \newblock {\em The Journal of Machine Learning Research}, 18(1):430--474.
 
+\bibitem[Love et~al., 2014]{deseq2}
+Love, M., Huber, W., and Anders, S. (2014).
+\newblock Moderated estimation of fold change and dispersion for {RNA-seq} data
+  with {DESeq2}.
+\newblock {\em Genome Biology}, 15:550.
+
 \bibitem[Luan and Li, 2003]{Luan:2003:clustering}
 Luan, Y. and Li, H. (2003).
 \newblock Clustering of time-course gene expression data using a mixed-effects
@@ -233,6 +220,11 @@ Mises, R. (1947).
 \newblock On the asymptotic distribution of differentiable statistical
   functions.
 \newblock {\em The Annals of Mathematical Statistics}, 18(3):309--348.
+
+\bibitem[Nocedal and Wright, 2006]{nocedal:2006:numerical}
+Nocedal, J. and Wright, S. (2006).
+\newblock {\em Numerical optimization}.
+\newblock Springer Science \& Business Media.
 
 \bibitem[Raj et~al., 2014]{raj:2014:faststructure}
 Raj, A., Stephens, M., and Pritchard, J. (2014).
@@ -294,5 +286,12 @@ Wang, B. and Titterington, M. (2004).
   {B}ayesian approximations.
 \newblock In {\em Workshop on Artificial Intelligence and Statistics}, pages
   373--380.
+
+\bibitem[Wilson et~al., 2020]{wilson:2020:approximatecv}
+Wilson, A., Kasy, M., and Mackey, L. (2020).
+\newblock Approximate cross-validation: {Guarantees} for model assessment and
+  selection.
+\newblock In {\em International Conference on Artificial Intelligence and
+  Statistics}, pages 4530--4540. PMLR.
 
 \end{thebibliography}
