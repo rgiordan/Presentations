@@ -36,6 +36,11 @@ Baydin, A., Pearlmutter, B., Radul, A., and Siskind, J. (2017).
 \newblock Automatic differentiation in machine learning: {A} survey.
 \newblock {\em Journal of Machine Learning Research}, 18(153):1--153.
 
+\bibitem[Bayle et~al., 2020]{bayle:2020:cv}
+Bayle, P., Bayle, A., Janson, L., and Mackey, L. (2020).
+\newblock Cross-validation confidence intervals for test error.
+\newblock {\em arXiv preprint arXiv:2007.12671}.
+
 \bibitem[Berahas et~al., 2020]{berahas:2020:newtonsketch}
 Berahas, A., Bollapragada, R., and Nocedal, J. (2020).
 \newblock An investigation of {Newton}-sketch and subsampled {Newton} methods.
@@ -164,6 +169,11 @@ Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
 Gustafson, P. (1996).
 \newblock Local sensitivity of posterior expectations.
 \newblock {\em The Annals of Statistics}, 24(1):174--195.
+
+\bibitem[Hall, 2013]{hall:2013:bootstrap}
+Hall, P. (2013).
+\newblock {\em The Bootstrap and {Edgeworth} Expansion}.
+\newblock Springer Science \& Business Media.
 
 \bibitem[Hampel, 1986]{hampel:1986:robustbook}
 Hampel, F. (1986).

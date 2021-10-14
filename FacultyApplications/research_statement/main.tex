@@ -5,8 +5,8 @@
 \usepackage{geometry}
 %\geometry{margin=1.2in}
 \geometry{top=0.8in}
-\geometry{left=1.2in}
-\geometry{right=1.2in}
+\geometry{left=1.1in}
+\geometry{right=1.1in}
 
 \title{Ryan Giordano Research Statement}
 
@@ -276,59 +276,66 @@ models from ecology \citep{kery:2011:bayesian}, the social sciences
 My research is ideally driven by the needs of my scientific and industry
 collaborators, and so I expect my future work will be determined to a large part
 by my colleagues, and so inherently difficult to predict in advance.
-Additionally, many of my existing papers can be easily ``crossed'' with one
-another, producing relatively straightforward projects suitable for more junior
-researchers.  For example, by combining the Bayesian influence function of
-\citet{giordano:2021:bayesij} with the adversarial data ablation metrics of
-\citet{giordano:2020:amip}, one can automatically find influential data subsets
-from MCMC output.  (I am presently pursuing this idea with the \texttt{R}
-package \texttt{rstanarm} together with a PhD student.)
-
-That aside, there are a few interesting directions that I find promising
-and interesting.
-
+Nevertheless, there are a few thematic directions that I find promising,
+and which I look forward to pursuing as faculty.
 
 \paragraph{The empirical influence function (EIF).}
 
 Much of my work (particularly \citet{giordano:2019:ij, giordano:2020:amip,
 giordano:2021:bayesij}) has strong connections to the classical theory of von
-Mises expansions and the closely related concept of the ``influence function,''
+Mises expansions and the closely related concept of the influence function,
 which measures the effect of individual datapoints on an estimator
 \citep{mises:1947:asymptotic, reeds:1976:thesis, hampel:1986:robustbook,
 serfling:2009:approximation}.  But my focus on the the influence function
 evaluated at the observed data---i.e., the ``empirical influence function''
 (EIF)---stands in contrast with much of the classical literature, which studies
-asymptotic behavior via the (unobserved) limiting influence function .
-
+asymptotic behavior via the (unobserved) limiting influence function.
+%
 In our present age of automatic differentiation, large datasets, and complex
 models, I believe that the EIF will continue to provide practical benefits and
-is relatively under-studied.  Since the EIF is observed, one can in principal
-use it to compute exact finite-sample error bounds for its
-approximations.~\footnote{Though I provide finite-sample error bounds in
-\citet{giordano:2019:ij, giordano:2019:hoij}, the bounds need to be tightened
-and simplified to be practically useful.  There is good reason to believe they
-can be, especially in simple cases such as least-squares estimators.} Studying
-the EIF alone avoids many of the technical difficulties requried for classical
-von Mises calculus, since the latter must study distribution functions in spaces
-that embed both continuous and discrete measures \citep{gill:1989:mises}.
+is relatively under-studied.
+% Since the EIF is observed, one can in principal
+% use it to compute exact finite-sample error bounds for its
+% approximations.~\footnote{Though I provide finite-sample error bounds in
+% \citet{giordano:2019:ij, giordano:2019:hoij}, the bounds need to be tightened
+% and simplified to be practically useful.  There is good reason to believe they
+% can be, especially in simple cases such as least-squares estimators.} Studying
+% the EIF alone avoids many of the technical difficulties requried for classical
+% von Mises calculus, since the latter must study distribution functions in spaces
+% that embed both continuous and discrete measures \citep{gill:1989:mises}.
 
-In \citet{giordano:2019:hoij}, I show that higher-order EIFs can be easily and
-automatically evaluated and analyzed for M-estimators at a computational cost
-comparable to the first-order EIF, a result which I find particularly exciting.
-I will describe three tentative but promising directions. For example, one can
-use a higher-order EIF to efficiently approximate the bootstrap more accurately
-than the bootstrap approximates the true sampling distribution, opening up the
-possibility of tractable approximations to bootstrap-after-bootstrap procedures
-that are currently computatoinally prohibitive \citep{shao:2012:jackknife}.
-Additionally, I believe that one can use higher-order EIFs to study the sampling
-uncertainty of cross-validation: as I show in \citet{giordano:2019:ij},
-cross-validation can be well-approximated with a first-order EIF.  It follows
-that the sampling uncertainty in cross-validation could be estimated via a
-von-Mises expansion of the first-order EIF, which is itself a second-order
-expansion.  It may be that higher-order EIFs open the door to computable
-approximations to higher-order jackknife bias corrections, which can be valuable
-but which are combinatorially difficult to compute in all but special
-circumstances \citep{burnham:1978:jackknifebias}.
+In \citet{giordano:2019:hoij}, I show that higher-order EIFs can be
+easily and automatically evaluated and analyzed for M-estimators at a
+computational cost comparable to the first-order EIF---that of forming and
+factorizing a Hessian matrix of second-order derivatives.
+%
+Thus, the EIF ``amortizes'' the cost of evaluating an M-estimator large number
+of alternative datasets: by paying a large fixed price up front (approximately
+computing and factorizing a Hessian matrix), one can cheaply approximate
+M-estimators at a very large number of alternative datasets.  Natural
+applications of the idea include approximating the bootstrap-after-bootstrap
+\citep{hall:2013:bootstrap}, evaluating the sampling properties of
+cross-validation \citep{bayle:2020:cv}, and computing higher-order jackknife
+bias correction \citep{shao:2012:jackknife, burnham:1978:jackknifebias}.
+
+
+
+
+%
+% I will describe three tentative but promising directions. For example, one can
+% use a higher-order EIF to efficiently approximate the bootstrap more accurately
+% than the bootstrap approximates the true sampling distribution, opening up the
+% possibility of tractable approximations to bootstrap-after-bootstrap procedures
+% that are currently computatoinally prohibitive \citep{shao:2012:jackknife}.
+% Additionally, I believe that one can use higher-order EIFs to study the sampling
+% uncertainty of cross-validation: as I show in \citet{giordano:2019:ij},
+% cross-validation can be well-approximated with a first-order EIF.  It follows
+% that the sampling uncertainty in cross-validation could be estimated via a
+% von-Mises expansion of the first-order EIF, which is itself a second-order
+% expansion.  It may be that higher-order EIFs open the door to computable
+% approximations to higher-order jackknife bias corrections, which can be valuable
+% but which are combinatorially difficult to compute in all but special
+% circumstances \citep{burnham:1978:jackknifebias}.
 
 
 \paragraph{Sensitivity analysis in difficult situations.}
@@ -338,54 +345,74 @@ theory.  I have found that a few key problems tend to recur, and I will discuss
 them in turn, as well as potential solutions which draw connections to the
 optimization literature.
 % %
-\begin{itemize}
-    %
-    \item Non-smooth objectives (e.g., the lasso penalty),
-    \item Incomplete optimization, and / or
-    \item Large and / or difficult to compute matrices of second derivatives.
-    %
-\end{itemize}
+% \begin{itemize}
+%     %
+%     \item Non-smooth objectives (e.g., the lasso penalty),
+%     \item Incomplete optimization, and / or
+%     \item Large and / or difficult to compute matrices of second derivatives.
+%     %
+% \end{itemize}
 % %
 % To some extent, high dimensionality and complex models can exacerbate all
 % of these problems, rendering sensitivity analysis most difficult precisely when
 % it is needed the most.
 
-For non-smooth objectives, a promising idea is to use local approximations to
-speed up computationally intensive but smooth components in non-smooth problems.
-Consider, for example, cross-validating linear regression with a lasso penalty:
-the optimal squared error is a smooth function and the lasso penalty is
-non-smooth. As observed by \citet{wilson:2020:approximatecv}, one can then form
-a fast approximation to the cross-validated loss by forming a fast approximation
-to the effect on the optimal squared error of leaving out a single datapoint,
-and retaining non-smoothness in the lasso penalty intact.
+First, sensitivity analysis should, ideally, deal gracefully with incomplete
+optimization.  For example, a collaborator from biostatistics and I have found
+that the \texttt{R} package \texttt{DESeq2} package \citep{deseq2} can fail in
+practice to fully optimize the log likleihood, and so fail to satisfy the
+assumptions that make sensitivity anlaysis possible.  Instead of forcing users
+to optimize further, I propose that second-order EIFs could simulate the effect
+of simultaneously taking a Newton step and perturbing the data, permitting
+sensitivity analysis with little computation beyond that required for ordinary
+sensitivity analysis.
+%
+%
+% is currently working with me to
+% apply my work in \citet{giordano:2020:amip} to single-cell sequencing data in
+% hopes of flagging small groups of highly influential cells.  Careful analysis of
+% the output of the \texttt{R} package \texttt{DESeq2} \citep{deseq2} shows that
+% the package's iteratively reweighted least squares algorithm may not be finding
+% a high-quality optimum of the objective function.  The ``sensitivity'' of
+% incomplete optimization is not well-defined, but we ideally do not want to
+% require end-users to to re-implement their optimization algorithm to use
+% sensitivity analysis.  One potential solution using higher-order expansions
+% could be to represent incomplete optimization as a constrained optimization
+% problem in which the gradient is set not to zero, but to the value numerically
+% observed in the incomplete optimization.  Representing the constraint with a
+% Lagrange multiplier, one can then use a second-order expansion to estimate the
+% effect of simultaneously removing the constraint (setting the multiplier to
+% zero) and perturbing the objective (e.g., removing some data).
 
-A collaborator from biostatistics is currently working with me to apply my work
-in \citet{giordano:2020:amip} to single-cell sequencing data in hopes of
-flagging small groups of highly influential cells.  Careful analysis of the
-output of the \texttt{R} package \texttt{DESeq2} \citep{deseq2} shows that the
-package's iteratively reweighted least squares algorithm may not be finding a
-high-quality optimum of the objective function.  The ``sensitivity'' of
-incomplete optimization is not well-defined, but we ideally do not want to
-require end-users to to re-implement their optimization algorithm to use
-sensitivity analysis.  One potential solution using higher-order expansions
-could be to represent incomplete optimization as a constrained optimization
-problem in which the gradient is set not to zero, but to the value numerically
-observed in the incomplete optimization.  Representing the constraint with a
-Lagrange multiplier, one can then use a second-order expansion to estimate the
-effect of simultaneously removing the constraint (setting the multiplier to
-zero) and perturbing the objective (e.g., removing some data).
+Second, the key computational bottleneck in sensitivity analysis in
+high-dimensional problems is typically the solution of linear systems involving
+the inverse Hessian of the objective function. Off-the-shelf iterative
+algorithms like the conjugate-gradient algorithm \citep{nocedal:2006:numerical}
+suffice in many cases, but there is reason to believe that the present active
+research into stochastic second-order methods could significantly speed up
+sensitivity analysis in large problems. \citep{agarwal:2017:secondorder,
+berahas:2020:newtonsketch}.
 
-Finally, the key computational bottleneck in sensitivity analysis for
-M-estimators is the solution of linear systems involving the inverse Hessian of
-the objective function.  Indeed, as I show in \citet{giordano:2019:hoij},
-influence functions of all orders share essentially the same bottleneck. When
-the Hessian matrix is too large to store in memory (much less factorize), I have
-gotten good results using off-the-shelf iterative algorithms like the
-conjugate-gradient algorithm \citep{nocedal:2006:numerical}, but there is surely
-more work to be done speeding up this step of the procedure.  Stochastic
-second-order methods are currently an active research topic in optimization
-\citep{agarwal:2017:secondorder, berahas:2020:newtonsketch}, and methods
-developed therein should apply directly to sensitivity analysis.
+Finally, practitioners are often interested in non-smooth objectives. For these,
+a promising idea is to use local approximations to speed up computationally
+intensive but smooth components in non-smooth problems. For example,
+\citet{wilson:2020:approximatecv} speeds up cross-validation of linear
+regression with a non-smooth lasso penalty by forming a fast approximation to
+the effect on the optimal squared error of leaving out a single datapoint, and
+retaining non-smoothness in the lasso penalty. We take a similar approach in
+\citet{giordano:2021:bnpsensitivity}, retaining easy-to-compute non-linearities
+in posterior summary statistics.
+
+
+\paragraph{``Crossing'' my existing work.}
+
+Finally, many of my existing papers can be easily ``crossed'' with one another, producing
+relatively straightforward projects suitable for collaborations with more junior
+researchers.  For example, I am presently working with a PhD student to combine
+the Bayesian influence function of \citet{giordano:2021:bayesij} with the
+adversarial data ablation metrics of \citet{giordano:2020:amip}, to
+automatically find influential data subsets from MCMC output.
+
 
 \newpage
 
