@@ -235,7 +235,7 @@ exact Bayesian posteriors \citep{gustafson:1996:localposterior}.
 % \citep{gustafson:1996:localposterior}, I prove that, for variational Bayes
 % approximations, local approximations are valid only when based on the largest
 % point-wise change in the log density.
-My co-authors and I apply the sensitivity measurs to a number of real-world
+My co-authors and I apply the sensitivity measures to a number of real-world
 problems, including an unsupervised clustering problem from genomics using
 fastSTRUCTURE \citep{raj:2014:faststructure}, demonstrating that the
 approximation is accurate, orders of magnitude faster than re-fitting, and
@@ -336,8 +336,8 @@ optimization literature.
 First, sensitivity analysis should, ideally, deal gracefully with incomplete
 optimization.  For example, a collaborator from biostatistics and I have found
 that the \texttt{R} package \texttt{DESeq2} package \citep{deseq2} can fail in
-practice to fully optimize the log likleihood, and so fail to satisfy the
-assumptions that make sensitivity anlaysis possible.  Instead of forcing users
+practice to fully optimize the log likelihood, and so fail to satisfy the
+assumptions that make sensitivity analysis possible.  Instead of forcing users
 to optimize further, I propose that second-order EIFs could simulate the effect
 of simultaneously taking a Newton step and perturbing the data, permitting
 sensitivity analysis on incompletely optimized objectives with little
