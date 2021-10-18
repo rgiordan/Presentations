@@ -112,19 +112,20 @@ relevant theory and easy-to-use computational tools.
 
 \subsection*{Robustness to data ablation.}
 
-In \citet{zaminfluence} and \citet{giordano:2020:amip}, I propose a method to
-assess the sensitivity of statistical analyses to the removal of a small
-fraction of the sample. Analyzing all possible data subsets of a certain size is
-computationally prohibitive, so I provide a finite-sample metric to
-approximately compute the number (or fraction) of observations that has the
-greatest influence on a given result when dropped.  At minimal computational
-cost, our method provides an exact finite-sample lower bound on sensitivity for
-any estimator, so any non-robustness one finds is conclusive. I demonstrate that
-non-robustness to data ablation is driven by a low signal-to-noise ratio in the
-inference problem, is not reflected in standard errors, does not disappear
-asymptotically, and is not inherently a product of outliers or misspecification.
+In \citet{giordano:2020:amip} (the author order is alphabetical; I am a lead
+author), I propose a method to assess the sensitivity of statistical analyses to
+the removal of a small fraction of the sample. Analyzing all possible data
+subsets of a certain size is computationally prohibitive, so I provide a
+finite-sample metric to approximately compute the number (or fraction) of
+observations that has the greatest influence on a given result when dropped.  At
+minimal computational cost, our method provides an exact finite-sample lower
+bound on sensitivity for any estimator, so any non-robustness one finds is
+conclusive. I demonstrate that non-robustness to data ablation is driven by a
+low signal-to-noise ratio in the inference problem, is not reflected in standard
+errors, does not disappear asymptotically, and is not inherently a product of
+outliers or misspecification.
 
-The approximation works for Z-estimators based on smooth estimating equations, a
+The approximation works for M-estimators based on smooth estimating equations, a
 class which includes ordinary least squares, instrumental variables, generalized
 method of moments, variational Bayes, and maximum likelihood estimators. Using
 my \texttt{R} package \citep{zaminfluence}, the approximation is automatically
@@ -150,7 +151,7 @@ order of magnitude than repeated re-fitting. I provide explicit finite-sample
 error bounds for the approximation in terms of a small number of simple,
 verifiable assumptions.  My results apply whether the weights and data are
 stochastic or deterministic, and so can be used as a tool for proving the
-accuracy of the infinitesimal jackknife on a wide variety of problems. As a
+accuracy of the approximation on a wide variety of problems. As a
 corollary, I state mild regularity conditions under which the approximation
 consistently estimates true leave-$k$-out cross-validation for any fixed $k$. I
 demonstrate the accuracy of the approximation on a range of simulated and real
@@ -171,7 +172,7 @@ for computing the frequentist variability of MCMC procedures is the bootstrap,
 which can be extremely computationally intensive due to the need to run hundreds
 of extra MCMC procedures \citep{huggins:2019:bayesbag}.
 
-In \citet{giordano:2021:bayesij, giordano:2020:stanconbayesij}, I propose an
+In \citet{giordano:2020:stanconbayesij, giordano:2021:bayesij}, I propose an
 efficient alternative to bootstrapping an MCMC procedure.  My approach is based
 on the Bayesian analogue of the influence function from the classical
 frequentist robustness literature.  Using results from
@@ -220,21 +221,25 @@ like all Bayesian approaches, BNP requires the specification of a prior, and
 this prior may favor a greater or lesser number of distinct clusters.
 
 In \citet{giordano:2021:bnpsensitivity}, I derive and analyze prior sensitivity
-measures for variational Bayes approximations in general, with a focus on
-discrete BNP models. Unlike much previous work on local Bayesian sensitivity for
-BNP (e.g. \citet{Basu:2000:BNP_robustness}), I pay special attention to the
-ability of the sensitivity measures to \emph{extrapolate} to different priors,
-rather than treating the sensitivity as a measure of robustness \textit{per se}.
-Further, though there are many valid choices for measuring the ``size'' of a
-prior perturbation for exact Bayesian posteriors
-\citep{gustafson:1996:localposterior}, I prove that, for variational Bayes
-approximations, local approximations are valid only when based on the largest
-point-wise change in the log density.  My co-authors and I apply our sensitivity
-measures to a number of real-world problems, including an unsupervised
-clustering problem from genomics using fastSTRUCTURE
-\citep{raj:2014:faststructure}, demonstrating that the approximation is
-accurate, orders of magnitude faster than re-fitting, and capable of detecting
-meaningful prior sensitivity.
+measures for variational Bayes (VB) approximations in general, with a practical
+focus on discrete BNP models. Unlike much previous work on local Bayesian
+sensitivity for BNP (e.g. \citet{Basu:2000:BNP_robustness}), I pay special
+attention to the ability of the sensitivity measures to \emph{extrapolate} to
+different priors, rather than treating the sensitivity as a measure of
+robustness \textit{per se}. Under mild regularity conditions, I prove that VB
+approximations are Fr{\'e}chet differentiable functions of the prior density,
+though only in one extreme of the standard family of embeddings considered for
+exact Bayesian posteriors \citep{gustafson:1996:localposterior}.
+% Further, though there are many valid choices for measuring the ``size'' of a
+% prior perturbation for exact Bayesian posteriors
+% \citep{gustafson:1996:localposterior}, I prove that, for variational Bayes
+% approximations, local approximations are valid only when based on the largest
+% point-wise change in the log density.
+My co-authors and I apply the sensitivity measurs to a number of real-world
+problems, including an unsupervised clustering problem from genomics using
+fastSTRUCTURE \citep{raj:2014:faststructure}, demonstrating that the
+approximation is accurate, orders of magnitude faster than re-fitting, and
+capable of detecting meaningful prior sensitivity.
 
 \subsection*{Uncertainty propagation in mean-field variational Bayes.}
 
@@ -249,19 +254,20 @@ its inability to propagate Bayesian uncertainty between statistical parameters.
 In \citet{giordano:2015:linear, giordano:2018:covariances}, I derive a simple
 formula for the effect of infinitesimal perturbations on MFVB posterior means,
 thus providing improved covariance estimates and greatly expanding the practical
-usefulness of MFVB posterior approximations. The estimates for MFVB posterior
-covariances rely on a result from the classical Bayesian robustness literature
-that relates derivatives of posterior expectations to posterior covariances and
-includes the Laplace approximation as a special case.
+usefulness of MFVB posterior approximations. My method for computing posterior
+covariances from an MFVB approximation exploits a result from the classical
+Bayesian robustness literature relating derivatives of posterior expectations to
+posterior covariances, and can be seen as generalizing the Laplace approximation
+for maximum \emph{a-posteriori} estimates to more general MFVB procedures.
 % The key condition is that the MFVB
 % approximation provides good estimates of a select subset of posterior means---an
 % assumption that has been shown to hold in many practical settings.
-In the experiments, I demonstrate that my methods are simple, general, and
-fast, providing accurate posterior uncertainty estimates and robustness measures
-with runtimes that can be an order of magnitude faster than MCMC, including
-models from ecology \citep{kery:2011:bayesian}, the social sciences
-\citep{gelman:2006:arm}, and on a massive internet advertising dataset
-\citep{criteo:2014:dataset}.
+In experiments on simulated and real-life datasets,  including models from
+ecology \citep{kery:2011:bayesian}, the social sciences \citep{gelman:2006:arm},
+and on a massive internet advertising dataset \citep{criteo:2014:dataset}, I
+demonstrate that my method is simple, general, and fast, providing accurate
+posterior uncertainty estimates and robustness measures with runtimes that can
+be an order of magnitude faster than MCMC.
 
 
 
@@ -289,7 +295,8 @@ which measures the effect of individual datapoints on an estimator
 serfling:2009:approximation}.  But my focus on the the influence function
 evaluated at the observed data---i.e., the ``empirical influence function''
 (EIF)---stands in contrast with much of the classical literature, which studies
-asymptotic behavior via the (unobserved) limiting influence function.
+the asymptotic behavior of estimators via their (unobserved) limiting influence
+function.
 %
 In our present age of automatic differentiation, large datasets, and complex
 models, I believe that the EIF will continue to provide practical benefits and
@@ -316,27 +323,8 @@ M-estimators at a very large number of alternative datasets.  Natural
 applications of the idea include approximating the bootstrap-after-bootstrap
 \citep{hall:2013:bootstrap}, evaluating the sampling properties of
 cross-validation \citep{bayle:2020:cv}, and computing higher-order jackknife
-bias correction \citep{shao:2012:jackknife, burnham:1978:jackknifebias}.
-
-
-
-
-%
-% I will describe three tentative but promising directions. For example, one can
-% use a higher-order EIF to efficiently approximate the bootstrap more accurately
-% than the bootstrap approximates the true sampling distribution, opening up the
-% possibility of tractable approximations to bootstrap-after-bootstrap procedures
-% that are currently computatoinally prohibitive \citep{shao:2012:jackknife}.
-% Additionally, I believe that one can use higher-order EIFs to study the sampling
-% uncertainty of cross-validation: as I show in \citet{giordano:2019:ij},
-% cross-validation can be well-approximated with a first-order EIF.  It follows
-% that the sampling uncertainty in cross-validation could be estimated via a
-% von-Mises expansion of the first-order EIF, which is itself a second-order
-% expansion.  It may be that higher-order EIFs open the door to computable
-% approximations to higher-order jackknife bias corrections, which can be valuable
-% but which are combinatorially difficult to compute in all but special
-% circumstances \citep{burnham:1978:jackknifebias}.
-
+bias correction \citep{shao:2012:jackknife}.
+% , burnham:1978:jackknifebias
 
 \paragraph{Sensitivity analysis in difficult situations.}
 
@@ -344,18 +332,6 @@ It is not always as easy to apply sensitivity analysis in practice as it is in
 theory.  I have found that a few key problems tend to recur, and I will discuss
 them in turn, as well as potential solutions which draw connections to the
 optimization literature.
-% %
-% \begin{itemize}
-%     %
-%     \item Non-smooth objectives (e.g., the lasso penalty),
-%     \item Incomplete optimization, and / or
-%     \item Large and / or difficult to compute matrices of second derivatives.
-%     %
-% \end{itemize}
-% %
-% To some extent, high dimensionality and complex models can exacerbate all
-% of these problems, rendering sensitivity analysis most difficult precisely when
-% it is needed the most.
 
 First, sensitivity analysis should, ideally, deal gracefully with incomplete
 optimization.  For example, a collaborator from biostatistics and I have found
@@ -364,8 +340,8 @@ practice to fully optimize the log likleihood, and so fail to satisfy the
 assumptions that make sensitivity anlaysis possible.  Instead of forcing users
 to optimize further, I propose that second-order EIFs could simulate the effect
 of simultaneously taking a Newton step and perturbing the data, permitting
-sensitivity analysis with little computation beyond that required for ordinary
-sensitivity analysis.
+sensitivity analysis on incompletely optimized objectives with little
+computation beyond that required for well-optimized objectives.
 %
 %
 % is currently working with me to
@@ -389,12 +365,12 @@ high-dimensional problems is typically the solution of linear systems involving
 the inverse Hessian of the objective function. Off-the-shelf iterative
 algorithms like the conjugate-gradient algorithm \citep{nocedal:2006:numerical}
 suffice in many cases, but there is reason to believe that the present active
-research into stochastic second-order methods could significantly speed up
-sensitivity analysis in large problems. \citep{agarwal:2017:secondorder,
-berahas:2020:newtonsketch}.
+research into stochastic second-order methods (e.g.
+\citet{agarwal:2017:secondorder, berahas:2020:newtonsketch}) could significantly
+speed up sensitivity analysis in large problems.
 
 Finally, practitioners are often interested in non-smooth objectives. For these,
-a promising idea is to use local approximations to speed up computationally
+one promising idea is to use local approximations to speed up computationally
 intensive but smooth components in non-smooth problems. For example,
 \citet{wilson:2020:approximatecv} speeds up cross-validation of linear
 regression with a non-smooth lasso penalty by forming a fast approximation to
