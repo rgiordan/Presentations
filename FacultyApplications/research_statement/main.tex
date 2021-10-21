@@ -38,23 +38,22 @@ whether ablation of such a small set could overturn their results, in part
 because the number of possible subsets containing 0.1\% of the data points is
 combinatorially large.
 
-In \citet{giordano:2020:amip} (the author order is alphabetical; I am a lead
-author), I identify problematic subsets of the data using {\em sensitivity
-analysis}---that is, by forming a linear approximation to how a wide class of
-statistical estimators depend on their datasets.  The key idea is that, although
-there are a very large number of subsets containing 0.1\% of the data points,
-none of them are very different from the original dataset, and so we expect the
-linear approximation to work well.  I confirm this intuition with finite-sample
-accuracy bounds in terms of intuitive and verifiable assumptions.  I provide an
-\texttt{R} package \citep{zaminfluence} to compute the approximation quickly and
-automatically using automatic differentiation \citep{baydin:2015:automatic,
-autograd}.  And, with my co-authors, I show that the approximation is capable of
-detecting meaningful non-robustness in several published econometrics analyses.
-For example, in a study of microcredit in Mexico
-\citep{angelucci:2015:microcredit}, we find that, by removing just 15 households
-out of 16,561 studied (a change of less than 0.1\%), the estimated effect of
-microcredit changes from negative and statistically insignificant to positive
-and statistically significant.
+In recent work, I identify problematic subsets of the data using {\em
+sensitivity analysis}---that is, by forming a linear approximation to the
+dependence of statistical estimators on their datasets.  The key idea is that,
+although there are a very large number of subsets containing 0.1\% of the data
+points, none of them are very different from the original dataset, and so we
+expect the linear approximation to work well.  I confirm this intuition with
+finite-sample accuracy bounds in terms of intuitive and verifiable assumptions.
+I provide an \texttt{R} package \citep{zaminfluence} to compute the
+approximation quickly and automatically using automatic differentiation
+\citep{baydin:2015:automatic, autograd}.  And, with my co-authors, I show that
+the approximation is capable of detecting meaningful non-robustness in several
+published econometrics analyses. For example, in a study of microcredit in
+Mexico \citep{angelucci:2015:microcredit}, we find that, by removing just 15
+households out of 16,561 studied (a change of less than 0.1\%), the estimated
+effect of microcredit changes from negative and statistically insignificant to
+positive and statistically significant.
 
 In fact, my research shows that many standard, computationally demanding data
 analysis tasks are also amenable to fast, automatic approximation using
@@ -102,7 +101,7 @@ sensitivity.
 %
 \end{itemize}
 
-For the remainder of this essay, I will discuss each of these applications,
+For the remainder of this statement, I will elaborate each of these themes,
 emphasizing the ways in which I update classical results with intuitive,
 relevant theory and easy-to-use computational tools.
 
@@ -110,20 +109,22 @@ relevant theory and easy-to-use computational tools.
 
 
 
-\subsection*{Robustness to data ablation.}
+\subsection*{Robustness to data ablation}
 
-In \citet{giordano:2020:amip} (the author order is alphabetical; I am a lead
-author), I propose a method to assess the sensitivity of statistical analyses to
-the removal of a small fraction of the sample. Analyzing all possible data
+In many applied settings, particularly in econometrics, an statistical analysis
+might be considered non-robust if it could be overturned or even reversed by
+removing only a small proportion of the dataset. Analyzing all possible data
 subsets of a certain size is computationally prohibitive, so I provide a
 finite-sample metric to approximately compute the number (or fraction) of
-observations that has the greatest influence on a given result when dropped.  At
-minimal computational cost, our method provides an exact finite-sample lower
-bound on sensitivity for any estimator, so any non-robustness one finds is
-conclusive. I demonstrate that non-robustness to data ablation is driven by a
-low signal-to-noise ratio in the inference problem, is not reflected in standard
-errors, does not disappear asymptotically, and is not inherently a product of
-outliers or misspecification.
+observations that has the greatest influence on a given result when dropped
+\citep{giordano:2020:amip}\footnote{Following conventions in econometrics, the
+authors are listed alphabetically.  Rachael Meager and I are equal contribution
+primary authors.}.  At minimal computational cost, our method provides an exact
+finite-sample lower bound on sensitivity for any estimator, so any
+non-robustness one finds is conclusive. I demonstrate that non-robustness to
+data ablation is driven by a low signal-to-noise ratio in the inference problem,
+is not reflected in standard errors, does not disappear asymptotically, and is
+not inherently a product of outliers or misspecification.
 
 The approximation works for M-estimators based on smooth estimating equations, a
 class which includes ordinary least squares, instrumental variables, generalized
@@ -131,14 +132,14 @@ method of moments, variational Bayes, and maximum likelihood estimators. Using
 my \texttt{R} package \citep{zaminfluence}, the approximation is automatically
 computable from the specification of the estimating equation alone.  By
 analyzing several published econometric analyses \citep{angelucci:2009:indirect,
-finkelstein:2012:oregon, meager:2019:microcredit}, I show that even 2-parameter
+finkelstein:2012:oregon, meager:2019:microcredit}, I show that even two-parameter
 linear regression analyses of randomized trials can be highly sensitive.  While
 I find some applications are robust, in others the sign of a treatment effect
 can be changed by dropping less than 1\% of the sample even when standard errors
 are small.
 
 
-\subsection*{Approximate cross validation.}
+\subsection*{Approximate cross validation}
 
 The error or variability of machine learning algorithms is often assessed by
 repeatedly re-fitting a model with different weighted versions of the observed
@@ -159,7 +160,7 @@ datasets, including an unsupervised clustering problem from genomics
 \citep{Luan:2003:clustering, shoemaker:2015:ultrasensitive}.
 
 
-\subsection*{Approximately bootstrapping Bayesian posterior means.}
+\subsection*{Approximately bootstrapping Bayesian posterior means}
 
 The frequentist (i.e., sampling) variance of Bayesian posterior expectations
 differs in general from the posterior variance even for large datasets,
@@ -176,20 +177,20 @@ In \citet{giordano:2020:stanconbayesij, giordano:2021:bayesij}, I propose an
 efficient alternative to bootstrapping an MCMC procedure.  My approach is based
 on the Bayesian analogue of the influence function from the classical
 frequentist robustness literature.  Using results from
-\citep{giordano:2018:covariances, giordano:2019:ij}, I show that the influence
+\citet{giordano:2018:covariances, giordano:2019:ij}, I show that the influence
 function for posterior expectations can be easily computed from the posterior
 samples of a single MCMC procedure and consistently estimates the bootstrap
 variance. I demonstrate the accuracy and computational benefits of the influence
-function variance estimates on array of experiments including an election
+function variance estimates on an array of experiments including an election
 forecasting model \citep{economist:2020:election}, the Cormack-Jolly-Seber model
 from ecology \citep{kery:2011:bayesian}, and a large collection of models and
 datasets from the social sciences \citep{gelman:2006:arm}.
 
 \clearpage
-\subsection*{Bayesian sensitivity analysis.}
+\subsection*{Bayesian sensitivity analysis}
 
 \paragraph{Prior sensitivity for Markov Chain Monte Carlo.}
-
+%
 MCMC is arguably the most commonly used computational tool to estimate Bayesian
 posteriors, which is made still easier by modern black-box MCMC tools such as
 \texttt{Stan} \citep{carpenter:2017:stan, rstan}.  However, a single run of MCMC
@@ -204,13 +205,12 @@ of the automatic differentiation capacities of \texttt{Stan}
 robustness \citep{gustafson:1996:localposterior, basu:1996:local,
 giordano:2018:covariances} to provide automatic hyperparameter sensitivity for
 generic \texttt{Stan} models from only a single MCMC run.  I demonstrate the
-speed and utility of the package in detecting excess prior sensitivity,
-particularly in a social sciences model taken from \citet[Chapter
-13.5]{gelman:2006:arm}.
+speed and utility of the package in detecting excess prior sensitivity in a
+social sciences model taken from \citet[Chapter 13.5]{gelman:2006:arm}.
 
 
 \paragraph{Prior sensitivity for discrete Bayesian nonparametrics.}
-
+%
 % From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
 A central question in many probabilistic clustering problems is how many
 distinct clusters are present in a particular dataset and which observations
@@ -241,7 +241,7 @@ fastSTRUCTURE \citep{raj:2014:faststructure}, demonstrating that the
 approximation is accurate, orders of magnitude faster than re-fitting, and
 capable of detecting meaningful prior sensitivity.
 
-\subsection*{Uncertainty propagation in mean-field variational Bayes.}
+\subsection*{Uncertainty propagation in mean-field variational Bayes}
 
 Mean-field Variational Bayes (MFVB) is an approximate Bayesian posterior
 inference technique that is increasingly popular due to its fast runtimes on
@@ -292,7 +292,7 @@ giordano:2021:bayesij}) has strong connections to the classical theory of von
 Mises expansions and the closely related concept of the influence function,
 which measures the effect of individual datapoints on an estimator
 \citep{mises:1947:asymptotic, reeds:1976:thesis, hampel:1986:robustbook,
-serfling:2009:approximation}.  But my focus on the the influence function
+serfling:2009:approximation}.  But my focus on the influence function
 evaluated at the observed data---i.e., the ``empirical influence function''
 (EIF)---stands in contrast with much of the classical literature, which studies
 the asymptotic behavior of estimators via their (unobserved) limiting influence

@@ -1,0 +1,422 @@
+\documentclass[margin,line]{res}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{xspace}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\topmargin -0.2in
+\textheight 9.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\pdfpageheight}{\paperheight}
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0in}}}{\end{list}} % was 0.17in
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\newenvironment{talkgroup}{\setlength{\parskip}{3pt}\everypar{\hangafter=1\hangindent=1em\relax}\par}{\par\everypar{\hangafter=0\relax}}
+
+\newif\ifpublic
+\publicfalse
+%\publictrue
+
+\newcommand{\me}{\textbf{R.~J.~Giordano}\xspace}
+\newcommand{\mestar}{\textbf{R.~J.~Giordano}$^{\star}$\xspace}
+\newcommand{\tamara}{T.~Broderick\xspace}
+\newcommand{\mike}{M.~I.~Jordan\xspace}
+\newcommand{\runjing}{R.~Liu\xspace}
+
+\ifpublic
+	\newcommand{\phonesym}{}
+	\newcommand{\myphone}{}
+	\newcommand{\email}{\texttt{rgiordan -at- mit.edu}}
+\else
+	\newcommand{\phonesym}{\phone}
+	\newcommand{\myphone}{(805) 501-6754}
+    \newcommand{\email}{\url{rgiordan@mit.edu}}
+\fi
+
+\newif\ifshowpaperrefs
+\showpaperrefstrue
+
+\ifshowpaperrefs
+	\newcommand{\paperref}[1]{[\href{#1}{link}]}
+\else
+	\newcommand{\paperref}[1]{}
+\fi
+
+\begin{document}
+
+\name{Dr. Ryan J. Giordano \vspace*{.1in}}
+
+\begin{resume}
+\section{\sc Contact Information}
+\vspace{.05in}
+\begin{tabular}{@{}p{2in}cp{4in}}
+1515 Grant St.	& \Letter &\email  \\
+Berkeley, CA, 94703	& \Mundus &\url{rgiordan.github.io} \\
+USA		& \phonesym & \myphone \\
+\end{tabular}
+
+\section{\sc Education}
+
+{\bf Massachusetts Institute of Technology}, Cambridge, MA USA
+\hfill {2019--present}
+\begin{list1}
+\item[] {\em Department of EECS, Computer Science \& Artificial Intelligence Lab}
+\item[] {Postdoctoral Research Fellow.} Advisor: Tamara Broderick
+\end{list1}
+
+
+{\bf University of California Berkeley}, CA USA
+\hfill {2013--2019}
+\begin{list1}
+\item[] Ph.D., Statistics. Advisors: M.~I.~Jordan, J.~McAuliffe, T.~Broderick
+\item[] Thesis: {\em On the Local Sensitivity of M-Estimation: Bayesian and Frequentist Applications}
+\end{list1}
+
+
+{\bf London School of Economics}, London, UK
+\hfill {2006--2008}
+\begin{list1}
+%\item[] {\em Department of Economics}
+\item[] MSc., Econometrics.
+\end{list1}
+
+{\bf University of Illinois Urbana-Champaign}, IL, USA
+\hfill {1997--2002}
+\begin{list1}
+\item[] BA., Mathematics.
+\item[] BS., Theoretical and Applied Mechanics.
+\end{list1}
+
+
+\section{\sc Professional Experience}
+
+{\bf Google Inc.}, Mountain View, CA USA
+\hfill {2009--2013}
+\begin{list1}
+\item[] Senior Engineer, Quantitative Analysis
+\end{list1}
+
+{\bf Macquarie Group}, London, UK
+\hfill {2008}
+\begin{list1}
+\item[] Risk Management Intern
+\end{list1}
+
+% {\bf LSE Financial Markets Group}, London, UK
+% \begin{list1}
+% \item[] Research Intern \hfill {2007}
+% \end{list1}
+
+{\bf United States Peace Corps}, Kokshetau, KZ
+\hfill {2004--2006}
+\begin{list1}
+\item[] Education Volunteer, successful completion of service
+\end{list1}
+
+{\bf Hewlett-Packard}, Boise, ID
+\hfill {2002--2004}
+\begin{list1}
+\item[] Lifetest Coordinator and Reliability Engineer
+\end{list1}
+
+
+\section{\sc Honors and Awards}
+
+\begin{list1}
+
+% Split into pre- and post-PhD awards
+
+\item[] Notable Paper Award, Artificial Intelligence and Statistics (AISTATS) (2019)
+\item[] Travel Award, Artificial Intelligence and Statistics (AISTATS) (2019)
+\item[] Travel Award, Bayesian Nonparametrics Conference (2019)
+\item[] Student Paper Award, ASA Section on Bayesian Statistical Science (2018)
+\item[] Travel Award, International Society for Bayesian Analysis (ISBA) (2018)
+\item[] Berkeley Institute for Data Science Fellow (2017--19)
+\item[] Junior Travel Support Grant, International Society for Bayesian Analysis (ISBA) Bayes Comp (2016)
+\item[] Spotlight Paper, Neural Information Processing Systems (NeurIPS) (2015)
+\item[] Outstanding Graduate Student Instructor Award (2015)
+\item[] Travel Award, Neural Information Processing Systems Workshop on Variational Inference (2014)
+\item[] Hertz Foundation Graduate Fellowship Finalist (2014)
+\item[] Google Operating Committee Award (2010)
+\item[] Advanced-high speaker of Russian in Peace Corps Aptitude Test (2006)
+\item[] Advanced-mid speaker of Kazakh in Peace Corps Aptitude Test (2006)
+\item[] Selected as a Peace Corps ``Success Story'' for a congressional report (2005)
+\item[] Best Project, Undergraduate Mechanics Research Conference (2002)
+\item[] Best Presentation, Undergraduate Mechanics Research Conference (2002)
+\item[] Seely, Sinclair, Stippes, TAM Merit Scholarships (1998--2002)
+
+\end{list1}
+
+\clearpage
+\section{\sc Preprints / \\in preparation}
+
+% \me \& \tamara (2021).
+% The Bayesian Infinitesimal Jackknife for Variance.
+% (In preparation)
+
+M.~Ingram$^\star$, \mestar \& \tamara  (2021).
+Deterministic Automatic Differentiation Variational Inference.\\
+$\star$ = equal contribution first authors.
+In preparation.
+
+\me \& \tamara  (2021).
+The Bayesian Infinitesimal Jackknife for Variance.\\
+In preparation.
+
+\tamara, \mestar, R.~Meager$^\star$ \&  (2021).
+An Automatic Finite-Sample Robustness Metric: When Can Dropping a Little Data
+Make a Big Difference?\\
+$\star$ = equal contribution first authors (author order alphabetical).
+\emph{arXiv:2011.14999 [stat.ME]}.
+\paperref{https://arxiv.org/abs/2011.14999}
+
+\me, \mike, \& \tamara (2019).
+A Higher-Order Swiss Army Infinitesimal Jackknife.
+\emph{arXiv:1907.12116 [stat.ME]}.
+\paperref{https://arxiv.org/abs/1907.12116}
+
+\section{\sc Under review}
+
+\mestar, \runjing{}$^\star$, \mike, \& \tamara (2021).
+Evaluating Sensitivity to the Stick-Breaking Prior in Bayesian Nonparametrics.\\
+$\star$ = equal contribution first authors.
+\emph{arXiv:2107.03584 [stat.ME]}.
+\paperref{https://arxiv.org/abs/2107.03584}.\\
+Submitted to Bayesian Analysis.
+
+
+\section{\sc Publications}
+
+\me, W.~Stephenson, \runjing, \mike, \& \tamara (2019).  A Swiss Army Infinitesimal
+Jackknife.  \emph{The 22nd International Conference on Artificial Intelligence
+and Statistics.}
+\textbf{Notable paper award.}
+\paperref{https://arxiv.org/abs/1806.00550}
+
+\me, \tamara, \& \mike (2018).  Covariances, Robustness, and Variational Bayes.
+In \emph{Journal of Machine Learning Research.}
+\paperref{https://arxiv.org/abs/1709.02536}
+
+J.~Regier, K.~Fischer, K~.Pamnany, A.~Noack, J.~Revels, M.~Lam, S.~Howard,
+\me, D.~Schlegel, J.~McAuliffe, \& R.~Thomas (2019). Cataloging the Visible
+Universe Through Bayesian Inference in Julia at Petascale. In \emph{Journal of
+Parallel and Distributed Computing.}
+\paperref{https://doi.org/10.1016/j.jpdc.2018.12.008}
+
+J.~Regier, K.~Pamnany, K.~Fischer, A.~Noack, M.~Lam, J.~Revels, S.~Howard, \me,
+D.~Schlegel, J.~McAuliffe, R.~Thomas, \& Prabhat (2018).  Cataloging the Visible
+Universe Through Bayesian Inference at Petascale.  In \emph{IEEE International
+Parallel and Distributed Processing Symposium (IPDPS). IEEE, 2018.}
+\paperref{https://arxiv.org/abs/1801.10277}
+
+\me, \tamara, \& \mike (2015). Linear Response Methods for Accurate Covariance
+Estimates from Mean Field Variational Bayes. In \emph{Advances in Neural
+Information Processing Systems.}
+\textbf{Spotlight presentation.}
+\paperref{https://arxiv.org/abs/1506.04088}
+
+R.~Winther, \me, M.~D.~Edge, \& R.~Nielsen (2015).  The Mind, the Lab, and the
+Field: Three Kinds of Populations in Scientific Practice.  In \emph{Studies in
+History and Philosophy of Science Part C: Studies in History and Philosophy of
+Biological and Biomedical Sciences.}
+\paperref{https://doi.org/10.1016/j.shpsc.2015.01.009}
+
+
+\section{\sc Workshop \\ Papers}
+
+\mestar, \runjing{}$^\star$, \mike, \& \tamara (2018).
+Evaluating Sensitivity to the Stick Breaking Prior in Bayesian Nonparametrics.
+In \emph{NeurIPS 2018 Bayesian Nonparametrics Workshop.}\\
+$\star$ = equal contribution first authors.
+\paperref{https://arxiv.org/abs/1810.06587}
+
+\mestar, \runjing{}$^\star$, N.~Varoquaux$^\star$, \mike, \& \tamara (2017).
+Measuring Cluster Stability for Bayesian Nonparametrics Using the Linear Bootstrap.
+In \emph{NeurIPS 2017 Advances in Approximate Bayesian Inference Workshop.}\\
+$\star$ = equal contribution first authors.
+\paperref{https://arxiv.org/abs/1712.01435}
+
+\me, \tamara, R.~Meager, J.~Huggins, \& \mike (2016). Fast Robustness
+Quantification with Variational Bayes. In \emph{2016 ICML Workshop on
+\#Data4Good: Machine Learning in Social Good Applications.}
+\paperref{https://arxiv.org/abs/1606.07153}
+
+
+%\section{\sc Conference Presentations}
+
+\clearpage
+\section{\sc Invited Talks}
+
+% TODO: put in Bayesian deep learning, Saul's group, and Johns Hopkins
+
+New England Statistical Society (NESS) annual meeting
+\hfill Oct 2021\\
+Frequentist Covariances of Posterior Expectations
+with the Bayesian Infinitesimal Jackknife
+
+Joint Statistical Meetings (JSM)
+% (Misspecification, Robustness, and Model Assessment) (invited)
+\hfill Aug 2021\\
+An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data
+Change Conclusions?
+
+International Society for Bayesian Analysis Annual Meeting
+\hfill June 2021\\
+Frequentist Covariances of Posterior Expectations
+with the Bayesian Infinitesimal Jackknife
+
+ISBA-BNP series webinar (with Prof.\ Michael Jordan)
+\hfill May 2021\\
+Assessing Sensitivity to the Stick-Breaking Prior in Bayesian Nonparametrics
+
+Harvard Graduate School of Education Miratrix CARES lab
+\hfill Feb 2021\\
+An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data
+Change Conclusions?
+
+Splunk Statistics Seminar Series \hfill Oct 2019\\
+A Higher-Order Swiss Army Infinitesimal Jackknife
+
+Google Statistics Journal Club \hfill Sep 2019\\
+On the Local Sensitivity of M-estimation: Bayesian and Frequentist Applications
+
+
+% Bin Yu Research Group Meeting \hfill March 2019\\
+% A Bayesian Perspective on EM Covariances
+
+
+\section{\sc Other Academic\\Talks}
+
+BAYSM Bayesian Young Statisticians Meeting
+\hfill Aug 2021\\
+Assessing Sensitivity to the Stick-Breaking Prior in Bayesian Nonparametrics
+
+BAYSM Bayesian Young Statisticians Meeting
+\hfill Nov 2020\\
+Effortless Frequentist Covariances of Posterior Expectations in Stan
+
+StanCon \hfill July 2020\\
+Effortless Frequentist Covariances of Posterior Expectations in Stan
+
+Berkeley Statistics Student Seminar Series\hfill April 2019\\
+Sensitivity and Uncertainty in Variational Bayes with an Application to the
+EM Algorithm
+
+12th International Conference on Bayesian Nonparametrics, Oxford, UK
+\hfill June 2019\\
+Evaluating Sensitivity to the Stick Breaking Prior in Bayesian Nonparametrics
+
+% Perlmutter Research Group \hfill June 2019 \\
+% Variational Methods for Latent Variable Problems
+
+% Jordan Research Group \hfill May 2019\\
+% Local Sensitivity of M-estimators: Bayesian and Frequentist Applications
+
+Berkeley Institute for Data Science Lunchtime Seminar Series \hfill Oct 2018\\
+Sensitivity, Uncertainty, and Automatic Differentiation
+
+Berkeley Institute for Data Science Lunchtime Seminar Series \hfill July 2018\\
+Bayesian Inference and Inverse Problems
+
+StanCon \hfill Jan 2018\\
+Automatic Robustness Measures in Stan
+
+% Mahoney Research Group \hfill  April 2017\\
+% Measuring Bayesian (and Variational Bayesian) Robustness
+
+Berkeley BSTARS Conference \hfill March 2017\\
+How Bad Could it Be?  Worst-case Prior Sensitivity Estimates for Variational Bayes
+
+Berkeley BSTARS Conference \hfill March 2016\\
+Measuring Robustness with Variational Bayes
+
+Berkeley--Stanford Student Joint Colloquium \hfill Nov 2014\\
+Covariance Matrices for Mean Field Variational Bayes
+
+Joint Statistical Meetings (JSM) \hfill Aug 2013\\
+Estimating Average Proportional Changes in Large, Sparse Data
+
+
+\clearpage
+
+\section{\sc Professional Service}
+
+\textbf{Student Leadership}
+
+{\em University of California, Berkeley, Statistics Department}
+\begin{list2}
+    \item Diversity Taskforce Member \hfill 2018--2019
+    \item Graduate Student Mentor \hfill 2017--2019
+    \item Diversity Committee Member  \hfill 2017
+    \item Co-organizer of the Gender and Diversity Roundtable \hfill 2016--2018
+    \item Student Seminar Committee Member \hfill 2014--2017
+\end{list2}
+
+{\em Universty of Illinois, Urbana-Champaign, Engineering Mechanics Department}
+\begin{list2}
+    \item President, Student Society for Experimental Mechanics \hfill 2000--2002
+    \item Organizer, Free University Opera for Engineering Students \hfill 2001--2002
+\end{list2}
+
+
+\textbf{Journal Reviewing}
+\begin{list2}
+\item Bayesian Analysis
+\item Journal of Machine Learning Research
+\end{list2}
+
+\textbf{Conference Reviewing}
+\begin{list2}
+\item Advances in Neural Information Processing Systems (NeurIPS)
+\item International Conference on Machine Learning (ICML)
+\item International Conference on Artificial Intelligence and Statistics (AISTATS)
+\item Advances in Approximate Inference (NeurIPS-adjacent workshop)
+\item I Can't Believe It's Not Better (NeurIPS workshop)
+\end{list2}
+
+
+\section{\sc Teaching}
+
+\emph{University of California, Berkeley, USA}
+\begin{list2}
+\item Teaching Assistant, STAT215 Applied Statistics
+(Graduate-level) \hfill Fall 2014
+\end{list2}
+
+\emph{Prison University Project, San Quentin State Prison, USA}
+\begin{list2}
+\item Volunteer math teacher
+\hfill Fall 2015, Spring 2016, Fall 2017
+\end{list2}
+
+\emph{Kokshetau Elementary School \#3, Kokshetau, Kazakhstan}
+\begin{list2}
+\item Elementary school teacher of mathematics and English as a second language
+\hfill 2004--2006
+\end{list2}
+
+\emph{University of Illinois, Urbana-Champaign, USA}
+\begin{list2}
+\item Teaching Assistant, Mechanics of Materials Lab \hfill Fall 1999
+\item Teaching Assistant, Introduction to Statics \hfill Spring 1999
+\end{list2}
+
+\end{resume}
+\end{document}

@@ -60,12 +60,6 @@ Broderick, T., Giordano, R., and Meager, R. (2020).
 \newblock Note: Following conventions in econometrics, the authors are listed
   alphabetically. Giordano and Meager are equal contribution primary authors.
 
-\bibitem[Burnham and Overton, 1978]{burnham:1978:jackknifebias}
-Burnham, K. and Overton, W. (1978).
-\newblock Estimation of the size of a closed population when capture
-  probabilities vary among animals.
-\newblock {\em Biometrika}, 65(3):625--633.
-
 \bibitem[Carpenter et~al., 2017]{carpenter:2017:stan}
 Carpenter, B., Gelman, A., Hoffman, M., Lee, D., Goodrich, B., Betancourt, M.,
   Brubaker, M., Guo, J., Li, P., and Riddell, A. (2017).
@@ -101,12 +95,6 @@ Gelman, A. and Hill, J. (2006).
 \newblock {\em Data analysis using regression and multilevel/hierarchical
   models}.
 \newblock Cambridge University Press.
-
-\bibitem[Gill et~al., 1989]{gill:1989:mises}
-Gill, R., Wellner, J., and Pr{\ae}stgaard, J. (1989).
-\newblock Non-and semi-parametric maximum likelihood estimators and the von
-  mises method (part 1).
-\newblock {\em Scandinavian journal of statistics}, pages 97--128.
 
 \bibitem[Giordano, 2018]{giordano:2020:rstansensitivity}
 Giordano, R. (2018).
