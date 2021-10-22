@@ -1,0 +1,144 @@
+
+=====================================
+
+Trevor
+
+- "circumstances that often obtain in..." -- grammar error here, I think? Or
+- maybe archaic usage of "obtain"
+
+- I feel like you jump into a specific example too quickly in the second
+- paragraph. I kind of want your overall view of your research program here.
+- Honestly I think a decent amount of the text in para 2 is fine, it's just that
+- right now it's spun as "here's a paper i wrote"
+
+- as part of the previous point, I think the microcredit example could be moved
+- up to the end of the first paragraph to help motivate your research vision
+
+- the first page is very focused on sensitivity analysis -- is there a broader
+- view of your research goals? I'm kind of struggling to find words to describe
+- my thoughts here...maybe something along the lines of the following:
+- "sensitivity analysis" is a solution, and the writeup sounds like you have a
+- hammer and you're looking for nails to hit. Or perhaps that's not the issue,
+- but that "sensitivity analysis" is a really *specific* solution, and what I'm
+- looking for is something more like "I develop techniques to achieve X", and
+- the fact that it happens to be sensitivity analysis in your recent work is
+- just a consequence of the problems you're tackling. Feel free to push back
+- here, as you can tell my point is rather ill-defined ;)
+
+- I wouldn't call it an "essay" -- perhaps just say "In the following I will
+- discuss..."
+
+- discrete BNP: this seems to focus on clustering -- you might have done that to
+- simplify the text, which is fine, but perhaps worth mentioning that your work
+- extends beyond this to other combinatorial trait models (assuming it does, of
+- course!)
+
+- "measurs" typo
+
+- all of the other vignettes are awesome!
+
+- Selected future: you need a stronger start to the section -- it reads right
+- now like "iunno, i guess my collaborators will put me down some path or other"
+
+- same comment as above (and same ill-formedness.... sorry!) -- too strong a
+- focus on sensitivity analysis in particular here.
+
+- "crossing my work" -- this doesn't read well. Basically, if I'm evaluating you
+- as a potential prof, I am thinking "how is this going to play out over 5y?
+- 10y? career?" -- saying that you'll combine existing papers (even if it's
+- actually not a bad strategy in practice) sounds like this is all the research
+- you're going to do for a bit and you're planning to just rehash your work a
+- bunch in the near-term
+
+- on the other hand, I really like that you mention designing projects for
+- junior students. I would just try to spin this section to be a bit more
+- forward-look
+
+=====================================
+Jonathan
+
+A few thoughts below, which are basically all on the theme of: don't assume your
+reader is an expert in your topic, and don't assume they are going to read your
+whole statement carefully. It's more likely they will read the first one or two
+paragraphs, anything in bold, and first sentences or paragraphs of
+(sub)sections. So write with that in mind. I like starting with this very
+concrete problem, then showing how your methods help and might change the
+results of important analyses. But I would recommend (i) delaying the details to
+later so it's a single short paragraph that quickly gets to the punchline and
+(ii) then going "big picture" about what your past research and future agenda
+is, in very accessible language. This sentence is good to have in the first half
+page: "I will discuss each of these applications, emphasizing the ways in which
+I update classical results with intuitive, relevant theory and easy-to-use
+computational tools." But I would rephrase to be more active. Something like:
+"My research makes classical statistical ideas that were mostly used for
+theoretical analysis relevant to modern practice by developing intuitive,
+conceptually clear theory and easy-to-use computational tools scalable to large
+datasets and complex models. I accomplish this by combining recent computational
+advances like automatic differentiation, etc., etc."
+
+Having a bulleted list with lots of text in each bullet is not very friendly to
+people who are skimming quickly, and the bullets are pretty jargon-filled for an
+introduction (bootstrap, Taylor expansion, bootstrap, MCMC, etc.). If you do
+have a list at some point, I would definitely start each one with a bolded
+summary sentence so it's easy to skim. The material on pages 2 and 3 would
+benefit from some narrative, in which you divide your work into 2 or 3 "topics",
+discuss why they are important, then go into details on specific projects on
+each topic.
+
+I would include (sub)section numbers, again to help the reader navigate
+I wouldn't refer to it as an "essay"; maybe "statement" instead
+
+I would delete the first qualifying sentence in your future work section –
+you're not going to be held to what you write here. It's about showing that you
+have the capability of developing a comprehensive research agenda. So, I would
+instead start by making clear what are the questions motivating your proposed
+future work: "I've done X and Y, but this naturally leads me to ask important
+questions Z and Q."
+
+
+=====================================
+Sameer
+
+From a cursory read -- it's a great start! Some high-level comments below
+
+- The opening 2 paragraphs are too general. I think audiences unfamiliar with
+- your work will get lost, esp. when you start talking about intuition about
+- linear approximation. Better to start with a specific example (e.g. the of the
+- Angelucci study) and reveal the problem (i.e. deleting some small subset
+- changes the substantive conclusion). At that point, you're now set up to (i)
+- say that researchers want to know whether results are sensitive; (ii) naively
+- assessing sensitivity is computationally prohibitive; and (iii) that you
+- provide computationally efficient and/or theoretically supported tools to
+- facilitate such analyses.
+
+- The line "my research shows that many standard, computationally demanding..."
+- is great as is the line "I update classical results with intuitive relevant
+- theory..." Combine the content of these sentences and you've got a really
+- compelling "thesis" statement, which should appear in the first paragraph or
+- section of the statement.
+
+- This may be a matter of taste, but the bulleted outline feels a bit tacked on.
+- One could argue, as well, that the line "For the remainder of this essay, ..."
+- is an unnecessary invitation for the reader to stop reading! After making the
+- compelling "thesis" statement, it's enough to say "In what follows, I describe
+- some of my work in details before outlining new directions".
+
+- This is also a matter of taste but calling out lead authorship parenthetically
+- seems a bit tacky. The place to clarify authorship is in your CV. I've seen
+- folks use asterisks, daggers, and assorted annotations to indicate lead
+- authorship, alphabetical authorship, and authorship by supervised students. In
+- the research statement, it just seems gratuitous. Using a plain numbered
+- citation style eliminates the issue of appearing to cite excessively someone
+- else's work.
+
+- Speaking of citations: right now there are too many. Remember, this is not
+- something that will appear publically. It's probably fine to state, without
+- citation, "MFVB underestimates variance" or not cite Stan. The vast majority
+- of readers are not going to follow-up any of the citations (e.g. by looking up
+- Chapter 13.5 of Gelman & Hill).
+
+- Your descriptions of individual contributions are, by themselves, quite
+- well-written. But what's missing is a narrative throughline.
+
+- In selected future works, I think the opening paragraph is a bit redundant and
+- applies to every candidate.

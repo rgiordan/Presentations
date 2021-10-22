@@ -28,32 +28,39 @@
 \end{minipage}
 
 Many researchers would be concerned if they learned that some core conclusion of
-their statistical analysis---such as the sign or statistical significance of some
-key effect---could be overturned by removing a small fraction, say 0.1\%, of
-their data.  Such non-robustness would be particularly concerning if the data
-were not actually drawn randomly from precisely the population of interest, or if
-the model may have been misspecified---circumstances that often obtain in  the
-social sciences, for example.  Nevertheless, analysts do not routinely check
-whether ablation of such a small set could overturn their results, in part
-because the number of possible subsets containing 0.1\% of the data points is
-combinatorially large.
+their statistical analysis---such as the sign or statistical significance of
+some key effect---could be overturned by removing a small fraction of their
+data.
+% Such non-robustness would be particularly concerning if the data were not
+% actually drawn randomly from precisely the population of interest, or if the
+% model may have been misspecified---circumstances that often occur in the social
+% sciences.
+For example, a recent study of microcredit in Mexico on 16,561 housholds
+measured a negative but statistically insignifant effect of microcredit
+\citep{angelucci:2015:microcredit}.  However, my co-authors and I found that, by
+removing just 15 households out of 16,561 studied, the estimated effect of
+microcredit becomes positive and statistically significant, reversing the
+paper's qualitative conclusions by removing only 0.1\% of the data.  There are a
+combinatorially large number of ways to leave 15 datapoints out of 16,561---
+over $10^{51}$---so finding such influential subsets by brute force would be
+impossible.  I circumvent this difficulty by forming a \emph{linear
+approximation} to the dependence of the estimator on the dataset, providing in a
+fast, automatic tool for identifying small but influential subsets for a wide
+class of commonly used estimators.
 
-In recent work, I identify problematic subsets of the data using {\em
-sensitivity analysis}---that is, by forming a linear approximation to the
-dependence of statistical estimators on their datasets.  The key idea is that,
-although there are a very large number of subsets containing 0.1\% of the data
-points, none of them are very different from the original dataset, and so we
-expect the linear approximation to work well.  I confirm this intuition with
-finite-sample accuracy bounds in terms of intuitive and verifiable assumptions.
-I provide an \texttt{R} package \citep{zaminfluence} to compute the
-approximation quickly and automatically using automatic differentiation
-\citep{baydin:2015:automatic, autograd}.  And, with my co-authors, I show that
-the approximation is capable of detecting meaningful non-robustness in several
-published econometrics analyses. For example, in a study of microcredit in
-Mexico \citep{angelucci:2015:microcredit}, we find that, by removing just 15
-households out of 16,561 studied (a change of less than 0.1\%), the estimated
-effect of microcredit changes from negative and statistically insignificant to
-positive and statistically significant.
+% The key idea is that, although there are a very large number of subsets
+% containing 0.1\% of the data points, none of them are very different from the
+% original dataset, and so we expect the linear approximation to work well.
+% I confirm this intuition with finite-sample accuracy bounds in terms of
+% intuitive and verifiable assumptions. I provide an \texttt{R} package
+% \citep{zaminfluence} to compute the approximation quickly and automatically
+% using automatic differentiation \citep{baydin:2015:automatic, autograd}.  And,
+% with my co-authors, I show that the approximation is capable of detecting
+% meaningful non-robustness in several published econometrics analyses.
+
+% In recent work, I identify problematic subsets of the data using {\em
+% sensitivity analysis}---that is, by forming a linear approximation to the
+% dependence of statistical estimators on their datasets.
 
 In fact, my research shows that many standard, computationally demanding data
 analysis tasks are also amenable to fast, automatic approximation using
