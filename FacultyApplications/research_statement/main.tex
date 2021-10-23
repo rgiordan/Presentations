@@ -33,19 +33,19 @@ some key effect---could be overturned by removing a small fraction of their
 data. Such non-robustness would be particularly concerning if the data were not
 actually drawn randomly from precisely the population of interest, or if the
 model may have been misspecified---circumstances that often occur in the social
-sciences. For example, a recent study of microcredit in Mexico on 16,561
-housholds measured a negative but statistically insignificant effect of
-microcredit \citep{angelucci:2015:microcredit}.  However, in recent work, my
-co-authors and I show that one can make the estimated effect of microcredit
-positive and statistically significant by removing just 15 households from the
-analysis, reversing the paper's qualitative conclusions by removing only 0.1\%
-of the data.  Since there are a combinatorially large number of ways to leave 15
+sciences. For example, a study of microcredit in Mexico on 16,561 housholds
+measured a negative but statistically insignificant effect of microcredit
+\citep{angelucci:2015:microcredit}.  However, in recent work, my co-authors and
+I show that one can make the estimated effect of microcredit positive and
+statistically significant by removing just 15 households from the analysis,
+reversing the paper's qualitative conclusions by removing only 0.1\% of the
+data.  Since there are a combinatorially large number of ways to leave 15
 datapoints out of 16,561 (over $10^{51}$), finding such influential subsets by
 brute force would be impossible.  I circumvent this difficulty by forming a
 \emph{linear approximation} to the dependence of the estimator on the dataset.
 My technique works for a wide class of commonly used estimators, providing a
 fast, automatic tool for identifying small but influential subsets with
-finite-sample error bounds in many applied problems.
+finite-sample guarantees in many applied problems.
 
 In general, my research provides fast, easy-to-use computational tools for
 assessing whether small changes to modeling assumptions or datasets can
