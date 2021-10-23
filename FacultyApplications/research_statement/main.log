@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  23 OCT 2021 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  23 OCT 2021 14:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -623,15 +623,15 @@ LaTeX Info: Redefining \Ref on input line 17.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(101.17755pt, 411.9399pt, 101.17755pt)
-* v-part:(T,H,B)=(93.95122pt, 605.6214pt, 95.39737pt)
+* h-part:(L,W,R)=(93.95122pt, 426.39256pt, 93.95122pt)
+* v-part:(T,H,B)=(86.72377pt, 612.84885pt, 95.39737pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=411.9399pt
-* \textheight=605.6214pt
-* \oddsidemargin=28.90756pt
-* \evensidemargin=28.90756pt
-* \topmargin=-15.31877pt
+* \textwidth=426.39256pt
+* \textheight=612.84885pt
+* \oddsidemargin=21.68123pt
+* \evensidemargin=21.68123pt
+* \topmargin=-22.54622pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -698,30 +698,29 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 395.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 395.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 395.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 0ADE44B91A65D8E8038601C1E8E1D901;923.
  ) 
 Here is how much of TeX's memory you used:
- 11883 strings out of 483065
- 177395 string characters out of 5963550
- 501547 words of memory out of 5000000
- 26548 multiletter control sequences out of 15000+600000
- 543770 words of font info for 108 fonts, out of 8000000 for 9000
+ 11891 strings out of 483065
+ 177560 string characters out of 5963550
+ 501560 words of memory out of 5000000
+ 26560 multiletter control sequences out of 15000+600000
+ 543553 words of font info for 106 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 37i,8n,47p,790b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmtt10.pfb>
-Output written on main.pdf (6 pages, 153579 bytes).
+ 37i,8n,47p,790b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmtt10.pfb>
+Output written on main.pdf (6 pages, 142208 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 217 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
  42 named destinations out of 1000 (max. 500000)
- 13313 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 13401 words of extra memory for PDF output out of 14400 (max. 10000000)
 

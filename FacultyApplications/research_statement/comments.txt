@@ -69,7 +69,10 @@ later so it's a single short paragraph that quickly gets to the punchline and
 is, in very accessible language. This sentence is good to have in the first half
 page: "I will discuss each of these applications, emphasizing the ways in which
 I update classical results with intuitive, relevant theory and easy-to-use
-computational tools." But I would rephrase to be more active. Something like:
+computational tools." But I would rephrase to be more active.
+
+***************
+Something like:
 "My research makes classical statistical ideas that were mostly used for
 theoretical analysis relevant to modern practice by developing intuitive,
 conceptually clear theory and easy-to-use computational tools scalable to large

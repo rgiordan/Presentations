@@ -4,9 +4,9 @@
 
 \usepackage{geometry}
 %\geometry{margin=1.2in}
-\geometry{top=1.3in}
-\geometry{left=1.4in}
-\geometry{right=1.4in}
+\geometry{top=1.2in}
+\geometry{left=1.3in}
+\geometry{right=1.3in}
 
 \title{Ryan Giordano Research Statement}
 
@@ -53,15 +53,15 @@ meaningfully alter an analyst's substantive conclusions.  As I detail below, my
 work encompasses Bayesian approaches (such as measuring robustness to prior
 specification), frequentist approaches (such as fast approximations to
 leave-one-out cross validation), and combinations of the two (such as measuring
-the robustness of Markov Chain Monte Carlo procedures to data resampling). For
+the robustness of Markov chain Monte Carlo procedures to data resampling). For
 the remainder of this statement, I will describe some of my specific past and
 future projects, emphasizing the ways in which I update classical results for a
 modern computational environment using intuitive, relevant theory, and with
 motivation drawn strongly from practical applications.
 
-\subsection*{Selected Past and Current Work}
+\section{Selected prior work}
 
-\paragraph{Robustness to data ablation.}
+\subsection{Robustness to data ablation}
 %
 In many applied settings, particularly in econometrics, a statistical analysis
 might be considered non-robust if it could be overturned or even reversed by
@@ -92,7 +92,7 @@ the sign of a treatment effect can be changed by dropping less than 1\% of the
 sample even when standard errors are small.
 
 
-\paragraph{Approximate cross validation.}
+\subsection{Approximate cross validation}
 %
 The error or variability of machine learning algorithms is often assessed by
 repeatedly re-fitting a model with different weighted versions of the observed
@@ -113,13 +113,13 @@ datasets, including an unsupervised clustering problem from genomics.
 %\citep{Luan:2003:clustering, shoemaker:2015:ultrasensitive}.
 
 
-\paragraph{Prior sensitivity for Markov Chain Monte Carlo.}
+\subsection{Prior sensitivity for Markov chain Monte Carlo}
 %
 Prior specification encodes key assumptions in Bayesian statistics, but Bayesian
 inference can be sensitive to prior specification.  Evaluating the sensitivity
 of Bayesian posterior expectations to prior specification by re-estimating the
 posterior for a large number of alternative priors is typically computationally
-prohibitive.  In particular, Markov Chain Monte Carlo (MCMC) is arguably the
+prohibitive.  In particular, Markov chain Monte Carlo (MCMC) is arguably the
 most commonly used computational tool to estimate Bayesian posteriors, which is
 made still easier by modern black-box MCMC tools such as \texttt{Stan}.
 However, a single run of MCMC typically remains time-consuming, and
@@ -141,7 +141,7 @@ speed and utility of the package in detecting excess prior sensitivity in a
 social sciences model taken from \citet[Chapter 13.5]{gelman:2006:arm}.
 
 
-\paragraph{Approximately bootstrapping Bayesian posterior means.}
+\subsection{Approximately bootstrapping Bayesian posterior means}
 %
 When analyzing randomly sampled data using Bayesian posteriors, it can make
 sense to consider the \emph{sampling variability} of the posterior mean.  For
@@ -168,7 +168,7 @@ priori} plausible would lead to different substantive conclusions.
 % of extra MCMC procedures. % \citep{huggins:2019:bayesbag}.
 
 The sampling variability of a posterior mean can be evaluated by the bootstrap,
-but at the considerable cost of re-running Markov Chain Monte Carlo (MCMC)
+but at the considerable cost of re-running Markov chain Monte Carlo (MCMC)
 hundreds of times. In \citet{giordano:2020:stanconbayesij,
 giordano:2021:bayesij}, I propose an efficient alternative to bootstrapping an
 MCMC procedure.  My approach is based on the Bayesian analogue of the influence
@@ -190,7 +190,7 @@ large collection of models and datasets from the social sciences.
 % \citep{carpenter:2017:stan, rstan}
 % \citep{carpenter:2015:stanmath}
 
-\paragraph{Prior sensitivity for discrete Bayesian nonparametrics.}
+\subsection{Prior sensitivity for discrete Bayesian nonparametrics}
 %
 % From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
 A central question in many probabilistic clustering problems is how many
@@ -225,7 +225,7 @@ sensitivity in quantities of practical interest.
 
 % \citep{raj:2014:faststructure}
 
-\paragraph{Uncertainty propagation in mean-field variational Bayes.}
+\subsection{Uncertainty propagation in mean-field variational Bayes}
 %
 Mean-field Variational Bayes (MFVB) is an approximate Bayesian posterior
 inference technique that is increasingly popular due to its fast runtimes on
@@ -264,7 +264,7 @@ be an order of magnitude faster than MCMC.
 %\newpage
 
 %\clearpage
-\subsection*{Selected Future work}
+\section{Selected future work}
 
 % My research is ideally driven by the needs of my scientific and industry
 % collaborators, and so I expect my future work will be determined to a large part
@@ -275,7 +275,7 @@ be an order of magnitude faster than MCMC.
 Though there are many potential directions for my future research, I articulate
 below two broad areas that I find particularly exciting.
 
-\paragraph{The empirical influence function.}
+\subsection{The empirical influence function}
 
 Much of my work (particularly \citet{giordano:2019:ij, giordano:2020:amip,
 giordano:2021:bayesij}) has strong connections to the classical theory of von
@@ -318,7 +318,7 @@ higher-order jackknife bias correction.
 % \citep{shao:2012:jackknife}
 % \citep{hall:2013:bootstrap}
 
-\paragraph{Sensitivity analysis in difficult situations.}
+\subsection{Sensitivity analysis in difficult situations}
 
 It is not always as easy to apply sensitivity analysis in practice as it is in
 theory.  I have found that a few key problems tend to recur, and I will discuss
@@ -375,16 +375,16 @@ retaining non-smoothness in the lasso penalty. We take a similar approach in
 in posterior summary statistics.
 
 
-\paragraph{Projects for Junior Collaborators.}
+\subsection{Projects for junior collaborators}
 
 Finally, a professor must also be able to provide research topics suitable for
 more junior researchers, such as those who are early in their PhD.  To this end,
 many of my existing papers can be easily ``crossed'' with one another, producing
-relatively straightforward projects. For example, I am presently working with a
-PhD student to combine the Bayesian influence function of
-\citet{giordano:2021:bayesij} with the adversarial data ablation metrics of
-\citet{giordano:2020:amip}, to automatically find influential data subsets from
-MCMC output.
+relatively straightforward projects for more junior collaborators. For example,
+I am presently working with a PhD student to combine the Bayesian influence
+function of \citet{giordano:2021:bayesij} with the adversarial data ablation
+metrics of \citet{giordano:2020:amip}, to automatically find influential data
+subsets from Markov chain Monte Carlo output.
 
 
 \newpage
