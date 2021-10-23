@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 130 of file main.aux
+Illegal, another \bibstyle command---line 73 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
@@ -15,50 +15,45 @@ Repeated entry---line 986 of file references.bib
  : @phdthesis{reeds:1976:thesis
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1065 of file references.bib
- : @book{shao:2012:jackknife
- :                          ,
-I'm skipping whatever remains of this entry
-Warning--empty publisher in turner:2011:two
-You've used 50 entries,
+You've used 22 entries,
             1935 wiz_defined-function locations,
-            742 strings with 12469 characters,
-and the built_in function-call counts, 19989 in all, are:
-= -- 1937
-> -- 937
-< -- 34
-+ -- 341
-- -- 317
-* -- 1675
-:= -- 3526
-add.period$ -- 154
-call.type$ -- 50
-change.case$ -- 398
-chr.to.int$ -- 48
-cite$ -- 51
-duplicate$ -- 740
-empty$ -- 1301
-format.name$ -- 393
-if$ -- 3858
+            593 strings with 7574 characters,
+and the built_in function-call counts, 8342 in all, are:
+= -- 823
+> -- 346
+< -- 18
++ -- 126
+- -- 114
+* -- 655
+:= -- 1469
+add.period$ -- 69
+call.type$ -- 22
+change.case$ -- 162
+chr.to.int$ -- 20
+cite$ -- 22
+duplicate$ -- 331
+empty$ -- 558
+format.name$ -- 144
+if$ -- 1628
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 48
-newline$ -- 254
-num.names$ -- 154
-pop$ -- 370
+missing$ -- 19
+newline$ -- 114
+num.names$ -- 68
+pop$ -- 153
 preamble$ -- 1
-purify$ -- 406
+purify$ -- 166
 quote$ -- 0
-skip$ -- 568
+skip$ -- 261
 stack$ -- 0
-substring$ -- 1239
-swap$ -- 99
-text.length$ -- 9
+substring$ -- 519
+swap$ -- 53
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 286
-warning$ -- 1
-while$ -- 155
+type$ -- 126
+warning$ -- 0
+while$ -- 64
 width$ -- 0
-write$ -- 636
-(There were 4 error messages)
+write$ -- 282
+(There were 3 error messages)
