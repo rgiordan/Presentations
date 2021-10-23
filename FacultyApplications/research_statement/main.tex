@@ -4,7 +4,7 @@
 
 \usepackage{geometry}
 %\geometry{margin=1.2in}
-\geometry{top=1.2in}
+\geometry{top=1.0in}
 \geometry{left=1.3in}
 \geometry{right=1.3in}
 
@@ -55,10 +55,20 @@ conclusions.  As I detail below, my work encompasses Bayesian approaches (such
 as measuring robustness to prior specification), frequentist approaches (such as
 fast approximations to leave-one-out cross validation), and combinations of the
 two (such as measuring the robustness of Markov chain Monte Carlo procedures to
-data resampling). For the remainder of this statement, I will describe some of
-my specific past and future projects, emphasizing the ways in which I update
-classical results for a modern computational environment using intuitive,
-relevant theory, and with motivation drawn strongly from practical applications.
+data resampling).
+% In my work, I build on classical statistical results which
+% were originally used primarily for theory, adapting them for a modern problems,
+% particularly taking advantage of the recent computational developments such as
+% automatic differentiation.
+% ideas that were mostly used for
+% theoretical analysis relevant to modern practice by developing intuitive,
+% conceptually clear theory and easy-to-use computational tools scalable to large
+% datasets and complex models. I accomplish this by combining recent computational
+% advances like automatic differentiation, etc., etc."
+For the remainder of this statement, I will describe some of my specific past
+and future projects, emphasizing the ways in which I update classical results
+for a modern computational environment using intuitive, relevant theory, and
+with motivation drawn from practical applications.
 
 \section{Selected prior work}
 
@@ -79,12 +89,13 @@ low signal-to-noise ratio in the inference problem, is not reflected in standard
 errors, does not disappear asymptotically, and is not inherently a product of
 outliers or misspecification.
 
-The approximation works for M-estimators based on smooth estimating equations, a
-class which includes most standard estimators, including ordinary least squares,
-instrumental variables, generalized method of moments, variational Bayes, and
-maximum likelihood estimators. Using my \texttt{R} package \citep{zaminfluence},
-the approximation is automatically computable from the specification of the
-estimating equation alone.  By analyzing several published econometric analyses,
+The approximation works for all M-estimators based on smooth estimating
+equations, a class which includes most standard estimators, including ordinary
+least squares, instrumental variables, generalized method of moments,
+variational Bayes, and maximum likelihood estimators. Using my \texttt{R}
+package \citep{zaminfluence}, the approximation is automatically computable from
+the specification of the estimating equation alone.  By analyzing several
+published econometric analyses,
 % \citep{angelucci:2009:indirect, finkelstein:2012:oregon,
 % meager:2019:microcredit},
 I show that even two-parameter linear regression analyses of randomized trials
@@ -116,16 +127,17 @@ datasets, including an unsupervised clustering problem from genomics.
 
 \subsection{Prior sensitivity for Markov chain Monte Carlo}
 %
-Prior specification encodes key assumptions in Bayesian statistics, but Bayesian
-inference can be sensitive to prior specification.  Evaluating the sensitivity
-of Bayesian posterior expectations to prior specification by re-estimating the
+Prior specification encodes key assumptions in Bayesian statistics.  Often, a
+range of prior choices seems reasonable, and Bayesian inference can be sensitive
+which particular prior is used.  Unfortunately, evaluating the sensitivity of
+Bayesian posterior expectations to prior specification by re-estimating the
 posterior for a large number of alternative priors is typically computationally
-prohibitive.  In particular, Markov chain Monte Carlo (MCMC) is arguably the
-most commonly used computational tool to estimate Bayesian posteriors, which is
-made still easier by modern black-box MCMC tools such as \texttt{Stan}.
-However, a single run of MCMC typically remains time-consuming, and
-systematically exploring alternative prior parameterizations by re-running MCMC
-would be computationally prohibitive for all but the simplest models.
+prohibitive. In particular, Markov chain Monte Carlo (MCMC) is arguably the most
+commonly used computational tool to estimate Bayesian posteriors, which is made
+still easier by modern black-box MCMC tools such as \texttt{Stan}. However, a
+single run of MCMC typically remains time-consuming, and systematically
+exploring alternative prior parameterizations by re-running MCMC would be
+computationally prohibitive for all but the simplest models.
 
 %  due both to the large space
 % of possible priors (often infinite dimensional), as well as the high
@@ -150,7 +162,7 @@ example, one might ask whether a new random sample of poll respondents in the
 presidential forecast model of \citet{economist:2020:election} would lead to a
 different prediction for the election outcome.  When Bayesian models are
 misspecified, or when they contain latent parameters on which one wishes to
-condition when resampling, the sampling and posterior variances can differ.  In
+condition when sampling, the sampling and posterior variances can differ.  In
 such cases, sampling variability in excess of posterior variability is
 symptomatic of \emph{data non-robustness}---new data sets which are \textit{a
 priori} plausible would lead to different substantive conclusions.
@@ -176,11 +188,11 @@ MCMC procedure.  My approach is based on the Bayesian analogue of the influence
 function from the classical frequentist robustness literature.  Using results
 from \citet{giordano:2018:covariances, giordano:2019:ij}, I show that the
 influence function for posterior expectations can be easily computed from the
-posterior samples of a single MCMC procedure and consistently estimates the
-bootstrap variance. I demonstrate the accuracy and computational benefits of the
-influence function variance estimates on an array of experiments including an
+posterior samples of a single MCMC procedure and state conditions under which it
+consistently estimates the bootstrap variance. I demonstrate the accuracy and
+computational benefits of my approach on an array of experiments including an
 election forecasting model, the Cormack-Jolly-Seber model from ecology, and a
-large collection of models and datasets from the social sciences.
+large, curated collection of models and datasets from the social sciences.
 % \citep{economist:2020:election}
 % \citep{kery:2011:bayesian}
 % \citep{gelman:2006:arm}
@@ -198,10 +210,10 @@ A central question in many probabilistic clustering problems is how many
 distinct clusters are present in a particular dataset and which observations
 cluster together. Discrete Bayesian nonparametric (BNP) mixture models address
 this question by placing a generative process on cluster assignment, making the
-number and composition of distinct clusters present amenable to Bayesian
-inference.  However, like all Bayesian approaches, BNP requires the
-specification of a prior, and this prior may favor a greater or lesser number of
-distinct clusters.
+number and composition of distinct clusters amenable to Bayesian inference.
+However, like all Bayesian approaches, BNP requires the specification of a
+prior, and this prior may favor different numbers and types of posterior
+clusters.
 
 In \citet{giordano:2021:bnpsensitivity}, I derive and analyze prior sensitivity
 measures for variational Bayes (VB) approximations in general, with a practical
@@ -230,21 +242,23 @@ sensitivity in quantities of practical interest.
 %
 Mean-field Variational Bayes (MFVB) is an approximate Bayesian posterior
 inference technique that is increasingly popular due to its fast runtimes on
-large-scale scientific data sets (e.g., \citet{regier:2019:cataloging}).
-However, even when MFVB provides accurate posterior means for certain
-parameters, it often mis-estimates variances and covariances due to its
-inability to propagate Bayesian uncertainty between statistical parameters.
+large-scale scientific data sets. For example, in
+\citet{regier:2019:cataloging}, my co-authors and I use MFVB to construct an
+approximate posterior for the identity of every astronomical object in 55TB
+of image data from the Sloan Digital Sky Survey.  However, even when MFVB provides
+accurate posterior means for certain parameters, it often mis-estimates
+variances and covariances due to its inability to propagate Bayesian uncertainty
+between statistical parameters.
 
 % \citep{wang:2005:inadequacy, turner:2011:two}
 
 In \citet{giordano:2015:linear, giordano:2018:covariances}, I derive a simple
 formula for the effect of infinitesimal perturbations on MFVB posterior means,
 thus providing improved covariance estimates and greatly expanding the practical
-usefulness of MFVB posterior approximations. My method for computing posterior
-covariances from an MFVB approximation exploits a result from the classical
-Bayesian robustness literature relating derivatives of posterior expectations to
-posterior covariances, and can be seen as generalizing the Laplace approximation
-for maximum \emph{a-posteriori} estimates to more general MFVB procedures.
+usefulness of MFVB posterior approximations. My approach builds on a result from
+the classical Bayesian robustness literature relating posterior covariances to
+the derivatives of posterior expectations, and includes the classical Laplace
+approximation as a special case.
 % The key condition is that the MFVB
 % approximation provides good estimates of a select subset of posterior means---an
 % assumption that has been shown to hold in many practical settings.
@@ -328,13 +342,13 @@ optimization literature.
 
 First, sensitivity analysis should, ideally, deal gracefully with incomplete
 optimization.  For example, a collaborator from biostatistics and I have found
-that the \texttt{R} package \texttt{DESeq2} package can fail in
-practice to fully optimize the log likelihood, and so fail to satisfy the
-assumptions that make sensitivity analysis possible.  Instead of forcing users
-to optimize further, I propose that second-order empirical influence functions
-could simulate the effect of simultaneously taking a Newton step and perturbing
-the data, permitting sensitivity analysis on incompletely optimized objectives
-with little computation beyond that required for well-optimized objectives.
+that the popular \texttt{R} package \texttt{DESeq2} can fail in practice to
+fully optimize the log likelihood, and so fail to satisfy the assumptions that
+make sensitivity analysis possible.  Instead of forcing users to optimize
+further, I propose that second-order empirical influence functions could
+simulate the effect of simultaneously taking a Newton step and perturbing the
+data, permitting sensitivity analysis on incompletely optimized objectives with
+little computation beyond that required for well-optimized objectives.
 
 % \citep{deseq2}
 %
@@ -358,7 +372,7 @@ with little computation beyond that required for well-optimized objectives.
 Second, the key computational bottleneck in sensitivity analysis in
 high-dimensional problems is typically the solution of linear systems involving
 the inverse Hessian of the objective function. Off-the-shelf iterative
-algorithms like the conjugate-gradient algorithm %\citep{nocedal:2006:numerical}
+algorithms like the conjugate gradient algorithm %\citep{nocedal:2006:numerical}
 suffice in many cases, but there is reason to believe that the present active
 research into stochastic second-order methods
 % (e.g.
