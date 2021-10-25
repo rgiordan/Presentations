@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  24 OCT 2021 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  24 OCT 2021 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**diversity_statement.tex
+**diversity_statement
 (./diversity_statement.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (./_headers.tex
@@ -679,12 +679,12 @@ Here is how much of TeX's memory you used:
  26381 multiletter control sequences out of 15000+600000
  534119 words of font info for 44 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 37i,5n,47p,805b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,5n,47p,801b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on diversity_statement.pdf (1 page, 58334 bytes).
+Output written on diversity_statement.pdf (1 page, 58321 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream
