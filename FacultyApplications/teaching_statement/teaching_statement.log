@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  25 OCT 2021 16:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  26 OCT 2021 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,14 +624,14 @@ LaTeX Info: Redefining \Ref on input line 24.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(101.17755pt, 411.9399pt, 101.17755pt)
+* h-part:(L,W,R)=(86.72377pt, 440.84746pt, 86.72377pt)
 * v-part:(T,H,B)=(65.04256pt, 634.53006pt, 95.39737pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=411.9399pt
+* \textwidth=440.84746pt
 * \textheight=634.53006pt
-* \oddsidemargin=28.90756pt
-* \evensidemargin=28.90756pt
+* \oddsidemargin=14.45378pt
+* \evensidemargin=14.45378pt
 * \topmargin=-44.22743pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -663,22 +663,22 @@ Overfull \hbox (17.2222pt too wide) in paragraph at lines 27--37
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
  [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
 
 (./teaching_statement.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
 Package rerunfilecheck Info: File `teaching_statement.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  11604 strings out of 483065
- 172165 string characters out of 5963550
+ 172161 string characters out of 5963550
  500931 words of memory out of 5000000
  26383 multiletter control sequences out of 15000+600000
- 535350 words of font info for 59 fonts, out of 8000000 for 9000
+ 535293 words of font info for 59 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  37i,5n,47p,800b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -686,7 +686,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on teaching_statement.pdf (2 pages, 71207 bytes).
+Output written on teaching_statement.pdf (2 pages, 70849 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

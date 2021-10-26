@@ -6,8 +6,8 @@
 \usepackage{geometry}
 %\geometry{margin=1.2in}
 \geometry{top=0.9in}
-\geometry{left=1.4in}
-\geometry{right=1.4in}
+\geometry{left=1.2in}
+\geometry{right=1.2in}
 
 % \documentclass{article}
 % \usepackage[utf8]{inputenc}
@@ -37,33 +37,33 @@
 
 Good teaching does not only transfer knowledge, it creates intellectual
 community---after all, university professors are cultivating future colleagues.
-Members of an intellectual community are self-motivated, and good teachers
-contextualize course material within the students' own interests. In an
-intellectual community, feedback facilitates self-improvement rather than
-division, and good teachers use assessment to allow students to monitor their
-own progress and for the teacher to assess their own teaching.  And in an
-intellectual community, information does not flow only from one person to the
-rest; similarly, a good teacher helps students teach and learn from one another.
-As I elaborate in a series of vignettes below, I find that these themes of
+In an intellectual community, members are self-motivated, feedback facilitates
+self-improvement rather than division, and information flows freely amongst all
+members; analogously, good teachers contextualize course material within the
+students' own interests, use assessment to allow students to monitor their own
+progress and for the teacher to assess their own teaching, and help students
+teach and learn from one another rather than acting as a ``sage on a stage.'' As
+I elaborate in a series of vignettes below, I find that these themes of
 motivation, feedback, and multi-directional communication recur and co-occur in
-many of the successes from my years of teaching at the university level, as a
-teacher in the Peace Corps, and as a volunteer with the Prison University
-Project.
+many of the successes from my years of being a teaching assistant at the
+university level, as a full-time grade-school teacher in the Peace Corps, and as
+a volunteer math teacher with the Prison University Project.
 
 \paragraph{Motivating code quality.}
 %
 During my second year as a PhD student at UC Berkeley, I was asked by Prof. Bin
 Yu to be her teaching assistant for the graduate-level course in applied
-statistics.  The course was organized around a number labs using real-life
-datasets, and my responsibilities were to give weekly lectures, hold office hours,
-and grade the written labs.  In addition, Prof. Yu asked me to add a
-reproducible research component to the course based on my experience at Google,
-to which end I incorporated Github, code readability, and unit testing into the
-lab requirements.
-%
-I quickly realized that simply teaching code readability and making it a
-component of the grade was insufficient.   The students --- who were otherwise
-very highly motivated --- simply did not see the importance of readability
+statistics.
+% The course was organized around a number labs using real-life
+% datasets, and my responsibilities were to give weekly lectures, hold office hours,
+% and grade the written labs.
+Prof. Yu asked me to add a reproducible research component to the course based
+on my experience at Google, to which end I incorporated Github, code
+readability, and unit testing into the lab requirements.
+
+I quickly realized that simply lecturing on code readability and making it a
+component of the grade was insufficient.   The students---who were otherwise
+very highly motivated---simply did not see the importance of readability
 enough to change bad habits.  To address this, I designed an in-class exercise
 in which the students had to ``reproduce'' a simple analysis written by me.  In
 my code, I deliberately and systematically violated all the code readability
@@ -75,27 +75,71 @@ spent much of the hour complaining about my terrible style.  I had motivated the
 students in a way they understood, and, following this assignment, the labs'
 code readability improved considerably.
 
-\paragraph{Working with multiple ability levels.}
+\paragraph{Evaluating in a way that accomodates multiple ability levels.}
 
 Math teachers often have to accommodate a wide range of student abilities and
 backgrounds, and my introductory statistics class at San Quentin University
 through the Prison University Project (PUP) was particularly extreme in this
 regard.  Some students had been at the top of their class when they were
-younger, some were very intelligent but had only learned basic arithmetic as
-adults through PUP.  My goal was to design exercises which accommodated this
-range of abilities and needs without leaving anyone discouraged or bored. To
-this end, I reduced the proportion of the class devoted to lectures and
+younger, while others were very intelligent but had only learned basic
+arithmetic as adults through PUP.  As a consequnce, I needed to design exercises
+which accommodated this range of abilities and needs without leaving anyone
+discouraged or bored.
+
+My solution was to reduce the proportion of the class devoted to lectures and
 increased the time available for individual or group work while I walked around
 and answered questions.  I would design problem sets for such periods with the
 expectation that \emph{no} student would be able to complete the whole thing in
 the time allotted. In this way, the faster students could quickly proceed to
-more challenging problems, the slower students could spend more time with
-concepts that were new to them. When I found the same question was being asked
-repeatedly, I would bring everyone together for a brief lecture on the question,
-and then return to individual work.  By providing evaluation tasks that were
+more challenging problems, while the slower students could spend more time with
+concepts that were new to them without feeling ashamed of not completing the
+full exercise set. When I found the same question was being asked repeatedly, I
+would bring everyone together for a brief lecture on the question, and then
+return to individual work.  By providing evaluation tasks that were
 non-threatening and matched to students' ability levels, I helped create an
 inclusive classroom environment, and got a lot of feedback for myself about the
 effectiveness of my teaching as well.
+
+\paragraph{Frequent and meaningful evaluation.}
+
+When I was a teaching assistant for the graduate-level applied statistics
+course, the students came from a wide array of technical backgrounds, from
+statistics to psychology, and some students were little more than auditing,
+while some wanted to work hard to push their own boundaries.  I expected that
+some students would struggle with the material, and wanted to provide evaluation
+that would be useful to all students.
+
+I accomplished this goal in several ways. First, I made the rubric for grading
+the labs as clear as possible, and allowed for a lab to be successful in many
+different aspects, including clarity of exposition, quality of graphics,
+analytical creativity, etc..  Next, I made sure that the students were
+continually updated with their own progress and on the grade that they were
+slated receive based on their performance to-date. Finally, I offered to give
+detailed feedback on how to improve a particular lab if the students were
+willing to spend time with me in person.  With the help of frequent and
+substantive feedback, some of the students who began with the weakest
+backgrounds went on to become some of the strongest by the end of the
+class---and one has even gone on to become a professional data scientist.
+
+
+\paragraph{Short questions during lecture.}
+
+Most technical lectures have many points at which minor inferential steps can be
+made into a short, minute-long exercise.  Whenever it is possible to get
+feedback from the audience, I always build in such mini-exercises, which both
+requires students to remain actively engaged and reveals if the exposition is
+going too quickly.  In order to allow less vocal students to participate, one
+can limit the number of questions per class that a given student can answer, or
+one can call on the third hand to be raised rather than the first.
+
+A particularly fun variant of this idea which I developed during the Peace Corps
+is the ``deliberate mistake''.  I would warn my seventh-grade math students that
+I was going to make a mistake in the next five minutes. The students would
+instantly become  on the edge of their seat.  In their enthusiasm, they often
+identified ``mistakes'' that were not actually mistakes, but every such instance
+was still a valuable teaching moment.  By encouraging communication from the
+students to myself, I was able to both motivate the students intrinsically and
+evaluate for myself whether I was teaching effectively.
 
 \paragraph{Two-way communication in statistical consulting.}
 
@@ -107,70 +151,35 @@ Science, as a private contractor, and, for several years as a member of UC
 Berkeley's chapter of the National Security Agency Statistical Advising Group
 (NSASAG).  Rarely, I have found, does a petitioner actually ask a useful
 statistical question at first, and a statistical consultant provides the most
-value by first listening carefully to the problem details.  For example, as part
-of the NSASAG, we were asked how to compute low-rank approximations of matrices
-with some given statistical properties.  Upon pressing for more information
-about the motivation, I learned that all that was actually needed was the
-computation of a t-statistic based on a linear form of a high-dimensional
-parameter, which I saw could be computed exactly using the conjugate gradient
-algorithm with no recourse to low-rank approximations.  Because I promoted
-two-way communication rather than simply attempting to convey statistical
-knowledge, we were able to come to a much better solution that we would have
-otherwise.
+value by actively encouraging the petitioner to explain to them the problem
+motivation, not only its narrow statistical framing.
 
-\paragraph{Frequent and meaningful evaluation.}
-
-When I was a teaching assistant for the graduate-level applied statistics
-course, the students came from a wide array of technical backgrounds, from
-statistics to psychology, and some students were little more than auditing,
-while some wanted to work hard to push their own boundaries.  I expected that
-some students would struggle with the material, and wanted to provide evaluation
-that would be useful to all students.  First, I made the rubric for grading the
-labs as clear as possible, and allowed for a lab to be successful in many
-different aspects, including clarity of exposition, quality of graphics,
-analytical creativity, etc..  Next, I made sure that the students were
-continually updated with their own progress and on the grade that they were
-slated receive based on their performance to-date.  Finally, I offered to give
-detailed feedback on how to improve a particular lab if the students were
-willing to spend time with me in person.  With the help of frequent and
-substantive feedback, some of the students who began with the weakest
-backgrounds went on to become some of the strongest by the end of the class, and
-one has even gone on to become a professional data scientist.
-
-
-\paragraph{Short questions during lecture.}
-
-Most technical lectures have many points at which minor inferential steps can be
-made into a short, minute-long exercise.  Whenever it is possible to get
-feedback from the audience, I always build in such mini-exercises, which both
-requires students to remain actively engaged and reveals if the exposition is
-going too quickly.  A particularly fun variant of this idea which I developed
-during the Peace Corps is the ``deliberate mistake''.  I would warn my
-seventh-grade math students that I was going to make a mistake in the next five
-minutes. The students were instantly on the edge of their seat.  In their
-enthusiasm, the students often identified many ``mistakes'' that were not
-actually mistakes, but every such instance  was still a valuable teaching
-moment.  By encouraging communication from the students to myself, I was able to
-both motivate the students intrinsically and evaluate for myself whether I was
-teaching effectively.
+For example, as part of the NSASAG, we were asked how to compute low-rank
+approximations of matrices with some given statistical properties.  Upon
+pressing for more information about the motivation, I learned that all that was
+actually needed was the computation of a t-statistic based on a linear form of a
+high-dimensional parameter, which I saw could be computed exactly using the
+conjugate gradient algorithm with no recourse to low-rank approximations.
+Because I promoted two-way communication rather than simply attempting to convey
+statistical knowledge, we were able to come to a much better solution that we
+would have otherwise.
 
 
 \paragraph{Be the teacher your students want, not the teacher you would want.}
 
-As a third-year undergraduate I was asked by my engineering department to be a
+As a third-year undergraduate, I was asked by my engineering department to be a
 teaching assistant for the second-year class in statics, which was a required
 course for most engineering majors.  Based on my own intellectual tastes at the
-time, I spent my weekly supplementary lectures re-deriving the course material
-from a more rigorous mathematical perspective in the form of assumptions and
-theorems.  This being my first teaching role, I violated all of the above rules ---
-I did not seek meaningful feedback from the students, I did not encourage
-students to work together, and, most importantly, I considered only my own
-motivations and not theirs.  As a consequence, it was not until I received
-teaching evaluations at the end of the semester that I realized that the
-students uniformly had wanted more intuition from the supplementary lectures,
-not more rigor.  Fortunately, this humbling experience set me on the long  and
-never-ending path towards improving my teaching, leading to the more successful
-vignettes above.
+time, I spent my weekly lectures re-deriving the course material from a more
+rigorous mathematical perspective in the form of assumptions and theorems.  This
+being my first teaching role, I violated all of the above rules --- I did not
+seek meaningful feedback from the students, I did not encourage students to work
+together, and, most importantly, I considered only my own motivation and not
+theirs.  As a consequence, it was not until I received teaching evaluations at
+the end of the semester that I realized that the students had almost uniformly
+wanted more intuition from the supplementary lectures, not more rigor.
+Fortunately, this humbling experience set me on the long  and never-ending path
+towards improving my teaching, leading to the more successful vignettes above.
 
 
 \end{document}
