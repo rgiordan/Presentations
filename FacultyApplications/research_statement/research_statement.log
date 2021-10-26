@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  23 OCT 2021 15:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  26 OCT 2021 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**research_statement.tex
+(./research_statement.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (./_headers.tex
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -534,8 +534,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count289
 \l__pdf_internal_box=\box50
 )
-(./main.aux)
-\openout1 = `main.aux'.
+(./research_statement.aux)
+\openout1 = `research_statement.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
@@ -564,7 +564,8 @@ LaTeX Info: Redefining \showhyphens on input line 17.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -609,9 +610,9 @@ LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
 LaTeX Info: Redefining \nameref on input line 17.
 
-(./main.out) (./main.out)
+(./research_statement.out) (./research_statement.out)
 \@outlinefile=\write3
-\openout3 = `main.out'.
+\openout3 = `research_statement.out'.
 
 LaTeX Info: Redefining \Ref on input line 17.
 
@@ -688,26 +689,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (./main.bbl [5
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 410.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 410.
-
-(./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 410.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 410.
-Package rerunfilecheck Info: File `main.out' has not changed.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] (./researc
+h_statement.bbl
+[6])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
+ (./research_statement.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
+Package rerunfilecheck Info: File `research_statement.out' has not changed.
 (rerunfilecheck)             Checksum: 0ADE44B91A65D8E8038601C1E8E1D901;923.
  ) 
 Here is how much of TeX's memory you used:
- 11897 strings out of 483065
- 177606 string characters out of 5963550
- 501556 words of memory out of 5000000
- 26560 multiletter control sequences out of 15000+600000
- 543649 words of font info for 109 fonts, out of 8000000 for 9000
+ 11888 strings out of 483065
+ 177729 string characters out of 5963550
+ 502619 words of memory out of 5000000
+ 26557 multiletter control sequences out of 15000+600000
+ 543439 words of font info for 106 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 37i,8n,47p,790b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,47p,804b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
@@ -717,9 +718,9 @@ onts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmtt10.pfb>
-Output written on main.pdf (6 pages, 142377 bytes).
+Output written on research_statement.pdf (7 pages, 142953 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
+ 218 PDF objects out of 1000 (max. 8388607)
  198 compressed objects within 2 object streams
  42 named destinations out of 1000 (max. 500000)
  13401 words of extra memory for PDF output out of 14400 (max. 10000000)

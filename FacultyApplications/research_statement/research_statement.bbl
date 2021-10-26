@@ -25,12 +25,6 @@ Gelman, A. and Heidemanns, M. (2020).
 \newblock The {Economist}: {Forecasting} the {US} elections.
 \newblock Data and model accessed Oct., 2020.
 
-\bibitem[Gelman and Hill, 2006]{gelman:2006:arm}
-Gelman, A. and Hill, J. (2006).
-\newblock {\em Data analysis using regression and multilevel/hierarchical
-  models}.
-\newblock Cambridge University Press.
-
 \bibitem[Giordano, 2018]{giordano:2020:rstansensitivity}
 Giordano, R. (2018).
 \newblock {StanSensitivity}: {Automated} hyperparameter sensitivity for {Stan}

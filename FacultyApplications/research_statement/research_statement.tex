@@ -78,13 +78,17 @@ In many applied settings, particularly in econometrics, a statistical analysis
 might be considered non-robust if it could be overturned or even reversed by
 removing only a small proportion of the dataset. Analyzing all possible data
 subsets of a certain size is typically computationally prohibitive, so I provide
-a finite-sample metric to approximately compute the number (or fraction) of
-observations that has the greatest influence on a given result when dropped
-\citep{giordano:2020:amip}\footnote{Following conventions in econometrics, the
+a method to approximately compute the number (or fraction) of observations that
+has the greatest influence on a given result when dropped
+\citep{giordano:2020:amip}.\footnote{Following conventions in econometrics, the
 authors are listed alphabetically.  Rachael Meager and I are equal contribution
-primary authors.}.  At minimal computational cost, my method provides an exact
-finite-sample lower bound on sensitivity, so any non-robustness one finds is
-conclusive. I demonstrate that non-robustness to data ablation is driven by a
+primary authors.}
+%
+At the minimal computational cost of a single re-fit, my method provides an
+exact finite-sample lower bound on sensitivity to data ablation since, at worst,
+we have identified a sub-optimal subset to drop.
+%
+I demonstrate that non-robustness to data ablation is driven by a
 low signal-to-noise ratio in the inference problem, is not reflected in standard
 errors, does not disappear asymptotically, and is not inherently a product of
 outliers or misspecification.
@@ -99,9 +103,10 @@ published econometric analyses,
 % \citep{angelucci:2009:indirect, finkelstein:2012:oregon,
 % meager:2019:microcredit},
 I show that even two-parameter linear regression analyses of randomized trials
-can be highly sensitive.  While I find some applications are robust, in others
+can be highly sensitive.  While I find some applications are robust, I show that
 the sign of a treatment effect can be changed by dropping less than 1\% of the
-sample even when standard errors are small.
+sample in  several high-profile econometrics studies, even when standard errors
+are small.
 
 
 \subsection{Approximate cross validation}
@@ -143,15 +148,16 @@ computationally prohibitive for all but the simplest models.
 % of possible priors (often infinite dimensional), as well as the high
 % computational cost of evaluating even a single posterior approximation.
 
-My software package, \texttt{rstansensitivity},
+My software package \texttt{rstansensitivity}
 \citep{giordano:2020:rstansensitivity, giordano:2018:mcmchyper}, takes advantage
-of the automatic differentiation capacities of \texttt{Stan}
-together with a classical result from  Bayesian
-robustness \citep{gustafson:1996:localposterior,
+of the automatic differentiation capacities of \texttt{Stan} together with a
+classical result from  Bayesian robustness \citep{gustafson:1996:localposterior,
 giordano:2018:covariances} to provide automatic hyperparameter sensitivity for
 generic \texttt{Stan} models from only a single MCMC run.  I demonstrate the
-speed and utility of the package in detecting excess prior sensitivity in a
-social sciences model taken from \citet[Chapter 13.5]{gelman:2006:arm}.
+speed and utility of the package in detecting excess prior sensitivity in
+several examples taken from the \texttt{Stan} example datasets,
+including real-life datasets from the social sciences.
+%social sciences model taken from \citet[Chapter 13.5]{gelman:2006:arm}.
 
 
 \subsection{Approximately bootstrapping Bayesian posterior means}
@@ -191,7 +197,7 @@ influence function for posterior expectations can be easily computed from the
 posterior samples of a single MCMC procedure and state conditions under which it
 consistently estimates the bootstrap variance. I demonstrate the accuracy and
 computational benefits of my approach on an array of experiments including an
-election forecasting model, the Cormack-Jolly-Seber model from ecology, and a
+election forecasting model, the Cormack--Jolly--Seber model from ecology, and a
 large, curated collection of models and datasets from the social sciences.
 % \citep{economist:2020:election}
 % \citep{kery:2011:bayesian}
@@ -221,10 +227,13 @@ focus on discrete BNP models. Unlike much previous work on local Bayesian
 sensitivity for BNP (e.g. \citet{Basu:2000:BNP_robustness}), I pay special
 attention to the ability of the sensitivity measures to \emph{extrapolate} to
 different priors, rather than treating the sensitivity as a measure of
-robustness \textit{per se}. Under mild regularity conditions, I prove that VB
-approximations are Fr{\'e}chet differentiable functions of the prior density,
-though only in one extreme of a standard family of embeddings considered for
-exact Bayesian posteriors \citep{gustafson:1996:localposterior}.
+robustness \textit{per se}.  I state conditions under which VB approximations
+are Fr{\'e}chet differentiable functions of prior densities in a particular
+vector space, while also proving that VB approximations are in fact
+\emph{non-differentiable} in another wide class of vector space embeddings
+popular in the classical Bayesian robustness literature.
+% though only in one extreme of a standard family of embeddings considered for
+% exact Bayesian posteriors \citep{gustafson:1996:localposterior}.
 % Further, though there are many valid choices for measuring the ``size'' of a
 % prior perturbation for exact Bayesian posteriors
 % \citep{gustafson:1996:localposterior}, I prove that, for variational Bayes
@@ -232,7 +241,7 @@ exact Bayesian posteriors \citep{gustafson:1996:localposterior}.
 % point-wise change in the log density.
 My co-authors and I apply the sensitivity measures to a number of real-world
 problems, including an unsupervised clustering problem from genomics using
-fastSTRUCTURE, demonstrating that the approximation is accurate, orders of
+fastSTRUCTURE.  We demonstrate that the approximation is accurate, orders of
 magnitude faster than re-fitting, and capable of detecting meaningful prior
 sensitivity in quantities of practical interest.
 
@@ -395,11 +404,11 @@ in posterior summary statistics.
 Finally, a professor must also be able to provide research topics suitable for
 more junior researchers, such as those who are early in their PhD.  To this end,
 many of my existing papers can be easily ``crossed'' with one another, producing
-relatively straightforward projects for more junior collaborators. For example,
-I am presently working with a PhD student to combine the Bayesian influence
-function of \citet{giordano:2021:bayesij} with the adversarial data ablation
-metrics of \citet{giordano:2020:amip}, to automatically find influential data
-subsets from Markov chain Monte Carlo output.
+impactful but relatively straightforward projects for more junior collaborators.
+For example, I am presently working with a PhD student to combine the Bayesian
+influence function of \citet{giordano:2021:bayesij} with the adversarial data
+ablation metrics of \citet{giordano:2020:amip}, to automatically find
+influential data subsets from Markov chain Monte Carlo output.
 
 
 \newpage

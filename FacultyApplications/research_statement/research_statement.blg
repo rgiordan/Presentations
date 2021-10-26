@@ -1,8 +1,8 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
+The top-level auxiliary file: research_statement.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 73 of file main.aux
+Illegal, another \bibstyle command---line 73 of file research_statement.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
@@ -15,45 +15,45 @@ Repeated entry---line 986 of file references.bib
  : @phdthesis{reeds:1976:thesis
  :                             ,
 I'm skipping whatever remains of this entry
-You've used 22 entries,
+You've used 21 entries,
             1935 wiz_defined-function locations,
-            593 strings with 7574 characters,
-and the built_in function-call counts, 8342 in all, are:
-= -- 823
-> -- 346
-< -- 18
-+ -- 126
-- -- 114
-* -- 655
-:= -- 1469
-add.period$ -- 69
-call.type$ -- 22
-change.case$ -- 162
-chr.to.int$ -- 20
-cite$ -- 22
-duplicate$ -- 331
-empty$ -- 558
-format.name$ -- 144
-if$ -- 1628
+            588 strings with 7469 characters,
+and the built_in function-call counts, 8026 in all, are:
+= -- 794
+> -- 333
+< -- 17
++ -- 122
+- -- 110
+* -- 632
+:= -- 1412
+add.period$ -- 66
+call.type$ -- 21
+change.case$ -- 156
+chr.to.int$ -- 19
+cite$ -- 21
+duplicate$ -- 317
+empty$ -- 535
+format.name$ -- 137
+if$ -- 1566
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 114
-num.names$ -- 68
-pop$ -- 153
+missing$ -- 17
+newline$ -- 109
+num.names$ -- 65
+pop$ -- 144
 preamble$ -- 1
-purify$ -- 166
+purify$ -- 159
 quote$ -- 0
-skip$ -- 261
+skip$ -- 251
 stack$ -- 0
-substring$ -- 519
-swap$ -- 53
+substring$ -- 507
+swap$ -- 52
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 126
+type$ -- 122
 warning$ -- 0
-while$ -- 64
+while$ -- 62
 width$ -- 0
-write$ -- 282
+write$ -- 270
 (There were 3 error messages)
