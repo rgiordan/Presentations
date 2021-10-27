@@ -1,0 +1,96 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Marginalization: General setup}
+
+In general notation, we want to infer $\theta$ from
+
+\begin{align*}
+    \textrm{Observations: }y ={}& (y_1, \ldots, y_N)\\
+    \textrm{Unknown latent variables: }z ={}& (z_1, \ldots, z_N)\\
+    \textrm{Unknown global parameter: }\theta \in{}& \mathbb{R}^D
+\end{align*}
+%
+We have learned that
+%
+\begin{align*}
+%
+\textrm{Bad: }&& \thetahat, \hat{z} ={}& \argmax_{\theta, z} \log p(y | \theta, z)\\
+\textrm{Good: }&& \thetahat ={}&
+    \argmax_{\theta} \log \int p(y | \theta, z) p(z | \theta) dz.
+%
+\end{align*}
+%
+There are two problems:
+%
+\begin{itemize}
+    \item Need to posit $p(z | \theta)$
+    \item Need to compute $\int p(y | \theta, z) p(z | \theta) dz$
+\end{itemize}
+%
+
+We will only deal with the second problem in these two talks, assuming
+we have a $p(z | \theta)$ we are willing to live with.
+
+\textbf{In general, the integral is hard!}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Bayesian statistics has marginalization built in}
+
+% \begin{align*}
+%     \textrm{Observations: }y ={}& (y_1, \ldots, y_N)\\
+%     \textrm{Unknown latent variables: }z ={}& (z_1, \ldots, z_N)\\
+%     \textrm{Unknown global parameter: }\theta \in{}& \mathbb{R}^D \\
+%     \textrm{Need to compute: } \int &p(y | \theta, z) p(z | \theta) dz
+% \end{align*}
+
+Recall that a Bayesian model posits a full generative process:
+%
+\begin{align*}
+%
+\theta \sim{} p(\theta) \quad\quad
+z | \theta \sim{} p(z | \theta) \quad\quad
+y | z, \theta \sim{} p(y | z, \theta)
+%
+\end{align*}
+%
+and forms the posterior
+%
+\begin{align*}
+%
+p(\theta, z \vert y) ={}& \frac{p(y | \theta, z) p(z | \theta) p(\theta)}
+     {\int \int p(y | \theta', z') p(z' | \theta') p(\theta') d\theta' dz'} \Rightarrow\\
+ p(\theta \vert y) ={}& \int p(\theta, z \vert y) dz \\
+ ={}& \frac{\int p(y | \theta, z) p(z | \theta) p(\theta) \, dz}
+      {\int\int p(y | \theta', z') p(z' | \theta') p(\theta') d\theta' dz'} \\
+={}& \frac{\left(\int p(y | \theta, z) p(z | \theta)dz \right) p(\theta) }
+   {\int\left( \int p(y | \theta', z') p(z' | \theta')dz'\right) p(\theta') d\theta' } \\
+={}& \frac{ p(y | \theta) p(\theta) }
+  {\int \int p(y | \theta') p(\theta') d\theta'}.
+%
+\end{align*}
+%
+$\Rightarrow$
+\textbf{Bayesian methods do not suffer from the Neyman-Scott problem:}
+
+\begin{itemize}
+    \item Bayesians are forced to posit $p(z | \theta)$
+    \item Forming the posterior is equivalent to using the marginal $p(y | \theta)$
+\end{itemize}
+
+\textbf{But the integral is still hard!}
+%
+Full Bayesian solutions typically require Markov Chain Monte Carlo, which is
+slow and sampling based.
+
+\end{frame}
