@@ -5,8 +5,8 @@
 \usepackage{geometry}
 %\geometry{margin=1.2in}
 \geometry{top=1.0in}
-\geometry{left=1.3in}
-\geometry{right=1.3in}
+\geometry{left=1.1in}
+\geometry{right=1.1in}
 
 \title{Ryan Giordano Research Statement}
 
@@ -55,24 +55,16 @@ conclusions.  As I detail below, my work encompasses Bayesian approaches (such
 as measuring robustness to prior specification), frequentist approaches (such as
 fast approximations to leave-one-out cross validation), and combinations of the
 two (such as measuring the robustness of Markov chain Monte Carlo procedures to
-data resampling).
-% In my work, I build on classical statistical results which
-% were originally used primarily for theory, adapting them for a modern problems,
-% particularly taking advantage of the recent computational developments such as
-% automatic differentiation.
-% ideas that were mostly used for
-% theoretical analysis relevant to modern practice by developing intuitive,
-% conceptually clear theory and easy-to-use computational tools scalable to large
-% datasets and complex models. I accomplish this by combining recent computational
-% advances like automatic differentiation, etc., etc."
-For the remainder of this statement, I will describe some of my specific past
-and future projects, emphasizing the ways in which I update classical results
-for a modern computational environment using intuitive, relevant theory, and
-with motivation drawn from practical applications.
+data resampling). For the remainder of this statement, I will describe some of
+my specific past and future projects, emphasizing the ways in which I update
+classical results for a modern computational environment using intuitive,
+relevant theory, and with motivation drawn from practical applications.
 
-\section{Selected prior work}
+\section{Selected prior and ongoing work}
 
-\subsection{Robustness to data ablation}
+\subsection{Data sensitivity}
+
+\paragraph{Robustness to data ablation.}
 %
 In many applied settings, particularly in econometrics, a statistical analysis
 might be considered non-robust if it could be overturned or even reversed by
@@ -109,7 +101,7 @@ sample in  several high-profile econometrics studies, even when standard errors
 are small.
 
 
-\subsection{Approximate cross validation}
+\paragraph{Approximate cross validation.}
 %
 The error or variability of machine learning algorithms is often assessed by
 repeatedly re-fitting a model with different weighted versions of the observed
@@ -130,37 +122,7 @@ datasets, including an unsupervised clustering problem from genomics.
 %\citep{Luan:2003:clustering, shoemaker:2015:ultrasensitive}.
 
 
-\subsection{Prior sensitivity for Markov chain Monte Carlo}
-%
-Prior specification encodes key assumptions in Bayesian statistics.  Often, a
-range of prior choices seems reasonable, and Bayesian inference can be sensitive
-which particular prior is used.  Unfortunately, evaluating the sensitivity of
-Bayesian posterior expectations to prior specification by re-estimating the
-posterior for a large number of alternative priors is typically computationally
-prohibitive. In particular, Markov chain Monte Carlo (MCMC) is arguably the most
-commonly used computational tool to estimate Bayesian posteriors, which is made
-still easier by modern black-box MCMC tools such as \texttt{Stan}. However, a
-single run of MCMC typically remains time-consuming, and systematically
-exploring alternative prior parameterizations by re-running MCMC would be
-computationally prohibitive for all but the simplest models.
-
-%  due both to the large space
-% of possible priors (often infinite dimensional), as well as the high
-% computational cost of evaluating even a single posterior approximation.
-
-My software package \texttt{rstansensitivity}
-\citep{giordano:2020:rstansensitivity, giordano:2018:mcmchyper}, takes advantage
-of the automatic differentiation capacities of \texttt{Stan} together with a
-classical result from  Bayesian robustness \citep{gustafson:1996:localposterior,
-giordano:2018:covariances} to provide automatic hyperparameter sensitivity for
-generic \texttt{Stan} models from only a single MCMC run.  I demonstrate the
-speed and utility of the package in detecting excess prior sensitivity in
-several examples taken from the \texttt{Stan} example datasets,
-including real-life datasets from the social sciences.
-%social sciences model taken from \citet[Chapter 13.5]{gelman:2006:arm}.
-
-
-\subsection{Approximately bootstrapping Bayesian posterior means}
+\paragraph{Approximately bootstrapping Bayesian posterior means.}
 %
 When analyzing randomly sampled data using Bayesian posteriors, it can make
 sense to consider the \emph{sampling variability} of the posterior mean.  For
@@ -172,19 +134,6 @@ condition when sampling, the sampling and posterior variances can differ.  In
 such cases, sampling variability in excess of posterior variability is
 symptomatic of \emph{data non-robustness}---new data sets which are \textit{a
 priori} plausible would lead to different substantive conclusions.
-
-% The frequentist (i.e., sampling) variance of Bayesian posterior expectations
-% differs in general from the posterior variance even for large datasets,
-% particularly when the model is misspecified or contains many latent variables.
-% %\citep{kleijn:2006:misspecification}.
-% Unlike the posterior variance, the
-% frequentist variance is meaningful even in the presence of misspecification,
-% particularly when the data is known to arise from random sampling.
-% % \citep{waddell:2002:bayesphyloboot}.
-% However, the principal existing approach
-% for computing the frequentist variability of MCMC procedures is the bootstrap,
-% which can be extremely computationally intensive due to the need to run hundreds
-% of extra MCMC procedures. % \citep{huggins:2019:bayesbag}.
 
 The sampling variability of a posterior mean can be evaluated by the bootstrap,
 but at the considerable cost of re-running Markov chain Monte Carlo (MCMC)
@@ -209,7 +158,36 @@ large, curated collection of models and datasets from the social sciences.
 % \citep{carpenter:2017:stan, rstan}
 % \citep{carpenter:2015:stanmath}
 
-\subsection{Prior sensitivity for discrete Bayesian nonparametrics}
+\subsection{Prior sensitivity}
+
+\paragraph{Prior sensitivity for Markov chain Monte Carlo.}
+%
+Prior specification encodes key assumptions in Bayesian statistics.  Often, a
+range of prior choices seems reasonable, and Bayesian inference can be sensitive
+which particular prior is used.  Unfortunately, evaluating the sensitivity of
+Bayesian posterior expectations to prior specification by re-estimating the
+posterior for a large number of alternative priors is typically computationally
+prohibitive. In particular, Markov chain Monte Carlo (MCMC) is arguably the most
+commonly used computational tool to estimate Bayesian posteriors, which is made
+still easier by modern black-box MCMC tools such as \texttt{Stan}. However, a
+single run of MCMC typically remains time-consuming, and systematically
+exploring alternative prior parameterizations by re-running MCMC would be
+computationally prohibitive for all but the simplest models.
+
+My software package \texttt{rstansensitivity}
+\citep{giordano:2020:rstansensitivity, giordano:2018:mcmchyper}, takes advantage
+of the automatic differentiation capacities of \texttt{Stan} together with a
+classical result from  Bayesian robustness \citep{gustafson:1996:localposterior,
+giordano:2018:covariances} to provide automatic hyperparameter sensitivity for
+generic \texttt{Stan} models from only a single MCMC run.  I demonstrate the
+speed and utility of the package in detecting excess prior sensitivity in
+several examples taken from the \texttt{Stan} example datasets,
+including real-life datasets from the social sciences.
+%social sciences model taken from \citet[Chapter 13.5]{gelman:2006:arm}.
+
+
+
+\paragraph{Prior sensitivity for discrete Bayesian nonparametrics.}
 %
 % From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
 A central question in many probabilistic clustering problems is how many
@@ -232,13 +210,6 @@ are Fr{\'e}chet differentiable functions of prior densities in a particular
 vector space, while also proving that VB approximations are in fact
 \emph{non-differentiable} in another wide class of vector space embeddings
 popular in the classical Bayesian robustness literature.
-% though only in one extreme of a standard family of embeddings considered for
-% exact Bayesian posteriors \citep{gustafson:1996:localposterior}.
-% Further, though there are many valid choices for measuring the ``size'' of a
-% prior perturbation for exact Bayesian posteriors
-% \citep{gustafson:1996:localposterior}, I prove that, for variational Bayes
-% approximations, local approximations are valid only when based on the largest
-% point-wise change in the log density.
 My co-authors and I apply the sensitivity measures to a number of real-world
 problems, including an unsupervised clustering problem from genomics using
 fastSTRUCTURE.  We demonstrate that the approximation is accurate, orders of
@@ -247,7 +218,9 @@ sensitivity in quantities of practical interest.
 
 % \citep{raj:2014:faststructure}
 
-\subsection{Uncertainty propagation in mean-field variational Bayes}
+\subsection{Improved variational inference}
+
+\paragraph{Uncertainty propagation in mean-field variational Bayes.}
 %
 Mean-field Variational Bayes (MFVB) is an approximate Bayesian posterior
 inference technique that is increasingly popular due to its fast runtimes on
@@ -259,56 +232,43 @@ accurate posterior means for certain parameters, it often mis-estimates
 variances and covariances due to its inability to propagate Bayesian uncertainty
 between statistical parameters.
 
-% \citep{wang:2005:inadequacy, turner:2011:two}
-
 In \citet{giordano:2015:linear, giordano:2018:covariances}, I derive a simple
 formula for the effect of infinitesimal perturbations on MFVB posterior means,
 thus providing improved covariance estimates and greatly expanding the practical
 usefulness of MFVB posterior approximations. My approach builds on a result from
 the classical Bayesian robustness literature relating posterior covariances to
 the derivatives of posterior expectations, and includes the classical Laplace
-approximation as a special case.
-% The key condition is that the MFVB
-% approximation provides good estimates of a select subset of posterior means---an
-% assumption that has been shown to hold in many practical settings.
-In experiments on simulated and real-life datasets,  including models from
-ecology, the social sciences,
-and on a massive internet advertising dataset, I
-demonstrate that my method is simple, general, and fast, providing accurate
-posterior uncertainty estimates and robustness measures with runtimes that can
-be an order of magnitude faster than MCMC.
+approximation as a special case. In experiments on simulated and real-life
+datasets,  including models from ecology, the social sciences, and on a massive
+internet advertising dataset, I demonstrate that my method is simple, general,
+and fast, providing accurate posterior uncertainty estimates and robustness
+measures with runtimes that can be an order of magnitude faster than MCMC.
 
 
-\subsection{Simplified and improved black-box variational inference}
-
-Black box variational inference (BBVI) allows the use of variational inference
-from little more than the implementation of a differentiable log joint
-probability distribution.  Since BBVI objective functions involve the evaluation
-of an intractable integral, standard BBVI implementations such as the
-\texttt{vb} method implemented in the R software \texttt{Stan} rely on
-stochastic gradient optimization using on draws from the variational
-approximation. Unfortunately, the use of stochastic gradient optimization brings
-about some difficulties: stochastic gradient can be more difficult to implement
-and tune than standard deterministic optimization methods, convergence can be
-difficult to assess, and, since the BBVI objective function cannot be directly
-evaluated, one cannot directly compute the linear response covariances and prior
-sensitivity measures from my research described above.
+\paragraph{Simplified and improved black-box variational inference.}
+%
+Black box variational inference (BBVI) is an easy-to-use version of variational
+inference requiring little more from the user than the software implementation
+of a differentiable log joint probability distribution. Unfortunately, standard
+BBVI implementations (such as the \texttt{vb} method implemented in the R
+software \texttt{Stan}) depend on stochastic gradient optimization, which can be
+more difficult to implement and assess than standard deterministic optimization
+methods.  Further, since the exact BBVI objective function cannot be directly
+evaluated, one cannot compute the linear response covariances and prior
+sensitivity measures described above.
 
 In \citet{giordano:2018:covariances, giordano:2021:bbvi} I overcome these
 difficulties with a simple idea: rather than use stochastic gradient to optimize
 the exact variational objective, one can fix a finite number of draws in advance
-and optimize an approximate but deterministic objective.  With my coauthors in
-\citet{giordano:2021:bbvi}, we show on a wide range of real-life datasets and
-models that the deterministic objective can be optimized using off-the-shelf
-methods more easily and, often, more quickly, than stochastic gradient descent
-on the exact objective. Further, the use of a deterministic objective allows us
-to compute linear response covariances, rectifying the badly mis-estimated
-posterior uncertainty estimates produced by stochastic BBVI. Finally, we show
-that the error induced by using an approximate but deterministic objective is
-both small and quantifiable, since standard frequentist measures of uncertainty
-can tell us how much error was induced by using an empirical expectation in
-place of an exact one.
-
+and optimize an approximate but deterministic objective.  In
+\citet{giordano:2021:bbvi}, my co-authors and I show on a a wide range of
+real-life problems that the BBVI with a deterministic objective and linear
+response covariances produces much more accurate posterior approximations than
+stochastic BBVI.  Futher, using off-the-shelf optimization methods, we produce
+approximations no slower than and, often, much faster than custom
+implementaitons of stochastic BBVI.  Finally, we show that the error induced by
+using an approximate objective is not only small but quantifiable using standard
+frequentist measures of uncertainty.
 
 
 % \citep{kery:2011:bayesian}
@@ -323,17 +283,11 @@ place of an exact one.
 %\clearpage
 \section{Selected future work}
 
-% My research is ideally driven by the needs of my scientific and industry
-% collaborators, and so I expect my future work will be determined to a large part
-% by my colleagues, and so inherently difficult to predict in advance.
-% Nevertheless, there are a few thematic directions that I find promising,
-% and which I look forward to pursuing as faculty.
-
 Though there are many potential directions for my future research, I articulate
 below two broad areas that I find particularly exciting.
 
-\subsection{The empirical influence function}
-
+\paragraph{The empirical influence function.}
+%
 Much of my work (particularly \citet{giordano:2019:ij, giordano:2020:amip,
 giordano:2021:bayesij}) has strong connections to the classical theory of von
 Mises expansions and the closely related concept of the influence function,
@@ -348,15 +302,6 @@ function.
 In our present age of automatic differentiation, large datasets, and complex
 models, I believe that the EIF will continue to provide practical benefits and
 is relatively under-studied.
-% Since the EIF is observed, one can in principal
-% use it to compute exact finite-sample error bounds for its
-% approximations.~\footnote{Though I provide finite-sample error bounds in
-% \citet{giordano:2019:ij, giordano:2019:hoij}, the bounds need to be tightened
-% and simplified to be practically useful.  There is good reason to believe they
-% can be, especially in simple cases such as least-squares estimators.} Studying
-% the EIF alone avoids many of the technical difficulties requried for classical
-% von Mises calculus, since the latter must study distribution functions in spaces
-% that embed both continuous and discrete measures \citep{gill:1989:mises}.
 
 In \citet{giordano:2019:hoij}, I show that higher-order EIFs can be
 easily and automatically evaluated and analyzed for M-estimators at a
@@ -375,8 +320,8 @@ higher-order jackknife bias correction.
 % \citep{shao:2012:jackknife}
 % \citep{hall:2013:bootstrap}
 
-\subsection{Sensitivity analysis in difficult situations}
-
+\paragraph{Sensitivity analysis in difficult situations.}
+%
 It is not always as easy to apply sensitivity analysis in practice as it is in
 theory.  I have found that a few key problems tend to recur, and I will discuss
 them in turn, as well as potential solutions which draw connections to the
@@ -391,25 +336,6 @@ further, I propose that second-order empirical influence functions could
 simulate the effect of simultaneously taking a Newton step and perturbing the
 data, permitting sensitivity analysis on incompletely optimized objectives with
 little computation beyond that required for well-optimized objectives.
-
-% \citep{deseq2}
-%
-%
-% is currently working with me to
-% apply my work in \citet{giordano:2020:amip} to single-cell sequencing data in
-% hopes of flagging small groups of highly influential cells.  Careful analysis of
-% the output of the \texttt{R} package \texttt{DESeq2} \citep{deseq2} shows that
-% the package's iteratively reweighted least squares algorithm may not be finding
-% a high-quality optimum of the objective function.  The ``sensitivity'' of
-% incomplete optimization is not well-defined, but we ideally do not want to
-% require end-users to to re-implement their optimization algorithm to use
-% sensitivity analysis.  One potential solution using higher-order expansions
-% could be to represent incomplete optimization as a constrained optimization
-% problem in which the gradient is set not to zero, but to the value numerically
-% observed in the incomplete optimization.  Representing the constraint with a
-% Lagrange multiplier, one can then use a second-order expansion to estimate the
-% effect of simultaneously removing the constraint (setting the multiplier to
-% zero) and perturbing the objective (e.g., removing some data).
 
 Second, the key computational bottleneck in sensitivity analysis in
 high-dimensional problems is typically the solution of linear systems involving
@@ -432,8 +358,8 @@ retaining non-smoothness in the lasso penalty. We take a similar approach in
 in posterior summary statistics.
 
 
-\subsection{Projects for junior collaborators}
-
+\paragraph{Projects for junior collaborators.}
+%
 Finally, a professor must also be able to provide research topics suitable for
 more junior researchers, such as those who are early in their PhD.  To this end,
 many of my existing papers can be easily ``crossed'' with one another, producing
