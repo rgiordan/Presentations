@@ -2,58 +2,58 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: research_statement.aux
 The style file: apalike.bst
-Illegal, another \bibstyle command---line 73 of file research_statement.aux
+Illegal, another \bibstyle command---line 76 of file research_statement.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-Repeated entry---line 975 of file references.bib
+Repeated entry---line 985 of file references.bib
  : @article{mises:1947:asymptotic
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 986 of file references.bib
+Repeated entry---line 996 of file references.bib
  : @phdthesis{reeds:1976:thesis
  :                             ,
 I'm skipping whatever remains of this entry
-You've used 21 entries,
+You've used 22 entries,
             1935 wiz_defined-function locations,
-            588 strings with 7469 characters,
-and the built_in function-call counts, 8026 in all, are:
-= -- 794
-> -- 333
+            593 strings with 7709 characters,
+and the built_in function-call counts, 8380 in all, are:
+= -- 829
+> -- 351
 < -- 17
-+ -- 122
-- -- 110
-* -- 632
-:= -- 1412
-add.period$ -- 66
-call.type$ -- 21
-change.case$ -- 156
++ -- 129
+- -- 116
+* -- 659
+:= -- 1480
+add.period$ -- 71
+call.type$ -- 22
+change.case$ -- 164
 chr.to.int$ -- 19
-cite$ -- 21
-duplicate$ -- 317
-empty$ -- 535
-format.name$ -- 137
-if$ -- 1566
-int.to.chr$ -- 3
+cite$ -- 22
+duplicate$ -- 330
+empty$ -- 555
+format.name$ -- 144
+if$ -- 1632
+int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 17
-newline$ -- 109
-num.names$ -- 65
-pop$ -- 144
+missing$ -- 18
+newline$ -- 116
+num.names$ -- 68
+pop$ -- 150
 preamble$ -- 1
-purify$ -- 159
+purify$ -- 167
 quote$ -- 0
-skip$ -- 251
+skip$ -- 260
 stack$ -- 0
-substring$ -- 507
-swap$ -- 52
+substring$ -- 519
+swap$ -- 53
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 122
+type$ -- 128
 warning$ -- 0
-while$ -- 62
+while$ -- 64
 width$ -- 0
-write$ -- 270
+write$ -- 286
 (There were 3 error messages)

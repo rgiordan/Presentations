@@ -278,6 +278,39 @@ demonstrate that my method is simple, general, and fast, providing accurate
 posterior uncertainty estimates and robustness measures with runtimes that can
 be an order of magnitude faster than MCMC.
 
+
+\subsection{Simplified and improved black-box variational inference}
+
+Black box variational inference (BBVI) allows the use of variational inference
+from little more than the implementation of a differentiable log joint
+probability distribution.  Since BBVI objective functions involve the evaluation
+of an intractable integral, standard BBVI implementations such as the
+\texttt{vb} method implemented in the R software \texttt{Stan} rely on
+stochastic gradient optimization using on draws from the variational
+approximation. Unfortunately, the use of stochastic gradient optimization brings
+about some difficulties: stochastic gradient can be more difficult to implement
+and tune than standard deterministic optimization methods, convergence can be
+difficult to assess, and, since the BBVI objective function cannot be directly
+evaluated, one cannot directly compute the linear response covariances and prior
+sensitivity measures from my research described above.
+
+In \citet{giordano:2018:covariances, giordano:2021:bbvi} I overcome these
+difficulties with a simple idea: rather than use stochastic gradient to optimize
+the exact variational objective, one can fix a finite number of draws in advance
+and optimize an approximate but deterministic objective.  With my coauthors in
+\citet{giordano:2021:bbvi}, we show on a wide range of real-life datasets and
+models that the deterministic objective can be optimized using off-the-shelf
+methods more easily and, often, more quickly, than stochastic gradient descent
+on the exact objective. Further, the use of a deterministic objective allows us
+to compute linear response covariances, rectifying the badly mis-estimated
+posterior uncertainty estimates produced by stochastic BBVI. Finally, we show
+that the error induced by using an approximate but deterministic objective is
+both small and quantifiable, since standard frequentist measures of uncertainty
+can tell us how much error was induced by using an empirical expectation in
+place of an exact one.
+
+
+
 % \citep{kery:2011:bayesian}
 % \citep{gelman:2006:arm}
 % \citep{criteo:2014:dataset}

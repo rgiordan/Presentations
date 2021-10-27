@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  26 OCT 2021 15:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  27 OCT 2021 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -692,23 +692,30 @@ Package microtype Info: Loading generic protrusion settings for font family
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] (./researc
 h_statement.bbl
 [6])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
  [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 452.
  (./research_statement.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
-Package rerunfilecheck Info: File `research_statement.out' has not changed.
-(rerunfilecheck)             Checksum: 0ADE44B91A65D8E8038601C1E8E1D901;923.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 452.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
+
+
+Package rerunfilecheck Warning: File `research_statement.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `research_statement.out':
+(rerunfilecheck)             Before: B982C8A80D90D999A27922803F6FBCF1;1015
+(rerunfilecheck)             After:  12BDBA7D2225C23372C2933337694612;1028.
  ) 
 Here is how much of TeX's memory you used:
- 11888 strings out of 483065
- 177729 string characters out of 5963550
- 502619 words of memory out of 5000000
- 26557 multiletter control sequences out of 15000+600000
- 543439 words of font info for 106 fonts, out of 8000000 for 9000
+ 11896 strings out of 483065
+ 177876 string characters out of 5963550
+ 501657 words of memory out of 5000000
+ 26561 multiletter control sequences out of 15000+600000
+ 543490 words of font info for 107 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 37i,8n,47p,804b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,47p,804b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
@@ -718,10 +725,10 @@ onts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmtt10.pfb>
-Output written on research_statement.pdf (7 pages, 142953 bytes).
+Output written on research_statement.pdf (7 pages, 145557 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 13401 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 13409 words of extra memory for PDF output out of 14400 (max. 10000000)
 

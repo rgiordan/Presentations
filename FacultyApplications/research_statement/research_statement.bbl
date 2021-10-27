@@ -64,16 +64,23 @@ Giordano, R., Broderick, T., and Jordan, M.~I. (2018b).
 \newblock Automatic robustness measures in {Stan}.
 \newblock Presentation at Stancon 2018 \url{https://tinyurl.com/yyqwpowc}.
 
+\bibitem[Giordano et~al., 2021a]{giordano:2021:bbvi}
+Giordano, R., Ingram, M., and Broderick, T. (2021a).
+\newblock Black box variational inference with a deterministic objective.
+\newblock {\em In preparation.}
+\newblock Giordano and Ingram are equal contribution primary authors.
+
 \bibitem[Giordano et~al., 2019a]{giordano:2019:hoij}
 Giordano, R., Jordan, M.~I., and Broderick, T. (2019a).
 \newblock A higher-order {Swiss} army infinitesimal jackknife.
 \newblock {\em arXiv preprint arXiv:1907.12116}.
 
-\bibitem[Giordano et~al., 2021]{giordano:2021:bnpsensitivity}
-Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2021).
+\bibitem[Giordano et~al., 2021b]{giordano:2021:bnpsensitivity}
+Giordano, R., Liu, R., Jordan, M.~I., and Broderick, T. (2021b).
 \newblock Evaluating sensitivity to the stick breaking prior in {B}ayesian
   nonparametrics.
 \newblock {\em https://arxiv.org/abs/2107.03584}.
+\newblock Giordano and Liu are equal contribution primary authors.
 
 \bibitem[Giordano et~al., 2019b]{giordano:2019:ij}
 Giordano, R., Stephenson, W., Liu, R., Jordan, M.~I., and Broderick, T.
