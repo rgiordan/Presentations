@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  26 OCT 2021 22:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  27 OCT 2021 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1499,18 +1499,14 @@ Package pdftex.def Info: static_images/dumpster.jpg  used on input line 238.
 
 ] [23
 
-])
-(./marginalization.tex [24
+] [24
 
-] [25
+])
+(./marginalization.tex [25
 
 ] [26
 
-]
-Overfull \vbox (1.80835pt too high) detected at line 114
- []
-
-[27
+] [27
 
 ]
 Overfull \vbox (1.80835pt too high) detected at line 114
@@ -1531,7 +1527,7 @@ Overfull \vbox (1.80835pt too high) detected at line 114
 [30
 
 ]
-Overfull \vbox (4.85106pt too high) detected at line 161
+Overfull \vbox (1.80835pt too high) detected at line 114
  []
 
 [31
@@ -1554,9 +1550,15 @@ Overfull \vbox (4.85106pt too high) detected at line 161
 
 [34
 
-] [35
+]
+Overfull \vbox (4.85106pt too high) detected at line 161
+ []
 
-]) (./bib.tex (./main.bbl) [36
+[35
+
+] [36
+
+]) (./bib.tex (./main.bbl) [37
 
 ])
 \tf@nav=\write6
@@ -1577,8 +1579,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36939 strings out of 483065
- 892480 string characters out of 5963550
+ 36941 strings out of 483065
+ 892499 string characters out of 5963550
  1284116 words of memory out of 5000000
  51100 multiletter control sequences out of 15000+600000
  542688 words of font info for 60 fonts, out of 8000000 for 9000
@@ -1600,10 +1602,10 @@ fonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
 pfb>
-Output written on main.pdf (36 pages, 713601 bytes).
+Output written on main.pdf (37 pages, 715331 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 76 named destinations out of 1000 (max. 500000)
+ 314 PDF objects out of 1000 (max. 8388607)
+ 243 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

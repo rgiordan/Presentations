@@ -251,6 +251,7 @@ $\Rightarrow$ \textbf{The MLE is inconsistent.  What went wrong?}
 \thetahat &\plim \frac{\theta_0}{2} \ne \theta_0
 \end{align*}
 
+\pause
 \begin{columns}
     \begin{column}{0.8\textwidth}
 \begin{itemize}
@@ -290,7 +291,7 @@ To marginalize we must:
 \begin{itemize}
 \item Add a distributional assumption $z | \theta \sim p(z \vert \theta)$.
 \item Compute the marginal $p(y | \theta) = \int p(y | \theta, z) p(z \vert \theta) d z$.
-\item Compute the marginal MLE $\thetahat = \argmax{\theta} p(y | \theta)$
+\item Compute the marginal MLE $\thetahat = \argmax_{\theta} p(y | \theta)$
 \begin{itemize}
     \item (Contrast with $\thetahat, \hat{z} = \argmax_{\theta, z} p(y | \theta, z)$)
 \end{itemize}
