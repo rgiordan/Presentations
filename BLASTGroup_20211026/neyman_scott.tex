@@ -10,25 +10,24 @@
     \includegraphics[height=0.2\textwidth]{static_images/ElizabethScott.jpg}
 \end{figure}
 
-...or why don't we always use the maximum likelihood estimator?
+...or ``Why don't we always use the maximum likelihood estimator?''
 
-\hrulefill
-
-Here's a toy model.  For some unknown $z_n$ and $\theta$, draw
+The ``paradox'' is built around a toy model.  For some unknown $z_n$ and $\theta$, draw
 
 \begin{align*}
     y_{na} | z_n, \theta \sim{}& \mathcal{N}(z_n, \theta)\\
     y_{nb} | z_n, \theta \sim{}& \mathcal{N}(z_n, \theta)
 \end{align*}
 
+Draw $N$ such pairs, each with its own $z_n$.  The task is to infer $\theta$.
+
+\pause
 
 \begin{align*}
     \textrm{Observations: }y ={}& (y_{11}, y_{1b}, \ldots, y_{Na}, y_{Nb})\\
     \textrm{Unknown latent variables: }z ={}& (z_1, \ldots, y_N)\\
     \textrm{Unknown global parameter: }\theta \in \mathbb{R}
 \end{align*}
-
-Task: infer $\theta$.
 
 \end{frame}
 
@@ -48,6 +47,8 @@ Let's use that old workhorse, the maximum likelihood estimator (MLE)!
 
 (\textbf{Spoiler:} Something will go wrong.)
 
+\pause
+
 The normal distribution gives (up to constants):
 
 %
@@ -59,7 +60,9 @@ The normal distribution gives (up to constants):
 %
 \end{align*}
 %
-
+\pause
+%
+So the log likelihood is given by
 \begin{align*}
 %
 \log p(y | \theta, z) ={}&
@@ -67,9 +70,7 @@ The normal distribution gives (up to constants):
 %
 \end{align*}
 %
-
 The MLE is given by:
-
 %
 \begin{align*}
 %
@@ -80,7 +81,10 @@ The MLE is given by:
 \end{align*}
 %
 
-\textbf{Exercise:} Find an expression for $\hat{z}_n$.
+\pause
+\hrulefill
+
+\textbf{Exercise: Find an expression for $\hat{z}_n$.}
 
 \end{frame}
 
@@ -110,12 +114,15 @@ The MLE is given by:
 \hat{z}_n ={}& \frac{1}{2}(y_{na} + y_{nb}).
 %
 \end{align*}
-
+%
+\pause
+%
 Wonderful!  This is a very sensible expression, and it doesn't depend on
 $\thetahat$.
 
 \vspace{1em}
-\textbf{Exercise:} Using this result, find an expression for $\thetahat$.
+\pause
+\textbf{Exercise: Using this result, find an expression for $\thetahat$.}
 
 Hint:
 %
@@ -173,10 +180,9 @@ $
 %
 \end{align*}
 
-\textbf{Exercise:}
-Suppose the true parameters are $\theta_0$ and $z_0$.
-
-What is the behavior of $\thetahat$ for large $N$?
+\pause
+\textbf{Exercise:
+Suppose the true parameters are $\theta_0$ and $z_0$.  What is $\lim_{N\rightarrow\infty} \thetahat$?}
 
 Hint: Use the law of large numbers.
 
@@ -220,10 +226,12 @@ By the law of large numbers,
 %
 \end{column}
 \begin{column}{0.3\textwidth}
+    \pause
     \includegraphics[width=1.0\textwidth]{static_images/dumpster.jpg}
 \end{column}
 \end{columns}
 
+\pause
 \vspace{2em}
 $\Rightarrow$ \textbf{The MLE is inconsistent.  What went wrong?}
 
@@ -248,13 +256,13 @@ $\Rightarrow$ \textbf{The MLE is inconsistent.  What went wrong?}
 \begin{itemize}
     %
 \item Our estimates for the latent variables $\hat{z}_n$ are quite uncertain (they use only
-two observaitons each)
+two observations each).
 %
 \item But our MLE estimate for $\thetahat$ treated the $\hat{z}_n$ as if they
-were known exactly
+were known exactly.  I.e., our MLE estimator assumed less dispersion around
+$\hat{z}_n$ than was truly present.
 %
-\item $\Rightarrow$ We estimated less dispersion around $\hat{z}_n$ than was
-truly present.  That is, we \emph{under-estimated} the dispersion $\theta_0$.
+\item Consequently, we \emph{under-estimated} the dispersion $\theta_0$.
 %
 \item To avoid this problem, we must \emph{account for the uncertainty} in $\z_n$
 when estimating $\theta$.
@@ -264,7 +272,7 @@ when estimating $\theta$.
 \end{columns}
 
 \vspace{2em}
-Solution: \textbf{Marginalization.}
+Solution: \textbf{Marginalize: Integrate out the uncertainty in the $z_n$.}
 
 \end{frame}
 
@@ -290,6 +298,7 @@ To marginalize we must:
 
 %$p(y_{na}, y_{nb} | \theta) = \int p(y_{na}, y_{nb} | \theta, z_n) p(z_n) d z_n$.
 
+\pause
 \textbf{Neyman-Scott resolved}
 
 Let's let $z_n \sim \mathcal{N}(0, 1)$.  Then, by standard properties of the
@@ -323,7 +332,7 @@ normal,
 %
 \end{align*}
 %
-Sample covariances of the bivariate normal are consistent, so
+Sample covariances of the bivariate normal are consistent, so the marginal MLE
 %
 \begin{align*}
 %
@@ -332,9 +341,5 @@ Sample covariances of the bivariate normal are consistent, so
 \end{align*}
 %
 is consistent.
-
-
-
-
 
 \end{frame}

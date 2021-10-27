@@ -6,7 +6,7 @@
 \begin{frame}{Marginalization: General setup}
 
 In general notation, we want to infer $\theta$ from
-
+%
 \begin{align*}
     \textrm{Observations: }y ={}& (y_1, \ldots, y_N)\\
     \textrm{Unknown latent variables: }z ={}& (z_1, \ldots, z_N)\\
@@ -22,6 +22,8 @@ We have learned that
     \argmax_{\theta} \log \int p(y | \theta, z) p(z | \theta) dz.
 %
 \end{align*}
+%
+\pause
 %
 There are two problems:
 %
@@ -44,6 +46,10 @@ we have a $p(z | \theta)$ we are willing to live with.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Bayesian statistics has marginalization built in}
+    \href{https://rgiordan.github.io/bayes/2019/08/30/bayesian_as_inverse_problem.html}{Link to optional blog post on frequentist vs Bayesian statistics}
+\end{frame}
 
 \begin{frame}{Bayesian statistics has marginalization built in}
 
@@ -69,29 +75,41 @@ and forms the posterior
 \begin{align*}
 %
 p(\theta, z \vert y) ={}& \frac{p(y | \theta, z) p(z | \theta) p(\theta)}
-     {\int \int p(y | \theta', z') p(z' | \theta') p(\theta') d\theta' dz'} \Rightarrow\\
- p(\theta \vert y) ={}& \int p(\theta, z \vert y) dz \\
+     {\int \int p(y | \theta', z') p(z' | \theta') p(\theta') d\theta' dz'}
+ \end{align*}
+%
+\pause
+%
+\begin{align*}
+\Rightarrow
+ p(\theta \vert y) = \int p(\theta, z \vert y) dz
  ={}& \frac{\int p(y | \theta, z) p(z | \theta) p(\theta) \, dz}
       {\int\int p(y | \theta', z') p(z' | \theta') p(\theta') d\theta' dz'} \\
 ={}& \frac{\left(\int p(y | \theta, z) p(z | \theta)dz \right) p(\theta) }
    {\int\left( \int p(y | \theta', z') p(z' | \theta')dz'\right) p(\theta') d\theta' } \\
 ={}& \frac{ p(y | \theta) p(\theta) }
-  {\int \int p(y | \theta') p(\theta') d\theta'}.
+  { \int p(y | \theta') p(\theta') d\theta'}.
 %
 \end{align*}
 %
+% Inference using the ordinary posterior is the same as doing inference with
+% the marginalized likelihood.
+\pause
 $\Rightarrow$
-\textbf{Bayesian methods do not suffer from the Neyman-Scott problem:}
+\textbf{Bayesian methods do not suffer from the Neyman-Scott problem.}
 
 \begin{itemize}
     \item Bayesians are forced to posit $p(z | \theta)$
     \item Forming the posterior is equivalent to using the marginal $p(y | \theta)$
 \end{itemize}
 
+\pause
 \textbf{But the integral is still hard!}
 %
 Full Bayesian solutions typically require Markov Chain Monte Carlo, which is
 slow and sampling based.
+
+Are there faster alternatives, based on optimization?  \textbf{Hint: Yes.}
 
 \end{frame}
 
@@ -103,16 +121,64 @@ slow and sampling based.
 
 \begin{frame}{Marginalization: The EM algorithm}
 
-One ``frequentist'' solution to forming the marginal likelihood is the
-expectation-maximization (EM) algorithm.
+One ``frequentist'' method for optimizing the marginal likelihood is the
+famous expectation-maximization (EM) algorithm.
 
 The EM algorithm works / is useful when:
-%
-\begin{align*}
-%
-%
-\end{align*}
-%
 
+\begin{itemize}
+    %
+    \item The joint log probability $\log p(y | \theta, z) + \log p(z | \theta)$ is easy to write down
+    \item The posterior $p(z | y, \theta)$ is easy to compute
+    \item The marginalizing integral $p(y | \theta) = \int p(y | \theta, z) p(z | \theta) dz$ is hard
+    %
+\end{itemize}
+
+\pause
+\hrulefill
+
+The EM algorithm alternates between two steps.  Starting at an iterate
+$\hat\theta_{(i)}$, repeat until convergence:
+
+\textbf{The E-step:}  Compute $Q_{(i)}(\theta) := \expect{p\left(z | y, \hat\theta_{(i)} \right)}{\log p(y | \theta, z) + \log p(z | \theta)}$
+
+\textbf{The M-step:}  Compute the next iterate $\thetahat_{(i + 1)} := \argmax_\theta Q_{(i)}(\theta)$
+
+\pause
+\hrulefill
+
+Note that everything in the E- and M-steps are ``easy.''  Nevertheless, the
+iterates $\thetahat_{(i)}$ converge to a (possibly local) optimum of the
+marginal log likelihood $\log p(y | \theta)$.
+
+\vspace{1em}
+
+\pause
+
+\textbf{Exercise: }  Prove that the EM algorithm gives a consistent estimator
+for the Neyman-Scott paradox.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Next week: Actual variational inference}
+
+Next week we will:
+
+\begin{itemize}
+    %
+    \item Prove that the EM algorithm works (in a non-standard way)
+    \item Identify a lie I told on the last slide
+    \item Generalize to cases when the posterior
+        $p(z | y, \theta)$ is difficult to compute
+    %
+\end{itemize}
+
+This last point will finally bring us to the set of techniques commonly called
+``variational inference.''
 
 \end{frame}
