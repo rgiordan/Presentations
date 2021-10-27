@@ -243,6 +243,8 @@ $\Rightarrow$ \textbf{The MLE is inconsistent.  What went wrong?}
 \thetahat &\plim \frac{\theta_0}{2} \ne \theta_0
 \end{align*}
 
+\begin{columns}
+    \begin{column}{0.8\textwidth}
 \begin{itemize}
     %
 \item Our estimates for the latent variables $\hat{z}_n$ are quite uncertain (they use only
@@ -252,13 +254,88 @@ two observaitons each)
 were known exactly
 %
 \item $\Rightarrow$ We estimated less dispersion around $\hat{z}_n$ than was
-truly present.  That is, we \emph{under-estimated} $\theta_0$.
+truly present.  That is, we \emph{under-estimated} the dispersion $\theta_0$.
 %
-\item To avoid this problem, we must account for the uncertainty in $\z_n$
+\item To avoid this problem, we must \emph{account for the uncertainty} in $\z_n$
 when estimating $\theta$.
 %
 \end{itemize}
+\end{column}
+\end{columns}
 
+\vspace{2em}
 Solution: \textbf{Marginalization.}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The Neyman-Scott ``paradox''}
+
+To marginalize we must:
+
+\begin{itemize}
+\item Add a distributional assumption $z | \theta \sim p(z \vert \theta)$.
+\item Compute the marginal $p(y | \theta) = \int p(y | \theta, z) p(z \vert \theta) d z$.
+\item Compute the marginal MLE $\thetahat = \argmax{\theta} p(y | \theta)$
+\begin{itemize}
+    \item (Contrast with $\thetahat, \hat{z} = \argmax_{\theta, z} p(y | \theta, z)$)
+\end{itemize}
+\end{itemize}
+
+%$p(y_{na}, y_{nb} | \theta) = \int p(y_{na}, y_{nb} | \theta, z_n) p(z_n) d z_n$.
+
+\textbf{Neyman-Scott resolved}
+
+Let's let $z_n \sim \mathcal{N}(0, 1)$.  Then, by standard properties of the
+normal,
+
+%
+\begin{align*}
+%
+\left(
+\begin{array}{c}
+    y_{na} \\
+    y_{nb}
+\end{array}
+\right)
+\iid
+\mathcal{N}\left(
+\left(
+\begin{array}{c}
+    0 \\
+    0
+\end{array}
+\right),
+%
+\left(
+\begin{array}{cc}
+    1 + \theta& 1 \\
+    1& 1 + \theta \\
+\end{array}
+\right)
+%
+\right)
+%
+\end{align*}
+%
+Sample covariances of the bivariate normal are consistent, so
+%
+\begin{align*}
+%
+\thetahat := \argmax_\theta \sumn \log \int p(y_{na}, y_{nb} | \theta, z_n) p(z_n) dz_n
+%
+\end{align*}
+%
+is consistent.
+
+
+
+
 
 \end{frame}
