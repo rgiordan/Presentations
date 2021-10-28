@@ -1,0 +1,44 @@
+\documentclass{mitletter3}
+% https://projects.mako.cc/source/?p=mit-stationery-latex
+\makelabels
+\begin{document}
+\name{Your Name}
+\signature{Your Name\\{\it Your Title}}
+
+
+
+\begin{letter}{Addressee's Name\\
+Title\\
+Company Name\\
+Street Address\\
+City, State/Province\\
+Zip/Postal code}
+
+
+\opening{Dear Recipient,}
+This a template for writing letters using the PSB LaTeX templates.  There
+are three new document classes, one for each letter template, called
+"mitletter1", "mitletter2", and "mitletter3" respectively.
+
+First, one must modify each of the class files "mitletter1.cls",
+"mitletter2.cls", and "mitletter3.cls" so that his/her personal
+information is set.  The parameters to change are: Office Name, Room
+Number, Phone Number, Fax Number, website, E-mail, name, and title.  The
+last two parameters (name and title) are called "person" and "ID" within
+the class files.
+
+Next, to compose a letter, one must: set the document class to one of the
+above document classes, specify a name and (optionally) a signature, and
+then proceed with writing the letter as if it were a standard letter.
+
+The MIT logo is included as an encapsulated PostScript file (EPS) and,
+as a result, will only display correctly using dvips. Many people now
+use pdflatex intead. pdflatex will require that the logo be converted
+from EPS to PDF which can be done using ImageMagick or several other
+programs.
+
+\closing{Sincerely}
+
+\end{letter}
+
+\end{document}

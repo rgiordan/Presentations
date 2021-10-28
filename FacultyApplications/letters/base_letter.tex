@@ -1,0 +1,81 @@
+\input{_headers.tex}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{geometry}
+%\geometry{margin=1.2in}
+\geometry{top=1.3in}
+\geometry{left=1.0in}
+\geometry{right=1.0in}
+
+
+% https://web.mit.edu/graphicidentity/colors.html
+% 24; 100; 78; 17
+% \definecolor{mitred}{cmyk}{0.094, 0.391, 0.305, 0.066} % Maybe not out of 256
+\definecolor{mitred}{cmyk}{0.24, 1, 0.78, 0.17}  % Ah yes out of 100
+
+\title{Ryan Giordano Diversity Statement}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\date{Oct 28, 2021}
+
+\def\whom{Admissions Committee}
+
+\def\address{
+Address of search committee 1\\
+Address of search committee 2\\
+Address of search committee 3\\
+Address of search committee 4\\
+}
+
+\def\position{Assistant Professor in the Department of Statistics}
+
+\def\deptspecific{
+Your department looks particularly amazing.
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\author{
+  Ryan Giordano \\ \texttt{rgiordan@mit.edu }
+}
+
+\begin{document}
+
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{-3.5em} % Do vertical alignment manually because I'm a bad person
+    \date \\ \\
+    \address
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \hspace{2in} \includegraphics[height=0.5in]{static_images/1280px-MIT_logo.svg.png}
+    % \includegraphics[height=0.5in]{static_images/lids-logo.png}
+\end{minipage}
+
+\textcolor{mitred}{\rule{16cm}{1mm}}
+
+\vspace{3em}
+Dear \whom,
+
+\vspace{1em}
+I am writing to apply for the position of \position.
+
+\vspace{1em}
+I am this guy, you know.
+
+\vspace{1em}
+\deptspecific
+
+\vspace{1em} I appreciate your consideration.
+
+\vspace{1em} Sincerely,
+
+\vspace{1em} Ryan Giordano
+
+\hspace{-1em}\includegraphics[height=0.7in]{static_images/sig.jpg}
+
+\end{document}
