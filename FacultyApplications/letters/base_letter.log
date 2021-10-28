@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  28 OCT 2021 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  28 OCT 2021 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,7 +677,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 55--59
 
  []
 
@@ -701,14 +701,14 @@ Package rerunfilecheck Info: File `base_letter.out' has not changed.
 Here is how much of TeX's memory you used:
  11252 strings out of 483065
  166698 string characters out of 5963550
- 489644 words of memory out of 5000000
+ 489679 words of memory out of 5000000
  26084 multiletter control sequences out of 15000+600000
  532863 words of font info for 32 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  37i,6n,47p,797b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on base_letter.pdf (1 page, 106939 bytes).
+Output written on base_letter.pdf (1 page, 106961 bytes).
 PDF statistics:
  24 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
