@@ -1,0 +1,66 @@
+\documentclass[margin,line]{res}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{xspace}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\topmargin -0.2in
+\textheight 9.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\pdfpageheight}{\paperheight}
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0in}}}{\end{list}} % was 0.17in
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\newenvironment{talkgroup}{\setlength{\parskip}{3pt}\everypar{\hangafter=1\hangindent=1em\relax}\par}{\par\everypar{\hangafter=0\relax}}
+
+\newif\ifpublic
+\publicfalse
+%\publictrue
+
+\newcommand{\me}{\textbf{R.~J.~Giordano}\xspace}
+\newcommand{\mestar}{\textbf{R.~J.~Giordano}$^{\star}$\xspace}
+\newcommand{\tamara}{T.~Broderick\xspace}
+\newcommand{\mike}{M.~I.~Jordan\xspace}
+\newcommand{\runjing}{R.~Liu\xspace}
+
+\ifpublic
+	\newcommand{\phonesym}{}
+	\newcommand{\myphone}{}
+	\newcommand{\email}{\texttt{rgiordan -at- mit.edu}}
+\else
+	\newcommand{\phonesym}{\phone}
+	\newcommand{\myphone}{(805) 501-6754}
+    \newcommand{\email}{\url{rgiordan@mit.edu}}
+\fi
+
+\newif\ifshowpaperrefs
+\showpaperrefstrue
+
+\ifshowpaperrefs
+	\newcommand{\paperref}[1]{[\href{#1}{link}]}
+\else
+	\newcommand{\paperref}[1]{}
+\fi
+
+\begin{document}
+
+\input{publications}
+
+\end{document}

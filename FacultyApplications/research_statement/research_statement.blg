@@ -1,8 +1,8 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: research_statement.aux
-The style file: apalike.bst
-Illegal, another \bibstyle command---line 76 of file research_statement.aux
+The style file: plainnat.bst
+Illegal, another \bibstyle command---line 80 of file research_statement.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
@@ -16,44 +16,44 @@ Repeated entry---line 996 of file references.bib
  :                             ,
 I'm skipping whatever remains of this entry
 You've used 22 entries,
-            1935 wiz_defined-function locations,
-            593 strings with 7709 characters,
-and the built_in function-call counts, 8380 in all, are:
-= -- 829
-> -- 351
+            2773 wiz_defined-function locations,
+            715 strings with 8929 characters,
+and the built_in function-call counts, 9880 in all, are:
+= -- 869
+> -- 571
 < -- 17
-+ -- 129
-- -- 116
-* -- 659
-:= -- 1480
-add.period$ -- 71
++ -- 198
+- -- 173
+* -- 756
+:= -- 1516
+add.period$ -- 72
 call.type$ -- 22
-change.case$ -- 164
+change.case$ -- 120
 chr.to.int$ -- 19
-cite$ -- 22
-duplicate$ -- 330
-empty$ -- 555
-format.name$ -- 144
-if$ -- 1632
+cite$ -- 44
+duplicate$ -- 463
+empty$ -- 816
+format.name$ -- 201
+if$ -- 2079
 int.to.chr$ -- 4
-int.to.str$ -- 0
+int.to.str$ -- 1
 missing$ -- 18
-newline$ -- 116
-num.names$ -- 68
-pop$ -- 150
+newline$ -- 122
+num.names$ -- 90
+pop$ -- 270
 preamble$ -- 1
-purify$ -- 167
+purify$ -- 101
 quote$ -- 0
-skip$ -- 260
+skip$ -- 364
 stack$ -- 0
-substring$ -- 519
-swap$ -- 53
+substring$ -- 289
+swap$ -- 67
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 128
+type$ -- 232
 warning$ -- 0
-while$ -- 64
+while$ -- 86
 width$ -- 0
-write$ -- 286
+write$ -- 293
 (There were 3 error messages)
