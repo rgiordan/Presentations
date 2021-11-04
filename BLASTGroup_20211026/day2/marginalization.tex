@@ -1,0 +1,90 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Marginalization: General setup}
+
+In general notation, we want to infer $\theta$ from
+%
+\begin{align*}
+    \textrm{Observations: }y ={}& (y_1, \ldots, y_N)\\
+    \textrm{Unknown latent variables: }z ={}& (z_1, \ldots, z_N)\\
+    \textrm{Unknown global parameter: }\theta \in{}& \mathbb{R}^D
+\end{align*}
+%
+We have learned that
+%
+\begin{align*}
+%
+\textrm{Bad: }&& \thetahat, \hat{z} ={}& \argmax_{\theta, z} \log p(y | \theta, z)\\
+\textrm{Good: }&& \thetahat ={}&
+    \argmax_{\theta} \log \int p(y | \theta, z) p(z | \theta) dz.
+%
+\end{align*}
+%
+\pause
+%
+There are two problems:
+%
+\begin{itemize}
+    \item Need to posit $p(z | \theta)$
+    \item Need to compute $\int p(y | \theta, z) p(z | \theta) dz$
+\end{itemize}
+%
+
+We will only deal with the second problem in these two talks, assuming
+we have a $p(z | \theta)$ we are willing to live with.
+
+\textbf{In general, the integral is hard!}
+
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Marginalization: The EM algorithm}
+
+One ``frequentist'' method for optimizing the marginal likelihood is the
+famous expectation-maximization (EM) algorithm.
+
+The EM algorithm works / is useful when:
+
+\begin{itemize}
+    %
+    \item The joint log probability $\log p(y | \theta, z) + \log p(z | \theta)$ is easy to write down
+    \item The posterior $p(z | y, \theta)$ is easy to compute
+    \item The marginalizing integral $p(y | \theta) = \int p(y | \theta, z) p(z | \theta) dz$ is hard
+    %
+\end{itemize}
+
+\pause
+\hrulefill
+
+The EM algorithm alternates between two steps.  Starting at an iterate
+$\hat\theta_{(i)}$, repeat until convergence:
+
+\textbf{The E-step:}  Compute $Q_{(i)}(\theta) := \expect{p\left(z | y, \hat\theta_{(i)} \right)}{\log p(y | \theta, z) + \log p(z | \theta)}$
+
+\textbf{The M-step:}  Compute the next iterate $\thetahat_{(i + 1)} := \argmax_\theta Q_{(i)}(\theta)$
+
+\pause
+\hrulefill
+
+Note that everything in the E- and M-steps are ``easy.''  Nevertheless, the
+iterates $\thetahat_{(i)}$ converge to a (possibly local) optimum of the
+marginal log likelihood $\log p(y | \theta)$.
+
+\vspace{1em}
+
+\pause
+
+\textbf{Exercise: }  Prove that the EM algorithm gives a consistent estimator
+for the Neyman-Scott paradox.
+
+\end{frame}
