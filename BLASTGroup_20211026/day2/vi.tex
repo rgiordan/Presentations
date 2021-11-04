@@ -35,6 +35,10 @@
 %
 \begin{align*}
 %
+\MoveEqLeft
+\kl{\q(\theta)}{\p(\theta)} ={}\\&
+-\expect{\q(\theta)}{\log \p(\theta)} +
+\expect{\q(\theta)}{\log \q(\theta)}\\ \\
 \p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
 %
 \qdom ={}& \left\{ \textrm{All bivariate normals}\right\}\\ \\
@@ -59,6 +63,12 @@ $\qopt(\theta) = \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
 \end{tikzpicture}
 \end{minipage}
 
+\onslide<2->{
+\begin{center}
+\textbf{Sufficiently expressive families recover the target distribution.}
+\end{center}
+}
+
 \end{frame}
 
 
@@ -71,6 +81,10 @@ $\qopt(\theta) = \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
     %
 \begin{align*}
 %
+\MoveEqLeft
+\kl{\q(\theta)}{\p(\theta)} ={}\\&
+-\expect{\q(\theta)}{\log \p(\theta)} +
+\expect{\q(\theta)}{\log \q(\theta)}\\ \\
 \p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
 %
 \qdom ={}& \left\{ \textrm{Independent bivariate normals}\right\}\\ \\
@@ -96,6 +110,12 @@ $\qopt(\theta) = \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
 \end{tikzpicture}
 \end{minipage}
 
+\onslide<2->{
+\begin{center}
+\textbf{KL minimizers ``fit inside'' the second argument.}
+\end{center}
+}
+
 \end{frame}
 
 
@@ -110,6 +130,10 @@ $\qopt(\theta) = \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
     %
 \begin{align*}
 %
+\MoveEqLeft
+\kl{\p(\theta)}{\q(\theta)} ={}\\&
+-\expect{\p(\theta)}{\log \q(\theta)} +
+\expect{\p(\theta)}{\log \p(\theta)}\\ \\
 \p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
 %
 \qdom ={}& \left\{ \textrm{Independent bivariate normals}\right\}\\ \\
@@ -135,6 +159,12 @@ $\qopt(\theta) ={} \argmin{\q \in \qdom} \kl{\p(\theta)}{\q(\theta)}$?
 \end{tikzpicture}
 \end{minipage}
 
+\onslide<2->{
+\begin{center}
+\textbf{KL minimizers ``fit inside'' the second argument.}
+\end{center}
+}
+
 \end{frame}
 
 
@@ -148,7 +178,6 @@ $\qopt(\theta) ={} \argmin{\q \in \qdom} \kl{\p(\theta)}{\q(\theta)}$?
 \hspace{-3em}
 \begin{minipage}{0.5\textwidth}
 %
-Recall that
 \begin{align*}
 %
 \MoveEqLeft
@@ -156,7 +185,7 @@ Recall that
 -\expect{\q(\theta)}{\log \p(\theta)} +
 \expect{\q(\theta)}{\log \q(\theta)}\\ \\
 \p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
-\qdom ={}& \left\{ \textrm{Bivariate normals}\right\}
+\qdom ={}& \left\{ \textrm{Bivariate normals}\right\}\\ \\
 %
 \end{align*}
 
@@ -180,6 +209,13 @@ $\argmin{\q \in \qdom}
 \end{tikzpicture}
 \end{minipage}
 
+\onslide<2->{
+\begin{center}
+\textbf{Without the entropy, the KL minimizer concentrates on the
+maximum of $\log \p(\theta)$.}
+\end{center}
+}
+
 \end{frame}
 
 
@@ -192,7 +228,6 @@ $\argmin{\q \in \qdom}
 \hspace{-3em}
 \begin{minipage}{0.5\textwidth}
 %
-Recall that
 \begin{align*}
 %
 \MoveEqLeft
@@ -200,7 +235,7 @@ Recall that
 -\expect{\q(\theta)}{\log \p(\theta)} +
 \expect{\q(\theta)}{\log \q(\theta)}\\ \\
 \p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
-\qdom ={}& \left\{ \textrm{Bivariate normals}\right\}
+\qdom ={}& \left\{ \textrm{Bivariate normals}\right\}\\ \\
 %
 \end{align*}
 
@@ -226,6 +261,12 @@ $+ \expect{\q(\theta)}{\log \q(\theta)} \Big)$?
 \end{tikzpicture}
 \end{minipage}
 
+\onslide<2->{
+\begin{center}
+\textbf{Without $\log \p(\theta)$, the KL minimizer is infinitely dispersed.}
+\end{center}
+}
+
 \end{frame}
 
 
@@ -240,8 +281,12 @@ $+ \expect{\q(\theta)}{\log \q(\theta)} \Big)$?
 %
 \begin{align*}
 %
+\MoveEqLeft
+\kl{\q(\theta)}{\p(\theta)} ={}\\&
+-\expect{\q(\theta)}{\log \p(\theta)} +
+\expect{\q(\theta)}{\log \q(\theta)}\\ \\
 \p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
-\qdom ={}& \left\{ \textrm{Point masses}\right\}
+\qdom ={}& \left\{ \textrm{Point masses}\right\}\\ \\
 %
 \end{align*}
 
@@ -263,6 +308,13 @@ What is $\qopt(\theta) ={} \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
 \end{tikzpicture}
 \end{minipage}
 
+\onslide<2->{
+\begin{center}
+\textbf{Without a common dominating measure, the KL
+divergence is undefined.}
+\end{center}
+}
+
 \end{frame}
 
 
@@ -278,8 +330,12 @@ What is $\qopt(\theta) ={} \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
 %
 \begin{align*}
 %
+\MoveEqLeft
+\kl{\q(\theta)}{\p(\theta)} ={}\\&
+-\expect{\q(\theta)}{\log \p(\theta)} +
+\expect{\q(\theta)}{\log \q(\theta)}\\ \\
 \p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
-\qdom ={}& \left\{ \textrm{BVN with small, fixed variance}\right\}
+\qdom ={}& \left\{ \textrm{BVN with small, fixed variance}\right\}\\ \\
 %
 \end{align*}
 
@@ -299,5 +355,12 @@ What is $\qopt(\theta) ={} \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
 }
 \end{tikzpicture}
 \end{minipage}
+
+\onslide<2->{
+\begin{center}
+\textbf{Sufficently concentrated distributions with constant entropy
+act like a point mass at the maximum of $\log \p(\theta)$.}
+\end{center}
+}
 
 \end{frame}
