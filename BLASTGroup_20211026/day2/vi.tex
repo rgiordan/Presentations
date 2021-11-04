@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{What counts as variational inference?}
+
+Lots of very different procedures go by the name ``variational inference.''
+%
+I propose an (idosyncratic) enompassing definition based on the use cases and
+the name:
+
+\begin{center}
+\textbf{Variational inference is inference
+using optimization.}
+\end{center}
+
+%
+Think ``calculus of variations:'' an optimum $\hat{x} = \argmax_\theta f(x)$ is
+characterized by $df / dx |_{\hat{x}} = 0$, i.e.  where small variations in
+$\hat{x}$ result in no changes to the value of $f(\hat{x})$.
+%
+
+\begin{center}
+\begin{tikzpicture}
+
+\draw (0,0)--(5,0);
+\foreach \x in {0,...,5}
+  \draw (\x,0)--(\x,-.1) node[anchor=north]{};
+
+\draw (0,0)--(0,3);
+\foreach \y in {0,...,3}
+  \draw (0,\y)--(-.1,\y) node[anchor=east] {};
+
+\draw (0,3) node[anchor=east] {$f(x)$};
+\draw (5,0) node[anchor=north] {$x$};
+
+\coordinate (A) at (1.0, 0.5);
+\coordinate (B) at (3.0, 2.0);
+\coordinate (C) at (5.0, 0.7);
+
+\draw    (A) to[out=0,in=180] (B);
+\draw    (B) to[out=0,in=120] (C);
+
+\draw (3, 2.0) node[anchor=south] {$\hat{x}$};
+\node at (3, 2) [circle,fill=black,inner sep=0.9pt]{};
+\draw [to-to] (3 - 0.5, 2.0) -- (3 + 0.5, 2.0);
+
+\end{tikzpicture}
+\end{center}
+
+
+\begin{minipage}[t]{0.2\textwidth}
+By this definition,
+\end{minipage}
+%
+\begin{minipage}[t]{0.8\textwidth}
+    \vspace{-0.65em}
+\begin{itemize}
+    \item The maximum likelihood estimator (MLE) is VI.
+    \item The Laplace approximation to a Bayesian posterior is VI.
+    \item Markov chain Monte Carlo (MCMC) is not VI.
+\end{itemize}
+\end{minipage}
+\hspace{-2em}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{What counts as variational inference?}
+
+A more common definition of VI is the following.
+
+Suppose we have a random variable $\xi$ and a distribution $\p(\xi)$
+that we want to know.
+
+Let $y$ denote data and $\theta$ a parameter. Examples:
+\begin{itemize}
+    \item The variable is $\theta$, and we wish to know the posterior
+        $\p(\theta | y)$ (Bayes)
+    %
+    \item The variable is $y$, and we wish to know $\p(y)$ (MLE)
+    %
+    \item The variable is $y$, and we wish to know the map
+        $\theta \mapsto  \p(y | \theta) = \int p(y, z | \theta)  dz$ (marginal MLE)
+\end{itemize}
+
+Let $\qdom$ be some class of distributions which may or may not contain
+$\p(\xi)$.
+
+
+
+\begin{center}
+\textbf{Variational inference finds the distribution in $\qdom$
+closest to $\p$ according to some measure of ``divergence''
+between distributions:}
+%
+\begin{align*}
+%
+\qopt(\xi) = \argmin{\q \in \qdom} D(\q, \p).
+%
+\end{align*}
+%
+\end{center}
+
+The most common choice of ``divergence'' is the \textbf{Kullback-Leibler} (KL)
+divergence, though other choices are possible \citep{li2016variational,
+liu2016stein, ambrogioni2018wasserstein}.
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{KL divergence}
+
+The KL divergence is defined as:
+%
+\begin{align*}
+%
+\kl{\q}{\p} :=
+% \expect{\q(\xi)}{\log\frac{\q(\xi)}{\p(\xi)}} =
+\expect{\q(\xi)}{\log \q(\xi)} - \expect{\q(\xi)}{\log \p(\xi)}
+%
+\end{align*}
+%
+
+Some points to be aware of:
+\begin{itemize}
+    \item $\kl{\q}{\p} \ge 0$
+    \item $\kl{\q}{\p} = 0 \Rightarrow \p = \q$
+    \item $\kl{\q}{\p} \ne \kl{\p}{\q}$
+    % \item $\kl{\q}{\p}$ does not satisfy the triangle inequality
+    \item $\kl{\q}{\p}$ is a ``strict'' measure of closeness
+    \begin{itemize}
+         \item If the KL divergence is small, other common
+         measures of distance between distributions are small, but
+         not vice-versa \citep{gibbs2002choosing}
+     \end{itemize}
+\end{itemize}
+
+Why use KL divergence?
+
+\textbf{Phony answer:}
+The KL divergence has an information theoretic
+interpretation \citep{kullback1951information}.
+
+\textbf{Real answer:}
+Mathematical convenience (normalizing constants pop out).
+
+\end{frame}

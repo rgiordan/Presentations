@@ -1,8 +1,39 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ambrogioni et~al.(2018)Ambrogioni, G{\"u}{\c{c}}l{\"u},
+  G{\"u}{\c{c}}l{\"u}t{\"u}rk, Hinne, Maris, and van
+  Gerven]{ambrogioni2018wasserstein}
+Luca Ambrogioni, Umut G{\"u}{\c{c}}l{\"u}, Ya{\u{g}}mur
+  G{\"u}{\c{c}}l{\"u}t{\"u}rk, Max Hinne, Eric Maris, and Marcel~AJ van Gerven.
+\newblock Wasserstein variational inference.
+\newblock \emph{arXiv preprint arXiv:1805.11284}, 2018.
+
+\bibitem[Gibbs and Su(2002)]{gibbs2002choosing}
+Alison~L Gibbs and Francis~Edward Su.
+\newblock On choosing and bounding probability metrics.
+\newblock \emph{International statistical review}, 70\penalty0 (3):\penalty0
+  419--435, 2002.
+
+\bibitem[Kullback and Leibler(1951)]{kullback1951information}
+Solomon Kullback and Richard~A Leibler.
+\newblock On information and sufficiency.
+\newblock \emph{The annals of mathematical statistics}, 22\penalty0
+  (1):\penalty0 79--86, 1951.
+
+\bibitem[Li and Turner(2016)]{li2016variational}
+Yingzhen Li and Richard~E Turner.
+\newblock Variational inference with r{\'e}nyi divergence.
+\newblock \emph{stat}, 1050:\penalty0 6, 2016.
+
+\bibitem[Liu and Wang(2016)]{liu2016stein}
+Qiang Liu and Dilin Wang.
+\newblock Stein variational gradient descent: {A} general purpose bayesian
+  inference algorithm.
+\newblock \emph{arXiv preprint arXiv:1608.04471}, 2016.
 
 \end{thebibliography}
