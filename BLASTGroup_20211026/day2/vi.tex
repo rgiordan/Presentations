@@ -32,14 +32,17 @@
 
 \begin{frame}{KL divergence exercises}
 \begin{minipage}{0.5\textwidth}
-    %
+%
 \begin{align*}
 %
-\qdom ={}& \left\{ \textrm{Bivariate normals}\right\}\\
-\\
-\qopt(\theta) ={}& \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}
+\p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
+%
+\qdom ={}& \left\{ \textrm{All bivariate normals}\right\}\\ \\
 %
 \end{align*}
+%
+What is
+$\qopt(\theta) = \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
 %
 \end{minipage}
 %
@@ -68,11 +71,14 @@
     %
 \begin{align*}
 %
-\qdom ={}& \left\{ \textrm{Independent bivariate normals}\right\}\\
-\\
-\qopt(\theta) ={}& \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}
+\p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
+%
+\qdom ={}& \left\{ \textrm{Independent bivariate normals}\right\}\\ \\
 %
 \end{align*}
+%
+What is
+$\qopt(\theta) = \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}$?
 %
 \end{minipage}
 %
@@ -104,11 +110,14 @@
     %
 \begin{align*}
 %
-\qdom ={}& \left\{ \textrm{Independent bivariate normals}\right\}\\
-\\
-\qopt(\theta) ={}& \argmin{\q \in \qdom} \kl{\p(\theta)}{\q(\theta)}
+\p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
+%
+\qdom ={}& \left\{ \textrm{Independent bivariate normals}\right\}\\ \\
 %
 \end{align*}
+%
+What is
+$\qopt(\theta) ={} \argmin{\q \in \qdom} \kl{\p(\theta)}{\q(\theta)}$?
 %
 \end{minipage}
 %
@@ -136,6 +145,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{KL divergence exercises}
+\hspace{-3em}
 \begin{minipage}{0.5\textwidth}
 %
 Recall that
@@ -144,17 +154,16 @@ Recall that
 \MoveEqLeft
 \kl{\q(\theta)}{\p(\theta)} ={}\\&
 -\expect{\q(\theta)}{\log \p(\theta)} +
-\expect{\q(\theta)}{\log \q(\theta)}\\
-\\
+\expect{\q(\theta)}{\log \q(\theta)}\\ \\
+\p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
 \qdom ={}& \left\{ \textrm{Bivariate normals}\right\}
 %
 \end{align*}
 
-\hspace{-2em}$\qopt(\theta) = $
-
+What is $\qopt(\theta) = $\\
 $\argmin{\q \in \qdom}
 \Big(-\expect{\q(\theta)}{\log \p(\theta)} +$
-\sout{$\expect{\q(\theta)}{\log \q(\theta)} \Big)$}
+\sout{$\expect{\q(\theta)}{\log \q(\theta)} \Big)$}?
 %
 \end{minipage}
 %
@@ -180,6 +189,7 @@ $\argmin{\q \in \qdom}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{KL divergence exercises}
+\hspace{-3em}
 \begin{minipage}{0.5\textwidth}
 %
 Recall that
@@ -188,17 +198,16 @@ Recall that
 \MoveEqLeft
 \kl{\q(\theta)}{\p(\theta)} ={}\\&
 -\expect{\q(\theta)}{\log \p(\theta)} +
-\expect{\q(\theta)}{\log \q(\theta)}\\
-\\
+\expect{\q(\theta)}{\log \q(\theta)}\\ \\
+\p(\theta) ={}& \textrm{Correlated bivariate normal}\\ \\
 \qdom ={}& \left\{ \textrm{Bivariate normals}\right\}
 %
 \end{align*}
 
-\hspace{-2em}$\qopt(\theta) = $
-
+What is $\qopt(\theta) = $\\
 $\argmin{\q \in \qdom} \Big(-$
 \sout{$\expect{\q(\theta)}{\log \p(\theta)}$}
-$+ \expect{\q(\theta)}{\log \q(\theta)} \Big)$
+$+ \expect{\q(\theta)}{\log \q(\theta)} \Big)$?
 %
 \end{minipage}
 %
@@ -211,6 +220,8 @@ $+ \expect{\q(\theta)}{\log \q(\theta)} \Big)$
 \onslide<2->{
 \draw[red] (3, 1)  node[anchor=north] {$\qopt(\theta)$};
 %\node at (2.5,2.5) [circle,fill=red,inner sep=1.5pt]{};
+\draw[draw opacity=0, fill opacity=0.1, fill=red] (0,0) rectangle (5, 5);
+
 }
 \end{tikzpicture}
 \end{minipage}

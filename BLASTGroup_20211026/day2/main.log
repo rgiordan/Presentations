@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 NOV 2021 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 NOV 2021 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1399,95 +1399,95 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [2
 
 ]) (./vi.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 59.
+ut line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-LaTeX Font Info:    Trying to load font information for U+euf on input line 59.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 62.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Overfull \hbox (39.52815pt too wide) in paragraph at lines 59--59
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 62--62
 [][] 
  []
 
 [3
 
 ]
-Overfull \hbox (39.52815pt too wide) in paragraph at lines 59--59
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 62--62
 [][] 
  []
 
 [4
 
 ]
-Overfull \hbox (39.52815pt too wide) in paragraph at lines 93--93
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 99--99
 [][] 
  []
 
 [5
 
 ]
-Overfull \hbox (39.52815pt too wide) in paragraph at lines 93--93
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 99--99
 [][] 
  []
 
 [6
 
 ]
-Overfull \hbox (48.2024pt too wide) in paragraph at lines 129--129
+Overfull \hbox (48.2024pt too wide) in paragraph at lines 138--138
 [][] 
  []
 
 [7
 
 ]
-Overfull \hbox (48.2024pt too wide) in paragraph at lines 129--129
+Overfull \hbox (48.2024pt too wide) in paragraph at lines 138--138
 [][] 
  []
 
 [8
 
 ]
-Overfull \hbox (39.52815pt too wide) in paragraph at lines 174--174
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 183--183
 [][] 
  []
 
 [9
 
 ]
-Overfull \hbox (39.52815pt too wide) in paragraph at lines 174--174
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 183--183
 [][] 
  []
 
 [10
 
 ]
-Overfull \hbox (39.52815pt too wide) in paragraph at lines 218--218
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 229--229
 [][] 
  []
 
 [11
 
 ]
-Overfull \hbox (39.52815pt too wide) in paragraph at lines 218--218
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 229--229
 [][] 
  []
 
@@ -1518,10 +1518,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37406 strings out of 483065
- 900358 string characters out of 5963550
- 1297879 words of memory out of 5000000
- 51611 multiletter control sequences out of 15000+600000
+ 37408 strings out of 483065
+ 900392 string characters out of 5963550
+ 1298879 words of memory out of 5000000
+ 51613 multiletter control sequences out of 15000+600000
  541120 words of font info for 56 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  71i,15n,103p,1836b,857s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1537,7 +1537,7 @@ t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts
 public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (13 pages, 103688 bytes).
+Output written on main.pdf (13 pages, 104920 bytes).
 PDF statistics:
  141 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams
