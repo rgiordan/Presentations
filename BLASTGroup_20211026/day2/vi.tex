@@ -1,22 +1,19 @@
-\begin{frame}
 
-\begin{minipage}{0.4\textwidth}
-    Some bullshit
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-% \begin{tikzpicture}
-%     \node[anchor=south west,inner sep=0] (image) at (0,0) {
-%         \includegraphics[width=1.0\textwidth]{static_images/bvn_target.png}
-%     };
-%     \begin{scope}[x={(image.south east)},y={(image.north west)}]
-%         \draw[black, thick, fill=white]
-%             (0.46,0.2) -- ++(0.2,0) -- ++(0,0.65) -- ++(-0.2,0) -- cycle;
-%     \end{scope}
-% \end{tikzpicture}
+\newcommand{\TikzPtheta}[2]{
+\draw[#1] (4.5, 3)  node[anchor=north] {#2};
+\begin{scope}[shift={(2.5,2.5)}]
+    \begin{scope}[rotate=45]
+        \begin{scope}[shift={(-2.5,-2.5)}]
+            \foreach \s in {0.2, 0.4, 0.6, 0.8, 1.0}
+            \draw[#1] (2.5,2.5) ellipse (\s * 3 and \s * 1);
+        \end{scope}
+    \end{scope}
+\end{scope}
+}
 
 
-\begin{tikzpicture}
- \draw (0,0)--(5,0);
+\newcommand{\TikzPlotArea}{
+\draw (0,0)--(5,0);
 \foreach \x in {0,...,5}
   \draw (\x,0)--(\x,-.1) node[anchor=north]{};
 
@@ -26,23 +23,195 @@
 
 \draw (0,5) node[anchor=east] {$\theta_2$};
 \draw (5,0) node[anchor=north] {$\theta_1$};
-
-\draw[blue] (4.5, 3)  node[anchor=north] {$p(\theta)$};
-\begin{scope}[shift={(2.5,2.5)}]
-    \begin{scope}[rotate=45]
-        \begin{scope}[shift={(-2.5,-2.5)}]
-            \foreach \s in {0.2, 0.4, 0.6, 0.8, 1.0}
-            \draw[blue] (2.5,2.5) ellipse (\s * 3 and \s * 1);
-        \end{scope}
-    \end{scope}
-\end{scope}
+}
 
 
-\draw[red] (3, 1)  node[anchor=north] {$q(\theta | \eta^*)$};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{KL divergence exercises}
+\begin{minipage}{0.5\textwidth}
+    %
+\begin{align*}
+%
+\qdom ={}& \left\{ \textrm{Bivariate normals}\right\}\\
+\\
+\qopt(\theta) ={}& \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}
+%
+\end{align*}
+%
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+
+\begin{tikzpicture}
+\TikzPlotArea{}
+\TikzPtheta{blue}{$\p(\theta)$}
+
+\onslide<2->{
+\TikzPtheta{red}{}
+\draw[red] (4.5, 2.5)  node[anchor=north] {$\qopt(\theta)$};
+}
+\end{tikzpicture}
+\end{minipage}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{KL divergence exercises}
+\begin{minipage}{0.5\textwidth}
+    %
+\begin{align*}
+%
+\qdom ={}& \left\{ \textrm{Independent bivariate normals}\right\}\\
+\\
+\qopt(\theta) ={}& \argmin{\q \in \qdom} \kl{\q(\theta)}{\p(\theta)}
+%
+\end{align*}
+%
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+
+\begin{tikzpicture}
+\TikzPlotArea{}
+\TikzPtheta{blue}{$\p(\theta)$}
+
+\onslide<2->{
+\draw[red] (3, 1)  node[anchor=north] {$\qopt(\theta)$};
 \foreach \s in {0.2, 0.4, 0.6, 0.8, 1.0}
-    \draw[red] (2.5,2.5) ellipse (\s * 0.8 and \s * 1.5);
+    \draw[red] (2.5,2.5) ellipse (\s * 1 and \s * 1);
+}
+\end{tikzpicture}
+\end{minipage}
+
+\end{frame}
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{KL divergence exercises}
+\begin{minipage}{0.5\textwidth}
+    %
+\begin{align*}
+%
+\qdom ={}& \left\{ \textrm{Independent bivariate normals}\right\}\\
+\\
+\qopt(\theta) ={}& \argmin{\q \in \qdom} \kl{\p(\theta)}{\q(\theta)}
+%
+\end{align*}
+%
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+
+\begin{tikzpicture}
+\TikzPlotArea{}
+\TikzPtheta{blue}{$\p(\theta)$}
+
+\onslide<2->{
+\draw[red] (3, 1)  node[anchor=north] {$\qopt(\theta)$};
+\foreach \s in {0.2, 0.4, 0.6, 0.8, 1.0}
+    \draw[red] (2.5,2.5) ellipse (\s * 3 and \s * 3);
+}
+\end{tikzpicture}
+\end{minipage}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{KL divergence exercises}
+\begin{minipage}{0.5\textwidth}
+%
+Recall that
+\begin{align*}
+%
+\MoveEqLeft
+\kl{\q(\theta)}{\p(\theta)} ={}\\&
+-\expect{\q(\theta)}{\log \p(\theta)} +
+\expect{\q(\theta)}{\log \q(\theta)}\\
+\\
+\qdom ={}& \left\{ \textrm{Bivariate normals}\right\}
+%
+\end{align*}
+
+\hspace{-2em}$\qopt(\theta) = $
+
+$\argmin{\q \in \qdom}
+\Big(-\expect{\q(\theta)}{\log \p(\theta)} +$
+\sout{$\expect{\q(\theta)}{\log \q(\theta)} \Big)$}
+%
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+
+\begin{tikzpicture}
+\TikzPlotArea{}
+\TikzPtheta{blue}{$\p(\theta)$}
+
+\onslide<2->{
+\draw[red] (3, 1)  node[anchor=north] {$\qopt(\theta)$};
+\node at (2.5,2.5) [circle,fill=red,inner sep=1.5pt]{};
+}
+\end{tikzpicture}
+\end{minipage}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{KL divergence exercises}
+\begin{minipage}{0.5\textwidth}
+%
+Recall that
+\begin{align*}
+%
+\MoveEqLeft
+\kl{\q(\theta)}{\p(\theta)} ={}\\&
+-\expect{\q(\theta)}{\log \p(\theta)} +
+\expect{\q(\theta)}{\log \q(\theta)}\\
+\\
+\qdom ={}& \left\{ \textrm{Bivariate normals}\right\}
+%
+\end{align*}
+
+\hspace{-2em}$\qopt(\theta) = $
+
+$\argmin{\q \in \qdom} \Big(-$
+\sout{$\expect{\q(\theta)}{\log \p(\theta)}$}
+$+ \expect{\q(\theta)}{\log \q(\theta)} \Big)$
+%
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+
+\begin{tikzpicture}
+\TikzPlotArea{}
+\TikzPtheta{blue}{$\p(\theta)$}
+
+\onslide<2->{
+\draw[red] (3, 1)  node[anchor=north] {$\qopt(\theta)$};
+%\node at (2.5,2.5) [circle,fill=red,inner sep=1.5pt]{};
+}
 \end{tikzpicture}
 \end{minipage}
 
