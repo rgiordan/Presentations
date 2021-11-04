@@ -142,11 +142,12 @@ Some points to be aware of:
     \item $\kl{\q}{\p} \ne \kl{\p}{\q}$
     % \item $\kl{\q}{\p}$ does not satisfy the triangle inequality
     \item $\kl{\q}{\p}$ is a ``strict'' measure of closeness
-    \begin{itemize}
-         \item If the KL divergence is small, other common
-         measures of distance between distributions are small, but
-         not vice-versa \citep{gibbs2002choosing}
-     \end{itemize}
+        \citep{gibbs2002choosing}
+    % \begin{itemize}
+    %      \item If the KL divergence is small, other common
+    %      measures of distance between distributions are small, but
+    %      not vice-versa
+    %  \end{itemize}
 \end{itemize}
 
 Why use KL divergence?
@@ -158,4 +159,19 @@ interpretation \citep{kullback1951information}.
 \textbf{Real answer:}
 Mathematical convenience (normalizing constants pop out).
 
+\textbf{Example: the MLE minimizes KL divergence.}  Suppose that
+$x_n \iid \p(\cdot)$, and $\q(\cdot | \theta) \in \qdom$ is a parameteric
+family of data distributions.
+Then
+%
+% \begin{align*}
+%
+% \hat\theta = \argmin{\theta} \kl{\p}{\q} ={}&
+% \argmin{\theta}\left(  - \expect{\p(x_1)}{\log \q(x_1 | \theta)}
+%     + \expect{\p(x_1)}{\log \p(x_1)} \right) \\
+%={}&
+% \argmax{\theta} \expect{\p(x_1)}{\log \q(x_1 | \theta)} \\
+%
+% \end{align*}
+%
 \end{frame}

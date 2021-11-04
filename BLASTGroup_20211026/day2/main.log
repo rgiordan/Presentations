@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 NOV 2021 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 NOV 2021 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1418,118 +1418,137 @@ ut line 67.
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-Overfull \vbox (12.59447pt too high) detected at line 67
+! Missing { inserted.
+<to be read again> 
+                   }
+l.67 \end{frame}
+                
+? Q
+OK, entering \batchmode...
+! Missing } inserted.
+<inserted text> 
+                }
+l.67 \end{frame}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \vbox (17.0862pt too high) detected at line 67
  []
 
-[3
+ [3
 
 ]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 115
 .
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [4
 
 ] [5
 
-])
-(./kl_exercises.tex
+]) (./kl_exercises.tex
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 72--72
 [][] 
  []
 
-[6
+ [6
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 72--72
 [][] 
  []
 
-[7
+ [7
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 119--119
 [][] 
  []
 
-[8
+ [8
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 119--119
 [][] 
  []
 
-[9
+ [9
 
 ]
 Overfull \hbox (48.2024pt too wide) in paragraph at lines 168--168
 [][] 
  []
 
-[10
+ [10
 
 ]
 Overfull \hbox (48.2024pt too wide) in paragraph at lines 168--168
 [][] 
  []
 
-[11
+ [11
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 219--219
 [][] 
  []
 
-[12
+ [12
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 219--219
 [][] 
  []
 
-[13
+ [13
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 270--270
 [][] 
  []
 
-[14
+ [14
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 270--270
 [][] 
  []
 
-[15
+ [15
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 318--318
 [][] 
  []
 
-[16
+ [16
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 318--318
 [][] 
  []
 
-[17
+ [17
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 366--366
 [][] 
  []
 
-[18
+ [18
 
 ]
 Overfull \hbox (39.52815pt too wide) in paragraph at lines 366--366
 [][] 
  []
 
-[19
+ [19
 
 ]) (./bib.tex (./main.bbl) [20
 
@@ -1552,32 +1571,31 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37564 strings out of 483065
- 903476 string characters out of 5963550
- 1301180 words of memory out of 5000000
- 51745 multiletter control sequences out of 15000+600000
- 542278 words of font info for 60 fonts, out of 8000000 for 9000
+ 37534 strings out of 483065
+ 902606 string characters out of 5963550
+ 1301179 words of memory out of 5000000
+ 51716 multiletter control sequences out of 15000+600000
+ 541933 words of font info for 59 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  71i,15n,103p,1836b,857s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0700.
-600pk> </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0
-800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
-ex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb>
-Output written on main.pdf (20 pages, 146140 bytes).
+ </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0800.
+600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb>
+Output written on main.pdf (20 pages, 146349 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 202 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  46 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
