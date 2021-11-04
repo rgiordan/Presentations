@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 NOV 2021 13:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 NOV 2021 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1493,11 +1493,39 @@ Overfull \hbox (39.52815pt too wide) in paragraph at lines 229--229
 
 [12
 
+]
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 266--266
+[][] 
+ []
+
+[13
+
+]
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 266--266
+[][] 
+ []
+
+[14
+
+]
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 303--303
+[][] 
+ []
+
+[15
+
+]
+Overfull \hbox (39.52815pt too wide) in paragraph at lines 303--303
+[][] 
+ []
+
+[16
+
 ]) (./bib.tex (./main.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-) [13
+) [17
 
 ])
 \tf@nav=\write6
@@ -1518,11 +1546,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37408 strings out of 483065
- 900392 string characters out of 5963550
+ 37420 strings out of 483065
+ 900503 string characters out of 5963550
  1298879 words of memory out of 5000000
- 51613 multiletter control sequences out of 15000+600000
- 541120 words of font info for 56 fonts, out of 8000000 for 9000
+ 51616 multiletter control sequences out of 15000+600000
+ 541288 words of font info for 57 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  71i,15n,103p,1836b,857s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0800.
@@ -1534,13 +1562,14 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (13 pages, 104920 bytes).
+public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb>
+Output written on main.pdf (17 pages, 117883 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 166 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
