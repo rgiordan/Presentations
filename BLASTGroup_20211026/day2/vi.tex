@@ -16,7 +16,7 @@ using optimization.}
 \end{center}
 
 %
-Think ``calculus of variations:'' an optimum $\hat{x} = \argmax_\theta f(x)$ is
+Think ``calculus of variations:'' an optimum $\hat{x} = \argmax{\theta} f(x)$ is
 characterized by $df / dx |_{\hat{x}} = 0$, i.e.  where small variations in
 $\hat{x}$ result in no changes to the value of $f(\hat{x})$.
 %
@@ -102,15 +102,15 @@ between distributions:}
 %
 \begin{align*}
 %
-\qopt(\xi) = \argmin{\q \in \qdom} D(\q, \p).
+\qopt = \argmin{\q \in \qdom} D(\q, \p).
 %
 \end{align*}
 %
 \end{center}
 
 The most common choice of ``divergence'' is the \textbf{Kullback-Leibler} (KL)
-divergence, though other choices are possible \citep{li2016variational,
-liu2016stein, ambrogioni2018wasserstein}.
+divergence, though other choices are possible (e.g. \citet{li2016variational,
+liu2016stein, ambrogioni2018wasserstein}).
 
 \end{frame}
 
@@ -159,19 +159,19 @@ interpretation \citep{kullback1951information}.
 \textbf{Real answer:}
 Mathematical convenience (normalizing constants pop out).
 
-\textbf{Example: the MLE minimizes KL divergence.}  Suppose that
-$x_n \iid \p(\cdot)$, and $\q(\cdot | \theta) \in \qdom$ is a parameteric
-family of data distributions.
-Then
+\textbf{Example: the MLE minimizes KL divergence.}  Suppose that $x_n \iid
+\p(\cdot)$, and $\q(\cdot | \theta) \in \qdom$ is a (possibly misspecified)
+parameteric family of data distributions. Then
 %
-% \begin{align*}
+\begin{align*}
 %
-% \hat\theta = \argmin{\theta} \kl{\p}{\q} ={}&
-% \argmin{\theta}\left(  - \expect{\p(x_1)}{\log \q(x_1 | \theta)}
-%     + \expect{\p(x_1)}{\log \p(x_1)} \right) \\
-%={}&
-% \argmax{\theta} \expect{\p(x_1)}{\log \q(x_1 | \theta)} \\
+\hat\theta := \argmin{\theta} \kl{\p}{\q} ={}&
+\argmin{\theta}\left(  - \expect{\p(x_1)}{\log \q(x_1 | \theta)}
+    + \expect{\p(x_1)}{\log \p(x_1)} \right) \\
+={}&
+\argmax{\theta} \expect{\p(x_1)}{\log \q(x_1 | \theta)}
+\approx \argmax{\theta} \meann \log \q(x_n | \theta).
 %
-% \end{align*}
-%
+\end{align*}
+
 \end{frame}

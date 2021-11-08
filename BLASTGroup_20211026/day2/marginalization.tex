@@ -17,9 +17,9 @@ We have learned that
 %
 \begin{align*}
 %
-\textrm{Bad: }&& \thetahat, \hat{z} ={}& \argmax_{\theta, z} \log p(y | \theta, z)\\
+\textrm{Bad: }&& \thetahat, \hat{z} ={}& \argmax{\theta, z} \log p(y | \theta, z)\\
 \textrm{Good: }&& \thetahat ={}&
-    \argmax_{\theta} \log \int p(y | \theta, z) p(z | \theta) dz.
+    \argmax{\theta} \log \int p(y | \theta, z) p(z | \theta) dz.
 %
 \end{align*}
 %
@@ -71,7 +71,7 @@ $\hat\theta_{(i)}$, repeat until convergence:
 
 \textbf{The E-step:}  Compute $Q_{(i)}(\theta) := \expect{p\left(z | y, \hat\theta_{(i)} \right)}{\log p(y | \theta, z) + \log p(z | \theta)}$
 
-\textbf{The M-step:}  Compute the next iterate $\thetahat_{(i + 1)} := \argmax_\theta Q_{(i)}(\theta)$
+\textbf{The M-step:}  Compute the next iterate $\thetahat_{(i + 1)} := \argmax{\theta} Q_{(i)}(\theta)$
 
 \pause
 \hrulefill
