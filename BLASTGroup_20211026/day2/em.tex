@@ -1,0 +1,162 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Recall the EM algorithm}
+%
+\vspace{-1em}
+%
+\begin{align*}
+    \textrm{Observations: }y ={}& (y_1, \ldots, y_N)\\
+    \textrm{Unknown latent variables: }z ={}& (z_1, \ldots, z_N)\\
+    \textrm{Unknown global parameter: }\theta \in{}& \mathbb{R}^D.
+    \quad \textrm{We want: } \thetahat ={}
+    \argmax{\theta} \log p(y | \theta) .
+\end{align*}
+
+\hrulefill
+
+The EM algorithm alternates between two steps.  Starting at an iterate
+$\hat\theta_{(i)}$, repeat until convergence:
+
+\textbf{The E-step:}  Compute $Q_{(i)}(\theta) := \expect{p\left(z | y, \hat\theta_{(i)} \right)}{\log p(y | \theta, z) + \log p(z | \theta)}$
+
+\textbf{The M-step:}  Compute the next iterate $\thetahat_{(i + 1)} := \argmax{\theta} Q_{(i)}(\theta)$
+
+\hrulefill
+
+The EM algorithm works / is useful when:
+
+\begin{itemize}
+    %
+    \item The joint log probability $\log p(y | \theta, z) + \log p(z | \theta)$ is easy to write down
+    \item The posterior $p(z | y, \theta)$ is easy to compute
+    \item The marginalizing integral $p(y | \theta) = \int p(y | \theta, z) p(z | \theta) dz$ is hard
+    %
+\end{itemize}
+
+
+\hrulefill
+\begin{center}
+\textbf{Is the EM algorithm VI?} \hspace{5em}\textbf{Can you spot the lie?}
+\end{center}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The EM algorithm as VI}
+
+Let $\qdom$ denote a family of distributions on $\z$, parameterized by a
+finite-dimensional parameter $\eta$, such that $p(\z | \theta, \y) \in \qdom$
+for the observed $\y$ and all $\theta$.
+
+Let $\q(z | \etaopt(\theta)) := p(\z | \theta, \y)$.  Then:
+%
+\begin{align*}
+%
+\log p(\y | \theta) ={}&
+\log p(\y | \theta) + \kl{\q(\z | \etaopt(\theta))}{p(\z | \theta, \y)}
+\\={}&
+\log p(\y | \theta) + \argmax{\eta}\left( -
+    \kl{\q(\z | \eta)}{p(\z | \theta, \y)} \right) & \bigstar
+\\={}&
+\argmax{\eta} \left(
+    \log p(\y | \theta) -
+    \kl{\q(\z | \eta)}{p(\z | \theta, \y)}\right)
+\\={}&
+\argmax{\eta} \left(
+\log p(\y | \theta) +
+\expect{\q(\z | \eta)}{
+    \log p(\z | \theta, \y) - \log \q(\z | \eta)
+}\right)
+\\={}&
+\argmax{\eta} \left(
+\expect{\q(\z | \eta)}{
+    \log p(\y | \theta)
+    \log p(\z | \theta, \y) -  \log \q(\z | \eta)
+}\right)
+\\={}&
+\argmax{\eta} \left(
+\expect{\q(\z | \eta)}{
+    \log p(\y, \z | \theta) }
++ \expect{\q(\z | \eta)}{\log \q(\z | \eta)
+}\right) & \bigstar\bigstar
+%
+\end{align*}
+%
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The EM algorithm as VI}
+%
+From the previous slide, the marginal MLE is given by
+%
+\begin{align*}
+%
+\MoveEqLeft
+\thetahat := \argmax{\theta} \log p(\y | \theta) \\
+={}&
+\argmax{\theta} \argmax{\eta} \left(
+\log p(\y | \theta) -
+    \kl{\q(\z | \eta)}{p(\z | \theta, \y)}  \right) & \bigstar
+\\={}&
+\argmax{\theta} \argmax{\eta} \left(
+\expect{\q(\z | \eta)}{
+    \log p(\y, \z | \theta) }
++ \expect{\q(\z | \eta)}{\log \q(\z | \eta)
+}\right) & \bigstar\bigstar
+%
+\end{align*}
+%
+
+Starting at an iterate $\hat\theta_{(i)}$:
+
+\textbf{The E-step:}
+\begin{enumerate}
+%
+    \item For a fixed $\hat\theta_{(i)}$, optimize
+$\bigstar$ for $\eta$.  Since only the KL divergence depends on
+$\eta$, the optimum is $\etaopt(\hat\theta_{(i)})$,
+and $\q(\z | \etaopt(\hat\theta_{(i)})) = p(\z | \hat\theta_{(i)}, \y)$.
+%
+    \item Then use $\etaopt(\hat\theta_{(i)})$ to compute the expectation in
+$\bigstar\bigstar$ as a function of $\theta$.
+%
+\end{enumerate}
+
+\textbf{The M-step:}  Keeping $\eta$ fixed at $\etaopt(\hat\theta_{(i)}))$,
+optimize $\bigstar\bigstar$ as a function of $\theta$ to give
+$\thetahat_{i + 1}$.  The entropy
+$\expect{\q(\z | \eta)}{\log \q(\z | \eta)}$ does not depend on $\theta$
+and can be ignored.
+
+\hrulefill
+
+$\Rightarrow$ The EM algorithm is coordinate ascent on 
+%
+%\begin{align*}
+%
+%f(\theta, \eta) =
+$\log p(\y | \theta) - \kl{\q(\z | \eta)}{p(\z | \theta, \y)}.$
+%
+%\end{align*}
+%
+
+\textbf{Corrolary}: The EM algorithm converges to a local optimum of $\log p(y |
+\theta)$.
+
+\end{frame}
