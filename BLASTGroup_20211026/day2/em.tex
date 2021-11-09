@@ -17,6 +17,7 @@
     \argmax{\theta} \log p(y | \theta) .
 \end{align*}
 
+\pause
 \hrulefill
 
 The EM algorithm alternates between two steps.  Starting at an iterate
@@ -26,6 +27,7 @@ $\hat\theta_{(i)}$, repeat until convergence:
 
 \textbf{The M-step:}  Compute the next iterate $\thetahat_{(i + 1)} := \argmax{\theta} Q_{(i)}(\theta)$
 
+\pause
 \hrulefill
 
 The EM algorithm works / is useful when:
@@ -38,6 +40,7 @@ The EM algorithm works / is useful when:
     %
 \end{itemize}
 
+\pause
 
 \hrulefill
 \begin{center}
@@ -61,11 +64,14 @@ for the observed $\y$ and all $\theta$.
 \textbf{Exercise:} When does $\qdom_z$ exist?  (Indexed by a
 finite-dimensional parameter $\eta$.)
 
+\pause
+
 Let $\q(z | \etaopt(\theta)) := p(\z | \theta, \y)$.
 
 In an abuse of notation,
 write $\eta \in \qdom_z$ for $\eta \in \{\eta: \q(\z | \eta) \in \qdom_z \}$.
 
+\pause
 
 Then:
 %
@@ -130,6 +136,8 @@ From the previous slide, the marginal MLE is given by
 %
 \end{align*}
 %
+
+\pause
 \hrulefill
 
 \textbf{The EM algorithm revisited.}  Starting at an iterate $\hat\theta_{(i)}$:
@@ -152,6 +160,8 @@ optimize $\bigstar\bigstar$ as a function of $\theta$ to give
 $\thetahat_{i + 1}$.  The entropy
 $\expect{\q(\z | \eta)}{\log \q(\z | \eta)}$ does not depend on $\theta$
 and can be ignored.
+
+\pause
 
 \hrulefill
 
@@ -183,19 +193,24 @@ f(\theta, \eta) =
 
 The EM algorithm is coordinate ascent on the above objective.
 
-\textbf{Corrolaries}:
+\textbf{Corollaries}:
 
 \begin{itemize}
 %
-\item The EM algorithm converges to a local optimum of $\log p(y | \theta)$.
+\item<2-> The EM algorithm converges to a local optimum of $\log p(y | \theta)$.
 %
-\item The EM algorithm is VI, and you don't need to optimize with coordinate
+\item<3-> The EM algorithm is VI, and you don't need to optimize with coordinate
 ascent.
 %
-\item If both $p(\z | \theta, \y)$ and $p(\z, \y | \theta )$ are easy,
+\item<4-> If both $p(\z | \theta, \y)$ and $p(\z, \y | \theta )$ are easy,
 then so is $p(\y | \theta)$.  (This was the lie.)
+\begin{itemize}
+    \item<5-> \textbf{Exercise: } Prove this a different way using exponential
+    families (in real-life problems, $p(\z | \y, \theta)$ is only
+    really tractable in exponential families).
+\end{itemize}
 %
-\item If $p(\z | \theta, \y)$ is intractable, we can now consider different
+\item<6-> If $p(\z | \theta, \y)$ is intractable, we can now consider different
 approximating families which may not contain $p(\z | \theta, \y)$.
 %
 \end{itemize}
@@ -211,7 +226,11 @@ approximating families which may not contain $p(\z | \theta, \y)$.
 %
 Suppose instead of $\qdom_z$ we used $\qdom_{\z}^{pm}$, a family of
 constant-entropy near-point mass distributions on $\z$, located at
-some free parameter $\eta$.  Then
+some free parameter $\eta$.
+
+\pause
+
+Then
 %
 \begin{align*}
 %
@@ -233,16 +252,20 @@ some free parameter $\eta$.  Then
 \expect{\q(\z | \eta)}{
     \log p(\y, \z | \theta) }
 \right)
-={}
+\\={}&
 \argmax{\theta, \z}
     \log p(\y, \z | \theta).
 %
 \end{align*}
 %
+\pause
+
 \textbf{
 $\Rightarrow$ The Neyman-Scott paradox occurs because point masses are
 poor approximations for the distribution $p(\z | \theta, \y)$.
 }
+
+\pause
 
 \textbf{Exercise: }  Recall that the Neyman-Scott paradox disappears when,
 instead of pairs, we have many observations, all from the same $\z_n$.
@@ -260,7 +283,11 @@ this phenomenon?
 %
 Let $\qdom_{\theta}^{pm}$ denote a family of constant-entropy near-point mass
 distributions on $\theta$, located at some free parameter $\vartheta$. Assume a
-uniform prior on $\theta$.  Then:
+uniform prior on $\theta$.
+
+\pause
+
+Then:
 %
 \begin{align*}
 %
@@ -283,12 +310,17 @@ uniform prior on $\theta$.  Then:
 %
 \end{align*}
 %
+
+\pause
+
 \textbf{
 $\Rightarrow$ The marginal MLE is a point-mass approximation to the
 posterior with a uniform prior.}
 %
 It will be a good approximation when $p(\theta \vert \y)$ is approximately a
 point mass.
+
+\pause
 
 \textbf{Exercise: } Under what circumstances is $p(\theta \vert \y)$ is
 approximately a point mass?
@@ -316,7 +348,11 @@ Choose some tractable approximating family $\q(\theta, \z \vert \gamma) \in
 %
 \end{align*}
 %
-\textbf{Now we're doing ``Variational Bayes''.}
+\pause
+
+\textbf{Now we're doing ``Variational Bayes'' (VB).}
+
+\pause
 
 The EM algorithm --- and, indeed, the MLE --- can be understood as Variational
 Bayes with a uniform prior and particular choices of approximating
@@ -331,7 +367,8 @@ Some common approximating families:
 %
 \begin{itemize}
 %
-\item Factorizing families, e.g. $\q(\theta, \z \vert \gamma) = \q(\theta \vert
+\item Factorizing families, e.g.
+$\q(\theta, \z \vert \gamma) = \q(\theta \vert
 \gamma) \q(\z \vert \gamma)$.  These families model some components
 of the posterior as independent.
 \begin{itemize}
@@ -350,6 +387,8 @@ unconstraining transformation): $\q(\theta, \z \vert \gamma) =
 %
 \end{itemize}
 %
+\pause
+
 \hrulefill
 
 What do you need from an approximating family?  Expressivity, plus:
@@ -367,14 +406,23 @@ What do you need from an approximating family?  Expressivity, plus:
 %
 \end{align*}
 %
-Monte Carlo is often used for the expectations.
 
-The entropy is harder.  Often there is a real tradeoff between expressivity
+\pause
+
+\begin{itemize}
+\item Monte Carlo is often used for the expectations.
+\begin{itemize}
+    \item See, e.g., \citet{ranganath2014black}.
+\end{itemize}
+
+\item The entropy is harder.  In general, there is a tradeoff between expressivity
 and tractable entropy.
-
-``Normalizing flows'' are an example of a highly expressive approximating
-family (neural nets!) carefully designed to maintain a tractable entropy.
+\begin{itemize}
+\item ``Normalizing flows'' are an example of a highly expressive approximating
+family (neural nets!) designed to maintain a tractable entropy.
 \citep{rezende2015variational}
+\end{itemize}
+\end{itemize}
 
 
 

@@ -50,18 +50,19 @@ $\hat{x}$ result in no changes to the value of $f(\hat{x})$.
 \end{center}
 
 
-\begin{minipage}[t]{0.2\textwidth}
-By this definition,
-\end{minipage}
+\pause
+% \begin{minipage}[t]{0.2\textwidth}
+\textbf{Exercise: } By this definition, which of these are VI?
+% \end{minipage}
 %
-\begin{minipage}[t]{0.8\textwidth}
-    \vspace{-0.65em}
+% \begin{minipage}[t]{0.8\textwidth}
+%     \vspace{-0.65em}
 \begin{itemize}
-    \item The maximum likelihood estimator (MLE) is VI.
-    \item The Laplace approximation to a Bayesian posterior is VI.
-    \item Markov chain Monte Carlo (MCMC) is not VI.
+    \item The maximum likelihood estimator (MLE).
+    \item The Laplace approximation to a Bayesian posterior.
+    \item Markov chain Monte Carlo (MCMC).
 \end{itemize}
-\end{minipage}
+% \end{minipage}
 \hspace{-2em}
 
 \end{frame}
@@ -90,10 +91,10 @@ Let $y$ denote data and $\theta$ a parameter. Examples:
         $\theta \mapsto  \p(y | \theta) = \int p(y, z | \theta)  dz$ (marginal MLE)
 \end{itemize}
 
+\pause
+
 Let $\qdom$ be some class of distributions which may or may not contain
 $\p(\xi)$.
-
-
 
 \begin{center}
 \textbf{Variational inference finds the distribution in $\qdom$
@@ -107,6 +108,8 @@ between distributions:}
 \end{align*}
 %
 \end{center}
+
+\pause
 
 The most common choice of ``divergence'' is the \textbf{Kullback-Leibler} (KL)
 divergence, though other choices are possible (e.g. \citet{li2016variational,
@@ -135,7 +138,7 @@ The KL divergence is defined as:
 \end{align*}
 %
 
-Some points to be aware of:
+Some key attributes of KL divergence:
 \begin{itemize}
     \item $\kl{\q}{\p} \ge 0$
     \item $\kl{\q}{\p} = 0 \Rightarrow \p = \q$
@@ -150,6 +153,8 @@ Some points to be aware of:
     %  \end{itemize}
 \end{itemize}
 
+\pause
+
 Why use KL divergence?
 
 \textbf{Phony answer:}
@@ -159,18 +164,21 @@ interpretation \citep{kullback1951information}.
 \textbf{Real answer:}
 Mathematical convenience (normalizing constants pop out).
 
-\textbf{Example: the MLE minimizes KL divergence.}  Suppose that $x_n \iid
+\pause
+
+\textbf{Example: The MLE minimizes KL divergence.}  Suppose that $x_n \iid
 \p(\cdot)$, and $\q(\cdot | \theta) \in \qdom$ is a (possibly misspecified)
 parameteric family of data distributions. Then
 %
 \begin{align*}
 %
-\hat\theta := \argmin{\theta} \kl{\p}{\q} ={}&
+\argmin{\theta} \kl{\p}{\q} ={}&
 \argmin{\theta}\left(  - \expect{\p(x_1)}{\log \q(x_1 | \theta)}
     + \expect{\p(x_1)}{\log \p(x_1)} \right) \\
 ={}&
 \argmax{\theta} \expect{\p(x_1)}{\log \q(x_1 | \theta)}
-\approx \argmax{\theta} \meann \log \q(x_n | \theta).
+\approx \argmax{\theta} \meann \log \q(x_n | \theta) =
+\thetahat\textrm{ (the MLE)}.
 %
 \end{align*}
 
