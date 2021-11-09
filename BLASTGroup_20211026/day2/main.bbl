@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -49,5 +49,11 @@ Rajesh Ranganath, Sean Gerrish, and David Blei.
 \newblock Black box variational inference.
 \newblock In \emph{Artificial intelligence and statistics}, pages 814--822.
   PMLR, 2014.
+
+\bibitem[Rezende and Mohamed(2015)]{rezende2015variational}
+Danilo Rezende and Shakir Mohamed.
+\newblock Variational inference with normalizing flows.
+\newblock In \emph{International conference on machine learning}, pages
+  1530--1538. PMLR, 2015.
 
 \end{thebibliography}

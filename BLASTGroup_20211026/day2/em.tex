@@ -239,8 +239,16 @@ some free parameter $\eta$.  Then
 %
 \end{align*}
 %
+\textbf{
 $\Rightarrow$ The Neyman-Scott paradox occurs because point masses are
 poor approximations for the distribution $p(\z | \theta, \y)$.
+}
+
+\textbf{Exercise: }  Recall that the Neyman-Scott paradox disappears when,
+instead of pairs, we have many observations, all from the same $\z_n$.
+Can you use the VI perspective on the marginal EM algorithm to explain
+this phenomenon?
+
 
 \end{frame}
 
@@ -250,9 +258,9 @@ poor approximations for the distribution $p(\z | \theta, \y)$.
 
 \begin{frame}{Different approximating families: Point masses on $\theta$.}
 %
-Let $\qdom_{\theta}^{pm}$ denote a family of
-constant-entropy near-point mass distributions on $\theta$, located at
-some free parameter $\vartheta$.  Then
+Let $\qdom_{\theta}^{pm}$ denote a family of constant-entropy near-point mass
+distributions on $\theta$, located at some free parameter $\vartheta$. Assume a
+uniform prior on $\theta$.  Then:
 %
 \begin{align*}
 %
@@ -275,9 +283,15 @@ some free parameter $\vartheta$.  Then
 %
 \end{align*}
 %
+\textbf{
 $\Rightarrow$ The marginal MLE is a point-mass approximation to the
-posterior with a uniform prior.  It will be a good approximation when
-$p(\theta \vert \y)$ is approximately a point mass.
+posterior with a uniform prior.}
+%
+It will be a good approximation when $p(\theta \vert \y)$ is approximately a
+point mass.
+
+\textbf{Exercise: } Under what circumstances is $p(\theta \vert \y)$ is
+approximately a point mass?
 
 \end{frame}
 
@@ -289,7 +303,7 @@ $p(\theta \vert \y)$ is approximately a point mass.
 
 \begin{frame}{Different approximating families.}
 
-Suppose we can't compute $p(\z | \theta, \y)$, and we think that
+Suppose we can't compute $p(\z | \theta, \y)$ and / or we think that
 $p(\theta \vert \y)$ may not be well-approximated by a point mass.
 
 Choose some tractable approximating family $\q(\theta, \z \vert \gamma) \in
@@ -304,15 +318,24 @@ Choose some tractable approximating family $\q(\theta, \z \vert \gamma) \in
 %
 \textbf{Now we're doing ``Variational Bayes''.}
 
+The EM algorithm --- and, indeed, the MLE --- can be understood as Variational
+Bayes with a uniform prior and particular choices of approximating
+distributions.
+
+\end{frame}
+
+
+\begin{frame}{Different approximating families.}
+
 Some common approximating families:
 %
 \begin{itemize}
 %
 \item Factorizing families, e.g. $\q(\theta, \z \vert \gamma) = \q(\theta \vert
-\gamma) \q(\z \vert \gamma)$.  These families model the posteriors as
-independent.
+\gamma) \q(\z \vert \gamma)$.  These families model some components
+of the posterior as independent.
 \begin{itemize}
-\item For historical reasons, the factorizing assumption is known as a
+\item For historical reasons, this is known as a
 \textbf{mean-field approximation}.
 \end{itemize}
 %
@@ -327,6 +350,31 @@ unconstraining transformation): $\q(\theta, \z \vert \gamma) =
 %
 \end{itemize}
 %
+\hrulefill
+
+What do you need from an approximating family?  Expressivity, plus:
+%
+\begin{align*}
+%
+\kl{\q}{\p} :=
+\underbrace{
+    \expect{\q(\xi | \eta)}{\log \q(\xi | \eta)}
+}_{\textrm{Tractable entropy}}
+\quad     - \quad
+\underbrace{
+    \expect{\q(\xi | \eta)}{\log \p(\xi)}
+}_{\textrm{Tractable expectations}}
+%
+\end{align*}
+%
+Monte Carlo is often used for the expectations.
+
+The entropy is harder.  Often there is a real tradeoff between expressivity
+and tractable entropy.
+
+``Normalizing flows'' are an example of a highly expressive approximating
+family (neural nets!) carefully designed to maintain a tractable entropy.
+\citep{rezende2015variational}
 
 
 
