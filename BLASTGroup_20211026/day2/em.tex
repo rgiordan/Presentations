@@ -54,37 +54,46 @@ The EM algorithm works / is useful when:
 
 \begin{frame}{The EM algorithm as VI}
 
-Let $\qdom$ denote a family of distributions on $\z$, parameterized by a
-finite-dimensional parameter $\eta$, such that $p(\z | \theta, \y) \in \qdom$
+Let $\qdom_z$ denote a family of distributions on $\z$, parameterized by a
+finite-dimensional parameter $\eta$, such that $p(\z | \theta, \y) \in \qdom_z$
 for the observed $\y$ and all $\theta$.
 
-Let $\q(z | \etaopt(\theta)) := p(\z | \theta, \y)$.  Then:
+\textbf{Exercise:} When does $\qdom_z$ exist?  (Indexed by a
+finite-dimensional parameter $\eta$.)
+
+Let $\q(z | \etaopt(\theta)) := p(\z | \theta, \y)$.
+
+In an abuse of notation,
+write $\eta \in \qdom_z$ for $\eta \in \{\eta: \q(\z | \eta) \in \qdom_z \}$.
+
+
+Then:
 %
 \begin{align*}
 %
 \log p(\y | \theta) ={}&
 \log p(\y | \theta) + \kl{\q(\z | \etaopt(\theta))}{p(\z | \theta, \y)}
 \\={}&
-\log p(\y | \theta) + \argmax{\eta}\left( -
+\log p(\y | \theta) + \argmax{\eta \in \qdom_z}\left( -
     \kl{\q(\z | \eta)}{p(\z | \theta, \y)} \right) & \bigstar
 \\={}&
-\argmax{\eta} \left(
+\argmax{\eta \in \qdom_z} \left(
     \log p(\y | \theta) -
     \kl{\q(\z | \eta)}{p(\z | \theta, \y)}\right)
 \\={}&
-\argmax{\eta} \left(
+\argmax{\eta \in \qdom_z} \left(
 \log p(\y | \theta) +
 \expect{\q(\z | \eta)}{
     \log p(\z | \theta, \y) - \log \q(\z | \eta)
 }\right)
 \\={}&
-\argmax{\eta} \left(
+\argmax{\eta \in \qdom_z} \left(
 \expect{\q(\z | \eta)}{
     \log p(\y | \theta)
     \log p(\z | \theta, \y) -  \log \q(\z | \eta)
 }\right)
 \\={}&
-\argmax{\eta} \left(
+\argmax{\eta \in \qdom_z} \left(
 \expect{\q(\z | \eta)}{
     \log p(\y, \z | \theta) }
 + \expect{\q(\z | \eta)}{\log \q(\z | \eta)
@@ -93,7 +102,6 @@ Let $\q(z | \etaopt(\theta)) := p(\z | \theta, \y)$.  Then:
 \end{align*}
 %
 \end{frame}
-
 
 
 
@@ -110,11 +118,11 @@ From the previous slide, the marginal MLE is given by
 \MoveEqLeft
 \thetahat := \argmax{\theta} \log p(\y | \theta) \\
 ={}&
-\argmax{\theta} \argmax{\eta} \left(
+\argmax{\theta} \argmax{\eta \in \qdom_z} \left(
 \log p(\y | \theta) -
     \kl{\q(\z | \eta)}{p(\z | \theta, \y)}  \right) & \bigstar
 \\={}&
-\argmax{\theta} \argmax{\eta} \left(
+\argmax{\theta} \argmax{\eta \in \qdom_z} \left(
 \expect{\q(\z | \eta)}{
     \log p(\y, \z | \theta) }
 + \expect{\q(\z | \eta)}{\log \q(\z | \eta)
@@ -122,8 +130,9 @@ From the previous slide, the marginal MLE is given by
 %
 \end{align*}
 %
+\hrulefill
 
-Starting at an iterate $\hat\theta_{(i)}$:
+\textbf{The EM algorithm revisited.}  Starting at an iterate $\hat\theta_{(i)}$:
 
 \textbf{The E-step:}
 \begin{enumerate}
@@ -146,17 +155,179 @@ and can be ignored.
 
 \hrulefill
 
-$\Rightarrow$ The EM algorithm is coordinate ascent on 
+$\Rightarrow$ The EM algorithm is coordinate ascent on the objective
 %
-%\begin{align*}
+\begin{align*}
 %
-%f(\theta, \eta) =
-$\log p(\y | \theta) - \kl{\q(\z | \eta)}{p(\z | \theta, \y)}.$
+f(\theta, \eta) =
+\log p(\y | \theta) - \kl{\q(\z | \eta)}{p(\z | \theta, \y)}.
 %
-%\end{align*}
+\end{align*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The EM algorithm as VI}
+
+\begin{align*}
+%
+\thetahat, \etaopt :={}& \argmax{\theta, \eta \in \qdom_z} \left(
+\log p(\y | \theta) -
+    \kl{\q(\z | \eta)}{p(\z | \theta, \y)}  \right).
+%
+\end{align*}
 %
 
-\textbf{Corrolary}: The EM algorithm converges to a local optimum of $\log p(y |
-\theta)$.
+The EM algorithm is coordinate ascent on the above objective.
+
+\textbf{Corrolaries}:
+
+\begin{itemize}
+%
+\item The EM algorithm converges to a local optimum of $\log p(y | \theta)$.
+%
+\item The EM algorithm is VI, and you don't need to optimize with coordinate
+ascent.
+%
+\item If both $p(\z | \theta, \y)$ and $p(\z, \y | \theta )$ are easy,
+then so is $p(\y | \theta)$.  (This was the lie.)
+%
+\item If $p(\z | \theta, \y)$ is intractable, we can now consider different
+approximating families which may not contain $p(\z | \theta, \y)$.
+%
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Different approximating families: Point masses on $\z$.}
+%
+Suppose instead of $\qdom_z$ we used $\qdom_{\z}^{pm}$, a family of
+constant-entropy near-point mass distributions on $\z$, located at
+some free parameter $\eta$.  Then
+%
+\begin{align*}
+%
+\MoveEqLeft
+\argmax{\theta, \eta \in \qdom_{\z}^{pm}}
+\left(
+\log p(\y | \theta) -
+    \kl{\q(\z | \eta)}{p(\z | \theta, \y)}  \right)
+\\={}&
+\argmax{\theta, \eta \in \qdom_{\z}^{pm}}
+\left(
+\expect{\q(\z | \eta)}{
+    \log p(\y, \z | \theta) }
++ \expect{\q(\z | \eta)}{\log \q(\z | \eta)
+}\right)
+\\={}&
+\argmax{\theta, \eta \in \qdom_{\z}^{pm}}
+\left(
+\expect{\q(\z | \eta)}{
+    \log p(\y, \z | \theta) }
+\right)
+={}
+\argmax{\theta, \z}
+    \log p(\y, \z | \theta).
+%
+\end{align*}
+%
+$\Rightarrow$ The Neyman-Scott paradox occurs because point masses are
+poor approximations for the distribution $p(\z | \theta, \y)$.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Different approximating families: Point masses on $\theta$.}
+%
+Let $\qdom_{\theta}^{pm}$ denote a family of
+constant-entropy near-point mass distributions on $\theta$, located at
+some free parameter $\vartheta$.  Then
+%
+\begin{align*}
+%
+\MoveEqLeft
+\argmax{\theta, \eta \in \qdom_\z}
+\left(
+\log p(\y | \theta) -
+    \kl{\q(\z | \eta)}{p(\z | \theta, \y)}  \right)
+\\={}&
+%
+\argmax{\vartheta \in \qdom_{\theta}^{pm}, \eta \in \qdom_\z}
+\left(
+\expect{\q(\theta \vert \vartheta)}{\log p(\y | \theta)} -
+\expect{\q(\theta \vert \vartheta)}{\log \q(\theta | \vartheta)} -
+    \kl{\q(\z | \eta)}{p(\z | \theta, \y)}
+\right)
+\\={}&
+\argmax{\vartheta \in \qdom_{\theta}^{pm}, \eta \in \qdom_\z}
+\kl{\q(\theta \vert \vartheta) \q(\z \vert \eta)}{\log p(\z, \theta \vert \y)}.
+%
+\end{align*}
+%
+$\Rightarrow$ The marginal MLE is a point-mass approximation to the
+posterior with a uniform prior.  It will be a good approximation when
+$p(\theta \vert \y)$ is approximately a point mass.
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Different approximating families.}
+
+Suppose we can't compute $p(\z | \theta, \y)$, and we think that
+$p(\theta \vert \y)$ may not be well-approximated by a point mass.
+
+Choose some tractable approximating family $\q(\theta, \z \vert \gamma) \in
+\qdom_{\theta\z}$.  Then find
+%
+\begin{align*}
+%
+\hat\gamma := \argmin{\gamma \in \qdom_{\theta\z}}
+\kl{\q(\theta, \z \vert \gamma)}{p(\theta, \z \vert \y)}.
+%
+\end{align*}
+%
+\textbf{Now we're doing ``Variational Bayes''.}
+
+Some common approximating families:
+%
+\begin{itemize}
+%
+\item Factorizing families, e.g. $\q(\theta, \z \vert \gamma) = \q(\theta \vert
+\gamma) \q(\z \vert \gamma)$.  These families model the posteriors as
+independent.
+\begin{itemize}
+\item For historical reasons, the factorizing assumption is known as a
+\textbf{mean-field approximation}.
+\end{itemize}
+%
+\item Factorizing families + an exponential family assumption.
+%
+\item Normal approximations (possibly after an invertible
+unconstraining transformation): $\q(\theta, \z \vert \gamma) =
+\mathcal{N}(\theta, \z | \gamma)$.
+%
+\item Independent normal approximations.  This is used by a lot of
+``black-box VI'' methods \citep{ranganath2014black, kucukelbir2017automatic}.
+%
+\end{itemize}
+%
+
+
 
 \end{frame}

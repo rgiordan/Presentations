@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -19,6 +19,13 @@ Alison~L Gibbs and Francis~Edward Su.
 \newblock \emph{International statistical review}, 70\penalty0 (3):\penalty0
   419--435, 2002.
 
+\bibitem[Kucukelbir et~al.(2017)Kucukelbir, Tran, Ranganath, Gelman, and
+  Blei]{kucukelbir2017automatic}
+Alp Kucukelbir, Dustin Tran, Rajesh Ranganath, Andrew Gelman, and David~M Blei.
+\newblock Automatic differentiation variational inference.
+\newblock \emph{The Journal of Machine Learning Research}, 18\penalty0
+  (1):\penalty0 430--474, 2017.
+
 \bibitem[Kullback and Leibler(1951)]{kullback1951information}
 Solomon Kullback and Richard~A Leibler.
 \newblock On information and sufficiency.
@@ -35,5 +42,12 @@ Qiang Liu and Dilin Wang.
 \newblock Stein variational gradient descent: {A} general purpose bayesian
   inference algorithm.
 \newblock \emph{arXiv preprint arXiv:1608.04471}, 2016.
+
+\bibitem[Ranganath et~al.(2014)Ranganath, Gerrish, and
+  Blei]{ranganath2014black}
+Rajesh Ranganath, Sean Gerrish, and David Blei.
+\newblock Black box variational inference.
+\newblock In \emph{Artificial intelligence and statistics}, pages 814--822.
+  PMLR, 2014.
 
 \end{thebibliography}
