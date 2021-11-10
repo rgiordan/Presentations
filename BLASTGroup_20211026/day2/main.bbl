@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -54,6 +54,13 @@ Qiang Liu and Dilin Wang.
 \newblock Stein variational gradient descent: {A} general purpose bayesian
   inference algorithm.
 \newblock \emph{arXiv preprint arXiv:1608.04471}, 2016.
+
+\bibitem[Neal and Hinton(1998)]{neal1998view}
+Radford~M Neal and Geoffrey~E Hinton.
+\newblock A view of the em algorithm that justifies incremental, sparse, and
+  other variants.
+\newblock In \emph{Learning in graphical models}, pages 355--368. Springer,
+  1998.
 
 \bibitem[Ranganath et~al.(2014)Ranganath, Gerrish, and
   Blei]{ranganath2014black}
