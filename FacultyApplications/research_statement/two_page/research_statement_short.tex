@@ -4,9 +4,9 @@
 
 \usepackage{geometry}
 %\geometry{margin=1.2in}
-\geometry{top=1.0in}
-\geometry{left=1.1in}
-\geometry{right=1.1in}
+\geometry{top=0.9in}
+\geometry{left=1.0in}
+\geometry{right=1.0in}
 
 \title{Ryan Giordano Research Statement}
 
@@ -60,7 +60,7 @@ my specific past and future projects, emphasizing the ways in which I update
 classical results for a modern computational environment using intuitive,
 relevant theory, and with motivation drawn from practical applications.
 
-\paragraph{Approximate cross validation.}
+\textbf{Approximate cross validation.}
 %
 The error or variability of machine learning algorithms is often assessed by
 repeatedly re-fitting a model with different weighted versions of the observed
@@ -79,7 +79,7 @@ consistently estimates true leave-$k$-out cross-validation for any fixed $k$. I
 demonstrate the accuracy of the approximation on a range of simulated and real
 datasets, including an unsupervised clustering problem from genomics.
 
-\paragraph{Prior sensitivity for discrete Bayesian nonparametrics.}
+\textbf{Prior sensitivity for discrete Bayesian nonparametrics.}
 %
 % From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
 A central question in many probabilistic clustering problems is how many
@@ -94,7 +94,7 @@ clusters.
 In \citet{giordano:2021:bnpsensitivity}, I derive and analyze prior sensitivity
 measures for variational Bayes (VB) approximations in general, with a practical
 focus on discrete BNP models. Unlike much previous work on local Bayesian
-sensitivity for BNP (e.g. \citet{Basu:2000:BNP_robustness}), I pay special
+sensitivity for BNP, I pay special
 attention to the ability of the sensitivity measures to \emph{extrapolate} to
 different priors, rather than treating the sensitivity as a measure of
 robustness \textit{per se}.  I state conditions under which VB approximations
@@ -108,7 +108,7 @@ fastSTRUCTURE.  We demonstrate that the approximation is accurate, orders of
 magnitude faster than re-fitting, and capable of detecting meaningful prior
 sensitivity in quantities of practical interest.
 
-\paragraph{Uncertainty propagation in mean-field variational Bayes.}
+\textbf{Uncertainty propagation in mean-field variational Bayes.}
 %
 Mean-field Variational Bayes (MFVB) is an approximate Bayesian posterior
 inference technique that is increasingly popular due to its fast runtimes on
@@ -132,13 +132,13 @@ internet advertising dataset, I demonstrate that my method is simple, general,
 and fast, providing accurate posterior uncertainty estimates and robustness
 measures with runtimes that can be an order of magnitude faster than MCMC.
 
-\paragraph{The empirical influence function.}
+\textbf{The empirical influence function.}
 %
 Much of my work (particularly \citet{giordano:2019:ij, giordano:2020:amip,
 giordano:2021:bayesij}) has strong connections to the classical theory of von
 Mises expansions and the closely related concept of the influence function,
 which measures the effect of individual datapoints on an estimator
-\citep{mises:1947:asymptotic, reeds:1976:thesis, hampel:1986:robustbook,
+\citep{mises:1947:asymptotic, hampel:1986:robustbook,
 serfling:2009:approximation}.  But my focus on the influence function
 evaluated at the observed data---i.e., the ``empirical influence function''
 (EIF)---stands in contrast with much of the classical literature, which studies
@@ -161,6 +161,44 @@ M-estimators at a very large number of alternative datasets.  Natural
 applications of the idea include approximating the bootstrap-after-bootstrap,
 evaluating the sampling properties of cross-validation, and computing
 higher-order jackknife bias correction.
+
+
+\textbf{Sensitivity analysis in difficult situations.}
+%
+It is not always as easy to apply sensitivity analysis in practice as it is in
+theory.  I have found that a few key problems tend to recur, and I will discuss
+them in turn, as well as potential solutions which draw connections to the
+optimization literature.
+
+First, sensitivity analysis should, ideally, deal gracefully with incomplete
+optimization.  For example, a collaborator from biostatistics and I have found
+that the popular \texttt{R} package \texttt{DESeq2} can fail in practice to
+fully optimize the log likelihood, and so fail to satisfy the assumptions that
+make sensitivity analysis possible.  Instead of forcing users to optimize
+further, I propose that second-order empirical influence functions could
+simulate the effect of simultaneously taking a Newton step and perturbing the
+data, permitting sensitivity analysis on incompletely optimized objectives with
+little computation beyond that required for well-optimized objectives.
+
+Second, the key computational bottleneck in sensitivity analysis in
+high-dimensional problems is typically the solution of linear systems involving
+the inverse Hessian of the objective function. Off-the-shelf iterative
+algorithms like the conjugate gradient algorithm %\citep{nocedal:2006:numerical}
+suffice in many cases, but there is reason to believe that the present active
+research into stochastic second-order methods
+% (e.g.
+% \citet{agarwal:2017:secondorder, berahas:2020:newtonsketch})
+could significantly speed up sensitivity analysis in large problems.
+
+Finally, practitioners are often interested in non-smooth objectives. For these,
+one promising idea is to use local approximations to speed up computationally
+intensive but smooth components in non-smooth problems. For example,
+\citet{wilson:2020:approximatecv} speeds up cross-validation of linear
+regression with a non-smooth lasso penalty by forming a fast approximation to
+the effect on the optimal squared error of leaving out a single datapoint, and
+retaining non-smoothness in the lasso penalty. We take a similar approach in
+\citet{giordano:2021:bnpsensitivity}, retaining easy-to-compute non-linearities
+in posterior summary statistics.
 
 \newpage
 
