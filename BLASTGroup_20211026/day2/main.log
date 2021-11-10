@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  10 NOV 2021 08:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  10 NOV 2021 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1655,25 +1655,25 @@ Overfull \vbox (8.69261pt too high) detected at line 177
 ] [51
 
 ]
-Overfull \vbox (0.62498pt too high) detected at line 430
+Overfull \vbox (9.82494pt too high) detected at line 430
  []
 
 [52
 
 ]
-Overfull \vbox (0.62498pt too high) detected at line 430
+Overfull \vbox (9.82494pt too high) detected at line 430
  []
 
 [53
 
 ]
-Overfull \vbox (0.62498pt too high) detected at line 430
+Overfull \vbox (9.82494pt too high) detected at line 430
  []
 
 [54
 
 ]) (./vi_in_practice.tex
-<static_images/Criteo_vb.png, id=365, 431.6125pt x 234.8775pt>
+<static_images/Criteo_vb.png, id=366, 431.6125pt x 234.8775pt>
 File: static_images/Criteo_vb.png Graphic file (type png)
 <use static_images/Criteo_vb.png>
 Package pdftex.def Info: static_images/Criteo_vb.png  used on input line 29.
@@ -1696,7 +1696,7 @@ Overfull \vbox (12.1603pt too high) detected at line 29
 [56
 
 ]
-<static_images/Criteo_means.png, id=381, 886.31125pt x 739.76375pt>
+<static_images/Criteo_means.png, id=382, 886.31125pt x 739.76375pt>
 File: static_images/Criteo_means.png Graphic file (type png)
 <use static_images/Criteo_means.png>
 Package pdftex.def Info: static_images/Criteo_means.png  used on input line 39.
@@ -1709,13 +1709,13 @@ Overfull \vbox (10.01875pt too high) detected at line 39
 [57
 
  <./static_images/Criteo_means.png>]
-<static_images/Criteo_model_sds.png, id=388, 956.57375pt x 515.9275pt>
+<static_images/Criteo_model_sds.png, id=389, 956.57375pt x 515.9275pt>
 File: static_images/Criteo_model_sds.png Graphic file (type png)
 <use static_images/Criteo_model_sds.png>
 Package pdftex.def Info: static_images/Criteo_model_sds.png  used on input line
  71.
 (pdftex.def)             Requested size: 276.559pt x 149.15854pt.
-<static_images/mfvb_example.png, id=390, 613.29124pt x 599.23875pt>
+<static_images/mfvb_example.png, id=391, 613.29124pt x 599.23875pt>
 File: static_images/mfvb_example.png Graphic file (type png)
 <use static_images/mfvb_example.png>
 Package pdftex.def Info: static_images/mfvb_example.png  used on input line 71.
@@ -1728,7 +1728,7 @@ Overfull \vbox (5.86038pt too high) detected at line 71
 [58
 
  <./static_images/Criteo_model_sds.png> <./static_images/mfvb_example.png>]
-<static_images/Criteo_timing.png, id=399, 654.445pt x 268.00125pt>
+<static_images/Criteo_timing.png, id=400, 654.445pt x 268.00125pt>
 File: static_images/Criteo_timing.png Graphic file (type png)
 <use static_images/Criteo_timing.png>
 Package pdftex.def Info: static_images/Criteo_timing.png  used on input line 82
@@ -1738,7 +1738,7 @@ Package pdftex.def Info: static_images/Criteo_timing.png  used on input line 82
 [59
 
  <./static_images/Criteo_timing.png>]
-<static_images/Election_model.png, id=406, 1206.5075pt x 715.67375pt>
+<static_images/Election_model.png, id=407, 1206.5075pt x 715.67375pt>
 File: static_images/Election_model.png Graphic file (type png)
 <use static_images/Election_model.png>
 Package pdftex.def Info: static_images/Election_model.png  used on input line 9
@@ -1747,7 +1747,7 @@ Package pdftex.def Info: static_images/Election_model.png  used on input line 9
  [60
 
  <./static_images/Election_model.png>]
-<static_images/Sesame_model.png, id=413, 1204.5pt x 727.71875pt>
+<static_images/Sesame_model.png, id=414, 1204.5pt x 727.71875pt>
 File: static_images/Sesame_model.png Graphic file (type png)
 <use static_images/Sesame_model.png>
 Package pdftex.def Info: static_images/Sesame_model.png  used on input line 102
@@ -1756,7 +1756,7 @@ Package pdftex.def Info: static_images/Sesame_model.png  used on input line 102
  [61
 
  <./static_images/Sesame_model.png>]
-<static_images/Radon_model.png, id=421, 865.2325pt x 513.92pt>
+<static_images/Radon_model.png, id=422, 865.2325pt x 513.92pt>
 File: static_images/Radon_model.png Graphic file (type png)
 <use static_images/Radon_model.png>
 Package pdftex.def Info: static_images/Radon_model.png  used on input line 112.
@@ -1765,7 +1765,7 @@ Package pdftex.def Info: static_images/Radon_model.png  used on input line 112.
  [62
 
  <./static_images/Radon_model.png>]
-<static_images/CJS_model.png, id=428, 1233.60875pt x 733.74126pt>
+<static_images/CJS_model.png, id=429, 1233.60875pt x 733.74126pt>
 File: static_images/CJS_model.png Graphic file (type png)
 <use static_images/CJS_model.png>
 Package pdftex.def Info: static_images/CJS_model.png  used on input line 122.
@@ -1773,7 +1773,7 @@ Package pdftex.def Info: static_images/CJS_model.png  used on input line 122.
  [63
 
  <./static_images/CJS_model.png>]
-<static_images/advi_timing.png, id=435, 812.03375pt x 506.89375pt>
+<static_images/advi_timing.png, id=436, 812.03375pt x 506.89375pt>
 File: static_images/advi_timing.png Graphic file (type png)
 <use static_images/advi_timing.png>
 Package pdftex.def Info: static_images/advi_timing.png  used on input line 133.
@@ -1804,10 +1804,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37810 strings out of 483065
- 907733 string characters out of 5963550
- 1301522 words of memory out of 5000000
- 51874 multiletter control sequences out of 15000+600000
+ 37814 strings out of 483065
+ 907854 string characters out of 5963550
+ 1301561 words of memory out of 5000000
+ 51877 multiletter control sequences out of 15000+600000
  545244 words of font info for 71 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  71i,19n,103p,1836b,856s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1832,10 +1832,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (66 pages, 926759 bytes).
+Output written on main.pdf (66 pages, 927222 bytes).
 PDF statistics:
- 561 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
- 144 named destinations out of 1000 (max. 500000)
+ 564 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 145 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

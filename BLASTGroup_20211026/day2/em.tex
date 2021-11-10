@@ -95,14 +95,14 @@ Then:
 \\={}&
 \argmax{\eta \in \qdom_z} \left(
 \expect{\q(\z | \eta)}{
-    \log p(\y | \theta)
+    \log p(\y | \theta) +
     \log p(\z | \theta, \y) -  \log \q(\z | \eta)
 }\right)
 \\={}&
 \argmax{\eta \in \qdom_z} \left(
 \expect{\q(\z | \eta)}{
     \log p(\y, \z | \theta) }
-+ \expect{\q(\z | \eta)}{\log \q(\z | \eta)
+- \expect{\q(\z | \eta)}{\log \q(\z | \eta)
 }\right) & \bigstar\bigstar
 %
 \end{align*}
@@ -191,8 +191,8 @@ f(\theta, \eta) =
 \end{align*}
 %
 
-The EM algorithm is coordinate ascent on the above objective
-\citep{neal1998view}.
+The EM algorithm is coordinate ascent on the preceding objective.\\
+\citep{neal1998view}
 
 \textbf{Corollaries}:
 
@@ -374,7 +374,7 @@ $\q(\theta, \z \vert \gamma) = \q(\theta \vert
 of the posterior as independent.
 \begin{itemize}
 \item For historical reasons, this is known as a
-\textbf{mean-field approximation}.
+\textbf{mean-field approximation} \citep{wainwright2008graphical}.
 \end{itemize}
 %
 \item Factorizing families + an exponential family assumption.
