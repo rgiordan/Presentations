@@ -1,0 +1,170 @@
+\input{_headers.tex}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{geometry}
+%\geometry{margin=1.2in}
+\geometry{top=1.0in}
+\geometry{left=1.1in}
+\geometry{right=1.1in}
+
+\title{Ryan Giordano Research Statement}
+
+\author{
+  Ryan Giordano \\ \texttt{rgiordan@mit.edu }
+}
+
+\begin{document}
+
+\begin{minipage}[t]{0.5\textwidth}
+\hspace{-2em} % Easier than doing it right!
+{\bf \LARGE Research Statement}\\
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+%    \begin{flushright}
+        \hspace{8em} % Easier than doing it right!
+        {\LARGE Ryan Giordano}
+%    \end{flushright}
+\end{minipage}
+
+Many researchers would be concerned if they learned that some core conclusion of
+their statistical analysis---such as the sign or statistical significance of
+some key effect---could be overturned by removing a small fraction of their
+data. Such non-robustness would be particularly concerning if the data were not
+actually drawn randomly from precisely the population of interest, or if the
+model may have been misspecified---circumstances that often occur in the social
+sciences. For example, a study of microcredit in Mexico on 16,561 households
+measured a negative but statistically insignificant effect of microcredit
+\citep{angelucci:2015:microcredit}.  However, in recent work, my co-authors and
+I show that one can make the estimated effect of microcredit positive and
+statistically significant by removing just 15 households from the analysis,
+reversing the paper's qualitative conclusions by removing only 0.1\% of the
+data.  Since there are a combinatorially large number of ways to leave 15
+datapoints out of 16,561 (over $10^{51}$), finding such influential subsets by
+brute force would be impossible.  I circumvent this difficulty by forming a
+\emph{linear approximation} to the dependence of the estimator on the dataset.
+My technique works for a wide class of commonly used estimators, providing a
+fast, automatic tool for identifying small but influential subsets with
+finite-sample guarantees in many applied problems.
+
+In fact, my research shows that many desirable but computationally demanding
+data analysis tasks are similarly amenable to automatic approximation, providing
+fast, easy-to-use computational tools for assessing whether small changes to
+modeling assumptions or datasets can meaningfully alter an analyst's substantive
+conclusions.  As I detail below, my work encompasses Bayesian approaches (such
+as measuring robustness to prior specification), frequentist approaches (such as
+fast approximations to leave-one-out cross validation), and combinations of the
+two (such as measuring the robustness of Markov chain Monte Carlo procedures to
+data resampling). For the remainder of this statement, I will describe some of
+my specific past and future projects, emphasizing the ways in which I update
+classical results for a modern computational environment using intuitive,
+relevant theory, and with motivation drawn from practical applications.
+
+\paragraph{Approximate cross validation.}
+%
+The error or variability of machine learning algorithms is often assessed by
+repeatedly re-fitting a model with different weighted versions of the observed
+data; cross-validation (CV) can be thought of as a particularly popular example
+of this technique.
+%
+In \citet{giordano:2019:ij}, I use a linear approximation to the dependence of
+the fitting procedure on the weights, producing results that can be faster by an
+order of magnitude than repeated re-fitting. I provide explicit finite-sample
+error bounds for the approximation in terms of a small number of simple,
+verifiable assumptions.  My results apply whether the weights and data are
+stochastic or deterministic, and so can be used as a tool for proving the
+accuracy of the approximation on a wide variety of problems. As a
+corollary, I state mild regularity conditions under which the approximation
+consistently estimates true leave-$k$-out cross-validation for any fixed $k$. I
+demonstrate the accuracy of the approximation on a range of simulated and real
+datasets, including an unsupervised clustering problem from genomics.
+
+\paragraph{Prior sensitivity for discrete Bayesian nonparametrics.}
+%
+% From BNP_sensitivity/writing/NIPS_2018_BNP_workshop
+A central question in many probabilistic clustering problems is how many
+distinct clusters are present in a particular dataset and which observations
+cluster together. Discrete Bayesian nonparametric (BNP) mixture models address
+this question by placing a generative process on cluster assignment, making the
+number and composition of distinct clusters amenable to Bayesian inference.
+However, like all Bayesian approaches, BNP requires the specification of a
+prior, and this prior may favor different numbers and types of posterior
+clusters.
+
+In \citet{giordano:2021:bnpsensitivity}, I derive and analyze prior sensitivity
+measures for variational Bayes (VB) approximations in general, with a practical
+focus on discrete BNP models. Unlike much previous work on local Bayesian
+sensitivity for BNP (e.g. \citet{Basu:2000:BNP_robustness}), I pay special
+attention to the ability of the sensitivity measures to \emph{extrapolate} to
+different priors, rather than treating the sensitivity as a measure of
+robustness \textit{per se}.  I state conditions under which VB approximations
+are Fr{\'e}chet differentiable functions of prior densities in a particular
+vector space, while also proving that VB approximations are in fact
+\emph{non-differentiable} in another wide class of vector space embeddings
+popular in the classical Bayesian robustness literature.
+My co-authors and I apply the sensitivity measures to a number of real-world
+problems, including an unsupervised clustering problem from genomics using
+fastSTRUCTURE.  We demonstrate that the approximation is accurate, orders of
+magnitude faster than re-fitting, and capable of detecting meaningful prior
+sensitivity in quantities of practical interest.
+
+\paragraph{Uncertainty propagation in mean-field variational Bayes.}
+%
+Mean-field Variational Bayes (MFVB) is an approximate Bayesian posterior
+inference technique that is increasingly popular due to its fast runtimes on
+large-scale scientific data sets. For example, in
+\citet{regier:2019:cataloging}, my co-authors and I use MFVB to construct an
+approximate posterior for the identity of every astronomical object in 55TB
+of image data from the Sloan Digital Sky Survey.  However, even when MFVB provides
+accurate posterior means for certain parameters, it often mis-estimates
+variances and covariances due to its inability to propagate Bayesian uncertainty
+between statistical parameters.
+
+In \citet{giordano:2015:linear, giordano:2018:covariances}, I derive a simple
+formula for the effect of infinitesimal perturbations on MFVB posterior means,
+thus providing improved covariance estimates and greatly expanding the practical
+usefulness of MFVB posterior approximations. My approach builds on a result from
+the classical Bayesian robustness literature relating posterior covariances to
+the derivatives of posterior expectations, and includes the classical Laplace
+approximation as a special case. In experiments on simulated and real-life
+datasets,  including models from ecology, the social sciences, and on a massive
+internet advertising dataset, I demonstrate that my method is simple, general,
+and fast, providing accurate posterior uncertainty estimates and robustness
+measures with runtimes that can be an order of magnitude faster than MCMC.
+
+\paragraph{The empirical influence function.}
+%
+Much of my work (particularly \citet{giordano:2019:ij, giordano:2020:amip,
+giordano:2021:bayesij}) has strong connections to the classical theory of von
+Mises expansions and the closely related concept of the influence function,
+which measures the effect of individual datapoints on an estimator
+\citep{mises:1947:asymptotic, reeds:1976:thesis, hampel:1986:robustbook,
+serfling:2009:approximation}.  But my focus on the influence function
+evaluated at the observed data---i.e., the ``empirical influence function''
+(EIF)---stands in contrast with much of the classical literature, which studies
+the asymptotic behavior of estimators via their (unobserved) limiting influence
+function.
+%
+In our present age of automatic differentiation, large datasets, and complex
+models, I believe that the EIF will continue to provide practical benefits and
+is relatively under-studied.
+
+In \citet{giordano:2019:hoij}, I show that higher-order EIFs can be
+easily and automatically evaluated and analyzed for M-estimators at a
+computational cost comparable to the first-order EIF---that of forming and
+factorizing a Hessian matrix of second-order derivatives.
+%
+Thus, the EIF ``amortizes'' the cost of evaluating an M-estimator large number
+of alternative datasets: by paying a large fixed price up front (approximately
+computing and factorizing a Hessian matrix), one can cheaply approximate
+M-estimators at a very large number of alternative datasets.  Natural
+applications of the idea include approximating the bootstrap-after-bootstrap,
+evaluating the sampling properties of cross-validation, and computing
+higher-order jackknife bias correction.
+
+\newpage
+
+\bibliography{references}
+\bibliographystyle{plainnat}
+
+\end{document}
