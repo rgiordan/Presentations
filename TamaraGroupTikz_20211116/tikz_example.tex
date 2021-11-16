@@ -11,7 +11,17 @@
 \usetheme{metropolis}           % Use metropolis theme
 \usepackage{amsmath}
 \usepackage{tikz}
-\usepackage{tikz}
+
+
+\usepackage{listings}
+\lstset
+{
+    language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
 
 \title{TikZ and Beamer for Image Annotation}
 \author{Ryan Giordano}
@@ -26,22 +36,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{How does the IJ work?  Data re-weighting.}
+\begin{frame}[fragile]{How does the IJ work?  Data re-weighting.}
 
-Augment the problem with {\em data weights} $\w_1, \ldots, \w_N$.
-%
-We can write $\expect{p(\theta \vert \xvec, \w)}{\theta}$.
-
-\begin{minipage}{0.49\textwidth}
-    \hfill\\
-    Let's annotate this.
+\begin{center}
+\begin{minipage}{0.38\textwidth}
+\includegraphics[width=\textwidth]{e_beta_w}
 \end{minipage}
-\begin{minipage}{0.49\textwidth}
-    \includegraphics[width=0.98\textwidth]{e_beta_w}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\hrulefill
+
+Let's annotate this graphic using TikZ.
+
+\begin{lstlisting}
+\begin{center}
+\begin{minipage}{0.38\textwidth}
+\includegraphics[width=\textwidth]{e_beta_w}
 \end{minipage}
+\end{center}
+\end{lstlisting}
 
-
-
+From now on, everything I'm going to do will be within the minipage.
 
 \end{frame}
 
@@ -49,65 +65,109 @@ We can write $\expect{p(\theta \vert \xvec, \w)}{\theta}$.
 
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{How does the IJ work?  Data re-weighting.}
+\begin{frame}[fragile]{How does the IJ work?  Data re-weighting.}
 
-Augment the problem with {\em data weights} $\w_1, \ldots, \w_N$.
-%
-We can write $\expect{p(\theta \vert \xvec, \w)}{\theta}$.
-
-\begin{minipage}{0.49\textwidth}
-    \hspace{\textwidth}
-\end{minipage}
-\begin{minipage}{0.49\textwidth}
-    % https://www.overleaf.com/learn/latex/TikZ_package
-    % https://latexdraw.com/how-to-annotate-an-image-in-latex/
-    % https://tex.stackexchange.com/questions/9559/drawing-on-an-image-with-tikz
+\begin{center}
+\begin{minipage}{0.38\textwidth}
     \begin{tikzpicture}
-        \onslide<6-> {
         \node[anchor=south west,inner sep=0] (image) at (0,0) {
-            \includegraphics[width=0.98\textwidth]{e_beta_w}
+            \includegraphics[width=\textwidth]{e_beta_w}
         };
-        }
-        \onslide<7->{
         \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
-                    node[above,black,fill=white]
-                    {\small $\expect{p(\theta \vert \x)}{\theta}$};
+            \draw[color=red] (0, 0) circle (0.1);
+            \draw[color=green] (1.0, 1.0) circle (0.1);
+            \draw[color=blue] (0.1, 0.5) circle (0.1);
+            \node[color=red] (hello) at (0.5, 0.5) {HELLO};
         \end{scope}
-        }
-        \onslide<6->{
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[blue, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
-                    node[left,black,fill=white]
-                    {\small $\expect{p(\theta \vert \x, \w_n)}{\theta}$};
-        \end{scope}
-        }
-        \onslide<9->{
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
-        \end{scope}
-        }
-        \onslide<10->{
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[blue, thick, <-] (0.8,0.65) -- ++(0.02,-0.1)
-                    node[below,black,fill=white]
-                    {\small Slope $ = \infl_n$};
-        \end{scope}
-        }
     \end{tikzpicture}
 \end{minipage}
+\end{center}
 
+%%%%%%%%%%%%%%%%%%%%%%
+\hrulefill
+
+\begin{lstlisting}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {
+        \includegraphics[width=\textwidth]{e_beta_w}
+    };
+    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+        \draw[color=red] (0, 0) circle (0.1);
+        \draw[color=green] (1.0, 1.0) circle (0.1);
+        \draw[color=blue] (0.1, 0.5) circle (0.1);
+        \node[color=red] (hello) at (0.5, 0.5) {HELLO};
+    \end{scope}
+\end{tikzpicture}
+\end{lstlisting}
 
 \end{frame}
 
 
 
+
+%
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \begin{frame}{How does the IJ work?  Data re-weighting.}
+%
+% Augment the problem with {\em data weights} $\w_1, \ldots, \w_N$.
+% %
+% We can write $\expect{p(\theta \vert \xvec, \w)}{\theta}$.
+%
+% \begin{minipage}{0.49\textwidth}
+%     \hspace{\textwidth}
+% \end{minipage}
+% \begin{minipage}{0.49\textwidth}
+%     % https://www.overleaf.com/learn/latex/TikZ_package
+%     % https://latexdraw.com/how-to-annotate-an-image-in-latex/
+%     % https://tex.stackexchange.com/questions/9559/drawing-on-an-image-with-tikz
+%     \begin{tikzpicture}
+%         \onslide<6-> {
+%         \node[anchor=south west,inner sep=0] (image) at (0,0) {
+%             \includegraphics[width=0.98\textwidth]{e_beta_w}
+%         };
+%         }
+%         \onslide<7->{
+%         \begin{scope}[x={(image.south east)},y={(image.north west)}]
+%             \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
+%                     node[above,black,fill=white]
+%                     {\small $\expect{p(\theta \vert \x)}{\theta}$};
+%         \end{scope}
+%         }
+%         \onslide<6->{
+%         \begin{scope}[x={(image.south east)},y={(image.north west)}]
+%             \draw[blue, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
+%                     node[left,black,fill=white]
+%                     {\small $\expect{p(\theta \vert \x, \w_n)}{\theta}$};
+%         \end{scope}
+%         }
+%         \onslide<9->{
+%         \begin{scope}[x={(image.south east)},y={(image.north west)}]
+%             \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
+%         \end{scope}
+%         }
+%         \onslide<10->{
+%         \begin{scope}[x={(image.south east)},y={(image.north west)}]
+%             \draw[blue, thick, <-] (0.8,0.65) -- ++(0.02,-0.1)
+%                     node[below,black,fill=white]
+%                     {\small Slope $ = \infl_n$};
+%         \end{scope}
+%         }
+%     \end{tikzpicture}
+% \end{minipage}
+%
+%
+% \end{frame}
+%
+%
+%
 
 \begin{frame}{Source and further reading}
 

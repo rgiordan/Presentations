@@ -1,0 +1,35 @@
+\frametitle{How does the IJ work? Data re-weighting.}
+
+\begin{center}
+\begin{minipage}{0.38\textwidth}
+    \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {
+            \includegraphics[width=\textwidth]{e_beta_w}
+        };
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[color=red] (0, 0) circle (0.1);
+            \draw[color=green] (1.0, 1.0) circle (0.1);
+            \draw[color=blue] (0.1, 0.5) circle (0.1);
+            \node[color=red] (hello) at (0.5, 0.5) {HELLO};
+        \end{scope}
+    \end{tikzpicture}
+\end{minipage}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\hrulefill
+
+\begin{lstlisting}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {
+        \includegraphics[width=\textwidth]{e_beta_w}
+    };
+    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+        \draw[color=red] (0, 0) circle (0.1);
+        \draw[color=green] (1.0, 1.0) circle (0.1);
+        \draw[color=blue] (0.1, 0.5) circle (0.1);
+        \node[color=red] (hello) at (0.5, 0.5) {HELLO};
+    \end{scope}
+\end{tikzpicture}
+\end{lstlisting}
+
