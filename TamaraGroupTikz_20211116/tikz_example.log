@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  16 NOV 2021 09:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  16 NOV 2021 09:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -959,20 +959,20 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (./tikz_example.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 99.
+ut line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -981,198 +981,217 @@ thkerncmss.
 <orig_weights.png, id=13, 455.7025pt x 91.34125pt>
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 50.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 <weights_loo.png, id=15, 444.66125pt x 105.39375pt>
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 50.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 <boot_weights.png, id=16, 452.69125pt x 203.76125pt>
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 50.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
-<e_beta_w.png, id=17, 903.375pt x 903.375pt>
-File: e_beta_w.png Graphic file (type png)
-<use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+<weight_slope.png, id=17, 903.375pt x 903.375pt>
+File: weight_slope.png Graphic file (type png)
+<use weight_slope.png>
+Package pdftex.def Info: weight_slope.png  used on input line 50.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./orig_weights.png> <./wei
-ghts_loo.png> <./boot_weights.png> <./e_beta_w.png>]
+ghts_loo.png> <./boot_weights.png> <./weight_slope.png>]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
+<e_beta_w.png, id=35, 903.375pt x 903.375pt>
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
  [2
 
-]
+ <./e_beta_w.png>]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
- [3
+[3
 
 ]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
  [4
 
 ]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
  [5
 
 ]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
  [6
 
 ]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
-
-[7
+ [7
 
 ]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
  [8
 
 ]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
  [9
 
 ]
 File: orig_weights.png Graphic file (type png)
 <use orig_weights.png>
-Package pdftex.def Info: orig_weights.png  used on input line 99.
+Package pdftex.def Info: orig_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
 File: weights_loo.png Graphic file (type png)
 <use weights_loo.png>
-Package pdftex.def Info: weights_loo.png  used on input line 99.
+Package pdftex.def Info: weights_loo.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
 File: boot_weights.png Graphic file (type png)
 <use boot_weights.png>
-Package pdftex.def Info: boot_weights.png  used on input line 99.
+Package pdftex.def Info: boot_weights.png  used on input line 127.
 (pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: e_beta_w.png Graphic file (type png)
 <use e_beta_w.png>
-Package pdftex.def Info: e_beta_w.png  used on input line 99.
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
 (pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
  [10
+
+]
+File: orig_weights.png Graphic file (type png)
+<use orig_weights.png>
+Package pdftex.def Info: orig_weights.png  used on input line 127.
+(pdftex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: weights_loo.png Graphic file (type png)
+<use weights_loo.png>
+Package pdftex.def Info: weights_loo.png  used on input line 127.
+(pdftex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: boot_weights.png Graphic file (type png)
+<use boot_weights.png>
+Package pdftex.def Info: boot_weights.png  used on input line 127.
+(pdftex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: e_beta_w.png Graphic file (type png)
+<use e_beta_w.png>
+Package pdftex.def Info: e_beta_w.png  used on input line 127.
+(pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
+ [11
 
 ]
 \tf@nav=\write6
@@ -1184,19 +1203,19 @@ Package pdftex.def Info: e_beta_w.png  used on input line 99.
 \tf@snm=\write8
 \openout8 = `tikz_example.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
  (./tikz_example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `tikz_example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21221 strings out of 483065
- 424292 string characters out of 5963550
- 666807 words of memory out of 5000000
- 35720 multiletter control sequences out of 15000+600000
+ 21232 strings out of 483065
+ 424456 string characters out of 5963550
+ 666899 words of memory out of 5000000
+ 35729 multiletter control sequences out of 15000+600000
  540458 words of font info for 53 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  71i,13n,95p,1844b,929s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1211,10 +1230,10 @@ public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm7.pfb>
-Output written on tikz_example.pdf (10 pages, 184110 bytes).
+Output written on tikz_example.pdf (11 pages, 225371 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 23 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
