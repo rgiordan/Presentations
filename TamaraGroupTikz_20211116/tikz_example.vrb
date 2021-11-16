@@ -7,10 +7,17 @@
             \includegraphics[width=\textwidth]{e_beta_w}
         };
         \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[color=red] (0, 0) circle (0.1);
-            \draw[color=green] (1.0, 1.0) circle (0.1);
-            \draw[color=blue] (0.1, 0.5) circle (0.1);
-            \node[color=red] (hello) at (0.5, 0.5) {HELLO};
+            \draw[color=white, fill=white] (-0.2,0) rectangle (0,1);
+            \node[anchor=east] (y-label) at (0.14, 0.9)
+                {$\expect{p(\theta \vert \x, \w)}{\theta}$};
+            \onslide<2->{
+                \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
+            }
+            \onslide<3->{
+                \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
+                    node[above, black, fill opacity=0, text opacity=1]
+                    {\small $\expect{p(\theta \vert \x)}{\theta}$};
+            }
         \end{scope}
     \end{tikzpicture}
 \end{minipage}
@@ -19,17 +26,18 @@
 %%%%%%%%%%%%%%%%%%%%%%
 \hrulefill
 
+
 \begin{lstlisting}
-\begin{tikzpicture}
-    \node[anchor=south west,inner sep=0] (image) at (0,0) {
-        \includegraphics[width=\textwidth]{e_beta_w}
-    };
-    \begin{scope}[x={(image.south east)},y={(image.north west)}]
-        \draw[color=red] (0, 0) circle (0.1);
-        \draw[color=green] (1.0, 1.0) circle (0.1);
-        \draw[color=blue] (0.1, 0.5) circle (0.1);
-        \node[color=red] (hello) at (0.5, 0.5) {HELLO};
-    \end{scope}
-\end{tikzpicture}
+\draw[color=white, fill=white] (-0.2,0) rectangle (0,1);
+\node[anchor=east] (y-label) at (0.14, 0.9)
+    {$\expect{p(\theta \vert \x, \w)}{\theta}$};
+\onslide<2->{
+    \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
+}
+\onslide<3->{
+    \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
+        node[above, black, fill opacity=0, text opacity=1]
+        {\small $\expect{p(\theta \vert \x)}{\theta}$};
+}
 \end{lstlisting}
 
