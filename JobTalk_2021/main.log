@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 DEC 2021 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  6 DEC 2021 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1692,122 +1692,56 @@ Package natbib Warning: Citation `giordano2019higherorder' on page 32 undefined
 
 ] [38
 
-] [39
+]
+Overfull \vbox (14.2518pt too high) detected at line 322
+ []
+
+[39
 
 ]) [40
 
 ] (./determination.tex
+Overfull \hbox (24.026pt too wide) detected at line 41
+[]
+ []
+
 
 Package natbib Warning: Citation `hampel1986robustbook' on page 41 undefined on
- input line 51.
+ input line 41.
 
-<static_figures/simple_infl_example.png, id=248, 361.35pt x 252.945pt>
-File: static_figures/simple_infl_example.png Graphic file (type png)
-<use static_figures/simple_infl_example.png>
-Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
-line 51.
-(pdftex.def)             Requested size: 255.97318pt x 179.18307pt.
 
-Overfull \vbox (24.96884pt too high) detected at line 51
+Overfull \vbox (5.55368pt too high) detected at line 41
  []
 
 [41
 
- <./static_figures/simple_infl_example.png (PNG copy)>]
+]
 
 Package natbib Warning: Citation `hampel1986robustbook' on page 42 undefined on
- input line 51.
+ input line 98.
 
+<static_figures/simple_infl_example.png, id=256, 361.35pt x 252.945pt>
 File: static_figures/simple_infl_example.png Graphic file (type png)
 <use static_figures/simple_infl_example.png>
 Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
-line 51.
+line 98.
 (pdftex.def)             Requested size: 255.97318pt x 179.18307pt.
 
-Overfull \vbox (24.96884pt too high) detected at line 51
+Overfull \vbox (26.97282pt too high) detected at line 98
  []
 
 [42
 
-]
+ <./static_figures/simple_infl_example.png (PNG copy)>] [43
 
-Package natbib Warning: Citation `hampel1986robustbook' on page 43 undefined on
- input line 51.
+] [44
 
-File: static_figures/simple_infl_example.png Graphic file (type png)
-<use static_figures/simple_infl_example.png>
-Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
-line 51.
-(pdftex.def)             Requested size: 255.97318pt x 179.18307pt.
-
-Overfull \vbox (24.96884pt too high) detected at line 51
- []
-
-[43
+] [45
 
 ]
-
-Package natbib Warning: Citation `hampel1986robustbook' on page 44 undefined on
- input line 51.
-
-File: static_figures/simple_infl_example.png Graphic file (type png)
-<use static_figures/simple_infl_example.png>
-Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
-line 51.
-(pdftex.def)             Requested size: 255.97318pt x 179.18307pt.
-
-Overfull \vbox (24.96884pt too high) detected at line 51
- []
-
-[44
-
-]
-
-Package natbib Warning: Citation `hampel1986robustbook' on page 45 undefined on
- input line 51.
-
-File: static_figures/simple_infl_example.png Graphic file (type png)
-<use static_figures/simple_infl_example.png>
-Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
-line 51.
-(pdftex.def)             Requested size: 255.97318pt x 179.18307pt.
-
-Overfull \vbox (24.96884pt too high) detected at line 51
- []
-
-[45
-
-]
-
-Package natbib Warning: Citation `hampel1986robustbook' on page 46 undefined on
- input line 51.
-
-File: static_figures/simple_infl_example.png Graphic file (type png)
-<use static_figures/simple_infl_example.png>
-Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
-line 51.
-(pdftex.def)             Requested size: 255.97318pt x 179.18307pt.
-
-Overfull \vbox (24.96884pt too high) detected at line 51
- []
-
 [46
 
-]
-
-Package natbib Warning: Citation `hampel1986robustbook' on page 47 undefined on
- input line 51.
-
-File: static_figures/simple_infl_example.png Graphic file (type png)
-<use static_figures/simple_infl_example.png>
-Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
-line 51.
-(pdftex.def)             Requested size: 255.97318pt x 179.18307pt.
-
-Overfull \vbox (24.96884pt too high) detected at line 51
- []
-
-[47
+] [47
 
 ] [48
 
@@ -1815,43 +1749,31 @@ Overfull \vbox (24.96884pt too high) detected at line 51
 
 ] [50
 
-] [51
+]) [51
 
-] [52
+] (./accuracy.tex [52
 
-] [53
+]) (./conclusion.tex [53
 
-] [54
+]
+[54
 
 ] [55
 
-] [56
-
-] [57
-
-] [58
-
-]) (./conclusion.tex
-[59
-
-] [60
-
-] [61
-
 ]
 
-Package natbib Warning: Citation `meager2020aggregating' on page 62 undefined o
+Package natbib Warning: Citation `meager2020aggregating' on page 56 undefined o
 n input line 78.
 
 
-Package natbib Warning: Citation `angelucci2009indirect' on page 62 undefined o
+Package natbib Warning: Citation `angelucci2009indirect' on page 56 undefined o
 n input line 78.
 
 
-Package natbib Warning: Citation `finkelstein2012oregon' on page 62 undefined o
+Package natbib Warning: Citation `finkelstein2012oregon' on page 56 undefined o
 n input line 78.
 
-(./main.bbl) [62
+(./main.bbl) [56
 
 ])
 \tf@nav=\write6
@@ -1867,27 +1789,27 @@ n input line 78.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
 (./main.aux
 
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38144 strings out of 483065
- 911952 string characters out of 5963550
- 1314879 words of memory out of 5000000
- 52211 multiletter control sequences out of 15000+600000
+ 38138 strings out of 483065
+ 911888 string characters out of 5963550
+ 1315916 words of memory out of 5000000
+ 52215 multiletter control sequences out of 15000+600000
  547463 words of font info for 80 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 71i,14n,103p,1836b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,17n,103p,1836b,974s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss1000.
 600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></
@@ -1907,14 +1829,17 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmtt8.pfb>
-Output written on main.pdf (62 pages, 1212461 bytes).
+ts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+am10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb>
+Output written on main.pdf (56 pages, 1219901 bytes).
 PDF statistics:
- 487 PDF objects out of 1000 (max. 8388607)
- 382 compressed objects within 4 object streams
- 131 named destinations out of 1000 (max. 500000)
+ 466 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
