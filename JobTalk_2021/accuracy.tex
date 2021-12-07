@@ -131,7 +131,7 @@ Let $W_\alpha$ be the set of weight vectors with no more than $\lfloor \alpha N
 Let $H(\theta, \d_n) := \fracat{\partial G(\theta, \d_n)}{\partial
 \theta^T}{\theta}$.
 
-\begin{assu}
+\begin{assu}[Smooth Objective]\assulabel{smooth}
 Fix the dataset.
 Assume there exists a compact $\thetadom \subseteq \mathbb{R}^D$
 with $\thetahat(\w) \in \thetadom$ for all $\w \in W_\alpha$.
@@ -146,10 +146,51 @@ Assume that, for all $\theta \in \thetadom$:
 %
 \end{assu}
 
+\begin{center}
+\begin{tikzpicture}
+    \draw[black, ->] (0,0) -- ++(0, 2.5);
+    \draw[black, ->] (0,0) -- ++(0.5 * \textwidth, 0);
+    \node[left] at (0, 2.3)
+        {$\meann F(\theta, \d_n)$};
+    \node[right] at (0.5 * \textwidth, 0) {$\theta$};
+    \draw[fill=black, fill opacity=0.2, draw opacity=0]
+        (0.1 * \textwidth, 0) rectangle ++(0.2 \textwidth, 2.5);
+    \node[above] at (0.15 \textwidth, 0)
+        {$\thetadom$};
+    \node at (0.2 * \textwidth, 2.3) [circle,fill,inner sep=1pt]{};
+    % \draw (0,0.9) .. controls
+    %     (0.1 \textwidth, 2.0) and
+    %     (0.2 \textwidth, 2.0) and
+    %     (0.3 \textwidth, 0.8) and
+    %     (0.4 \textwidth, 0.5) and
+    %     .. (0.5 \textwidth, 1.2);
+    \draw [black] plot [smooth, tension=0.6]
+        coordinates {
+            (0, 0.1)
+            (0.1 * \textwidth, 1.9)
+            (0.2 * \textwidth, 2.3)
+            (0.3 * \textwidth, 1.9)
+            % (0.3 * \textwidth, 1.6)
+            (0.4 * \textwidth, 0.6)
+            (0.5 * \textwidth, 0.8)
+            };
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{The linear approximation.}
+
 %
-\begin{theorem}
+\begin{theorem}\thmlabel{accurate}
 %
-For sufficiently small $\alpha$, under the above assumption,
+Let \assuref{smooth} hold for a given dataset.
+Then there exists a sufficiently small $\alpha$ such that
 %
 \begin{align*}
 %
@@ -163,5 +204,15 @@ For sufficiently small $\alpha$, under the above assumption,
 where $C_1$ and $C_2$ are given by the quantities in the assumption.
 %
 \end{theorem}
+
+Since $\alpha \ll \sqrt{\alpha}$ when $\alpha$ is small, \thmref{accurate}
+states that the linear approximation's error is of smaller order than the actual
+difference.
+
+\begin{cor}
+Under standard conditions, \assuref{smooth} holds for fixed constants with
+probability approaching one. Then \thmref{accurate} applies with probability
+approaching one.
+\end{cor}
 
 \end{frame}
