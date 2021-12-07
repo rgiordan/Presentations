@@ -125,55 +125,43 @@ Controlling higher-order derivatives can control the error.
 
 \begin{frame}{The linear approximation.}
 %
-
-\begin{assu}[(\citet{giordano:2019:swiss}, Assumptions 1-4)]
-    \assulabel{ij_assu}
-%
 Let $W_\alpha$ be the set of weight vectors with no more than $\lfloor \alpha N
-\rfloor$ zeros as given by \eqref{w_alpha_def}.   Assume there exists a compact
-domain $\thetadom \subseteq \mathbb{R}^D$ containing $\thetahat(\w)$ for all $\w
-\in W_\alpha$, such that
+\rfloor$ zeros.
+
+Let $H(\theta, \d_n) := \fracat{\partial G(\theta, \d_n)}{\partial
+\theta^T}{\theta}$.
+
+\begin{assu}
+Fix the dataset.
+Assume there exists a compact $\thetadom \subseteq \mathbb{R}^D$
+with $\thetahat(\w) \in \thetadom$ for all $\w \in W_\alpha$.
+Assume that, for all $\theta \in \thetadom$:
 %
-\begin{enumerate}
-    %
-    \item For all $\theta \in \thetadom$ and all $n$, $\theta \mapsto G(\theta,
-    d_n)$ is continuously differentiable with derivative
-    %
-    \begin{align*}
-    %
-    \fracat{\partial G(\theta, \d_n)}{\partial \theta^T}{\theta}
-    =: H(\theta, \d_n).
-    %
-    \end{align*}
-    %
-    \sloppy \item For all $\theta \in \thetadom$, there exists $\cop < \infty$
-    such that
-    %
-    $\sup_{\theta \in \thetadom}\vnorm{\meann H(\theta, d_n)}_{op} \le \cop$.
-    %
-    \sloppy \item There exists a constant $\cgh < \infty$ such that
-    %
-    \begin{align*}
-    %
-    \sup_{\theta \in \thetadom}
-        \max\left\{\meann \vnorm{G(\theta, \d_n)}_2^2,
-              \meann \vnorm{H(\theta, \d_n)}_2^2 \right\} \le \cgh^2.
-    %
-    \end{align*}
-    %
-    \item There exists a $\Delta_\theta$ and an $\lh < \infty$ such that
-    %
-    \begin{align*}
-    %
-    \sup_{\theta: \vnorm{\theta - \thetahat}_2 \le \Delta_\theta}
-    \meann \vnorm{H(\theta, \d_n) - H(\thetahat, \d_n)}_2^2 /
-         \vnorm{\theta - \thetahat}_2^2
-    \le \lh^2.
-    %
-    \end{align*}
-    %
-\end{enumerate}
+\begin{itemize}
+    \item $\meann H(\theta, \d_n)$ and $\meann G(\theta, \d_n)$ are bounded.
+    \item $\meann H(\theta, \d_n)$ is uniformly non-singular and
+    Lipschitz (in $\theta$).
+    \item $\thetafun(\theta)$ has a Lipschitz first derivative.
+\end{itemize}
 %
 \end{assu}
+
 %
+\begin{theorem}
+%
+For sufficiently small $\alpha$, under the above assumption,
+%
+\begin{align*}
+%
+\sup_{\w \in W_\alpha} \abs{\thetafunlin(\w) - \thetafun(\thetahat(\w))}
+    \le{}& C_1 \alpha \textrm{ and }
+\sup_{\w \in W_\alpha} \abs{\thetafun(\thetahat(\w)) - \thetafun(\thetahat)}
+    \le{} C_2 \sqrt{\alpha}.
+%
+\end{align*}
+%
+where $C_1$ and $C_2$ are given by the quantities in the assumption.
+%
+\end{theorem}
+
 \end{frame}
