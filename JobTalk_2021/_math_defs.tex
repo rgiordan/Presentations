@@ -32,6 +32,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Ryan's math defs
 
+\def\expect#1#2{\mathbb{E}_{#1}\left[#2\right]}%
+
+\def\thetadom{\Omega_\theta}
+
+\global\long\def\cop{C_{op}}%
+\global\long\def\cmoment{H_2}%
+\global\long\def\cxxlo{\xi_1}%
+\global\long\def\cxepslo{\xi_2}%
+\global\long\def\cball{\mathscr{B}}%
+\global\long\def\cijdiff{\Delta_{lin}}%
+\global\long\def\copscaled{\tilde{C}_{op}}%
+\global\long\def\cgh{C_{gh}}%
+\global\long\def\lh{L_{h}}%
+\global\long\def\cij{C_{IJ}}%
+
 
 % \norm was taken, so use \vnorm for "vector norm".
 \global\long\def\info{\mathcal{I}}%
@@ -88,7 +103,7 @@
 % Operators
 \def\sumn{\sum_{n=1}^N}
 \def\meann{\frac{1}{N}\sum_{n=1}^N}
-\def\var#1{\mathrm{Var}\left(#1\right)}
+\def\var#1#2{\underset{#1}{\mathrm{Var}}\left(#2\right)}
 \def\vnorm#1{\left\Vert #1\right\Vert }%
 \def\falphanorm#1#2{\left\Vert #2\right\Vert_{#1, \alpha} }%
 \def\at#1#2{\left.#1\right|_{#2}}%

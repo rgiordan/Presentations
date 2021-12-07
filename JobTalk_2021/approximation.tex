@@ -5,8 +5,6 @@
 
 \begin{frame}[t]{Which estimators do we study?}
 
-We study  ``Z-estimators,'' i.e., roots of estimating equations.
-
 Suppose we have $N$ data points $\d_{1}, \ldots, \d_{N}$.  Then:
 %
 \begin{align*}
@@ -19,10 +17,14 @@ G(\vec\theta, \d_{n}) =  \zP .
 %
 \end{align*}
 %
-Examples: all minimizers of empirical loss (OLS, MLE, VB), and more.
-
-\onslide<2->{
+\onslide<1->{
 Leave points out by setting their elements of $\w$ to zero.
+}
+
+\onslide<1->{
+These are ``Z-estimators,'' i.e., roots of estimating equations.
+
+Examples: all minimizers of empirical loss (OLS, MLE, VB), and more.
 }
 
 
@@ -48,7 +50,9 @@ Suppose we have $N$ data points $\d_{1}, \ldots, \d_{N}$.  Then:
 %
 \end{align*}
 %
+{
 Leave points out by setting their elements of $\w$ to zero.
+}
 
 \onslide<2->{
 \hrulefill

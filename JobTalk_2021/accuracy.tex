@@ -14,3 +14,166 @@
 \end{itemize}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{The linear approximation.}
+%
+%Suppose we have $N$ data points $\d_{1}, \ldots, \d_{N}$.  Then:
+%
+% \begin{align*}
+% %
+% \thetahat(\w) :=
+% \vec\theta \,\, \textrm{ such that } \,\,
+% \sumn
+% \w_{n} G(\vec\theta, \d_{n}) =  \zP .
+% %
+% \end{align*}
+
+\begin{minipage}{0.49\textwidth}
+    \onslide<1-> {
+    Original weights: \par
+    \includegraphics[width=0.68\textwidth]{static_figures/orig_weights}
+    }
+    \onslide<1-> {
+    \par Leave-one-out weights: \par
+    \includegraphics[width=0.68\textwidth]{static_figures/weights_loo}
+    }
+    \onslide<1-> {
+    \par Bootstrap weights: \par
+    \includegraphics[width=0.68\textwidth]{static_figures/boot_weights}
+    }
+\end{minipage}
+%\onslide<1->{
+\begin{minipage}{0.49\textwidth}
+    % https://www.overleaf.com/learn/latex/TikZ_package
+    % https://latexdraw.com/how-to-annotate-an-image-in-latex/
+    % https://tex.stackexchange.com/questions/9559/drawing-on-an-image-with-tikz
+    \begin{tikzpicture}
+        \onslide<1-> {
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {
+            %\includegraphics[width=0.98\textwidth]{static_figures/weight_slope}
+            \includegraphics[width=0.98\textwidth]{static_figures/e_beta_w}
+        };
+        % \onslide<5-> {
+        % \begin{scope}[x={(image.south east)},y={(image.north west)}]
+        %     \draw[] (0.2,0.5)
+        %             node[above,black,fill=white]
+        %             {\small $\expect{p(\theta \vert \x, \w)}{\theta}$};
+        % \end{scope}
+        % }
+        }
+        \onslide<1->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
+                    node[above,black,fill=white]
+                    {\small $\thetafun(\thetahat)$};
+        \end{scope}
+        }
+        \onslide<1->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[blue, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
+                    node[left,black,fill=white]
+                    {\small $\thetafun(\thetahat(\w))$};
+        \end{scope}
+        }
+        \onslide<1->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
+        \end{scope}
+        }
+        \onslide<1->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[blue, thick, <-] (0.8,0.65) -- ++(0.02,-0.1)
+                    node[below,black,fill=white]
+                    {\small Slope $ = \infl_n$};
+        \end{scope}
+        }
+    \end{tikzpicture}
+%}
+\end{minipage}
+
+%
+\begin{align*}
+%
+\thetafun(\thetahat(\w)) ={}&
+\thetafun(\thetahat) + \sumn \infl_n (\w_n - 1) +
+\textrm{Higher-order derivatives}
+% \\
+% \var{\w \sim \mathrm{Boot}}{\sqrt{N} \thetafun(\thetahat(\w))} \approx{}&
+% \var{\w \sim \mathrm{Boot}}{\sumn \sqrt{N} \infl_n (\w_n - 1)} =
+% \sumn N \infl_n^2 = \noise^2.
+%
+\end{align*}
+%
+\onslide<1->{
+\vspace{-0.5em}
+\textbf{Key idea: }
+Controlling higher-order derivatives can control the error.
+}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{The linear approximation.}
+%
+
+\begin{assu}[(\citet{giordano:2019:swiss}, Assumptions 1-4)]
+    \assulabel{ij_assu}
+%
+Let $W_\alpha$ be the set of weight vectors with no more than $\lfloor \alpha N
+\rfloor$ zeros as given by \eqref{w_alpha_def}.   Assume there exists a compact
+domain $\thetadom \subseteq \mathbb{R}^D$ containing $\thetahat(\w)$ for all $\w
+\in W_\alpha$, such that
+%
+\begin{enumerate}
+    %
+    \item For all $\theta \in \thetadom$ and all $n$, $\theta \mapsto G(\theta,
+    d_n)$ is continuously differentiable with derivative
+    %
+    \begin{align*}
+    %
+    \fracat{\partial G(\theta, \d_n)}{\partial \theta^T}{\theta}
+    =: H(\theta, \d_n).
+    %
+    \end{align*}
+    %
+    \sloppy \item For all $\theta \in \thetadom$, there exists $\cop < \infty$
+    such that
+    %
+    $\sup_{\theta \in \thetadom}\vnorm{\meann H(\theta, d_n)}_{op} \le \cop$.
+    %
+    \sloppy \item There exists a constant $\cgh < \infty$ such that
+    %
+    \begin{align*}
+    %
+    \sup_{\theta \in \thetadom}
+        \max\left\{\meann \vnorm{G(\theta, \d_n)}_2^2,
+              \meann \vnorm{H(\theta, \d_n)}_2^2 \right\} \le \cgh^2.
+    %
+    \end{align*}
+    %
+    \item There exists a $\Delta_\theta$ and an $\lh < \infty$ such that
+    %
+    \begin{align*}
+    %
+    \sup_{\theta: \vnorm{\theta - \thetahat}_2 \le \Delta_\theta}
+    \meann \vnorm{H(\theta, \d_n) - H(\thetahat, \d_n)}_2^2 /
+         \vnorm{\theta - \thetahat}_2^2
+    \le \lh^2.
+    %
+    \end{align*}
+    %
+\end{enumerate}
+%
+\end{assu}
+%
+\end{frame}
