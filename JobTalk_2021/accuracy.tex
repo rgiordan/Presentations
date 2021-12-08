@@ -179,13 +179,12 @@ Assume that, for all $\theta \in \thetadom$:
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{The linear approximation.}
-
 %
 \begin{theorem}\thmlabel{accurate}
 %
@@ -209,10 +208,50 @@ Since $\alpha \ll \sqrt{\alpha}$ when $\alpha$ is small, \thmref{accurate}
 states that the linear approximation's error is of smaller order than the actual
 difference.
 
+\vspace{1em}
+
 \begin{cor}
 Under standard conditions, \assuref{smooth} holds for fixed constants with
 probability approaching one. Then \thmref{accurate} applies with probability
 approaching one.
 \end{cor}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The linear approximation.}
+
+For $N=\SimNumObs$ data points, compute the OLS estimator from:
+%
+% \begin{itemize}
+%     \item Regressors $x_n \sim \mathcal{N}(0, \sigma_x^2)$
+%     \item Residuals $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$
+%     \item Responses $y_n = \theta_0 x_n + \varepsilon_n$.
+% \end{itemize}
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{YYY}
+%\begin{tabular}{ccc}
+    Regressors  &   Residuals   &   Responses \\
+    $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
+    $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
+    $y_n = \theta_0 x_n + \varepsilon_n$
+\end{tabularx}
+%
+% \begin{align*}
+% %
+% \textrm{Regressors }x_n \sim \mathcal{N}(0, \sigma_x^2)\quad
+% \textrm{Residuals }\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)\quad
+% \textrm{Responses }y_n = \theta_0 x_n + \varepsilon_n
+% %
+% \end{align*}
+%
+
+\SimApproxNormalGraph{}
 
 \end{frame}

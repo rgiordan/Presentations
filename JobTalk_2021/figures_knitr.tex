@@ -309,62 +309,33 @@ $\log \sigma_{\tau_{+}}$  &  -3.100 &  Drop 0.5\% to increase &  -1.095 &  -1.20
 %%%%%%%%%%%%%%%%%%%%%%
 % Graphs
 
-%%%%%%%%%%%%%%%%%%%
-% Simulations
 
-%
-% \newcommand{\SimGridNormalGraph}{
-% <<sim_graphics_cap2>>=
-% figcap <- paste0(
-%     "Simulation results for linear regression at differing scales of $\\sigma_x$ ",
-%     "and $\\sigma_\\epsilon$. A darker red colour indicates a highly sensitive ",
-%     "analysis, in which only a small proportion of the sample needs to be ",
-%     "removed to effect a change of sign. A lighter red colour indicates ",
-%     "greater robustness. The grey areas indicate ",
-%     "$\\amip{\\alpha} = \\na$, a failure of the linear approximation to ",
-%     "locate any way to effect these changes.")
-% SetImageSize(aspect_ratio=base_aspect_ratio / 2.2)
-% @
-% <<sim-grid-normal, cache=sim_cache, fig.show='hold', fig.cap=figcap>>=
-% source("figures_knitr/simulations/grid_results.R",
-%        echo=knitr_debug, print.eval=TRUE)
-% SetFullImageSize()
-% @
-% }
-
-
-%
-%
-% \newcommand{\SimAccuracyNormalGraph}{
-% <<sim_graphics_cap3>>=
-% figcap <- paste0(
-%     "Simulation results for linear regression at differing scales of $\\sigma_x$ ",
-%     "and $\\sigma_\\epsilon$. A darker red colour indicates a highly sensitive ",
-%     "analysis, in which only a small proportion of the sample needs to be ",
-%     "removed to effect a change of sign. A lighter red colour indicates ",
-%     "greater robustness. The grey areas indicate ",
-%     "$\\amip{\\alpha} = \\na$, a failure of the linear approximation to ",
-%     "locate any way to effect these changes.")
-% SetImageSize(aspect_ratio=base_aspect_ratio / 2.2)
-% @
-% <<sim-acc-normal, cache=sim_cache, fig.show='hold', fig.cap=figcap>>=
-% source("figures_knitr/simulations/accuracy_results.R",
-%        echo=knitr_debug, print.eval=TRUE)
-% SetFullImageSize()
-% @
-% }
-
-
-\newcommand{\SimCombNormalGraph}{
+\newcommand{\SimApproxNormalGraph}{
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
 
-{\centering \includegraphics[width=0.98\linewidth,height=0.524\linewidth]{figure/sim-comb-normal-1} 
+{\centering \includegraphics[width=0.98\linewidth,height=0.461\linewidth]{figure/sim-approx-normal-1} 
 
 }
 
-\caption{Simulation results for univariate linear regression with $N = \SimAccNumObs$ observations.  \textbf{Left panel:}  The approximate perturbation inducing proportion at differing values of $\sigma_x$ and $\sigma_\varepsilon$. Red colors indicate datasets whose sign can is predicted to change when dropping less than 1\% of datapoints. The grey areas indicate $\amip{\alpha} = \na$, a failure of the linear approximation to locate any way to change the sign.  \textbf{Right panel:}  The actual change, linear approximation to the change, and approximation error for $\sigma_x = \SimAccSigx$ and $\sigma_\varepsilon = \SimAccSigeps$.}\label{fig:sim-comb-normal}
+\caption[The actual change, linear approximation to the change, and approximation error.Here, $\sigma_x = \SimAccSigx$, $\sigma_\varepsilon = \SimAccSigeps$, and $\theta_0 = \SimTrueTheta$]{The actual change, linear approximation to the change, and approximation error.Here, $\sigma_x = \SimAccSigx$, $\sigma_\varepsilon = \SimAccSigeps$, and $\theta_0 = \SimTrueTheta$.}\label{fig:sim-approx-normal}
+\end{figure}
+
+
+\end{knitrout}
+}
+
+\newcommand{\SimGridNormalGraph}{
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.314\linewidth]{figure/sim-grid-normal-1} 
+
+}
+
+\caption{Simulation results for univariate linear regression with $N = \SimAccNumObs$ observations.  \textbf{Left panel:}  The approximate perturbation inducing proportion at differing values of $\sigma_x$ and $\sigma_\varepsilon$. Red colors indicate datasets whose sign can is predicted to change when dropping less than 1\% of datapoints. The grey areas indicate $\amip{\alpha} = \na$, a failure of the linear approximation to locate any way to change the sign.  \textbf{Right panel:}  The actual change, linear approximation to the change, and approximation error for $\sigma_x = \SimAccSigx$ and $\sigma_\varepsilon = \SimAccSigeps$.}\label{fig:sim-grid-normal}
 \end{figure}
 
 

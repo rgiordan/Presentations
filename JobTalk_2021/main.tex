@@ -48,6 +48,11 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 
+% https://tex.stackexchange.com/questions/89166/centering-in-tabularx-and-x-columns
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+
 \usepackage{refstyle}
 \usepackage{varioref} % Use refstyle instead of varioref directly.
 
@@ -55,6 +60,8 @@
 \input{_knitr_header}
 \input{figures_knitr}
 \input{_reference_defs}
+
+\DefineMacros{}
 
 \title{An Automatic Finite-Sample Robustness Metric:
 \\When Can Dropping a Little Data Make a Big Difference?}
