@@ -29,12 +29,16 @@ base_df <-
         study_case, levels=cash_levels, labels=cash_labels))
 
 
-table_df <- FormatRefitTable(results_df, base_df)
+table_df <-
+  FormatRefitTable(results_df, base_df) %>%
+  filter(study_case %in% c("Non-poor, period 10", "Poor, period 10")) %>%
+  mutate(study_case=ordered(study_case))
 
 RenderLatexTable(
     table_df,
     label="cash_transfers_re_run_table",
+    fontsize="\\tiny",
     caption=paste0(
-        "Cash transfers results for various periods and treatment groups. ",
+        "Cash transfers results for the final study period. ",
         GetTableCaptionBoilerplate())
 )

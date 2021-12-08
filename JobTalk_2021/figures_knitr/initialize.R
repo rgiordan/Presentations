@@ -9,12 +9,16 @@ library(zaminfluence)
 library(stargazer)
 
 # This must be run from within the git repo, obviously.
-#git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
-# Load from the paper's repo.
-git_repo_loc <- "/home/rgiordan/Documents/git_repos/AdversarialInfluenceWorkbench/"
-paper_directory <- file.path(git_repo_loc, "writing/output/")
-data_path <- file.path(paper_directory, "applications_data")
+git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
+# git_repo_loc <- "/home/rgiordan/Documents/git_repos/Presentations"
+paper_directory <- file.path(git_repo_loc, "JobTalk_2021")
 source(file.path(paper_directory, "figures_knitr", "table_formatting_lib.R"))
+
+# Load data from the paper's repo.
+data_path <- file.path(
+  "/home/rgiordan/Documents/git_repos/AdversarialInfluenceWorkbench/",
+  "writing/output/",
+  "applications_data")
 
 # Set some figure defaults.
 # opts_chunk$set(fig.width=4.9, fig.height=3)

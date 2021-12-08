@@ -47,51 +47,51 @@ source("figures_knitr/cash_transfers/cash_transfers_results_table.R",
 %%%%%%%%%%%%%%%%%%%
 % OHIE
 
-\newcommand{\OHIEResultsTable}{
-% \input{figures/OHIE_table_9_IV_re_run_table.tex}
-<<OHIE_results_table, cache=ohie_cache, results='asis'>>=
-source("figures_knitr/OHIE/OHIE-table_results.R",
-       echo=knitr_debug, print.eval=TRUE)
-@
-}
+% \newcommand{\OHIEResultsTable}{
+% % \input{figures/OHIE_table_9_IV_re_run_table.tex}
+% <<OHIE_results_table, cache=ohie_cache, results='asis'>>=
+% source("figures_knitr/OHIE/OHIE-table_results.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
 
 
 %%%%%%%%%%%%%%%%%%%
 % Microcredit
-
-\newcommand{\MicrocreditProfitResultsTable}{
-% \input{figures/microcredit_profit_re_run_table.tex}
-<<microcredit_profit_results_table, cache=microcredit_cache, results='asis'>>=
-source("figures_knitr/microcredit/microcredit_profit_results_table.R",
-       echo=knitr_debug, print.eval=TRUE)
-@
-}
-
-
-\newcommand{\MicrocreditTemptationResultsTable}{
-% \input{figures/microcredit_profit_re_run_table.tex}
-<<microcredit_temptation_results_table, cache=microcredit_cache, results='asis'>>=
-source("figures_knitr/microcredit/microcredit_temptation_results_table.R",
-       echo=knitr_debug, print.eval=TRUE)
-@
-}
+%
+% \newcommand{\MicrocreditProfitResultsTable}{
+% % \input{figures/microcredit_profit_re_run_table.tex}
+% <<microcredit_profit_results_table, cache=microcredit_cache, results='asis'>>=
+% source("figures_knitr/microcredit/microcredit_profit_results_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+%
+%
+% \newcommand{\MicrocreditTemptationResultsTable}{
+% % \input{figures/microcredit_profit_re_run_table.tex}
+% <<microcredit_temptation_results_table, cache=microcredit_cache, results='asis'>>=
+% source("figures_knitr/microcredit/microcredit_temptation_results_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
 
 %%%%%%%%%%%%%%%%%%%
 % Microcredit mixture
-
-\newcommand{\MicrocreditMixtureResultsTable}{
-<<mcmix_re_run_table, cache=mcmix_cache, results='asis'>>=
-source("figures_knitr/microcredit_mixture/microcredit_mix_refit_table.R",
-       echo=knitr_debug, print.eval=TRUE)
-@
-}
-
-\newcommand{\MicrocreditMixtureSdResultsTable}{
-<<mcmix_sd_re_run_table, cache=mcmix_cache, results='asis'>>=
-source("figures_knitr/microcredit_mixture/microcredit_mix_sd_refit_table.R",
-       echo=knitr_debug, print.eval=TRUE)
-@
-}
+%
+% \newcommand{\MicrocreditMixtureResultsTable}{
+% <<mcmix_re_run_table, cache=mcmix_cache, results='asis'>>=
+% source("figures_knitr/microcredit_mixture/microcredit_mix_refit_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+%
+% \newcommand{\MicrocreditMixtureSdResultsTable}{
+% <<mcmix_sd_re_run_table, cache=mcmix_cache, results='asis'>>=
+% source("figures_knitr/microcredit_mixture/microcredit_mix_sd_refit_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
 
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
