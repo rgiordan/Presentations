@@ -184,7 +184,7 @@ Assume that, for all $\theta \in \thetadom$:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{The linear approximation.}
+\begin{frame}[t]{The linear approximation.}
 %
 \begin{theorem}\thmlabel{accurate}
 %
@@ -196,7 +196,7 @@ Then there exists a sufficiently small $\alpha$ such that
 \sup_{\w \in W_\alpha} \abs{\thetafunlin(\w) - \thetafun(\thetahat(\w))}
     \le{}& C_1 \alpha \textrm{ and }
 \sup_{\w \in W_\alpha} \abs{\thetafun(\thetahat(\w)) - \thetafun(\thetahat)}
-    \le{} C_2 \sqrt{\alpha}.
+    \le{} C_2 \sqrt{\alpha},
 %
 \end{align*}
 %
@@ -204,17 +204,33 @@ where $C_1$ and $C_2$ are given by the quantities in the assumption.
 %
 \end{theorem}
 
+\only<2>{
+\vspace{1em}
 Since $\alpha \ll \sqrt{\alpha}$ when $\alpha$ is small, \thmref{accurate}
 states that the linear approximation's error is of smaller order than the actual
 difference.
+}
 
-\vspace{1em}
+\only<3->{
+\begin{proof}[Proof sketch.]
+    % All derivatives can be given by the implicit function theorem.
 
+    The second inequality follows from the smoothness of the objective.
+
+    The first inequality follows from the smoothness of
+    $d \thetahat(\w) / d\w$.
+\end{proof}
+}
+
+\only<4>{
 \begin{cor}
+%
 Under standard conditions, \assuref{smooth} holds for fixed constants with
-probability approaching one. Then \thmref{accurate} applies with probability
-approaching one.
+probability approaching one for $N \rightarrow \infty$. Then \thmref{accurate}
+applies with probability approaching one as $N \rightarrow \infty$.
+%
 \end{cor}
+}
 
 \end{frame}
 
@@ -227,12 +243,6 @@ approaching one.
 \begin{frame}{The linear approximation.}
 
 For $N=\SimNumObs$ data points, compute the OLS estimator from:
-%
-% \begin{itemize}
-%     \item Regressors $x_n \sim \mathcal{N}(0, \sigma_x^2)$
-%     \item Residuals $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$
-%     \item Responses $y_n = \theta_0 x_n + \varepsilon_n$.
-% \end{itemize}
 
 \vspace{1em}
 \begin{tabularx}{\textwidth}{YYY}
@@ -243,15 +253,32 @@ For $N=\SimNumObs$ data points, compute the OLS estimator from:
     $y_n = \theta_0 x_n + \varepsilon_n$
 \end{tabularx}
 %
-% \begin{align*}
-% %
-% \textrm{Regressors }x_n \sim \mathcal{N}(0, \sigma_x^2)\quad
-% \textrm{Residuals }\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)\quad
-% \textrm{Responses }y_n = \theta_0 x_n + \varepsilon_n
-% %
-% \end{align*}
-%
 
 \SimApproxNormalGraph{}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The linear approximation.}
+
+For $N=\SimNumObs$ data points, compute the OLS estimator from:
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{YYY}
+%\begin{tabular}{ccc}
+    Regressors  &   Residuals   &   Responses \\
+    $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
+    $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
+    $y_n = \theta_0 x_n + \varepsilon_n$
+\end{tabularx}
+%
+
+\SimGridNormalGraph{}
 
 \end{frame}

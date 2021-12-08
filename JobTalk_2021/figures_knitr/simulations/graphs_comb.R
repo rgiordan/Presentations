@@ -38,7 +38,7 @@ plot1 <- ggplot(results_long %>% filter(metric == "prop_drop")) +
                        name=NULL,
                        guide = 'none',
                        values=c(4)) +
-    theme(legend.position="bottom", legend.box="vertical") +
+    # theme(legend.position="bottom", legend.box="vertical") +
     geom_text(aes(x=25, y=4.5),
               label="Linearity assumption suspect\nfor changes > 10%")
 
@@ -50,7 +50,7 @@ plot2 <- ggplot(accuracy_results_df) +
    geom_line(aes(x=100 * prop_drop, y=diff_pred, color="lin")) +
    geom_line(aes(x=100 * prop_drop, y=diff_true, color="refit")) +
    xlab("Percent dropped") + ylab("Estimate") +
-   theme(legend.position = "bottom") +
+   # theme(legend.position = "bottom") +
    scale_color_discrete(
      name=NULL,
      breaks=c("refit", "lin", "err"),
