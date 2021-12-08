@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  7 DEC 2021 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  8 DEC 2021 05:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1308,22 +1308,22 @@ tim
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1383,7 +1383,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box88
-Package hyperref Info: Link coloring OFF on input line 74.
+Package hyperref Info: Link coloring OFF on input line 73.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1397,66 +1397,66 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 \c@section@level=\count371
 LaTeX Info: Redefining \Ref on input line 520.
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 74.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 73.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 74.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 73.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 74.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 74.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 74.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 74.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 74.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 74.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 74.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 74.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 74.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 74.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 74.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 73.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 74.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 73.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 74.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 74.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 74.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 74.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 74.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 74.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 74.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 73.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 73.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 7
-4.
+3.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 7
-4.
+3.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 74.
+ut line 73.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1489,34 +1489,30 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.13).
 
 (./main.nav)
-Overfull \hbox (74.602pt too wide) in paragraph at lines 74--74
- [][][][] []  
- []
-
 <collaborators/ryan.jpg, id=16, 686.565pt x 833.1125pt>
 File: collaborators/ryan.jpg Graphic file (type jpg)
 <use collaborators/ryan.jpg>
-Package pdftex.def Info: collaborators/ryan.jpg  used on input line 112.
+Package pdftex.def Info: collaborators/ryan.jpg  used on input line 111.
 (pdftex.def)             Requested size: 46.89113pt x 56.9055pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 112
+LaTeX Font Info:    Trying to load font information for U+msa on input line 111
 .
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 112
+LaTeX Font Info:    Trying to load font information for U+msb on input line 111
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
-2.
+1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 112.
+ut line 111.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1525,105 +1521,41 @@ thkerncmss.
 <collaborators/rachael.png, id=17, 484.81125pt x 618.31pt>
 File: collaborators/rachael.png Graphic file (type png)
 <use collaborators/rachael.png>
-Package pdftex.def Info: collaborators/rachael.png  used on input line 112.
+Package pdftex.def Info: collaborators/rachael.png  used on input line 111.
 (pdftex.def)             Requested size: 44.615pt x 56.9055pt.
 <collaborators/tamara.jpg, id=19, 1180.41pt x 1100.11pt>
 File: collaborators/tamara.jpg Graphic file (type jpg)
 <use collaborators/tamara.jpg>
-Package pdftex.def Info: collaborators/tamara.jpg  used on input line 112.
+Package pdftex.def Info: collaborators/tamara.jpg  used on input line 111.
 (pdftex.def)             Requested size: 61.05927pt x 56.9055pt.
-
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./collaborators/ryan.jpg> 
 <./collaborators/rachael.png> <./collaborators/tamara.jpg>]
-(./introduction.tex
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+(./introduction.tex [2
 
-[2
+] [3
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+] [4
 
-[3
+] [5
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+] [6
 
-[4
+] [7
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+] [8
 
-[5
+] [9
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+] [10
 
-[6
+] [11
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+] [12
 
-[7
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[8
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[9
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[10
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[11
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[12
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[13
+] [13
 
 ]
 
@@ -1631,211 +1563,234 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 161.
 
-
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
 [14
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+] [15
 
-[15
+] [16
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+] [17
 
-[16
+] [18
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+] [19
 
-[17
+]) [20
+
+] (./approximation.tex [21
+
+] [22
 
 ]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+<static_figures/adversarial_robustness_example_phi_flipped.png, id=631, 639.388
+75pt x 475.7775pt>
+File: static_figures/adversarial_robustness_example_phi_flipped.png Graphic fil
+e (type png)
+<use static_figures/adversarial_robustness_example_phi_flipped.png>
+Package pdftex.def Info: static_figures/adversarial_robustness_example_phi_flip
+ped.png  used on input line 90.
+(pdftex.def)             Requested size: 131.3651pt x 97.74554pt.
+ [23
 
-[18
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[19
-
-])
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[20
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[21
+ <./static_figures/adversarial_robustness_example_phi_flipped.png>]
+File: static_figures/adversarial_robustness_example_phi_flipped.png Graphic fil
+e (type png)
+<use static_figures/adversarial_robustness_example_phi_flipped.png>
+Package pdftex.def Info: static_figures/adversarial_robustness_example_phi_flip
+ped.png  used on input line 90.
+(pdftex.def)             Requested size: 131.3651pt x 97.74554pt.
+ [24
 
 ]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[22
-
-] (./accuracy.tex
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[23
+File: static_figures/adversarial_robustness_example_phi_flipped.png Graphic fil
+e (type png)
+<use static_figures/adversarial_robustness_example_phi_flipped.png>
+Package pdftex.def Info: static_figures/adversarial_robustness_example_phi_flip
+ped.png  used on input line 90.
+(pdftex.def)             Requested size: 131.3651pt x 97.74554pt.
+ [25
 
 ]
-<static_figures/orig_weights.png, id=655, 455.7025pt x 91.34125pt>
-File: static_figures/orig_weights.png Graphic file (type png)
-<use static_figures/orig_weights.png>
-Package pdftex.def Info: static_figures/orig_weights.png  used on input line 11
-7.
-(pdftex.def)             Requested size: 102.38902pt x 20.52301pt.
-<static_figures/weights_loo.png, id=656, 444.66125pt x 105.39375pt>
-File: static_figures/weights_loo.png Graphic file (type png)
-<use static_figures/weights_loo.png>
-Package pdftex.def Info: static_figures/weights_loo.png  used on input line 117
-.
-(pdftex.def)             Requested size: 102.38902pt x 24.26738pt.
-<static_figures/boot_weights.png, id=657, 452.69125pt x 203.76125pt>
-File: static_figures/boot_weights.png Graphic file (type png)
-<use static_figures/boot_weights.png>
-Package pdftex.def Info: static_figures/boot_weights.png  used on input line 11
-7.
-(pdftex.def)             Requested size: 102.38902pt x 46.0837pt.
-<static_figures/e_beta_w.png, id=658, 903.375pt x 903.375pt>
-File: static_figures/e_beta_w.png Graphic file (type png)
-<use static_figures/e_beta_w.png>
-Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 117.
-(pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
-
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[24
-
- <./static_figures/orig_weights.png> <./static_figures/weights_loo.png> <./stat
-ic_figures/boot_weights.png> <./static_figures/e_beta_w.png>]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[25
+File: static_figures/adversarial_robustness_example_phi_flipped.png Graphic fil
+e (type png)
+<use static_figures/adversarial_robustness_example_phi_flipped.png>
+Package pdftex.def Info: static_figures/adversarial_robustness_example_phi_flip
+ped.png  used on input line 90.
+(pdftex.def)             Requested size: 131.3651pt x 97.74554pt.
+ [26
 
 ]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[26
-
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
 [27
 
-]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[28
+] [28
 
 ]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
+Overfull \hbox (13.50475pt too wide) detected at line 200
+[]
  []
 
 [29
 
 ]
-<figure/sim-approx-normal-1.png, id=851, 614.295pt x 289.08pt>
-File: figure/sim-approx-normal-1.png Graphic file (type png)
-<use figure/sim-approx-normal-1.png>
-Package pdftex.def Info: figure/sim-approx-normal-1.png  used on input line 259
-.
-(pdftex.def)             Requested size: 301.14778pt x 141.65926pt.
-
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
+Overfull \hbox (13.50475pt too wide) detected at line 200
+[]
  []
 
 [30
 
- <./figure/sim-approx-normal-1.png (PNG copy)>]
-<figure/sim-grid-normal-1.png, id=879, 614.295pt x 240.9pt>
-File: figure/sim-grid-normal-1.png Graphic file (type png)
-<use figure/sim-grid-normal-1.png>
-Package pdftex.def Info: figure/sim-grid-normal-1.png  used on input line 284.
-(pdftex.def)             Requested size: 301.14778pt x 117.99791pt.
-
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
+]
+Overfull \hbox (13.50475pt too wide) detected at line 200
+[]
  []
 
 [31
 
- <./figure/sim-grid-normal-1.png (PNG copy)>]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
+]
+Overfull \hbox (13.50475pt too wide) detected at line 200
+[]
  []
 
 [32
 
-])
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+]) [40
+
+] (./determination.tex
+Overfull \hbox (24.026pt too wide) detected at line 41
+[]
  []
 
-[33
-
-] (./conclusion.tex
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
-
-[34
+[41
 
 ]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
- []
+<static_figures/simple_infl_example.png, id=1159, 361.35pt x 252.945pt>
+File: static_figures/simple_infl_example.png Graphic file (type png)
+<use static_figures/simple_infl_example.png>
+Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
+line 98.
+(pdftex.def)             Requested size: 255.97318pt x 179.18307pt.
+ [42
 
-[35
+ <./static_figures/simple_infl_example.png (PNG copy)>] [43
+
+] [44
 
 ]
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
+[45
+
+] [46
+
+] [47
+
+] [48
+
+] [49
+
+] [50
+
+]) [51
+
+] (./accuracy.tex
+<static_figures/orig_weights.png, id=1428, 455.7025pt x 91.34125pt>
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 10
+2.
+(pdftex.def)             Requested size: 102.38902pt x 20.52301pt.
+<static_figures/weights_loo.png, id=1429, 444.66125pt x 105.39375pt>
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 102
+.
+(pdftex.def)             Requested size: 102.38902pt x 24.26738pt.
+<static_figures/boot_weights.png, id=1430, 452.69125pt x 203.76125pt>
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package pdftex.def Info: static_figures/boot_weights.png  used on input line 10
+2.
+(pdftex.def)             Requested size: 102.38902pt x 46.0837pt.
+<static_figures/e_beta_w.png, id=1431, 903.375pt x 903.375pt>
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 102.
+(pdftex.def)             Requested size: 147.56158pt x 147.56172pt.
+ [52
+
+ <./static_figures/orig_weights.png> <./static_figures/weights_loo.png> <./stat
+ic_figures/boot_weights.png> <./static_figures/e_beta_w.png>] [53
+
+] [54
+
+] [55
+
+] [56
+
+] [57
+
+]
+<figure/sim-approx-normal-1.png, id=1614, 614.295pt x 289.08pt>
+File: figure/sim-approx-normal-1.png Graphic file (type png)
+<use figure/sim-approx-normal-1.png>
+Package pdftex.def Info: figure/sim-approx-normal-1.png  used on input line 244
+.
+(pdftex.def)             Requested size: 301.14778pt x 141.65926pt.
+ [58
+
+ <./figure/sim-approx-normal-1.png (PNG copy)>]
+<figure/sim-grid-normal-1.png, id=1642, 614.295pt x 240.9pt>
+File: figure/sim-grid-normal-1.png Graphic file (type png)
+<use figure/sim-grid-normal-1.png>
+Package pdftex.def Info: figure/sim-grid-normal-1.png  used on input line 269.
+(pdftex.def)             Requested size: 301.14778pt x 117.99791pt.
+ [59
+
+ <./figure/sim-grid-normal-1.png (PNG copy)>]
+Overfull \vbox (10.04205pt too high) detected at line 283
  []
 
-[36
+[60
 
-] (./main.bbl)
-Overfull \hbox (74.602pt too wide) has occurred while \output is active
- [][][][] []  
+] [61
+
+]) [62
+
+] (./conclusion.tex [63
+
+] [64
+
+] [65
+
+] [66
+
+]
+Overfull \hbox (22.5694pt too wide) in paragraph at lines 200--200
+[][]  
  []
 
-[37
+[67
+
+] [68
+
+] [69
+
+] [70
+
+] [71
+
+] (./main.bbl) [72
 
 ])
 \tf@nav=\write6
@@ -1847,55 +1802,53 @@ Overfull \hbox (74.602pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 36322 strings out of 483065
- 844101 string characters out of 5963550
- 1216077 words of memory out of 5000000
- 50489 multiletter control sequences out of 15000+600000
+ 36502 strings out of 483065
+ 847386 string characters out of 5963550
+ 1218415 words of memory out of 5000000
+ 50585 multiletter control sequences out of 15000+600000
  549020 words of font info for 86 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 64i,16n,103p,771b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,17n,103p,771b,982s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
->
-Output written on main.pdf (37 pages, 1457047 bytes).
+nts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on main.pdf (72 pages, 1646056 bytes).
 PDF statistics:
- 1186 PDF objects out of 1200 (max. 8388607)
- 1081 compressed objects within 11 object streams
- 86 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2171 PDF objects out of 2487 (max. 8388607)
+ 2014 compressed objects within 21 object streams
+ 164 named destinations out of 1000 (max. 500000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 

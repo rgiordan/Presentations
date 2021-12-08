@@ -3,44 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: bibliography.bib
-You've used 6 entries,
+Warning--empty journal in giordano2021bnp
+You've used 13 entries,
             2773 wiz_defined-function locations,
-            630 strings with 5999 characters,
-and the built_in function-call counts, 2824 in all, are:
-= -- 238
-> -- 185
-< -- 4
-+ -- 63
-- -- 57
-* -- 239
-:= -- 452
-add.period$ -- 18
-call.type$ -- 6
-change.case$ -- 36
-chr.to.int$ -- 6
-cite$ -- 12
-duplicate$ -- 121
-empty$ -- 217
-format.name$ -- 65
-if$ -- 570
-int.to.chr$ -- 1
+            672 strings with 7070 characters,
+and the built_in function-call counts, 6020 in all, are:
+= -- 518
+> -- 371
+< -- 9
++ -- 128
+- -- 114
+* -- 498
+:= -- 947
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 73
+chr.to.int$ -- 12
+cite$ -- 27
+duplicate$ -- 274
+empty$ -- 475
+format.name$ -- 129
+if$ -- 1236
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 7
-newline$ -- 38
-num.names$ -- 24
-pop$ -- 72
+missing$ -- 15
+newline$ -- 73
+num.names$ -- 52
+pop$ -- 157
 preamble$ -- 1
-purify$ -- 31
+purify$ -- 64
 quote$ -- 0
-skip$ -- 94
+skip$ -- 206
 stack$ -- 0
-substring$ -- 90
-swap$ -- 7
-text.length$ -- 1
+substring$ -- 200
+swap$ -- 28
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 61
-warning$ -- 0
-while$ -- 24
+type$ -- 128
+warning$ -- 1
+while$ -- 52
 width$ -- 0
-write$ -- 83
+write$ -- 173
+(There was 1 warning)

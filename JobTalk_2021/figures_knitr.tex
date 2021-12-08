@@ -67,13 +67,52 @@ Non-poor, period 10  &  21.493 (9.405)* &  Significance change &  \textbf{16.262
 %%%%%%%%%%%%%%%%%%%
 % Microcredit
 %
-% \newcommand{\MicrocreditProfitResultsTable}{
-% % \input{figures/microcredit_profit_re_run_table.tex}
-% <<microcredit_profit_results_table, cache=microcredit_cache, results='asis'>>=
-% source("figures_knitr/microcredit/microcredit_profit_results_table.R",
-%        echo=knitr_debug, print.eval=TRUE)
-% @
-% }
+\newcommand{\MicrocreditProfitResultsTable}{
+% \input{figures/microcredit_profit_re_run_table.tex}
+
+
+\begin{table}\tiny 
+\begin{tabular}{|ccccc|}
+\toprule
+Study case & Original estimate  & Target change  & Refit estimate  & Observations dropped \\
+\midrule
+\midrule
+& &  Sign change &  \textbf{-2.226 (15.628)} &  14 = 1.17\%\\
+Bosnia  &  37.534 (19.780) &  Significance change &  \textbf{43.732 (18.889)*} &  1 = 0.08\%\\
+& &  Significant sign change &  \textbf{-34.929 (14.323)*} &  40 = 3.35\%\\
+\midrule
+& &  Sign change &  \textbf{-0.053 (2.513)} &  1 = 0.03\%\\
+Ethiopia  &  7.289 (7.893) &  Significance change &  \textbf{15.356 (7.763)*} &  45 = 1.45\%\\
+& &  Significant sign change &  \textbf{-8.755 (1.852)*} &  66 = 2.12\%\\
+\midrule
+& &  Sign change &  \textbf{-0.501 (8.221)} &  6 = 0.09\%\\
+India  &  16.722 (11.830) &  Significance change &  \textbf{22.895 (10.267)*} &  1 = 0.01\%\\
+& &  Significant sign change &  \textbf{-16.638 (7.537)*} &  32 = 0.47\%\\
+\midrule
+& &  Sign change &  \textbf{0.398 (3.194)} &  1 = 0.01\%\\
+Mexico  &  -4.549 (5.879) &  Significance change &  \textbf{-10.962 (5.565)*} &  14 = 0.08\%\\
+& &  Significant sign change &  \textbf{7.030 (2.549)*} &  15 = 0.09\%\\
+\midrule
+& &  Sign change &  \textbf{0.021 (0.184)} &  16 = 1.66\%\\
+Mongolia  &  -0.341 (0.223) &  Significance change &  \textbf{-0.436 (0.220)*} &  2 = 0.21\%\\
+& &  Significant sign change &  \textbf{0.361 (0.147)*} &  38 = 3.95\%\\
+\midrule
+& &  Sign change &  \textbf{-0.569 (9.920)} &  11 = 0.20\%\\
+Morocco  &  17.544 (11.401) &  Significance change &  \textbf{21.720 (11.003)*} &  2 = 0.04\%\\
+& &  Significant sign change &  \textbf{-18.847 (9.007)*} &  30 = 0.55\%\\
+\midrule
+& &  Sign change &  \textbf{-4.014 (57.204)} &  9 = 0.81\%\\
+Philippines  &  66.564 (78.127) &  Significance change &  \textbf{138.929 (66.880)*} &  4 = 0.36\%\\
+& &  Significant sign change &  \textbf{-122.494 (49.409)*} &  58 = 5.21\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Microcredit regressions for the profit outcome. The ``Refit estimate'' column shows the result of re-fitting the model removing the Approximate Most Influential Set. Stars indicate significance at the 5\% level.  Refits that achieved the desired change are bolded. }
+\label{table:mc_profit_results}
+\end{table}
+
+
+}
 %
 %
 % \newcommand{\MicrocreditTemptationResultsTable}{

@@ -64,7 +64,7 @@ FormatRefitTable <- function(results_df, base_df) {
 
 
 
-RenderLatexTable  <- function(table_df, fontsize="\\scriptsize",
+RenderLatexTable  <- function(table_df, fontsize="\\tiny",
                               study_case_label="Study case",
                               caption=NULL, label=NULL) {
     cat("\n\n")

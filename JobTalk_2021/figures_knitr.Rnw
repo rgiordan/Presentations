@@ -59,13 +59,13 @@ source("figures_knitr/cash_transfers/cash_transfers_results_table.R",
 %%%%%%%%%%%%%%%%%%%
 % Microcredit
 %
-% \newcommand{\MicrocreditProfitResultsTable}{
-% % \input{figures/microcredit_profit_re_run_table.tex}
-% <<microcredit_profit_results_table, cache=microcredit_cache, results='asis'>>=
-% source("figures_knitr/microcredit/microcredit_profit_results_table.R",
-%        echo=knitr_debug, print.eval=TRUE)
-% @
-% }
+\newcommand{\MicrocreditProfitResultsTable}{
+% \input{figures/microcredit_profit_re_run_table.tex}
+<<microcredit_profit_results_table, cache=microcredit_cache, results='asis'>>=
+source("figures_knitr/microcredit/microcredit_profit_results_table.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+}
 %
 %
 % \newcommand{\MicrocreditTemptationResultsTable}{
