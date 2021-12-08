@@ -59,23 +59,23 @@ Leave points out by setting their elements of $\w$ to zero.
 }
 %
 %
-\vspace{1em}
-%
+% \vspace{1em}
+
+Fix a quantity of interest, $\phi(\vec\theta)$.
+
+Let the \textbf{``signal''}, $\Delta$, be a ``large'' change in $\phi$.
+
 \begin{columns}
 %
 \begin{column}{0.45\linewidth}
     \onslide<2->{
-    Fix a quantity of interest, $\phi(\vec\theta)$:
+    Examples:
     %
     \begin{align*}
         \phi(\vec\theta) =&{} \vec\theta_p\\
         \phi(\vec\theta) =&{} \vec\theta_p +
             \frac{1.96}{\sqrt{N}} \hat\sigma_\phi(\vec\theta)
     \end{align*}
-    }
-    %
-    \onslide<3->{
-    Let the \textbf{``signal''}, $\Delta$, be a ``large'' change in $\phi$.
     }
 \end{column}
 %
@@ -122,11 +122,16 @@ Let the \textbf{``signal''}, $\Delta$, be a ``large'' change in $\phi$.
 
 Can we reverse our conclusion by dropping $\lfloor \alpha N \rfloor$
 datapoints? \pause
+
+\vspace{1em}
 $\Leftrightarrow$
+\vspace{1em}
 
 Is there a $\w$, with
 $\lfloor \alpha N \rfloor$ zeros, such that
 $\thetafun(\thetahat(\w)) - \thetafun(\thetahat) \ge \Delta$?
+
+\vspace{1em}
 
 \textbf{Hard!}
 Evaluating $\thetahat(\w)$ is costly and lots of $\w$
@@ -179,10 +184,6 @@ and automatically} computed from $\thetahat$.
 The approximation is
 \textbf{typically accurate}
 for small $\alpha$.
-%
-{\footnotesize
-\citep{giordano2019higherorder}
-}
 
 \pause
 \vspace{-0.5em}
@@ -193,11 +194,17 @@ $\lfloor \alpha N \rfloor$ zeros, such that
 $\color{red} \thetafunlin(\w) - \thetafun(\thetahat) \color{black} \ge \Delta$?
 
 \pause
+\vspace{1em}
+
 \textbf{Easy!}
 The most influential points for $\thetafunlin(\w)$ have the most negative
 $\infl_n$.
 
 \end{frame}
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -246,6 +253,7 @@ $\infl_n$.
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -265,8 +273,8 @@ $\thetafun(\theta)$. Find $\thetahat$.
 \textbf{Step one:}
 By the chain rule,
 $\infl_n = \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}
-= \fracat{\partial \thetafun(\theta)}
-    {\partial \theta^T}{\thetahat}
+= \fracat{\dee \thetafun(\theta)}
+    {\dee \theta^T}{\thetahat}
   \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec}$.
 
 \textbf{Step two:}

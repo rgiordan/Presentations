@@ -1,42 +1,26 @@
 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{What makes an estimator non-robust?  A tail sum.}
-% Report non-robustness if
-%
-\begin{align*}
-%
-%\textrm{Report non-robustness if }
-\Delta \le{}& \thetafunlin(\w^*) - \thetafun(\thetahat)
-        & \textrm{Report non-robustness}
-    \\=&{} -\sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}
-        & \textrm{(By definition)}
-    \\=&{} -\frac{1}{N} \sum_{n=1}^{\lfloor \alpha N \rfloor} N \infl_{(n)}
-        & \textrm{(Recall }\infl_n = O_p(N^{-1})\textrm{)}
-    % \\=&{} -\meann \ind{n \le \lfloor \alpha N \rfloor} N \infl_{(n)}
-    %     & \textrm{(By definition)}
-    \\\le&{}
-        \underbrace{
-            \left( \meann N^2 \infl_{(n)}^2 \right)^{1/2}
-        }_{\displaystyle =: \noise}
-        \underbrace{
-            \left( \meann \ind{n \le \lfloor \alpha N \rfloor} \right)^{1/2}
-        }_{\displaystyle \le \sqrt{\alpha}}
-        & \textrm{(Cauchy-Schwartz)}
-    % \\\le&{} \left( \meann N^2 \infl_{(n)}^2 \right)^{1/2} \sqrt{\alpha}
-%
-\end{align*}
-%
-Suppose that $\thetahat \plim \theta_0$ and $\thetafun(\thetahat)
-\rightsquigarrow \mathcal{N}(\thetafun(\theta_0), \sigma^2)$.
+\begin{frame}{What makes an estimator non-robust?}
 
-Typically, $\noise \plim \sigma$ \citep{hampel1986robustbook}.
+For $N=\SimNumObs$ data points, compute the OLS estimator from:
 
-A slightly more careful analysis gives $\shape \le \sqrt{\alpha(1-\alpha)}$.
+\vspace{1em}
+\begin{tabularx}{\textwidth}{YYY}
+%\begin{tabular}{ccc}
+    Regressors  &   Residuals   &   Responses \\
+    $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
+    $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
+    $y_n = \theta_0 x_n + \varepsilon_n$
+\end{tabularx}
+%
 
-% (Using $\sumn \infl_n = 0$).
+\SimGridNormalGraph{}
 
 \end{frame}
 
@@ -48,15 +32,17 @@ A slightly more careful analysis gives $\shape \le \sqrt{\alpha(1-\alpha)}$.
 
 \begin{frame}{What makes an estimator non-robust?  A tail sum.}
 
-Report non-robustness if the \textbf{``signal to noise ratio''}
-$\frac{\Delta}{\noise} \le \shape$ where
-
-% Report non-robustness if
-% $ \Delta \le
-%   -\sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}$
-% \onslide<5->{
-% $= \noise \shape$ where
-% }
+Report non-robustness if:
+%
+\begin{align*}
+%
+\Delta \le \thetafunlin(\w^*) - \thetafun(\thetahat)  =
+    - \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}
+    =: \noise \shape
+%
+\end{align*}
+%
+We will show that:
 %
 \begin{itemize}
 \item The ``noise'' $\noise^2 \rightarrow \mathrm{Var}(\sqrt{N}\phi)$
@@ -66,7 +52,7 @@ $\frac{\Delta}{\noise} \le \shape$ where
 \end{itemize}
 
 \begin{center}
-\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.65\linewidth}
 \begin{tikzpicture}
     \onslide<1->{
     \node[anchor=south west,inner sep=0] (image) at (0,0) {
@@ -79,7 +65,8 @@ $\frac{\Delta}{\noise} \le \shape$ where
     \end{scope}
     \begin{scope}[x={(image.south east)},y={(image.north west)}]
         \draw (0.55,0.38) node[below,yellow][text width=3cm][align=center]
-        {\small $\noise$ is controlled by $\var{}{\sqrt{N}\phi(\thetahat)}$};
+        % {\tiny $\noise$ is controlled by $\var{}{\sqrt{N}\phi(\thetahat)}$};
+        {\small $\noise \approx $\\$\var{}{\sqrt{N}\phi(\thetahat)}$};
     \end{scope}
     }
     \onslide<1->{
@@ -87,8 +74,8 @@ $\frac{\Delta}{\noise} \le \shape$ where
         \draw [stealth-][thick][red](0.3, 0.25) -- (0.3, 0.5);
     \end{scope}
     \begin{scope}[x={(image.south east)},y={(image.north west)}]
-        \draw (0.3, 0.5) node[above,red][text width=3cm][align=center]
-        {\small $\shape$ is (roughly) controlled by Cauchy-Schwartz};
+        \draw (0.25, 0.5) node[above][text width=3cm][align=center]
+        {\small $-\sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}$};
     \end{scope}
     }
 \end{tikzpicture}
@@ -96,6 +83,224 @@ $\frac{\Delta}{\noise} \le \shape$ where
 \end{center}
 
 \end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Three steps:}
+%
+\begin{enumerate}
+    \item $\inflbar_n := N \infl_n$ has a non-degenerate distribution.
+    \item $\noise := \meann \inflbar_n^2$ estimates
+        $\var{}{\sqrt{N}\thetafun(\thetahat)}$.
+    \item $\shape :=
+        \frac{-\frac{1}{N}\sum_{n=1}^{\lfloor \alpha N \rfloor}
+            \inflbar_{(n)}
+        }
+        {\noise}
+        \le \sqrt{\alpha(1-\alpha)}$ and
+        converges to a constant $\ne 0$.
+\end{enumerate}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Three steps:}
+%
+\begin{enumerate}
+    \item $\inflbar_n := N \infl_n$ has a non-degenerate distribution.
+\end{enumerate}
+
+Assume that $\thetahat \plim \thetalim$ and laws of large numbers apply.
+
+By direct computation,
+%
+\begin{align*}
+%
+\inflbar_n = N \infl_n =
+\underbrace{
+\fracat{\dee \thetafun(\theta)}
+    {\dee \theta^T}{\thetahat}
+}_{
+\plim
+\fracat{\dee \thetafun(\theta)}
+    {\dee \theta^T}{\thetalim}
+}
+\underbrace{
+\left(
+  \frac{1}{N}
+  \sum_{n'=1}^N
+    \frac{\partial}{\partial \theta^T} G(\vec\theta, \d_{n'})
+        \Big\vert_{\thetahat}
+\right)^{-1}
+}_{
+\plim \expect{\d}{
+    \frac{\partial}{\partial \theta^T} G(\vec\theta, \d)
+    \Big\vert_{\thetalim}
+    }
+}
+\underbrace{
+G(\thetahat, \d_{n})
+}_{
+\plim G(\thetalim, \d_{n})
+}.
+%
+\end{align*}
+%
+It follows that $\inflbar_n$ have a non-degenerate distribution
+for all $N$.
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Three steps:}
+
+\begin{enumerate}
+    \item $\inflbar_n := N \infl_n$ has a non-degenerate distribution.
+    \item $\noise := \meann \inflbar_n^2$ estimates
+        $\var{}{\sqrt{N}\thetafun(\thetahat)}$.
+\end{enumerate}
+
+% Note that $\noise$ is the sample standard deviation of $\inflbar_n$, so we
+% expect $\noise$ to converge to a nonzero constant.
+
+\textbf{Argument 1:} A linear approximation to the bootstrap.
+
+Let $\mathrm{Boot}(\w)$ denote the distribution of random bootstrap weights.
+%
+\begin{align*}
+%
+\var{\mathrm{Boot}(\w)}{\sqrt{N} \thetafun(\thetahat)}
+\approx{}&
+\var{\mathrm{Boot}(\w)}{\sqrt{N} \thetafunlin(\thetahat)}
+\\={}&
+\var{\mathrm{Boot}(\w)}{\sqrt{N} \sumn \infl_n (\w_n - 1)}
+\\={}&
+\sumn N \infl_n^2
+={}
+\meann \inflbar_n^2
+={} \noise^2.
+%
+\end{align*}
+%
+
+\textbf{Argument 2:} Formally, $\noise^2$ is the ``sandwich covariance''
+estimator \citep{huber1967sandwich, stefanski:2002:mestimation}.
+
+\textbf{Argument 3:} Influence functions and von Mises calculus
+\citep{mises1947asymptotic, reeds1976thesis}.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Three steps:}
+
+%
+\begin{enumerate}
+    \item $\inflbar_n := N \infl_n$ has a non-degenerate distribution.
+    \item $\noise := \meann \inflbar_n^2$ estimates
+        $\var{}{\sqrt{N}\thetafun(\thetahat)}$.
+    \item $\shape :=
+        \frac{-\frac{1}{N}\sum_{n=1}^{\lfloor \alpha N \rfloor}
+            \inflbar_{(n)}
+        }
+        {\noise}
+        \le \sqrt{\alpha(1-\alpha)}$ and
+        converges to a constant $\ne 0$.
+\end{enumerate}
+
+By definition,
+%
+\begin{align*}
+%
+-\sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}
+    =: \noise \shape
+\quad\quad\Rightarrow\quad\quad
+\shape
+% := -\sum_{n=1}^{\lfloor \alpha N \rfloor} \frac{\infl_{(n)}}{\noise}
+= -\frac{1}{N}
+    \sum_{n=1}^{\lfloor \alpha N \rfloor} \frac{\inflbar_{(n)}}{\noise}.
+%
+\end{align*}
+%
+By Cauchy-Schwartz,
+%
+\begin{align*}
+%
+\shape \le
+\underbrace{
+\left(
+\meann \frac{\inflbar_{n}^2}{\noise^2}
+\right)^{1/2}
+}_{=1}
+\left(\meann \ind{n \le \alpha N }^2 \right)^{1/2} \le \sqrt{\alpha}
+%
+\end{align*}
+%
+A slightly more careful analysis which accounts for
+the fact that $\sumn \infl_n = 0$ gives $\shape \le \sqrt{\alpha(1-\alpha)}$.
+
+% (Using $\sumn \infl_n = 0$).
+
+\end{frame}
+
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \begin{frame}[t]{Three steps:}
+% %
+% \begin{enumerate}
+%     \item $\inflbar_n := N \infl_n$ has a non-degenerate distribution.
+%     \item $\noise := \meann \inflbar_n^2$ estimates
+%         $\var{}{\sqrt{N}\thetafun(\thetahat)}$.
+%     \item $\shape :=
+%         \frac{-\frac{1}{N}\sum_{n=1}^{\lfloor \alpha N \rfloor}
+%             \inflbar_{(n)}
+%         }
+%         {\noise}
+%         \le \sqrt{\alpha(1-\alpha)}$ and
+%         converges to a constant $\ne 0$.
+% \end{enumerate}
+%
+%
+% Report non-robustness if:
+% %
+% \begin{align*}
+% %
+% \Delta \le \thetafunlin(\w^*) - \thetafun(\thetahat)  = \noise \shape
+% \quad\quad
+% \Leftrightarrow
+% \quad\quad
+% \frac{\Delta}{\noise} \le \shape.
+% %
+% \end{align*}
+% %
+% We call $\frac{\Delta}{\noise}$ the ``signal to noise ratio.''
+%
+% \end{frame}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,9 +320,20 @@ $\frac{\Delta}{\noise} \le \shape$ where
 %     The shape = Converges to a nonzero constant, $\le \sqrt{\alpha(1-\alpha)}$\\
 % }
 
-\pause
-Report non-robustness if the \textbf{``signal to noise ratio''}
-$\frac{\Delta}{\noise} \le \shape$.
+Report non-robustness if:
+%
+\begin{align*}
+%
+\Delta \le \thetafunlin(\w^*) - \thetafun(\thetahat)  = \noise \shape
+\quad\quad
+\Leftrightarrow
+\quad\quad
+\frac{\Delta}{\noise} \le \shape.
+%
+\end{align*}
+%
+We call $\frac{\Delta}{\noise}$ the ``signal to noise ratio.''
+
 
 \hrulefill
 
