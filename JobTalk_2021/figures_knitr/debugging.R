@@ -17,14 +17,3 @@ source(file.path(paper_directory, "figures_knitr/load_data.R"))
 source(file.path(paper_directory,
                  "figures_knitr/cash_transfers/cash_transfers_results_table.R"),
        echo=knitr_debug, print.eval=TRUE)
-
-#table_df %>% View()
-
-RenderLatexTable(
-    table_df,
-    label="cash_transfers_re_run_table",
-    fontsize="\\tiny",
-    caption=paste0(
-        "Cash transfers results for various periods and treatment groups. ",
-        GetTableCaptionBoilerplate())
-)

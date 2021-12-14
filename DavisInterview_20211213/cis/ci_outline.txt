@@ -1,0 +1,115 @@
+
+https://ubc-dsci.github.io/introduction-to-datascience/
+
+
+
+Recall our running example from previous classes.  We are interested in the
+average price of Airbnbs in our city because we're interested in whether they
+might be out-competing the traditional hotel industry.
+
+Now, if we actually knew the price of every Airbnb, we could just calculate  the
+average price directly!  We'll call this number \mu.  It's the quantity we
+wish we knew but don't.
+
+The problem is that, typically, Airbnb doesn't release that information to us.
+So we have talked about how to _estimate_ the true average over all rentals
+using a _random sample_.  To get a random sample, we select forty listings at
+random, looked up their prices, and averaged them together.  We'll call this
+estimate \hat\mu.  It is common in statistics to put a hat symbol over an
+estimator of a particular quantity.  Typically, unless we get veeerrry lucky,
+\hat\mu \ne \mu, because our random sample is different from the full sample.
+
+Now, because this is a class, we actually have a full dataset from Airbnb,
+so we can compute both the true value \mu, and simulate drawing a
+random sample.  In particular, we can run the following R code:
+
+...
+
+Note that each time we draw a new sample, we get a new value for \hat\mu. There
+is a spread of possible values, centered around the truth.  Now, we were only
+able to plot this spread because this is a statistics class and we are happen to
+know not only the truth, but the whole dataset. So we can draw many random
+samples to see how they behave.  But in real life, you only get to see one of
+these \hat\mu values, and you don't know where in this distribution you've
+landed.  Worse, if you know only \hat\mu, you don't even know how big the spread
+is! Your estimate might be arbitrarily far away from the truth as far as you
+know.  What use is \hat\mu to you if you don't know how wrong it might be?
+
+This is an introductory class, and I assume some of you have not seen this
+before.  So I hope some of you are wondering now: is it hopeless?  If you cannot
+see all these other potential draws --- and in the real world you can't --- how
+can you know the spread?  How can you know how far away your estimate might be?
+How can you measure not only your estimate, but the uncertainty of your
+estimate?
+
+Well, having answers to this question is what separates statistics from other
+disciplines. As my old boss at Google used to say, any computer scientist can
+compute an estimator, but it takes a statistician to compute the uncertainty.
+It's worth acknowledging that, in full generality, measuring uncertainty is
+hard.  Meaningfully quantifying the uncertainty in complex machine learning
+systems, for example, is an open area of ongoing research.  But there are many
+situations which have been studied for a long time, and for which we have pretty
+good techniques, and sample averages are one.
+
+-------------
+
+One key tool in uncertainty estimation is the idea of a "confidence interval".
+Recall that an estimator is some function of the data which gives us a good
+guess of the unknown parameter.  In our present case, our estimator is
+a sample average:
+
+\hat{\mu} = \frac{1}{N} \sum_{n=1}^N x_n.
+
+Mu hat is a function of the data --- given the data, you put it into the formula,
+and your estimator comes out the other end.  We want to find some function
+of the data that gives us not only an estimate, but a measure of the
+uncertainty.
+
+To get uncertainty, instead of a single point, let's try to compute lower and
+upper bounds for an interval that we hope contains the true
+parameter: (\hat\mu_{lower}, \hat\mu_{upper}).  To specify an interval, we
+need to know how to compute its lower bound (\hat\mu_{lower}) and its upper
+bound (\hat\mu_{upper}).  So now instead of just a single point estimate,
+we need to compute two things: a lower bound, and an upper bound.
+
+We will discuss shortly how to compute these bounds in practice.  But first,
+let's talk about what we want these bounds to achieve.  Note that these bounds,
+just like our estimator, will be random, because they will depend on the data.
+Each new draw will give a different set of bounds, visualized here.
+How can we tell whether the bounds do a good job of capturing the uncertainty
+in our estimators?
+One way is to construct the bounds so that
+
+P(\theta \in (\hat\mu_{lower}, \hat\mu_{upper}) \ge 0.9
+
+...or some value other than 0.9.  An interval with this property is
+called a "valid confidence interval" with "level" of 0.9.
+
+Note that, in this probability statement,
+the parameter is fixed --- it is the bounds that change with every draw.
+This probability means that most of the time we construct such a bound,
+the true parameter will be contained within it.  This is great!  It's a
+very natural statement of what we want from the bound.
+
+But it's worth noting that it's quite easy to produce _useless_ bounds that
+nevertheless satisfy this criterion.  For example,
+
+(-\infty, \infty)
+
+...always satisfies this bound because it always contains the parameter.
+So we want intervals that not only cover the parameter as often as possible,
+but are also as short as possible.  Of course, by making intervals shorter,
+we make it harder to achieve a particular level.  A point estimate can be
+thought of as the smallest possible confidence interval, and it's basically
+never actually exactly correct!
+
+Similarly, this only tells us that our intervals contain the parameter
+on average.  It doesn't tell us whether, on our particular data set,
+the parameter is likely to be within the interval.  In your homework,
+I'll give some examples.
+
+What this does tell us, however, is that if we construct confidence intervals
+every time we do an analysis, and act as if \theta \in (\hat\mu_{lower},
+\hat\mu_{upper}), then we will have been wrong no more that 10% of the time.
+On any particular analysis, who knows, but in the long run, the proportion
+of mistakes you make will be controlled.

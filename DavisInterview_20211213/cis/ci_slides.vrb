@@ -1,0 +1,34 @@
+\frametitle{Dataset}
+
+Recall our running example from previous classes:\footnotemark[1]
+
+
+% \begin{center}
+% \begin{minipage}{0.38\textwidth}
+% %\includegraphics[width=\textwidth]{e_beta_w}
+% Hello
+% \end{minipage}
+% \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\hrulefill
+
+Let's annotate this graphic using TikZ.
+
+\begin{lstlisting}
+\begin{center}
+\begin{minipage}{0.38\textwidth}
+\includegraphics[width=\textwidth]{e_beta_w}
+\end{minipage}
+\end{center}
+\end{lstlisting}
+
+From now on, everything I'm going to do will be within the minipage.
+
+\vfill
+\footnotetext[1]{
+Taken from Chapter 10 of ``Data Science: A First Introduction'' by
+Timbers, Campbell, and Lee
+\url{https://ubc-dsci.github.io/introduction-to-datascience/}
+}
+
