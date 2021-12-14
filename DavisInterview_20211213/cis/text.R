@@ -36,14 +36,38 @@ mu  <- airbnb %>%
     summarize(mean_price = mean(price)) %>%
     pull(mean_price)
 
+
 airbnb_samples <- airbnb %>%
-    rep_sample_n(size=40, reps=1000)
+    rep_sample_n(size=400, reps=10000)
 
 
 estimates <-
     airbnb_samples %>%
     group_by(replicate) %>%
     summarize(mu_hat=mean(price))
-    
+
+ 
+PlotAxisArrow <- function(loc, height=10) {
+    geom_segment(
+        aes(x=!!loc, xend=!!loc, y=!!height, yend=0),
+        arrow=arrow())
+}
+
+mu_hat <- quantile(estimates$mu_hat, 0.975)
+
 ggplot(estimates) +
-    geom_histogram(aes(x=mu_hat))
+    geom_histogram(aes(x=mu_hat), fill="dodgerblue3", color="lightgrey", bins=30) +
+    geom_vline(aes(xintercept=mu)) +
+    ylab("Count") + 
+    xlab("Price per night (Canadian dollars)") +
+    PlotAxisArrow(mu_hat, height=500)
+
+
+ggplot(estimates) +
+    geom_histogram(aes(x=mu_hat), fill="dodgerblue3", color="lightgrey", bins=30, alpha=0.1) +
+    geom_vline(aes(xintercept=mu), alpha=0.1) +
+    ylab("Count") + 
+    xlab("Price per night (Canadian dollars)") +
+    PlotAxisArrow(mu_hat, height=500)
+
+
