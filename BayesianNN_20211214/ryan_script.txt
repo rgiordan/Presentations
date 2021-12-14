@@ -1,0 +1,135 @@
+
+Notes:
+- Lead with VB and MAP, not OLS
+- Mention that you don't have to believe the theory, you can always rerun it
+-
+
+---------------
+
+
+
+This work is about detecting when you can change a conclusion by dropping a
+small proportion of your data.  So let's begin by talking about when you might
+care.  There are circumstances when you won't!  But we argue that you might care
+in the sort of situation that often occurs in economics, as well as machine
+learning and other modern applications of statistics.
+
+I think the easiest way to think about this is by first considering collecting
+data in absence of random noise.  Suppose you are interested in whether or not a
+particular farm yielded more than 170 bushels per acre.  Maybe you care because
+that would give you a certain amount of money at a price you've locked in.  At
+harvest time, you actually go out and collect all the soybeans and measure
+exactly 171 bushels per acre.  In comes a fancy statistician who has read our
+paper, and points out that, because some acres produced more than others, you
+could change the average by dropping 1% of your acres.  Do you care?  Of course
+not!  You have measured precisely the quantity you care about and drawn a
+conclusion.
+
+Suppose, in contrast, that you are interested not in your particular farm, but
+whether some method you have used increases yield above 170 bushels per acre,
+perhaps because you want to recommend your method to your friends on the other
+side of the valley.  Now your neighbor might care that your conclusion can be
+reversed by removing only a few acres.  Fine, they might say, you have
+measured 171 bushels per acre on average, but 1% of your acres are next to a
+wetland and have much higher yield than any of my acres; if you take them out,
+your conclusion changes.
+
+Neither of these examples contain any random sampling.  We care about whether
+our conclusions depend on a small proportion of the data because, if it does, it
+affects our willingness to generalize to populations that may differ from ours,
+possibly in difficult-to-formalize ways.  Of course, we do careful experimental
+design, including randomization, to try to make our samples as representative as
+possible.  Nevertheless, I'd argue that we often read studies in the social
+sciences with an interest in generalizing beyond the particular population.
+
+What sorts of specific circumstances in economics motivate concern about
+sensitivity to data dropping?
+
+- Sometimes we report a convenient proxy of what we actually care about.  For
+example, the analytical output of a classical RCT is an average counterfactual
+effect.  If we are studying outcomes in development economics, we aren't
+equally satisfied with an intervention that makes everyone richer as with an
+intervention that makes the rich richer and the poor poorer but produces the
+same average effect.
+
+- Small fractions of the data may be missing not-at-random.  It is difficult,
+even in carefully designed RCTs, to guarantee full compliance.  Further, in
+the act of robustifying against gross outliers, we may even trim or filter our
+own data.  If we show that dropping small fractions of the existing dataset
+can cause big changes, we might be concerned that we have already lost some
+conclusion-changing data.
+
+- Policy population is different from measured population.  Most development
+economists don't read a study of microcredit in Mexico because they're
+interested in Mexico, but because they're interested in microcredit.  Random
+sampling from Mexico doesn't fully capture the variability we might expect
+between countries.
+
+- Models are necessarily misspecified.  This is a bit of a catch-all, but the
+point is that frequentist variability and model robustness checks presume that
+you're not missing important features of the data distribution.
+
+Of course, though our work focuses on economics, these concerns are quite
+general.
+
+------------------------------------------
+
+Why do we need an approximation?  Say (as in the Mexico dataset) that you have
+about 16k observations.  We wish to ask: can I find a group of no more than 16
+points which can reverse my conclusion?  This is precisely a combinatorial
+optimization problem, where the search space is all sets of 16 or fewer points,
+and the objective function is some aspect of your original estimation procedure.
+The search space is vast --- there are about 10^53 sets of size exactly 16.
+Each evaluation of your objective function requires re-running your original
+estimation problem.  Even if your original estimation problem could be computed
+in one second (much faster than a neural net could be trained!), an exhaustive
+search would take 10^46 years.  It's ridiculous.  Either you need to find
+special structure (which may be hard, even in simple cases like OLS), or you
+need an approximation.  So we provide an approximation.
+
+Our approximation works in two steps:
+- Represent dropping data via _data reweighting_
+- Form a Taylor series approximation to continuous data weights
+
+Our Taylor series approximation works for any minimizers of empirical loss, a
+class that includes common econometrics workhorses such as OLS and IV
+regression, but also Bayesian estimators like variational Bayes or MAP
+estimation.
+
+Going back to the combinatorial optimization perspective, we perform a single
+gradient step in a continuous relaxation of the combinatorial space.  And we
+provide finite-sample theory to prove that this gives good results when the
+proportion of data dropped is small.
+
+Incidentally, most of the technical tools are the same as those used for
+approximate cross-validation, which is a popular topic in machine learning these
+days (cite).
+
+------------------------------------------
+
+One might hope that Bayesian estimators would be more robust that frequentist
+estimators.  Our theory and experiments suggest that this is not necessarily the
+case.  In particular, we investigated a Bayesian hierarchical model published by
+one of our co-authors.  The model was designed to perform meta-analysis on seven
+RCTs studying microcredit, including the Mexico study, incorporating realistic
+priors, hierarchical shrinkage and a more realistic error distribution. We fit
+the model using VB and (crucially) used linear response covariance estimates to
+accurately estimate the uncertainty.  We checked against MCMC to make sure that
+the VB was a reasonably good approximation to the true posterior.
+
+Once we had a reliable VB posterior approximations, we applied our methods to
+investigate the senstivity of the posterior mean microcredit effectiveness. We
+found that we could change the sign or "significance" (as measured by the
+posterior credible interval) by dropping less than 1% of the data --- much
+as in OLS applied to each of the individual studies.
+
+In our paper we studied a number of other applications, including the Oregon
+Medicaid experiment and a study of cash transfers in Mexico.  Some analyses were
+robust (for example, the effect of cash transfers on poor households), whereas
+others, like microcredit, were not.  We show theoretically that what makes an
+estimator robust is a large "signal to noise ratio" --- in other words, the
+ratio of the size of the effect you're trying to measure to the variability of
+each data point.  In fact, unlike standard errors, non-robustness is not
+mitigated by large sample sizes, and, unlike classical gross-error robustness,
+is not primarily driven by outliers nor misspecification.  For all this
+and more, we encourage you to look at the paper for yourself.
