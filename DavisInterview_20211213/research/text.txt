@@ -12,10 +12,11 @@ The approximation comes with guarantees, but you don't need to rely on them,
 you can re-fit once.  For example, here are the refit results on Mexico
 microcredit.  This was all done with our R package, zaminfluence.
 
-We analyze a number of studies, including Microcredit (OLS and VB), Medicaid,
-and cash transfers.  Some results are robust, some not.  How to explain?
-We demonstrate that sensitivity is driven by low signal to noise ratio.
 
 There are many other data perturbations that are conceivable.
 The relationship between our estimator and the influence function plays
 a key role in our analysis, and would play a similar role in other analyses.
+
+We analyze a number of studies, including Microcredit (OLS and VB), Medicaid,
+and cash transfers.  Some results are robust, some not.  How to explain?
+We demonstrate that sensitivity is driven by low signal to noise ratio.

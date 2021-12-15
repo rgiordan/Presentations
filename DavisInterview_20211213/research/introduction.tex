@@ -1,6 +1,6 @@
 \begin{frame}{Dropping data: Motivation}
 
-You're a data analyst, and you've
+Suppose you're a data analyst, and you've
 
 \begin{itemize}
     \item Gathered some exchangeable data,
@@ -11,8 +11,7 @@ You're a data analyst, and you've
 \end{itemize}
 
 \pause
-\textbf{Well done!}
-
+\vspace{1em}
 Would you be concerned if you could \textbf{reverse your conclusion} by removing
 a \textbf{small proportion} (say, $0.1\%$) of your data?
 
@@ -57,30 +56,30 @@ we can reverse the qualitative conclusions of the original study! }
 % }
 
 \onslide<6-> {
+\vspace{1em}
 \textbf{Question:} Is the reported interval $-4.55 \pm (5.88)$ a reasonable
 description of the uncertainty in the estimated efficacy of microcredit?
 }
 
 \end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Dropping data: Motivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Would you be concerned if you could \textbf{reverse your conclusion} by removing
-a \textbf{small proportion} (say, $0.1\%$) of your data?
+\begin{frame}[t]{Can Dropping a Little Data Make a Big Difference?}
 
-\pause
+Do you care whether you can \textbf{reverse your conclusion} by removing
+a \textbf{small proportion} of your data?
+
+\vspace{1em}
 \textbf{Not always!}
 
-% Consider randomized controlled trials in agriculture with a clearly
-% defined sample population, intervention, and quantifiable outcome.
-
-\pause
+\vspace{1em}
 \textbf{...but sometimes, surely yes.}
 
+\vspace{1em}
 For example, it often occurs that:
 %
 \begin{itemize}
@@ -90,7 +89,6 @@ For example, it often occurs that:
 \item Models are stylized proxies of reality.
 \end{itemize}
 
-
 \end{frame}
 
 
@@ -98,36 +96,53 @@ For example, it often occurs that:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Objective}
+\begin{frame}[t]{Can Dropping a Little Data Make a Big Difference?}
 
-Estimate the effect of leaving out $\lfloor \alpha N \rfloor$ datapoints,
-where $\alpha$ is small.
-\pause
+\textbf{How do we find influential datapoints?}
+
+\only<1>{
 
 \vspace{1em}
-\textbf{Question 1: How do we find influential datapoints?}
-
-\only<2>{
-\small
-
 The number of subsets ${N \choose \lfloor \alpha N \rfloor}$ can be very large
-even when $\alpha$ is very small.
+even when $\alpha$ is small.
 
-In the MX microcredit study, ${16560 \choose 15} \approx 1.4 \cdot 10^{51}$
-sets to check for $\alpha = 0.0009$.
-
-We provide a fast, automatic approximation based on the \textbf{influence function}.
-}
-
-\onslide<3->{
-\pause
 \vspace{1em}
-\textbf{Question 2: What makes an estimator non-robust?}
+In the MX microcredit study, ${16560 \choose 15} \approx 1.4 \cdot 10^{51}$
+for $\alpha = 0.0009$.
+
+\vspace{1em}
+We provide a fast, automatic approximation based on the
+\textbf{empirical influence function}.
+
+\vspace{1em}
+Though we provide finite-sample, non-stochastic accuracy guarantees,
+there is no need to rely on our theory.  A single re-fit provides an exact
+lower bound on sensitivity.
 }
 
-\only<4>{
-Non-robustness to removal of $\lfloor \alpha N \rfloor$ points is:
-\vspace{-0.5em}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Can Dropping a Little Data Make a Big Difference?}
+
+\textbf{What causes sensitivity to dropping small fractions of the data?}
+
+\vspace{1em}
+We consider a number of studies, including seven studies of microcreidt, the
+Medicaid experiment, a study of cash transfers, and a number of models,
+including OLS, IV, and a hierachical Bayesian model. Some analyses were robust,
+and others were not.
+
+\vspace{1em}
+\textbf{What drives the variety of results?}  We show that sensitivity
+to dropping small subsets is:
+
+\only<1>{
 \begin{itemize}
     \item Not (necessarily) caused by misspecification.
     \item Not (necessarily) caused by outliers.
@@ -135,27 +150,11 @@ Non-robustness to removal of $\lfloor \alpha N \rfloor$ points is:
     \item Not mitigated by large $N$.
     \item Primarily determined by the \textbf{signal to noise} ratio
     \begin{itemize}
-        \item[] ... in a sense which we will define.
+        \item[] ... that is, the ratio of the measured effect size to data
+        variability.
     \end{itemize}
 \end{itemize}
 }
 
-\onslide<5->{
-\vspace{1em}
-\textbf{Question 3: When is our approximation accurate?}
-}
-
-\only<6>{
-\begin{itemize}
-    \item We provide deterministic error bounds for small $\alpha$.
-    \item We show the accuracy in simple experiments.
-    \item We show the accuracy in a number of real-world experiments.
-\end{itemize}
-}
-
-\onslide<7->{
-\vspace{1em}
-\textbf{Conclusion: Related work and future directions}
-}
 
 \end{frame}
