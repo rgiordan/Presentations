@@ -13,6 +13,9 @@
 \usepackage{tikz}
 
 
+\input{_knitr_header.tex}
+\input{figures_knitr.tex}
+
 \usepackage{listings}
 \lstset
 {
@@ -40,29 +43,26 @@
 
 Recall our running example from previous classes:\footnotemark[1]
 
+\begin{itemize}
+    \item We're interested in the mean price of AirBNBs in our city ($\mu$)
+    \item We can't observe them all, so we take the mean
+          price of a sample of 200 ($\hat\mu$)
+\end{itemize}
 
 
-% \begin{center}
-% \begin{minipage}{0.38\textwidth}
-% %\includegraphics[width=\textwidth]{e_beta_w}
-% Hello
-% \end{minipage}
-% \end{center}
-
-%%%%%%%%%%%%%%%%%%%%%%
-\hrulefill
-
-Let's annotate this graphic using TikZ.
-
-\begin{lstlisting}
 \begin{center}
-\begin{minipage}{0.38\textwidth}
-\includegraphics[width=\textwidth]{e_beta_w}
+\begin{minipage}{0.9\textwidth}
+\only<1>{
+\BaseHistogram{}
+}
+\only<2>{
+\BaseHistogramWithArrow{}
+}
+\only<3>{
+\BaseHistogramFaded{}
+}
 \end{minipage}
 \end{center}
-\end{lstlisting}
-
-From now on, everything I'm going to do will be within the minipage.
 
 \vfill
 \footnotetext[1]{
@@ -73,6 +73,49 @@ Timbers, Campbell, and Lee
 
 \end{frame}
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t, fragile]{Dataset}
+
+Instead of a ``point estimate'' $\hat\mu = \frac{1}{N} \sum_{n=1}^N x_n$...
+
+estimate an interval $(\hat\mu_{lower}, \hat\mu_{upper})$
+
+
+\begin{center}
+\begin{minipage}{0.9\textwidth}
+\only<1>{
+\SingleCI{}
+}
+\only<2>{
+\MultipleCIs{}
+}
+\end{minipage}
+\end{center}
+
+\end{frame}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%
+% \hrulefill
+%
+% Let's annotate this graphic using TikZ.
+%
+% \begin{lstlisting}
+% \begin{center}
+% \begin{minipage}{0.38\textwidth}
+% \includegraphics[width=\textwidth]{e_beta_w}
+% \end{minipage}
+% \end{center}
+% \end{lstlisting}
+%
+% From now on, everything I'm going to do will be within the minipage.
 
 
 \end{document}
