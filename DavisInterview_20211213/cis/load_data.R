@@ -34,7 +34,7 @@ mu  <- airbnb %>%
 
 
 airbnb_samples <- airbnb %>%
-    rep_sample_n(size=200, reps=10000)
+    rep_sample_n(size=200, reps=4000)
 
 
 estimates <-

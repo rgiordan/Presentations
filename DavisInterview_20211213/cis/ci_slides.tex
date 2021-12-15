@@ -46,9 +46,15 @@ Recall our running example from previous classes:\footnotemark[1]
 \begin{itemize}
     \item We're interested in the mean price of AirBNBs in our city ($\mu$)
     \item We can't observe them all, so we take the mean
-          price of a sample of 200 ($\hat\mu$)
+          price of a sample of 200 ($\hat\mu(X) = \frac{1}{200} \sum_{n=1}^{200} x_n$)
 \end{itemize}
 
+\onslide<4->{
+\textbf{Key idea: }
+
+Instead of a ``point estimate'' $\hat\mu(X)$,
+estimate an interval $(\hat\mu_{lower}(X), \hat\mu_{upper}(X))$.
+}
 
 \begin{center}
 \begin{minipage}{0.9\textwidth}
@@ -60,6 +66,9 @@ Recall our running example from previous classes:\footnotemark[1]
 }
 \only<3>{
 \BaseHistogramFaded{}
+}
+\only<4>{
+\SingleCIB{}
 }
 \end{minipage}
 \end{center}
@@ -88,26 +97,26 @@ Instead of a ``point estimate'' $\hat\mu(X)$,
 estimate an interval $(\hat\mu_{lower}(X), \hat\mu_{upper}(X))$.
 
 \onslide<2->{
+
 \textbf{We would like to choose our interval such that: }
 
 $P(\mu \in (\hat\mu_{lower}(X), \hat\mu_{upper}(X))) \ge 0.9$
 
 Such an interval is a \textbf{valid confidence interval} with a
 \textbf{level} of 0.9.
-
 }
 
-\onslide<5->{
-\textbf{Question: }
-Is $(-\infty, \infty)$ a valid confidence interval with level 0.9?
-}
+% \onslide<5->{
+% \textbf{Question: }
+% Is $(-\infty, \infty)$ a valid confidence interval with level 0.9?
+% }
 
 \begin{center}
 \begin{minipage}{0.9\textwidth}
-\only<1-3>{
-\SingleCI{}
-}
-\only<4->{
+% \only<1>{
+% \SingleCIB{}
+% }
+\only<1->{
 \MultipleCIs{}
 }
 \end{minipage}
