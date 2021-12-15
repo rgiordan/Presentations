@@ -1,0 +1,179 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not edit the TeX file your work
+% will be overwritten.  Edit the RnW
+% file instead.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\newcommand{\DefineMacros}{
+\newcommand{\SimNumObs}{5,000}
+\newcommand{\SimTrueTheta}{0.5}
+\newcommand{\SimAccNumObs}{5,000}
+\newcommand{\SimAccSigx}{2}
+\newcommand{\SimAccSigeps}{1}
+\newcommand{\SimAccPercentMax}{10}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+
+\newcommand{\CashTransfersResultsTable}{
+% \input{figures/cash_transfers_re_run_table.tex}
+
+
+\begin{table}\tiny 
+\begin{tabular}{|ccccc|}
+\toprule
+Study case & Original estimate  & Target change  & Refit estimate  & Observations dropped \\
+\midrule
+\midrule
+& &  Sign change &  \textbf{-2.559 (3.541)} &  697 = 6.63\%\\
+Poor, period 10  &  33.861 (4.468)* &  Significance change &  \textbf{4.806 (3.684)} &  435 = 4.14\%\\
+& &  Significant sign change &  \textbf{-9.416 (3.296)*} &  986 = 9.37\%\\
+\midrule
+& &  Sign change &  \textbf{-0.573 (6.750)} &  30 = 0.70\%\\
+Non-poor, period 10  &  21.493 (9.405)* &  Significance change &  \textbf{16.262 (8.927)} &  3 = 0.07\%\\
+& &  Significant sign change &  -10.845 (6.467) &  92 = 2.16\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Cash transfers results for the final study period. The ``Refit estimate'' column shows the result of re-fitting the model removing the Approximate Most Influential Set. Stars indicate significance at the 5\% level.  Refits that achieved the desired change are bolded. }
+\label{table:cash_transfers_re_run_table}
+\end{table}
+
+
+}
+
+%%%%%%%%%%%%%%%%%%%
+% OHIE
+
+% \newcommand{\OHIEResultsTable}{
+% % \input{figures/OHIE_table_9_IV_re_run_table.tex}
+% <<OHIE_results_table, cache=ohie_cache, results='asis'>>=
+% source("figures_knitr/OHIE/OHIE-table_results.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+
+
+%%%%%%%%%%%%%%%%%%%
+% Microcredit
+%
+\newcommand{\MicrocreditProfitResultsTable}{
+% \input{figures/microcredit_profit_re_run_table.tex}
+
+
+\begin{table}\tiny 
+\begin{tabular}{|ccccc|}
+\toprule
+Study case & Original estimate  & Target change  & Refit estimate  & Observations dropped \\
+\midrule
+\midrule
+& &  Sign change &  \textbf{-2.226 (15.628)} &  14 = 1.17\%\\
+Bosnia  &  37.534 (19.780) &  Significance change &  \textbf{43.732 (18.889)*} &  1 = 0.08\%\\
+& &  Significant sign change &  \textbf{-34.929 (14.323)*} &  40 = 3.35\%\\
+\midrule
+& &  Sign change &  \textbf{-0.053 (2.513)} &  1 = 0.03\%\\
+Ethiopia  &  7.289 (7.893) &  Significance change &  \textbf{15.356 (7.763)*} &  45 = 1.45\%\\
+& &  Significant sign change &  \textbf{-8.755 (1.852)*} &  66 = 2.12\%\\
+\midrule
+& &  Sign change &  \textbf{-0.501 (8.221)} &  6 = 0.09\%\\
+India  &  16.722 (11.830) &  Significance change &  \textbf{22.895 (10.267)*} &  1 = 0.01\%\\
+& &  Significant sign change &  \textbf{-16.638 (7.537)*} &  32 = 0.47\%\\
+\midrule
+& &  Sign change &  \textbf{0.398 (3.194)} &  1 = 0.01\%\\
+Mexico  &  -4.549 (5.879) &  Significance change &  \textbf{-10.962 (5.565)*} &  14 = 0.08\%\\
+& &  Significant sign change &  \textbf{7.030 (2.549)*} &  15 = 0.09\%\\
+\midrule
+& &  Sign change &  \textbf{0.021 (0.184)} &  16 = 1.66\%\\
+Mongolia  &  -0.341 (0.223) &  Significance change &  \textbf{-0.436 (0.220)*} &  2 = 0.21\%\\
+& &  Significant sign change &  \textbf{0.361 (0.147)*} &  38 = 3.95\%\\
+\midrule
+& &  Sign change &  \textbf{-0.569 (9.920)} &  11 = 0.20\%\\
+Morocco  &  17.544 (11.401) &  Significance change &  \textbf{21.720 (11.003)*} &  2 = 0.04\%\\
+& &  Significant sign change &  \textbf{-18.847 (9.007)*} &  30 = 0.55\%\\
+\midrule
+& &  Sign change &  \textbf{-4.014 (57.204)} &  9 = 0.81\%\\
+Philippines  &  66.564 (78.127) &  Significance change &  \textbf{138.929 (66.880)*} &  4 = 0.36\%\\
+& &  Significant sign change &  \textbf{-122.494 (49.409)*} &  58 = 5.21\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Microcredit regressions for the profit outcome. The ``Refit estimate'' column shows the result of re-fitting the model removing the Approximate Most Influential Set. Stars indicate significance at the 5\% level.  Refits that achieved the desired change are bolded. }
+\label{table:mc_profit_results}
+\end{table}
+
+
+}
+%
+%
+% \newcommand{\MicrocreditTemptationResultsTable}{
+% % \input{figures/microcredit_profit_re_run_table.tex}
+% <<microcredit_temptation_results_table, cache=microcredit_cache, results='asis'>>=
+% source("figures_knitr/microcredit/microcredit_temptation_results_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+
+%%%%%%%%%%%%%%%%%%%
+% Microcredit mixture
+%
+% \newcommand{\MicrocreditMixtureResultsTable}{
+% <<mcmix_re_run_table, cache=mcmix_cache, results='asis'>>=
+% source("figures_knitr/microcredit_mixture/microcredit_mix_refit_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+%
+% \newcommand{\MicrocreditMixtureSdResultsTable}{
+% <<mcmix_sd_re_run_table, cache=mcmix_cache, results='asis'>>=
+% source("figures_knitr/microcredit_mixture/microcredit_mix_sd_refit_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+% Graphs
+
+
+\newcommand{\SimApproxNormalGraph}{
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.461\linewidth]{figure/sim-approx-normal-1} 
+
+}
+
+\caption[The actual change, linear approximation to the change, and approximation error.Here, $\sigma_x = \SimAccSigx$, $\sigma_\varepsilon = \SimAccSigeps$, and $\theta_0 = \SimTrueTheta$]{The actual change, linear approximation to the change, and approximation error.Here, $\sigma_x = \SimAccSigx$, $\sigma_\varepsilon = \SimAccSigeps$, and $\theta_0 = \SimTrueTheta$.}\label{fig:sim-approx-normal}
+\end{figure}
+
+
+\end{knitrout}
+}
+
+\newcommand{\SimGridNormalGraph}{
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.384\linewidth]{figure/sim-grid-normal-1} 
+
+}
+
+\caption[The approximate perturbation inducing proportion at differing values of $\sigma_x$ and $\sigma_\varepsilon$]{The approximate perturbation inducing proportion at differing values of $\sigma_x$ and $\sigma_\varepsilon$. Red colors indicate datasets whose sign can is predicted to change when dropping less than 1\% of datapoints. The grey areas indicate $\amip{\alpha} = \na$, a failure of the linear approximation to locate any way to change the sign.}\label{fig:sim-grid-normal}
+\end{figure}
+
+
+\end{knitrout}
+}

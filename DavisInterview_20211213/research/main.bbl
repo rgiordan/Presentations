@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Angelucci et~al.(2015)Angelucci, Karlan, and
+  Zinman]{angelucci2015microcredit}
+M.~Angelucci, D.~Karlan, and J.~Zinman.
+\newblock Microcredit impacts: {E}vidence from a randomized microcredit program
+  placement experiment by {C}ompartamos {B}anco.
+\newblock \emph{American Economic Journal: Applied Economics}, 7\penalty0
+  (1):\penalty0 151--82, 2015.
+
+\end{thebibliography}
