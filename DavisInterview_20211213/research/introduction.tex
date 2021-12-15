@@ -32,12 +32,12 @@ The variable ``Beta" estimates the effect of microcredit in US dollars.
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{lll} \hline
-  & Left out points & Beta (SE) \\\hline
-Original & 0 & -4.55 (5.88) \\ \hline
-\onslide<2-> {Change sign & 1 & 0.4 (3.19) \\\hline }
-\onslide<3-> {Change significance & 14 & -10.96 (5.57) \\\hline }
-\onslide<4-> {Change both & 15 & 7.03 (2.55) \\\hline }
+\begin{tabular}{llrl}
+  & Left out points & Beta & (SE) \\ \hline
+\onslide<1-> {\hspace{0.4em}Original & 0 & -4.55 & (5.88) \\ \hline }
+\onslide<2-> {Change sign & 1 & 0.4 & (3.19) \\\hline }
+\onslide<3-> {Change significance & 14 & -10.96 & (5.57) \\\hline }
+\onslide<4-> {Change both & 15 & 7.03 & (2.55) \\\hline }
 \end{tabular}
 \end{table}
 
@@ -132,14 +132,19 @@ lower bound on sensitivity.
 
 \textbf{What causes sensitivity to dropping small fractions of the data?}
 
-\vspace{1em}
-We consider a number of studies, including seven studies of microcreidt, the
-Medicaid experiment, a study of cash transfers, and a number of models,
-including OLS, IV, and a hierachical Bayesian model. Some analyses were robust,
-and others were not.
+\vspace{1em} We examine a number of published analyses:
+\begin{itemize}
+    \item Seven studies of microcredit \citep{meager2020aggregating}
+    \item The Oregon Medicaid experiment \citep{finkelstein2012oregon}
+    \item A study of cash transfers \citep{angelucci2009indirect}
+\end{itemize}
+%
+Some analyses were robust, and others were not.
 
 \vspace{1em}
-\textbf{What drives the variety of results?}  We show that sensitivity
+\textbf{What drives the variety of results?}
+
+We show that sensitivity
 to dropping small subsets is:
 
 \only<1>{
