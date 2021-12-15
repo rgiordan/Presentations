@@ -10,7 +10,6 @@ Suppose you're a data analyst, and you've
     the sign / significance of some estimated parameter).
 \end{itemize}
 
-\pause
 \vspace{1em}
 Would you be concerned if you could \textbf{reverse your conclusion} by removing
 a \textbf{small proportion} (say, $0.1\%$) of your data?
@@ -26,7 +25,7 @@ a \textbf{small proportion} (say, $0.1\%$) of your data?
 Consider \citet{angelucci2015microcredit}, a randomized controlled trial study
 of the efficacy of microcredit in Mexico based on 16,560 data points.
 
-The variable ``Beta" estimates the effect of microcredit in US dollars.
+The variable ``Beta'' estimates the effect of microcredit in US dollars.
 
 %\MicrocreditMexicoRerunTable{}
 
@@ -57,40 +56,43 @@ we can reverse the qualitative conclusions of the original study! }
 
 \onslide<6-> {
 \vspace{1em}
-\textbf{Question:} Is the reported interval $-4.55 \pm (5.88)$ a reasonable
-description of the uncertainty in the estimated efficacy of microcredit?
+\textbf{Do you care?}  Not always.
+But, in some cases, surely yes!
+
+Especially when the policy population is different than
+the sampled population, possibly in difficult-to-formalize ways.
 }
 
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Can Dropping a Little Data Make a Big Difference?}
-
-Do you care whether you can \textbf{reverse your conclusion} by removing
-a \textbf{small proportion} of your data?
-
-\vspace{1em}
-\textbf{Not always!}
-
-\vspace{1em}
-\textbf{...but sometimes, surely yes.}
-
-\vspace{1em}
-For example, it often occurs that:
 %
-\begin{itemize}
-\item Policy population is different from analyzed population,
-\item Small fractions of data are missing not-at-random,
-\item We report a convenient summary (e.g. mean) of a complex effect,
-\item Models are stylized proxies of reality.
-\end{itemize}
-
-\end{frame}
-
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \begin{frame}[t]{Can Dropping a Little Data Make a Big Difference?}
+%
+% Do you care whether you can \textbf{reverse your conclusion} by removing
+% a \textbf{small proportion} of your data?
+%
+% \vspace{1em}
+% \textbf{Not always!}
+%
+% \vspace{1em}
+% \textbf{...but sometimes, surely yes.}
+%
+% \vspace{1em}
+% For example, it often occurs that:
+% %
+% \begin{itemize}
+% \item Policy population is different from analyzed population,
+% \item Small fractions of data are missing not-at-random,
+% \item We report a convenient summary (e.g. mean) of a complex effect,
+% \item Models are stylized proxies of reality.
+% \end{itemize}
+%
+% \end{frame}
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,25 +102,24 @@ For example, it often occurs that:
 
 \textbf{How do we find influential datapoints?}
 
-\only<1>{
-
-\vspace{1em}
-The number of subsets ${N \choose \lfloor \alpha N \rfloor}$ can be very large
-even when $\alpha$ is small.
-
 \vspace{1em}
 In the MX microcredit study, ${16560 \choose 15} \approx 1.4 \cdot 10^{51}$
 for $\alpha = 0.0009$.
 
 \vspace{1em}
-We provide a fast, automatic approximation based on the
-\textbf{empirical influence function}.
+\textbf{An approximation is needed!}
 
+\pause
+\vspace{1em} We form an approximation based on the \textbf{empirical influence
+function}. The approximation works for all \textbf{Z-estimators} with smooth
+estimating equations (MLE, OLS, IV, GMM, VB, MAP, \&c), and can be
+\textbf{computed automatically} with modern automatic differentiation.
+
+\pause
 \vspace{1em}
-Though we provide finite-sample, non-stochastic accuracy guarantees,
-there is no need to rely on our theory.  A single re-fit provides an exact
-lower bound on sensitivity.
-}
+We provide finite-sample, non-stochastic accuracy guarantees.  But
+there is no need to rely on our theory.  A single re-fit provides an
+\textbf{exact lower bound} to data-dropping sensitivity.
 
 \end{frame}
 
@@ -130,9 +131,8 @@ lower bound on sensitivity.
 
 \begin{frame}[t]{Can Dropping a Little Data Make a Big Difference?}
 
-\textbf{What causes sensitivity to dropping small fractions of the data?}
-
-\vspace{1em} We examine a number of published analyses:
+\vspace{1em} We used our \texttt{R} package\footnotemark[1]
+examine a number of published analyses:
 \begin{itemize}
     \item Seven studies of microcredit \citep{meager2020aggregating}
     \item The Oregon Medicaid experiment \citep{finkelstein2012oregon}
@@ -141,13 +141,13 @@ lower bound on sensitivity.
 %
 Some analyses were robust, and others were not.
 
+\pause
 \vspace{1em}
 \textbf{What drives the variety of results?}
 
 We show that sensitivity
 to dropping small subsets is:
 
-\only<1>{
 \begin{itemize}
     \item Not (necessarily) caused by misspecification.
     \item Not (necessarily) caused by outliers.
@@ -159,7 +159,9 @@ to dropping small subsets is:
         variability.
     \end{itemize}
 \end{itemize}
-}
 
+\footnotetext[1]{
+\url{https://github.com/rgiordan/zaminfluence}
+}
 
 \end{frame}
