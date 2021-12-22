@@ -1,18 +1,26 @@
 \begin{frame}{Dropping data: Motivation}
 
-You're a data analyst, and you've
+All the time in data science, we:
 
 \begin{itemize}
-    \item Gathered some exchangeable data,
-    \item Cleaned up / removed outliers,
-    \item Checked for correct specification, and
-    \item Drawn a conclusion from your statistical analysis \\(e.g., based
-    the sign / significance of some estimated parameter).
+    \item Gather + clean exchangeable data,
+    \item Specify and fit a model, and
+    \item Drawn a qualitative conclusion from your fit
+    \\(e.g., based on the sign / significance of
+        some estimated parameter).
 \end{itemize}
 
-\pause
-\textbf{Well done!}
+\vspace{1em}
+Decisions are important: We want \textbf{trustworthy} conclusions.
 
+Data / models not always perfect: We want \textbf{robust} conclusions.
+
+\vspace{1em}
+\textbf{Running example:} \citet{angelucci2015microcredit}, a
+randomized controlled trial study of the efficacy of microcredit in Mexico based
+on 16,560 data points.
+
+\vspace{1em}
 Would you be concerned if you could \textbf{reverse your conclusion} by removing
 a \textbf{small proportion} (say, $0.1\%$) of your data?
 
@@ -34,9 +42,9 @@ The variable ``Beta" estimates the effect of microcredit in US dollars.
 \begin{table}[ht]
 \centering
 \begin{tabular}{lll} \hline
-  & Left out points & Beta (SE) \\\hline
-Original & 0 & -4.55 (5.88) \\ \hline
-\onslide<2-> {Change sign & 1 & 0.4 (3.19) \\\hline }
+  & \onslide<2->{Left out points} & Beta (SE) \\\hline
+\hspace{0.05em} Original result & \onslide<2->{0} & -4.55 (5.88) \\ \hline
+\onslide<2-> {\hspace{0.05em} Change sign & 1 & 0.4 (3.19) \\\hline }
 \onslide<3-> {Change significance & 14 & -10.96 (5.57) \\\hline }
 \onslide<4-> {Change both & 15 & 7.03 (2.55) \\\hline }
 \end{tabular}
@@ -45,21 +53,6 @@ Original & 0 & -4.55 (5.88) \\ \hline
 \vspace{-1em}
 \onslide<5-> { By removing very few data points ($15 / 16560 \approx 0.1\% $),
 we can reverse the qualitative conclusions of the original study! }
-
-% \onslide<6->{
-% Do you care?  \textbf{Maybe not!}  But, often in economics:
-% %
-% \begin{itemize}
-% \item Policy population is different from analyzed population,
-% \item We report a convenient summary (e.g. mean) of a complex effect,
-% \item Models are stylized proxies of reality.
-% \end{itemize}
-% }
-
-\onslide<6-> {
-\textbf{Question:} Is the reported interval $-4.55 \pm (5.88)$ a reasonable
-description of the uncertainty in the estimated efficacy of microcredit?
-}
 
 \end{frame}
 
@@ -73,13 +66,26 @@ Would you be concerned if you could \textbf{reverse your conclusion} by removing
 a \textbf{small proportion} (say, $0.1\%$) of your data?
 
 \pause
-\textbf{Not always!}
+Not always!  But sometimes, surely yes.
 
-% Consider randomized controlled trials in agriculture with a clearly
-% defined sample population, intervention, and quantifiable outcome.
+Thinking without random noise can be helpful.
 
-\pause
-\textbf{...but sometimes, surely yes.}
+Suppose you have a farm, and want to know whether
+your average yield is greater than 170 bushels per acre.
+At harvest, you measure 200 bushels per acre.
+
+\begin{itemize}
+    \item Scenario one: If your yield is greater than 170 bushels
+        per acre, you make a profit.
+        \begin{itemize}
+            \item Don’t care about sensitivity to small subsets
+        \end{itemize}
+    \item Scenario two: You want to recommend your farming
+    methods to a friend across the valley.
+    \begin{itemize}
+        \item Might care about sensitivity to small subsets
+    \end{itemize}
+\end{itemize}
 
 For example, often in economics:
 %

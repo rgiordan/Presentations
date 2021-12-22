@@ -1,35 +1,51 @@
-I would put motivation of why you'd drop data (missing not at random, esp in economics) before the example. Like hey you might care about this.. but does it matter?
-Wow it matters a lot.
+I would put motivation of why you'd drop data (missing not at random, esp in
+economics) before the example. Like hey you might care about this.. but does it
+matter? Wow it matters a lot.
 
 \phi should be called out as a scalar on "what estimators do we study?" slide.
 
 Add slide numbers
 
-Seems like \Delta is in "units" of \phi. But then the example with the colored arrows, the arrows are in "units" of \theta_p.
+Seems like \Delta is in "units" of \phi. But then the example with the colored
+arrows, the arrows are in "units" of \theta_p.
 
 Maybe make \phi_lin = \phi(\hat\theta) + linear term?
 
-During setup, might want to give explicit examples of G's ("one really common place this shows up is maximum likelihood estimation where the G's are going to be derivaitves
-w.r.t. \theta of the log likelihoods)
+During setup, might want to give explicit examples of G's ("one really common
+place this shows up is maximum likelihood estimation where the G's are going to
+be derivaitves w.r.t. \theta of the log likelihoods)
 
-"What makes an estimator non-robust" how did you pick \theta_0 ? Is the color of the plot always the same if the ratio sigma_x / sigma_eps is the same?
-I.e. does the robustness just depend on SNR (it kind of looks like this is the case, figured someone might ask)
+"What makes an estimator non-robust" how did you pick \theta_0 ? Is the color of
+the plot always the same if the ratio sigma_x / sigma_eps is the same? I.e. does
+the robustness just depend on SNR (it kind of looks like this is the case,
+figured someone might ask)
 
-I got slightly lost on the transition to the "Three steps" slide. I mean that I kind of lost track of why we were proving those 3 things.
-Like why does it matter that the shape parameter is bounded?
+I got slightly lost on the transition to the "Three steps" slide. I mean that I
+kind of lost track of why we were proving those 3 things. Like why does it
+matter that the shape parameter is bounded?
 
 Was \theta_\infty defined?
 
-Are there different benefits to the 3 arguments for the "second step"? E.g. holds under different conditions. (I guess you kind of say this by saying the 1st one is heuristic).
-Might want to clarify this up front).
+Are there different benefits to the 3 arguments for the "second step"? E.g.
+holds under different conditions. (I guess you kind of say this by saying the
+1st one is heuristic). Might want to clarify this up front).
 
-"Insignificance is always non robust" This seems like a really counterintuitive thing... I would spend significantly more time on this. Intuitively why is it true, and what are the consequences? I think this is going to surprise and amaze a lot of people. Sort of like "ok our tool is cool, and you might think that our theory is just theory, but wow does it have some surprising consequences"
+"Insignificance is always non robust" This seems like a really counterintuitive
+thing... I would spend significantly more time on this. Intuitively why is it
+true, and what are the consequences? I think this is going to surprise and amaze
+a lot of people. Sort of like "ok our tool is cool, and you might think that our
+theory is just theory, but wow does it have some surprising consequences"
 
-Examples of the conditions of Thm 1 being standard? Maybe say "like linear and logistic regression all satisfy these conditions under reasonable data generating processes"
-(reasonable like the covariates having full-rank covariate mtx)
+Examples of the conditions of Thm 1 being standard? Maybe say "like linear and
+logistic regression all satisfy these conditions under reasonable data
+generating processes" (reasonable like the covariates having full-rank covariate
+mtx)
 
-On results slide "the bolded entries show the ones where we actually achieved the change" then say "note that *all* entries are bolded, so our approximation is doing
-exactly what it's supposed to across the board" (OK you said this later, but I'd say it immediately after)
+On results slide "the bolded entries show the ones where we actually achieved
+the change" then say "note that *all* entries are bolded, so our approximation
+is doing exactly what it's supposed to across the board" (OK you said this
+later, but I'd say it immediately after)
 
-Question that I'd ask: do you have an idea of how economists might produce experiment designs that would robustify against data dropout? (either using the work you've done
-here or not)?
+Question that I'd ask: do you have an idea of how economists might produce
+experiment designs that would robustify against data dropout? (either using the
+work you've done here or not)?
