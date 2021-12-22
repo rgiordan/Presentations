@@ -80,10 +80,41 @@ G(\vec\theta, \d_{n}) =  \zP .
 %
 \end{align*}
 %
-\onslide<1->{
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+Original weights: $\onevec = (1,\ldots,1)$
+    \includegraphics[width=1.0\textwidth]{static_figures/orig_weights}
 Leave points out by setting their elements of $\w$ to zero.
-}
+    \includegraphics[width=1.0\textwidth]{static_figures/weights_loo}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+    \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {
+            \includegraphics[width=0.88\textwidth]{static_figures/e_beta_w}
+        };
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
+                    node[above,black,fill=white]
+                    {\small $\thetafun(\thetahat(\onevec))$};
+            \draw[blue, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
+                    node[left,black,fill=white]
+                    {\small $\thetafun(\thetahat(\w))$};
+            \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
+            \draw[blue, thick, <-] (0.75,0.55) -- ++(0.02,-0.1)
+                    node[below,black,fill=white]
+                    {\small Slope $ = \infl_n$};
+        \end{scope}
+    \end{tikzpicture}
+\end{center}
+\end{minipage}
 
+The slopes $\infl_n := \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}$ are values of the \textbf{empirical influence function}
+\citep{hampel1986robustbook}.  We call them ``influence scores.''
+
+\vspace{1em}
+$\thetahat(\w)$ well-defined even for continuous values of the weights!
 
 \end{frame}
 
@@ -97,55 +128,31 @@ Leave points out by setting their elements of $\w$ to zero.
 
 \begin{frame}{Taylor series approximation.}
 %
-Is there a $\w$, with
-$\lfloor \alpha N \rfloor$ zeros, such that
-$\thetafun(\thetahat(\w)) - \thetafun(\thetahat) \ge \Delta$?
+\textbf{Problem: } How large can you make $\thetafun(\thetahat(\w))$
+leaving out no more than $\alphan$ points?  \textbf{Combinatorially hard!}
 
-\vspace{-0.5em}
-\hrulefill
-
+\vspace{1em}
 To simplify the search over $\w$, we form the Taylor series approximation:
 %
 \begin{align*}
-	\thetafun(\thetahat(\w)) - \thetafun(\thetahat)
+	\thetafun(\thetahat(\w))
 		&\approx
         \color{red}
-        \thetafunlin(\w) - \thetafun(\thetahat)
+        \thetafunlin(\w)
         \color{black}
-		:=  -
-        \sum_{n: \w_n = 0} \infl_n
+		:=  \thetafun(\thetahat(\onevec)) +
+        \sumn \infl_n (\w_n -1)
         \color{black}
-\textrm{, where }
-\infl_n := \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}.
 \end{align*}
 %
-\pause
-The values $\infl_n$ are the
-\textbf{``empirical influence function.''}
-%\citep{hampel1986robustbook}
-{\footnotesize \citep{hampel1986robustbook}}
 
-The $\infl_n$ can be \textbf{easily
-and automatically} computed from $\thetahat$.
-
-The approximation is
-\textbf{typically accurate}
-for small $\alpha$.
-
-\pause
-\vspace{-0.5em}
-\hrulefill
-
-Is there a $\w$, with
-$\lfloor \alpha N \rfloor$ zeros, such that
-$\color{red} \thetafunlin(\w) - \thetafun(\thetahat) \color{black} \ge \Delta$?
-
-\pause
 \vspace{1em}
+\textbf{Approximate solution: } How large can you make $\thetafunlin(\w)$
+leaving out no more than $\alphan$ points?  \textbf{Easy! }
 
-\textbf{Easy!}
-The most influential points for $\thetafunlin(\w)$ have the most negative
-$\infl_n$.
+\vspace{1em}
+The most influential points for $\thetafunlin(\w)$ have the
+most negative $\infl_n$.
 
 \end{frame}
 
