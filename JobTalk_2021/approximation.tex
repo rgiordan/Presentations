@@ -113,8 +113,8 @@ Leave points out by setting their elements of $\w$ to zero.
 The slopes $\infl_n := \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}$ are values of the \textbf{empirical influence function}
 \citep{hampel1986robustbook}.  We call them ``influence scores.''
 
-\vspace{1em}
-$\thetahat(\w)$ well-defined even for continuous values of the weights!
+% \vspace{1em}
+% $\thetahat(\w)$ well-defined even for continuous values of the weights!
 
 \end{frame}
 
@@ -131,6 +131,8 @@ $\thetahat(\w)$ well-defined even for continuous values of the weights!
 \textbf{Problem: } How large can you make $\thetafun(\thetahat(\w))$
 leaving out no more than $\alphan$ points?  \textbf{Combinatorially hard!}
 
+\hrulefill
+
 \vspace{1em}
 To simplify the search over $\w$, we form the Taylor series approximation:
 %
@@ -145,14 +147,29 @@ To simplify the search over $\w$, we form the Taylor series approximation:
         \color{black}
 \end{align*}
 %
-
-\vspace{1em}
 \textbf{Approximate solution: } How large can you make $\thetafunlin(\w)$
 leaving out no more than $\alphan$ points?  \textbf{Easy! }
 
 \vspace{1em}
 The most influential points for $\thetafunlin(\w)$ have the
 most negative $\infl_n$.
+
+\hrulefill
+
+\vspace{1em}
+\textbf{How to compute the influence scores $\infl_n$? }
+
+By the chain rule,
+$\infl_n = \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}
+= \fracat{\dee \thetafun(\theta)}
+    {\dee \theta^T}{\thetahat}
+  \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec}$.
+
+The \textbf{implicit function theorem} expresses $\fracat{\partial
+\thetahat(\w)}{\partial \w_n}{\onevec}$ as a linear system.
+
+Fully automatible with \textbf{automatic differentiation}
+\citep{baydin2017automatic}.
 
 \end{frame}
 
@@ -171,18 +188,21 @@ most negative $\infl_n$.
 \textbf{Procedure:}
 
 \begin{enumerate}
-    \item<2-> Compute the ``original'' estimator, $\thetahat$ and
-    $\thetafun(\thetahat)$.
-    \item<3-> Compute and sort the influence scores,
+    \item<2-> Compute the ``original'' estimator, $\thetahat(\onevec)$ and
+    $\thetafun(\thetahat(\onevec))$.
+    \item<3-> Overturn conclusion if
+        $\thetafun(\thetahat(\w^*)) - \thetafun(\thetahat(\onevec)) \ge \Delta$
+        for some $\w^*$.
+    \item<4-> Compute and sort the influence scores,
         $\infl_{(1)} \le \infl_{(2)} \le \ldots \le \infl_{(N)}$.
-    \item<4-> Let $\w^*$ leave out the data corresponding to
-    $\infl_{(1)},  \ldots , \infl_{(\lfloor \alpha N \rfloor)}$.
+    \item<5-> Let $\w^*$ leave out the data corresponding to
+    $\infl_{(1)},  \ldots , \infl_{(\alphan)}$.
     %the $\lfloor \alpha N \rfloor$ most negative influence scores.
-    \item<5-> Report non-robustness if
+    \item<6-> Report non-robustness if
         $ \Delta \le \thetafunlin(\w^*) - \thetafun(\thetahat)  =
-            - \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}$.
-    \item<6-> \textbf{Optional: } Compute $\thetahat(\w^*)$, and verify
-    that $\Delta \le \thetafun(\thetahat(\w^*)) - \thetafun(\thetahat)$.
+            - \sum_{n=1}^{\alphan} \infl_{(n)}$.
+    \item<7-> \textbf{Optional: } Compute $\thetahat(\w^*)$, and verify
+    that $\thetafun(\thetahat(\w^*)) - \thetafun(\thetahat) \ge \Delta$.
 \end{enumerate}
 
 % \onslide<7->{
@@ -206,83 +226,83 @@ most negative $\infl_n$.
 \end{frame}
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{Computing the influence function.}
-
-How to compute
-$\infl_n := \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}$?
 %
-Recall $\sumn \w_{n} G(\thetahat(\w), \d_{n}) =  \zP$.
-
-\textbf{Step zero:}
-Implement software to compute $G(\theta, \d_{n})$ and
-$\thetafun(\theta)$. Find $\thetahat$.
-
-\textbf{Step one:}
-By the chain rule,
-$\infl_n = \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}
-= \fracat{\dee \thetafun(\theta)}
-    {\dee \theta^T}{\thetahat}
-  \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec}$.
-
-\textbf{Step two:}
-By the implicit function theorem:
 %
-\begin{align*}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec} ={}
-\frac{1}{N}
-\left(
-  \frac{1}{N}
-  \sum_{n'=1}^N
-    \frac{\partial}{\partial \theta^T} G(\vec\theta, \d_{n'})
-        \Big\vert_{\thetahat}
-\right)^{-1} G(\thetahat, \d_{n}).
 %
-\end{align*}
+% \begin{frame}{Computing the influence function.}
 %
-
-\textbf{Step three:}
+% How to compute
+% $\infl_n := \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}$?
+% %
+% Recall $\sumn \w_{n} G(\thetahat(\w), \d_{n}) =  \zP$.
 %
-Use \textit{automatic differentiation} on $\phi(\theta)$ and $G(\theta, \d_{n})$
-from step zero to compute $\frac{\partial \thetafun(\theta)}{\partial \theta^T}$
-and $\frac{\partial}{\partial \theta^T} G(\vec\theta, \d_{n})$.
-% Put the pieces together.
-
-\hrulefill
-
-\begin{itemize}
-    \item The user does step zero.  The rest is automatic.
-    \item The primary computational expense is the Hessian inverse.
-    \item Automatic differentiation is the chain rule applied to a program.
-     %(not symbolic, nor numerical).
-    \item Typically $\infl_n = O(N^{-1})$.
-    %\item Note that $\infl_n  = O_p(N^{-1})$ by step two (typically).
-\end{itemize}
-
-
-% \onslide<7->{
-% We have an \texttt{R} package, \texttt{rgiordan/zaminfluence},
-%     for OLS and IV.}
-
-% \onslide<7->{
-% \textbf{The above procedure can be automated using:}
-% }
+% \textbf{Step zero:}
+% Implement software to compute $G(\theta, \d_{n})$ and
+% $\thetafun(\theta)$. Find $\thetahat$.
 %
+% \textbf{Step one:}
+% By the chain rule,
+% $\infl_n = \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}
+% = \fracat{\dee \thetafun(\theta)}
+%     {\dee \theta^T}{\thetahat}
+%   \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec}$.
+%
+% \textbf{Step two:}
+% By the implicit function theorem:
+% %
+% \begin{align*}
+% %
+% \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec} ={}
+% \frac{1}{N}
+% \left(
+%   \frac{1}{N}
+%   \sum_{n'=1}^N
+%     \frac{\partial}{\partial \theta^T} G(\vec\theta, \d_{n'})
+%         \Big\vert_{\thetahat}
+% \right)^{-1} G(\thetahat, \d_{n}).
+% %
+% \end{align*}
+% %
+%
+% \textbf{Step three:}
+% %
+% Use \textit{automatic differentiation} on $\phi(\theta)$ and $G(\theta, \d_{n})$
+% from step zero to compute $\frac{\partial \thetafun(\theta)}{\partial \theta^T}$
+% and $\frac{\partial}{\partial \theta^T} G(\vec\theta, \d_{n})$.
+% % Put the pieces together.
+%
+% \hrulefill
 %
 % \begin{itemize}
-%     \item<8-> Code to compute $G(\theta, \d_n)$ and $\thetafun$,
-%     \item<9-> The ``base solution'' $\thetahat(\onevec)$, and
-%     \item<10-> Automatic differentiation. \citep{baydin2017automatic}
-%     \item<11-> E.g., our \texttt{R} package, \texttt{rgiordan/zaminfluence}
-%         for OLS and IV
+%     \item The user does step zero.  The rest is automatic.
+%     \item The primary computational expense is the Hessian inverse.
+%     \item Automatic differentiation is the chain rule applied to a program.
+%      %(not symbolic, nor numerical).
+%     \item Typically $\infl_n = O(N^{-1})$.
+%     %\item Note that $\infl_n  = O_p(N^{-1})$ by step two (typically).
 % \end{itemize}
-
-
-\end{frame}
+%
+%
+% % \onslide<7->{
+% % We have an \texttt{R} package, \texttt{rgiordan/zaminfluence},
+% %     for OLS and IV.}
+%
+% % \onslide<7->{
+% % \textbf{The above procedure can be automated using:}
+% % }
+% %
+% %
+% % \begin{itemize}
+% %     \item<8-> Code to compute $G(\theta, \d_n)$ and $\thetafun$,
+% %     \item<9-> The ``base solution'' $\thetahat(\onevec)$, and
+% %     \item<10-> Automatic differentiation. \citep{baydin2017automatic}
+% %     \item<11-> E.g., our \texttt{R} package, \texttt{rgiordan/zaminfluence}
+% %         for OLS and IV
+% % \end{itemize}
+%
+%
+% \end{frame}
