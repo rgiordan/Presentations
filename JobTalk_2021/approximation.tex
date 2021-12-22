@@ -1,4 +1,67 @@
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Which estimators do we study?}
+
+\textbf{Z-estimators.  }
+Suppose we have $N$ data points $\dvec = \d_{1}, \ldots, \d_{N}$.  Then:
+%
+\begin{align*}
+%
+\thetahat :=
+\thetavec \,\, \textrm{ such that } \,\,
+\sumn
+G(\thetavec, \d_{n}) =  \zP .
+%
+\end{align*}
+%
+% These are ``Z-estimators,'' i.e., roots of estimating equations.
+%
+\textbf{Examples:} MLE, OLS, VB, \&c (all minimizers of smooth empirical loss).
+
+\hrulefill
+
+% \vspace{1em}
+\textbf{Function of interest.  }Qualitative decision
+based on $\thetafun(\thetahat) \in \mathbb{R}$.  E.g.:
+%\textbf{Examples:}
+\begin{itemize}
+\item A particular component: $\thetafun(\theta) = \theta_d$
+\item The end of a confidence interval:
+    $\thetafun(\theta) = \theta_d + \frac{1.96}{\sqrt{N}} \hat\sigma(\thetahat)$
+\end{itemize}
+
+\hrulefill
+
+Fix a proportion $0 < \alpha \ll 1$ of points to drop and
+%
+find a set $\nset \subset \left\{1, \ldots N\right\}$ with $|\nset| \le
+\alphan$ that extremizes $\thetafun(\thetahat)$ when dropped.
+%
+%
+\begin{itemize}
+    \item \textbf{Problem: }  There are many sets with $|\nset| \le \alphan$.
+        \begin{itemize}
+        \item E.g., in \citet{angelucci2015microcredit},
+            ${16,560 \choose 15} \approx 1.5 \cdot 10^{51}$
+        \end{itemize}
+    \item \textbf{Problem: } Evaluating $\thetafun(\thetahat(\dvec_{-\nset}))$
+        requires an estimation problem.
+        \begin{itemize}
+        \item E.g., in \citet{angelucci2015microcredit} computing the OLS
+            estimator.
+        \item Other examples are even harder (VB, machine learning)
+        \end{itemize}
+\end{itemize}
+%
+\textbf{An approximation is needed!}
+\end{frame}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -21,126 +84,10 @@ G(\vec\theta, \d_{n}) =  \zP .
 Leave points out by setting their elements of $\w$ to zero.
 }
 
-\onslide<1->{
-These are ``Z-estimators,'' i.e., roots of estimating equations.
-
-Examples: all minimizers of empirical loss (OLS, MLE, VB), and more.
-}
-
 
 \end{frame}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}[t]{Which estimators do we study?}
-
-Suppose we have $N$ data points $\d_{1}, \ldots, \d_{N}$.  Then:
-%
-\begin{align*}
-%
-\thetahat(\w) :=
-\vec\theta \,\, \textrm{ such that } \,\,
-\sumn
-\w_{n} G(\vec\theta, \d_{n}) =  \zP .
-%
-\end{align*}
-%
-{
-Leave points out by setting their elements of $\w$ to zero.
-}
-
-\onslide<2->{
-\hrulefill
-}
-%
-%
-% \vspace{1em}
-
-Fix a quantity of interest, $\phi(\vec\theta)$.
-
-Let the \textbf{``signal''}, $\Delta$, be a ``large'' change in $\phi$.
-
-\begin{columns}
-%
-\begin{column}{0.45\linewidth}
-    \onslide<2->{
-    Examples:
-    %
-    \begin{align*}
-        \phi(\vec\theta) =&{} \vec\theta_p\\
-        \phi(\vec\theta) =&{} \vec\theta_p +
-            \frac{1.96}{\sqrt{N}} \hat\sigma_\phi(\vec\theta)
-    \end{align*}
-    }
-\end{column}
-%
-\begin{column}{0.45\linewidth}
-    \onslide<4->{
-    \includegraphics[width=0.95\linewidth]{static_figures/adversarial_robustness_example_phi_flipped.png}
-    }
-\end{column}
-\end{columns}
-
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}[t]{Which estimators do we study?}
-
-Suppose we have $N$ data points $\d_{1}, \ldots, \d_{N}$.  Then:
-%
-\begin{align*}
-%
-\thetahat(\w) :=
-\vec\theta \,\, \textrm{ such that } \,\,
-\sumn
-\w_{n} G(\vec\theta, \d_{n}) =  \zP .
-%
-\end{align*}
-%
-Leave points out by setting their elements of $\w$ to zero.
-
-\hrulefill
-
-%\vspace{1em}
-%
-Fix a quantity of interest, $\phi(\vec\theta)$.
-
-Let the \textbf{``signal''}, $\Delta$, be a ``large'' change in $\phi$.
-
-\hrulefill
-
-Can we reverse our conclusion by dropping $\lfloor \alpha N \rfloor$
-datapoints? \pause
-
-\vspace{1em}
-$\Leftrightarrow$
-\vspace{1em}
-
-Is there a $\w$, with
-$\lfloor \alpha N \rfloor$ zeros, such that
-$\thetafun(\thetahat(\w)) - \thetafun(\thetahat) \ge \Delta$?
-
-\vspace{1em}
-
-\textbf{Hard!}
-Evaluating $\thetahat(\w)$ is costly and lots of $\w$
-have $\lfloor \alpha N \rfloor$ zeros.
-
-% To simplify the search over $\w$, we will approximate
-% $\w \mapsto \thetafun(\thetahat(\w))$.
-
-\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
