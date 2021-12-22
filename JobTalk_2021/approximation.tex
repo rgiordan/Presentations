@@ -67,8 +67,7 @@ find a set $\nset \subset \left\{1, \ldots N\right\}$ with $|\nset| \le
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{Which estimators do we study?}
-
-Suppose we have $N$ data points $\d_{1}, \ldots, \d_{N}$.  Then:
+% Suppose we have $N$ data points $\d_{1}, \ldots, \d_{N}$.  Then:
 %
 \begin{align*}
 %
@@ -116,6 +115,10 @@ The slopes $\infl_n := \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}
 % \vspace{1em}
 % $\thetahat(\w)$ well-defined even for continuous values of the weights!
 
+\vspace{1em}
+Second-order derivatives control the error of
+the linear approximation.
+
 \end{frame}
 
 
@@ -156,8 +159,24 @@ most negative $\infl_n$.
 
 \hrulefill
 
+We provide \textbf{finite-sample theory} showing that
+$\abs{\thetafun(\thetahat(\w)) - \thetafunlin(\w)} =
+O\left(\vnorm{\frac{1}{N}(\w - \onevec)}^2_2\right) =
+O\left(\alpha\right)$ as $\alpha \rightarrow 0$.
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Taylor series approximation.}
+
 \vspace{1em}
 \textbf{How to compute the influence scores $\infl_n$? }
+
 
 By the chain rule,
 $\infl_n = \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}
@@ -165,10 +184,23 @@ $\infl_n = \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}
     {\dee \theta^T}{\thetahat}
   \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec}$.
 
+Recall that
+%\begin{align*}
+%
+$\thetahat(\w) :=
+\vec\theta \,\, \textrm{ such that } \,\,
+\sumn \w_{n}  G(\vec\theta, \d_{n}) =  \zP$.
+%
+%\end{align*}
+%
+
 The \textbf{implicit function theorem} expresses $\fracat{\partial
 \thetahat(\w)}{\partial \w_n}{\onevec}$ as a linear system.
 
-Fully automatible with \textbf{automatic differentiation}
+\vspace{1em}
+Computation of $\infl_n$ is fully automatible from a
+software implemenation of $G(\cdot, \cdot)$ and $\thetafun(\cdot)$ with
+\textbf{automatic differentiation}
 \citep{baydin2017automatic}.
 
 \end{frame}
@@ -199,8 +231,8 @@ Fully automatible with \textbf{automatic differentiation}
     $\infl_{(1)},  \ldots , \infl_{(\alphan)}$.
     %the $\lfloor \alpha N \rfloor$ most negative influence scores.
     \item<6-> Report non-robustness if
-        $ \Delta \le \thetafunlin(\w^*) - \thetafun(\thetahat)  =
-            - \sum_{n=1}^{\alphan} \infl_{(n)}$.
+        $ \thetafunlin(\w^*) - \thetafun(\thetahat)  =
+            - \sum_{n=1}^{\alphan} \infl_{(n)} \ge \Delta$.
     \item<7-> \textbf{Optional: } Compute $\thetahat(\w^*)$, and verify
     that $\thetafun(\thetahat(\w^*)) - \thetafun(\thetahat) \ge \Delta$.
 \end{enumerate}
