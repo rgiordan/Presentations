@@ -1,28 +1,40 @@
 \begin{frame}{Dropping data: Motivation}
 
-All the time in data science, we:
-
-\begin{itemize}
-    \item Gather + clean exchangeable data,
-    \item Specify and fit a model, and
-    \item Drawn a qualitative conclusion from your fit
-    \\(e.g., based on the sign / significance of
-        some estimated parameter).
-\end{itemize}
+More data \& cheaper computation $\Rightarrow$\\
+Statistical analyses are
+playing larger roles in decision making.
 
 \vspace{1em}
-Decisions are important: We want \textbf{trustworthy} conclusions.
-
+Decisions are important: We want \textbf{trustworthy} conclusions.\\
 Data / models not always perfect: We want \textbf{robust} conclusions.
 
-\vspace{1em}
-\textbf{Running example:} \citet{angelucci2015microcredit}, a
-randomized controlled trial study of the efficacy of microcredit in Mexico based
-on 16,560 data points.
+% \begin{itemize}
+%     \item Gather + clean exchangeable data,
+%     \item Specify and fit a model, and
+%     \item Drawn a qualitative conclusion from your fit
+%     \\(e.g., based on the sign / significance of
+%         some estimated parameter).
+% \end{itemize}
 
 \vspace{1em}
 Would you be concerned if you could \textbf{reverse your conclusion} by removing
 a \textbf{small proportion} (say, $0.1\%$) of your data?
+
+\vspace{1em}
+\textbf{Running example:} \citet{angelucci2015microcredit}, a
+randomized controlled trial study of the efficacy of microcredit based
+on 16,560 data points.  \\We can reverse the studies qualitative
+conclusions by removing $15$ observations ($< 0.1 \%$ of the data).
+
+\vspace{1em}
+\textbf{How do we find sets of influential points?}  Difficult in general!\\
+
+\vspace{1em}
+We provide a \textbf{automatic approximation} with finite-sample
+guarantees.
+
+\vspace{1em}
+Studying the approximation reveals the causes of non-robustness.
 
 \end{frame}
 
@@ -46,13 +58,34 @@ The variable ``Beta" estimates the effect of microcredit in US dollars.
 \hspace{0.05em} Original result & \onslide<2->{0} & -4.55 (5.88) \\ \hline
 \onslide<2-> {\hspace{0.05em} Change sign & 1 & 0.4 (3.19) \\\hline }
 \onslide<3-> {Change significance & 14 & -10.96 (5.57) \\\hline }
-\onslide<4-> {Change both & 15 & 7.03 (2.55) \\\hline }
+\onslide<4-> {Change sign and significance & 15 & 7.03 (2.55) \\\hline }
 \end{tabular}
 \end{table}
 
 \vspace{-1em}
-\onslide<5-> { By removing very few data points ($15 / 16560 \approx 0.1\% $),
-we can reverse the qualitative conclusions of the original study! }
+\onslide<1-> { \textbf{Original conclusion: }\\
+There is no evidence that microcredit is effective.}
+
+\vspace{1em}
+\onslide<5-> { \textbf{Potential conclusions after data dropping: }\\
+The effect of microcredit is positive (negative) \&
+statistically significant.}
+
+% \vspace{1em}
+% \onslide<6-> { By removing very few data points ($15 / 16560 \approx 0.1\% $),
+% we can reverse the qualitative conclusions of the original study! }
+
+\vspace{1em}
+\onslide<6-> { \textbf{The culprit is signal to noise ratio. }\\
+By the end of the talk, we will see that the sensitivity is due to
+\begin{itemize}
+\item High variability of the outcome (hosehold profit) relative to
+\item A small signal driving the conclusion
+(statistical significance)
+\end{itemize}
+}
+
+
 
 \end{frame}
 
