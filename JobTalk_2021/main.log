@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  22 DEC 2021 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  22 DEC 2021 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1603,11 +1603,73 @@ Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 122.
 
 ]) [24
 
-] [25
+] (./examples.tex
+<figure/sim-approx-normal-1.png, id=216, 614.295pt x 289.08pt>
+File: figure/sim-approx-normal-1.png Graphic file (type png)
+<use figure/sim-approx-normal-1.png>
+Package pdftex.def Info: figure/sim-approx-normal-1.png  used on input line 22.
 
-] [26
+(pdftex.def)             Requested size: 301.14778pt x 141.65926pt.
+ [25
 
-] (./main.bbl) [27
+ <./figure/sim-approx-normal-1.png (PNG copy)>]
+<static_figures/mx_refit_example.png, id=225, 949.5475pt x 568.1225pt>
+File: static_figures/mx_refit_example.png Graphic file (type png)
+<use static_figures/mx_refit_example.png>
+Package pdftex.def Info: static_figures/mx_refit_example.png  used on input lin
+e 36.
+(pdftex.def)             Requested size: 276.559pt x 165.46214pt.
+ [26
+
+ <./static_figures/mx_refit_example.png>]
+Overfull \vbox (10.04205pt too high) detected at line 53
+ []
+
+[27
+
+] [28
+
+]) [29
+
+] (./determination.tex
+<figure/sim-grid-normal-1.png, id=253, 614.295pt x 240.9pt>
+File: figure/sim-grid-normal-1.png Graphic file (type png)
+<use figure/sim-grid-normal-1.png>
+Package pdftex.def Info: figure/sim-grid-normal-1.png  used on input line 25.
+(pdftex.def)             Requested size: 301.14778pt x 117.99791pt.
+ [30
+
+ <./figure/sim-grid-normal-1.png (PNG copy)>]
+<static_figures/simple_infl_example.png, id=263, 361.35pt x 252.945pt>
+File: static_figures/simple_infl_example.png Graphic file (type png)
+<use static_figures/simple_infl_example.png>
+Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
+line 85.
+(pdftex.def)             Requested size: 195.74094pt x 137.02054pt.
+
+Overfull \vbox (5.1333pt too high) detected at line 85
+ []
+
+[31
+
+ <./static_figures/simple_infl_example.png (PNG copy)>] [32
+
+] [33
+
+] [34
+
+]
+[35
+
+] [36
+
+] [37
+
+] [38
+
+]) [39
+
+] (./main.bbl) [40
 
 ]
 \tf@nav=\write6
@@ -1626,40 +1688,48 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 36107 strings out of 483065
- 839441 string characters out of 5963550
- 1212113 words of memory out of 5000000
- 50316 multiletter control sequences out of 15000+600000
- 546215 words of font info for 77 fonts, out of 8000000 for 9000
+ 36251 strings out of 483065
+ 842282 string characters out of 5963550
+ 1213367 words of memory out of 5000000
+ 50419 multiletter control sequences out of 15000+600000
+ 547143 words of font info for 81 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 64i,15n,103p,771b,927s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,15n,103p,771b,977s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (27 pages, 306531 bytes).
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on main.pdf (40 pages, 641527 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 345 compressed objects within 4 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

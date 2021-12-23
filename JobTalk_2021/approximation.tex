@@ -203,10 +203,11 @@ software implemenation of $G(\cdot, \cdot)$ and $\thetafun(\cdot)$ with
 \textbf{automatic differentiation}
 \citep{baydin2017automatic}.
 
+\vspace{1em}
+We have an \texttt{R} package, \texttt{rgiordan/zaminfluence},
+for OLS and IV.
+
 \end{frame}
-
-
-
 
 
 
@@ -237,104 +238,4 @@ software implemenation of $G(\cdot, \cdot)$ and $\thetafun(\cdot)$ with
     that $\thetafun(\thetahat(\w^*)) - \thetafun(\thetahat) \ge \Delta$.
 \end{enumerate}
 
-% \onslide<7->{
-% We have an \texttt{R} package, \texttt{rgiordan/zaminfluence},
-%     for OLS and IV.}
-
-% \onslide<7->{
-% \textbf{The above procedure can be automated using:}
-% }
-%
-%
-% \begin{itemize}
-%     \item<8-> Code to compute $G(\theta, \d_n)$ and $\thetafun$,
-%     \item<9-> The ``base solution'' $\thetahat(\onevec)$, and
-%     \item<10-> Automatic differentiation. \citep{baydin2017automatic}
-%     \item<11-> E.g., our \texttt{R} package, \texttt{rgiordan/zaminfluence}
-%         for OLS and IV
-% \end{itemize}
-
-
 \end{frame}
-
-
-%
-%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%
-% \begin{frame}{Computing the influence function.}
-%
-% How to compute
-% $\infl_n := \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}$?
-% %
-% Recall $\sumn \w_{n} G(\thetahat(\w), \d_{n}) =  \zP$.
-%
-% \textbf{Step zero:}
-% Implement software to compute $G(\theta, \d_{n})$ and
-% $\thetafun(\theta)$. Find $\thetahat$.
-%
-% \textbf{Step one:}
-% By the chain rule,
-% $\infl_n = \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}
-% = \fracat{\dee \thetafun(\theta)}
-%     {\dee \theta^T}{\thetahat}
-%   \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec}$.
-%
-% \textbf{Step two:}
-% By the implicit function theorem:
-% %
-% \begin{align*}
-% %
-% \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec} ={}
-% \frac{1}{N}
-% \left(
-%   \frac{1}{N}
-%   \sum_{n'=1}^N
-%     \frac{\partial}{\partial \theta^T} G(\vec\theta, \d_{n'})
-%         \Big\vert_{\thetahat}
-% \right)^{-1} G(\thetahat, \d_{n}).
-% %
-% \end{align*}
-% %
-%
-% \textbf{Step three:}
-% %
-% Use \textit{automatic differentiation} on $\phi(\theta)$ and $G(\theta, \d_{n})$
-% from step zero to compute $\frac{\partial \thetafun(\theta)}{\partial \theta^T}$
-% and $\frac{\partial}{\partial \theta^T} G(\vec\theta, \d_{n})$.
-% % Put the pieces together.
-%
-% \hrulefill
-%
-% \begin{itemize}
-%     \item The user does step zero.  The rest is automatic.
-%     \item The primary computational expense is the Hessian inverse.
-%     \item Automatic differentiation is the chain rule applied to a program.
-%      %(not symbolic, nor numerical).
-%     \item Typically $\infl_n = O(N^{-1})$.
-%     %\item Note that $\infl_n  = O_p(N^{-1})$ by step two (typically).
-% \end{itemize}
-%
-%
-% % \onslide<7->{
-% % We have an \texttt{R} package, \texttt{rgiordan/zaminfluence},
-% %     for OLS and IV.}
-%
-% % \onslide<7->{
-% % \textbf{The above procedure can be automated using:}
-% % }
-% %
-% %
-% % \begin{itemize}
-% %     \item<8-> Code to compute $G(\theta, \d_n)$ and $\thetafun$,
-% %     \item<9-> The ``base solution'' $\thetahat(\onevec)$, and
-% %     \item<10-> Automatic differentiation. \citep{baydin2017automatic}
-% %     \item<11-> E.g., our \texttt{R} package, \texttt{rgiordan/zaminfluence}
-% %         for OLS and IV
-% % \end{itemize}
-%
-%
-% \end{frame}
