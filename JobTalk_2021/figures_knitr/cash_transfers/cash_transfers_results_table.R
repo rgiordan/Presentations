@@ -31,7 +31,7 @@ base_df <-
 
 table_df <-
   FormatRefitTable(results_df, base_df) %>%
-  filter(study_case %in% c("Non-poor, period 10", "Poor, period 10")) %>%
+  filter(study_case %in% c("Poor, period 10")) %>%
   mutate(study_case=ordered(study_case))
 
 RenderLatexTable(

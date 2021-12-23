@@ -47,13 +47,13 @@ source("figures_knitr/cash_transfers/cash_transfers_results_table.R",
 %%%%%%%%%%%%%%%%%%%
 % OHIE
 
-% \newcommand{\OHIEResultsTable}{
-% % \input{figures/OHIE_table_9_IV_re_run_table.tex}
-% <<OHIE_results_table, cache=ohie_cache, results='asis'>>=
-% source("figures_knitr/OHIE/OHIE-table_results.R",
-%        echo=knitr_debug, print.eval=TRUE)
-% @
-% }
+\newcommand{\OHIEResultsTable}{
+% \input{figures/OHIE_table_9_IV_re_run_table.tex}
+<<OHIE_results_table, cache=ohie_cache, results='asis'>>=
+source("figures_knitr/OHIE/OHIE-table_results.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+}
 
 
 %%%%%%%%%%%%%%%%%%%

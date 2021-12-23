@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -26,6 +26,15 @@ A.~Baydin, B.~Pearlmutter, A.~Radul, and J.~Siskind.
 \newblock Automatic differentiation in machine learning: {A} survey.
 \newblock \emph{The Journal of Machine Learning Research}, 18\penalty0
   (1):\penalty0 5595--5637, 2017.
+
+\bibitem[Finkelstein et~al.(2012)Finkelstein, Taubman, Wright, Bernstein,
+  Gruber, Newhouse, Allen, Baicker, and Group]{finkelstein2012oregon}
+A.~Finkelstein, S.~Taubman, B.~Wright, M.~Bernstein, J.~Gruber, J.~Newhouse,
+  H.~Allen, K.~Baicker, and Oregon Health~Study Group.
+\newblock The {O}regon health insurance experiment: {E}vidence from the first
+  year.
+\newblock \emph{The Quarterly Journal of Economics}, 127\penalty0 (3):\penalty0
+  1057--1106, 2012.
 
 \bibitem[Hampel(1986)]{hampel1986robustbook}
 F.~Hampel.

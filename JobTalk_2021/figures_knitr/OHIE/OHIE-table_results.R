@@ -25,15 +25,26 @@ table_df <- AddStudyCase(
   ohie_env$results_df %>% filter(analysis=="rerun"))
 base_df <- AddStudyCase(ohie_env$base_df)
 
-filter(table_df, method == "iv") %>%
-  FormatRefitTable(base_df) %>%
-  RenderLatexTable(
-    label="ohie_profit_results_iv",
-    caption=paste0(
-        "Medicaid profit results with IV for a range of outcome ",
-        "variables.  ",
-        GetTableCaptionBoilerplate())
-    )
+# Only print a single outcome
+table_df <-
+  table_df %>%
+  filter(study_case=="Health notpoor 12m") %>%
+  mutate(study_case=ordered(study_case))
+
+base_df <-
+  base_df %>%
+  filter(study_case=="Health notpoor 12m") %>%
+  mutate(study_case=ordered(study_case))
+
+# filter(table_df, method == "iv") %>%
+#   FormatRefitTable(base_df) %>%
+#   RenderLatexTable(
+#     label="ohie_profit_results_iv",
+#     caption=paste0(
+#         "Medicaid profit results with IV for a range of outcome ",
+#         "variables.  ",
+#         GetTableCaptionBoilerplate())
+#     )
 
 
 filter(table_df, method == "regression") %>%
@@ -41,7 +52,10 @@ filter(table_df, method == "regression") %>%
   RenderLatexTable(
     label="ohie_profit_results_reg",
     caption=paste0(
-        "Medicaid profit results with OLS for a range of outcome ",
-        "variables.  ",
-        GetTableCaptionBoilerplate())
+        "Medicaid profit results \\citep{finkelstein2012oregon}")
     )
+
+    # caption=paste0(
+    #     "Medicaid profit results with OLS for a range of outcome ",
+    #     "variables.  ",
+    #     GetTableCaptionBoilerplate())

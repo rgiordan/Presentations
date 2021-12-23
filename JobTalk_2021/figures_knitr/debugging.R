@@ -19,6 +19,12 @@ source(file.path(paper_directory,
        echo=knitr_debug, print.eval=TRUE)
 
 
+
 source(file.path(paper_directory,
                  "figures_knitr/cash_transfers/cash_transfers_results_table.R"),
+       echo=knitr_debug, print.eval=TRUE)
+
+
+source(file.path(paper_directory,
+                 "figures_knitr/OHIE/OHIE-table_results.R"),
        echo=knitr_debug, print.eval=TRUE)
