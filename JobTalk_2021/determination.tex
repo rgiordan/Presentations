@@ -76,18 +76,7 @@ $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Corollaries.}
-
-% {\small
-% \textbf{Key quantities:}\\
-% \pause $\alpha$  = The proportion of left out points\\
-% \pause $\Delta$  = The signal = The change in $\phi$ that would alter your
-% conclusion\\
-% \pause $\noise^2$ = The noise = A consistent estimator of
-% $\mathrm{Var}(\sqrt{N}\phi)$\\
-% \pause $\shape$ =
-%     The shape = Converges to a nonzero constant, $\le \sqrt{\alpha(1-\alpha)}$\\
-% }
+\begin{frame}[t]{Example.}
 
 Report non-robustness if:
 %
@@ -101,7 +90,62 @@ Report non-robustness if:
 %
 \end{align*}
 %
-We call $\frac{\Delta}{\noise}$ the ``signal to noise ratio.''
+The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
+determines sensitivity to data dropping.
+
+\hrulefill
+
+\onslide<1->{
+\footnotesize
+\OHIEResultsTable{}
+}
+\vspace{-1em}
+Let's analyze with $\alpha = 0.01 = 1\%$.
+%
+\begin{align*}
+%
+\begin{array}{rllrll}
+\thetafun(\thetahat) ={}& -0.029  &\textrm{(Increase QOI by defn)}
+    &   \Delta ={}& 0.029 \\
+\noise ={}& 0.766 & \textrm{(Noise)}
+        & \frac{1}{\sqrt{N}} \noise ={}& 0.005 &
+        \textrm{(SE)} \\
+\shape ={}& 0.046   &   \textrm{(Shape)}
+    & \frac{1.96}{\sqrt{N}}  ={}& 0.0128
+    & \rightarrow 0 \textrm{ as }N \rightarrow \infty\\
+\shape \noise ={}& 0.035 & \textrm{(Data dropping sensitivity)}
+    & \frac{1.96}{\sqrt{N}} \noise  ={}& 0.010
+    & \textrm{(SE sensitivity)}\\
+\end{array}
+% %
+\end{align*}
+%
+The noise is much larger than the signal $\Rightarrow$
+Sensitive to data dropping.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Corollaries.}
+%
+Report non-robustness if:
+%
+\begin{align*}
+%
+\thetafunlin(\w^*) - \thetafun(\thetahat)  = \noise \shape \ge \Delta
+\quad\quad
+\Leftrightarrow
+\quad\quad
+\frac{\Delta}{\noise} \le \shape.
+%
+\end{align*}
+%
+The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
+determines sensitivity to data dropping.
 
 
 \hrulefill
@@ -135,7 +179,7 @@ $\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}}$.
 
 \pause
 \vspace{0.5em}
-\textbf{Corollary:  Insignificance is always non-robust.}
+\textbf{Corollary:  Statistical insignificance is asymptotically non-robust.}
 %\vspace{-0.4em}
 
 Take $\Delta = \frac{1.96 \hat \sigma_\phi}{\sqrt{N}} \rightarrow 0 \le
@@ -146,6 +190,6 @@ Take $\Delta = \frac{1.96 \hat \sigma_\phi}{\sqrt{N}} \rightarrow 0 \le
 \textbf{Corollary:  Gross outliers primarily affect robustness
 through $\noise$.}
 %\vspace{-0.4em}
-Cauchy-Schwartz is tight when all the influence scores are the same.
+See paper for more details.
 
 \end{frame}

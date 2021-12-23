@@ -73,7 +73,7 @@ RenderLatexTable  <- function(table_df, fontsize="\\tiny",
     cat("\\begin{tabular}{|ccccc|}\n")
     cat("\\toprule\n")
     cat(study_case_label,
-        " & Original estimate ",
+        " & Original estimate (SE)",
         " & Target change ",
         " & Refit estimate ",
         " & Observations dropped ",
