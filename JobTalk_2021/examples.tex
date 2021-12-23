@@ -72,27 +72,3 @@ See \texttt{microcredit\_profit\_sandbox.R}.
 \OHIEResultsTable{}
 }
 \end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{A simulation}
-
-For $N=\SimNumObs$ data points, compute the OLS estimator from:
-
-\vspace{1em}
-\begin{tabularx}{\textwidth}{YYY}
-%\begin{tabular}{ccc}
-    Regressors  &   Residuals   &   Responses \\
-    $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
-    $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
-    $y_n = \SimTrueTheta x_n + \varepsilon_n$
-\end{tabularx}
-%
-
-\SimGridNormalGraph{}
-
-\end{frame}

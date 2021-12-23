@@ -1,5 +1,31 @@
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{A simulation}
+
+For $N=\SimNumObs$ data points, compute the OLS estimator from:
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{YYY}
+%\begin{tabular}{ccc}
+    Regressors  &   Residuals   &   Responses \\
+    $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
+    $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
+    $y_n = \SimTrueTheta x_n + \varepsilon_n$
+\end{tabularx}
+%
+
+\SimGridNormalGraph{}
+
+\end{frame}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -194,38 +220,5 @@ $
 
 % My work emphasizes \textbf{efficient computation of the derivative}
 % and \textbf{accuracy as an approximation to global robustness}.
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{Conclusion}
-
-\begin{itemize}
-\item You may be concerned if you could reverse your conclusion by removing
-a $\lfloor \alpha N \rfloor$ datapoints, for some small $\alpha$.
-
-\pause
-\item Robustness to removing a $\lfloor \alpha N \rfloor$ datapoints is
-principally determined by the signal to noise ratio, does not disappear
-asymptotically, and is distinct from (and typically larger than) standard
-errors.
-
-\pause
-\item Robustness to removing a $\lfloor \alpha N \rfloor$ datapoints is
-easy to check!  We can quickly and automatically find an
-approximate influential set which is accurate for small $\alpha$.
-
-\pause
-\item In the present work, we studied data dropping.  But we
-provide a framework for studying many other robustness
-questions, both to data and model perturbations.
-
-
-\end{itemize}
 
 \end{frame}
