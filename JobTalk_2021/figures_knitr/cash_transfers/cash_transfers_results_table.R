@@ -37,7 +37,8 @@ table_df <-
 RenderLatexTable(
     table_df,
     label="cash_transfers_re_run_table",
-    caption=paste0(
-        "Cash transfers results for the final study period. ",
-        GetTableCaptionBoilerplate())
-)
+    caption="Cash transfers results.  \\citep{angelucci2009indirect}")
+
+# caption=paste0(
+#     "Cash transfers results for the final study period. ",
+#     GetTableCaptionBoilerplate())

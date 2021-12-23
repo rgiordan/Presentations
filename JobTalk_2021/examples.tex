@@ -3,23 +3,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{The linear approximation.}
-
-For $N=\SimNumObs$ data points, compute the OLS estimator from:
-
-\vspace{1em}
-\begin{tabularx}{\textwidth}{YYY}
-%\begin{tabular}{ccc}
-    Regressors  &   Residuals   &   Responses \\
-    $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
-    $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
-    $y_n = \theta_0 x_n + \varepsilon_n$
-\end{tabularx}
+% \begin{frame}{The linear approximation.}
 %
-
-\SimApproxNormalGraph{}
-
-\end{frame}
+% For $N=\SimNumObs$ data points, compute the OLS estimator from:
+%
+% \vspace{1em}
+% \begin{tabularx}{\textwidth}{YYY}
+% %\begin{tabular}{ccc}
+%     Regressors  &   Residuals   &   Responses \\
+%     $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
+%     $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
+%     $y_n = \theta_0 x_n + \varepsilon_n$
+% \end{tabularx}
+% %
+%
+% \SimApproxNormalGraph{}
+%
+% \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -29,7 +29,10 @@ For $N=\SimNumObs$ data points, compute the OLS estimator from:
 
 \begin{frame}
 
+
 Mexico example:
+
+See \texttt{microcredit\_profit\_sandbox.R}.
 
 \includegraphics[width=0.9\textwidth]{static_figures/mx_refit_example}
 
@@ -43,22 +46,50 @@ Mexico example:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Microcredit.}
+\begin{frame}{Selected experimental results.}
+
+\begin{itemize}
+\item The ``Refit estimate'' column shows the result of re-fitting the model removing
+the points with the largest influence scores.
+
+\item Stars indicate significance at the 5\% level.
+
+\item Refits that achieved the desired change are bolded.
+\end{itemize}
 
 {
 \footnotesize
 \MicrocreditProfitResultsTable{}
 }
 
+\onslide<2->{
+\footnotesize
+\CashTransfersResultsTable{}
+}
+
 \end{frame}
 
 
 
-\begin{frame}{Cash transfers.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{
-\footnotesize
-\CashTransfersResultsTable{}
-}
+
+\begin{frame}{A simulation}
+
+For $N=\SimNumObs$ data points, compute the OLS estimator from:
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{YYY}
+%\begin{tabular}{ccc}
+    Regressors  &   Residuals   &   Responses \\
+    $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
+    $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
+    $y_n = \SimTrueTheta x_n + \varepsilon_n$
+\end{tabularx}
+%
+
+\SimGridNormalGraph{}
 
 \end{frame}

@@ -223,9 +223,17 @@ for OLS and IV.
 \begin{enumerate}
     \item<2-> Compute the ``original'' estimator, $\thetahat(\onevec)$ and
     $\thetafun(\thetahat(\onevec))$.
-    \item<3-> Overturn conclusion if
-        $\thetafun(\thetahat(\w^*)) - \thetafun(\thetahat(\onevec)) \ge \Delta$
-        for some $\w^*$.
+    \item<3-> Let $\Delta$ denote an increase in $\thetafun(\thetahat)$
+    that would change conclusions.
+    % if there is
+    % a $\w^*$ with no more than $\alphan$ zeros such that
+    %
+    % \begin{align*}
+    % %
+    % \thetafun(\thetahat(\w^*)) - \thetafun(\thetahat(\onevec)) \ge \Delta
+    % %
+    % \end{align*}
+    %
     \item<4-> Compute and sort the influence scores,
         $\infl_{(1)} \le \infl_{(2)} \le \ldots \le \infl_{(N)}$.
     \item<5-> Let $\w^*$ leave out the data corresponding to
