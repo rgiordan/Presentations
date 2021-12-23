@@ -9,23 +9,32 @@
 
 \begin{frame}{What makes an estimator non-robust?  A tail sum.}
 
-Report non-robustness if:
+We show that \hspace{1em}
 %
-\begin{align*}
+%\begin{align*}
+$
 %
-\Delta \le \thetafunlin(\w^*) - \thetafun(\thetahat)  =
+\thetafunlin(\w^*) - \thetafun(\thetahat)  =
+{\color{red}
     - \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}
-    =: \noise \shape
+    =:  \noise \shape}
 %
-\end{align*}
+$
+%\end{align*}
 %
-We will show that:
-%
+\hspace{1em} where \vspace{1em}
+
 \begin{itemize}
 \item The ``noise'' $\noise^2 \rightarrow \mathrm{Var}(\sqrt{N}\phi)$
-    \citep{hampel1986robustbook}
+    \begin{itemize}
+        \item $\noise^2 = $ is the robust ``sandwich'' variance estimator
+        \citep{hampel1986robustbook}
+    \end{itemize}
 \item The ``shape'' $\shape \le \sqrt{\alpha (1 - \alpha)}$
-    and converges to a nonzero constant
+    determined by $\infl_n$ distribution
+    \begin{itemize}
+        \item $\shape$ converges to a nonzero constant
+    \end{itemize}
 \end{itemize}
 
 \begin{center}
@@ -84,7 +93,7 @@ Report non-robustness if:
 %
 \begin{align*}
 %
-\Delta \le \thetafunlin(\w^*) - \thetafun(\thetahat)  = \noise \shape
+\thetafunlin(\w^*) - \thetafun(\thetahat)  = \noise \shape \ge \Delta
 \quad\quad
 \Leftrightarrow
 \quad\quad
