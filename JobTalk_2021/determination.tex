@@ -154,36 +154,33 @@ determines sensitivity to data dropping.
 
 \pause
 \vspace{0.5em}
-\textbf{Corollary:  Non-robustness possible even with correct specification.}
-%\vspace{-0.4em}
-% {\small The noise $\noise$ may be larger than the effect
-% $\Delta$ you're trying to measure.}
-
-\pause
-\vspace{0.5em}
-\textbf{Corollary:  Leave-$\lfloor \alpha N \rfloor$-out robustness does not vanish as $N \rightarrow \infty$.}
+\textbf{Corollary:  Leave-$\lfloor \alpha N \rfloor$-out is different from standard errors.}\\
 % \vspace{-0.4em}
-%
-% Both $\shape$ and $\noise$ typically converge to nonzero constants.
-
-\pause
-\vspace{0.5em}
-Recall that standard errors reject when
-$\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}}$.
-
-\pause
-\vspace{0.5em}
-\textbf{Corollary:  Leave-$\lfloor \alpha N \rfloor$-out is different from standard errors.}
-%\vspace{-0.4em}
 % $1.96 / \sqrt{N} \ne \shape$
+% \vspace{0.5em}
+Standard errors reject when
+$\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}} \ne \shape$.
 
 \pause
 \vspace{0.5em}
 \textbf{Corollary:  Statistical insignificance is asymptotically non-robust.}
 %\vspace{-0.4em}
 
-Take $\Delta = \frac{1.96 \hat \sigma_\phi}{\sqrt{N}} \rightarrow 0 \le
-\shape$.
+$\frac{1.96 \hat \sigma_\phi}{\sqrt{N}} \rightarrow 0 \le \shape$.
+
+\pause
+\vspace{0.5em}
+\textbf{Corollary:  Leave-$\lfloor \alpha N \rfloor$-out robustness does not vanish as $N \rightarrow \infty$.}\\
+% \vspace{-0.4em}
+%
+Both $\shape$ and $\noise$ typically converge to nonzero constants.
+
+\pause
+\vspace{0.5em}
+\textbf{Corollary:  Non-robustness possible even with correct specification.}
+%\vspace{-0.4em}
+% {\small The noise $\noise$ may be larger than the effect
+% $\Delta$ you're trying to measure.}
 
 \pause
 \vspace{0.5em}
