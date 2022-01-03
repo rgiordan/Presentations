@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not edit the TeX file your work
+% will be overwritten.  Edit the RnW
+% file instead.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\newcommand{\DefineMacros}{
+\newcommand{\SimNumObs}{5,000}
+\newcommand{\SimTrueTheta}{0.5}
+\newcommand{\SimAccNumObs}{5,000}
+\newcommand{\SimAccSigx}{2}
+\newcommand{\SimAccSigeps}{1}
+\newcommand{\SimAccPercentMax}{10}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+
+\newcommand{\CashTransfersResultsTable}{
+% \input{figures/cash_transfers_re_run_table.tex}
+
+
+\begin{table}\tiny 
+\begin{tabular}{|ccccc|}
+\toprule
+Study case & Original estimate (SE) & Target change  & Refit estimate  & Observations dropped \\
+\midrule
+\midrule
+& &  Sign change &  \textbf{-2.559 (3.541)} &  697 = 6.63\%\\
+Poor, period 10  &  33.861 (4.468)* &  Significance change &  \textbf{4.806 (3.684)} &  435 = 4.14\%\\
+& &  Significant sign change &  \textbf{-9.416 (3.296)*} &  986 = 9.37\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Cash transfers results.  \citep{angelucci2009indirect} }
+\label{table:cash_transfers_re_run_table}
+\end{table}
+
+
+}
+
+%%%%%%%%%%%%%%%%%%%
+% OHIE
+
+\newcommand{\OHIEResultsTable}{
+% \input{figures/OHIE_table_9_IV_re_run_table.tex}
+
+
+\begin{table}\tiny 
+\begin{tabular}{|ccccc|}
+\toprule
+Study case & Original estimate (SE) & Target change  & Refit estimate  & Observations dropped \\
+\midrule
+\midrule
+& &  Sign change &  \textbf{-0.001 (0.005)} &  156 = 0.67\%\\
+Health notpoor 12m  &  0.029 (0.005)* &  Significance change &  \textbf{0.008 (0.005)} &  101 = 0.43\%\\
+& &  Significant sign change &  \textbf{-0.009 (0.004)*} &  224 = 0.96\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Medicaid profit results \citep{finkelstein2012oregon} }
+\label{table:ohie_profit_results_reg}
+\end{table}
+
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%
+% Microcredit
+%
+\newcommand{\MicrocreditProfitResultsTable}{
+% \input{figures/microcredit_profit_re_run_table.tex}
+
+
+\begin{table}\tiny 
+\begin{tabular}{|ccccc|}
+\toprule
+Study case & Original estimate (SE) & Target change  & Refit estimate  & Observations dropped \\
+\midrule
+\midrule
+& &  Sign change &  \textbf{0.398 (3.194)} &  1 = 0.01\%\\
+Mexico  &  -4.549 (5.879) &  Significance change &  \textbf{-10.962 (5.565)*} &  14 = 0.08\%\\
+& &  Significant sign change &  \textbf{7.030 (2.549)*} &  15 = 0.09\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Microcredit Mexico results \citep{angelucci2015microcredit}. }
+\label{table:mc_profit_results}
+\end{table}
+
+
+}
+%
+%
+% \newcommand{\MicrocreditTemptationResultsTable}{
+% % \input{figures/microcredit_profit_re_run_table.tex}
+% <<microcredit_temptation_results_table, cache=microcredit_cache, results='asis'>>=
+% source("figures_knitr/microcredit/microcredit_temptation_results_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+
+%%%%%%%%%%%%%%%%%%%
+% Microcredit mixture
+%
+% \newcommand{\MicrocreditMixtureResultsTable}{
+% <<mcmix_re_run_table, cache=mcmix_cache, results='asis'>>=
+% source("figures_knitr/microcredit_mixture/microcredit_mix_refit_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+%
+% \newcommand{\MicrocreditMixtureSdResultsTable}{
+% <<mcmix_sd_re_run_table, cache=mcmix_cache, results='asis'>>=
+% source("figures_knitr/microcredit_mixture/microcredit_mix_sd_refit_table.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+% Graphs
+
+
+\newcommand{\SimApproxNormalGraph}{
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.461\linewidth]{figure/sim-approx-normal-1} 
+
+}
+
+\caption[The actual change, linear approximation to the change, and approximation error.Here, $\sigma_x = \SimAccSigx$, $\sigma_\varepsilon = \SimAccSigeps$, and $\theta_0 = \SimTrueTheta$]{The actual change, linear approximation to the change, and approximation error.Here, $\sigma_x = \SimAccSigx$, $\sigma_\varepsilon = \SimAccSigeps$, and $\theta_0 = \SimTrueTheta$.}\label{fig:sim-approx-normal}
+\end{figure}
+
+
+\end{knitrout}
+}
+
+\newcommand{\SimGridNormalGraph}{
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.384\linewidth]{figure/sim-grid-normal-1} 
+
+}
+
+\caption[The approximate perturbation inducing proportion at differing values of $\sigma_x$ and $\sigma_\varepsilon$]{The approximate perturbation inducing proportion at differing values of $\sigma_x$ and $\sigma_\varepsilon$. Red colors indicate datasets whose sign can is predicted to change when dropping less than 1\% of datapoints. The grey areas indicate $\amip{\alpha} = \na$, a failure of the linear approximation to locate any way to change the sign.}\label{fig:sim-grid-normal}
+\end{figure}
+
+
+\end{knitrout}
+}
