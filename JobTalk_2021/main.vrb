@@ -1,0 +1,59 @@
+\frametitle{How to compute the influence scores?}
+
+How can we compute the influence scores
+%
+%\begin{align*}
+%
+$
+\infl_n =
+\fracat{\partial \thetafun(\thetahat(\w))}
+       {\partial\w_n}{\onevec}
+%
+$?
+%\end{align*}
+%
+
+\vspace{1em}
+By the \textbf{chain rule},
+$
+\infl_n =
+\fracat{\partial \thetafun(\theta)}
+      {\partial\theta}{\thetahat(\onevec)}
+\fracat{\partial \thetahat(\w)}
+    {\partial\w_n}{\onevec}
+%
+$.
+
+\vspace{1em}
+Recall that
+$\sumn \w_n G(\thetahat(\w), \d_{n}) =  \zP$ for all $\w$ near $\onevec$.
+
+
+\vspace{1em}
+$\Rightarrow$
+By the \textbf{implicit function theorem}, we can write
+$\fracat{\thetahat(\w)}{\partial\w_n}{\onevec}$ as a linear system
+involving $G(\cdot, \cdot)$ and its derivatives.
+
+\vspace{1em}
+$\Rightarrow$
+The $\infl_n$ are automatically computable from $\thetahat(\onevec)$ and
+software implementations of $G(\cdot, \cdot)$ and $\thetafun(\cdot)$
+using \textbf{automatic differentiation}.
+
+
+
+\begin{lstlisting}
+import jax
+import jax.numpy as np
+def phi(theta):
+    ... computations using np and theta ...
+    return value
+
+phi_grad = jax.grad(phi)
+
+# Exact gradient of phi (1st term in the chain rule):
+phi_grad(theta_opt)
+\end{lstlisting}
+
+
