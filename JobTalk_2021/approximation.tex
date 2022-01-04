@@ -257,7 +257,7 @@ most negative $\infl_n$.
 
 \hrulefill
 
-\textbf{Procedure:}
+\textbf{Procedure:}  (see \texttt{rgiordan/zaminfluence} on \texttt{github})
 \begin{enumerate}
     \item Compute your original estimator $\thetahat(\onevec)$.
     \item Compute and sort the influence scores
@@ -265,6 +265,8 @@ most negative $\infl_n$.
     \item Worry if $- \sum_{n=1}^{\alphan} \infl_{(n)}$ is large
     enough to change your conclusions.
 \end{enumerate}
+
+How to compute the $\infl_n$'s?  And how accurate is the approximation?
 
 \end{frame}
 
@@ -328,8 +330,22 @@ def phi(theta):
 jax.grad(phi)(theta_opt)
 \end{lstlisting}
 
-See \texttt{rgiordan/vittles}
-and \texttt{rgiordan/zaminfluence} on \texttt{github}.
+See \texttt{rgiordan/vittles} on \texttt{github}.
+
+\end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{How accurate is the approximation?}
+
+Mexico example:
+
+See \texttt{microcredit\_profit\_sandbox.R}.
+
+\includegraphics[width=0.9\textwidth]{static_figures/mx_refit_example}
 
 \end{frame}
 
@@ -363,19 +379,24 @@ and \texttt{rgiordan/zaminfluence} on \texttt{github}.
 \end{minipage}
 
 \vspace{1em}
-We provide \textbf{finite-sample theory} showing that
+We provide \textbf{finite-sample theory}
+\citep{giordano2019swiss}
+showing that
 $\abs{\thetafun(\thetahat(\w)) - \thetafunlin(\w)} =
 O\left(\vnorm{\frac{1}{N}(\w - \onevec)}^2_2\right) =
 O\left(\alpha\right)$ as $\alpha \rightarrow 0$.
 
+\vspace{1em}
+
 \hrulefill
 
 \vspace{1em}
-\textbf{You don't need to rely on the theory!}
+\textbf{But you don't need to rely on the theory!}
 
 \vspace{1em}
-Our method returns the set of points to drop.  Re-running once without those
-points provides an \textbf{exact lower bound} on the true worst-case
+Our method returns which points to drop.  \textbf{Re-running once}
+without those
+points provides an \textbf{exact lower bound} on the worst-case
 sensitivity.
 
 \end{frame}

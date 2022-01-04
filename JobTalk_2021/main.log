@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 JAN 2022 13:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 JAN 2022 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1655,35 +1655,34 @@ Overfull \hbox (48.56654pt too wide) in paragraph at lines 219--219
  (./main.vrb) [18
 
 ]
-File: static_figures/e_beta_w.png Graphic file (type png)
-<use static_figures/e_beta_w.png>
-Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 381.
-(pdftex.def)             Requested size: 107.85783pt x 107.84894pt.
-
-Overfull \hbox (48.56654pt too wide) in paragraph at lines 381--381
- [] 
- []
-
-[19
-
-]) (./examples.tex
-<static_figures/mx_refit_example.png, id=178, 949.5475pt x 568.1225pt>
+<static_figures/mx_refit_example.png, id=171, 949.5475pt x 568.1225pt>
 File: static_figures/mx_refit_example.png Graphic file (type png)
 <use static_figures/mx_refit_example.png>
 Package pdftex.def Info: static_figures/mx_refit_example.png  used on input lin
-e 39.
+e 350.
 (pdftex.def)             Requested size: 276.559pt x 165.46214pt.
- [20
+ [19
 
- <./static_figures/mx_refit_example.png>] [21
+ <./static_figures/mx_refit_example.png>]
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 402.
+(pdftex.def)             Requested size: 107.85783pt x 107.84894pt.
 
-]
-[22
+Overfull \hbox (48.56654pt too wide) in paragraph at lines 402--402
+ [] 
+ []
+
+[20
+
+]) (./examples.tex [21
+
+] [22
 
 ] [23
 
 ]) (./determination.tex
-<static_figures/simple_infl_example.png, id=228, 361.35pt x 252.945pt>
+<static_figures/simple_infl_example.png, id=230, 361.35pt x 252.945pt>
 File: static_figures/simple_infl_example.png Graphic file (type png)
 <use static_figures/simple_infl_example.png>
 Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
@@ -1788,10 +1787,10 @@ cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (38 pages, 475593 bytes).
+Output written on main.pdf (38 pages, 475754 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
+ 466 PDF objects out of 1000 (max. 8388607)
+ 363 compressed objects within 4 object streams
  90 named destinations out of 1000 (max. 500000)
  92 words of extra memory for PDF output out of 10000 (max. 10000000)
 

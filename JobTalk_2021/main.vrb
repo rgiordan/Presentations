@@ -54,6 +54,5 @@ def phi(theta):
 jax.grad(phi)(theta_opt)
 \end{lstlisting}
 
-See \texttt{rgiordan/vittles}
-and \texttt{rgiordan/zaminfluence} on \texttt{github}.
+See \texttt{rgiordan/vittles} on \texttt{github}.
 
