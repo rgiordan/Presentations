@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 JAN 2022 13:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 JAN 2022 13:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1573,24 +1573,35 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 
 ] [10
 
-] [11
-
 ]) (./approximation.tex
 Underfull \hbox (badness 7963) in paragraph at lines 74--74
 []\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
 ata points
  []
 
-[12
+[11
 
 ]
-<static_figures/orig_weights.png, id=118, 455.7025pt x 91.34125pt>
+<static_figures/orig_weights.png, id=112, 455.7025pt x 91.34125pt>
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
 Package pdftex.def Info: static_figures/orig_weights.png  used on input line 14
 2.
 (pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
-<static_figures/weights_loo.png, id=120, 444.66125pt x 105.39375pt>
+<static_figures/weights_loo.png, id=114, 444.66125pt x 105.39375pt>
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 142
+.
+(pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
+ [12
+
+ <./static_figures/orig_weights.png> <./static_figures/weights_loo.png>]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 14
+2.
+(pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
 File: static_figures/weights_loo.png Graphic file (type png)
 <use static_figures/weights_loo.png>
 Package pdftex.def Info: static_figures/weights_loo.png  used on input line 142
@@ -1598,7 +1609,7 @@ Package pdftex.def Info: static_figures/weights_loo.png  used on input line 142
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
  [13
 
- <./static_figures/orig_weights.png> <./static_figures/weights_loo.png>]
+]
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
 Package pdftex.def Info: static_figures/orig_weights.png  used on input line 14
@@ -1614,19 +1625,6 @@ Package pdftex.def Info: static_figures/weights_loo.png  used on input line 142
 ]
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
-Package pdftex.def Info: static_figures/orig_weights.png  used on input line 14
-2.
-(pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
-File: static_figures/weights_loo.png Graphic file (type png)
-<use static_figures/weights_loo.png>
-Package pdftex.def Info: static_figures/weights_loo.png  used on input line 142
-.
-(pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
- [15
-
-]
-File: static_figures/orig_weights.png Graphic file (type png)
-<use static_figures/orig_weights.png>
 Package pdftex.def Info: static_figures/orig_weights.png  used on input line 21
 9.
 (pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
@@ -1635,7 +1633,7 @@ File: static_figures/weights_loo.png Graphic file (type png)
 Package pdftex.def Info: static_figures/weights_loo.png  used on input line 219
 .
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
-<static_figures/e_beta_w.png, id=143, 903.375pt x 903.375pt>
+<static_figures/e_beta_w.png, id=137, 903.375pt x 903.375pt>
 File: static_figures/e_beta_w.png Graphic file (type png)
 <use static_figures/e_beta_w.png>
 Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 219.
@@ -1645,23 +1643,23 @@ Overfull \hbox (48.56654pt too wide) in paragraph at lines 219--219
  [] 
  []
 
-[16
+[15
 
- <./static_figures/e_beta_w.png>] [17
+ <./static_figures/e_beta_w.png>] [16
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [18
+ (./main.vrb) [17
 
 ]
-<static_figures/mx_refit_example.png, id=171, 949.5475pt x 568.1225pt>
+<static_figures/mx_refit_example.png, id=164, 949.5475pt x 568.1225pt>
 File: static_figures/mx_refit_example.png Graphic file (type png)
 <use static_figures/mx_refit_example.png>
 Package pdftex.def Info: static_figures/mx_refit_example.png  used on input lin
 e 350.
 (pdftex.def)             Requested size: 276.559pt x 165.46214pt.
- [19
+ [18
 
  <./static_figures/mx_refit_example.png>]
 File: static_figures/e_beta_w.png Graphic file (type png)
@@ -1673,22 +1671,22 @@ Overfull \hbox (48.56654pt too wide) in paragraph at lines 402--402
  [] 
  []
 
-[20
+[19
 
-]) (./examples.tex [21
+]) (./examples.tex [20
+
+] [21
 
 ] [22
 
-] [23
-
 ]) (./determination.tex
-<static_figures/simple_infl_example.png, id=230, 361.35pt x 252.945pt>
+<static_figures/simple_infl_example.png, id=224, 361.35pt x 252.945pt>
 File: static_figures/simple_infl_example.png Graphic file (type png)
 <use static_figures/simple_infl_example.png>
 Package pdftex.def Info: static_figures/simple_infl_example.png  used on input 
 line 71.
 (pdftex.def)             Requested size: 195.74094pt x 137.02054pt.
- [24
+ [23
 
  <./static_figures/simple_infl_example.png (PNG copy)>]pdfTeX warning (ext4): d
 estination with the same identifier (name{table:ohie_profit_results_reg}) has b
@@ -1701,7 +1699,9 @@ Overfull \hbox (28.98145pt too wide) detected at line 126
 []
  []
 
-[25
+[24
+
+] [25
 
 ] [26
 
@@ -1713,22 +1713,20 @@ Overfull \hbox (28.98145pt too wide) detected at line 126
 
 ] [30
 
-] [31
+]) (./conclusion.tex [31
 
-]) (./conclusion.tex [32
+] [32
 
 ] [33
 
 ] [34
 
-] [35
-
 ]
-[36
+[35
 
-]) [37
+]) [36
 
-] (./main.bbl) [38
+] (./main.bbl) [37
 
 ]
 \tf@nav=\write6
@@ -1753,8 +1751,8 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 37879 strings out of 483065
- 863800 string characters out of 5963550
+ 37877 strings out of 483065
+ 863781 string characters out of 5963550
  1262723 words of memory out of 5000000
  52029 multiletter control sequences out of 15000+600000
  546682 words of font info for 79 fonts, out of 8000000 for 9000
@@ -1787,10 +1785,10 @@ cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (38 pages, 475754 bytes).
+Output written on main.pdf (37 pages, 473975 bytes).
 PDF statistics:
- 466 PDF objects out of 1000 (max. 8388607)
- 363 compressed objects within 4 object streams
- 90 named destinations out of 1000 (max. 500000)
+ 460 PDF objects out of 1000 (max. 8388607)
+ 358 compressed objects within 4 object streams
+ 88 named destinations out of 1000 (max. 500000)
  92 words of extra memory for PDF output out of 10000 (max. 10000000)
 
