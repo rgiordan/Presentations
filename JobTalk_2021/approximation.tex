@@ -1,4 +1,78 @@
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Formalizing the question.}
+
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Ordinary least squares}
+
+A data point $\d_n$ has regressors
+$x_n$ and response $y_n$: $\d_n = (x_n, y_n)$.
+
+\vspace{1em}
+The estimator $\thetahat \in \mathbb{R}^p$ satisfies:
+%
+\begin{align*}
+%
+\thetahat :={}&
+    \argmin_{\theta} \frac{1}{2} \sumn \left(y_n - \theta^T x_n \right)^{2} \\
+\Leftrightarrow{}& \sumn \left(y_n - \thetahat^T x_n \right) x_n = 0.
+%
+\end{align*}
+%
+Make a qualitative decision using:\vspace{-1.5em}
+\begin{itemize}
+\item A particular component: $\theta_k$
+\item The end of a confidence interval:
+    $\theta_k + \frac{1.96}{\sqrt{N}} \hat\sigma(\thetahat)$
+\end{itemize}
+%
+\end{minipage}
+%
+\hfill\vline\hfill
+%
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Z-estimators}
+
+We observe $N$ data points $\d_{1}, \ldots, \d_{N}$
+(in any domain).
+
+\vspace{1em}
+The estimator $\thetahat \in \mathbb{R}^p$ satisfies:
+%
+\begin{align*}
+%
+\sumn
+G(\thetahat, \d_{n}) =  \zP.
+%
+\end{align*}
+%
+$G(\cdot, \d_{n})$ is ``nice,'' $\mathbb{R}^p$-valued.
+
+E.g. OLS, MLE, VB, IV \&c.
+
+\vspace{1em}
+Make a qualitative decision using $\thetafun(\thetahat)$
+for a smooth, real-valued $\thetafun$.
+%
+\end{minipage}
+
+\hrulefill
+
+\vspace{0.3em}
+\textbf{Question: }
+Can we make a big change in $\thetafun(\thetahat)$ by dropping
+$\alphan$ datapoints, for some small proportion $\alpha$?
+
+
+
+\end{frame}
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -6,53 +80,27 @@
 
 \begin{frame}[t]{Which estimators do we study?}
 
-\textbf{Z-estimators.  }
-Suppose we have $N$ data points $\dvec = \d_{1}, \ldots, \d_{N}$.  Then:
+We have $N$ data points $\d_{1}, \ldots, \d_{N}$, a quantity of interest
+$\thetafun(\thetahat)$, and
 %
 \begin{align*}
 %
-\thetahat :=
-\thetavec \,\, \textrm{ such that } \,\,
-\sumn
-G(\thetavec, \d_{n}) =  \zP .
+\sumn G(\thetahat, \d_{n}) =  \zP .
 %
 \end{align*}
-%
-% These are ``Z-estimators,'' i.e., roots of estimating equations.
-%
-\textbf{Examples:} MLE, OLS, VB, \&c (all minimizers of smooth empirical loss).
 
-\hrulefill
-
-% \vspace{1em}
-\textbf{Function of interest.  }Qualitative decision
-based on $\thetafun(\thetahat) \in \mathbb{R}$.  E.g.:
-%\textbf{Examples:}
-\begin{itemize}
-\item A particular component: $\thetafun(\theta) = \theta_d$
-\item The end of a confidence interval:
-    $\thetafun(\theta) = \theta_d + \frac{1.96}{\sqrt{N}} \hat\sigma(\thetahat)$
-\end{itemize}
-
-\hrulefill
-
-Fix a proportion $0 < \alpha \ll 1$ of points to drop and
+\textbf{Question: }
+Can we make a big change in $\thetafun(\thetahat)$ by dropping
+$\alphan$ datapoints, for some small proportion $\alpha$?
 %
-find a set $\nset \subset \left\{1, \ldots N\right\}$ with $|\nset| \le
-\alphan$ that extremizes $\thetafun(\thetahat)$ when dropped.
-%
+\textbf{Two big problems:}
 %
 \begin{itemize}
-    \item \textbf{Problem: }  There are many sets with $|\nset| \le \alphan$.
+    \item There are ${N \choose \alphan}$
+        sets to check. (Huge even for $\alpha \ll 1$.)
+    \item Evaluating $\thetahat$ re-solving the estimating equation.
         \begin{itemize}
-        \item E.g., in \citet{angelucci2015microcredit},
-            ${16,560 \choose 15} \approx 1.5 \cdot 10^{51}$
-        \end{itemize}
-    \item \textbf{Problem: } Evaluating $\thetafun(\thetahat(\dvec_{-\nset}))$
-        requires an estimation problem.
-        \begin{itemize}
-        \item E.g., in \citet{angelucci2015microcredit} computing the OLS
-            estimator.
+        \item E.g., re-computing the OLS estimator.
         \item Other examples are even harder (VB, machine learning)
         \end{itemize}
 \end{itemize}
