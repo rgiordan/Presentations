@@ -147,25 +147,9 @@ for continuous weights.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Which estimators do we study?}
-\vspace{-2em}
-\begin{align*}
-%
-\sumn \w_n
-G(\thetahat(\w), \d_{n}) =  \zP
-\textrm{ for a weight vector }\w \in \mathbb{R}^N.
-%
-\end{align*}
-%
-\begin{minipage}{0.45\textwidth}
-\begin{center}
-Original weights: $\onevec = (1,\ldots,1)$
-    \includegraphics[width=1.0\textwidth]{static_figures/orig_weights}
-Leave points out by setting their elements of $\w$ to zero.
-    \includegraphics[width=1.0\textwidth]{static_figures/weights_loo}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
+
+
+\def\LinearGraph{
 \begin{center}
     \begin{tikzpicture}
         \node[anchor=south west,inner sep=0] (image) at (0,0) {
@@ -188,6 +172,29 @@ Leave points out by setting their elements of $\w$ to zero.
         \end{scope}
     \end{tikzpicture}
 \end{center}
+}
+
+
+\begin{frame}[t]{Which estimators do we study?}
+\vspace{-2em}
+\begin{align*}
+%
+\sumn \w_n
+G(\thetahat(\w), \d_{n}) =  \zP
+\textrm{ for a weight vector }\w \in \mathbb{R}^N.
+%
+\end{align*}
+%
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+Original weights: $\onevec = (1,\ldots,1)$
+    \includegraphics[width=1.0\textwidth]{static_figures/orig_weights}
+Leave points out by setting their elements of $\w$ to zero.
+    \includegraphics[width=1.0\textwidth]{static_figures/weights_loo}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\LinearGraph{}
 \end{minipage}
 
 The slopes $\infl_n$ are the \textbf{empirical influence function}
@@ -317,103 +324,58 @@ def phi(theta):
     ... computations using np and theta ...
     return value
 
-phi_grad = jax.grad(phi)
-
 # Exact gradient of phi (1st term in the chain rule):
-phi_grad(theta_opt)
+jax.grad(phi)(theta_opt)
 \end{lstlisting}
 
+See \texttt{rgiordan/vittles}
+and \texttt{rgiordan/zaminfluence} on \texttt{github}.
 
 \end{frame}
 
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{How to compute the influence scores?}
+\begin{frame}{How accurate is the approximation?}
 
+\begin{minipage}{0.45\textwidth}
+    By conrolling the curvature,
+    % $\fracat{\partial^2 \thetafun(\thetahat(\w))}
+    %         {\partial \w_n \partial \w_m}
+    %         {\onevec}$
+    we can control the error in the linear approximation.
+
+    % \vspace{1em}
+    % Key conditions are
+    % \begin{itemize}
+    %     \item Smoothness of $\thetafun(\cdot)$,
+    %         $\meann G(\cdot, \d_n)$, and derivatives
+    %     \item Invertibility of
+    %         $\meann \fracat{\partial G(\theta, \d_n)}
+    %             {\partial \theta^T}{\thetahat(\onevec)}$.
+    % \end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.45\textwidth}
+\LinearGraph{}
+\end{minipage}
+
+\vspace{1em}
 We provide \textbf{finite-sample theory} showing that
 $\abs{\thetafun(\thetahat(\w)) - \thetafunlin(\w)} =
 O\left(\vnorm{\frac{1}{N}(\w - \onevec)}^2_2\right) =
 O\left(\alpha\right)$ as $\alpha \rightarrow 0$.
 
-\end{frame}
+\hrulefill
 
+\vspace{1em}
+\textbf{You don't need to rely on the theory!}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% \begin{frame}{Taylor series approximation.}
-%
-% \vspace{1em}
-% \textbf{How to compute the influence scores $\infl_n$? }
-%
-%
-% By the chain rule,
-% $\infl_n = \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}{\onevec}
-% = \fracat{\dee \thetafun(\theta)}
-%     {\dee \theta^T}{\thetahat}
-%   \fracat{\partial \thetahat(\w)}{\partial \w_n}{\onevec}$.
-%
-% Recall that
-% %\begin{align*}
-% %
-% $\thetahat(\w) :=
-% \vec\theta \,\, \textrm{ such that } \,\,
-% \sumn \w_{n}  G(\vec\theta, \d_{n}) =  \zP$.
-% %
-% %\end{align*}
-% %
-%
-% The \textbf{implicit function theorem} expresses $\fracat{\partial
-% \thetahat(\w)}{\partial \w_n}{\onevec}$ as a linear system.
-%
-% \vspace{1em}
-% Computation of $\infl_n$ is fully automatible from a
-% software implemenation of $G(\cdot, \cdot)$ and $\thetafun(\cdot)$ with
-% \textbf{automatic differentiation}
-% \citep{baydin2017automatic}.
-%
-% \vspace{1em}
-% We have an \texttt{R} package, \texttt{rgiordan/zaminfluence},
-% for OLS and IV.
-%
-% \end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{Taylor series approximation.}
-
-\textbf{Procedure:}
-
-\begin{enumerate}
-    \item<2-> Compute the ``original'' estimator, $\thetahat(\onevec)$ and
-    $\thetafun(\thetahat(\onevec))$.
-    \item<3-> Let $\Delta$ denote an increase in $\thetafun(\thetahat)$
-    that would change conclusions.
-    % if there is
-    % a $\w^*$ with no more than $\alphan$ zeros such that
-    %
-    % \begin{align*}
-    % %
-    % \thetafun(\thetahat(\w^*)) - \thetafun(\thetahat(\onevec)) \ge \Delta
-    % %
-    % \end{align*}
-    %
-    \item<4-> Compute and sort the influence scores,
-        $\infl_{(1)} \le \infl_{(2)} \le \ldots \le \infl_{(N)}$.
-    \item<5-> Let $\w^*$ leave out the data corresponding to
-    $\infl_{(1)},  \ldots , \infl_{(\alphan)}$.
-    %the $\lfloor \alpha N \rfloor$ most negative influence scores.
-    \item<6-> Report non-robustness if
-        $ \thetafunlin(\w^*) - \thetafun(\thetahat)  =
-            - \sum_{n=1}^{\alphan} \infl_{(n)} \ge \Delta$.
-    \item<7-> \textbf{Optional: } Compute $\thetahat(\w^*)$, and verify
-    that $\thetafun(\thetahat(\w^*)) - \thetafun(\thetahat) \ge \Delta$.
-\end{enumerate}
+\vspace{1em}
+Our method returns the set of points to drop.  Re-running once without those
+points provides an \textbf{exact lower bound} on the true worst-case
+sensitivity.
 
 \end{frame}

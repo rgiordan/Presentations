@@ -50,10 +50,10 @@ def phi(theta):
     ... computations using np and theta ...
     return value
 
-phi_grad = jax.grad(phi)
-
 # Exact gradient of phi (1st term in the chain rule):
-phi_grad(theta_opt)
+jax.grad(phi)(theta_opt)
 \end{lstlisting}
 
+See \texttt{rgiordan/vittles}
+and \texttt{rgiordan/zaminfluence} on \texttt{github}.
 
