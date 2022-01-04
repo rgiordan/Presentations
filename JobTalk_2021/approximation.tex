@@ -56,6 +56,9 @@ E.g. OLS, MLE, VB, IV \&c.
 \vspace{1em}
 Make a qualitative decision using $\thetafun(\thetahat)$
 for a smooth, real-valued $\thetafun$.
+
+\vspace{1em}
+(WLOG try to increase $\thetafun(\thetahat)$.)
 %
 \end{minipage}
 
@@ -80,15 +83,6 @@ $\alphan$ datapoints, for some small proportion $\alpha$?
 
 \begin{frame}[t]{Which estimators do we study?}
 
-We have $N$ data points $\d_{1}, \ldots, \d_{N}$, a quantity of interest
-$\thetafun(\thetahat)$, and
-%
-\begin{align*}
-%
-\sumn G(\thetahat, \d_{n}) =  \zP .
-%
-\end{align*}
-
 \textbf{Question: }
 Can we make a big change in $\thetafun(\thetahat)$ by dropping
 $\alphan$ datapoints, for some small proportion $\alpha$?
@@ -105,7 +99,46 @@ $\alphan$ datapoints, for some small proportion $\alpha$?
         \end{itemize}
 \end{itemize}
 %
-\textbf{An approximation is needed!}
+\textbf{Idea: }Smoothly approximate the effect of leaving out points.
+
+\hrulefill
+
+We have $N$ data points $\d_{1}, \ldots, \d_{N}$, a quantity of interest
+$\thetafun(\cdot)$, and
+%
+\begin{align*}
+%
+\sumn
+\only<2->{\color{red} \w_n \color{black}}
+G(
+\thetahat\only<2->{\color{red} (\w) \color{black}}
+, \d_{n}) =  \zP
+\onslide<2->{\textrm{ for a weight vector }\w \in \mathbb{R}^N}.
+%
+\end{align*}
+
+\onslide<3->{
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+Original weights: $\onevec = (1,\ldots,1)$
+    \includegraphics[width=1.0\textwidth]{static_figures/orig_weights}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+Leave points out by setting their elements of $\w$ to zero.
+    \includegraphics[width=1.0\textwidth]{static_figures/weights_loo}
+\end{center}
+\end{minipage}
+}
+
+\onslide<3->{
+The map $\w \mapsto \thetafun(\thetahat(\w))$ is well-defined even
+for continuous weights.
+}
+
+
+
 \end{frame}
 
 
@@ -115,15 +148,12 @@ $\alphan$ datapoints, for some small proportion $\alpha$?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{Which estimators do we study?}
-% Suppose we have $N$ data points $\d_{1}, \ldots, \d_{N}$.  Then:
-%
+\vspace{-2em}
 \begin{align*}
 %
-\thetahat \only<2->{\color{red} (\w) \color{black}} :=
-\vec\theta \,\, \textrm{ such that } \,\,
-\sumn
-\only<2->{ \color{red} \w_{n} \color{black}}
-G(\vec\theta, \d_{n}) =  \zP .
+\sumn \w_n
+G(\thetahat(\w), \d_{n}) =  \zP
+\textrm{ for a weight vector }\w \in \mathbb{R}^N.
 %
 \end{align*}
 %
@@ -139,7 +169,7 @@ Leave points out by setting their elements of $\w$ to zero.
 \begin{center}
     \begin{tikzpicture}
         \node[anchor=south west,inner sep=0] (image) at (0,0) {
-            \includegraphics[width=0.88\textwidth]{static_figures/e_beta_w}
+            \includegraphics[width=0.78\textwidth]{static_figures/e_beta_w}
         };
         \begin{scope}[x={(image.south east)},y={(image.north west)}]
             \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
@@ -164,8 +194,18 @@ The slopes $\infl_n := \fracat{\partial \thetafun(\thetahat(\w))}{\partial \w_n}
 % $\thetahat(\w)$ well-defined even for continuous values of the weights!
 
 \vspace{1em}
-Second-order derivatives control the error of
-the linear approximation.
+We can then form the Taylor series approximation:
+%
+\begin{align*}
+	\thetafun(\thetahat(\w))
+		&\approx
+        \color{red}
+        \thetafunlin(\w)
+        \color{black}
+		:=  \thetafun(\thetahat(\onevec)) +
+        \sumn \infl_n (\w_n -1)
+        \color{black}
+\end{align*}
 
 \end{frame}
 
@@ -179,33 +219,51 @@ the linear approximation.
 
 \begin{frame}{Taylor series approximation.}
 %
-\textbf{Problem: } How large can you make $\thetafun(\thetahat(\w))$
-leaving out no more than $\alphan$ points?  \textbf{Combinatorially hard!}
+\textbf{Problem: }
+%
+How much can you change $\thetafun(\thetahat(\w))$
+dropping $\alphan$ points?
+
+\textbf{Combinatorially hard by brute force!}
 
 \hrulefill
 
-\vspace{1em}
-To simplify the search over $\w$, we form the Taylor series approximation:
+\textbf{Approximate Problem: }
+%
+How much can you change $\thetafunlin(\thetahat(\w))$
+dropping $\alphan$ points?
+%
+\textbf{Easy! }
 %
 \begin{align*}
-	\thetafun(\thetahat(\w))
-		&\approx
-        \color{red}
-        \thetafunlin(\w)
-        \color{black}
+    \thetafunlin(\w)
 		:=  \thetafun(\thetahat(\onevec)) +
         \sumn \infl_n (\w_n -1)
-        \color{black}
 \end{align*}
 %
-\textbf{Approximate solution: } How large can you make $\thetafunlin(\w)$
-leaving out no more than $\alphan$ points?  \textbf{Easy! }
+Dropped points have $\w_n - 1 = -1$.  Kept points have $\w_n - 1 = 0$
 
-\vspace{1em}
-The most influential points for $\thetafunlin(\w)$ have the
+$\Rightarrow$ The most influential points for $\thetafunlin(\w)$ have the
 most negative $\infl_n$.
 
 \hrulefill
+
+\textbf{Procedure:}
+\begin{enumerate}
+    \item Compute your original estimator $\thetahat(\onevec)$.
+    \item Compute and sort the influence scores
+        $\infl_{(1)}, \ldots, \infl_{(N)}$.
+    \item Worry if $- \sum_{n=1}^{\alphan} \infl_{(n)}$ is large
+    enough to change your conclusions.
+\end{enumerate}
+
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Taylor series approximation.}
 
 The $\infl_n$ are automatically computable using the
 \textbf{implicit function theorem} and \textbf{automatic differentiation}.
@@ -220,7 +278,6 @@ O\left(\alpha\right)$ as $\alpha \rightarrow 0$.
 \end{frame}
 
 
-%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
