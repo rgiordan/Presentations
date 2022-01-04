@@ -1,40 +1,34 @@
-\begin{frame}{Dropping data: Motivation}
 
-More data \& cheaper computation $\Rightarrow$\\
-Statistical analyses are
-playing larger roles in decision making.
+\begin{frame}
 
+\begin{center}
+\large
+\textbf{
+An Automatic Finite-Sample Robustness Metric:
+\\Can Dropping a Little Data Make a Big Difference?}
+\end{center}
+
+\hrulefill
+
+\onslide<2->{
+\vspace{1em} The conclusions of one's statistical analysis may depend on only a
+\textbf{small fraction of the data}, even for \textbf{highly significant results
+in correctly specified models}.
+}
+
+\onslide<3->{ \vspace{1em} We provide a \textbf{generally applicable tool} to
+detect such sensitivity.  Our methods are \textbf{efficiently and automatically
+computable}, and come with \textbf{finite-sample accuracy guarantees} and
+\textbf{clear intuition}. }
+
+\hrulefill
 \vspace{1em}
-Decisions are important: We want \textbf{trustworthy} conclusions.\\
-Data / models not always perfect: We want \textbf{robust} conclusions.
 
-% \begin{itemize}
-%     \item Gather + clean exchangeable data,
-%     \item Specify and fit a model, and
-%     \item Drawn a qualitative conclusion from your fit
-%     \\(e.g., based on the sign / significance of
-%         some estimated parameter).
-% \end{itemize}
+Ryan Giordano (\texttt{rgiordan@mit.edu})\footnotemark[1]
 
-\vspace{1em}
-Would you be concerned if you could \textbf{reverse your conclusion} by removing
-a \textbf{small proportion} (say, $0.1\%$) of your data?
+January 2022
 
-\vspace{1em}
-\textbf{Running example:} \citet{angelucci2015microcredit}, a
-randomized controlled trial study of the efficacy of microcredit based
-on 16,560 data points.  \\We can reverse the studies qualitative
-conclusions by removing $15$ observations ($< 0.1 \%$ of the data).
-
-\vspace{1em}
-\textbf{How do we find sets of influential points?}  Difficult in general!\\
-
-\vspace{1em}
-We provide a \textbf{automatic approximation} with finite-sample
-guarantees.
-
-\vspace{1em}
-The approximation gives the \textbf{causes of sensitivity} to data dropping.
+\footnotetext[1]{With coauthors Rachael Meager (LSE) and Tamara Broderick (MIT)}
 
 \end{frame}
 
@@ -42,51 +36,80 @@ The approximation gives the \textbf{causes of sensitivity} to data dropping.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Dropping data: Mexico Microcredit}
+\begin{frame}[t]{Dropping data: Mexico Microcredit}
 
-Consider \citet{angelucci2015microcredit}, a randomized controlled trial study
-of the efficacy of microcredit in Mexico based on 16,560 data points.
+% The success of statistics has led to data from particular populations
+% being used increasingly to draw general conclusions.
+% %
+% Drawing the right conclusions affects peoples' lives!
+
+\vspace{1em}
+\textbf{Example:} \citet{angelucci2015microcredit}, a randomized controlled
+trial study of the efficacy of microcredit in Mexico based on 16,560 data
+points.
 
 The variable ``Beta" estimates the effect of microcredit in US dollars.
 
 %\MicrocreditMexicoRerunTable{}
 
+%\hspace{0.05em}
+
 \begin{table}[ht]
 \centering
-\begin{tabular}{lll} \hline
-  & \onslide<2->{Left out points} & Beta (SE) \\\hline
-\hspace{0.05em} Original result & \onslide<2->{0} & -4.55 (5.88) \\ \hline
-\onslide<2-> {\hspace{0.05em} Change sign & 1 & 0.4 (3.19) \\\hline }
-\onslide<3-> {Change significance & 14 & -10.96 (5.57) \\\hline }
-\onslide<4-> {Change sign and significance & 15 & 7.03 (2.55) \\\hline }
+\begin{tabular}{rll} \hline
+  & \onslide<2->{Left out points} & Beta (SE) \\ \hline
+Original result & \onslide<2->{0} & -4.55 (5.88) \\ \hline
+\onslide<3->{``Significant'' negative change & 14 & -10.96 (5.57) \\ \hline}
+\onslide<4->{``Significant'' positive change & 15 & 7.03 (2.55) \\ \hline}
 \end{tabular}
 \end{table}
 
 \vspace{-1em}
-\onslide<1-> { \textbf{Original conclusion: }\\
-There is no evidence that microcredit is effective.}
-
-\vspace{1em}
-\onslide<5-> { \textbf{Potential conclusions after data dropping: }\\
-The effect of microcredit is positive (negative) \&
-statistically significant.}
-
-% \vspace{1em}
-% \onslide<6-> { By removing very few data points ($15 / 16560 \approx 0.1\% $),
-% we can reverse the qualitative conclusions of the original study! }
-
-\vspace{1em}
-\onslide<6-> { \textbf{The culprit is signal to noise ratio. }\\
-By the end of the talk, we will see that the sensitivity is due to
-\begin{itemize}
-\item High variability of the outcome (hosehold profit) relative to
-\item A small signal driving the conclusion
-(statistical significance)
-\end{itemize}
+\onslide<1-> { \textbf{The original conclusion: }
+No evidence that microcredit is effective...
 }
+\onslide<5->{\\...can be reversed by dropping less than 0.1\% of the data.}
+
+\vspace{1em}
+$\Rightarrow$ Standard errors can be inadequate summaries of data sensitivity!
+
+\hrulefill
+\vspace{1em}
+
+Cannot find influential subsets by brute force!
+${16,560 \choose 15} \approx 1.5 \cdot 10^{51}$
+
+\vspace{1em}
+\textbf{We provide a fast, automatic tool to  approximately identify the
+most influential set of points.}
 
 
+\end{frame}
 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Outline}
+\begin{itemize}
+    \item Why and when might you care about sensitivity to data dropping?
+    \item How does our approximation work, and when is it accurate?
+    \begin{itemize}
+        \item[] (A formalization of the problem and the
+            class of estimators we study.)
+    \end{itemize}
+    \item Examine real-life examples of analyses: some sensitive, some not.
+    \begin{itemize}
+        \item[] (The results may defy your intuition.)
+    \end{itemize}
+    \item What kinds of analyses are sensitive to data dropping?
+    \begin{itemize}
+        \item[] (Including comparison to standard errors and
+            gross-error robustness.)
+    \end{itemize}
+\end{itemize}
 \end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
