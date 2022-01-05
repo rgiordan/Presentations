@@ -49,9 +49,9 @@ FormatRefitTable <- function(results_df, base_df) {
         mutate(
             num_string=sprintf(
                 "%d = %0.2f\\%%", n_drop, 100 * prop_drop),
-            est_string_rerun=ifelse(
-                !is.na(success) & success, sprintf(
-                "\\textbf{%s}", est_string_rerun), est_string_rerun),
+            # est_string_rerun=ifelse(
+            #     !is.na(success) & success, sprintf(
+            #     "\\textbf{%s}", est_string_rerun), est_string_rerun),
             change_string=ordered(
                 description,
                 levels=c("sign", "significance", "sign and significance"),
@@ -116,6 +116,62 @@ RenderLatexTable  <- function(table_df, fontsize="\\tiny",
 
     cat("\n\n")
 }
+
+
+# Render a table showing only the change sign and significance result.
+RenderSimpleLatexTable  <- function(table_df, fontsize="\\small",
+                                    study_case_label="Study case",
+                                    caption=NULL, label=NULL) {
+    cat("\n\n")
+    cat("\\begin{table}")
+    cat(fontsize, "\n")
+    cat("\\begin{tabular}{|ccc|}\n")
+    cat("\\toprule\n")
+    cat(" Original estimate (SE)",
+        " & Refit estimate (SE) ",
+        " & Observations dropped ",
+        "\\\\\n", sep="")
+    cat("\\midrule\n")
+    cat("\\midrule\n")
+
+    for (case in levels(table_df$study_case)) {
+        this_table_df <-
+            filter(table_df,
+                   study_case == case,
+                   target_signal == "both")
+
+        # There should be one rerun
+        stopifnot(nrow(this_table_df) == 1)
+
+        # All the estimate strings for the original should be the same
+        stopifnot(length(unique(this_table_df$est_string_base)) == 1)
+
+        i <- 1
+        cat(this_table_df$est_string_base[1])
+        # cat(" & ", this_table_df[["change_string"]][i] %>% as.character())
+        cat(" & ", this_table_df[["est_string_rerun"]][i] %>% as.character())
+        cat(" & ", this_table_df[["num_string"]][i] %>% as.character())
+        cat("\\\\\n")
+        cat("\\midrule\n")
+    }
+
+    cat("\\bottomrule\n")
+    cat("\\end{tabular}\n")
+    if (!is.null(caption)) {
+        cat("\\caption{", caption, "}\n")
+    }
+    if (!is.null(label)) {
+        cat("\\label{table:", label, "}\n", sep="")
+    }
+    cat("\\end{table}")
+
+    cat("\n\n")
+}
+
+
+
+
+
 
 GetTableCaptionBoilerplate <- function() {
     paste0(

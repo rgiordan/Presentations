@@ -10,7 +10,7 @@ base_df <-
     mutate(study_case=ordered(site))
 
 FormatRefitTable(results_df, base_df) %>%
-  RenderLatexTable(
+  RenderSimpleLatexTable(
     label="mc_profit_results",
     caption="Microcredit Mexico results \\citep{angelucci2015microcredit}.")
 
