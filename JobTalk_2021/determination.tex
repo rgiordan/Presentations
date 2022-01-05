@@ -8,17 +8,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{What makes an analysis sensitive?}
-
-Suppose we are willing to drop $\alphan$ points.
 %
 We are ``sensitive to data dropping'' if, for some $\Delta$ large enough to
-change our conclusions,
+change conclusions, $\exists \w^*$ dropping $\alphan$ points such that
 %
 \begin{align*}
 % $
 %
 \textrm{``Signal''} :=
-\Delta < \thetafunlin(\w^*) - \thetafun(\thetahat)  =
+\Delta < \thetafunlin(\w^*) - \thetafun(\thetahat(\onevec))  =
     {\color{red}- \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)} }
     =:  {\color{red} \noise } { \color{red} \shape}
 %
@@ -30,18 +28,10 @@ change our conclusions,
 \begin{itemize}
 \item The ``noise'' $\noise^2 \rightarrow \mathrm{Var}(\sqrt{N}\phi)$
     (``sandwich'' variance estimator)
-    % \begin{itemize}
-    %     \item $\noise^2 = $ is the robust ``sandwich'' variance estimator
-    %     \citep{hampel1986robustbook}
-    % \end{itemize}
 \item The ``shape''
     $\shape := \frac{-\sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}}{\noise}$
     $\rightarrow$ nonzero constant
     $\le \sqrt{\alpha (1 - \alpha)}$
-    % determined by $\infl_n$ distribution
-    % \begin{itemize}
-    %     \item $\shape$
-    % \end{itemize}
 \end{itemize}
 
 \begin{center}
@@ -63,9 +53,6 @@ change our conclusions,
 \end{minipage}
 \end{center}
 
-
-
-
 \end{frame}
 
 
@@ -75,23 +62,28 @@ change our conclusions,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{Example.}
-
 %
+\vspace{-2em}
 \begin{align*}
 %
 \alpha :={}& \textrm{Proportion of points to drop}\\
 \Delta :={}& \textrm{Signal (difference large enough to change conclusions)}\\
-\noise :={}& \textrm{Noise (estimator of }\var{}{\sqrt{N} \thetafun}\textrm{)}\\
-\shape :={}& \textrm{Shape (some constant determined by }\alpha\textrm{ and } N\infl_n\textrm{ tail shape)}\\
+\noise :={}& \textrm{Noise (consistent estimator of }
+    \var{}{\sqrt{N} \thetafun}\textrm{)}\\
+\shape :={}& \textrm{Shape (bounded by }
+    \sqrt{\alpha(1-\alpha)}\textrm{ and given by }
+    N\infl_n\textrm{ tail shape)}
 %
 \end{align*}
 %
+\hrulefill
 
 Sensitive to data dropping if:
 %
 \begin{align*}
 %
-\thetafunlin(\w^*) - \thetafun(\thetahat)  = \noise \shape \ge \Delta
+\thetafunlin(\w^*) - \thetafun(\thetahat(\onevec))  =
+    \noise \shape \ge \Delta
 \quad\quad
 \Leftrightarrow
 \quad\quad
@@ -104,34 +96,30 @@ determines sensitivity to data dropping.
 
 \hrulefill
 
-\onslide<1->{
-\footnotesize
-\OHIEResultsTable{}
-}
-\vspace{-1em}
-Let's analyze with $\alpha = 0.01 = 1\%$.
+\textbf{Contrast with standard errors.}  A 95\% CI is given by
+%
+%\begin{align*}
+%
+$
+\thetafun(\thetahat(\onevec)) \pm \frac{1.96}{\sqrt{N}} \noise.
+$
+%
+%\end{align*}
+%
+We fail to reject the value
+$\thetafun(\thetahat(\onevec)) + \Delta$ when
 %
 \begin{align*}
 %
-\begin{array}{rllrll}
-\thetafun(\thetahat) ={}& -0.029  &\textrm{(Increase QOI by defn)}
-    &   \Delta ={}& 0.029 \\
-\noise ={}& 0.766 & \textrm{(Noise)}
-        & \frac{1}{\sqrt{N}} \noise ={}& 0.005 &
-        \textrm{(SE)} \\
-\shape ={}& 0.046   &   \textrm{(Shape)}
-    & \frac{1.96}{\sqrt{N}}  ={}& 0.0128
-    & \rightarrow 0 \textrm{ as }N \rightarrow \infty\\
-\shape \noise ={}& 0.035 & \textrm{(Data dropping sensitivity)}
-    & \frac{1.96}{\sqrt{N}} \noise  ={}& 0.010
-    & \textrm{(SE sensitivity)}\\
-\end{array}
-% %
+\thetafun(\thetahat(\onevec)) + \Delta \le
+\thetafun(\thetahat(\onevec)) + \frac{1.96}{\sqrt{N}} \noise
+\quad\quad
+\Leftrightarrow
+\quad\quad
+\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}}.
+%
 \end{align*}
 %
-The noise is much larger than the signal $\Rightarrow$
-Sensitive to data dropping.
-
 \end{frame}
 
 
@@ -141,66 +129,101 @@ Sensitive to data dropping.
 
 \begin{frame}[t]{Corollaries.}
 %
-Report non-robustness if:
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+    Robust to data dropping:\\
+    (``dropping robustness'')\\
+    \vspace{1em}
+    $\textrm{SNR} = \frac{\Delta}{\noise} > \shape$
+\end{center}
+\end{minipage}
 %
-\begin{align*}
-%
-\thetafunlin(\w^*) - \thetafun(\thetahat)  = \noise \shape \ge \Delta
-\quad\quad
-\Leftrightarrow
-\quad\quad
-\frac{\Delta}{\noise} \le \shape.
-%
-\end{align*}
-%
-The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
-determines sensitivity to data dropping.
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+    Robust to sampling variation:\\
+    (``sampling robustness'')\\
+    \vspace{1em}
+    $\textrm{SNR} = \frac{\Delta}{\noise} >
+        \frac{1.96}{\sqrt{N}} \noise$
+\end{center}
+\end{minipage}
 
+\vspace{1em}
 
 \hrulefill
 
-%\vspace{-1em}
+\vspace{1em} $\bullet\quad$
+\textbf{Dropping robustness $\ne$ sampling robustness in general.\\}
+\textit{Proof: }
+$\shape \ne \frac{1.96}{\sqrt{N}} \noise$.
 
-\pause
-\vspace{0.5em}
-\textbf{Corollary:  Leave-$\lfloor \alpha N \rfloor$-out is different from standard errors.}\\
-% \vspace{-0.4em}
-% $1.96 / \sqrt{N} \ne \shape$
-% \vspace{0.5em}
-Standard errors reject when
-$\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}} \ne \shape$.
+\vspace{1em} $\bullet\quad$
+\textbf{When the SNR is small, sufficiently large $N$
+produces sampling robustness, but not necessarily
+dropping robustness.\\}
+\textit{Proof: }
+$\frac{1.96}{\sqrt{N}} \noise \rightarrow 0$, but $\shape \rightarrow$ a nonzero
+constant.
 
-\pause
-\vspace{0.5em}
-\textbf{Corollary:  Statistical insignificance is asymptotically non-robust.}
-%\vspace{-0.4em}
-
-$\frac{1.96 \hat \sigma_\phi}{\sqrt{N}} \rightarrow 0 \le \shape$.
-
-\pause
-\vspace{0.5em}
-\textbf{Corollary:  Leave-$\lfloor \alpha N \rfloor$-out robustness does not vanish as $N \rightarrow \infty$.}\\
-% \vspace{-0.4em}
+\vspace{1em} $\bullet\quad$
+\textbf{Statistical insignificance is dropping non-robust for large $N$.\\}
+\textit{Proof: }
 %
-Both $\shape$ and $\noise$ typically converge to nonzero constants.
+Insignificance means
+$|\thetafun(\thetahat(\onevec))| \le \frac{1.96}{\sqrt{N}} \noise$.
 
-\pause
-\vspace{0.5em}
-\textbf{Corollary:  Non-robustness possible even with correct specification.}
-%\vspace{-0.4em}
-% {\small The noise $\noise$ may be larger than the effect
-% $\Delta$ you're trying to measure.}
+$\Rightarrow$ A result can be made significant by a change of no more than
+$\frac{1.96}{\sqrt{N}} \noise$.
+
+$\Rightarrow$ The SNR for a conclusion
+of ``insignificance'' is $\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}}
+\rightarrow 0 \le \shape$.
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Corollaries.}
 %
-% \pause
-% \vspace{0.5em}
-% \textbf{Corollary:  Gross outliers primarily affect robustness
-% through $\noise$.}
-% %\vspace{-0.4em}
-% See paper for more details.
+\begin{minipage}[t]{0.45\textwidth}
+\begin{center}
+    Robust to data dropping:\\
+    (``dropping robustness'')\\
+    \vspace{1em}
+    $\textrm{SNR} = \frac{\Delta}{\noise} > \shape$
+\end{center}
+\end{minipage}
+%
+\begin{minipage}[t]{0.45\textwidth}
+\begin{center}
+    Robust to gross errors:\\
+    (``gross error robustness'')\\
+    \vspace{1em}
+    Gross outliers cannot produce
+    arbitrarily large changes to $\thetafun$.
+\end{center}
+\end{minipage}
 
-\pause
-\vspace{0.5em}
-\textbf{Corollary:  To robustify, reduce the noise or increase
-the signal.}
+\vspace{1em}
+\hrulefill
+
+\vspace{1em} $\bullet\quad$
+\textbf{Dropping non-robustness is not driven by misspecification.\\}
+\textit{Proof: }
+Small $\Delta$ are dropping non-robust irrespective of specification.
+
+\vspace{1em} $\bullet\quad$
+\textbf{Gross outliers primarily affect dropping robustness through $\noise$.\\}
+\textit{Proof: }
+For a fixed $\noise$, outliers decrease $\shape$.
+(See paper for details.)
+
+\vspace{1em} $\bullet\quad$
+\textbf{To achieve dropping robustness,
+reduce $\noise$ and / or increase $\Delta$.\\}
 
 \end{frame}
