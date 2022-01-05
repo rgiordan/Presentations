@@ -3,6 +3,9 @@
 sim_env <- LoadIntoEnvironment(
     file.path(data_path, "simulations", "noise_grid.Rdata"))
 
+sim_viz_env <- LoadIntoEnvironment(
+    file.path(data_path, "simulations", "visualization.Rdata"))
+
 cash_env <- LoadIntoEnvironment(
     file.path(data_path, "cash_transfers", "cash_transfers_results.Rdata"))
 

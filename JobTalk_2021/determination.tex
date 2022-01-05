@@ -7,66 +7,61 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{What makes an estimator non-robust?  A tail sum.}
+\begin{frame}{What makes an analysis sensitive?}
 
-We show that \hspace{1em}
+Suppose we are willing to drop $\alphan$ points.
 %
-%\begin{align*}
-$
+We are ``sensitive to data dropping'' if, for some $\Delta$ large enough to
+change our conclusions,
 %
-\thetafunlin(\w^*) - \thetafun(\thetahat)  =
-{\color{red}
-    - \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}
-    =:  \noise \shape}
+\begin{align*}
+% $
 %
-$
-%\end{align*}
+\Delta < \thetafunlin(\w^*) - \thetafun(\thetahat)  =
+    {\color{red}- \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)} }
+    =:  {\color{red} \noise } { \color{red} \shape}
 %
-\hspace{1em} where \vspace{1em}
+% $
+\end{align*}
+%
+% \hspace{1em} where \vspace{1em}
 
 \begin{itemize}
 \item The ``noise'' $\noise^2 \rightarrow \mathrm{Var}(\sqrt{N}\phi)$
-    \begin{itemize}
-        \item $\noise^2 = $ is the robust ``sandwich'' variance estimator
-        \citep{hampel1986robustbook}
-    \end{itemize}
+    ($\noise$ is the ``sandwich'' estimator)
+    % \begin{itemize}
+    %     \item $\noise^2 = $ is the robust ``sandwich'' variance estimator
+    %     \citep{hampel1986robustbook}
+    % \end{itemize}
 \item The ``shape'' $\shape \le \sqrt{\alpha (1 - \alpha)}$
-    determined by $\infl_n$ distribution
-    \begin{itemize}
-        \item $\shape$ converges to a nonzero constant
-    \end{itemize}
+    converges to a nonzero constant
+    % determined by $\infl_n$ distribution
+    % \begin{itemize}
+    %     \item $\shape$
+    % \end{itemize}
 \end{itemize}
 
 \begin{center}
-\begin{minipage}{0.65\linewidth}
+\begin{minipage}{0.8\textwidth}
 \begin{tikzpicture}
-    \onslide<1->{
     \node[anchor=south west,inner sep=0] (image) at (0,0) {
-        \includegraphics[width=0.98\textwidth]{static_figures/simple_infl_example.png}
+    \SimInflHistogram{}
     };
-    }
-    \onslide<1->{
     \begin{scope}[x={(image.south east)},y={(image.north west)}]
-        \draw [stealth-stealth][thick][yellow](0.44, 0.4) -- (0.64, 0.4);
-    \end{scope}
-    \begin{scope}[x={(image.south east)},y={(image.north west)}]
-        \draw (0.55,0.38) node[below,yellow][text width=3cm][align=center]
-        % {\tiny $\noise$ is controlled by $\var{}{\sqrt{N}\phi(\thetahat)}$};
-        {\small $\noise \approx $\\$\var{}{\sqrt{N}\phi(\thetahat)}$};
-    \end{scope}
-    }
-    \onslide<1->{
-    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+        \draw [stealth-stealth][thick][white](0.42, 0.35) -- (0.6, 0.35);
+        \draw (0.51, 0.35) node[below][text width=3cm][align=center][white]
+            {\normalsize $\noise$};
+
         \draw [stealth-][thick][red](0.3, 0.25) -- (0.3, 0.5);
+        \draw (0.25, 0.5) node[above][text width=3cm][align=center][red]
+            {\normalsize $-\sum_{n=1}^{\alphan} \infl_{(n)}$};
     \end{scope}
-    \begin{scope}[x={(image.south east)},y={(image.north west)}]
-        \draw (0.25, 0.5) node[above][text width=3cm][align=center]
-        {\small $-\sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}$};
-    \end{scope}
-    }
 \end{tikzpicture}
 \end{minipage}
 \end{center}
+
+
+
 
 \end{frame}
 
