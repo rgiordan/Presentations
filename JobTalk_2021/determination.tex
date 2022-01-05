@@ -17,6 +17,7 @@ change our conclusions,
 \begin{align*}
 % $
 %
+\textrm{``Signal''} :=
 \Delta < \thetafunlin(\w^*) - \thetafun(\thetahat)  =
     {\color{red}- \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)} }
     =:  {\color{red} \noise } { \color{red} \shape}
@@ -28,13 +29,15 @@ change our conclusions,
 
 \begin{itemize}
 \item The ``noise'' $\noise^2 \rightarrow \mathrm{Var}(\sqrt{N}\phi)$
-    ($\noise$ is the ``sandwich'' estimator)
+    (``sandwich'' variance estimator)
     % \begin{itemize}
     %     \item $\noise^2 = $ is the robust ``sandwich'' variance estimator
     %     \citep{hampel1986robustbook}
     % \end{itemize}
-\item The ``shape'' $\shape \le \sqrt{\alpha (1 - \alpha)}$
-    converges to a nonzero constant
+\item The ``shape''
+    $\shape := \frac{-\sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}}{\noise}$
+    $\rightarrow$ nonzero constant
+    $\le \sqrt{\alpha (1 - \alpha)}$
     % determined by $\infl_n$ distribution
     % \begin{itemize}
     %     \item $\shape$
@@ -73,7 +76,18 @@ change our conclusions,
 
 \begin{frame}[t]{Example.}
 
-Report non-robustness if:
+%
+\begin{align*}
+%
+\alpha :={}& \textrm{Proportion of points to drop}\\
+\Delta :={}& \textrm{Signal (difference large enough to change conclusions)}\\
+\noise :={}& \textrm{Noise (estimator of }\var{}{\sqrt{N} \thetafun}\textrm{)}\\
+\shape :={}& \textrm{Shape (some constant determined by }\alpha\textrm{ and } N\infl_n\textrm{ tail shape)}\\
+%
+\end{align*}
+%
+
+Sensitive to data dropping if:
 %
 \begin{align*}
 %
