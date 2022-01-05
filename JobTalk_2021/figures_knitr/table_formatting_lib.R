@@ -40,6 +40,7 @@ FormatRefitTable <- function(results_df, base_df) {
 
     names(results_wide_df)
 
+    # Don't bold successful reruns for the selected results shown here
     results_formatted_df <-
         results_wide_df %>%
         mutate(success=RefitAchieved(

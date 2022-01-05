@@ -49,7 +49,7 @@ base_df <-
 
 filter(table_df, method == "regression") %>%
   FormatRefitTable(base_df) %>%
-  RenderLatexTable(
+  RenderSimpleLatexTable(
     label="ohie_profit_results_reg",
     caption=paste0(
         "Medicaid profit results \\citep{finkelstein2012oregon}")

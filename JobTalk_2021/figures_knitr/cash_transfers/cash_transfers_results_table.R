@@ -34,7 +34,7 @@ table_df <-
   filter(study_case %in% c("Poor, period 10")) %>%
   mutate(study_case=ordered(study_case))
 
-RenderLatexTable(
+RenderSimpleLatexTable(
     table_df,
     label="cash_transfers_re_run_table",
     caption="Cash transfers results.  \\citep{angelucci2009indirect}")
