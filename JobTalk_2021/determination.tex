@@ -9,16 +9,19 @@
 
 \begin{frame}{What makes an analysis sensitive?  Preliminaries}
 %
-We are ``sensitive to data dropping'' if, for some $\Delta$ large enough to
-change conclusions, $\exists \w^*$ dropping $\alphan$ points such that
+We are \textbf{robust to data dropping} if, for the $\Delta$
+that changes conclusions and $\w^*$ dropping the $\alphan$
+most influential points,
 %
 \begin{align*}
 % $
 %
-\textrm{``Signal''} :=
-\Delta < \thetafunlin(\w^*) - \thetafun(\thetahat(\onevec))  =
-    {\color{red}- \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)} }
-    =:  {\color{red} \noise } { \color{red} \shape}
+\Delta \ge \thetafunlin(\w^*) - \thetafun(\thetahat(\onevec))
+    % = {\color{red}- \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)} }
+    =:   {\color{black} \noise } { \color{black} \shape}
+\quad\Leftrightarrow\quad
+%
+{\color{red}\frac{\Delta}{\noise} \ge \shape}.
 %
 % $
 \end{align*}
@@ -26,101 +29,67 @@ change conclusions, $\exists \w^*$ dropping $\alphan$ points such that
 % \hspace{1em} where \vspace{1em}
 
 \begin{itemize}
+\item The ``signal'' $\Delta$ is the smallest change that reverses your conclusion
 \item The ``noise'' $\noise^2 \rightarrow \mathrm{Var}(\sqrt{N}\phi)$
     (``sandwich'' variance estimator)
 \item The ``shape''
-    $\shape := \frac{-\sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)}}{\noise}$
-    $\rightarrow$ nonzero constant
+    $\shape$
+    $\rightarrow$ a nonzero constant and is
     $\le \sqrt{\alpha (1 - \alpha)}$
 \end{itemize}
 
-\begin{center}
-\begin{minipage}{0.8\textwidth}
-\begin{tikzpicture}
-    \node[anchor=south west,inner sep=0] (image) at (0,0) {
-    \SimInflHistogram{}
-    };
-    \begin{scope}[x={(image.south east)},y={(image.north west)}]
-        \draw [stealth-stealth][thick][white](0.42, 0.35) -- (0.6, 0.35);
-        \draw (0.51, 0.35) node[below][text width=3cm][align=center][white]
-            {\normalsize $\noise$};
-
-        \draw [stealth-][thick][red](0.3, 0.25) -- (0.3, 0.5);
-        \draw (0.25, 0.5) node[above][text width=3cm][align=center][red]
-            {\normalsize $-\sum_{n=1}^{\alphan} \infl_{(n)}$};
-    \end{scope}
-\end{tikzpicture}
-\end{minipage}
-\end{center}
-
-\end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{What makes an analysis sensitive?  Preliminaries}
-%
-\vspace{-2em}
-\begin{align*}
-%
-\alpha :={}& \textrm{Proportion of points to drop}\\
-\Delta :={}& \textrm{Signal (difference large enough to change conclusions)}\\
-\noise :={}& \textrm{Noise (consistent estimator of }
-    \var{}{\sqrt{N} \thetafun}\textrm{)}\\
-\shape :={}& \textrm{Shape (bounded by }
-    \sqrt{\alpha(1-\alpha)}\textrm{ and given by }
-    N\infl_n\textrm{ tail shape)}
-%
-\end{align*}
-%
 \hrulefill
 
-Sensitive to data dropping if:
+\textbf{Contrast with sampling variability.}
+
+A 95\% CI is given by
+$\thetafun(\thetahat(\onevec)) \pm \frac{1.96}{\sqrt{N}} \noise.$
+%
+We reject $\thetafun(\thetahat(\onevec)) + \Delta$ when
 %
 \begin{align*}
 %
-\thetafunlin(\w^*) - \thetafun(\thetahat(\onevec))  =
-    \noise \shape \ge \Delta
-\quad\quad
-\Leftrightarrow
-\quad\quad
-\frac{\Delta}{\noise} \le \shape.
-%
-\end{align*}
-%
-The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
-determines sensitivity to data dropping.
-
-\hrulefill
-
-\textbf{Contrast with standard errors.}  A 95\% CI is given by
-%
-%\begin{align*}
-%
-$
-\thetafun(\thetahat(\onevec)) \pm \frac{1.96}{\sqrt{N}} \noise.
-$
-%
-%\end{align*}
-%
-We fail to reject the value
-$\thetafun(\thetahat(\onevec)) + \Delta$ when
-%
-\begin{align*}
-%
-\thetafun(\thetahat(\onevec)) + \Delta \le
+\thetafun(\thetahat(\onevec)) + \Delta \ge
 \thetafun(\thetahat(\onevec)) + \frac{1.96}{\sqrt{N}} \noise
 \quad\quad
 \Leftrightarrow
 \quad\quad
-\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}}.
+{\color{red}
+\frac{\Delta}{\noise} \ge \frac{1.96}{\sqrt{N}.}
+}
 %
 \end{align*}
 %
+
+
+\hrulefill
+
+%\vspace{1em}
+The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
+determines robustness to both data dropping
+and sampling variability, but with \textbf{different thresholds}.
+
+% \begin{center}
+% \begin{minipage}{0.8\textwidth}
+% \begin{tikzpicture}
+%     \node[anchor=south west,inner sep=0] (image) at (0,0) {
+%     \SimInflHistogram{}
+%     };
+%     \begin{scope}[x={(image.south east)},y={(image.north west)}]
+%         \draw [stealth-stealth][thick][white](0.42, 0.35) -- (0.6, 0.35);
+%         \draw (0.51, 0.35) node[below][text width=3cm][align=center][white]
+%             {\normalsize $\noise$};
+%
+%         \draw [stealth-][thick][red](0.3, 0.25) -- (0.3, 0.5);
+%         \draw (0.25, 0.5) node[above][text width=3cm][align=center][red]
+%             {\normalsize $-\sum_{n=1}^{\alphan} \infl_{(n)}$};
+%     \end{scope}
+% \end{tikzpicture}
+% \end{minipage}
+% \end{center}
+
 \end{frame}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,7 +103,7 @@ $\thetafun(\thetahat(\onevec)) + \Delta$ when
     Robust to data dropping:\\
     (``dropping robustness'')\\
     \vspace{1em}
-    $\textrm{SNR} = \frac{\Delta}{\noise} > \shape$
+    $\textrm{SNR} := \frac{\Delta}{\noise} \ge \shape$
 \end{center}
 \end{minipage}
 %
@@ -143,7 +112,7 @@ $\thetafun(\thetahat(\onevec)) + \Delta$ when
     Robust to sampling variation:\\
     (``sampling robustness'')\\
     \vspace{1em}
-    $\textrm{SNR} = \frac{\Delta}{\noise} >
+    $\textrm{SNR} := \frac{\Delta}{\noise} \ge
         \frac{1.96}{\sqrt{N}}$
 \end{center}
 \end{minipage}
@@ -199,7 +168,7 @@ $\frac{1.96}{\sqrt{N}} \noise$.
     Robust to data dropping:\\
     (``dropping robustness'')\\
     \vspace{1em}
-    $\textrm{SNR} = \frac{\Delta}{\noise} > \shape$
+    $\textrm{SNR} := \frac{\Delta}{\noise} \ge \shape$
 \end{center}
 \end{minipage}
 %
@@ -242,7 +211,7 @@ For a fixed $\noise$, outliers decrease $\shape$.
     Robust to data dropping:\\
     (``dropping robustness'')\\
     \vspace{1em}
-    $\textrm{SNR} = \frac{\Delta}{\noise} > \shape$
+    $\textrm{SNR} := \frac{\Delta}{\noise} \ge \shape$
 \end{center}
 
 \vspace{1em}
