@@ -144,7 +144,7 @@ $\thetafun(\thetahat(\onevec)) + \Delta$ when
     (``sampling robustness'')\\
     \vspace{1em}
     $\textrm{SNR} = \frac{\Delta}{\noise} >
-        \frac{1.96}{\sqrt{N}} \noise$
+        \frac{1.96}{\sqrt{N}}$
 \end{center}
 \end{minipage}
 
@@ -152,20 +152,20 @@ $\thetafun(\thetahat(\onevec)) + \Delta$ when
 
 \hrulefill
 
-\vspace{1em} $\bullet\quad$
+\vspace{0.5em} $\bullet\quad$
 \textbf{Dropping robustness $\ne$ sampling robustness in general.\\}
 \textit{Proof: }
-$\shape \ne \frac{1.96}{\sqrt{N}} \noise$.
+$\shape \ne \frac{1.96}{\sqrt{N}}$.
 
-\vspace{1em} $\bullet\quad$
+\vspace{0.5em} $\bullet\quad$
 \textbf{When the SNR is small, sufficiently large $N$
 produces sampling robustness, but not necessarily
 dropping robustness.\\}
 \textit{Proof: }
-$\frac{1.96}{\sqrt{N}} \noise \rightarrow 0$, but $\shape \rightarrow$ a nonzero
+$\frac{1.96}{\sqrt{N}} \rightarrow 0$, but $\shape \rightarrow$ a nonzero
 constant.
 
-\vspace{1em} $\bullet\quad$
+\vspace{0.5em} $\bullet\quad$
 \textbf{Statistical insignificance is dropping non-robust for large $N$.\\}
 \textit{Proof: }
 %
@@ -178,6 +178,11 @@ $\frac{1.96}{\sqrt{N}} \noise$.
 $\Rightarrow$ The SNR for a conclusion
 of ``insignificance'' is $\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}}
 \rightarrow 0 \le \shape$.
+
+\vspace{0.5em} $\bullet\quad$
+\textbf{P-hacking is dropping non-robust for large $N$.\\}
+\textit{Proof: }P-hacked effect sizes are of the order
+$\frac{1.96}{\sqrt{N}} \noise$.
 
 \end{frame}
 
@@ -222,11 +227,49 @@ Small $\Delta$ are dropping non-robust irrespective of specification.
 For a fixed $\noise$, outliers decrease $\shape$.
 (Details in paper.)
 
-\vspace{1em} $\bullet\quad$
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Corollaries.}
+
+\begin{center}
+    Robust to data dropping:\\
+    (``dropping robustness'')\\
+    \vspace{1em}
+    $\textrm{SNR} = \frac{\Delta}{\noise} > \shape$
+\end{center}
+
 \textbf{To achieve dropping robustness,
 reduce $\noise$ and / or increase $\Delta$.\\}
 \textit{Proof: }
-Across typical distributions, $\shape$ varies litte.
+Across typical distributions, $\shape$ varies little.
 (Details in paper.)
+
+\vspace{1em}
+
+\hrulefill
+
+\vspace{1em}
+In the Mexico microcredit example,
+%
+\begin{align*}
+%
+\noise = \MxNoise
+\quad\quad\quad
+\thetafun(\thetahat(\onevec)) = \MxBetahat
+\quad\quad\quad
+N = \MxNobs
+%
+\end{align*}
+%
+The study overcame a very low signal to noise ratio with a very large $N$.
+
+\vspace{1em} This (canonical) response to low signal to noise ratio --- to
+gather more data --- produces small SEs, but cannot produce dropping
+robustness.
 
 \end{frame}

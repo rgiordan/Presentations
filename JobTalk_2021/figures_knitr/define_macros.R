@@ -18,3 +18,10 @@ DefineMacro("SimAccNumObs", sim_env$acc_list$num_obs, digits=0)
 DefineMacro("SimAccSigx", sim_env$acc_list$sig_x, digits=0)
 DefineMacro("SimAccSigeps", sim_env$acc_list$sig_eps, digits=0)
 DefineMacro("SimAccPercentMax", 100 * sim_env$acc_list$alpha_max, digits=0)
+
+
+mx_analysis_df <- filter(microcredit_refit_env$analysis_df, site == "Mexico")
+stopifnot(nrow(mx_analysis_df) == 1)
+DefineMacro("MxNoise", mx_analysis_df$noise, digits=4)
+DefineMacro("MxBetahat", mx_analysis_df$betahat, digits=3)
+DefineMacro("MxNobs", mx_analysis_df$n_obs, digits=0)

@@ -18,6 +18,7 @@ source(file.path(paper_directory, "figures_knitr/load_data.R"))
 
 
 
+
 # source(file.path(paper_directory,
 #                  "figures_knitr/microcredit/refit_line.R"),
 #        echo=knitr_debug, print.eval=TRUE)
