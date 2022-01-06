@@ -26,6 +26,10 @@ plot1 <- plot_line_df %>%
     ylim(ymin, ymax) +
     ylab(TeX("Change in estimated effect of microcredit")) +
     geom_hline(aes(yintercept=0)) +
+    geom_text(
+      aes(label="Confidence interval boundary",
+          x=1, y=reg_se * 1.96), vjust="top", hjust="left",
+          color="dark gray", size=5) +
     geom_ribbon(
         aes(ymin=ymin), ymax=reg_se * 1.96, alpha=0.1) +
     xlab(TeX("Percent of data points dropped (sorted by $\\psi_n$)"))

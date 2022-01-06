@@ -18,24 +18,26 @@ source(file.path(paper_directory, "figures_knitr/load_data.R"))
 
 
 
-source(file.path(paper_directory,
-                 "figures_knitr/microcredit/refit_line.R"),
-       echo=knitr_debug, print.eval=TRUE)
-
-grid.arrange(plot1, plot2, ncol=2)
-
-
-
 # source(file.path(paper_directory,
-#                  "figures_knitr/microcredit/microcredit_profit_results_table.R"),
+#                  "figures_knitr/microcredit/refit_line.R"),
 #        echo=knitr_debug, print.eval=TRUE)
 # 
-# 
+# print(plot2)
+
+
+source(file.path(paper_directory,
+                 "figures_knitr/microcredit/microcredit_profit_results_table.R"),
+       echo=knitr_debug, print.eval=TRUE)
+
+
 # source(file.path(paper_directory,
 #                  "figures_knitr/cash_transfers/cash_transfers_results_table.R"),
 #        echo=knitr_debug, print.eval=TRUE)
-# 
+
+
+
 # 
 # source(file.path(paper_directory,
 #                  "figures_knitr/OHIE/OHIE-table_results.R"),
 #        echo=knitr_debug, print.eval=TRUE)
+# 

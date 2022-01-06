@@ -47,12 +47,19 @@ base_df <-
 #     )
 
 
+# I didn't save the total number of observations so infer it from the
+# proportion and number dropped.
+n_obs <- table_df$n_drop / table_df$prop_drop
+stopifnot(length(unique(n_obs)) == 1)
+n_obs <- as.integer(unique(n_obs))
+
 filter(table_df, method == "regression") %>%
   FormatRefitTable(base_df) %>%
   RenderSimpleLatexTable(
     label="ohie_profit_results_reg",
     caption=paste0(
-        "Medicaid profit results \\citep{finkelstein2012oregon}")
+        "Medicaid profit results (N = ", n_obs,
+        ") \\citep{finkelstein2012oregon}")
     )
 
     # caption=paste0(

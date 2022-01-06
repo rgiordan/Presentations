@@ -9,10 +9,21 @@ base_df <-
     filter(site == "Mexico") %>%
     mutate(study_case=ordered(site))
 
-FormatRefitTable(results_df, base_df) %>%
-  RenderSimpleLatexTable(
+table_df <- FormatRefitTable(results_df, base_df)
+
+# I didn't save the total number of observations so infer it from the
+# proportion and number dropped.
+n_obs <- table_df$n_drop / table_df$prop_drop
+stopifnot(length(unique(n_obs)) == 1)
+n_obs <- as.integer(unique(n_obs))
+
+RenderSimpleLatexTable(
+    table_df,
     label="mc_profit_results",
-    caption="Microcredit Mexico results \\citep{angelucci2015microcredit}.")
+    caption=paste0(
+        "Microcredit Mexico results (N = ", n_obs,
+        ") \\citep{angelucci2015microcredit}."
+    ))
 
     #
     # paste0(

@@ -32,7 +32,7 @@ $\sumn \w_n G(\thetahat(\w), \d_{n}) =  \zP$ for all $\w$ near $\onevec$.
 \vspace{1em}
 $\Rightarrow$
 By the \textbf{implicit function theorem}, we can write
-$\fracat{\thetahat(\w)}{\partial\w_n}{\onevec}$ as a linear system
+$\fracat{\partial\thetahat(\w)}{\partial\w_n}{\onevec}$ as a linear system
 involving $G(\cdot, \cdot)$ and its derivatives.
 
 \vspace{1em}
@@ -44,14 +44,14 @@ using \textbf{automatic differentiation}.
 
 
 \begin{lstlisting}
-import jax
-import jax.numpy as np
-def phi(theta):
-    ... computations using np and theta ...
-    return value
-
-# Exact gradient of phi (1st term in the chain rule):
-jax.grad(phi)(theta_opt)
+> import jax
+> import jax.numpy as np
+> def phi(theta):
+>     ... computations using np and theta ...
+>     return value
+>
+> # Exact gradient of phi (first term in the chain rule above):
+> jax.grad(phi)(theta_opt)
 \end{lstlisting}
 
 See \texttt{rgiordan/vittles} on \texttt{github}.

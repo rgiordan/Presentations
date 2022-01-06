@@ -34,10 +34,18 @@ table_df <-
   filter(study_case %in% c("Poor, period 10")) %>%
   mutate(study_case=ordered(study_case))
 
+
+# I didn't save the total number of observations so infer it from the
+# proportion and number dropped.
+n_obs <- table_df$n_drop / table_df$prop_drop
+stopifnot(length(unique(n_obs)) == 1)
+n_obs <- as.integer(unique(n_obs))
+
 RenderSimpleLatexTable(
     table_df,
     label="cash_transfers_re_run_table",
-    caption="Cash transfers results.  \\citep{angelucci2009indirect}")
+    caption=paste0("Cash transfers results (N = ", n_obs,
+      ") \\citep{angelucci2009indirect}"))
 
 # caption=paste0(
 #     "Cash transfers results for the final study period. ",
