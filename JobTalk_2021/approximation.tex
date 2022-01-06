@@ -91,7 +91,8 @@ $\alphan$ datapoints, for some small proportion $\alpha$?
 %
 \begin{itemize}
     \item There are ${N \choose \alphan}$
-        sets to check. (Huge even for $\alpha \ll 1$.)
+        sets to check.
+        (E.g. ${16,560 \choose 15 } \approx 1.5\cdot10^{51}$)
     \item Evaluating $\thetahat$ re-solving the estimating equation.
         \begin{itemize}
         \item E.g., re-computing the OLS estimator.
@@ -99,7 +100,7 @@ $\alphan$ datapoints, for some small proportion $\alpha$?
         \end{itemize}
 \end{itemize}
 %
-\textbf{Idea: }Smoothly approximate the effect of leaving out points.
+\textbf{Our idea: }Smoothly approximate the effect of leaving out points.
 
 \hrulefill
 
@@ -257,7 +258,7 @@ most negative $\infl_n$.
 
 \hrulefill
 
-\textbf{Procedure:}  (see \texttt{rgiordan/zaminfluence} on \texttt{github})
+\textbf{Our procedure:}  (see \texttt{rgiordan/zaminfluence} on \texttt{github})
 \begin{enumerate}
     \item Compute your original estimator $\thetahat(\onevec)$.
     \item Compute and sort the influence scores
