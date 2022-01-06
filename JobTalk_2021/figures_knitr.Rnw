@@ -111,6 +111,30 @@ SetFullImageSize()
 }
 
 
+<<sim-refit-cap>>=
+#SetImageSize(aspect_ratio=base_aspect_ratio / 1.5)
+# This script populates plot1 and plot2
+source(file.path(paper_directory,
+                 "figures_knitr/microcredit/refit_line.R"),
+       echo=knitr_debug, print.eval=FALSE)
+@
+
+
+\newcommand{\SimRefitOne}{
+<<sim-refit-one, cache=sim_cache, fig.show='hold'>>=
+print(plot1)
+@
+}
+
+\newcommand{\SimRefitTwo}{
+<<sim-refit-two, cache=sim_cache, fig.show='hold'>>=
+print(plot2)
+SetFullImageSize()
+@
+}
+
+
+
 % \newcommand{\SimApproxNormalGraph}{
 % <<sim_graphics_cap4>>=
 % figcap <- paste0(

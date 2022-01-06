@@ -1,3 +1,5 @@
+
+
 plot_line_df <-
     microcredit_refit_env$line_df %>%
     filter(site == "Mexico")
@@ -16,16 +18,18 @@ reg_se <-
     filter(site == "Mexico") %>%
     pull(reg_se)
 
+
 plot1 <- plot_line_df %>%
-    ggplot(aes(group=site, x=prop_drop)) +
+    ggplot(aes(group=site, x=100 * prop_drop)) +
     geom_line(aes(y=pred, color="Prediction")) +
     theme(legend.title = element_blank()) +
     ylim(ymin, ymax) +
-    ylab(TeX("Change in $\\phi$")) +
+    ylab(TeX("Change in estimated effect of microcredit")) +
     geom_hline(aes(yintercept=0)) +
     geom_ribbon(
         aes(ymin=ymin), ymax=reg_se * 1.96, alpha=0.1) +
-    xlab("Proportion of points dropped")
+    xlab(TeX("Percent of data points dropped (sorted by $\\psi_n$)"))
+plot1
 
 plot2 <- plot1 +
     geom_line(aes(y=refit, color="Refit"))

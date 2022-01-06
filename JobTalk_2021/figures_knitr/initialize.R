@@ -38,8 +38,9 @@ LoadIntoEnvironment <- function(filename) {
 # Width in rendered units.  High numbers give smaller fonts on the images.
 # Setting base_image_width to the actual width of a page of paper (8.5)
 # lets ggplot pick what it thinks is best.
+
 base_aspect_ratio <- 6 / 8.5 # Basically fill a page by default
-base_image_width <- 8.5
+base_image_width <- 5.5
 #base_image_width <- 7
 
 SetImageSize <- function(aspect_ratio, image_width=base_image_width) {
