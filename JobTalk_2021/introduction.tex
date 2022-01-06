@@ -41,41 +41,42 @@ January 2022
 % %
 % Drawing the right conclusions affects peoples' lives!
 
-\vspace{1em}
-\textbf{Example:} \citet{angelucci2015microcredit}, a randomized controlled
-trial study of the efficacy of microcredit in Mexico based on 16,560 data
-points.
-
-The variable ``Beta" estimates the effect of microcredit in US dollars.
-
-%\MicrocreditMexicoRerunTable{}
-
-%\hspace{0.05em}
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{rll} \hline
-  & \onslide<2->{Left out points} & Beta (SE) \\ \hline
-Original result & \onslide<2->{0} & -4.55 (5.88) \\ \hline
-\onslide<3->{``Significant'' negative change & 14 & -10.96 (5.57) \\ \hline}
-\onslide<4->{``Significant'' positive change & 15 & 7.03 (2.55) \\ \hline}
-\end{tabular}
-\end{table}
-
-\vspace{-1em}
-\onslide<1-> { \textbf{The original conclusion: }
-No evidence that microcredit is effective...
-}
-\onslide<5->{\\...can be reversed by dropping less than 0.1\% of the data.}
-
-\vspace{1em}
-$\Rightarrow$ Standard errors can be inadequate summaries of data sensitivity!
+\vspace{1em} \textbf{Example:} \citet{angelucci2015microcredit}, a randomized
+controlled trial study of the efficacy of microcredit in Mexico based on 16,560
+data points. A regression was run to estimate the average effect of microcredit.
 
 \hrulefill
+
 \vspace{1em}
+\textbf{Original result: }
+Treatment effect statistically insignificant at 95\%.
+
+% \begin{table}[ht]
+% \centering
+% \begin{tabular}{rll} \hline
+%   & \onslide<2->{Left out points} & Beta (SE) \\ \hline
+% Original result & \onslide<2->{0} & -4.55 (5.88) \\ \hline
+% \onslide<3->{``Significant'' negative change & 14 & -10.96 (5.57) \\ \hline}
+% \onslide<4->{``Significant'' positive change & 15 & 7.03 (2.55) \\ \hline}
+% \end{tabular}
+% \end{table}
+
+\vspace{1em}
+\textbf{Policy implication: } Disinvest in microcredit initiatives.
+
+\hrulefill
+
+\vspace{1em} \textbf{Data dropping: } Can produce both positive and negative
+statististically significant results dropping no more than 15 data points
+($<$ 0.1\%).
+
+\vspace{1em}
+\textbf{Policy implication: } Run a higher-powered study (not just
+larger $N$).
+
+\hrulefill
 
 Cannot find influential subsets by brute force!
-${16,560 \choose 15} \approx 1.5 \cdot 10^{51}$
 
 \vspace{1em}
 \textbf{We provide a fast, automatic tool to  approximately identify the
