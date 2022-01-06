@@ -1,31 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Other forms of robustness}
-
-We proceeded as follows:
-\begin{enumerate}
-    \item Took presence of datapoints as a model input,
-    \item Formed an automatically-computable differential approximation,
-    \item Provided theory by analyzing higher-order derivatives,
-    \item Studied its effectiveness in problems with open-access data.
-\end{enumerate}
-
-\vspace{1em}
-\textbf{Presence of datapoints is only one model input of many!}
-
-\vspace{1em}
-\begin{itemize}
-    \item Prior sensitivity in Bayesian nonparametrics \citep{giordano2021bnp}
-    \item Model sensitivity of MCMC output
-        \citep{gustafson2000local, giordano2018covariances}
-    \item Cross-validation \citep{giordano2019swiss, wilson:2020:cv}
-    \item Cross-validation \citep{giordano2019swiss, wilson:2020:cv}
-    \item Frequentist variances of MCMC posteriors (in progress)
-\end{itemize}
-
-\end{frame}
 
 
 
@@ -43,15 +15,85 @@ a small proportion of your data.
 \pause \item We can quickly and automatically find an approximate influential
 set which is accurate for small sets.
 
-\pause \item Robustness to removing small sets is principally determined by the
-signal to noise ratio.
-
-\pause
-\item In the present work, we studied data dropping.  But we
-provide a framework for studying many other robustness
-questions, both to data and model perturbations.
-
+\pause \item Data dropping robustness is principally determined by the
+signal to noise ratio, and captures sensitivity distinct from sampling
+and gross error sensitivity.
 
 \end{itemize}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Links and references}
+
+\footnotesize
+
+% {\bf A workshop paper: }\newline
+Tamara Broderick, Ryan Giordano, Rachael Meager
+(alphabetical authors) \\
+``An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data Change Conclusions?''
+\newline {\color{blue}\url{https://arxiv.org/abs/2011.14999}}
+
+\hrulefill
+
+Blog posts with more details:
+\begin{itemize}
+\item \href{https://rgiordan.github.io/amip/2021/12/17/reweighted_colinear_note.html}{Colinearity in OLS after dropping}
+% \item \href{https://rgiordan.github.io/amip/2021/12/01/influence_is_sum.html}
+% {Influence functions and sums}
+\item \href{https://rgiordan.github.io/amip/2021/11/08/bootstrap_influence.html}
+{Connections to the bootstrap}
+\item \href{https://rgiordan.github.io/robustness/2021/09/17/amip_p_hacking.html}
+{Data dropping sensitivity overcomes p-hacking}
+\item \href{https://rgiordan.github.io/differentiability/2021/07/20/norms.html}
+{When a norm is the quantity of interest}
+\end{itemize}
+
+
+\hrulefill
+
+Related software on \texttt{github}:
+\begin{itemize}
+\item \href{https://github.com/rgiordan/zaminfluence}
+{rgiordan/zaminfluence (for \texttt{R})}
+\item \href{https://github.com/rgiordan/vittles}
+{rgiordan/vittles (for \texttt{Python})}
+\end{itemize}
+
+\hrulefill
+
+Some of my work on other forms of robustness:
+%
+%\vspace{1em}
+\begin{itemize}
+    \item Prior sensitivity in Bayesian nonparametrics \citep{giordano2021bnp}
+    \item Model sensitivity of MCMC output \citep{giordano2018covariances}
+    \item Cross-validation \citep{giordano2019swiss}
+    \item Frequentist variances of MCMC posteriors (in progress)
+\end{itemize}
+
+%\vspace{-0.5em}
+\end{frame}
+
+
+\begin{frame}{References}
+
+\bibliographystyle{plainnat}
+% Hide the references header
+% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
+\begingroup
+\renewcommand{\section}[2]{}%
+{
+\tiny
+%\scriptsize
+\bibliography{bibliography}
+}
+\endgroup
 
 \end{frame}
