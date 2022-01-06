@@ -15,8 +15,12 @@ ohie_env <- LoadIntoEnvironment(
 microcredit_env <- LoadIntoEnvironment(
     file.path(data_path, "microcredit", "microcredit_results.Rdata"))
 
-microcredit_temptation_env <- LoadIntoEnvironment(
-    file.path(data_path, "microcredit", "microcredit_temptation_results.Rdata"))
+microcredit_refit_env <- LoadIntoEnvironment(
+    file.path(data_path, "microcredit", "microcredit_fit_paths.Rdata"))
 
-mcmix_env <- LoadIntoEnvironment(
-    file.path(data_path, "microcredit_mixture", "microcredit_mixture_results.Rdata"))
+
+# microcredit_temptation_env <- LoadIntoEnvironment(
+#     file.path(data_path, "microcredit", "microcredit_temptation_results.Rdata"))
+
+# mcmix_env <- LoadIntoEnvironment(
+#     file.path(data_path, "microcredit_mixture", "microcredit_mixture_results.Rdata"))

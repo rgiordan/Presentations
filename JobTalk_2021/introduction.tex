@@ -8,18 +8,16 @@ An Automatic Finite-Sample Robustness Metric:
 \\Can Dropping a Little Data Make a Big Difference?}
 \end{center}
 
-\hrulefill
-
-\onslide<2->{
-\vspace{1em} The conclusions of one's statistical analysis may depend on only a
-\textbf{small fraction of the data}, even for \textbf{highly significant results
-in correctly specified models}.
-}
-
-\onslide<3->{ \vspace{1em} We provide a \textbf{generally applicable tool} to
-detect such sensitivity.  Our methods are \textbf{efficiently and automatically
-computable}, and come with \textbf{finite-sample accuracy guarantees} and
-\textbf{clear intuition}. }
+% \onslide<2->{
+% \vspace{1em} The conclusions of one's statistical analysis may depend on only a
+% \textbf{small fraction of the data}, even for \textbf{highly significant results
+% in correctly specified models}.
+% }
+%
+% \onslide<3->{ \vspace{1em} We provide a \textbf{generally applicable tool} to
+% detect such sensitivity.  Our methods are \textbf{efficiently and automatically
+% computable}, and come with \textbf{finite-sample accuracy guarantees} and
+% \textbf{clear intuition}. }
 
 \hrulefill
 \vspace{1em}
@@ -121,28 +119,30 @@ most influential set of points.}
 Would you be concerned if you could \textbf{reverse your conclusion} by removing
 a \textbf{small proportion} of your data?
 
-Not always!  But sometimes, surely yes.
+\vspace{1em}
+Not always!  But sometimes, surely yes, especially when you want to
+\textbf{generalize to unseen, systematically different populations}.
 
-Thinking without random noise can be helpful.
-
+\vspace{1em}
 Suppose you have a farm, and want to know whether
 your average yield is $>$ 170 bushels per acre.
 At harvest, you measure 200 bushels per acre.
 
 \begin{itemize}
-    \item Scenario one: If your yield is greater than 170 bushels
-        per acre, you make a profit.
+    \item Scenario one: $>$ 170 bushels
+        per acre means you make a profit.
         \begin{itemize}
-            \item Don’t care about sensitivity to small subsets
+            \item Don’t care about sensitivity to small subsets.
         \end{itemize}
-    \item Scenario two: You want to recommend your farming
-    methods to a friend across the valley.
+    \item Scenario two: Want to recommend methods to a distant friend.
     \begin{itemize}
-        \item Might care about sensitivity to small subsets
+        \item Might care about sensitivity to small subsets!
     \end{itemize}
 \end{itemize}
 
-For example, often in economics:
+
+\vspace{1em}
+Specifically, often in statistical applications:
 %
 \begin{itemize}
 \item Policy population is different from analyzed population,

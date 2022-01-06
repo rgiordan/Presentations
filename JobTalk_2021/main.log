@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  5 JAN 2022 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  5 JAN 2022 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1518,26 +1518,26 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.13).
 
 (./main.nav) (./introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 33
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 31
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 33.
+ut line 31.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1545,17 +1545,17 @@ thkerncmss.
 )
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
-
-] [3
-
-]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 87.
+(amsmath)                 on input line 85.
 
-[4
+[2
+
+] [3
+
+] [4
 
 ] [5
 
@@ -1565,32 +1565,28 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 
 ] [8
 
-] [9
-
-] [10
-
 ]) (./approximation.tex
 Underfull \hbox (badness 7963) in paragraph at lines 74--74
 []\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
 ata points
  []
 
-[11
+[9
 
 ]
-<static_figures/orig_weights.png, id=112, 455.7025pt x 91.34125pt>
+<static_figures/orig_weights.png, id=100, 455.7025pt x 91.34125pt>
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
 Package pdftex.def Info: static_figures/orig_weights.png  used on input line 14
 2.
 (pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
-<static_figures/weights_loo.png, id=114, 444.66125pt x 105.39375pt>
+<static_figures/weights_loo.png, id=102, 444.66125pt x 105.39375pt>
 File: static_figures/weights_loo.png Graphic file (type png)
 <use static_figures/weights_loo.png>
 Package pdftex.def Info: static_figures/weights_loo.png  used on input line 142
 .
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
- [12
+ [10
 
  <./static_figures/orig_weights.png> <./static_figures/weights_loo.png>]
 File: static_figures/orig_weights.png Graphic file (type png)
@@ -1603,7 +1599,7 @@ File: static_figures/weights_loo.png Graphic file (type png)
 Package pdftex.def Info: static_figures/weights_loo.png  used on input line 142
 .
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
- [13
+[11
 
 ]
 File: static_figures/orig_weights.png Graphic file (type png)
@@ -1616,7 +1612,7 @@ File: static_figures/weights_loo.png Graphic file (type png)
 Package pdftex.def Info: static_figures/weights_loo.png  used on input line 142
 .
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
- [14
+ [12
 
 ]
 File: static_figures/orig_weights.png Graphic file (type png)
@@ -1629,7 +1625,7 @@ File: static_figures/weights_loo.png Graphic file (type png)
 Package pdftex.def Info: static_figures/weights_loo.png  used on input line 219
 .
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
-<static_figures/e_beta_w.png, id=137, 903.375pt x 903.375pt>
+<static_figures/e_beta_w.png, id=124, 903.375pt x 903.375pt>
 File: static_figures/e_beta_w.png Graphic file (type png)
 <use static_figures/e_beta_w.png>
 Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 219.
@@ -1639,23 +1635,23 @@ Overfull \hbox (48.56654pt too wide) in paragraph at lines 219--219
  [] 
  []
 
-[15
+[13
 
- <./static_figures/e_beta_w.png>] [16
+ <./static_figures/e_beta_w.png>] [14
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [17
+ (./main.vrb) [15
 
 ]
-<static_figures/mx_refit_example.png, id=164, 949.5475pt x 568.1225pt>
+<static_figures/mx_refit_example.png, id=152, 949.5475pt x 568.1225pt>
 File: static_figures/mx_refit_example.png Graphic file (type png)
 <use static_figures/mx_refit_example.png>
 Package pdftex.def Info: static_figures/mx_refit_example.png  used on input lin
 e 350.
 (pdftex.def)             Requested size: 276.559pt x 165.46214pt.
- [18
+ [16
 
  <./static_figures/mx_refit_example.png>]
 File: static_figures/e_beta_w.png Graphic file (type png)
@@ -1667,16 +1663,16 @@ Overfull \hbox (48.56654pt too wide) in paragraph at lines 402--402
  [] 
  []
 
-[19
+[17
 
-]) (./examples.tex [20
+]) (./examples.tex [18
 
-] [21
+] [19
 
-] [22
+] [20
 
 ]) (./determination.tex
-<figure/sim-infl-hist-1.png, id=223, 614.295pt x 289.08pt>
+<figure/sim-infl-hist-1.png, id=211, 614.295pt x 289.08pt>
 File: figure/sim-infl-hist-1.png Graphic file (type png)
 <use figure/sim-infl-hist-1.png>
 Package pdftex.def Info: figure/sim-infl-hist-1.png  used on input line 56.
@@ -1686,24 +1682,24 @@ Overfull \hbox (8.41495pt too wide) in paragraph at lines 56--56
 [][] 
  []
 
-[23
+[21
 
- <./figure/sim-infl-hist-1.png (PNG copy)>] [24
+ <./figure/sim-infl-hist-1.png (PNG copy)>] [22
 
-] [25
+] [23
+
+] [24
+
+])
+(./conclusion.tex [25
 
 ] [26
 
-])
-(./conclusion.tex [27
+] [27
 
 ] [28
 
-] [29
-
-] [30
-
-] (./main.bbl) [31
+] (./main.bbl) [29
 
 ])
 \tf@nav=\write6
@@ -1724,9 +1720,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 37870 strings out of 483065
- 863697 string characters out of 5963550
- 1261260 words of memory out of 5000000
+ 37866 strings out of 483065
+ 863659 string characters out of 5963550
+ 1260257 words of memory out of 5000000
  52032 multiletter control sequences out of 15000+600000
  546744 words of font info for 79 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
@@ -1755,10 +1751,10 @@ blic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs
 10.pfb>
-Output written on main.pdf (31 pages, 431151 bytes).
+Output written on main.pdf (29 pages, 427554 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
- 76 named destinations out of 1000 (max. 500000)
+ 384 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
  92 words of extra memory for PDF output out of 10000 (max. 10000000)
 
