@@ -1,39 +1,35 @@
 
 Slide 1
 
-
 Thanks for having me.
 
 Statistical modeling increasingly informs important, real-life decisions.
 To ensure that we make the right decisions, we need to make sure that our
 analyses are robust to subjectively minor changes to our model or data.
 
-Today I'm going to talk about one particular kind of data robustness.
-Specifically you've gathered and cleaned exchangeable data, fit a model, and
-come to some qualitative conclusion based on your analysis. Would you be worried
-if I could identify a small fraction of your data points that you could remove
-from your dataset to reverse that qualitative conclusion?
-
-Today I'll provide you with a tool to quickly and automatically find such
-influential sets of data, show that such excess sensitivity is not uncommon even
-in high-profile published studies, and provide some perhaps surprising intuition
-about what makes an analysis sensitive or not to dropping small sets data.
+In particular, you might be concerned if a study's qualitative conclusions could
+be overturned or even reversed by dropping a small fraction (say less than 1%)
+of the data. Today I'll provide you with a tool to quickly and automatically
+find such influential sets of data, show that such excess sensitivity, though
+not ubiquitous, is not uncommon even in high-profile published studies, and
+provide some perhaps surprising intuition about what makes an analysis sensitive
+or not to dropping small sets of data.
 
 -------------
 
 Slide 2
 
 
-I'll use a particular published study as an example. It's a study of microcredit
-in Mexico.  Microcredit is an intervention in development economics in which
-families and small business get increased access to credit markets in hopes of
-improving their economic outcomes.  This particular study involved over 16k
-households, which were randomly assigned to receive or not receive increased
+I'll use a particular published study as an running example. It's a study of
+microcredit in Mexico.  Microcredit is an intervention in development economics
+in which families and small business get increased access to credit markets in
+hopes of improving their economic outcomes.  This particular study involved over
+16k households, which were randomly assigned to receive or not receive increased
 microcredit access.
 
 I'd like to emphasize that this is a great study with great data sharing.  To
 the extent that I will be criticizing it, I will be criticizing widespread
-statistical practices that are by no means ideosyncratic to this paper.
+statistical practices that are by no means idiosyncratic to this paper.
 
 At the end of the day, the authors ran an OLS regression, and found that the
 coefficient on the treatment indicator was statistically insignificant with
@@ -49,10 +45,10 @@ a high degree of sensitivity to a small number of datapoints.
 I would argue that the policy implication is very different in light of this
 fact.  Rather than believing we have found positive evidence for the
 ineffectiveness of microcredit, we should think of the study as under-powered,
-and try to measure microcredit more effectively.  And in case you're wondering
-how such a massive study could be under-powered, at the end of the talk I'll
-discuss how data sensitivity can be mitigated only by study design, not by
-larger sample sizes.
+and try to measure the effect microcredit more effectively.  And in case you're
+wondering how such a massive study could be under-powered, at the end of the
+talk I'll discuss how data sensitivity can be mitigated only by study design,
+not by larger sample sizes.
 
 Now, how did we find these influential sets?  I will show that
 finding them by brute force is computationally impossible, even for

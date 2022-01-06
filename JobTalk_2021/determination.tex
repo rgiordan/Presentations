@@ -7,7 +7,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{What makes an analysis sensitive?}
+\begin{frame}{What makes an analysis sensitive?  Preliminaries}
 %
 We are ``sensitive to data dropping'' if, for some $\Delta$ large enough to
 change conclusions, $\exists \w^*$ dropping $\alphan$ points such that
@@ -61,7 +61,7 @@ change conclusions, $\exists \w^*$ dropping $\alphan$ points such that
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Example.}
+\begin{frame}[t]{What makes an analysis sensitive?  Preliminaries}
 %
 \vspace{-2em}
 \begin{align*}
@@ -127,7 +127,7 @@ $\thetafun(\thetahat(\onevec)) + \Delta$ when
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Corollaries.}
+\begin{frame}[t]{What makes an analysis sensitive?}
 %
 \begin{minipage}{0.45\textwidth}
 \begin{center}
@@ -192,7 +192,7 @@ $\frac{1.96}{\sqrt{N}} \noise$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Corollaries.}
+\begin{frame}[t]{What makes an analysis sensitive?}
 %
 \begin{minipage}[t]{0.45\textwidth}
 \begin{center}
@@ -230,11 +230,13 @@ For a fixed $\noise$, outliers decrease $\shape$.
 \end{frame}
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Corollaries.}
+\begin{frame}[t]{How to make an analysis less sensitive?}
 
 \begin{center}
     Robust to data dropping:\\
@@ -243,15 +245,18 @@ For a fixed $\noise$, outliers decrease $\shape$.
     $\textrm{SNR} = \frac{\Delta}{\noise} > \shape$
 \end{center}
 
+\vspace{1em}
+\hrulefill
+
+\vspace{1em}
 \textbf{To achieve dropping robustness,
 reduce $\noise$ and / or increase $\Delta$.\\}
 \textit{Proof: }
 Across typical distributions, $\shape$ varies little.
 (Details in paper.)
 
-\vspace{1em}
-
-\hrulefill
+% \vspace{1em}
+% \hrulefill
 
 \vspace{1em}
 In the Mexico microcredit example,

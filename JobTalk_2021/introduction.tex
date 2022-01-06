@@ -42,8 +42,9 @@ January 2022
 % Drawing the right conclusions affects peoples' lives!
 
 \vspace{1em} \textbf{Example:} \citet{angelucci2015microcredit}, a randomized
-controlled trial study of the efficacy of microcredit in Mexico based on 16,560
-data points. A regression was run to estimate the average effect of microcredit.
+controlled trial study of the efficacy of microcredit in Mexico based on $N =
+$16,560 data points. A regression was run to estimate the average effect of
+microcredit.
 
 \hrulefill
 
@@ -94,7 +95,7 @@ most influential set of points.}
 \begin{frame}{Outline}
 \begin{itemize}
     \item Why and when might you care about sensitivity to data dropping?
-    \item How does our approximation work, and when is it accurate?
+    \item How do we identify influential sets?  When is our method accurate?
     \begin{itemize}
         \item[] (A formalization of the problem and the
             class of estimators we study.)
@@ -105,8 +106,8 @@ most influential set of points.}
     \end{itemize}
     \item What kinds of analyses are sensitive to data dropping?
     \begin{itemize}
-        \item[] (Including comparison to standard errors and
-            gross-error robustness.)
+        \item[] (Including comparison to standard errors and how
+                 improve data dropping robustness.)
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -117,8 +118,8 @@ most influential set of points.}
 
 \begin{frame}{Dropping data: Motivation}
 
-Would you be concerned if you could \textbf{reverse your conclusion} by removing
-a \textbf{small proportion} of your data?
+When and why do you care that you can \textbf{reverse your conclusion} by
+removing a \textbf{small proportion} of your data?
 
 \vspace{1em}
 Not always!  But sometimes, surely yes, especially when you want to

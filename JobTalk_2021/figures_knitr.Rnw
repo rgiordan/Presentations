@@ -135,40 +135,40 @@ SetFullImageSize()
 
 
 
-% \newcommand{\SimApproxNormalGraph}{
-% <<sim_graphics_cap4>>=
-% figcap <- paste0(
-%     "The actual change, linear approximation to the change, ",
-%     "and approximation error.",
-%     "Here, $\\sigma_x = \\SimAccSigx$, ",
-%     "$\\sigma_\\varepsilon = \\SimAccSigeps$, and ",
-%     "$\\theta_0 = \\SimTrueTheta$.")
-% SetImageSize(aspect_ratio=base_aspect_ratio / 1.5)
-% @
-% <<sim-approx-normal, cache=sim_cache, fig.show='hold', fig.cap=figcap>>=
-% source("figures_knitr/simulations/graphs_comb.R",
-%        echo=knitr_debug, print.eval=TRUE)
-% print(plot2)
-% SetFullImageSize()
-% @
-% }
-%
-% \newcommand{\SimGridNormalGraph}{
-% <<sim_graphics_cap5>>=
-% figcap <- paste0(
-%     "The approximate perturbation inducing proportion ",
-%     "at differing values of $\\sigma_x$ ",
-%     "and $\\sigma_\\varepsilon$. Red colors indicate datasets whose sign can ",
-%     "is predicted to change when dropping less than 1\\% of datapoints. ",
-%     "The grey areas indicate ",
-%     "$\\amip{\\alpha} = \\na$, a failure of the linear approximation to ",
-%     "locate any way to change the sign.")
-% SetImageSize(aspect_ratio=base_aspect_ratio / 1.8)
-% @
-% <<sim-grid-normal, cache=sim_cache, fig.show='hold', fig.cap=figcap>>=
-% source("figures_knitr/simulations/graphs_comb.R",
-%        echo=knitr_debug, print.eval=TRUE)
-% print(plot1)
-% SetFullImageSize()
-% @
-% }
+\newcommand{\SimApproxNormalGraph}{
+<<sim_graphics_cap4>>=
+figcap <- paste0(
+    "The actual change, linear approximation to the change, ",
+    "and approximation error.",
+    "Here, $\\sigma_x = \\SimAccSigx$, ",
+    "$\\sigma_\\varepsilon = \\SimAccSigeps$, and ",
+    "$\\theta_0 = \\SimTrueTheta$.")
+SetImageSize(aspect_ratio=base_aspect_ratio / 1.5)
+@
+<<sim-approx-normal, cache=sim_cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/simulations/graphs_comb.R",
+       echo=knitr_debug, print.eval=TRUE)
+print(plot2)
+SetFullImageSize()
+@
+}
+
+\newcommand{\SimGridNormalGraph}{
+<<sim_graphics_cap5>>=
+figcap <- paste0(
+    "The approximate perturbation inducing proportion ",
+    "at differing values of $\\sigma_x$ ",
+    "and $\\sigma_\\varepsilon$. Red colors indicate datasets whose sign can ",
+    "is predicted to change when dropping less than 1\\% of datapoints. ",
+    "The grey areas indicate ",
+    "$\\amip{\\alpha} = \\na$, a failure of the linear approximation to ",
+    "locate any way to change the sign.")
+SetImageSize(aspect_ratio=base_aspect_ratio / 1.8)
+@
+<<sim-grid-normal, cache=sim_cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/simulations/graphs_comb.R",
+       echo=knitr_debug, print.eval=TRUE)
+print(plot1)
+SetFullImageSize()
+@
+}
