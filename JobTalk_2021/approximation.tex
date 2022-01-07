@@ -6,12 +6,14 @@
 \begin{frame}[t]{Formalizing the question.}
 
 \begin{minipage}[t]{0.45\textwidth}
-\textbf{Ordinary least squares}
+\textbf{Example: Least squares}
 
+\pause
 \vspace{1em}
 A data point $\d_n$ has regressors
 $x_n$ and response $y_n$: $\d_n = (x_n, y_n)$.
 
+\pause
 \vspace{1em}
 The estimator $\thetahat \in \mathbb{R}^p$ satisfies:
 %
@@ -23,6 +25,7 @@ The estimator $\thetahat \in \mathbb{R}^p$ satisfies:
 %
 \end{align*}
 %
+\pause
 Make a qualitative decision using:\vspace{-1.5em}
 \begin{itemize}
 \item A particular component: $\thetahat_k$
@@ -32,15 +35,18 @@ Make a qualitative decision using:\vspace{-1.5em}
 %
 \end{minipage}
 %
+\pause
 \hfill\vline\hfill
 %
 \begin{minipage}[t]{0.45\textwidth}
-\textbf{Z-estimators}
+\textbf{General setup: Z-estimators}
 
+\pause
 \vspace{1em}
 We observe $N$ data points $\d_{1}, \ldots, \d_{N}$
 (in any domain).
 
+\pause
 \vspace{1em}
 The estimator $\thetahat \in \mathbb{R}^p$ satisfies:
 %
@@ -53,8 +59,9 @@ G(\thetahat, \d_{n}) =  \zP.
 %
 $G(\cdot, \d_{n})$ is ``nice,'' $\mathbb{R}^p$-valued.
 
-E.g. OLS, MLE, VB, IV \&c.
+E.g. MLE, MAP, VB, IV \&c.
 
+\pause
 \vspace{1em}
 Make a qualitative decision using $\thetafun(\thetahat)$
 for a smooth, real-valued $\thetafun$.
@@ -63,13 +70,6 @@ for a smooth, real-valued $\thetafun$.
 (WLOG try to increase $\thetafun(\thetahat)$.)
 %
 \end{minipage}
-
-% \hrulefill
-
-% \vspace{0.3em}
-% \textbf{Question: }
-% Can we make a big change in $\thetafun(\thetahat)$ by dropping
-% $\alphan$ datapoints, for some small proportion $\alpha$?
 
 \end{frame}
 
@@ -87,21 +87,29 @@ for a smooth, real-valued $\thetafun$.
 Can we make a big change in $\thetafun(\thetahat)$ by dropping
 $\alphan$ datapoints, for some small proportion $\alpha$?
 %
-\textbf{Two big problems:}
+\onslide<2->{\textbf{Two big problems:}
 %
 \begin{itemize}
+    \onslide<3->{
     \item There are ${N \choose \alphan}$
         sets to check.
         (E.g. ${16,560 \choose 15 } \approx 1.5\cdot10^{51}$)
+    }
+    \onslide<4->{
     \item Evaluating $\thetahat$ re-solving the estimating equation.
         \begin{itemize}
         \item E.g., re-computing the OLS estimator.
         \item Other examples are even harder (VB, machine learning)
         \end{itemize}
+    }
 \end{itemize}
+}
 %
+\onslide<5->{
 \textbf{Our idea: }Smoothly approximate the effect of leaving out points.
+}
 
+\onslide<6->{
 \hrulefill
 
 We have $N$ data points $\d_{1}, \ldots, \d_{N}$, a quantity of interest
@@ -110,15 +118,16 @@ $\thetafun(\cdot)$, and
 \begin{align*}
 %
 \sumn
-\only<2->{\color{red} \w_n \color{black}}
+\only<7->{\color{red} \w_n \color{black}}
 G(
-\thetahat\only<2->{\color{red} (\w) \color{black}}
+\thetahat\only<7->{\color{red} (\w) \color{black}}
 , \d_{n}) =  \zP
-\onslide<2->{\textrm{ for a weight vector }\w \in \mathbb{R}^N}.
+\onslide<7->{\textrm{ for a weight vector }\w \in \mathbb{R}^N}.
 %
 \end{align*}
+}
 
-\onslide<3->{
+\onslide<8->{
 \begin{minipage}{0.45\textwidth}
 \begin{center}
 Original weights: $\onevec = (1,\ldots,1)$
@@ -133,7 +142,7 @@ Leave points out by setting their elements of $\w$ to zero.
 \end{minipage}
 }
 
-\onslide<3->{
+\onslide<9->{
 The map $\w \mapsto \thetafun(\thetahat(\w))$ is well-defined even
 for continuous weights.
 }
@@ -200,11 +209,13 @@ G(\thetahat(\w), \d_{n}) =  \zP
 \end{minipage}
 \end{center}
 
+\pause
 The values $N \infl_n$ are the \textbf{empirical influence function}
 \citep{hampel1986robustbook}.
 
 We call $\infl_n$ an ``influence scores.''
 
+\pause
 \vspace{1em}
 We can use $\infl_n$ to form a Taylor series approximation:
 %
@@ -240,6 +251,7 @@ dropping $\alphan$ points?
 
 \hrulefill
 
+\pause
 \textbf{Approximate Problem: }
 %
 How much can you change $\thetafunlin(\thetahat(\w))$
@@ -260,6 +272,7 @@ most negative $\infl_n$.
 
 \hrulefill
 
+\pause
 \textbf{Our procedure:}  (see \texttt{rgiordan/zaminfluence} on \texttt{github})
 \begin{enumerate}
     \item Compute your original estimator $\thetahat(\onevec)$.
@@ -269,6 +282,7 @@ most negative $\infl_n$.
     enough to change your conclusions.
 \end{enumerate}
 
+\pause
 How to compute the $\infl_n$'s?  And how accurate is the approximation?
 
 \end{frame}
@@ -292,6 +306,7 @@ $?
 %\end{align*}
 %
 
+\pause
 \vspace{1em}
 By the \textbf{chain rule},
 $
@@ -303,10 +318,10 @@ $
 %
 $.
 
+\pause
 \vspace{1em}
 Recall that
 $\sumn \w_n G(\thetahat(\w), \d_{n}) =  \zP$ for all $\w$ near $\onevec$.
-
 
 \vspace{1em}
 $\Rightarrow$
@@ -314,13 +329,12 @@ By the \textbf{implicit function theorem}, we can write
 $\fracat{\partial\thetahat(\w)}{\partial\w_n}{\onevec}$ as a linear system
 involving $G(\cdot, \cdot)$ and its derivatives.
 
+\pause
 \vspace{1em}
 $\Rightarrow$
 The $\infl_n$ are automatically computable from $\thetahat(\onevec)$ and
 software implementations of $G(\cdot, \cdot)$ and $\thetafun(\cdot)$
 using \textbf{automatic differentiation}.
-
-
 
 \begin{lstlisting}
 > import jax
@@ -356,8 +370,6 @@ Checking the approximation for Mexico microcredit.
 \only<1>{\SimRefitOne{}}
 \only<2>{\SimRefitTwo{}}
 
-
-
 \end{frame}
 
 
@@ -369,20 +381,7 @@ Checking the approximation for Mexico microcredit.
 
 \begin{minipage}{0.45\textwidth}
     By conrolling the curvature,
-    % $\fracat{\partial^2 \thetafun(\thetahat(\w))}
-    %         {\partial \w_n \partial \w_m}
-    %         {\onevec}$
     we can control the error in the linear approximation.
-
-    % \vspace{1em}
-    % Key conditions are
-    % \begin{itemize}
-    %     \item Smoothness of $\thetafun(\cdot)$,
-    %         $\meann G(\cdot, \d_n)$, and derivatives
-    %     \item Invertibility of
-    %         $\meann \fracat{\partial G(\theta, \d_n)}
-    %             {\partial \theta^T}{\thetahat(\onevec)}$.
-    % \end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.45\textwidth}
@@ -401,13 +400,12 @@ O\left(\alpha\right)$ as $\alpha \rightarrow 0$.
 
 \hrulefill
 
+\pause
 \vspace{1em}
 \textbf{But you don't need to rely on the theory!}
 
-\vspace{1em}
-Our method returns which points to drop.  \textbf{Re-running once}
-without those
-points provides an \textbf{exact lower bound} on the worst-case
+\vspace{1em} Our method returns which points to drop.  \textbf{Re-running once}
+without those points provides an \textbf{exact lower bound} on the worst-case
 sensitivity.
 
 \end{frame}

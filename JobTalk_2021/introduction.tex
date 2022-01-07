@@ -8,17 +8,6 @@ An Automatic Finite-Sample Robustness Metric:
 \\Can Dropping a Little Data Make a Big Difference?}
 \end{center}
 
-% \onslide<2->{
-% \vspace{1em} The conclusions of one's statistical analysis may depend on only a
-% \textbf{small fraction of the data}, even for \textbf{highly significant results
-% in correctly specified models}.
-% }
-%
-% \onslide<3->{ \vspace{1em} We provide a \textbf{generally applicable tool} to
-% detect such sensitivity.  Our methods are \textbf{efficiently and automatically
-% computable}, and come with \textbf{finite-sample accuracy guarantees} and
-% \textbf{clear intuition}. }
-
 \hrulefill
 \vspace{1em}
 
@@ -52,20 +41,12 @@ microcredit.
 \textbf{Original result: }
 Treatment effect statistically insignificant at 95\%.
 
-% \begin{table}[ht]
-% \centering
-% \begin{tabular}{rll} \hline
-%   & \onslide<2->{Left out points} & Beta (SE) \\ \hline
-% Original result & \onslide<2->{0} & -4.55 (5.88) \\ \hline
-% \onslide<3->{``Significant'' negative change & 14 & -10.96 (5.57) \\ \hline}
-% \onslide<4->{``Significant'' positive change & 15 & 7.03 (2.55) \\ \hline}
-% \end{tabular}
-% \end{table}
-
 \vspace{1em}
 \textbf{Policy implication: } Disinvest in microcredit initiatives.
 
 \hrulefill
+
+\pause
 
 \vspace{1em} \textbf{Data dropping: } Can produce both positive and negative
 statististically significant results dropping no more than 15 data points
@@ -75,7 +56,10 @@ statististically significant results dropping no more than 15 data points
 \textbf{Policy implication: } Run a higher-powered study (not just
 larger $N$).
 
+
 \hrulefill
+
+\pause
 
 Cannot find influential subsets by brute force!
 
@@ -106,8 +90,7 @@ most influential set of points.}
     \end{itemize}
     \item What kinds of analyses are sensitive to data dropping?
     \begin{itemize}
-        \item[] (Including comparison to standard errors and how
-                 improve data dropping robustness.)
+    \item[] (Comparison to standard errors, gross errors, and how to mitigate.)
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -121,6 +104,7 @@ most influential set of points.}
 When and why do you care that you can \textbf{reverse your conclusion} by
 removing a \textbf{small proportion} of your data?
 
+\pause
 \vspace{1em}
 Not always!  But sometimes, surely yes, especially when you want to
 \textbf{generalize to unseen, systematically different populations}.
@@ -130,18 +114,21 @@ Suppose you have a farm, and want to know whether
 your average yield is $>$ 170 bushels per acre.
 At harvest, you measure 200 bushels per acre.
 
+\pause
 \begin{itemize}
     \item Scenario one: $>$ 170 bushels
         per acre means you make a profit.
         \begin{itemize}
             \item Don’t care about sensitivity to small subsets.
         \end{itemize}
+    \pause
     \item Scenario two: Want to recommend methods to a distant friend.
     \begin{itemize}
         \item Might care about sensitivity to small subsets!
     \end{itemize}
 \end{itemize}
 
+\pause
 
 \vspace{1em}
 Specifically, often in statistical applications:

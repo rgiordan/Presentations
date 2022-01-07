@@ -13,6 +13,7 @@ $?
 %\end{align*}
 %
 
+\pause
 \vspace{1em}
 By the \textbf{chain rule},
 $
@@ -24,10 +25,10 @@ $
 %
 $.
 
+\pause
 \vspace{1em}
 Recall that
 $\sumn \w_n G(\thetahat(\w), \d_{n}) =  \zP$ for all $\w$ near $\onevec$.
-
 
 \vspace{1em}
 $\Rightarrow$
@@ -35,13 +36,12 @@ By the \textbf{implicit function theorem}, we can write
 $\fracat{\partial\thetahat(\w)}{\partial\w_n}{\onevec}$ as a linear system
 involving $G(\cdot, \cdot)$ and its derivatives.
 
+\pause
 \vspace{1em}
 $\Rightarrow$
 The $\infl_n$ are automatically computable from $\thetahat(\onevec)$ and
 software implementations of $G(\cdot, \cdot)$ and $\thetafun(\cdot)$
 using \textbf{automatic differentiation}.
-
-
 
 \begin{lstlisting}
 > import jax

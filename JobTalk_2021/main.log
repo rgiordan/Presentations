@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  6 JAN 2022 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  7 JAN 2022 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1518,26 +1518,26 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.13).
 
 (./main.nav) (./introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 31
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 31.
+ut line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1551,185 +1551,367 @@ thkerncmss.
 
 ] [4
 
-])
-(./approximation.tex
+] [5
+
+] [6
+
+]
+[7
+
+] [8
+
+] [9
+
+] [10
+
+]) (./approximation.tex
 Underfull \hbox (badness 7963) in paragraph at lines 74--74
 []\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
 ata points
  []
 
-[5
+[11
+
+]
+Underfull \hbox (badness 7963) in paragraph at lines 74--74
+[]\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
+ata points
+ []
+
+[12
+
+]
+Underfull \hbox (badness 7963) in paragraph at lines 74--74
+[]\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
+ata points
+ []
+
+[13
+
+]
+Underfull \hbox (badness 7963) in paragraph at lines 74--74
+[]\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
+ata points
+ []
+
+[14
+
+]
+Underfull \hbox (badness 7963) in paragraph at lines 74--74
+[]\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
+ata points
+ []
+
+[15
+
+]
+Underfull \hbox (badness 7963) in paragraph at lines 74--74
+[]\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
+ata points
+ []
+
+[16
+
+]
+Underfull \hbox (badness 7963) in paragraph at lines 74--74
+[]\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
+ata points
+ []
+
+[17
+
+]
+Underfull \hbox (badness 7963) in paragraph at lines 74--74
+[]\OT1/cmss/m/n/10 We ob-serve $\OT1/mathkerncmss/m/sl/10 N$ \OT1/cmss/m/n/10 d
+ata points
+ []
+
+[18
 
 ]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 143.
+(amsmath)                 on input line 152.
 
-<static_figures/orig_weights.png, id=71, 455.7025pt x 91.34125pt>
+<static_figures/orig_weights.png, id=153, 455.7025pt x 91.34125pt>
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
-Package pdftex.def Info: static_figures/orig_weights.png  used on input line 14
-3.
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
 (pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
-<static_figures/weights_loo.png, id=73, 444.66125pt x 105.39375pt>
+<static_figures/weights_loo.png, id=155, 444.66125pt x 105.39375pt>
 File: static_figures/weights_loo.png Graphic file (type png)
 <use static_figures/weights_loo.png>
-Package pdftex.def Info: static_figures/weights_loo.png  used on input line 143
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
 .
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
-[6
+[19
 
  <./static_figures/orig_weights.png> <./static_figures/weights_loo.png>]
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
-Package pdftex.def Info: static_figures/orig_weights.png  used on input line 14
-3.
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
 (pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
 File: static_figures/weights_loo.png Graphic file (type png)
 <use static_figures/weights_loo.png>
-Package pdftex.def Info: static_figures/weights_loo.png  used on input line 143
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
 .
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
 
-[7
+[20
 
 ]
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
-Package pdftex.def Info: static_figures/orig_weights.png  used on input line 14
-3.
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
 (pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
 File: static_figures/weights_loo.png Graphic file (type png)
 <use static_figures/weights_loo.png>
-Package pdftex.def Info: static_figures/weights_loo.png  used on input line 143
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
 .
 (pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
- [8
+ [21
 
 ]
-<static_figures/e_beta_w.png, id=96, 903.375pt x 903.375pt>
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
+(pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
+.
+(pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
+ [22
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
+(pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
+.
+(pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
+ [23
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
+(pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
+.
+(pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
+ [24
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
+(pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
+.
+(pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
+ [25
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
+(pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
+.
+(pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
+ [26
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package pdftex.def Info: static_figures/orig_weights.png  used on input line 15
+2.
+(pdftex.def)             Requested size: 138.2795pt x 27.71756pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package pdftex.def Info: static_figures/weights_loo.png  used on input line 152
+.
+(pdftex.def)             Requested size: 138.2795pt x 32.77464pt.
+ [27
+
+]
+<static_figures/e_beta_w.png, id=216, 903.375pt x 903.375pt>
 File: static_figures/e_beta_w.png Graphic file (type png)
 <use static_figures/e_beta_w.png>
-Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 222.
+Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 233.
 (pdftex.def)             Requested size: 107.85783pt x 107.84894pt.
 
-Overfull \hbox (48.56654pt too wide) in paragraph at lines 222--222
+Overfull \hbox (48.56654pt too wide) in paragraph at lines 233--233
  [] 
  []
 
 
-Overfull \vbox (3.83603pt too high) detected at line 222
+Overfull \vbox (3.83603pt too high) detected at line 233
  []
 
-[9
+[28
 
- <./static_figures/e_beta_w.png>] [10
+ <./static_figures/e_beta_w.png>]
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 233.
+(pdftex.def)             Requested size: 107.85783pt x 107.84894pt.
+
+Overfull \hbox (48.56654pt too wide) in paragraph at lines 233--233
+ [] 
+ []
+
+
+Overfull \vbox (3.83603pt too high) detected at line 233
+ []
+
+[29
+
+]
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 233.
+(pdftex.def)             Requested size: 107.85783pt x 107.84894pt.
+
+Overfull \hbox (48.56654pt too wide) in paragraph at lines 233--233
+ [] 
+ []
+
+
+Overfull \vbox (3.83603pt too high) detected at line 233
+ []
+
+[30
+
+] [31
+
+] [32
+
+] [33
+
+] [34
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [11
+ (./main.vrb) [35
+
+] (./main.vrb) [36
+
+] (./main.vrb)
+[37
+
+] (./main.vrb) [38
 
 ]
-<figure/sim-refit-one-1.png, id=123, 397.485pt x 280.4076pt>
+<figure/sim-refit-one-1.png, id=296, 397.485pt x 280.4076pt>
 File: figure/sim-refit-one-1.png Graphic file (type png)
 <use figure/sim-refit-one-1.png>
-Package pdftex.def Info: figure/sim-refit-one-1.png  used on input line 361.
+Package pdftex.def Info: figure/sim-refit-one-1.png  used on input line 373.
 (pdftex.def)             Requested size: 301.15164pt x 212.64133pt.
- [12
+ [39
 
  <./figure/sim-refit-one-1.png (PNG copy)>]
-<figure/sim-refit-two-1.png, id=130, 397.485pt x 280.4076pt>
+<figure/sim-refit-two-1.png, id=303, 397.485pt x 280.4076pt>
 File: figure/sim-refit-two-1.png Graphic file (type png)
 <use figure/sim-refit-two-1.png>
-Package pdftex.def Info: figure/sim-refit-two-1.png  used on input line 361.
+Package pdftex.def Info: figure/sim-refit-two-1.png  used on input line 373.
 (pdftex.def)             Requested size: 301.15164pt x 212.64133pt.
- [13
+ [40
 
  <./figure/sim-refit-two-1.png (PNG copy)>]
 File: static_figures/e_beta_w.png Graphic file (type png)
 <use static_figures/e_beta_w.png>
-Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 413.
+Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 411.
 (pdftex.def)             Requested size: 107.85783pt x 107.84894pt.
 
-Overfull \hbox (48.56654pt too wide) in paragraph at lines 413--413
+Overfull \hbox (48.56654pt too wide) in paragraph at lines 411--411
  [] 
  []
 
-[14
-
-]) (./examples.tex [15
-
-] [16
-
-] [17
-
-]) (./determination.tex [18
-
-] [19
-
-] [20
+[41
 
 ]
-[21
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package pdftex.def Info: static_figures/e_beta_w.png  used on input line 411.
+(pdftex.def)             Requested size: 107.85783pt x 107.84894pt.
 
-]) (./conclusion.tex [22
+Overfull \hbox (48.56654pt too wide) in paragraph at lines 411--411
+ [] 
+ []
 
-] [23
+[42
 
-] [24
+]) (./examples.tex [43
 
-] [25
+] [44
 
-] (./main.bbl) [26
+] [45
+
+]) (./determination.tex [46
+
+] [47
+
+] [48
+
+]
+[49
+
+]) (./conclusion.tex [50
+
+] [51
+
+] [52
+
+] [53
+
+] (./main.bbl) [54
 
 ]) (./extras.tex
-[27
+[55
 
 ]
-<figure/sim-grid-normal-1.png, id=270, 397.485pt x 155.8623pt>
+<figure/sim-grid-normal-1.png, id=452, 397.485pt x 155.8623pt>
 File: figure/sim-grid-normal-1.png Graphic file (type png)
 <use figure/sim-grid-normal-1.png>
 Package pdftex.def Info: figure/sim-grid-normal-1.png  used on input line 30.
 (pdftex.def)             Requested size: 301.15164pt x 117.99994pt.
- [28
+ [56
 
- <./figure/sim-grid-normal-1.png (PNG copy)>] [29
+ <./figure/sim-grid-normal-1.png (PNG copy)>] [57
 
-] [30
+] [58
 
-] [31
+] [59
 
-]
-
-Package natbib Warning: Citation `mises1947asymptotic' on page 32 undefined on 
-input line 154.
-
-
-Package natbib Warning: Citation `huber1981robust' on page 32 undefined on inpu
-t line 154.
-
-
-Package natbib Warning: Citation `bickel1993semiparametric' on page 32 undefine
-d on input line 154.
-
-
-Package natbib Warning: Citation `reeds1976thesis' on page 32 undefined on inpu
-t line 154.
-
-
-Package natbib Warning: Citation `giordano2019higherorder' on page 32 undefined
- on input line 154.
-
-[32
+] [60
 
 ]
 Overfull \hbox (22.5694pt too wide) in paragraph at lines 229--229
 [][]  
  []
 
-[33
+[61
 
 ])
 \tf@nav=\write6
@@ -1741,26 +1923,26 @@ Overfull \hbox (22.5694pt too wide) in paragraph at lines 229--229
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-
-
-Package natbib Warning: There were undefined citations.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
-(./main.aux)
+ (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 37904 strings out of 483065
- 864066 string characters out of 5963550
- 1270800 words of memory out of 5000000
- 52056 multiletter control sequences out of 15000+600000
- 547973 words of font info for 84 fonts, out of 8000000 for 9000
+ 37974 strings out of 483065
+ 864890 string characters out of 5963550
+ 1290858 words of memory out of 5000000
+ 52062 multiletter control sequences out of 15000+600000
+ 547679 words of font info for 83 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 64i,15n,103p,771b,1137s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,15n,103p,771b,1151s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
@@ -1784,10 +1966,10 @@ t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
 /amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rs
 fs10.pfb>
-Output written on main.pdf (33 pages, 621329 bytes).
+Output written on main.pdf (61 pages, 687401 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 81 named destinations out of 1000 (max. 500000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 490 compressed objects within 5 object streams
+ 139 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
