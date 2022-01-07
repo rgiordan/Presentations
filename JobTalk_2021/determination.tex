@@ -18,30 +18,40 @@ most influential points,
 %
 \Delta \ge \thetafunlin(\w^*) - \thetafun(\thetahat(\onevec))
     % = {\color{red}- \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)} }
-    =:   {\color{black} \noise } { \color{black} \shape}
+    \onslide<3->{
+        =:   {\color{black} \noise } { \color{black} \shape}
+    }
+\onslide<6->{
 \quad\Leftrightarrow\quad
-%
-{\color{red}\frac{\Delta}{\noise} \ge \shape}.
-%
-% $
+    {\color{red}\frac{\Delta}{\noise} \ge \shape}.
+}
 \end{align*}
 %
-% \hspace{1em} where \vspace{1em}
-
 \begin{itemize}
+\onslide<2->{
 \item The ``signal'' $\Delta$ is the smallest change that reverses your conclusion
-\item The ``noise'' $\noise^2 \rightarrow \mathrm{Var}(\sqrt{N}\phi)$
+}
+\onslide<4->{
+\item The ``noise''
+    $\noise^2 \rightarrow
+        \underset{N \rightarrow \infty}{\mathrm{lim}}
+            \mathrm{Var}(\sqrt{N}\phi)$
     (``sandwich'' variance estimator)
+}
+\onslide<5->{
 \item The ``shape''
     $\shape$
     $\rightarrow$ a nonzero constant and is
     $\le \sqrt{\alpha (1 - \alpha)}$
+}
 \end{itemize}
 
 \hrulefill
 
+\onslide<7->{
 \textbf{Contrast with sampling variability.}
 
+\vspace{0.5em}
 A 95\% CI is given by
 $\thetafun(\thetahat(\onevec)) \pm \frac{1.96}{\sqrt{N}} \noise.$
 %
@@ -51,42 +61,31 @@ We reject $\thetafun(\thetahat(\onevec)) + \Delta$ when
 %
 \thetafun(\thetahat(\onevec)) + \Delta \ge
 \thetafun(\thetahat(\onevec)) + \frac{1.96}{\sqrt{N}} \noise
+\onslide<8>{
 \quad\quad
 \Leftrightarrow
 \quad\quad
 {\color{red}
 \frac{\Delta}{\noise} \ge \frac{1.96}{\sqrt{N}.}
 }
+}
 %
 \end{align*}
 %
+}
 
 
 \hrulefill
 
 %\vspace{1em}
+\onslide<6->{
 The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
-determines robustness to both data dropping
-and sampling variability, but with \textbf{different thresholds}.
-
-% \begin{center}
-% \begin{minipage}{0.8\textwidth}
-% \begin{tikzpicture}
-%     \node[anchor=south west,inner sep=0] (image) at (0,0) {
-%     \SimInflHistogram{}
-%     };
-%     \begin{scope}[x={(image.south east)},y={(image.north west)}]
-%         \draw [stealth-stealth][thick][white](0.42, 0.35) -- (0.6, 0.35);
-%         \draw (0.51, 0.35) node[below][text width=3cm][align=center][white]
-%             {\normalsize $\noise$};
-%
-%         \draw [stealth-][thick][red](0.3, 0.25) -- (0.3, 0.5);
-%         \draw (0.25, 0.5) node[above][text width=3cm][align=center][red]
-%             {\normalsize $-\sum_{n=1}^{\alphan} \infl_{(n)}$};
-%     \end{scope}
-% \end{tikzpicture}
-% \end{minipage}
-% \end{center}
+determines robustness to data dropping
+}
+\onslide<1-7>{...}
+\onslide<8>{
+\textbf{and} sampling variability, but with \textbf{different thresholds}.
+}
 
 \end{frame}
 
@@ -121,11 +120,13 @@ and sampling variability, but with \textbf{different thresholds}.
 
 \hrulefill
 
+\pause
 \vspace{0.5em} $\bullet\quad$
 \textbf{Dropping robustness $\ne$ sampling robustness in general.\\}
 \textit{Proof: }
 $\shape \ne \frac{1.96}{\sqrt{N}}$.
 
+\pause
 \vspace{0.5em} $\bullet\quad$
 \textbf{When the SNR is small, sufficiently large $N$
 produces sampling robustness, but not necessarily
@@ -134,6 +135,7 @@ dropping robustness.\\}
 $\frac{1.96}{\sqrt{N}} \rightarrow 0$, but $\shape \rightarrow$ a nonzero
 constant.
 
+\pause
 \vspace{0.5em} $\bullet\quad$
 \textbf{Statistical insignificance is dropping non-robust for large $N$.\\}
 \textit{Proof: }
@@ -148,6 +150,7 @@ $\Rightarrow$ The SNR for a conclusion
 of ``insignificance'' is $\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}}
 \rightarrow 0 \le \shape$.
 
+\pause
 \vspace{0.5em} $\bullet\quad$
 \textbf{P-hacking is dropping non-robust for large $N$.\\}
 \textit{Proof: }P-hacked effect sizes are of the order
@@ -185,11 +188,13 @@ $\frac{1.96}{\sqrt{N}} \noise$.
 \vspace{1em}
 \hrulefill
 
+\pause
 \vspace{1em} $\bullet\quad$
 \textbf{Dropping non-robustness is not driven by misspecification.\\}
 \textit{Proof: }
 Small $\Delta$ are dropping non-robust irrespective of specification.
 
+\pause
 \vspace{1em} $\bullet\quad$
 \textbf{Gross outliers primarily affect dropping robustness through $\noise$.\\}
 \textit{Proof: }
@@ -227,6 +232,7 @@ Across typical distributions, $\shape$ varies little.
 % \vspace{1em}
 % \hrulefill
 
+\pause
 \vspace{1em}
 In the Mexico microcredit example,
 %
