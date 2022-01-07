@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  7 JAN 2022 10:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  7 JAN 2022 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1919,7 +1919,7 @@ Overfull \hbox (48.56654pt too wide) in paragraph at lines 411--411
 ]) (./extras.tex [69
 
 ]
-<figure/sim-grid-normal-1.png, id=538, 397.485pt x 155.8623pt>
+<figure/sim-grid-normal-1.png, id=542, 397.485pt x 155.8623pt>
 File: figure/sim-grid-normal-1.png Graphic file (type png)
 <use figure/sim-grid-normal-1.png>
 Package pdftex.def Info: figure/sim-grid-normal-1.png  used on input line 30.
@@ -1961,10 +1961,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38002 strings out of 483065
- 865156 string characters out of 5963550
- 1290858 words of memory out of 5000000
- 52062 multiletter control sequences out of 15000+600000
+ 38006 strings out of 483065
+ 865265 string characters out of 5963550
+ 1290924 words of memory out of 5000000
+ 52065 multiletter control sequences out of 15000+600000
  547679 words of font info for 83 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  64i,15n,103p,771b,1151s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1991,10 +1991,10 @@ t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
 /amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rs
 fs10.pfb>
-Output written on main.pdf (75 pages, 722322 bytes).
+Output written on main.pdf (75 pages, 722765 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
- 568 compressed objects within 6 object streams
- 167 named destinations out of 1000 (max. 500000)
+ 708 PDF objects out of 1000 (max. 8388607)
+ 572 compressed objects within 6 object streams
+ 168 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
