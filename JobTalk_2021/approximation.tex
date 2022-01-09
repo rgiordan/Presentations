@@ -158,37 +158,55 @@ for continuous weights.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-\def\OldLinearGraph{
-\begin{center}
-    \begin{tikzpicture}
-        \node[anchor=south west,inner sep=0] (image) at (0,0) {
-            \includegraphics[width=0.78\textwidth]{static_figures/e_beta_w}
-        };
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
-                    node[above,black,fill=white]
-                    {\small $\thetafun(\thetahat(\onevec))$};
-            \draw[blue, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
-                    node[left,black,fill=white]
-                    {\small $\thetafun(\thetahat(\w))$};
-            \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
-            \draw[blue, thick, <-] (0.75,0.55) -- ++(0.02,-0.1)
-                    node[below right,black,fill=white]
-                    {\small Slope $ =
-                    \fracat{\partial \thetafun(\thetahat(\w))}
-                           {\partial\w_n}{\onevec}
-                    =: \infl_n$};
-        \end{scope}
-    \end{tikzpicture}
-\end{center}
-}
+%
+%
+% \def\OldLinearGraph{
+% \begin{center}
+%     \begin{tikzpicture}
+%         \node[anchor=south west,inner sep=0] (image) at (0,0) {
+%             \includegraphics[width=0.78\textwidth]{static_figures/e_beta_w}
+%         };
+%         \begin{scope}[x={(image.south east)},y={(image.north west)}]
+%             \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
+%                     node[above,black,fill=white]
+%                     {\small $\thetafun(\thetahat(\onevec))$};
+%             \draw[blue, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
+%                     node[left,black,fill=white]
+%                     {\small $\thetafun(\thetahat(\w))$};
+%             \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
+%             \draw[blue, thick, <-] (0.75,0.55) -- ++(0.02,-0.1)
+%                     node[below right,black,fill=white]
+%                     {\small Slope $ =
+%                     \fracat{\partial \thetafun(\thetahat(\w))}
+%                            {\partial\w_n}{\onevec}
+%                     =: \infl_n$};
+%         \end{scope}
+%     \end{tikzpicture}
+% \end{center}
+% }
 
 \def\yfun#1{-0.2 * (#1 - 4) + 0.02 * (#1 - 4)^2 + 0.75}
 % \def\ylinfun#1{-0.2 * (#1 - 4) + 0.75}
 
-\def\LinearGraph{
+
+
+\def\LinearApproximationGraph#1{
+\onslide<#1->{
+\draw[red, thick] (4, 0.75) -- (0, 0.75 + 4 * 0.2);
+\draw[black, thick, <-] (1, 1.2) -- ++(-0.2,-0.2)
+        node[below,red,fill=white]
+        {\small $\thetafunlin(\w)$};
+\draw[black, thick, <-] (3.7, 0.9) -- (3, 1.8)
+    node[above,black,fill=white]
+        {\small Slope $ =
+        \fracat{\partial \thetafun(\thetahat(\w))}
+               {\partial\w_n}{\w = \onevec}
+        =: \infl_n$};
+}
+}
+
+% Argument determines which slide the linear approximation appears on
+\def\LinearGraph#1{
 \begin{center}
 \begin{tikzpicture}[scale=1]
     \draw[->] (0, 0) -- +(4.2, 0);
@@ -206,7 +224,7 @@ for continuous weights.
     \draw (4.3, 0) node[right] { $\w_n$};
     \draw (0, 2.3) node[above] { $\thetafun(\thetahat(\w))$};
 
-    \draw[red, thick] (4, 0.75) -- (0, 0.75 + 4 * 0.2);
+    \LinearApproximationGraph{#1}
 
     \foreach \step in {0.1, 0.2, ..., 1} {
         % Ugh
@@ -223,15 +241,7 @@ for continuous weights.
     \draw[black, thick, <-] (3.8, 0.7) -- ++(-0.3, -0.2)
             node[left,black,fill=white]
             {\small $\thetafun(\thetahat(\onevec))$};
-    \draw[black, thick, <-] (1, 1.2) -- ++(-0.2,-0.2)
-            node[below,red,fill=white]
-            {\small $\thetafunlin(\w)$};
-    \draw[black, thick, <-] (3.7, 0.9) -- (3, 1.8)
-        node[above,black,fill=white]
-            {\small Slope $ =
-            \fracat{\partial \thetafun(\thetahat(\w))}
-                   {\partial\w_n}{\w = \onevec}
-            =: \infl_n$};
+
 \end{tikzpicture}
 \end{center}
 }
@@ -257,17 +267,18 @@ for continuous weights.
 % \end{minipage}
 \begin{center}
 \begin{minipage}{0.45\textwidth}
-\LinearGraph{}
+\LinearGraph{2}
 \end{minipage}
 \end{center}
 
-\pause
+\onslide<3->{
 The values $N \infl_n$ are the \textbf{empirical influence function}
 \citep{hampel1986robustbook}.
 
 We call $\infl_n$ an ``influence scores.''
+}
 
-\pause
+\onslide<4->{
 \vspace{1em}
 We can use $\infl_n$ to form a Taylor series approximation:
 %
@@ -281,6 +292,7 @@ We can use $\infl_n$ to form a Taylor series approximation:
         \sumn \infl_n (\w_n -1)
         \color{black}
 \end{align*}
+}
 
 \end{frame}
 
@@ -352,7 +364,7 @@ How can we compute the influence scores
 $
 \infl_n =
 \fracat{\partial \thetafun(\thetahat(\w))}
-       {\partial\w_n}{\onevec}
+       {\partial\w_n}{\w = \onevec}
 %
 $?
 %\end{align*}
@@ -366,7 +378,7 @@ $
 \fracat{\partial \thetafun(\theta)}
       {\partial\theta}{\thetahat(\onevec)}
 \fracat{\partial \thetahat(\w)}
-    {\partial\w_n}{\onevec}
+    {\partial\w_n}{\w = \onevec}
 %
 $.
 
@@ -378,7 +390,7 @@ $\sumn \w_n G(\thetahat(\w), \d_{n}) =  \zP$ for all $\w$ near $\onevec$.
 \vspace{1em}
 $\Rightarrow$
 By the \textbf{implicit function theorem}, we can write
-$\fracat{\partial\thetahat(\w)}{\partial\w_n}{\onevec}$ as a linear system
+$\fracat{\partial\thetahat(\w)}{\partial\w_n}{\w=\onevec}$ as a linear system
 involving $G(\cdot, \cdot)$ and its derivatives.
 
 \pause
@@ -437,7 +449,7 @@ Checking the approximation for Mexico microcredit.
 \end{minipage}
 %
 \begin{minipage}{0.45\textwidth}
-\LinearGraph{}
+\LinearGraph{1}
 \end{minipage}
 
 \vspace{1em}

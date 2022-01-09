@@ -7,7 +7,7 @@ How can we compute the influence scores
 $
 \infl_n =
 \fracat{\partial \thetafun(\thetahat(\w))}
-       {\partial\w_n}{\onevec}
+       {\partial\w_n}{\w = \onevec}
 %
 $?
 %\end{align*}
@@ -21,7 +21,7 @@ $
 \fracat{\partial \thetafun(\theta)}
       {\partial\theta}{\thetahat(\onevec)}
 \fracat{\partial \thetahat(\w)}
-    {\partial\w_n}{\onevec}
+    {\partial\w_n}{\w = \onevec}
 %
 $.
 
@@ -33,7 +33,7 @@ $\sumn \w_n G(\thetahat(\w), \d_{n}) =  \zP$ for all $\w$ near $\onevec$.
 \vspace{1em}
 $\Rightarrow$
 By the \textbf{implicit function theorem}, we can write
-$\fracat{\partial\thetahat(\w)}{\partial\w_n}{\onevec}$ as a linear system
+$\fracat{\partial\thetahat(\w)}{\partial\w_n}{\w=\onevec}$ as a linear system
 involving $G(\cdot, \cdot)$ and its derivatives.
 
 \pause
