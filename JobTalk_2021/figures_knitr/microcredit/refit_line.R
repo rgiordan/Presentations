@@ -21,7 +21,7 @@ reg_se <-
 
 plot1 <- plot_line_df %>%
     ggplot(aes(group=site, x=100 * prop_drop)) +
-    geom_line(aes(y=pred, color="Prediction")) +
+    geom_line(aes(y=pred, color="Our Prediction")) +
     theme(legend.title = element_blank()) +
     ylim(ymin, ymax) +
     ylab(TeX("Change in estimated effect of microcredit")) +
