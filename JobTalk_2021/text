@@ -3,22 +3,18 @@ Slide 1
 
 Thanks for having me.
 
-Statistical modeling increasingly informs important, real-life decisions.
-To ensure that we make the right decisions, we need to make sure that our
-analyses are robust to subjectively minor changes to our model or data.
-
-In particular, you might be concerned if a study's qualitative conclusions could
-be overturned or even reversed by dropping a small fraction (say less than 1%)
-of the data. Today I'll provide you with a tool to quickly and automatically
-find such influential sets of data, show that such excess sensitivity, though
-not ubiquitous, is not uncommon even in high-profile published studies, and
-provide some perhaps surprising intuition about what makes an analysis sensitive
-or not to dropping small sets of data.
+Would you be concerned if a study's qualitative conclusions could be overturned
+or even reversed by dropping a small fraction of the data? Today I'll provide
+you with a tool to quickly and automatically identify small but highly
+influential sets of data, and to understand how they arise.
 
 -------------
 
 Slide 2
 
+Statistical modeling increasingly informs important, real-life decisions.
+To ensure that we make the right decisions, we need to make sure that our
+analyses are robust to subjectively minor changes to our model or data.
 
 I'll use a particular published study as an running example. It's a study of
 microcredit in Mexico.  Microcredit is an intervention in development economics
@@ -26,10 +22,6 @@ in which families and small business get increased access to credit markets in
 hopes of improving their economic outcomes.  This particular study involved over
 16k households, which were randomly assigned to receive or not receive increased
 microcredit access.
-
-I'd like to emphasize that this is a great study with great data sharing.  To
-the extent that I will be criticizing it, I will be criticizing widespread
-statistical practices that are by no means idiosyncratic to this paper.
 
 At the end of the day, the authors ran an OLS regression, and found that the
 coefficient on the treatment indicator was statistically insignificant with
@@ -45,16 +37,19 @@ a high degree of sensitivity to a small number of datapoints.
 I would argue that the policy implication is very different in light of this
 fact.  Rather than believing we have found positive evidence for the
 ineffectiveness of microcredit, we should think of the study as under-powered,
-and try to measure the effect microcredit more effectively.  And in case you're
-wondering how such a massive study could be under-powered, at the end of the
-talk I'll discuss how data sensitivity can be mitigated only by study design,
-not by larger sample sizes.
+and try to measure the effect microcredit more effectively.
+And in case you're wondering how to make a study less sensitive to
+dropping data, I'll tell you towards the end of the talk, though I'll mention
+now that larger samples sizes will _not_ do the trick.
 
-Now, how did we find these influential sets?  I will show that
-finding them by brute force is computationally impossible, even for
-very simple problems like this one.  We provide a fast, automatic
-tool to approximately identify influential sets of points, with
-finite-sample theoretical guarantees.
+I'd like to emphasize that this is a great study with great data sharing.  To
+the extent that I will be criticizing it, I will be criticizing widespread
+statistical practices that are by no means idiosyncratic to this paper.
+
+First, though, how did we find these influential sets?  I will show that finding
+them by brute force is computationally impossible, even for very simple problems
+like this one.  We provide a fast, automatic tool to approximately identify
+influential sets of points, with finite-sample theoretical guarantees.
 
 -------------
 

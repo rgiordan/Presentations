@@ -159,7 +159,7 @@ for continuous weights.
 
 
 
-\def\LinearGraph{
+\def\OldLinearGraph{
 \begin{center}
     \begin{tikzpicture}
         \node[anchor=south west,inner sep=0] (image) at (0,0) {
@@ -185,13 +185,43 @@ for continuous weights.
 }
 
 
+\def\LinearGraph{
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=5cm,
+        height=4cm,
+        axis lines = right,
+        xlabel = \(x\),
+        ylabel = {\(f(x)\)}
+        ]
+    \addplot[domain=-1:0, color=red]{exp(x)};
+    \end{axis}
+    % \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
+    %         node[above,black,fill=white]
+    %         {\small $\thetafun(\thetahat(\onevec))$};
+    % \draw[blue, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
+    %         node[left,black,fill=white]
+    %         {\small $\thetafun(\thetahat(\w))$};
+    % \draw[red, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
+    % \draw[blue, thick, <-] (0.75,0.55) -- ++(0.02,-0.1)
+    %         node[below right,black,fill=white]
+    %         {\small Slope $ =
+    %         \fracat{\partial \thetafun(\thetahat(\w))}
+    %                {\partial\w_n}{\onevec}
+    %         =: \infl_n$};
+\end{tikzpicture}
+\end{center}
+}
+
+
 \begin{frame}[t]{Taylor series approximation.}
 \vspace{-2em}
 \begin{align*}
 %
-\sumn \w_n
-G(\thetahat(\w), \d_{n}) =  \zP
-\textrm{ for a weight vector }\w \in \mathbb{R}^N.
+% \sumn \w_n
+% G(\thetahat(\w), \d_{n}) =  \zP
+% \textrm{ for a weight vector }\w \in \mathbb{R}^N.
 %
 \end{align*}
 %
@@ -278,7 +308,7 @@ most negative $\infl_n$.
     \item Compute your original estimator $\thetahat(\onevec)$.
     \item Compute and sort the influence scores
         $\infl_{(1)}, \ldots, \infl_{(N)}$.
-    \item Worry if $- \sum_{n=1}^{\alphan} \infl_{(n)}$ is large
+    \item Check if $- \sum_{n=1}^{\alphan} \infl_{(n)}$ is large
     enough to change your conclusions.
 \end{enumerate}
 
