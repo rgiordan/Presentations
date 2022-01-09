@@ -187,16 +187,22 @@ for continuous weights.
 
 \def\LinearGraph{
 \begin{center}
-\begin{tikzpicture}
-    \begin{axis}[
-        width=5cm,
-        height=4cm,
-        axis lines = right,
-        xlabel = \(x\),
-        ylabel = {\(f(x)\)}
-        ]
-    \addplot[domain=-1:0, color=red]{exp(x)};
-    \end{axis}
+\begin{tikzpicture}[scale=1]
+    \draw[->] (0, 0) -- +(-4.2, 0);
+    \draw[->] (0, 0) -- +(0, 2.2);
+    \foreach \x in {1, 0.75, 0.5, 0.25, 0} {
+        \draw (-4 * \x, 0.1) -- (-4 * \x, -0.1);
+        \tikzmath{\xlab=-1 * \x;}
+        \draw (-4 * \x, -0.3) node {\xlab};
+
+        \tikzmath{\ylab=4 * \x;}
+        \draw (0.1, 2 * \x) -- (-0.1, 2 * \x);
+        \draw (0.75, 2 * \x) node {\ylab};
+    };
+    \draw (-4.3, 0) node[left] { $\w_n$};
+    \draw (0, 2.3) node[above] { $\thetafun(\thetahat(\w))$};
+
+    
     % \draw[blue, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
     %         node[above,black,fill=white]
     %         {\small $\thetafun(\thetahat(\onevec))$};
