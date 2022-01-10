@@ -46,9 +46,23 @@ most influential points,
 }
 \end{itemize}
 
+
+%\vspace{1em}
+\onslide<6->{
 \hrulefill
 
+The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
+determines robustness to data dropping
+}
+\onslide<6-7>{...}
+\onslide<8>{
+\textbf{and} sampling variability, but with \textbf{different thresholds}.
+}
+
 \onslide<7->{
+
+\hrulefill
+
 \textbf{Contrast with sampling variability.}
 
 \vspace{0.5em}
@@ -75,17 +89,6 @@ We reject $\thetafun(\thetahat(\onevec)) + \Delta$ when
 }
 
 
-\hrulefill
-
-%\vspace{1em}
-\onslide<6->{
-The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
-determines robustness to data dropping
-}
-\onslide<1-7>{...}
-\onslide<8>{
-\textbf{and} sampling variability, but with \textbf{different thresholds}.
-}
 
 \end{frame}
 
@@ -200,6 +203,12 @@ Small $\Delta$ are dropping non-robust irrespective of specification.
 \textit{Proof: }
 For a fixed $\noise$, outliers decrease $\shape$.
 (Details in paper.)
+
+\pause
+\hrulefill
+
+\vspace{1em} Dropping robustness should \textbf{augment} other forms of
+robustness.
 
 \end{frame}
 
