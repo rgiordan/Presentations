@@ -1,3 +1,7 @@
+
+An Automatic Finite-Sample Robustness Metric:
+Can Dropping a Little Data Make a Big Difference?
+
 I propose a method to assess the sensitivity of statistical analyses to the
 removal of a small fraction of the data.  Manually checking the influence of all
 possible small subsets is computationally infeasible, so I provide an
