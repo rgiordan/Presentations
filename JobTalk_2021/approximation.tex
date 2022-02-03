@@ -461,16 +461,22 @@ $\abs{\thetafun(\thetahat(\w)) - \thetafunlin(\w)} =
 O\left(\vnorm{\frac{1}{N}(\w - \onevec)}^2_2\right) =
 O\left(\alpha\right)$ as $\alpha \rightarrow 0$.
 
-\vspace{1em}
+%\vspace{1em}
 
-\hrulefill
-
+%\hrulefill
 \pause
 \vspace{1em}
-\textbf{But you don't need to rely on the theory!}
+\textbf{But you don't need to rely on the theory to show non-robustness!}
 
-\vspace{1em} Our method returns which points to drop.  \textbf{Re-running once}
+\vspace{1em}
+Our method returns which points to drop.  \textbf{Re-running once}
 without those points provides an \textbf{exact lower bound} on the worst-case
 sensitivity.
 
+\pause
+\vspace{1em}
+(Let $\wdom$ denote weight vectors dropping $\alphan$ points, and
+$\w^* := \mathrm{argsup}_{\w \in \wdom} \thetafunlin(\w)$.
+Then $\thetafun(\w^*) \le \sup_{\w \in \wdom} \thetafun(\w)$.)
+%
 \end{frame}
