@@ -1,0 +1,259 @@
+\documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+
+\def\p#1{\mathbb{P}\left(#1\right)}
+\def\b#1{\mathbb{B}\left(#1\right)}
+
+\usetheme{metropolis}           % Use metropolis theme
+\usepackage{amsmath}
+
+\title{Fiducial Inference and Subjective Probability}
+\author{Ryan Giordano}
+\date{Feb 18th, 2022}
+\institute{Massachusetts Institute of Technology}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Are confidence intervals inference?}
+
+Suppose we have a scalar parameter $\theta$, a random variable $X$ with unknown
+distribution $\p{\cdot}$, and an interval-valued function $x \mapsto C(x)$ such
+that, no matter the distribution of $X$, we know that
+%
+\begin{align*}
+%
+\p{\theta \in C(X)} = 0.9.
+%
+\end{align*}
+%
+The interval $C(\cdot)$ is a {\em valid confidence interval} for $\theta$. This
+means that if we act as if $\theta \in C(X)$, we will be wrong at most $10\%$ of
+the time.
+
+\pause
+
+When is it reasonable to interpret $C(\cdot)$ {\em inferentially}, saying
+that, when we observe $X=x$, that we subjectively believe that $\theta \in C(x)$
+with $90\%$ certainty?
+
+Write beliefs as $\b{\theta \in C(x) | X = x} = 0.9$, to contrast with aleatoric
+probabiliites $\p{}$. So we want to know when
+%
+\begin{align*}
+%
+\p{\theta \in C(X)} = 0.9 \quad \Rightarrow \quad
+\b{\theta \in C(x) | X = x} = 0.9
+%
+\end{align*}
+%
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{A pathological confidence interval}
+
+We want to know when
+%
+\begin{align*}
+%
+\p{\theta \in C(X)} = 0.9 \quad \Rightarrow \quad
+\b{\theta \in C(x) | X = x} = 0.9
+%
+\end{align*}
+
+This is not trivial!
+
+\pause
+
+Recall, for example, how we can construct silly confidence
+intervals. Augment the data with a draw $Z \sim \mathrm{Unif}(0, 1)$, and let
+%
+\begin{align*}
+%
+C(x) =
+\begin{cases}
+    (-\infty, \infty) & \textrm{ when } z \le 0.9 \\
+    [1337, 1337] & \textrm{ otherwise }
+\end{cases}.
+%
+\end{align*}
+%
+Obviously, no matter what the generating process, $\p{\theta \in C(X)} = 0.9$,
+but it is absurd to assert that $\b{\theta \in C(x) | Z = 0.95} = 0.9$.
+
+\pause
+
+How can we characterize precisely what went wrong?
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Bayes is sufficient, but is it necessary?}
+
+Note that Bayesians define priors and completely specified
+data generating processes and insist that $\b{} = \p{}$.
+
+Certainly that suffices.  But is it necessary?
+
+\pause
+
+It is often difficult to plausibly specify
+everything needed for Bayes.  In such cases it can be hard to
+assert that $\b{} = \p{}$.
+
+\pause
+
+We may also want to trade off mathematical or computational effort to achieve
+$\b{} \approx \p{}$.  Bayes gives no real guidance for doing so.
+
+\pause
+
+I argue that potential answers may be found in the (nowadays largely discarded)
+approaches of {\em fiducial inference}.
+
+Here, I will follow the treatment from Ian Hacking's book, {\em The Logic of
+Statisical Inference}.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Fiducial inference for confidence intervals}
+
+Fiducial inference for confidence intervals requires three key assumptions.
+The first two are uncontroversial:
+
+\textbf{The logic of support:}  Formally, $\b{}$ obeys Kolmogorov's axioms. For
+example, if proposition $A$ and $B$ are mutually incompatible, then $\b{A | B} =
+0$.  If $B$ provides no information about $A$, then $\b{A | B} = \b{A}$.
+If $B \Rightarrow A$, then $\b{A | B} = 1$.  And so on.
+
+The logic of support is needed to even write and manipulate $\b{\cdot}$.
+
+\pause
+
+\textbf{The frequency principle:}  If $\p{X}$ is known, then our
+subjective beliefs correspond with aleatoric probabilities.  That is,
+$\b{X = x} = \p{X = x}$.
+
+\pause
+
+The third is where things can go wrong for confidence intervals.
+
+\textbf{Irrelevance:} The precise value of the data $X=x$ is not  subjectively
+informative about whether $\theta \in C(x)$.  That is,
+%
+\begin{align*}
+%
+\b{\theta \in C(x) | X = x} = \b{\theta \in C(x)}.
+%
+\end{align*}
+%
+
+\pause
+
+Using these three assumptions, confidence
+intervals are valid inference:
+%
+\begin{align*}
+%
+\b{\theta \in C(x) | X = x} &= \b{\theta \in C(x)}
+    & \textrm{Irrelevance}\\
+&= \p{\theta \in C(X)}
+    & \textrm{The frequency principle}\\
+&= 0.9
+& \textrm{Construction of }C(\cdot).
+%
+\end{align*}
+%
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The pathological example is caught}
+
+\textbf{Irrelevance:} The precise value of the data $X=x$ is not  subjectively
+informative about whether $\theta \in C(x)$.  That is,
+%
+\begin{align*}
+%
+\b{\theta \in C(x) | X = x} = \b{\theta \in C(x)}.
+%
+\end{align*}
+%
+
+Recall our pathological example:
+
+\begin{align*}
+%
+C(x) =
+\begin{cases}
+    (-\infty, \infty) & \textrm{ when } z \le 0.9 \\
+    [1337, 1337] & \textrm{ otherwise }
+\end{cases}.
+%
+\end{align*}
+%
+
+Our pathological example fails the principle of irrelevance, since
+knowing $z \ge 0.9$ is very informative about whether $\theta \in C(x)$.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{How to use this?}
+
+The {\em invalidity} of a confidence interval can be demonstrated by an ability
+to predict $\mathbb{I}(\theta \in C(x))$ from $x$.
+
+\pause
+
+Given a candidate confidence interval, constructed using any method, this
+renders the validity of inference {\em quantitatively falisifiable}, e.g.
+through simulation and machine learning.
+
+\pause
+
+It also admits {\em degrees of valid inference}, e.g. in the sense that
+$\mathbb{I}(\theta \in C(x))$ may be only slightly
+predictd by $x$.
+
+\pause
+
+Computation of $C(x)$ and predictability of $\mathbb{I}(\theta \in C(x))$
+can in principle be explicitly traded off against one another.
+
+\pause
+
+\textbf{I think this is very exciting.}
+
+\end{frame}
+
+
+\end{document}
