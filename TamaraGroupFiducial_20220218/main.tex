@@ -2,6 +2,8 @@
 
 \def\p#1{\mathbb{P}\left(#1\right)}
 \def\b#1{\mathbb{B}\left(#1\right)}
+\def\ind#1{1\left(#1\right)}
+\def\cover{\mathcal{C}}
 
 \usetheme{metropolis}           % Use metropolis theme
 \usepackage{amsmath}
@@ -27,29 +29,47 @@ that, no matter the distribution of $X$, we know that
 %
 \begin{align*}
 %
-\p{\theta \in C(X)} = 0.9.
+\p{\cover = 1} = 0.9
+\quad\textrm{ where}\quad
+\cover := \ind{\theta \in C(X)}
+\quad\textrm{(}\cover\textrm{ is for ``cover'')}\quad
 %
 \end{align*}
 %
-The interval $C(\cdot)$ is a {\em valid confidence interval} for $\theta$. This
+The interval $C(X)$ is a {\em valid confidence interval} for $\theta$. This
 means that if we act as if $\theta \in C(X)$, we will be wrong at most $10\%$ of
 the time.
 
 \pause
 
-When is it reasonable to interpret $C(\cdot)$ {\em inferentially}, saying
+\hrulefill
+
+When is it reasonable to interpret $\cover$ {\em inferentially}, saying
 that, when we observe $X=x$, that we subjectively believe that $\theta \in C(x)$
 with $90\%$ certainty?
 
-Write beliefs as $\b{\theta \in C(x) | X = x} = 0.9$, to contrast with aleatoric
-probabiliites $\p{}$. So we want to know when
+\pause
+Not always!
+Recall, for example, how we can construct silly confidence
+intervals. Augment the data with a draw $Z \sim \mathrm{Unif}(0, 1)$, and let
 %
 \begin{align*}
 %
-\p{\theta \in C(X)} = 0.9 \quad \Rightarrow \quad
-\b{\theta \in C(x) | X = x} = 0.9
+C(X) =
+\begin{cases}
+    (-\infty, \infty) & \textrm{ when } Z \le 0.9 \\
+    [1337, 1337] & \textrm{ otherwise }
+\end{cases}.
 %
 \end{align*}
+%
+Obviously, no matter what the generating process, $\p{\cover = 1} = 0.9$,
+but it is absurd to assert that we are $90\%$ confident that
+$\theta = 1337$ because we observed $Z = 0.95$.
+
+\pause
+
+How can we characterize generally and precisely what went wrong?
 %
 \end{frame}
 
@@ -61,49 +81,19 @@ probabiliites $\p{}$. So we want to know when
 
 \begin{frame}{A pathological confidence interval}
 
-We want to know when
+Write beliefs as $\b{\cdot}$, to contrast with aleatoric
+probabiliites $\p{}$. So we ask when
 %
 \begin{align*}
 %
-\p{\theta \in C(X)} = 0.9 \quad \Rightarrow \quad
-\b{\theta \in C(x) | X = x} = 0.9
+\p{\cover = 1} = 0.9 \quad \Rightarrow \quad
+\b{\cover = 1 | X = x} = 0.9
 %
 \end{align*}
 
-This is not trivial!
-
 \pause
 
-Recall, for example, how we can construct silly confidence
-intervals. Augment the data with a draw $Z \sim \mathrm{Unif}(0, 1)$, and let
-%
-\begin{align*}
-%
-C(x) =
-\begin{cases}
-    (-\infty, \infty) & \textrm{ when } z \le 0.9 \\
-    [1337, 1337] & \textrm{ otherwise }
-\end{cases}.
-%
-\end{align*}
-%
-Obviously, no matter what the generating process, $\p{\theta \in C(X)} = 0.9$,
-but it is absurd to assert that $\b{\theta \in C(x) | Z = 0.95} = 0.9$.
-
-\pause
-
-How can we characterize precisely what went wrong?
-
-\end{frame}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Bayes is sufficient, but is it necessary?}
+\hrulefill
 
 Note that Bayesians define priors and completely specified
 data generating processes and insist that $\b{} = \p{}$.
