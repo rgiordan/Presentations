@@ -1,12 +1,14 @@
 \documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
 
-\def\p#1{\mathbb{P}\left(#1\right)}
-\def\b#1{\mathbb{B}\left(#1\right)}
-\def\ind#1{1\left(#1\right)}
-\def\cover{\mathcal{C}}
 
 \usetheme{metropolis}           % Use metropolis theme
 \usepackage{amsmath}
+\usepackage{mathrsfs}
+
+\def\p#1{\mathbb{P}\left(#1\right)}
+\def\b#1{\mathbb{B}\left(#1\right)}
+\def\ind#1{1\left(#1\right)}
+\def\cover{\mathscr{C}}
 
 \title{Fiducial Inference and Subjective Probability}
 \author{Ryan Giordano}
@@ -113,10 +115,9 @@ $\b{} \approx \p{}$.  Bayes gives no real guidance for doing so.
 
 \pause
 
-I argue that potential answers may be found in the (nowadays largely discarded)
-approaches of {\em fiducial inference}.
+I argue that potential answers may be found in {\em fiducial inference}.
 
-Here, I will follow the treatment from Ian Hacking's book, {\em The Logic of
+Here, I will follow Ian Hacking's book, {\em The Logic of
 Statisical Inference}.
 
 \end{frame}
@@ -129,18 +130,23 @@ Statisical Inference}.
 \begin{frame}{Fiducial inference for confidence intervals}
 
 Fiducial inference for confidence intervals requires three key assumptions.
-The first two are uncontroversial:
+The first two are uncontroversial, the third is where things go wrong.
 
-\textbf{The logic of support:}  Formally, $\b{}$ obeys Kolmogorov's axioms. For
-example, if proposition $A$ and $B$ are mutually incompatible, then $\b{A | B} =
-0$.  If $B$ provides no information about $A$, then $\b{A | B} = \b{A}$.
-If $B \Rightarrow A$, then $\b{A | B} = 1$.  And so on.
+\pause
+
+\textbf{Assumption 1: The logic of support.}  Formally, any coherent belief
+function $\b{}$ obeys Kolmogorov's axioms in the natural ways. Examples:
+\begin{itemize}
+    \item If proposition $A$ and $B$ are mutually incompatible, then $\b{A | B} = 0$.
+    \item If $B$ provides no information about $A$, then $\b{A | B} = \b{A}$.
+    \item If $B \Rightarrow A$, then $\b{A | B} = 1$.  And so on.
+\end{itemize}
 
 The logic of support is needed to even write and manipulate $\b{\cdot}$.
 
 \pause
 
-\textbf{The frequency principle:}  If $\p{X}$ is known, then our
+\textbf{Assumption 2: The frequency principle.}  If $\p{X}$ is known, then our
 subjective beliefs correspond with aleatoric probabilities.  That is,
 $\b{X = x} = \p{X = x}$.
 
@@ -148,8 +154,8 @@ $\b{X = x} = \p{X = x}$.
 
 The third is where things can go wrong for confidence intervals.
 
-\textbf{Irrelevance:} The precise value of the data $X=x$ is not  subjectively
-informative about whether $\theta \in C(x)$.  That is,
+\textbf{Assumption 3: Irrelevance.} The precise value of the data $X=x$ is not
+subjectively informative about whether $\theta \in C(x)$.  That is,
 %
 \begin{align*}
 %
@@ -157,20 +163,41 @@ informative about whether $\theta \in C(x)$.  That is,
 %
 \end{align*}
 %
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Fiducial inference for confidence intervals}
+
+\textbf{Assumption 1: The logic of support.}
+
+\textbf{Assumption 2: The frequency principle.}
+
+\textbf{Assumption 3: Irrelevance.}
+
+Confidence intervals are valid inference when
+%
+\begin{align*}
+\p{\cover = 1} = 0.9 \quad \Rightarrow \quad
+\b{\cover = 1 | X = x} = 0.9.
+\end{align*}
+%
+The above three assumptions are sufficient.
 
 \pause
 
-Using these three assumptions, confidence
-intervals are valid inference:
+Proof:
 %
 \begin{align*}
 %
-\b{\theta \in C(x) | X = x} &= \b{\theta \in C(x)}
+\b{\cover = 1 | X = x} &= \b{\cover = 1}
     & \textrm{Irrelevance}\\
-&= \p{\theta \in C(X)}
+&= \p{\cover = 1}
     & \textrm{The frequency principle}\\
-&= 0.9
-& \textrm{Construction of }C(\cdot).
+&= \p{\theta \in C(X)} = 0.9.
+& \textrm{Construction of }C(\cdot)
 %
 \end{align*}
 %
@@ -184,17 +211,8 @@ intervals are valid inference:
 
 \begin{frame}{The pathological example is caught}
 
-\textbf{Irrelevance:} The precise value of the data $X=x$ is not  subjectively
-informative about whether $\theta \in C(x)$.  That is,
-%
-\begin{align*}
-%
-\b{\theta \in C(x) | X = x} = \b{\theta \in C(x)}.
-%
-\end{align*}
-%
-
-Recall our pathological example:
+Clearly enough, the irrelevance assumption is where things can go wrong.
+Let's look at our pathological example.
 
 \begin{align*}
 %
@@ -206,6 +224,17 @@ C(x) =
 %
 \end{align*}
 %
+
+\textbf{Irrelevance:} The precise value of the data $X=x$ is not  subjectively
+informative about whether $\theta \in C(x)$.  That is,
+%
+\begin{align*}
+%
+\b{\theta \in C(x) | X = x} = \b{\theta \in C(x)}.
+%
+\end{align*}
+%
+
 
 Our pathological example fails the principle of irrelevance, since
 knowing $z \ge 0.9$ is very informative about whether $\theta \in C(x)$.
@@ -219,24 +248,24 @@ knowing $z \ge 0.9$ is very informative about whether $\theta \in C(x)$.
 
 \begin{frame}{How to use this?}
 
-The {\em invalidity} of a confidence interval can be demonstrated by an ability
-to predict $\mathbb{I}(\theta \in C(x))$ from $x$.
+The {\em invalidity} of a CI can be demonstrated by an ability
+to predict $1(\theta \in C(x))$ from $x$.
 
 \pause
 
 Given a candidate confidence interval, constructed using any method, this
 renders the validity of inference {\em quantitatively falisifiable}, e.g.
-through simulation and machine learning.
+through simulation and ML.
 
 \pause
 
 It also admits {\em degrees of valid inference}, e.g. in the sense that
-$\mathbb{I}(\theta \in C(x))$ may be only slightly
-predictd by $x$.
+$1(\theta \in C(x))$ may be only slightly
+predicted by $x$.
 
 \pause
 
-Computation of $C(x)$ and predictability of $\mathbb{I}(\theta \in C(x))$
+Computation of $C(x)$ and predictability of $1(\theta \in C(x))$
 can in principle be explicitly traded off against one another.
 
 \pause
