@@ -6,6 +6,53 @@
 \end{frame}
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Selected related classical ideas}
+
+Our work is most closely related to ``infinitesimal robustness''
+\citep{hampel1974influence, hampel1986robustbook}, which is based on the
+influence function, the first term in the Taylor series expansion
+of functionals of a distribution function.
+%
+%\vspace{1em}
+\begin{itemize}
+    \item We diagnose an existing analysis rather than designing
+    estimators.
+    \item We use autodiff to automate the influence function computation.
+    \item We relate sensitivity to the signal-to-noise ratio, improving intuition.
+\end{itemize}
+
+\vspace{1em} Our work is also related to the ``global robustness'' concept of a
+``breakdown point'' \citep{huber1981robust, huber:1983:notion}.
+%
+%\vspace{1em}
+\begin{itemize}
+    \item We consider data dropping and a particular qualitative conclusion,
+    rather than arbitrarily large changes.
+    \item We use infinitesimal robustness for automaticity and generality,
+    but recover non-local robustness properties by controlling the residual.
+\end{itemize}
+
+\vspace{1em} Our work shares some formal similarity with outlier detection
+\citep{cook1977detection, belsley2005regression}.
+%
+\begin{itemize}
+    \item We consider $O(N)$-sized sets rather than individual points.
+    \item We study a specific intervention, not vaguely defined
+    ``outliers.''
+    \item We consider settings far beyond regression.
+\end{itemize}
+
+
+
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: bibliography.bib
 Warning--empty journal in giordano2021bnp
-You've used 13 entries,
+You've used 17 entries,
             2773 wiz_defined-function locations,
-            672 strings with 7082 characters,
-and the built_in function-call counts, 6241 in all, are:
-= -- 540
-> -- 391
-< -- 8
-+ -- 134
-- -- 120
-* -- 530
-:= -- 977
-add.period$ -- 40
-call.type$ -- 13
-change.case$ -- 75
-chr.to.int$ -- 12
-cite$ -- 27
-duplicate$ -- 276
-empty$ -- 487
-format.name$ -- 135
-if$ -- 1281
+            695 strings with 7591 characters,
+and the built_in function-call counts, 7775 in all, are:
+= -- 676
+> -- 462
+< -- 11
++ -- 159
+- -- 141
+* -- 643
+:= -- 1217
+add.period$ -- 52
+call.type$ -- 17
+change.case$ -- 93
+chr.to.int$ -- 16
+cite$ -- 35
+duplicate$ -- 356
+empty$ -- 628
+format.name$ -- 162
+if$ -- 1600
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 15
-newline$ -- 73
-num.names$ -- 52
-pop$ -- 158
+missing$ -- 20
+newline$ -- 93
+num.names$ -- 68
+pop$ -- 197
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 81
 quote$ -- 0
-skip$ -- 208
+skip$ -- 264
 stack$ -- 0
-substring$ -- 231
-swap$ -- 28
+substring$ -- 283
+swap$ -- 32
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 128
+type$ -- 167
 warning$ -- 1
-while$ -- 54
+while$ -- 70
 width$ -- 0
-write$ -- 174
+write$ -- 224
 (There was 1 warning)

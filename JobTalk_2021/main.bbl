@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -20,12 +20,23 @@ M.~Angelucci, D.~Karlan, and J.~Zinman.
 \newblock \emph{American Economic Journal: Applied Economics}, 7\penalty0
   (1):\penalty0 151--82, 2015.
 
+\bibitem[Belsley et~al.(2005)Belsley, Kuh, and Welsch]{belsley2005regression}
+D.~Belsley, E.~Kuh, and R.~Welsch.
+\newblock \emph{Regression diagnostics: Identifying influential data and
+  sources of collinearity}.
+\newblock John Wiley \& Sons, 2005.
+
 \bibitem[Bickel et~al.(1993)Bickel, Klaassen, Ritov, and
   Wellner]{bickel1993semiparametric}
 P.~Bickel, C.~Klaassen, Y.~Ritov, and J~Wellner.
 \newblock \emph{Efficient and adaptive estimation for semiparametric models},
   volume~4.
 \newblock Johns Hopkins University Press Baltimore, 1993.
+
+\bibitem[Cook(1977)]{cook1977detection}
+D.~Cook.
+\newblock Detection of influential observation in linear regression.
+\newblock \emph{Technometrics}, 19\penalty0 (1):\penalty0 15--18, 1977.
 
 \bibitem[Finkelstein et~al.(2012)Finkelstein, Taubman, Wright, Bernstein,
   Gruber, Newhouse, Allen, Baicker, and Group]{finkelstein2012oregon}
@@ -71,6 +82,12 @@ R.~Giordano, R.~Liu, M.~I. Jordan, and T.~Broderick.
   nonparametrics.
 \newblock 2021.
 
+\bibitem[Hampel(1974)]{hampel1974influence}
+F.~Hampel.
+\newblock The influence curve and its role in robust estimation.
+\newblock \emph{Journal of the American Statistical Association}, 69\penalty0
+  (346):\penalty0 383--393, 1974.
+
 \bibitem[Hampel(1986)]{hampel1986robustbook}
 F.~Hampel.
 \newblock \emph{Robust statistics: {T}he approach based on influence
@@ -81,6 +98,11 @@ F.~Hampel.
 P.~Huber.
 \newblock \emph{Robust Statistics}.
 \newblock John Wiley \& Sons, New York, 1981.
+
+\bibitem[Huber and Donoho(1983)]{huber:1983:notion}
+P.~Huber and D.~Donoho.
+\newblock The notion of breakdown point.
+\newblock \emph{A Festschrift for Erich L. Lehmann}, 1983.
 
 \bibitem[Mises(1947)]{mises1947asymptotic}
 R.~Mises.
