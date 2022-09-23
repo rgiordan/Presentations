@@ -1,0 +1,114 @@
+\documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+
+
+\usetheme{metropolis}           % Use metropolis theme
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+
+% For custom oversets
+\usepackage{accents}
+
+\def\p#1{\mathbb{P}\left(#1\right)}
+\def\q#1{\mathbb{Q}\left(#1\right)}
+\def\y{y}
+\def\z{z}
+\def\etahat{\hat{\eta}}
+\def\ellhat{\hat{\ell}}
+\def\sumn{\sum_{n=1}^N}
+\def\meann{\frac{1}{N} \sumn}
+\newcommand{\etastar}{\accentset{*}{\eta}}
+\def\Z{\mathcal{Z}}
+\def\expect#1#2{\mathbb{E}_{#1}\left[#2\right]}
+\def\kl#1{\mathrm{KL}\left(#1\right)}
+\def\klhat#1{\widehat{\mathrm{KL}}\left(#1\right)}
+\def\ind#1{1\left(#1\right)}
+
+\DeclareMathOperator*{\argmax}{\mathrm{argmax}}
+\DeclareMathOperator*{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator*{\esssup}{\mathrm{esssup}}
+\DeclareMathOperator*{\essinf}{\mathrm{essinf}}
+\DeclareMathOperator*{\argsup}{\mathrm{argsup}}
+\DeclareMathOperator*{\arginf}{\mathrm{arginf}}
+
+\title{Deterministic Automatic Differentiation Variational Inference}
+\author{Ryan Giordano}
+\date{Sep 23rd, 2022}
+\institute{Massachusetts Institute of Technology}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Optimization of intractable expectations}
+%
+Suppse you want to minimize an objective function of the form
+%
+\begin{align*}
+%
+\etastar :=  \argmin_{\eta} \expect{\p{\z}}{f(\z | \eta)}
+:= \argmin_{\eta} \ell(\eta),
+%
+\end{align*}
+%
+where $\p{\z}$ is known, but the expectation is not available in closed form.
+
+\pause
+When does this happen?
+%
+\begin{itemize}
+%
+\item Stochastic control (e.g. you have a factory, and supply and demand are
+random)
+%
+\item Black box variational inference (our interest; we'll define it later)
+%
+\end{itemize}
+%
+\pause What can you do?  There are two options, both using the Monte Carlo (MC)
+estimate
+%
+\begin{align*}
+%
+\ellhat(\eta) := \meann f(z_n | \eta) \approx \ell(\eta).
+%
+\end{align*}
+%
+\pause
+%
+\begin{itemize}
+%
+\item Stochastic gradient (SG)
+%
+\begin{itemize}
+%
+\item Update with $\eta^{i} = \eta^{i-1} - \rho \nabla_\eta \ellhat(\eta)$
+for some step size $\rho$ (new $\z_n$ every step)
+\item Approximately minimizes the exact objective
+%
+\end{itemize}
+%
+\pause
+\item Sample average approximation (SAA)
+%
+\begin{itemize}
+%
+\item Find $\etahat := \argmin_{\eta} \ellhat(\eta)$ for fixed $\z$
+\item Exactly minimizes approximate objective
+%
+\end{itemize}
+%
+\end{itemize}
+%
+\pause
+Which is better? \textbf{It depends.}
+%
+\end{frame}
+
+
+
+
+\end{document}
