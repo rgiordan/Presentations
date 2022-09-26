@@ -4,6 +4,7 @@
 \usetheme{metropolis}           % Use metropolis theme
 \usepackage{amsmath}
 \usepackage{mathrsfs}
+\usepackage{tabularx}
 
 % For custom oversets
 \usepackage{accents}
@@ -12,6 +13,7 @@
 \def\q#1{\mathbb{Q}\left(#1\right)}
 \def\y{y}
 \def\z{z}
+\def\normz{\mathcal{N}(z)}
 \def\etahat{\hat{\eta}}
 \def\ellhat{\hat{\ell}}
 \def\sumn{\sum_{n=1}^N}
@@ -39,6 +41,60 @@
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Black box variation Bayes}
+%
+``Black box variational Bayes'' (BBVI) is a set of techniques for quickly and
+{\em automatically} approximating Bayesian posteriors using optimization. I'll
+consider ``mean field automatic differentiation variational inference'' (ADVI).
+
+Let $\theta$ denote model parameters and $\y$ some data and the joint
+generating distribution be $\p{\theta, \y} = \p{\y \vert \theta} \p{\theta}$.
+Let $\q{\theta \vert \eta}$ be a family of candidate approximate posteriors,
+here taken to be independent normals.
+
+ADVI aims to find
+%
+\begin{align*}
+%
+\etastar :=
+    \argmin_{\eta} \kl{\q{\theta \vert \eta} || \p{\theta \vert \y}}
+    = \argmin_{\eta} \expect{\normz}{f(\z  | \eta)}
+%
+\end{align*}
+%
+for a cleverly constructed, automatically-differentiable $\eta \mapsto f(\z |
+\eta)$.
+
+Unfortunately, $\expect{\normz}{f(\z  | \eta)}$ is typically intractable. So
+ADVI uses stochastic gradient (SG).  The leads to the following problems:
+%
+\begin{itemize}
+%
+\item You have to tune the step size carefully
+\item You can't assess convergence directly
+\item You can't compute sensitivity, so you can't use linear response
+covariances.
+%
+\end{itemize}
+%
+$\Rightarrow$ Optimization is slow and imprecise, and the posterior uncertainty
+is no good.  Not so black box actually!
+
+\textbf{
+We propose a simple alternative to SG that resolves these
+problems (sometimes).
+}
+
+%
+\end{frame}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,10 +117,10 @@ When does this happen?
 %
 \begin{itemize}
 %
+\item Black box variational inference
+%
 \item Stochastic control (e.g. you have a factory, and supply and demand are
 random)
-%
-\item Black box variational inference (our interest; we'll define it later)
 %
 \end{itemize}
 %
@@ -96,7 +152,7 @@ for some step size $\rho$ (new $\z_n$ every step)
 %
 \begin{itemize}
 %
-\item Find $\etahat := \argmin_{\eta} \ellhat(\eta)$ for fixed $\z$
+\item Find $\etahat := \argmin_{\eta} \ellhat(\eta)$ for fixed $\z_n$
 \item Exactly minimizes approximate objective
 %
 \end{itemize}
@@ -104,11 +160,100 @@ for some step size $\rho$ (new $\z_n$ every step)
 \end{itemize}
 %
 \pause
-Which is better? \textbf{It depends.}
+Which is better? \textbf{In general, it depends.}
+
+
+As far as we can tell, the BBVI literature has only ever considered SG.
 %
 \end{frame}
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Optimization of intractable expectations}
+
+\begin{minipage}[t]{0.45\linewidth}
+    %
+    Sample average approximation (SAA)
+    %
+    \begin{itemize}
+    %
+    \item Find $\etahat := \argmin_{\eta} \ellhat(\eta)$
+    \item Fixed $\z_n$ for whole procedure
+    \item Exactly minimizes approximate objective
+    %
+    \end{itemize}
+
+\textbf{Advantages:}
+%
+\begin{itemize}
+%
+\item Can use fast off-the-shelf second-order optimization (great for
+poorly-conditioned problems)
+\item Can evaluate the objective function exactly to check for convergence
+\item Can compute sensitivity (linear response covariances $\Rightarrow$
+more accurate posterior covariances for mean field approximations)
+%
+\end{itemize}
+%
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.45\linewidth}
+    %
+    Stochastic gradient (SG)
+    %
+    \begin{itemize}
+    %
+    \item $\eta^{i} = \eta^{i-1} - \rho \nabla_\eta \ellhat(\eta)$
+    \item New $\z_n$ every step
+    \item Approximately minimizes the exact objective
+    %
+    \end{itemize}
+
+\textbf{Advantages:}
+%
+\begin{itemize}
+%
+\item Uses each draw $\z_n$ only once (for a single gradient step)
+%
+\end{itemize}
+%
+This is actually a big one.  Because if $\eta \in \mathbb{R}^D$,
+in general, both
+SG and SAA have accuracy $(D / N)^{-1/2}$, where $N$ is the {\em total}
+number of draws of $\z_n$ used.
+
+\vspace{1em}
+SAA uses each draw at each step of optimization.  SG uses each draw once.
+%
+%\vspace{1em}
+
+$\Rightarrow$ In general, SG is much more efficient in high dimensions!
+%
+\end{minipage}
+
+\hrulefill
+
+\textbf{Theorem (us).}  If $\log \p{\theta, \y}$ is high dimensional
+due to a large number of ``local'' variables, then the accuracy
+is $~ (\log D / N)^{-1/2}$, rendering SAA feasible.
+
+\end{frame}
+
+\begin{frame}{Experimental results: Runtime}
+    \includegraphics[width=0.9\linewidth]{runtime}
+\end{frame}
+
+\begin{frame}{Experimental results: Means}
+    \includegraphics[width=0.9\linewidth]{means}
+\end{frame}
+
+\begin{frame}{Experimental results: Standard deviations}
+    \includegraphics[width=0.9\linewidth]{sd}
+\end{frame}
 
 \end{document}
