@@ -52,6 +52,7 @@
 {\em automatically} approximating Bayesian posteriors using optimization. I'll
 consider ``mean field automatic differentiation variational inference'' (ADVI).
 
+\pause
 Let $\theta$ denote model parameters and $\y$ some data and the joint
 generating distribution be $\p{\theta, \y} = \p{\y \vert \theta} \p{\theta}$.
 Let $\q{\theta \vert \eta}$ be a family of candidate approximate posteriors,
@@ -70,6 +71,7 @@ ADVI aims to find
 for a cleverly constructed, automatically-differentiable $\eta \mapsto f(\z |
 \eta)$.
 
+\pause
 Unfortunately, $\expect{\normz}{f(\z  | \eta)}$ is typically intractable. So
 ADVI uses stochastic gradient (SG).  The leads to the following problems:
 %
@@ -188,6 +190,7 @@ As far as we can tell, the BBVI literature has only ever considered SG.
     %
     \end{itemize}
 
+\onslide<2->{
 \textbf{Advantages:}
 %
 \begin{itemize}
@@ -199,6 +202,7 @@ poorly-conditioned problems)
 more accurate posterior covariances for mean field approximations)
 %
 \end{itemize}
+}
 %
 \end{minipage}
 \hfill\vline\hfill
@@ -214,6 +218,7 @@ more accurate posterior covariances for mean field approximations)
     %
     \end{itemize}
 
+\onslide<3->{
 \textbf{Advantages:}
 %
 \begin{itemize}
@@ -221,8 +226,10 @@ more accurate posterior covariances for mean field approximations)
 \item Uses each draw $\z_n$ only once (for a single gradient step)
 %
 \end{itemize}
+}
 %
-This is actually a big one.  Because if $\eta \in \mathbb{R}^D$,
+\onslide<4->{
+This is actually a big one!  Because if $\eta \in \mathbb{R}^D$,
 in general, both
 SG and SAA have accuracy $(D / N)^{-1/2}$, where $N$ is the {\em total}
 number of draws of $\z_n$ used.
@@ -233,15 +240,17 @@ SAA uses each draw at each step of optimization.  SG uses each draw once.
 %\vspace{1em}
 
 $\Rightarrow$ In general, SG is much more efficient in high dimensions!
+}
 %
 \end{minipage}
 
 \hrulefill
 
+\onslide<5->{
 \textbf{Theorem (us).}  If $\log \p{\theta, \y}$ is high dimensional
 due to a large number of ``local'' variables, then the accuracy
 is $~ (\log D / N)^{-1/2}$, rendering SAA feasible.
-
+}
 \end{frame}
 
 \begin{frame}{Experimental results: Runtime}
