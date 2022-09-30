@@ -5,6 +5,8 @@
 \usepackage{amsmath}
 \usepackage{mathrsfs}
 \usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
 
 % For custom oversets
 \usepackage{accents}
@@ -16,6 +18,7 @@
 \renewcommand*{\bibfont}{\footnotesize}
 
 
+\input{tikzstuff}
 
 \def\p#1{\mathbb{P}\left(#1\right)}
 \def\q#1{\mathbb{Q}\left(#1\right)}
@@ -107,31 +110,6 @@ Which propositions are true?
 \end{frame}
 
 
-\begin{frame}{Bibliography}
-\printbibliography{}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Logic}
-
-Aristotle identified four ``categorical propositions'' that form the basis
-of his logic:
-
-%
-\begin{itemize}
-%
-\item All As are Bs.
-\item No As are Bs.
-\item Some As are Bs.
-\item No As are not Bs.
-%
-\end{itemize}
-%
-%
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,10 +144,137 @@ $\Rightarrow$ Chewing tobacco does not improve batting average.
 \end{itemize}
 %
 \pause
-\textbf{None of them are valid.}  But some are better than other.
+\textbf{None of them are valid.}
+
+But some are better than others.
+In what sense?  In any logical sense?
 %
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Logic}
+
+% Aristotle identified four ``categorical propositions'' that form the basis
+% of his logic:
+%
+% %
+% \begin{itemize}
+% %
+% \item All As are Bs.
+% \item No As are Bs.
+% \item Some As are Bs.
+% \item Some As are not Bs.
+% %
+% \end{itemize}
+% %
+The Stoics identify the following syllogisms, purported patterns of
+valid inference:
+%
+\begin{itemize}
+%
+\item \emph{Modus Ponens}: If A, then B.  A.  Therefore, B.
+\item \emph{Modus Tollens}: If A, then B.  Not B.  Therefore, not A.
+\item The Hypothetical Syllogism: If A, then B.  If B, then C.  Therefore, if A, then C.
+\item The Conjunctive Syllogism: Not both A and B.  A.  Therefore, not B.
+\item The Dilemma: If A, then B.  If C, then B.  A or C.  Therefore, B.
+\item The Disjunctive Syllogism: A or B.  But not A.  Therefore, B.
+%
+\end{itemize}
+%
+All logic consists of identifying rules like these which, when applied to
+true premises, guarantees true conclusions.
+
+Humans are free to construct ``logics,'' which may
+or may not actually produce something we are willing to call truth.  To
+paraphrase \cite{hacking:2016:logic}:
+
+\begin{block}{}
+%
+``The problem of the [logic] is to state a set of principles
+which entail the validity of all correct [inference], and which do not
+imply that any fallacious inference is valid.''
+%
+\end{block}
+%
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Example}
+%
+Set theory can provide a means to visualize and analyze logical reasoning.
+Here is an example that I think may be useful.\footnote{I cooked this up and
+have no idea how standard this is.  I realized preparing for this how
+little I know about logic.}
+
+
+Suppose a bag contains three coins: one regular coin (HT), one with both
+faces tails (TT), and one with both faces heads (HH).  The coin is flipped,
+and either the first or second side comes up.
+
+Exactly one possible outcome
+of coin $\times$ side occurs; call this the ``truth.''
+
+\begin{minipage}{0.38\textwidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \coingrid{}
+        \node[color=red] at (1.5, 0.5) {$\times$};
+    \end{tikzpicture}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.58\textwidth}
+    %
+    \textbf{Example:}\\
+    Coin HH was picked and the second side came up (HH2).
+
+    \vspace{1em} In this context, classical propositional logic can be
+    represented as set operations.
+    %
+\end{minipage}
+%
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Example}
+
+\begin{minipage}{0.38\textwidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \coingrid{}
+        \rectfill{north west lines}{blue}{0}{0}
+        \rectfill{north west lines}{blue}{0}{1}
+        \rectfill{north west lines}{blue}{1}{0}
+    \end{tikzpicture}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.58\textwidth}
+    %
+    \vspace{1em} In this context, classical propositional logic can be
+    represented as set operations.
+    %
+\end{minipage}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Bibliography}
+\printbibliography{}
+\end{frame}
 
 \end{document}

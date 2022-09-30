@@ -37,6 +37,7 @@
       \strng{authorbibnamehash}{95122525347c569167eed0f08446e8ae}
       \strng{authornamehash}{95122525347c569167eed0f08446e8ae}
       \strng{authorfullhash}{95122525347c569167eed0f08446e8ae}
+      \field{extraname}{1}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
       \field{extradatescope}{labelyear}
@@ -45,6 +46,34 @@
       \field{labeltitlesource}{title}
       \field{title}{An introduction to probability and inductive logic}
       \field{year}{2001}
+    \endentry
+    \entry{hacking:2016:logic}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=95122525347c569167eed0f08446e8ae}{%
+           family={Hacking},
+           familyi={H\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{95122525347c569167eed0f08446e8ae}
+      \strng{fullhash}{95122525347c569167eed0f08446e8ae}
+      \strng{bibnamehash}{95122525347c569167eed0f08446e8ae}
+      \strng{authorbibnamehash}{95122525347c569167eed0f08446e8ae}
+      \strng{authornamehash}{95122525347c569167eed0f08446e8ae}
+      \strng{authorfullhash}{95122525347c569167eed0f08446e8ae}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Logic of statistical inference}
+      \field{year}{2016}
     \endentry
     \entry{shenefelt:2013:ifathenb}{book}{}
       \name{author}{2}{}{%

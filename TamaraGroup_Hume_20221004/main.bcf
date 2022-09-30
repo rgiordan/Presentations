@@ -2190,6 +2190,8 @@
     <bcf:citekey order="5">shenefelt:2013:ifathenb</bcf:citekey>
     <bcf:citekey order="6">hacking:2001:introduction</bcf:citekey>
     <bcf:citekey order="7">hacking:2001:introduction</bcf:citekey>
+    <bcf:citekey order="8">hacking:2001:introduction</bcf:citekey>
+    <bcf:citekey order="9">hacking:2016:logic</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
