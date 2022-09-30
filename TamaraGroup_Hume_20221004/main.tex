@@ -1,0 +1,175 @@
+\documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+
+
+\usetheme{metropolis}           % Use metropolis theme
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{tabularx}
+
+% For custom oversets
+\usepackage{accents}
+
+
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{references.bib}
+\usepackage{cleveref}
+\renewcommand*{\bibfont}{\footnotesize}
+
+
+
+\def\p#1{\mathbb{P}\left(#1\right)}
+\def\q#1{\mathbb{Q}\left(#1\right)}
+\def\y{y}
+\def\z{z}
+\def\normz{\mathcal{N}(z)}
+\def\etahat{\hat{\eta}}
+\def\ellhat{\hat{\ell}}
+\def\sumn{\sum_{n=1}^N}
+\def\meann{\frac{1}{N} \sumn}
+\newcommand{\etastar}{\accentset{*}{\eta}}
+\def\Z{\mathcal{Z}}
+\def\expect#1#2{\mathbb{E}_{#1}\left[#2\right]}
+\def\kl#1{\mathrm{KL}\left(#1\right)}
+\def\klhat#1{\widehat{\mathrm{KL}}\left(#1\right)}
+\def\ind#1{1\left(#1\right)}
+
+\DeclareMathOperator*{\argmax}{\mathrm{argmax}}
+\DeclareMathOperator*{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator*{\esssup}{\mathrm{esssup}}
+\DeclareMathOperator*{\essinf}{\mathrm{essinf}}
+\DeclareMathOperator*{\argsup}{\mathrm{argsup}}
+\DeclareMathOperator*{\arginf}{\mathrm{arginf}}
+
+\title{Inductive logic: Introduction and context}
+\author{Ryan Giordano}
+\date{Sep 23rd, 2022}
+\institute{Massachusetts Institute of Technology}
+
+\begin{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Outline}
+%
+\begin{itemize}
+%
+\item Logic
+\item Deduction and induction
+\item Classes of inductive questions (from philosophical induction to probability)
+\item Extreme resolutions: ``Bayesian,'' ``falsificationist,'' ``conventionalist''
+%
+\end{itemize}
+%
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Logic}
+%
+As far as we know, among the great ancient civilizations, only the Greeks
+studied the formal validity of argumentation, a.k.a., logic
+(\cite{shenefelt:2013:ifathenb}).  This presentation will borrow a lot from the
+lucid and readable reference \cite{hacking:2001:introduction}.
+
+\pause
+Logic studies the {\em validity} of an argument, not the {\em truth} of
+its conclusions.
+
+An argument is valid if it is logically sound.
+
+A proposition is a statement which is either true or false.
+
+\vspace{1em}
+\textbf{Example: }\\
+If James wants a job, then he will get a haircut tomorrow.\\
+James will get a haircut tomorrow.\\
+So: James wants a job.
+
+\vspace{1em}
+If James wants a job, then he will get a haircut tomorrow.\\
+James wants a job.\\
+So: James will get a haircut tomorrow.
+
+\pause
+\vspace{1em}
+\textbf{Questions:} \\
+Which argument is valid?  \\
+What are the propositions?\\
+Which propositions are true?
+%
+\end{frame}
+
+
+\begin{frame}{Bibliography}
+\printbibliography{}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Logic}
+
+Aristotle identified four ``categorical propositions'' that form the basis
+of his logic:
+
+%
+\begin{itemize}
+%
+\item All As are Bs.
+\item No As are Bs.
+\item Some As are Bs.
+\item No As are not Bs.
+%
+\end{itemize}
+%
+%
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Logic}
+%
+\textbf{Which of these arguments are valid?}
+(\cite[Ch.1 Question 7]{hacking:2001:introduction})
+
+%
+\begin{itemize}
+%
+\item I follow three major league teams.  Most of their top hitters chew
+tobacco at the plate.\\
+$\Rightarrow$ Chewing tobacco improves batting average.
+%
+\item The top six hitters in the National League chew tobacco at the plate.\\
+$\Rightarrow$ Chewing tobacco improves batting average.
+%
+\item A study by the American Dental Association of 158 players on
+seven major league teams during the 1988 season showed that the mean batting
+average for chewers was 0.238 compared to 0.248 for non-users.  Abstainers
+also had a higher fielding average.\\
+$\Rightarrow$ Chewing tobacco does not improve batting average.
+%
+\item In 1921, every major league pitcher who chewed tobacco when up to
+bat had a higher batting average than any major league pitcher who did
+not.\\
+$\Rightarrow$ Chewing tobacco does not improve batting average.
+%
+\end{itemize}
+%
+\pause
+\textbf{None of them are valid.}  But some are better than other.
+%
+\end{frame}
+
+
+
+\end{document}

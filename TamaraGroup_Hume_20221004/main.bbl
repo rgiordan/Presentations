@@ -1,0 +1,85 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{hacking:2001:introduction}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=95122525347c569167eed0f08446e8ae}{%
+           family={Hacking},
+           familyi={H\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge university press}%
+      }
+      \strng{namehash}{95122525347c569167eed0f08446e8ae}
+      \strng{fullhash}{95122525347c569167eed0f08446e8ae}
+      \strng{bibnamehash}{95122525347c569167eed0f08446e8ae}
+      \strng{authorbibnamehash}{95122525347c569167eed0f08446e8ae}
+      \strng{authornamehash}{95122525347c569167eed0f08446e8ae}
+      \strng{authorfullhash}{95122525347c569167eed0f08446e8ae}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An introduction to probability and inductive logic}
+      \field{year}{2001}
+    \endentry
+    \entry{shenefelt:2013:ifathenb}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9c04304104bc3d84f5e1523891ff2574}{%
+           family={Shenefelt},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5faad2d0f139e8fd3263b38eb0db3a31}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Columbia University Press}%
+      }
+      \strng{namehash}{fc89684d36ebdd6839af8be85cd529c6}
+      \strng{fullhash}{fc89684d36ebdd6839af8be85cd529c6}
+      \strng{bibnamehash}{fc89684d36ebdd6839af8be85cd529c6}
+      \strng{authorbibnamehash}{fc89684d36ebdd6839af8be85cd529c6}
+      \strng{authornamehash}{fc89684d36ebdd6839af8be85cd529c6}
+      \strng{authorfullhash}{fc89684d36ebdd6839af8be85cd529c6}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{If {A}, then {B}: {H}ow the world discovered logic}
+      \field{year}{2013}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
