@@ -11,6 +11,9 @@
 % For custom oversets
 \usepackage{accents}
 
+% For addmargin
+\usepackage{scrextend}
+
 
 \usepackage[style=authoryear]{biblatex}
 \addbibresource{references.bib}
@@ -185,20 +188,23 @@ valid inference:
 %
 \end{itemize}
 %
-All logic consists of identifying rules like these which, when applied to
-true premises, guarantees true conclusions.
+\textbf{Proposition:} If we begin with true propositions, and combine
+them according to the above syllogisms, we necessarily reach a true conclusion.
 
-Humans are free to construct ``logics,'' which may
-or may not actually produce something we are willing to call truth.  To
-paraphrase \cite{hacking:2016:logic}:
+Reasoning in this way is called \textbf{deductive reasoning}.
 
-\begin{block}{}
+
+% Humans are free to construct ``logics,'' which may
+% or may not actually produce something we are willing to call truth.  To
+% paraphrase \cite{hacking:2016:logic}:
 %
-``The problem of the [logic] is to state a set of principles
-which entail the validity of all correct [inference], and which do not
-imply that any fallacious inference is valid.''
-%
-\end{block}
+% \begin{block}{}
+% %
+% ``The problem of the [logic] is to state a set of principles
+% which entail the validity of all correct [inference], and which do not
+% imply that any fallacious inference is valid.''
+% %
+% \end{block}
 %
 \end{frame}
 
@@ -249,25 +255,357 @@ of coin $\times$ side occurs; call this the ``truth.''
 
 \begin{frame}{Example}
 
-\begin{minipage}{0.38\textwidth}
-    \begin{center}
-    \begin{tikzpicture}
-        \coingrid{}
-        \rectfill{north west lines}{blue}{0}{0}
-        \rectfill{north west lines}{blue}{0}{1}
-        \rectfill{north west lines}{blue}{1}{0}
-    \end{tikzpicture}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.58\textwidth}
-    %
-    \vspace{1em} In this context, classical propositional logic can be
-    represented as set operations.
-    %
-\end{minipage}
+\setminipage{}
+\pause
+\textbf{Questions:}
+
+Suppose we observe heads (so we know \truth{} $\in$ \heads{}).
+
+What can we deduce about whether we drew the TT coin?
+
+What can we deduce about whether we drew the HT coin?
+
+What can we deduce about whether we drew the HH coin?
+
+\textbf{Hint:}
+%
+Note that \heads{} $\subseteq$ \ttcoin{}$^c$.
+
 
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Example}
+    \setminipage{}
+
+\textbf{In general:} Set inclusion is the same as deductive entailment:
+
+$A$ is true and $A \subseteq B$ implies that $B$ is true.
+This is the set version of {\em modus ponens}.
+
+(\textbf{Optional exercise:} Rewrite the other logical syllogisms as set operations.)
+
+If $A$ is true, and $A$ overlaps partially with $B$, nothing about $B$
+follows deductively, because \textbf{you might be wrong}.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Example}
+    \setminipage{}
+
+And yet it seems silly to claim that observing a heads tells you
+nothing about whether you have chosen the HH coin.
+
+After all,  the ``prior'' $p(\textrm{HH coin}) = 1/3$,
+but the ``posterior'' $p(\textrm{HH coin} | \textrm{heads}) =
+2/3$.
+
+\pause
+
+\textbf{Reasoning that goes beyond deduction is called ``induction.''} (It is
+also sometimes called ``ampliative'' reasoning because it concludes more than is
+given by the premises.)
+
+\pause
+\textbf{Questions:}\\
+Is induction even possible?  If so, how?\\
+% Can the probability calculus provide the key to a valid inductive logic?\\
+\textbf{As we will see, early statisticians were extremely preoccupied
+with this question.}\footnote{Or I think we will see this,
+I haven't read most of these papers yet either.}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The European Enlightenment was an exciting time}
+
+%\vspace{3em}
+%
+\begin{minipage}{0.6 \textwidth}
+%
+{\footnotesize
+\begin{itemize}
+%
+\item 1657: Huygens' The Value of all Chances in Games of Fortune
+\item 1687: Newton's {\em Prinicipia Mathematica}
+\item 1690: Locke's Essay Concerning Human Understanding
+\item 1713 Bernoulli's The Art of Conjecturing
+\item 1718 De Moivre's The Doctrine of Chances
+\item 1739: \textbf{Hume's An Enquiry Concerning Human Understanding}
+\item 1751-1772: Diderot's Encyclopedia
+\item 1763: Bayes' An Essay towards solving a Problem in the Doctrine of Chances
+\item 1770: Euler's Foundations of integral calculus
+\item 1776: The American Revolution
+\item 1776: Adam Smith's The Wealth of Nations
+\item 1789: The French Revolution
+\item 1812: Laplace's Analytic Theory of Probabilities
+\vspace{1em}
+%
+\end{itemize}
+}
+%
+\end{minipage}
+\begin{minipage}{0.35 \textwidth}
+\includegraphics[width=0.9 \textwidth]{Hume.png}
+\end{minipage}
+%
+%\vspace{3em}
+\pause
+\textbf{Foundations, rigor, and revolution} were all in the air.
+
+\pause
+\textbf{Is induction even possible?  If so, how?}
+
+We have asked this question in the setting when it has, arguably, the best
+chance of being possible (a well-defined probability setup).
+
+Hume asked it in much, much greater generality.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Hume}
+
+\textbf{Is induction even possible?  If so, how?}
+%
+\begin{enumerate}
+%
+\item All questions are ``Relations of Ideas'' or ``Matters of Fact.''
+\item ``Relations of Ideas'' are deductive, certain, mathematical.
+\item ``Matters of Fact'' are sensory, experiental, contingent, local
+in time and space.
+\item The content of ideas is entirely matters of fact.
+%
+\end{enumerate}
+%
+Here, ``matters of fact'' correspond to propositions, and
+``relations of ideas'' to deductive logic.
+
+\textbf{Hume's question:} We believe much more about the world than we
+experience directly.  What is the foundation of this belief?  Is it
+experience?  Is it deduction?  What combination of the two?
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Cause and Effect}
+
+Hume specifies three ways ideas can be associated:
+%
+\begin{enumerate}
+%
+\item Resemblance
+\item Co-occurence
+\item Cause and effect
+%
+\end{enumerate}
+%
+Hume argues that it is because of cause and effect that we extrapolate
+from local, transient experiences.
+
+\pause
+\textbf{Question:} What is the difference between Hume's co-occurence and
+cause and effect?
+
+\pause
+\textbf{Question:} What is the difference between Hume's
+cause and effect and Judea Pearl's?
+
+\pause
+\textbf{Question:} What is the difference between Hume's
+cause and effect and the counterfactulas of the Neyman-Rubin framework?
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Cause and Effect}
+
+Cause and effect differs from co-occurence by being \textbf{necessary}.
+
+So how do we establish that something is necessary?  Can we establish
+it by deduction?  By experience?
+
+\pause
+\textbf{Not by deduction:}
+
+\begin{addmargin}[2em]{2em}% 1em left, 2em right
+``I say then that, even after we have experience of the operations of
+cause and effect, our conclusions from that experience are not founded
+on reasoning, or on any process of the understanding.''  (28)
+\end{addmargin}
+
+\pause
+\textbf{And not by experience:}
+\begin{addmargin}[2em]{2em}% 1em left, 2em right
+``For all inferences from experience suppose, as their foundation, that
+the future will resemble the past, and that similar powers will be conjoined
+with similar sensible qualities.  If there be any suspicion that the course
+of nature may change, and that the past may be no rule for the future,
+all experience becomes useless, and can give rise to no inference
+or conclusion.'' (32)
+\end{addmargin}
+
+\pause
+Hume's answer: ``Custom.''
+
+\pause
+
+\textbf{Question:}  What is Hume saying about inductive reasoning?
+
+\textbf{Question:}  In Hume's view, what classes of questions fall
+under the category of inductive reasoning?
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Hume on science}
+
+Hume writes:
+
+\begin{addmargin}[2em]{2em}% 1em left, 2em right
+    ``Elasticity, gravity, cohesion of parts, communication of motion
+    by impulse; these are probably the ultimate causes and principles
+    which we shall ever discover in nature.'' (26)
+\end{addmargin}
+
+and
+
+\begin{addmargin}[2em]{2em}% 1em left, 2em right
+    ``Our senses inform us of the colour, weight, and consistence of bread;
+    but neither sense nor reason can ever inform us of those qualities
+    which fit it for the nourishment and support of a human body.'' (29)
+\end{addmargin}
+
+\pause
+
+\textbf{Question:}  These observations have not held up well.  What consequences
+does this have for Hume's view of science, if any?
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Hume on everyday life}
+
+\textbf{Question:}  In Hume's view, what consequences do his skepticism
+have for real life?
+
+\pause
+Hume writes:
+
+\begin{addmargin}[2em]{2em}% 1em left, 2em right
+    ``And though none but a fool or madman will ever pretend to dispute
+    the authority of experience, or to reject that great guid of
+    human life, it may surely be allowed a philosopher to have so
+    much curiosity at least as to examine the principle of human
+    nature, which gives this mighty authority to experience,
+    and makes us draw advantage from the similarity which nature
+    has placed among different objects.'' (31)
+\end{addmargin}
+
+\begin{addmargin}[2em]{2em}% 1em left, 2em right
+    ``My practice, you say, refutes my doubts.  But you mistake the
+    purport of my question.  As an agent, I ma quite satisfied in the
+    point; but as a philosopher, who has some share of curiosity,
+    I will not say scepticism, I want to learn the foundation of this
+    inference.'' (32)
+\end{addmargin}
+
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{A way forward?}
+
+\begin{addmargin}[2em]{2em}% 1em left, 2em right
+    ``There is certainly a probability, which arises from a superiority
+    of chances on any side; and acoording as this superiority encreases,
+    and surpasses the opposite chances, the probability receive a proportional
+    increase, and begets still a higher degree of belief or assent to that side,
+    in which we discover the superiority.'' (46)
+\end{addmargin}
+
+\pause
+\textbf{Warning:}
+Probable / probaility had a different meaning for Hume than for us!
+
+\textbf{probability (n.)} mid-15c., probabilite, ``likelihood of being realized,
+appearance of truth, quality of being probable,'' from Old French probabilite
+(14c.) and directly from Latin probabilitatem (nominative probabilitas)
+``credibility, probability,'' from probabilis (see probable).
+
+Meaning "something likely to be true" is from 1570s; mathematical sense is from
+1718, ``frequency with which a proposition similar to the one in question is
+found true in the course of experience.''
+\href{https://www.etymonline.com/word/probability}{(www.etymonline.com)}
+
+\pause
+
+\textbf{Question:} Is Hume putting this forward as a potential solution?
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{A different way forward?}
+
+Karl Popper answers Hume using a very different technique than
+probability.
+
+\setminipage{}
+
+\textbf{Question:} Recall our coin example.  Suppose we have two
+scientific theories, corresponding to ``coin HH was chosen''
+and ``coin TT was chosen.''  We observe heads.  What does Popper
+say we can conclude?  How does this relate to Hume's question of
+induction?
+
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

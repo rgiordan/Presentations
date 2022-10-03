@@ -16,3 +16,64 @@
 \def\rectfill#1#2#3#4{
 \draw[pattern=#1, pattern color=#2] (#3,#4) rectangle (#3 + 1,#4 + 1);
 }
+
+
+\def\truth{${\color{red}\times}$}
+
+\def\heads{
+\begin{tikzpicture}[scale=0.30]
+    \rectfill{north west lines}{blue}{0}{1}
+\end{tikzpicture}
+}
+
+\def\ttcoin{
+\begin{tikzpicture}[scale=0.30]
+    \draw[draw=lime, thick] (0, 1) rectangle ++(1, 1);
+\end{tikzpicture}
+}
+
+\def\htcoin{
+\begin{tikzpicture}[scale=0.30]
+    \draw[draw=red, thick] (0, 1) rectangle ++(1, 1);
+\end{tikzpicture}
+}
+
+\def\hhcoin{
+\begin{tikzpicture}[scale=0.30]
+    \draw[draw=cyan, thick] (0, 1) rectangle ++(1, 1);
+\end{tikzpicture}
+}
+
+
+
+\def\setminipage{
+
+
+\begin{minipage}{0.38\textwidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \rectfill{north west lines}{blue}{0}{0}
+        \rectfill{north west lines}{blue}{0}{1}
+        \rectfill{north west lines}{blue}{1}{0}
+        \draw[draw=red, very thick] (0, 1) rectangle ++(2, 1);
+        \draw[draw=lime, very thick] (0, 2.01) rectangle ++(2, 1);
+        \draw[draw=cyan, very thick] (0, 0.01) rectangle ++(2, 1);
+        \coingrid{}
+    \end{tikzpicture}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.58\textwidth}
+    %
+    \heads{} We observe heads = $HT1 \lor HH1 \lor HH2$
+
+    \ttcoin{} We chose the TT coin = $TT1 \lor TT2$
+
+    \htcoin{} We chose the HT coin = $HT1 \lor HT2$
+
+    \hhcoin{} We chose the HH coin = $HH1 \lor HH2$
+
+    Recall that the truth \truth{} lies in exactly one cell.
+
+\end{minipage}
+
+}
