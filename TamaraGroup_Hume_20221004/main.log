@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  3 OCT 2022 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  4 OCT 2022 07:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1264,55 +1264,44 @@ Package biblatex Info: Reference section=0 on input line 54.
 Package biblatex Info: Reference segment=0 on input line 54.
 (./main.nav)
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-74.
+72.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (10.4621pt too high) detected at line 113
- []
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-[2
+] [3
 
 ]
-Overfull \vbox (10.4621pt too high) detected at line 113
- []
-
-[3
-
-]
-Overfull \vbox (10.4621pt too high) detected at line 113
- []
-
-[4
-
-]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 155
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147
 .
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 155
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
-5.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 155.
+ut line 147.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-[5
+[4
+
+] [5
 
 ] [6
 
@@ -1332,17 +1321,21 @@ thkerncmss.
 
 ] [14
 
+] [15
+
+] [16
+
 ]
-<Hume.png, id=109, 737.75626pt x 849.1725pt>
+<Hume.png, id=112, 737.75626pt x 849.1725pt>
 File: Hume.png Graphic file (type png)
 <use Hume.png>
 Package pdftex.def Info: Hume.png  used on input line 378.
 (pdftex.def)             Requested size: 96.79733pt x 111.40697pt.
 
-Overfull \vbox (4.10071pt too high) detected at line 378
+Overfull \vbox (5.65627pt too high) detected at line 378
  []
 
-[15
+[17
 
  <./Hume.png>]
 File: Hume.png Graphic file (type png)
@@ -1350,10 +1343,10 @@ File: Hume.png Graphic file (type png)
 Package pdftex.def Info: Hume.png  used on input line 378.
 (pdftex.def)             Requested size: 96.79733pt x 111.40697pt.
 
-Overfull \vbox (4.10071pt too high) detected at line 378
+Overfull \vbox (5.65627pt too high) detected at line 378
  []
 
-[16
+[18
 
 ]
 File: Hume.png Graphic file (type png)
@@ -1361,14 +1354,10 @@ File: Hume.png Graphic file (type png)
 Package pdftex.def Info: Hume.png  used on input line 378.
 (pdftex.def)             Requested size: 96.79733pt x 111.40697pt.
 
-Overfull \vbox (4.10071pt too high) detected at line 378
+Overfull \vbox (5.65627pt too high) detected at line 378
  []
 
-[17
-
-] [18
-
-] [19
+[19
 
 ] [20
 
@@ -1394,16 +1383,26 @@ Overfull \vbox (4.10071pt too high) detected at line 378
 
 ] [31
 
-]
-[32
+] [32
 
 ] [33
 
-] [34
+]
+[34
 
 ] [35
 
 ] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write7
@@ -1415,11 +1414,11 @@ Overfull \vbox (4.10071pt too high) detected at line 378
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 618.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 618.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 618.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 618.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 668.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 668.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 06E27B416B3B1946CD705C501CA5B3BD;45.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1427,25 +1426,26 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30589 strings out of 483065
- 614118 string characters out of 5963550
- 1254638 words of memory out of 5000000
- 44938 multiletter control sequences out of 15000+600000
- 542133 words of font info for 59 fonts, out of 8000000 for 9000
+ 30625 strings out of 483065
+ 615044 string characters out of 5963550
+ 1254565 words of memory out of 5000000
+ 44963 multiletter control sequences out of 15000+600000
+ 542778 words of font info for 61 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  71i,13n,95p,1836b,1223s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0600.
+ </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0700.
 600pk> </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0
-800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (36 pages, 1465447 bytes).
+600.600pk> </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/t
+css0800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (41 pages, 1472607 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 228 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
  60 words of extra memory for PDF output out of 10000 (max. 10000000)
 

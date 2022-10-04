@@ -64,10 +64,8 @@
 %
 \begin{itemize}
 %
-\item Logic
-\item Deduction and induction
-\item Classes of inductive questions (from philosophical induction to probability)
-\item Extreme resolutions: ``Bayesian,'' ``falsificationist,'' ``conventionalist''
+\item Logic, deduction, and induction.
+\item Hume, and a little Popper.
 %
 \end{itemize}
 %
@@ -79,18 +77,13 @@
 
 \begin{frame}{Logic}
 %
-As far as we know, among the great ancient civilizations, only the Greeks
-studied the formal validity of argumentation, a.k.a., logic
-(\cite{shenefelt:2013:ifathenb}).  This presentation will borrow a lot from the
-lucid and readable reference \cite{hacking:2001:introduction}.
-
-\pause
 Logic studies the {\em validity} of an argument, not the {\em truth} of
 its conclusions.
 
-An argument is valid if it is logically sound.
+An argument is valid if it is logically sound, and an argument can
+be valid without being true, and vice-versa.
 
-A proposition is a statement which is either true or false.
+In contrast, a proposition is a statement which is either true or false.
 
 \vspace{1em}
 \textbf{Example: }\\
@@ -120,7 +113,7 @@ Which propositions are true?
 
 \begin{frame}{Logic}
 %
-\textbf{Which of these arguments are valid?}
+\textbf{Question:} Which of these arguments are valid?
 (\cite[Ch.1 Question 7]{hacking:2001:introduction})
 
 %
@@ -147,10 +140,9 @@ $\Rightarrow$ Chewing tobacco does not improve batting average.
 \end{itemize}
 %
 \pause
-\textbf{None of them are valid.}
 
-But some are better than others.
-In what sense?  In any logical sense?
+None of them are valid. But some are better than others. In what sense?  In any
+logical sense?
 %
 \end{frame}
 
@@ -188,8 +180,10 @@ valid inference:
 %
 \end{itemize}
 %
-\textbf{Proposition:} If we begin with true propositions, and combine
-them according to the above syllogisms, we necessarily reach a true conclusion.
+\pause
+
+\textbf{Conceit:} If we begin with true propositions, and combine them according
+to the above syllogisms, we necessarily reach a true conclusion.
 
 Reasoning in this way is called \textbf{deductive reasoning}.
 
@@ -216,18 +210,18 @@ Reasoning in this way is called \textbf{deductive reasoning}.
 
 \begin{frame}{Example}
 %
-Set theory can provide a means to visualize and analyze logical reasoning.
-Here is an example that I think may be useful.\footnote{I cooked this up and
-have no idea how standard this is.  I realized preparing for this how
-little I know about logic.}
+Set theory can provide a means to visualize and analyze logical reasoning. In
+particular, deductive implication is equivalent to set inclusion.
 
-
-Suppose a bag contains three coins: one regular coin (HT), one with both
-faces tails (TT), and one with both faces heads (HH).  The coin is flipped,
-and either the first or second side comes up.
+Here is a running example for this presentation. Suppose a bag contains three
+coins: one regular coin (HT), one with both faces tails (TT), and one with both
+faces heads (HH).  The coin is flipped, and either the first or second side
+comes up.
 
 Exactly one possible outcome
 of coin $\times$ side occurs; call this the ``truth.''
+
+\pause
 
 \begin{minipage}{0.38\textwidth}
     \begin{center}
@@ -282,15 +276,20 @@ Note that \heads{} $\subseteq$ \ttcoin{}$^c$.
 \begin{frame}{Example}
     \setminipage{}
 
-\textbf{In general:} Set inclusion is the same as deductive entailment:
+\textbf{In general:} Set inclusion is the same as deductive implication:
 
 $A$ is true and $A \subseteq B$ implies that $B$ is true.
 This is the set version of {\em modus ponens}.
 
-(\textbf{Optional exercise:} Rewrite the other logical syllogisms as set operations.)
+(\textbf{Optional exercise:} Rewrite the Stoics' other logical syllogisms as set
+operations.)
 
-If $A$ is true, and $A$ overlaps partially with $B$, nothing about $B$
-follows deductively, because \textbf{you might be wrong}.
+\pause
+
+If $A$ is true, and $A$ overlaps partially with $B$, \textbf{nothing} about $B$
+follows deductively, because \textbf{you might be wrong}, and \textbf{deduction
+cannot be wrong}.
+
 
 \end{frame}
 
@@ -333,6 +332,14 @@ I haven't read most of these papers yet either.}
 
 \begin{frame}{The European Enlightenment was an exciting time}
 
+\textbf{Is induction even possible?  If so, how?}
+
+We have asked this question in the setting when it has, arguably, the best
+chance of being possible (a well-defined probability setup).
+
+Hume asked it in much, much greater generality.
+\pause
+
 %\vspace{3em}
 %
 \begin{minipage}{0.6 \textwidth}
@@ -367,13 +374,6 @@ I haven't read most of these papers yet either.}
 \pause
 \textbf{Foundations, rigor, and revolution} were all in the air.
 
-\pause
-\textbf{Is induction even possible?  If so, how?}
-
-We have asked this question in the setting when it has, arguably, the best
-chance of being possible (a well-defined probability setup).
-
-Hume asked it in much, much greater generality.
 
 \end{frame}
 
@@ -395,8 +395,12 @@ in time and space.
 %
 \end{enumerate}
 %
-Here, ``matters of fact'' correspond to propositions, and
-``relations of ideas'' to deductive logic.
+\pause \textbf{Question: }Do the components of Hume's argument seem to have
+analogues in deductive logic?
+% Here, ``matters of fact'' correspond to propositions, and
+% ``relations of ideas'' to deductive logic.
+
+\pause
 
 \textbf{Hume's question:} We believe much more about the world than we
 experience directly.  What is the foundation of this belief?  Is it
@@ -590,7 +594,6 @@ found true in the course of experience.''
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{frame}{A different way forward?}
 
 Karl Popper answers Hume using a very different technique than
@@ -605,6 +608,53 @@ say we can conclude?  How does this relate to Hume's question of
 induction?
 
 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Conclusion}
+%
+\begin{itemize}
+%
+\item Deductive logic is an ancient tradition designed to produce certainty.
+%
+    \begin{itemize}
+    %
+    \item Deduction generates guaranteed truths from true propositions
+    \item Deduction has a deep formal connection to set theory
+    %
+    \end{itemize}
+%
+\item Modern epistemology (which owes a lot to Hume) requires more than deduction:
+%
+    \begin{itemize}
+    %
+    \item How to weigh inconsistent evidence?
+    \item How to treat random evidence?
+    \item How to extrapolate from old data to new settings?
+    \item How to evaluate and test scientific theories?
+    %
+    \end{itemize}
+%
+\item All the above questions (and more) fall under the category of ``induction.''
+%
+    \begin{itemize}
+    %
+    \item Induction concludes more than is given in the premises.
+    \item Maybe induction is not even necessary (c.f. Popper)
+    %
+    \end{itemize}
+%
+\item Can we form an ``inductive logic?''
+    \begin{itemize}
+        \item What would this even mean?
+        \item Can we exploit the connection between deduction and set theory?
+    \end{itemize}
+%
+\end{itemize}
+%
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
