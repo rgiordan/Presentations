@@ -54,6 +54,7 @@ DollarToNumber <- function(x) {
 
 DollarToNumber(budget_raw$Actual) %>% is.na() %>% any()
 
+# TODO: Make a cleaned version, and then a different one to subset for the time series.
 
 budget_df <-
     budget_raw %>%
@@ -66,14 +67,34 @@ budget_df <-
            Budget=DollarToNumber(Budget))
 
 budget_df %>%
+    filter(Date  <= 2018) %>%
     filter(Item %in% c("Total Expenses", "Total Income")) %>%
     ggplot(aes(x=Date, y=Actual / 1000, color=Item)) +
         geom_line(lwd=1.2) + geom_point(size=2) +
         ylab("Thousands of Dollars") +
         scale_x_continuous("School year start", unique(budget_df$Date), date_num) +
     expand_limits(ymin=0)
+if (FALSE) {
+    ggsave(file.path(working_dir, "budget_history.png"), width=7, height=3, units="in")
+}
 
 
+
+budget_df %>%
+    filter(Item %in% c("Total Expenses", "Total Income")) %>%
+    ggplot(aes(x=Date, y=Actual / 1000, color=Item)) +
+    geom_line(lwd=1.2) + geom_point(size=2) +
+    ylab("Thousands of Dollars") +
+    scale_x_continuous("School year start", unique(budget_df$Date), date_num) +
+    expand_limits(ymin=0)
+if (FALSE) {
+    ggsave(file.path(working_dir, "budget_history_w_covid.png"), width=7, height=3, units="in")
+}
+
+
+
+
+# How well do we meet our budget?
 
 met_budget_df <-
     budget_df %>%
@@ -93,11 +114,14 @@ summary(met_budget_nocovid_df$Budget_Profit)
 
 summary(100 * met_budget_nocovid_df$Actual_Profit / met_budget_nocovid_df$Actual_Income)
 
+sum(met_budget_nocovid_df$Actual_Profit)
 mean(met_budget_nocovid_df$Actual_Profit)
 mean(met_budget_nocovid_df$Budget_Profit)
 
 mean(met_budget_nocovid_df$Met_Budget)
 
+
+# How much did we make in 2021 after removing donations?
 
 profit_2021 <- filter(met_budget_df, Date == 2021) %>% pull(Actual_Profit)
 
@@ -114,6 +138,19 @@ contributed_2021 <-
 
 c(profit_2021, contributed_2021)
 profit_2021 - contributed_2021
+
+
+# What proportion do we pay in personnel?
+
+budget_df %>%
+    filter(Item %in% c("Total Expenses", "Total 5000 Personnel")) %>%
+    mutate(Item=case_when(Item == "Total Expenses" ~ "Total",
+                          Item == "Total 5000 Personnel" ~ "Personnel",
+                          TRUE ~ "Unknown")) %>%
+    pivot_longer(c(Actual, Budget), names_to="Type", values_to="value") %>%
+    pivot_wider(id_cols=c(Date, Type), values_from=value, names_from=Item) %>%
+    mutate(Prop=Personnel / Total) %>%
+    print(n=Inf)
 
 
 budget_df %>%
@@ -135,24 +172,6 @@ budget_df %>%
         scale_x_continuous("School year start", unique(budget_df$Date), date_num)
 
 
-
-budget_df %>%
-    filter(Item %in% c("Total Income", "Total 4105 Tuition Revenue")) %>%
-    mutate(Item=case_when(Item == "Total Income" ~ "Total",
-                          Item == "Total 4105 Tuition Revenue" ~ "Tuition",
-                          TRUE ~ "Unknown")) %>%
-    pivot_longer(c(Actual, Budget), names_to="Type", values_to="value") %>%
-    pivot_wider(id_cols=c(Date, Type), values_from=value, names_from=Item) %>%
-    mutate(Prop=Tuition / Total) %>%
-    pivot_wider(id_cols=Date, values_from=Prop, names_from=Type) %>%
-    ggplot(aes(x=Date)) +
-    geom_point(aes(y=100 * Actual, color="Actual")) +    
-    geom_point(aes(y=100 * Budget, color="Budget")) +
-    geom_line(aes(y=100 * Actual, color="Actual")) +    
-    geom_line(aes(y=100 * Budget, color="Budget")) +
-    expand_limits(ymin=0, ymax=100) +
-    ylab("Tuition % of income") +
-    scale_x_continuous("School year start", unique(budget_df$Date), date_num)
 
 
 
@@ -212,18 +231,29 @@ ggplot(bind_rows(income_prop_df, income_other_df)) +
     ylab("Percent of income")
 
 
-bind_rows(income_prop_df, income_other_df)$Date
+income_labels <- c(
+    "Total 4000 Contributed Revenue"= "Donations",
+    "Total 4105 Tuition Revenue"= "AM Tuition",
+    "4110 Fees"= "Fees",                 
+    "Contract Care"= "Contract Care",
+    "Other"= "Other"
+)
 
-ggplot(bind_rows(income_prop_df, income_other_df)) +
-    geom_bar(aes(x=Date, y=Actual / 1000, fill=Item), stat="Identity") +
-    scale_x_continuous("School year start", unique(budget_df$Date), date_num) +
-    ylab("Thousands of dollars")
+expenditure_df <-
+    budget_df %>%
+    filter(Item == "Total Expenses")
 
+bind_rows(income_prop_df, income_other_df) %>%
+    mutate(Item_Labeled=income_labels[Item]) %>%
+    ggplot() +
+        geom_bar(aes(x=Date, y=Actual / 1000, fill=Item_Labeled), stat="Identity") +
+        scale_x_continuous("School year start", unique(budget_df$Date), date_num) +
+        ylab("Thousands of dollars") +
+        geom_line(aes(x=Date, y=Actual / 1000, linetype="Expenditures"), data=expenditure_df) +
+        guides(linetype=guide_legend(title=""), fill=guide_legend("Income Source"))
+if (FALSE) {
+    ggsave(file.path(working_dir, "budget_history_w_income_source.png"), width=7, height=3, units="in")
+}
 
-income_df %>%
-    filter(Date==2021) %>%
-    mutate(Item=str_replace_all(Item, " ", "_")) %>%
-    pivot_longer(cols=c(Actual, Budget), names_to="Type", values_to="Amount") %>%
-    pivot_wider(id_cols=c(Date, Type), names_from=Item, values_from=Amount) %>%
-    mutate(Total_Without_Contributions=Total_Income - Total_4000_Contributed_Revenue) %>%
-    select(Date, Total_Without_Contributions, Type)
+filter(income_prop_df, Date == 2018)
+
