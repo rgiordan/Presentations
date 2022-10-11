@@ -1,7 +1,7 @@
 library(tidyverse)
 library(tidyr)
 
-working_dir <- "/home/rgiordan/Documents/CCC"
+working_dir <- "/home/rgiordan/Documents/git_repos/Presentations/CCC_budget_20221011"
 setwd(working_dir)
 
 budget_raw <- read.csv(file.path(working_dir, "Budget history - Summary.csv"), header=TRUE, as.is=TRUE)
@@ -82,20 +82,38 @@ met_budget_df <-
     pivot_wider(id_cols=Date, names_from=Item, values_from=c(Actual, Budget)) %>%
     mutate(Actual_Profit=Actual_Income - Actual_Expenses,
            Budget_Profit=Budget_Income - Budget_Expenses,
-           Met_Budget=Actual_Profit >= Budget_Profit) %>%
-    filter(Date <= 2018)
+           Met_Budget=Actual_Profit >= Budget_Profit) 
 
-nrow(met_budget_df)
+met_budget_nocovid_df <- filter(met_budget_df, Date <= 2018)
 
-summary(met_budget_df$Actual_Profit)
-summary(met_budget_df$Budget_Profit)
+nrow(met_budget_nocovid_df)
 
-summary(100 * met_budget_df$Actual_Profit / met_budget_df$Actual_Income)
+summary(met_budget_nocovid_df$Actual_Profit)
+summary(met_budget_nocovid_df$Budget_Profit)
 
-mean(met_budget_df$Actual_Profit)
-mean(met_budget_df$Budget_Profit)
+summary(100 * met_budget_nocovid_df$Actual_Profit / met_budget_nocovid_df$Actual_Income)
 
-mean(met_budget_df$Met_Budget)
+mean(met_budget_nocovid_df$Actual_Profit)
+mean(met_budget_nocovid_df$Budget_Profit)
+
+mean(met_budget_nocovid_df$Met_Budget)
+
+
+profit_2021 <- filter(met_budget_df, Date == 2021) %>% pull(Actual_Profit)
+
+contributed_2021 <- 
+    budget_raw %>%
+    select(Date, Income, Actual, Budget) %>%
+    mutate(Income=str_trim(Income)) %>%
+    rename(Item=Income) %>%
+    mutate(Date=as.integer(date_num[Date])) %>%
+    mutate(Actual=DollarToNumber(Actual),
+           Budget=DollarToNumber(Budget)) %>%
+    filter(Date == 2021, Item == "Total 4000 Contributed Revenue") %>%
+    pull(Actual)
+
+c(profit_2021, contributed_2021)
+profit_2021 - contributed_2021
 
 
 budget_df %>%
@@ -201,3 +219,11 @@ ggplot(bind_rows(income_prop_df, income_other_df)) +
     scale_x_continuous("School year start", unique(budget_df$Date), date_num) +
     ylab("Thousands of dollars")
 
+
+income_df %>%
+    filter(Date==2021) %>%
+    mutate(Item=str_replace_all(Item, " ", "_")) %>%
+    pivot_longer(cols=c(Actual, Budget), names_to="Type", values_to="Amount") %>%
+    pivot_wider(id_cols=c(Date, Type), names_from=Item, values_from=Amount) %>%
+    mutate(Total_Without_Contributions=Total_Income - Total_4000_Contributed_Revenue) %>%
+    select(Date, Total_Without_Contributions, Type)
