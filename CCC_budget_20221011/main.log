@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  11 OCT 2022 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  11 OCT 2022 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1241,26 +1241,26 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 143
+LaTeX Font Info:    Trying to load font information for U+msa on input line 155
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 143
+LaTeX Font Info:    Trying to load font information for U+msb on input line 155
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14
-3.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 143.
+ut line 155.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1269,31 +1269,33 @@ thkerncmss.
 [3
 
 ]
-<budget_history.png, id=37, 505.89pt x 216.81pt>
+<budget_history.png, id=36, 505.89pt x 216.81pt>
 File: budget_history.png Graphic file (type png)
 <use budget_history.png>
-Package pdftex.def Info: budget_history.png  used on input line 179.
+Package pdftex.def Info: budget_history.png  used on input line 191.
 (pdftex.def)             Requested size: 216.81pt x 92.91881pt.
 
-Overfull \vbox (3.60033pt too high) detected at line 179
+Overfull \vbox (1.35027pt too high) detected at line 191
  []
 
 [4
 
  <./budget_history.png (PNG copy)>]
-<budget_history_w_income_source.png, id=44, 505.89pt x 216.81pt>
+<budget_history_w_income_source.png, id=43, 505.89pt x 216.81pt>
 File: budget_history_w_income_source.png Graphic file (type png)
 <use budget_history_w_income_source.png>
 Package pdftex.def Info: budget_history_w_income_source.png  used on input line
- 216.
+ 228.
 (pdftex.def)             Requested size: 216.81pt x 92.91881pt.
 
-Overfull \vbox (4.9308pt too high) detected at line 216
+Overfull \vbox (4.9308pt too high) detected at line 228
  []
 
 [5
 
  <./budget_history_w_income_source.png (PNG copy)>] [6
+
+] [7
 
 ]
 \tf@nav=\write7
@@ -1305,11 +1307,11 @@ Overfull \vbox (4.9308pt too high) detected at line 216
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 320.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1317,10 +1319,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29322 strings out of 483065
- 589740 string characters out of 5963550
+ 29336 strings out of 483065
+ 590033 string characters out of 5963550
  1201389 words of memory out of 5000000
- 43756 multiletter control sequences out of 15000+600000
+ 43768 multiletter control sequences out of 15000+600000
  542441 words of font info for 61 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  71i,13n,95p,1836b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1328,15 +1330,16 @@ Here is how much of TeX's memory you used:
 600pk> </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss0
 700.600pk> </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/t
 css0800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (6 pages, 223457 bytes).
+i7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (7 pages, 230303 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 104 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
