@@ -183,7 +183,7 @@ def RemovePolicy(votes, drop_index):
 
     new_votes = copy.copy(votes)
     increment_cols = np.argwhere(new_votes[drop_index, :] == 1).flatten()
-    new_votes[:, increment_cols] = votes[:, increment_cols] - 1
+    new_votes[:, increment_cols] = new_votes[:, increment_cols] - 1
     new_votes[new_votes < 0] = 0
     new_votes[drop_index, :] = 0
 
@@ -197,27 +197,31 @@ def RemovePolicy(votes, drop_index):
 def PerformRankedChoiceVoting(votes, verbose=False):
     # Perform ranked-choice voting on an array of votes.
 
+    def VerbosePrint(s):
+        if verbose:
+            print(s)
+
     done = False
     votes_copy = copy.copy(votes)
     while not done:
-        print('\nChecking for a majority.')
+        VerbosePrint('\nChecking for a majority.')
         winner, loser = FindWinnerAndLoser(votes_copy, verbose=verbose)
 
         if len(winner) > 0:
-            print(f'The winner is {winner}')
+            VerbosePrint(f'The winner is {winner}')
             done = True
         else:
             if len(loser) > 1:
                 print(f'Randomly dropping a loser from {loser}')
                 loser_ind = np.random.choice(len(loser), 1)
                 loser = np.array([ loser[loser_ind] ])
-            print(f'Removing {POLICY_NAMES[loser[0]]}')
-            votes_copy = RemovePolicy(votes, loser[0])
-
+            VerbosePrint(f'Removing {POLICY_NAMES[loser[0]]}')
+            votes_copy = RemovePolicy(votes_copy, loser[0])
+            #print(votes_copy.T) # Great for debugging
     return winner
 
 
-def RunMultiRoundVoting(votes):
+def RunMultiRoundVoting(votes, verbose=True):
     # Run multiple rounds, eliminating the winner from each round to get
     # a ranked list of preferences.
     winners = []
@@ -225,7 +229,7 @@ def RunMultiRoundVoting(votes):
     votes_copy = copy.copy(votes)
     for round_ind in range(4):
         print(f'\n======================================\nRound {round_ind}:')
-        round_winners = PerformRankedChoiceVoting(votes_copy, verbose=True)
+        round_winners = PerformRankedChoiceVoting(votes_copy, verbose=verbose)
         winners.append(round_winners)
         winner_txt = [ POLICY_NAMES[i] for i in round_winners ]
         print(f'*** The winner of this round is {winner_txt}')
