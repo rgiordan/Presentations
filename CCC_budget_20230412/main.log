@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  12 APR 2023 13:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.2)  17 APR 2023 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1231,40 +1231,41 @@ Package biblatex Info: ... file 'main.bbl' not found.
 No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 22.
 Package biblatex Info: Reference segment=0 on input line 22.
-(./main.nav)
+(./main.nav) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-78.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
+86.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 78
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 86
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 78.
+ut line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+[2
 
 ] [3
 
@@ -1272,109 +1273,112 @@ thkerncmss.
 
 ] [5
 
+] [6
+
 ]
-<budget_history.png, id=47, 505.89pt x 216.81pt>
+<budget_history.png, id=53, 505.89pt x 216.81pt>
 File: budget_history.png Graphic file (type png)
 <use budget_history.png>
-Package pdftex.def Info: budget_history.png  used on input line 160.
+Package pdftex.def Info: budget_history.png  used on input line 168.
 (pdftex.def)             Requested size: 216.81pt x 92.91881pt.
- [6
+ [7
 
  <./budget_history.png (PNG copy)>]
-<budget_history_w_income_source.png, id=53, 505.89pt x 216.81pt>
+<budget_history_w_income_source.png, id=60, 505.89pt x 216.81pt>
 File: budget_history_w_income_source.png Graphic file (type png)
 <use budget_history_w_income_source.png>
 Package pdftex.def Info: budget_history_w_income_source.png  used on input line
- 198.
+ 207.
 (pdftex.def)             Requested size: 216.81pt x 92.91881pt.
 
-Overfull \vbox (15.85574pt too high) detected at line 198
+Overfull \vbox (15.85574pt too high) detected at line 207
  []
 
-[7
+[8
 
- <./budget_history_w_income_source.png (PNG copy)>] [8
+ <./budget_history_w_income_source.png (PNG copy)>]
+File: budget_history_w_income_source.png Graphic file (type png)
+<use budget_history_w_income_source.png>
+Package pdftex.def Info: budget_history_w_income_source.png  used on input line
+ 207.
+(pdftex.def)             Requested size: 216.81pt x 92.91881pt.
 
-]
-Overfull \vbox (14.16116pt too high) detected at line 313
+Overfull \vbox (15.85574pt too high) detected at line 207
  []
 
 [9
 
-]
-Overfull \vbox (14.16116pt too high) detected at line 313
- []
+] [10
 
-[10
+] [11
 
 ]
-Overfull \vbox (14.16116pt too high) detected at line 313
- []
-
-[11
-
-]
-Overfull \vbox (14.16116pt too high) detected at line 313
+Overfull \vbox (14.16116pt too high) detected at line 323
  []
 
 [12
 
 ]
-Overfull \vbox (14.16116pt too high) detected at line 313
+Overfull \vbox (14.16116pt too high) detected at line 323
  []
 
 [13
 
 ]
-Overfull \vbox (14.16116pt too high) detected at line 313
+Overfull \vbox (14.16116pt too high) detected at line 323
  []
 
 [14
 
 ]
-Overfull \vbox (14.16116pt too high) detected at line 313
+Overfull \vbox (14.16116pt too high) detected at line 323
  []
 
 [15
 
 ]
-<budget_scenarios.png, id=103, 990.70125pt x 537.00626pt>
+Overfull \vbox (14.16116pt too high) detected at line 323
+ []
+
+[16
+
+]
+Overfull \vbox (14.16116pt too high) detected at line 323
+ []
+
+[17
+
+]
+Overfull \vbox (14.16116pt too high) detected at line 323
+ []
+
+[18
+
+]
+<budget_scenarios.png, id=119, 951.555pt x 624.3325pt>
 File: budget_scenarios.png Graphic file (type png)
 <use budget_scenarios.png>
-Package pdftex.def Info: budget_scenarios.png  used on input line 318.
-(pdftex.def)             Requested size: 289.07999pt x 156.69472pt.
- [16
+Package pdftex.def Info: budget_scenarios.png  used on input line 328.
+(pdftex.def)             Requested size: 289.07999pt x 189.6733pt.
+ [19
 
  <./budget_scenarios.png>]
-<actual_tuition_2223.png, id=111, 706.64pt x 399.4925pt>
-File: actual_tuition_2223.png Graphic file (type png)
-<use actual_tuition_2223.png>
-Package pdftex.def Info: actual_tuition_2223.png  used on input line 331.
-(pdftex.def)             Requested size: 216.81pt x 122.57347pt.
-<budgeted_tuition_2223.png, id=112, 826.08624pt x 150.5625pt>
-File: budgeted_tuition_2223.png Graphic file (type png)
-<use budgeted_tuition_2223.png>
-Package pdftex.def Info: budgeted_tuition_2223.png  used on input line 331.
-(pdftex.def)             Requested size: 289.07999pt x 52.68846pt.
- [17
-
- <./actual_tuition_2223.png> <./budgeted_tuition_2223.png>]
-<scenario_a_tuition.png, id=120, 1312.905pt x 193.72375pt>
+<scenario_a_tuition.png, id=128, 1158.3275pt x 142.5325pt>
 File: scenario_a_tuition.png Graphic file (type png)
 <use scenario_a_tuition.png>
-Package pdftex.def Info: scenario_a_tuition.png  used on input line 355.
-(pdftex.def)             Requested size: 289.07999pt x 42.65482pt.
-<scenario_b_tuition.png, id=121, 1323.94624pt x 194.7275pt>
+Package pdftex.def Info: scenario_a_tuition.png  used on input line 365.
+(pdftex.def)             Requested size: 289.07999pt x 35.56996pt.
+<scenario_b_tuition.png, id=129, 1159.33125pt x 147.55125pt>
 File: scenario_b_tuition.png Graphic file (type png)
 <use scenario_b_tuition.png>
-Package pdftex.def Info: scenario_b_tuition.png  used on input line 355.
-(pdftex.def)             Requested size: 289.07999pt x 42.5163pt.
-<scenario_c_tuition.png, id=122, 1309.89375pt x 199.74625pt>
+Package pdftex.def Info: scenario_b_tuition.png  used on input line 365.
+(pdftex.def)             Requested size: 289.07999pt x 36.7909pt.
+<scenario_c_tuition.png, id=130, 1158.3275pt x 146.5475pt>
 File: scenario_c_tuition.png Graphic file (type png)
 <use scenario_c_tuition.png>
-Package pdftex.def Info: scenario_c_tuition.png  used on input line 355.
-(pdftex.def)             Requested size: 289.07999pt x 44.08145pt.
- [18
+Package pdftex.def Info: scenario_c_tuition.png  used on input line 365.
+(pdftex.def)             Requested size: 289.07999pt x 36.57193pt.
+ [20
 
  <./scenario_a_tuition.png> <./scenario_b_tuition.png> <./scenario_c_tuition.pn
 g>]
@@ -1387,11 +1391,11 @@ g>]
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 367.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1399,11 +1403,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29429 strings out of 483065
- 592151 string characters out of 5963550
- 1208429 words of memory out of 5000000
- 43832 multiletter control sequences out of 15000+600000
- 542785 words of font info for 62 fonts, out of 8000000 for 9000
+ 29422 strings out of 483065
+ 591881 string characters out of 5963550
+ 1208423 words of memory out of 5000000
+ 43823 multiletter control sequences out of 15000+600000
+ 543090 words of font info for 63 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  71i,13n,98p,1836b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcsx0800.
@@ -1411,15 +1415,16 @@ Here is how much of TeX's memory you used:
 600.600pk> </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/t
 css0700.600pk> </home/rgiordan/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/
 ec/tcss0800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (18 pages, 465353 bytes).
+/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (20 pages, 420258 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
