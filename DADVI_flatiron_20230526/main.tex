@@ -6,6 +6,8 @@
 \usepackage{mathrsfs}
 \usepackage{tabularx}
 
+\usepackage{mathtools}
+
 \usepackage{cleveref}
 
 % For custom oversets
@@ -90,6 +92,9 @@ $\Rightarrow$
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Outline}
 %
@@ -118,6 +123,218 @@ $\Rightarrow$
 \end{itemize}
 %
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Notation}
+%
+%
+\begin{align*}
+    \text{Parameter:}& \quad \theta \in \mathbb{R}^{\thetadim}\\
+    \text{Data:}&\quad \y \\
+    \text{Prior:}&\quad \p(\theta) 
+        \quad \text{(density w.r.t. Lebesgue $\mathbb{R}^\thetadim$, 
+            nonzero everywhere)}\\
+    \text{Likelihood:}&\quad\p(\y \vert \theta)
+    \quad \text{(nonzero for all $\theta$)}\\
+\end{align*}
+
+
+We will be interested in means and covariances of the (intractable) posterior
+%
+\begin{align*}
+%
+\post ={}& \frac{\p(\theta, \y)}{\int \p(\theta', \y) d\theta'}.
+%
+\end{align*}
+%
+
+
+Denote gradients with $\nabla$, e.g.,
+%
+\begin{align*}
+%
+\logjointgrad := \fracat{\partial \logjoint}{\partial \theta}{\theta}
+\quad\text{and}\quad
+\logjointhess := \fracat{\partial^2 \logjoint}
+    {\partial \theta \partial \theta^\trans}{\theta}
+%
+\end{align*}
+%
+
+Assume we have a twice auto-differentiable software implementation of
+%
+\begin{align*}
+    \theta \mapsto \logjoint = \log \p(\y \vert \theta) + \log \p(\theta).
+\end{align*}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Notation}
+%
+% \begin{align*}
+%     \text{Parameter: }& \theta \in \mathbb{R}^{\thetadim} &
+%     \text{Data: }& \y &
+%     \text{Log joint: }& \logjoint
+% \end{align*}
+% \hrulefill
+
+
+\textbf{Automatic differentiation variational inference (ADVI)}
+is a particular BBVI method.
+
+ADVI specifies a family $\qdom$ of $\thetadim$-dimensional
+Gaussian distributions.
+
+The family $\qdom$ is parameterized by 
+$\eta \in \etadom$, 
+encoding the means and covariances.
+
+The covariances of the family $\qdom$ can either be
+%
+\begin{itemize}
+\item Diagonal: ``Mean-field'' (MF) approximation, $\etadim = 2 \thetadim$
+\item Any PD matrix: 
+    ``Full-rank'' (FR) approximation, 
+        $\etadim = \thetadim + \thetadim  (\thetadim - 1) / 2$
+\end{itemize}
+%
+
+
+ADVI tries to find
+%
+\begin{align*}
+%
+\argmin_{\q \in \qdom} 
+\mathrm{KL}\left(\q(\theta | \eta) || \post \right) ={}&
+\argmin_{\eta \in \etadom} \klfullobj{\eta} 
+\\ \textrm{where }
+\klfullobj{\eta} :={}&
+\expect{\q(\theta \vert \eta)}{\log \q(\theta \vert \eta)}
+-\expect{\q(\theta \vert \eta)}{\logjoint}
+\\={}&
+\expect{\normz}{\log \q(\theta(\z, \eta) \vert \eta)} -
+\undernote{\expect{\normz}{\log \p(\theta(\z, \eta), \y)}}
+{\text{Typically intractable}}.
+%
+\end{align*}
+%
+The final line uses the ``reparameterization trick''
+with standard Gaussian $\z \sim \normz$. 
+
+ADVI is an instance of the general problem of finding
+%
+\begin{align*}
+%
+\argmin_{\eta} F(\eta)
+\text{ where } F(\eta) := \expect{\normz}{f(\eta, \z)}.
+%
+\end{align*}
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Two approaches}
+%
+%
+\vspace{-1em}
+\begin{align*}
+%
+\text{Consider }\quad
+\argmin_{\eta} F(\eta)
+\quad\text{ where } \quad F(\eta) := \expect{\normz}{f(\eta, \z)}.
+%
+\end{align*}
+%
+Let $\Z = \{\z_1, \ldots, \z_\znum \} \iid \normz$, and let
+%
+%\begin{align*}
+%
+$
+\hat{F}(\eta | \Z) := \meann f(\eta, \z_n).
+$
+%
+%\end{align*}
+%
+%
+\begin{minipage}{1.0\linewidth}
+    \begin{minipage}[t]{0.49\linewidth}
+        %
+        \begin{algorithm}[H]
+        \caption{\\Stochastic gradient (SG)\\ADVI (and most BBVI)}\label{alg:sadvi}
+        \begin{algorithmic}
+        % \Procedure{SG}{}
+        \State Fix $\znum$ (typically $\znum = 1$)
+        \State $t \gets 0$
+            \While{Not converged}
+                \State $t \gets t + 1$
+                \red{\State Draw $\Z$}
+                \State $\Delta_S \gets \grad{\eta}{\hat{F}(\eta_{t-1} | \Z)}$
+                \blue{\State $\alpha_t \gets \textrm{SetStepSize(Past state)}$}
+                \State $\eta_t \gets \eta_{t-1} - \alpha_t \Delta_S$
+                \green{\State $\textrm{AssessConvergence(Past state)}$}
+            \EndWhile
+            % \State $\etaopts \gets \eta_t$ or
+            %     $\etaopts \gets \frac{1}{M} \sum_{t'=t- M}^t \eta_{t'}$
+            \State \Return 
+            $\eta_t$ or
+                $\frac{1}{M} \sum_{t'=t- M}^t \eta_{t'}$
+        % \EndProcedure
+        \end{algorithmic}
+        \end{algorithm}
+        %
+    \end{minipage}
+    \begin{minipage}[t]{0.49\linewidth}
+        %
+        \begin{algorithm}[H]
+        \caption{\\Sample average approximation (SAA)\\Deterministic ADVI (DADVI) (proposal)}
+        \label{alg:dadvi}
+        \begin{algorithmic}
+        % \Procedure{DADVI}{}
+            \State Fix $\znum$ (our experiments use $\znum = 30$)
+            \State \red{Draw $\Z$}
+            \State $t \gets 0$
+            \While{Not converged}
+                \State $t \gets t + 1$
+                \State
+    \blue{$\Delta_D \gets \textrm{GetStep}(\hat{F}(\cdot | \Z), \eta_{t-1})$}
+                \State $\eta_t \gets \eta_{t-1} + \Delta_D$
+                \State \green{$\textrm{AssessConvergence}(\hat{F}(\cdot | \Z), \eta_{t})$}
+            \EndWhile
+            % \State $\etaoptd \gets \eta_t$
+            \State \Return $\eta_t$
+        \end{algorithmic}
+        \end{algorithm}
+    \end{minipage}
+\end{minipage}
+
+% \begin{minipage}{1.0\linewidth}
+%     \begin{minipage}[t]{0.49\linewidth}
+%         {\small ADVI approximately minimizes an exact objective.}
+%     \end{minipage}    
+%     \begin{minipage}[t]{0.49\linewidth}
+%         SAA exactly minimizes an approximate objective.
+%     \end{minipage}    
+% \end{minipage}    
+
+\textbf{Our proposal: } Apply \cref{alg:dadvi} with the ADVI objective.
+    
+\end{frame}
+
 
 
 \end{document}
