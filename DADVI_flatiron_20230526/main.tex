@@ -207,9 +207,7 @@ The covariances of the family $\qdom$ can either be
         $\etadim = \thetadim + \thetadim  (\thetadim - 1) / 2$
 \end{itemize}
 %
-
-
-ADVI tries to find
+% ADVI tries to find
 %
 \begin{align*}
 %
@@ -229,6 +227,8 @@ ADVI tries to find
 %
 The final line uses the ``reparameterization trick''
 with standard Gaussian $\z \sim \normz$. 
+
+\hrulefill
 
 ADVI is an instance of the general problem of finding
 %
@@ -331,10 +331,73 @@ $
 %     \end{minipage}    
 % \end{minipage}    
 
-\textbf{Our proposal: } Apply \cref{alg:dadvi} with the ADVI objective.
+\textbf{Our proposal: } Apply \cref{alg:dadvi} with the ADVI objective.  \\
+Take \blue{better steps}, easily \green{assess convergence}, with less tuning.
     
 \end{frame}
 
+
+
+\begin{frame}{Linear response covariances}
+%
+Posterior variances are often badly estimated by mean-field (MF) approximations.
+
+Take a variational approximation 
+$\etastar := \argmin_{\eta \in \etadom} \klfullobj{\eta}$.  Often,
+
+\begin{align}\label{eq:mfvb_conceit}
+    %
+    \expect{\q(\theta \vert \etastar)}{\theta} \approx
+    \expect{\post}{\theta} \quad\textrm{but}\quad
+    \var{\q(\theta \vert \etastar)}{\theta} \ne
+    \var{\post}{\theta}.
+\end{align}    
+%
+\textbf{Example: }Correlated Gaussian $\post$ with ADVI.
+
+\hrulefill
+
+\textbf{Linear response covariances} use the fact that, if
+$\p(\theta \vert \y, t) \propto \p(\theta \vert \y) \exp(t \theta)$, then
+%
+\begin{align}\label{eq:deriv_is_cov}
+    %
+    \fracat{d \expect{\p(\theta \vert \y, t)}{\theta}}
+           {dt}{t=0} = \cov{\p(\theta \vert \y)}{\theta}.
+    %
+\end{align}
+
+Let $\etastar(t)$ be the variational approximation to $\p(\theta \vert \y, t)$, and
+take
+%
+\begin{align*}
+    \lrcovfull{\q(\theta \vert \etastar)}{\theta}
+    =
+    \fracat{d \expect{\q(\theta \vert \etastar(t))}{\theta}}
+       {dt}{t=0}
+    =
+    % \fracat{\partial \expect{\q(\theta \vert \eta)}{\theta}}
+    %       {\partial\eta^\trans}{\eta=\etastar}
+    \left( \grad{\eta}{\expect{\q(\theta \vert \etastar)}{\theta}}\right)
+    \left(\hess{\eta}{\klfullobj{\etastar}} \right)^{-1}
+    \left( \grad{\eta}{\expect{\q(\theta \vert \etastar)}{\theta}}\right)
+    % \fracat{\partial \expect{\q(\theta \vert \eta)}{\theta}}
+    %      {\partial\eta}{\eta=\etastar}.    
+\end{align*}
+%
+% Often, $\lrcovfull{\q(\theta \vert \etastar)}{\theta}$ is a much better 
+% approximation to $\var{\post}{\theta}$ than $\var{\q(\theta \vert \etastar)}{\theta}$ is.
+
+\textbf{Example: } For ADVI with a correlated Gaussian $\post$,
+$\lrcovfull{\q(\theta \vert \etastar)}{\theta}  = \cov{\q(\theta \vert \etastar)}{\theta}$.
+
+
+\end{frame}
+
+
+
+\begin{frame}
+\end{frame}
 
 
 \end{document}
