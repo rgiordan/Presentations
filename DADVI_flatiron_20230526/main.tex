@@ -81,7 +81,7 @@ replace the intractable BBVI objective with a fixed approximation.
     \item Better optimization methods can be used (e.g. true second-order methods)
     \item Convergence and approximation error can be assessed directly
     \item Can correct posterior covariances with linear response covariances
-    \item This technique is well-studied (but still work to do in the context of BBVI)
+    \item This technique is well-studied (but there's still work to do in the context of BBVI)
 \end{itemize}
 %
 $\Rightarrow$
@@ -90,6 +90,34 @@ $\Rightarrow$
 \end{frame}
 
 
+
+\begin{frame}{Outline}
+%
+\begin{itemize}
+    \item BBVI Background and our proposal
+    \begin{itemize}
+        \item Automatic differentiation variational inference (ADVI) (a BBVI method)
+        \item Our approximation: ``Deterministic ADVI'' (DADVI)
+        \item Linear response (LR) covariances
+        \item Estimating approximation error
+    \end{itemize}
+    \item Experimental results: DADVI vs ADVI
+    \begin{itemize}
+        \item DADVI converges faster than ADVI, and requires no tuning
+        \item DADVI's posterior mean estimates' accuracy are comparable to ADVI
+        \item DADVI+LR provides more accurate posterior variance estimates than ADVI
+        \item DADVI provides accurate estimates of its own approximation error
+        \item ADVI often results in better objective function values (eventually)
+    \end{itemize}
+    \item Why don't we do DADVI all the time?
+    \begin{itemize}
+        \item DADVI fails for expressive BBVI approximations (e.g. full-rank ADVI)
+        \item Pessimistic dimension dependence results from optimization theory
+        \item ...which may not apply in certain BBVI settings.
+    \end{itemize}
+\end{itemize}
+%
+\end{frame}
 
 
 \end{document}
