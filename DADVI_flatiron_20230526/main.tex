@@ -1,0 +1,95 @@
+\documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+
+
+\usetheme{metropolis}           % Use metropolis theme
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{tabularx}
+
+\usepackage{cleveref}
+
+% For custom oversets
+\usepackage{accents}
+
+% Algorithm notation
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+% algorithmicx package
+
+\input{_math_macros}
+\input{_knitr_header}
+
+\title{Deterministic Automatic Differentiation Variational Inference}
+\author{Ryan Giordano}
+\date{Sep 23rd, 2022}
+\institute{Massachusetts Institute of Technology}
+
+\begin{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Problem statement}
+
+We all want to do accurate Bayesian inference quickly:
+%
+\begin{itemize}
+    \item In terms of compute (wall time, model evaluations, parallelism)
+    \item In terms of analyst effort (tuning, algorithmic complexity)
+\end{itemize}
+%
+\textbf{Markov Chain Monte Carlo (MCMC)} can be
+straightforward and accurate but slow.
+
+\vspace{-0.5em}
+\hrulefill
+
+\textbf{Black Box Variational Inference (BBVI)} can be faster alternative to MCMC.
+%
+\textbf{But...}
+
+%
+\begin{itemize}
+    \item BBVI is cast as an optimization problem with an intractable objective $\Rightarrow$
+    \item Most BBVI methods use \textbf{stochastic gradient} (SG) optimization $\Rightarrow$
+    %
+    \begin{itemize}
+        \item SG algorithms can be hard to tune
+        \item Assessing convergence and stochastic error can be difficult
+        \item SG optimization can perform worse than second-order methods on tractable objectives
+    \end{itemize}
+    %
+    \item Many BBVI methods employ a \textbf{mean-field (MF) approximation} $\Rightarrow$
+    %
+    \begin{itemize}
+        \item Posterior variances are poorly estimated
+    \end{itemize}
+    %
+\end{itemize}
+%
+\vspace{-0.5em}
+\hrulefill
+
+\textbf{Our proposal:}
+replace the intractable BBVI objective with a fixed approximation.
+%
+\begin{itemize}
+    \item Better optimization methods can be used (e.g. true second-order methods)
+    \item Convergence and approximation error can be assessed directly
+    \item Can correct posterior covariances with linear response covariances
+    \item This technique is well-studied (but still work to do in the context of BBVI)
+\end{itemize}
+%
+$\Rightarrow$
+\textbf{Simpler, faster, and better BBVI posterior approximations ... in some cases.}
+%
+\end{frame}
+
+
+
+
+\end{document}
