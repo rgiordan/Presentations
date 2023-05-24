@@ -192,7 +192,7 @@ figcap <- paste0(
     "8 draws, possibly indicating poor optimization performance with so ",
     "few samples.")
 #SetImageSize(aspect_ratio=2/6)
-SetImageSize()
+SetImageSize(aspect_ratio=0.9 * base_aspect_ratio)
 @
 <<coverage, cache=FALSE, fig.show='hold', fig.cap=figcap>>=
 source(file.path(paper_directory,

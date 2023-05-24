@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.22)  24 MAY 2023 13:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.22)  24 MAY 2023 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -883,20 +883,138 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip81
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-)) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip82
 \bibsep=\skip83
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count355
+))
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count356
+\l__pdf_internal_box=\box85
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count357
+Package zref Info: New property: abspage on input line 66.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip84
+\c@mdf@globalstyle@cnt=\count358
+\mdf@skipabove@length=\skip85
+\mdf@skipbelow@length=\skip86
+\mdf@leftmargin@length=\skip87
+\mdf@rightmargin@length=\skip88
+\mdf@innerleftmargin@length=\skip89
+\mdf@innerrightmargin@length=\skip90
+\mdf@innertopmargin@length=\skip91
+\mdf@innerbottommargin@length=\skip92
+\mdf@splittopskip@length=\skip93
+\mdf@splitbottomskip@length=\skip94
+\mdf@outermargin@length=\skip95
+\mdf@innermargin@length=\skip96
+\mdf@linewidth@length=\skip97
+\mdf@innerlinewidth@length=\skip98
+\mdf@middlelinewidth@length=\skip99
+\mdf@outerlinewidth@length=\skip100
+\mdf@roundcorner@length=\skip101
+\mdf@footenotedistance@length=\skip102
+\mdf@userdefinedwidth@length=\skip103
+\mdf@needspace@length=\skip104
+\mdf@frametitleaboveskip@length=\skip105
+\mdf@frametitlebelowskip@length=\skip106
+\mdf@frametitlerulewidth@length=\skip107
+\mdf@frametitleleftmargin@length=\skip108
+\mdf@frametitlerightmargin@length=\skip109
+\mdf@shadowsize@length=\skip110
+\mdf@extratopheight@length=\skip111
+\mdf@subtitleabovelinewidth@length=\skip112
+\mdf@subtitlebelowlinewidth@length=\skip113
+\mdf@subtitleaboveskip@length=\skip114
+\mdf@subtitlebelowskip@length=\skip115
+\mdf@subtitleinneraboveskip@length=\skip116
+\mdf@subtitleinnerbelowskip@length=\skip117
+\mdf@subsubtitleabovelinewidth@length=\skip118
+\mdf@subsubtitlebelowlinewidth@length=\skip119
+\mdf@subsubtitleaboveskip@length=\skip120
+\mdf@subsubtitlebelowskip@length=\skip121
+\mdf@subsubtitleinneraboveskip@length=\skip122
+\mdf@subsubtitleinnerbelowskip@length=\skip123
+
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box86
+\mdf@footnotebox=\box87
+\mdf@splitbox@one=\box88
+\mdf@splitbox@two=\box89
+\mdf@splitbox@save=\box90
+\mdfsplitboxwidth=\skip124
+\mdfsplitboxtotalwidth=\skip125
+\mdfsplitboxheight=\skip126
+\mdfsplitboxdepth=\skip127
+\mdfsplitboxtotalheight=\skip128
+\mdfframetitleboxwidth=\skip129
+\mdfframetitleboxtotalwidth=\skip130
+\mdfframetitleboxheight=\skip131
+\mdfframetitleboxdepth=\skip132
+\mdfframetitleboxtotalheight=\skip133
+\mdffootnoteboxwidth=\skip134
+\mdffootnoteboxtotalwidth=\skip135
+\mdffootnoteboxheight=\skip136
+\mdffootnoteboxdepth=\skip137
+\mdffootnoteboxtotalheight=\skip138
+\mdftotallinewidth=\skip139
+\mdfboundingboxwidth=\skip140
+\mdfboundingboxtotalwidth=\skip141
+\mdfboundingboxheight=\skip142
+\mdfboundingboxdepth=\skip143
+\mdfboundingboxtotalheight=\skip144
+\mdf@freevspace@length=\skip145
+\mdf@horizontalwidthofbox@length=\skip146
+\mdf@verticalmarginwhole@length=\skip147
+\mdf@horizontalspaceofbox=\skip148
+\mdfsubtitleheight=\skip149
+\mdfsubsubtitleheight=\skip150
+\c@mdfcountframes=\count359
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- failed******
+
+\mdf@envdepth=\count360
+\c@mdf@env@i=\count361
+\c@mdf@env@ii=\count362
+\c@mdf@zref@counter=\count363
+Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (./_math_macros.tex
-\c@assu=\count356
-\c@ex=\count357
+\c@assu=\count364
+\c@ex=\count365
 ) (./_knitr_header.tex
 (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip84
+\OuterFrameSep=\skip151
 \fb@frw=\dimen316
 \fb@frh=\dimen317
 \FrameRule=\dimen318
@@ -905,25 +1023,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 (/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 2021/01/29 v2.0g defines alltt environment
 ) (./figures_knitr.tex)
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count358
-\l__pdf_internal_box=\box85
-)
-(./main.aux
-
-LaTeX Warning: Label `eq:mfvb_conceit' multiply defined.
-
-
-LaTeX Warning: Label `eq:mfvb_conceit@cref' multiply defined.
-
-
-LaTeX Warning: Label `eq:deriv_is_cov' multiply defined.
-
-
-LaTeX Warning: Label `eq:deriv_is_cov@cref' multiply defined.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -981,16 +1081,16 @@ LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count359
+\scratchcounter=\count366
 \scratchdimen=\dimen320
-\scratchbox=\box86
-\nofMPsegments=\count360
-\nofMParguments=\count361
+\scratchbox=\box91
+\nofMPsegments=\count367
+\nofMParguments=\count368
 \everyMPshowfont=\toks54
-\MPscratchCnt=\count362
+\MPscratchCnt=\count369
 \MPscratchDim=\dimen321
-\MPnumerator=\count363
-\makeMPintoPDFobject=\count364
+\MPnumerator=\count370
+\makeMPintoPDFobject=\count371
 \everyMPtoPDFconversion=\toks55
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1012,7 +1112,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count365
+\c@section@level=\count372
 )
 LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
@@ -1219,48 +1319,40 @@ Overfull \vbox (13.60237pt too high) detected at line 532
 [14
 
  <./figure/posterior_sd_graph-1.png (PNG copy)>]
-<figure/coverage-1.png, id=127, 614.295pt x 409.2891pt>
+<figure/coverage-1.png, id=127, 614.295pt x 368.577pt>
 File: figure/coverage-1.png Graphic file (type png)
 <use figure/coverage-1.png>
 Package pdftex.def Info: figure/coverage-1.png  used on input line 540.
-(pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
+(pdftex.def)             Requested size: 301.14778pt x 180.68866pt.
 
-Overfull \vbox (41.20222pt too high) detected at line 540
+Overfull \vbox (21.23131pt too high) detected at line 540
  []
 
 [15
 
  <./figure/coverage-1.png (PNG copy)>] [16
 
+] [17
+
+] [18
+
+] [19
+
+] (./main.bbl)
+[20
+
+] [21
+
 ]
-Overfull \hbox (6.96289pt too wide) detected at line 623
+Overfull \hbox (6.96289pt too wide) detected at line 800
 []
  []
 
 
-Overfull \vbox (24.94078pt too high) detected at line 623
+Overfull \vbox (9.76578pt too high) detected at line 800
  []
 
-[17
-
-]pdfTeX warning (ext4): destination with the same identifier (name{eq:mfvb_conc
-eit}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.682 \end{frame}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{eq:deriv_is_cov}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.682 \end{frame}
-                 
-Overfull \hbox (6.96289pt too wide) detected at line 682
-[]
- []
-
-[18
-
-] (./main.bbl) [19
+[22
 
 ]
 \tf@nav=\write6
@@ -1273,17 +1365,14 @@ Overfull \hbox (6.96289pt too wide) detected at line 682
 \openout8 = `main.snm'.
 
  (./main.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28869 strings out of 480171
- 581535 string characters out of 5894489
- 830409 words of memory out of 5000000
- 46176 multiletter control sequences out of 15000+600000
+ 29810 strings out of 480171
+ 601733 string characters out of 5894489
+ 859847 words of memory out of 5000000
+ 47080 multiletter control sequences out of 15000+600000
  479728 words of font info for 68 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  106i,22n,114p,1853b,615s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1307,10 +1396,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (19 pages, 2506154 bytes).
+Output written on main.pdf (22 pages, 2502113 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 500000)
+ 297 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

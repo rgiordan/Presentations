@@ -540,9 +540,68 @@ objective, so LR and M-estimator computations are unavailable.
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Previous theoretical results}
+\vspace{-3em}
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{align*}
+        &\text{Intractable objective:} 
+        \\ \etastar %:={}& \argmin_{\eta \in \etadom} F(\eta)
+            ={}& 
+            \argmin_{\eta \in \etadom} \expect{\normz}{f(\eta, \z)}
+    \end{align*}    
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{align*}
+        &\text{SAA approximation (DADVI):} 
+        \\ \etahat(\Z) %:={}& \argmin_{\eta \in \etadom} \hat{F}(\eta | \Z)
+            ={}&  \argmin_{\eta \in \etadom} \meann f(\eta, \z_n).
+    \end{align*}
+\end{minipage}
+
+\hrulefill
+
+The idea of optimizing $\hat{F}$ instead of SG on $F$ is old and
+well-studied in the optimization literature, where $\hat{F}$
+is known as the \textbf{Sample average approximation (SAA)}.
+
+Yet SAA is rarely used for BBVI.\footnote{Some exceptions I'm aware of:
+\citet{giordano:2018:covariances,giordano:2022:bnp,wycoff:2022:sparsebayesianlasso,burroni:2023:saabbvi}.}
+One possible reason is the following:
+
+% \hrulefill
+
+\noindent
+\textbf{Theorem \citep{nemirovski:2009:sgdvsfixed}:}
+In general, the error of both SG and SAA scale as
+$\sqrt{\thetadim / \znum}$,
+where, for SG, $\znum$ is the \textit{total number of samples used}.
+
+%
+\begin{itemize}
+\item For SG, each $\z_n$ gets used once (for a single gradient step)
+\item For SAA, each $\z_n$ gets used once per optimization step
+(of which the are many).
+\item Often, in higher dimensions, SAA requires more optimization steps.
+\end{itemize}
+%
 
 
+\noindent
+\textbf{Corollary: \citep{kim:2015:guidetosaa}}
+In general, for a given accuracy, the computation required for SAA 
+scales worse than SG as the dimension $\thetadim$ grows.
 
+\textbf{
+We got good results with $\thetadim$ as
+high as $\PotusParamDim$ using only
+only $\znum = \DADVINumDraws$.  Why?}
+
+
+\end{frame}
 
 
 
@@ -550,7 +609,127 @@ objective, so LR and M-estimator computations are unavailable.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Some first steps}
 
+\noindent
+\textbf{Theorem \citep{giordano:2023:dadvi}:} When $\post$ is multivariate
+normal, and we use the mean-field Gaussian approximation, then, for any
+particular entry $\eta_d$ of $\eta$, then $\abs{\etahat_d - \etastar_d} =
+O_p(N^{-1/2})$ irrespective of $\thetadim$.
+
+\vspace{2em}
+\noindent
+\textbf{Theorem \citep{giordano:2023:dadvi}:} Assume $\post$ has a ``global-local''
+structure:
+%
+\begin{align*}
+\theta ={}& (\gamma, \lambda_1, \ldots, \lambda_\lambdadim) &
+\p(\gamma, \lambda_1, \ldots, \lambda_\lambdadim | \y) ={}&
+\prod_{d=1}^{\lambdadim} \p(\gamma, \lambda_d \vert \y).
+\end{align*}
+%
+Assume that the dimension of $\gamma$ and each $\lambda_d$ stays fixed as
+$\lambdadim$ grows.
+
+Under regularity conditions, the DADVI error
+scales as $\sqrt{\log \lambdadim / \znum}$, not $\sqrt{\lambdadim / \znum}$.
+
+\vspace{2em}
+
+\noindent
+\textbf{Proposal: }  The ``in general'' analysis of \citep{nemirovski:2009:sgdvsfixed}
+is too general for many practically interesting BBVI problems.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{A negative result}
+
+\noindent
+\textbf{Theorem \citep{giordano:2023:dadvi}:}  Assume that $\znum < \thetadim$,
+and that we use a full-rank Gaussian approximation.  Then the DADVI objective is
+unbounded below, and optimization of the DADVI objective will approach a
+degenerate point mass at $\argmax_\theta \log \post$.
+
+
+\vspace{2em}
+\noindent
+\textbf{Proof sketch: }For any value of the variational
+mean, the DADVI objective only depends on $\post$ evaluated
+in a subspace spanned by $\Z$.  The variational objective can be driven to 
+$-\infty$ by driving the variance to zero in the subspace orthogonal to $\Z$.
+
+
+\vspace{2em}
+\noindent
+\textbf{Proposal: }  All sufficiently expressive variational approximations
+(e.g. normalizing flows) will fail in the same way in high dimensions. However,
+this pathology can be obscured and overlooked in practice by low-quality
+optimization.
+
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Conclusion}
+
+
+\textbf{Black Box Variational Inference with a Deterministic
+Objective: Faster, More Accurate, and Even More Black Box.}
+
+Giordano, R.$^*$, Ingram, M.$^*$, Broderick, T.
+($^*$ joint first authors), 2023.
+
+(Arxiv preprint \href{https://arxiv.org/pdf/2304.05527.pdf}{\underline{here}}.)
+
+\vspace{2em}
+%
+\begin{itemize}
+    \item By fixing the randomness in the ADVI objective, DADVI provides 
+        BBVI that is easier to use, faster, and more accurate than stochastic gradient.
+    \item The approximation used by DADVI will not work in high dimensions
+        for sufficiently expressive approximating distributions (e.g., 
+        full-rank ADVI).
+    \item There appears to be a gap between the optimization literature and 
+        BBVI practice in high dimensions for a class of practically interesting
+        problems.
+\end{itemize}
+%
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{References}
+
+    \footnotesize
+    
+    \bibliographystyle{plainnat}
+    % Hide the references header
+    % https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
+    \begingroup
+    \renewcommand{\section}[2]{}%
+    \bibliography{references}
+    \endgroup
+    
+    %
+\end{frame}
+    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -582,8 +761,6 @@ $\etastar := \argmin_{\eta \in \etadom} \klfullobj{\eta}$.  Often,
 \end{align}    
 %
 \textbf{Example: }Correlated Gaussian $\post$ with ADVI.
-
-\hrulefill
 
 \textbf{Linear response covariances} use the fact that, if
 $\p(\theta \vert \y, t) \propto \p(\theta \vert \y) \exp(t \theta)$, then
@@ -620,85 +797,6 @@ take
 $\lrcovfull{\q(\theta \vert \etastar)}{\theta}  = \cov{\q(\theta \vert \etastar)}{\theta}$.
 
 
-\end{frame}
-
-
-
-
-\begin{frame}{Linear response covariances}
-    %
-    Posterior variances are often badly estimated by mean-field (MF) approximations.
-    
-    Take a variational approximation 
-    $\etastar := \argmin_{\eta \in \etadom} \klfullobj{\eta}$.  Often,
-    
-    \begin{align}\label{eq:mfvb_conceit}
-        %
-        \expect{\q(\theta \vert \etastar)}{\theta} \approx
-        \expect{\post}{\theta} \quad\textrm{but}\quad
-        \var{\q(\theta \vert \etastar)}{\theta} \ne
-        \var{\post}{\theta}.
-    \end{align}    
-    %
-    \textbf{Example: }Correlated Gaussian $\post$ with ADVI.
-    
-    \hrulefill
-    
-    \textbf{Linear response covariances} use the fact that, if
-    $\p(\theta \vert \y, t) \propto \p(\theta \vert \y) \exp(t \theta)$, then
-    %
-    \begin{align}\label{eq:deriv_is_cov}
-        %
-        \fracat{d \expect{\p(\theta \vert \y, t)}{\theta}}
-               {dt}{t=0} = \cov{\p(\theta \vert \y)}{\theta}.
-        %
-    \end{align}
-    
-    Let $\etastar(t)$ be the variational approximation to $\p(\theta \vert \y, t)$, and
-    take
-    %
-    \begin{align*}
-        \lrcovfull{\q(\theta \vert \etastar)}{\theta}
-        =
-        \fracat{d \expect{\q(\theta \vert \etastar(t))}{\theta}}
-           {dt}{t=0}
-        =
-        % \fracat{\partial \expect{\q(\theta \vert \eta)}{\theta}}
-        %       {\partial\eta^\trans}{\eta=\etastar}
-        \left( \grad{\eta}{\expect{\q(\theta \vert \etastar)}{\theta}}\right)
-        \left(\hess{\eta}{\klfullobj{\etastar}} \right)^{-1}
-        \left( \grad{\eta}{\expect{\q(\theta \vert \etastar)}{\theta}}\right)
-        % \fracat{\partial \expect{\q(\theta \vert \eta)}{\theta}}
-        %      {\partial\eta}{\eta=\etastar}.    
-    \end{align*}
-    %
-    % Often, $\lrcovfull{\q(\theta \vert \etastar)}{\theta}$ is a much better 
-    % approximation to $\var{\post}{\theta}$ than $\var{\q(\theta \vert \etastar)}{\theta}$ is.
-    
-    \textbf{Example: } For ADVI with a correlated Gaussian $\post$,
-    $\lrcovfull{\q(\theta \vert \etastar)}{\theta}  = \cov{\q(\theta \vert \etastar)}{\theta}$.
-    
-    
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-
-\footnotesize
-
-\bibliographystyle{plainnat}
-% Hide the references header
-% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
-\begingroup
-\renewcommand{\section}[2]{}%
-\bibliography{references}
-\endgroup
-
-%
 \end{frame}
 
 

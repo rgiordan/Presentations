@@ -8,7 +8,5 @@
 \beamer@slide {fig:traces_nonarm_graph}{12}
 \beamer@slide {fig:posterior_sd_graph}{14}
 \beamer@slide {fig:coverage}{15}
-\beamer@slide {eq:mfvb_conceit}{17}
-\beamer@slide {eq:deriv_is_cov}{17}
-\beamer@slide {eq:mfvb_conceit}{18}
-\beamer@slide {eq:deriv_is_cov}{18}
+\beamer@slide {eq:mfvb_conceit}{22}
+\beamer@slide {eq:deriv_is_cov}{22}
