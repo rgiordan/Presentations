@@ -33,6 +33,7 @@ We all want to do accurate Bayesian inference quickly:
 \textbf{Markov Chain Monte Carlo (MCMC)} can be
 straightforward and accurate but slow.
 
+\pause
 \vspace{-0.5em}
 \hrulefill
 
@@ -59,6 +60,7 @@ straightforward and accurate but slow.
     %
 \end{itemize}
 %
+\pause
 \vspace{-0.5em}
 \hrulefill
 
@@ -100,11 +102,11 @@ $\Rightarrow$
         \item DADVI provides accurate estimates of its own approximation error
         \item ADVI often results in better objective function values (eventually)
     \end{itemize}
-    \item Why don't we do DADVI all the time?
+    \item Theory and shortcomings
     \begin{itemize}
-        \item DADVI fails for expressive BBVI approximations (e.g. full-rank ADVI)
         \item Pessimistic dimension dependence results from optimization theory
         \item ...which may not apply in certain BBVI settings.
+        \item DADVI fails for expressive BBVI approximations (e.g. full-rank ADVI)
     \end{itemize}
 \end{itemize}
 %
@@ -127,7 +129,7 @@ $\Rightarrow$
     \quad \text{(nonzero for all $\theta$)}\\
 \end{align*}
 
-
+\pause
 We will be interested in means and covariances of the (intractable) posterior
 %
 \begin{align*}
@@ -138,6 +140,7 @@ We will be interested in means and covariances of the (intractable) posterior
 %
 
 
+\pause
 Denote gradients with $\nabla$, e.g.,
 %
 \begin{align*}
@@ -150,6 +153,7 @@ Denote gradients with $\nabla$, e.g.,
 \end{align*}
 %
 
+\pause
 Assume we have a twice auto-differentiable software implementation of
 %
 \begin{align*}
@@ -174,17 +178,14 @@ Assume we have a twice auto-differentiable software implementation of
 % \hrulefill
 
 
-\textbf{Automatic differentiation variational inference (ADVI)}
-is a particular BBVI method.
+We will study \textbf{ADVI}, a particular BBVI method
+\citep{kucukelbir:2017:advi}.
 
-ADVI specifies a family $\qdom$ of $\thetadim$-dimensional
-Gaussian distributions.
-
-The family $\qdom$ is parameterized by 
-$\eta \in \etadom$, 
-encoding the means and covariances.
-
-The covariances of the family $\qdom$ can either be
+ADVI specifies a family $\qdom$ of $\thetadim$-dimensional Gaussian
+distributions, parameterized by $\eta \in \etadom$, encoding the means and
+covariances.
+%
+The covariances can either be
 %
 \begin{itemize}
 \item Diagonal: ``Mean-field'' (MF) approximation, $\etadim = 2 \thetadim$
@@ -193,35 +194,40 @@ The covariances of the family $\qdom$ can either be
         $\etadim = \thetadim + \thetadim  (\thetadim - 1) / 2$
 \end{itemize}
 %
-% ADVI tries to find
+
+\pause
+\hrulefill
+
+ADVI tries to find
 %
 \begin{align*}
 %
 \argmin_{\q \in \qdom} 
 \mathrm{KL}\left(\q(\theta | \eta) || \post \right) ={}&
 \argmin_{\eta \in \etadom} \klfullobj{\eta} 
-\\ \textrm{where }
+\quad\textrm{where }\\
 \klfullobj{\eta} :={}&
-\expect{\q(\theta \vert \eta)}{\log \q(\theta \vert \eta)}
--\expect{\q(\theta \vert \eta)}{\logjoint}
-\\={}&
-\expect{\normz}{\log \q(\theta(\z, \eta) \vert \eta)} -
+% \expect{\q(\theta \vert \eta)}{\log \q(\theta \vert \eta)}
+% -\expect{\q(\theta \vert \eta)}{\logjoint}
+\undernote{\expect{\normz}{\log \q(\theta(\z, \eta) \vert \eta)}}
+{\text{Available in closed form}} -
 \undernote{\expect{\normz}{\log \p(\theta(\z, \eta), \y)}}
-{\text{Typically intractable}}.
+{\red{\text{Typically intractable}}}.
 %
 \end{align*}
 %
 The final line uses the ``reparameterization trick''
 with standard Gaussian $\z \sim \normz$. 
 
+\pause
 \hrulefill
 
-ADVI is an instance of the general problem of finding
+ADVI is an instance of the \textit{general problem} of finding
 %
 \begin{align*}
 %
 \argmin_{\eta} F(\eta)
-\text{ where } F(\eta) := \expect{\normz}{f(\eta, \z)}.
+\quad\text{ where }\quad F(\eta) := \expect{\normz}{f(\eta, \z)}.
 %
 \end{align*}
 
@@ -260,8 +266,9 @@ $
 \begin{minipage}{1.0\linewidth}
     \begin{minipage}[t]{0.49\linewidth}
         %
+        \onslide<2->{
         \begin{algorithm}[H]
-        \caption{\\Stochastic gradient (SG)\\ADVI (and most BBVI)}\label{alg:sadvi}
+        \caption{\\Stochastic gradient (SG)\\ADVI (and most BBVI)}
         \begin{algorithmic}
         % \Procedure{SG}{}
         \State Fix $\znum$ (typically $\znum = 1$)
@@ -282,13 +289,14 @@ $
         % \EndProcedure
         \end{algorithmic}
         \end{algorithm}
+        } % Onslide
         %
     \end{minipage}
     \begin{minipage}[t]{0.49\linewidth}
         %
+        \onslide<3->{
         \begin{algorithm}[H]
-        \caption{\\Sample average approximation (SAA)\\Deterministic ADVI (DADVI) (proposal)}
-        \label{alg:dadvi}
+        \caption{\\Sample average approximation (SAA)\\Deterministic ADVI (DADVI) (proposal)}\label{alg:dadvi}
         \begin{algorithmic}
         % \Procedure{DADVI}{}
             \State Fix $\znum$ (our experiments use $\znum = 30$)
@@ -305,6 +313,7 @@ $
             \State \Return $\eta_t$
         \end{algorithmic}
         \end{algorithm}
+        } % Onslide
     \end{minipage}
 \end{minipage}
 
@@ -317,9 +326,11 @@ $
 %     \end{minipage}    
 % \end{minipage}    
 
-\textbf{Our proposal: } Apply \cref{alg:dadvi} with the ADVI objective.  \\
+\onslide<4->{
+\textbf{Our proposal: } Apply Algorithm 2 with the ADVI objective.  \\
 Take \blue{better steps}, easily \green{assess convergence}, with less tuning.
-    
+}
+
 \end{frame}
 
 
@@ -412,6 +423,57 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Comparisons}
+
+To form a common scale for the accuracy of the
+posteriors, we report:
+%
+\begin{align*}
+\muerr_{\method} :={}& \frac{\mu_{\method} - \mu_{\nuts}}{\sigma_{\nuts}}
+&
+\sderr_{\method} :={}& \frac{\sigma_{\method} - \sigma_{\nuts}}{\sigma_{\nuts}}.
+%
+\end{align*}
+%
+where
+%
+\begin{align*}
+%
+\mu_{\method} :={}& \method \text{ posterior mean}
+&
+\sigma_{\method} :={}& \method\text{ posterior SD}.
+%
+\end{align*}
+   
+\pause
+\hrulefill
+
+We measure computational cost using both
+%
+\begin{itemize}
+\item \textbf{Wall time} and 
+\item \textbf{Number of model evaluations} (gradients, Hessian-vector products).
+\end{itemize}
+%
+We report both relative to the termination of DADVI.
+
+\pause
+\hrulefill
+
+We compare achieved objective values using a large number of independent samples.
+
+We report objective values relative to the value achieved by DADVI,
+normalized by the sample standard deviation of the objective value at the
+DADVI optimum.
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{Posterior mean accuracy}
     \PosteriorMeanAccuracy{}
 \end{frame}
@@ -448,6 +510,25 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
     \TracesNonARM{}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Experiment summary}
+
+$\Rightarrow$ DADVI is faster, simpler, and the posterior means are not worse.
+
+\vspace{3em}
+\textbf{But DADVI can additionally provide:}
+%
+\begin{itemize}
+\item Simple estimates of approximation error
+\item Improved (LR) posterior covariance esimates
+\end{itemize}
+%
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -490,6 +571,8 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
 
 What is the error of the DADVI approximation $\etahat - \etastar$?
 
+\pause
+
 $\Leftrightarrow$ What is the distribution of the
 DADVI error $\etahat - \etastar$ under sampling of $\Z$?
 
@@ -497,6 +580,8 @@ DADVI error $\etahat - \etastar$ under sampling of $\Z$?
     asymptotically normal (as $\znum$ grows) 
 % with covariance given in terms of 
 % $\hess{\eta}{\klfullobj{\etastar}} \approx \hess{\eta}{\klobj{\etahat}}$
+
+\pause
 
 \hrulefill
 
@@ -511,6 +596,8 @@ particular perturbations.  \citep{giordano:2018:covariances}
 \textbf{Example: } With a correlated Gaussian $\post$,
 the ADVI means are exactly correct, the ADVI variances are underestimated,
 and LR covariances are exactly correct.
+
+\pause
 
 \hrulefill
 
@@ -580,6 +667,7 @@ In general, the error of both SG and SAA scale as
 $\sqrt{\thetadim / \znum}$,
 where, for SG, $\znum$ is the \textit{total number of samples used}.
 
+\pause
 %
 \begin{itemize}
 \item For SG, each $\z_n$ gets used once (for a single gradient step)
@@ -595,8 +683,9 @@ where, for SG, $\znum$ is the \textit{total number of samples used}.
 In general, for a given accuracy, the computation required for SAA 
 scales worse than SG as the dimension $\thetadim$ grows.
 
+\pause
 \textbf{
-We got good results with $\thetadim$ as
+But we got good results with $\thetadim$ as
 high as $\PotusParamDim$ using only
 only $\znum = \DADVINumDraws$.  Why?}
 
@@ -617,6 +706,7 @@ normal, and we use the mean-field Gaussian approximation, then, for any
 particular entry $\eta_d$ of $\eta$, then $\abs{\etahat_d - \etastar_d} =
 O_p(N^{-1/2})$ irrespective of $\thetadim$.
 
+\pause
 \vspace{2em}
 \noindent
 \textbf{Theorem \citep{giordano:2023:dadvi}:} Assume $\post$ has a ``global-local''
@@ -636,6 +726,7 @@ scales as $\sqrt{\log \lambdadim / \znum}$, not $\sqrt{\lambdadim / \znum}$.
 
 \vspace{2em}
 
+\pause
 \noindent
 \textbf{Proposal: }  The ``in general'' analysis of \citep{nemirovski:2009:sgdvsfixed}
 is too general for many practically interesting BBVI problems.
@@ -647,7 +738,7 @@ is too general for many practically interesting BBVI problems.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}{A negative result}
+\begin{frame}{A negative result for expressive approximations}
 
 \noindent
 \textbf{Theorem \citep{giordano:2023:dadvi}:}  Assume that $\znum < \thetadim$,
@@ -655,6 +746,7 @@ and that we use a full-rank Gaussian approximation.  Then the DADVI objective is
 unbounded below, and optimization of the DADVI objective will approach a
 degenerate point mass at $\argmax_\theta \log \post$.
 
+\pause
 
 \vspace{2em}
 \noindent
@@ -663,6 +755,7 @@ mean, the DADVI objective only depends on $\post$ evaluated
 in a subspace spanned by $\Z$.  The variational objective can be driven to 
 $-\infty$ by driving the variance to zero in the subspace orthogonal to $\Z$.
 
+\pause
 
 \vspace{2em}
 \noindent
