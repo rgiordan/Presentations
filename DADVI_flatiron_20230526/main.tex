@@ -1,25 +1,11 @@
 \documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
 
-
-\usetheme{metropolis}           % Use metropolis theme
-\usepackage{amsmath}
-\usepackage{mathrsfs}
-\usepackage{tabularx}
-
-\usepackage{mathtools}
-
-\usepackage{cleveref}
-
-% For custom oversets
-\usepackage{accents}
-
-% Algorithm notation
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-% algorithmicx package
+\input{_headers}
 
 \input{_math_macros}
 \input{_knitr_header}
+
+\input{figures_knitr}
 
 \title{Deterministic Automatic Differentiation Variational Inference}
 \author{Ryan Giordano}
@@ -338,6 +324,108 @@ Take \blue{better steps}, easily \green{assess convergence}, with less tuning.
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Experiments}
+
+For each of a range of models (next slide), we compared:
+
+\begin{itemize}
+    %
+    \item \textbf{NUTS:} The ``no-U-turn'' MCMC sampler as implemented by PyMC
+    \citep{salvatier:2016:pymc3}.  We used this as the ``ground truth''
+    posterior.
+    \item[]
+    %
+    \item \textbf{DADVI:}  We used $\znum=\DADVINumDraws$ draws for DADVI for
+    each model. We optimized using an off-the-shelf second-order Newton trust region
+    method (\texttt{trust-ncg} in \texttt{scipy.optimize.minimize}) with no
+    tuning or preconditioning.
+    %
+    \item[]
+    \item[]\textbf{Stochastic ADVI methods:}
+    \item Mean field ADVI: We used the PyMC implementation of
+    ADVI, together with its default termination criterion (based on parameter
+    differences). 
+    %
+    \item Full-rank ADVI: We used the PyMC implementation of
+    full-rank ADVI, together with the default termination criterion for ADVI
+    described above.
+    %
+    \item RAABBVI: To run RAABBVI, we used the public package
+    \texttt{viabel}, provided
+    by \citet{welandawe:2022:robustbbvi}.
+    %
+    \end{itemize}
+
+We terminated unconverged stochastic ADVI after 100,000 iterations.
+    
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Experiments}
+
+    We evaluated DADVI on a range of models.
+    
+    \begin{table}[h!]
+        \begin{tabular}{|x{0.15\textwidth}|x{0.13\textwidth}|x{0.25\textwidth}|x{0.3\textwidth}|}
+        \hline\hline
+        Model Name  & Dim $\thetadim$     & NUTS runtime & Description \\
+        \hline\hline
+        ARM  \newline ($\ARMNumModels$ models) &
+        Median $\ARMMedParamDim$ 
+            \newline(max $\ARMMaxParamDim$)&
+        median $\ARMMedNUTSSeconds$ seconds \
+            \newline(max $\ARMMaxNUTSMinutes$ minutes) 
+            &
+           A range of linear models, GLMs, and GLMMs \\
+        \hline
+        Microcredit & $\MCParamDim$ & $\MCNUTSMinutes$ minutes &
+           Hierarchical model with heavy tails and zero inflation \\
+        \hline
+        Occupancy & $\OccParamDim$ & $\OccNUTSMinutes$ minutes &
+           Binary regression with highly crossed random effects \\
+        \hline
+        Tennis & $\TennisParamDim$ & $\TennisNUTSMinutes$ minutes &
+           Binary regression with highly crossed random effects \\
+        \hline
+        POTUS & $\PotusParamDim$ & $\PotusNUTSMinutes$ minutes &
+            Autoregressive time series with random effects \\
+        \hline\hline
+        \end{tabular}
+        \caption{Model summaries.}
+        \label{tab:model_desc}
+    \end{table}
+        
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Experiments}
+
+\RuntimeARM{}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{Linear response covariances}
 %
 Posterior variances are often badly estimated by mean-field (MF) approximations.
@@ -396,8 +484,84 @@ $\lrcovfull{\q(\theta \vert \etastar)}{\theta}  = \cov{\q(\theta \vert \etastar)
 
 
 
-\begin{frame}
+
+\begin{frame}{Linear response covariances}
+    %
+    Posterior variances are often badly estimated by mean-field (MF) approximations.
+    
+    Take a variational approximation 
+    $\etastar := \argmin_{\eta \in \etadom} \klfullobj{\eta}$.  Often,
+    
+    \begin{align}\label{eq:mfvb_conceit}
+        %
+        \expect{\q(\theta \vert \etastar)}{\theta} \approx
+        \expect{\post}{\theta} \quad\textrm{but}\quad
+        \var{\q(\theta \vert \etastar)}{\theta} \ne
+        \var{\post}{\theta}.
+    \end{align}    
+    %
+    \textbf{Example: }Correlated Gaussian $\post$ with ADVI.
+    
+    \hrulefill
+    
+    \textbf{Linear response covariances} use the fact that, if
+    $\p(\theta \vert \y, t) \propto \p(\theta \vert \y) \exp(t \theta)$, then
+    %
+    \begin{align}\label{eq:deriv_is_cov}
+        %
+        \fracat{d \expect{\p(\theta \vert \y, t)}{\theta}}
+               {dt}{t=0} = \cov{\p(\theta \vert \y)}{\theta}.
+        %
+    \end{align}
+    
+    Let $\etastar(t)$ be the variational approximation to $\p(\theta \vert \y, t)$, and
+    take
+    %
+    \begin{align*}
+        \lrcovfull{\q(\theta \vert \etastar)}{\theta}
+        =
+        \fracat{d \expect{\q(\theta \vert \etastar(t))}{\theta}}
+           {dt}{t=0}
+        =
+        % \fracat{\partial \expect{\q(\theta \vert \eta)}{\theta}}
+        %       {\partial\eta^\trans}{\eta=\etastar}
+        \left( \grad{\eta}{\expect{\q(\theta \vert \etastar)}{\theta}}\right)
+        \left(\hess{\eta}{\klfullobj{\etastar}} \right)^{-1}
+        \left( \grad{\eta}{\expect{\q(\theta \vert \etastar)}{\theta}}\right)
+        % \fracat{\partial \expect{\q(\theta \vert \eta)}{\theta}}
+        %      {\partial\eta}{\eta=\etastar}.    
+    \end{align*}
+    %
+    % Often, $\lrcovfull{\q(\theta \vert \etastar)}{\theta}$ is a much better 
+    % approximation to $\var{\post}{\theta}$ than $\var{\q(\theta \vert \etastar)}{\theta}$ is.
+    
+    \textbf{Example: } For ADVI with a correlated Gaussian $\post$,
+    $\lrcovfull{\q(\theta \vert \etastar)}{\theta}  = \cov{\q(\theta \vert \etastar)}{\theta}$.
+    
+    
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\footnotesize
+
+\bibliographystyle{plainnat}
+% Hide the references header
+% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliography{references}
+\endgroup
+
+%
+\end{frame}
+
+
 
 
 \end{document}

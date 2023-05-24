@@ -12,7 +12,9 @@ library(scales)
 # This must be run from within the git repo, obviously.
 git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
 paper_directory <- file.path(git_repo_loc)
-data_path <- file.path(paper_directory, "experiments_data")
+
+data_repo <- "/home/rgiordan/Documents/git_repos/DADVI/fd-advi-paper"
+data_path <- file.path(data_repo, "experiments_data")
 
 # Plotting and processing functions common to multiple figures
 source("figures_knitr/common_lib.R", echo=knitr_debug)
@@ -26,7 +28,7 @@ opts_chunk$set(echo=knitr_debug, message=knitr_debug, warning=knitr_debug)
 # Set the default ggplot theme.
 theme_set(theme_bw())
 
-# A funciton to load data into an environment rather than the global space.
+# A function to load data into an environment rather than the global space.
 LoadIntoEnvironment <- function(filename) {
   my_env <- environment()
   load(filename, envir=my_env)
