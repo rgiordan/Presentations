@@ -35,25 +35,28 @@ op_dadvi_plot <-
       ComputationComparisonHistogramGraph(op_count_vs_dadvi) +
         xlab("Model evals / DADVI model evals\n(log10 scale)")
 
-runtime_lrvb_plot <-
-    runtime_comp_df %>% filter(is_arm) %>%
-    ComputationComparisonHistogramGraph(runtime_vs_lrvb) +
-    xlab("Runtime / LRVB runtime\n(log10 scale)")
+# runtime_lrvb_plot <-
+#     runtime_comp_df %>% filter(is_arm) %>%
+#     ComputationComparisonHistogramGraph(runtime_vs_lrvb) +
+#     xlab("Runtime / LRVB runtime\n(log10 scale)")
 
-# Op count not meaningful for NUTS
-op_lrvb_plot <-
-    runtime_comp_df %>%
-      filter(is_arm, method != "NUTS") %>%
-      ComputationComparisonHistogramGraph(op_count_vs_lrvb) +
-        xlab("Model evals / LRVB model evals\n(log10 scale)")
+# # Op count not meaningful for NUTS
+# op_lrvb_plot <-
+#     runtime_comp_df %>%
+#       filter(is_arm, method != "NUTS") %>%
+#       ComputationComparisonHistogramGraph(op_count_vs_lrvb) +
+#         xlab("Model evals / LRVB model evals\n(log10 scale)")
 
-plot_layout <- rbind(c(1,3,5),
-                     c(2,4,5))
+# plot_layout <- rbind(c(1,3,5),
+#                      c(2,4,5))
 
-grid.arrange(
-    runtime_dadvi_plot,
-    op_dadvi_plot,
-    runtime_lrvb_plot,
-    op_lrvb_plot,
-    method_legend,
-    layout_matrix=plot_layout)
+# grid.arrange(
+#     runtime_dadvi_plot,
+#     op_dadvi_plot,
+#     runtime_lrvb_plot,
+#     op_lrvb_plot,
+#     method_legend,
+#     layout_matrix=plot_layout)
+
+grid.arrange(runtime_dadvi_plot, op_dadvi_plot, method_legend,
+    widths=c(2,2,1))

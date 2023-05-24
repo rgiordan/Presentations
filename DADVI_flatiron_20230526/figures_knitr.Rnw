@@ -9,7 +9,7 @@
 <<setup, include=FALSE, cache=FALSE>>=
 knitr_debug <- FALSE # Set to true to see error output
 
-rerun_all <- FALSE
+rerun_all <- TRUE
 
 # Set to true to cache knitr output for this analysis.
 knitr_cache <- TRUE && (!rerun_all)
@@ -73,13 +73,7 @@ source("figures_knitr/traces_nonarm.R", echo=knitr_debug, print.eval=TRUE)
 <<runtimes_arm_graph_cap>>=
 figcap <- paste0(
     "Runtimes and model evaluation counts for the ARM models. ",
-    "Results are reported divided by the corresponding value for DADVI ",
-    "or LRVB.  Numbers greater than one (shown by the black line) indicate ",
-    "favorable performance by DADVI or LRVB.  ",
-    "Recall that the reported LRVB numbers include the cost of the DADVI ",
-    "optimization as well as the LR covariances.  ",
-    "Most of the ARM models are relatively low-dimensional, so the ",
-    "LR covariances added little to the computation."
+    "Results are reported divided by the corresponding value for DADVI."
 )
 SetImageSize()
 @
@@ -95,14 +89,10 @@ source("figures_knitr/runtimes_arm.R",
 <<runtimes_nonarm_graph_cap>>=
 figcap <- paste0(
     "Runtimes and model evaluation counts for the non-ARM models. ",
-    "Results are reported divided by the corresponding value for DADVI ",
-    "or LRVB.  Numbers greater than one (shown by the black line) indicate ",
-    "favorable performance by DADVI or LRVB.",
-    "Recall that the reported LRVB numbers include the cost of the DADVI ",
-    "optimization as well as the LR covariances. ",
+    "Results are reported divided by the corresponding value for DADVI. ",
     "Missing model / method combinations are marked with an X."
 )
-SetImageSize()
+SetImageSize(aspect_ratio=base_aspect_ratio * 0.6)
 @
 <<runtimes_nonarm_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
 source("figures_knitr/runtimes_nonarm.R",
@@ -123,35 +113,66 @@ GetPostComparisonText <- function() {
 }
 @
 
-\newcommand{\PosteriorAccuracyARM}{
-<<posterior_arm_graph_cap>>=
-figcap <- paste0(
-    "Posterior accuracy measures for the ARM models. ",
-    GetPostComparisonText(), " ",
-    "Level curves of a 2D density estimator are shown to help visualize ",
-    "overplotting.")
-SetImageSize()
-@
-<<posterior_arm_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
-source("figures_knitr/posterior_comparison_arm.R",
-       echo=knitr_debug, print.eval=TRUE)
-@
-}
+% \newcommand{\PosteriorAccuracyARM}{
+% <<posterior_arm_graph_cap>>=
+% figcap <- paste0(
+%     "Posterior accuracy measures for the ARM models. ",
+%     GetPostComparisonText(), " ",
+%     "Level curves of a 2D density estimator are shown to help visualize ",
+%     "overplotting.")
+% SetImageSize()
+% @
+% <<posterior_arm_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+% source("figures_knitr/posterior_comparison_arm.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
 
 
-\newcommand{\PosteriorAccuracyNonARM}{
-<<posterior_nonarm_graph_cap>>=
+% \newcommand{\PosteriorAccuracyNonARM}{
+% <<posterior_nonarm_graph_cap>>=
+% figcap <- paste0(
+%     "Posterior accuracy measures for the non-ARM models. ",
+%     GetPostComparisonText())
+% SetImageSize()
+% @
+% <<posterior_nonarm_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+% source("figures_knitr/posterior_comparison_nonarm.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+
+
+
+
+\newcommand{\PosteriorMeanAccuracy}{
+<<posterior_mean_graph_cap>>=
 figcap <- paste0(
-    "Posterior accuracy measures for the non-ARM models. ",
+    "Posterior mean accuracy (relative to MCMC posterior standard deviation). ",
     GetPostComparisonText())
 SetImageSize()
 @
-<<posterior_nonarm_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
-source("figures_knitr/posterior_comparison_nonarm.R",
+<<posterior_mean_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/posterior_mean_comparison.R",
        echo=knitr_debug, print.eval=TRUE)
 @
 }
 
+
+
+
+\newcommand{\PosteriorSdAccuracy}{
+<<posterior_sd_graph_cap>>=
+figcap <- paste0(
+    "Posterior sd relative accuracy. ",
+    GetPostComparisonText())
+SetImageSize()
+@
+<<posterior_sd_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/posterior_sd_comparison.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

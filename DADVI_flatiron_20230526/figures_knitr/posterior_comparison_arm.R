@@ -17,7 +17,12 @@ arm_sd_plot <-
     ylab(TeX("Stochastic VI relative error $\\epsilon_{...}^{\\sigma}$ (log10 scale)")) +
     ggtitle("Standard deviation relative error\n(ARM models)")
 
+# grid.arrange(
+#     arm_mean_plot, arm_sd_plot, legend,
+#     ncol=3, widths=c(2,2,1)
+# )
+
 grid.arrange(
-    arm_mean_plot, arm_sd_plot, legend,
-    ncol=3, widths=c(2,2,1)
+    arm_mean_plot, legend,
+    widths=c(1,1)
 )

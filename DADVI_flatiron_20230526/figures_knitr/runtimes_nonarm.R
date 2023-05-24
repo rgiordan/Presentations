@@ -41,8 +41,31 @@ runtime_comp_df <- runtime_env$runtime_comp_df
 method_legend <- GetColorLegend(
     methods=runtime_comp_df$method %>% unique(), fill=TRUE)
 
-plot_layout <- rbind(c(1,3,5),
-                     c(2,4,5))
+# plot_layout <- rbind(c(1,3,5),
+#                      c(2,4,5))
+
+# # Op count not meaningful for NUTS
+# grid.arrange(
+#     runtime_comp_df %>% filter(!is_arm) %>%
+#         ComputationComparisonBarGraph(runtime_vs_dadvi) +
+#         ggtitle("Runtime relative to DADVI") +
+#         ylab("Runtime / DADVI runtime\n(log10 scale)"),
+#     runtime_comp_df %>%
+#         filter(!is_arm, method != "NUTS") %>%
+#         ComputationComparisonBarGraph(op_count_vs_dadvi) +
+#         ggtitle("Evals relative to DADVI") +
+#         ylab("Model evals / DADVI model evals\n(log10 scale)"),
+#     runtime_comp_df %>% filter(!is_arm) %>%
+#         ComputationComparisonBarGraph(runtime_vs_lrvb) +
+#         ggtitle("Runtime relative to LRVB") +
+#         ylab("Runtime / LRVB runtime\n(log10 scale)"),
+#     runtime_comp_df %>% filter(!is_arm, method != "NUTS") %>%
+#         ComputationComparisonBarGraph(op_count_vs_lrvb) +
+#         ggtitle("Evals relative to LRVB") +
+#         ylab("Model evals / LRVB model evals\n(log10 scale)"),
+#     method_legend,
+#     layout_matrix=plot_layout)
+
 
 # Op count not meaningful for NUTS
 grid.arrange(
@@ -55,13 +78,5 @@ grid.arrange(
         ComputationComparisonBarGraph(op_count_vs_dadvi) +
         ggtitle("Evals relative to DADVI") +
         ylab("Model evals / DADVI model evals\n(log10 scale)"),
-    runtime_comp_df %>% filter(!is_arm) %>%
-        ComputationComparisonBarGraph(runtime_vs_lrvb) +
-        ggtitle("Runtime relative to LRVB") +
-        ylab("Runtime / LRVB runtime\n(log10 scale)"),
-    runtime_comp_df %>% filter(!is_arm, method != "NUTS") %>%
-        ComputationComparisonBarGraph(op_count_vs_lrvb) +
-        ggtitle("Evals relative to LRVB") +
-        ylab("Model evals / LRVB model evals\n(log10 scale)"),
     method_legend,
-    layout_matrix=plot_layout)
+    widths=c(2,2,1))

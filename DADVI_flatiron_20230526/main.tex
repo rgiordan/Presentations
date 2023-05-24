@@ -412,15 +412,152 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Experiments}
+\begin{frame}{Posterior mean accuracy}
+    \PosteriorMeanAccuracy{}
+\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Computational cost for ARM models}
 \RuntimeARM{}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Computational cost for non-ARM models}
+    \RuntimeNonARM{}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Optimization traces for ARM models}
+    \TracesARM{}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Optimization traces for non-ARM models}
+    \TracesNonARM{}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Linear response covariances and sampling uncertainty}
+%
+% DADVI is faster, simpler, and the posterior means are not worse.
+
+% \textbf{But we can do even better!}
+
+% \hrulefill
+
+% \textbf{Approximation Error}
+\vspace{-2em}
+
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{align*}
+        &\text{Intractable objective:} 
+        \\ \etastar %:={}& \argmin_{\eta \in \etadom} F(\eta)
+            ={}& 
+            \argmin_{\eta \in \etadom} \expect{\normz}{f(\eta, \z)}
+    \end{align*}    
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{align*}
+        &\text{DADVI approximation:} 
+        \\ \etahat(\Z) %:={}& \argmin_{\eta \in \etadom} \hat{F}(\eta | \Z)
+         ={}&  \argmin_{\eta \in \etadom} \meann f(\eta, \z_n).
+    \end{align*}
+\end{minipage}
+%
+
+% %
+% The DADVI estimator $\etahat(\Z)$ is random --- it depends
+% on $\Z = (\z_1, \ldots, \z_\znum)$.
+
+\hrulefill
+
+What is the error of the DADVI approximation $\etahat - \etastar$?
+
+$\Leftrightarrow$ What is the distribution of the
+DADVI error $\etahat - \etastar$ under sampling of $\Z$?
+
+\textbf{Answer: } The same as a that of any M-estimator: 
+    asymptotically normal (as $\znum$ grows) 
+% with covariance given in terms of 
+% $\hess{\eta}{\klfullobj{\etastar}} \approx \hess{\eta}{\klobj{\etahat}}$
+
+\hrulefill
+
+% \textbf{Linear response covariances}
+
+Posterior variances are often badly estimated by mean-field (MF) approximations.
+
+Linear response (LR) covariances improve covariance estimates by computing
+\textit{sensitivity} of the variational means to 
+particular perturbations.  \citep{giordano:2018:covariances}
+
+\textbf{Example: } With a correlated Gaussian $\post$,
+the ADVI means are exactly correct, the ADVI variances are underestimated,
+and LR covariances are exactly correct.
+
+\hrulefill
+
+Both DADVI error and LR covariances can be computed using
+$\hess{\eta}{\klobj{\etahat}}$.
+
+Stochastic ADVI does not produce an actual optimum of any tractable
+objective, so LR and M-estimator computations are unavailable.
 
 \end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{Posterior standard deviation accuracy}
+    \PosteriorSdAccuracy{}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{DADVI approximation error accuracy}
+    \CoverageHistogram{}
+\end{frame}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+    \huge{Supplemental material}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -429,6 +566,9 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
 \begin{frame}{Linear response covariances}
 %
 Posterior variances are often badly estimated by mean-field (MF) approximations.
+
+\textbf{Example: } With a correlated Gaussian $\post$ with ADVI,
+the ADVI means are correct, but the ADVI variances are underestimated.
 
 Take a variational approximation 
 $\etastar := \argmin_{\eta \in \etadom} \klfullobj{\eta}$.  Often,
