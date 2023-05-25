@@ -7,15 +7,32 @@
 
 \input{figures_knitr}
 
-\title{Deterministic Automatic Differentiation Variational Inference}
-\author{Ryan Giordano}
-\date{Sep 23rd, 2022}
-\institute{Massachusetts Institute of Technology}
 
 \begin{document}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\title{Black Box Variational Bayes with a Deterministic Objective}
+
+\subtitle{Faster, More Accurate, and Even More Black Box} 
+\date{May 25th, 2023}
+
+\author{Giordano, Ryan \inst{1} \and Ingram, Martin\inst{2} \and Broderick, Tamara\inst{1}}
+
+\institute[] % (optional)
+{
+  \inst{1}%
+  Massachusetts Institute of Technology
+  \and
+  \inst{2}%
+  University of Melbourne, Australia
+}
+
+
+\frame{\titlepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,13 +117,14 @@ $\Rightarrow$
         \item DADVI's posterior mean estimates' accuracy are comparable to ADVI
         \item DADVI+LR provides more accurate posterior variance estimates than ADVI
         \item DADVI provides accurate estimates of its own approximation error
-        \item ADVI often results in better objective function values (eventually)
+        \item But stochastic ADVI often results in better objective function values (eventually)
     \end{itemize}
     \item Theory and shortcomings
     \begin{itemize}
         \item Pessimistic dimension dependence results from optimization theory
-        \item ...which may not apply in certain BBVI settings.
+        \item ...which do not apply in certain BBVI settings.
         \item DADVI fails for expressive BBVI approximations (e.g. full-rank ADVI)
+        \item More work to be done!
     \end{itemize}
 \end{itemize}
 %
@@ -276,9 +294,11 @@ $
             \While{Not converged}
                 \State $t \gets t + 1$
                 \red{\State Draw $\Z$}
-                \State $\Delta_S \gets \grad{\eta}{\hat{F}(\eta_{t-1} | \Z)}$
-                \blue{\State $\alpha_t \gets \textrm{SetStepSize(Past state)}$}
-                \State $\eta_t \gets \eta_{t-1} - \alpha_t \Delta_S$
+                \blue{
+                    \State $\Delta_S \gets \grad{\eta}{\hat{F}(\eta_{t-1} | \Z)}$
+                    \State $\alpha_t \gets \textrm{SetStepSize(Past state)}$
+                    \State $\eta_t \gets \eta_{t-1} - \alpha_t \Delta_S$
+                }
                 \green{\State $\textrm{AssessConvergence(Past state)}$}
             \EndWhile
             % \State $\etaopts \gets \eta_t$ or
@@ -304,9 +324,11 @@ $
             \State $t \gets 0$
             \While{Not converged}
                 \State $t \gets t + 1$
-                \State
-    \blue{$\Delta_D \gets \textrm{GetStep}(\hat{F}(\cdot | \Z), \eta_{t-1})$}
-                \State $\eta_t \gets \eta_{t-1} + \Delta_D$
+                \blue{
+                    \State
+                    $\Delta_D \gets \textrm{GetStep}(\hat{F}(\cdot | \Z), \eta_{t-1})$
+                    \State $\eta_t \gets \eta_{t-1} + \Delta_D$
+                    }
                 \State \green{$\textrm{AssessConvergence}(\hat{F}(\cdot | \Z), \eta_{t})$}
             \EndWhile
             % \State $\etaoptd \gets \eta_t$
@@ -385,7 +407,7 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
 
 \begin{frame}{Experiments}
 
-    We evaluated DADVI on a range of models.
+    We evaluated each method on a range of models.
     
     \begin{table}[h!]
         \begin{tabular}{|x{0.15\textwidth}|x{0.13\textwidth}|x{0.25\textwidth}|x{0.3\textwidth}|}
@@ -455,16 +477,11 @@ We measure computational cost using both
 \item \textbf{Number of model evaluations} (gradients, Hessian-vector products).
 \end{itemize}
 %
-We report both relative to the termination of DADVI.
-
-\pause
-\hrulefill
 
 We compare achieved objective values using a large number of independent samples.
 
-We report objective values relative to the value achieved by DADVI,
-normalized by the sample standard deviation of the objective value at the
-DADVI optimum.
+We report objective values and computation cost relative to DADVI.
+
 
 \end{frame}
 
@@ -601,8 +618,7 @@ and LR covariances are exactly correct.
 
 \hrulefill
 
-Both DADVI error and LR covariances can be computed using
-$\hess{\eta}{\klobj{\etahat}}$.
+Both DADVI error and LR covariances can be computed from the DADVI objective.
 
 Stochastic ADVI does not produce an actual optimum of any tractable
 objective, so LR and M-estimator computations are unavailable.
