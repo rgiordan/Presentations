@@ -1,0 +1,118 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{bates:2021:distributionpredictionsets}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=964467ff063f2ec7ff17669c7476be32}{%
+           family={Bates},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f47b017fb11e3acd41c4f40f8e14d5aa}{%
+           family={Angelopoulos},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3f17e03f198b3c6a0f684fb23bc8ad8}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=268f1cf3441ac67fb387c58209a1c9c1}{%
+           family={Malik},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0442c01fb14007ee1da9ccea3dfe2597}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY}%
+      }
+      \strng{namehash}{ec5b4e5fd46496708edba2a5ed2efe80}
+      \strng{fullhash}{418a07f6a6aa0e15e085efbc47ad919e}
+      \strng{bibnamehash}{ec5b4e5fd46496708edba2a5ed2efe80}
+      \strng{authorbibnamehash}{ec5b4e5fd46496708edba2a5ed2efe80}
+      \strng{authornamehash}{ec5b4e5fd46496708edba2a5ed2efe80}
+      \strng{authorfullhash}{418a07f6a6aa0e15e085efbc47ad919e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the ACM (JACM)}
+      \field{number}{6}
+      \field{title}{Distribution-free, risk-controlling prediction sets}
+      \field{volume}{68}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 34}
+      \range{pages}{34}
+    \endentry
+    \entry{krishnamoorthy:2009:toleranceregions}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=faf6ab05ab4758d0ce47a7790a00e9d4}{%
+           family={Krishnamoorthy},
+           familyi={K\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Hoboken, N.J}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{faf6ab05ab4758d0ce47a7790a00e9d4}
+      \strng{fullhash}{faf6ab05ab4758d0ce47a7790a00e9d4}
+      \strng{bibnamehash}{faf6ab05ab4758d0ce47a7790a00e9d4}
+      \strng{authorbibnamehash}{faf6ab05ab4758d0ce47a7790a00e9d4}
+      \strng{authornamehash}{faf6ab05ab4758d0ce47a7790a00e9d4}
+      \strng{authorfullhash}{faf6ab05ab4758d0ce47a7790a00e9d4}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Statistical tolerance regions : {Theory}, applications, and computation}
+      \field{isbn}{9780470380260}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Statistical tolerance regions : theory, applications, and computation}
+      \field{year}{2009}
+      \keyw{Zones de tolérance (Statistique)}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

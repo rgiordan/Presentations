@@ -1,0 +1,224 @@
+\documentclass[twoside,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\usepackage[style=authoryear,natbib=true]{biblatex}
+\addbibresource{references.bib}
+\addbibresource{possible_references.bib}
+
+%\usepackage[authoryear]{natbib}
+\input{_math_macros}
+
+\numberwithin{equation}{section}
+
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{mathrsfs}
+
+\newcommand{\papersection}[2][]{\subsection*{\citefield{#2}{title} \parencite{#2} #1}}
+
+
+\begin{document}
+
+\title{Notes on \citet{bates:2021:distributionpredictionsets}}
+
+\author{Ryan Giordano}
+
+
+\maketitle
+
+\section{Setup and problem statement}
+
+
+This paper takes as given a black-box algorithm $\f(\cdot)$ that operates on
+pairs $\z_n := (\x_n, \y_n)$, producing a prediction $\f(\xnew) := \ynew$,
+which we hope satisfies $\yhatnew \approx \ynew$ (though we assume nothing of the
+form).  The algorithm $\f(\cdot)$ is typically constructed from a training
+set, which we will ignore.
+
+We have some calibration set, $\calset := \{ \zcal_1, \ldots, \zcal_\n\}$,
+which we would like to use to form \textit{interval-valued} predictions
+for $\ynew$ from $\ynew$.  That is, we will use the observations in $\calset$
+to form a (random) set-valued function, $\cfun(\xnew)$.  (We could
+write $\cfun(\xnew | \calset)$, to emphasize
+the dependence on the calibration set but that would get tedious.)
+
+I'll use $\s(\cdot)$ for the mapping and $\s$ for sets.
+
+How to choose the mapping $\cfun(\cdot)$ to have desirable properties?
+We define a family of candidate sets, and a loss function describing
+what a ``good'' set looks like.  Specifically, let's take
+%
+\begin{itemize}
+%
+    \item A nested one-dimensional family of set functions,
+    $\cfun_{\lambda}(\cdot)$ such that bigger $\lambda$ results in bigger sets:
+    $$\lambda_1 < \lambda_2 \Rightarrow \cfun_{\lambda_1}(\x) \subset
+    \cfun_{\lambda_2}(\x) \textrm{ for all }\x.$$
+    %
+    \item A loss function $\loss(\y, \s)$ which increases as sets get smaller:
+    $$\s \subset \s \Rightarrow \loss(\y, \s) \ge \loss(\y,\s').$$
+%
+\end{itemize}
+%
+Tension: we want small sets (small $\lambda$), but also want small $\loss$
+(big $\lambda$).  This paper is all about how to choose $\lambda$
+to balance these desiderata with statistical guarantees.
+
+
+\paragraph{Problem: } How to use the calibration
+set $\calset$ to choose $\lambdahat$ so that the loss
+$\loss(\ynew, \cfun_{\lambdahat}(\xnew)$ is ``probably'' small,
+where ``probably'' accounts for randomness in both $\calset$
+and in $(\xnew, \ynew)$?
+
+
+\section{This paper's solution}
+
+\paragraph{Solution step one: } 
+First, the paper defines ``probably small'' as
+%
+\begin{align*}
+%
+\p{\calset}{
+    \expect{\znew}{\loss(\ynew, \cfun_{\lambdahat}(\xnew)} \le \alpha
+} =:
+\p{\calset}{\risk(\lambdahat) \le \alpha}
+\ge 1 - \delta
+%
+\end{align*}
+%
+The expectation will be called the ``risk,'' and we'll use it enough
+to give it a name:
+%
+\begin{align*}
+%
+\risk(\cfun_\lambda) = \risk(\lambda) =
+    \expect{\znew}{\loss(\ynew, \cfun_{\lambda}(\xnew)}.
+%
+\end{align*}
+%
+This is not the only way to control risk, and we'll talk later
+about alternatives.
+
+Now, if you knew the risk function, you would simply take
+%
+\begin{align*}
+    %
+    \lambdastar := \inf \{ \lambda: \risk(\lambda) \le \alpha \}
+    \textrm{ and }\delta = 0.
+    %
+\end{align*}
+%
+But we don't, so we have to estimate $\risk(\cdot)$ using $\calset$. Note that
+we're going to both estimate the function $\lambda \mapsto \risk(\lambda)$, and
+then search over our estimate to pick a $\lambda$.  You might think that would
+require a uniform bound on the accuracy of our approximation, but it won't, due
+to a clever expolitation of monotonicity of the loss.
+
+
+\paragraph{Solution step two: } 
+
+How to control $\risk(\cdot)$ using $\calset$? The authors assume that you can
+form a one-sided lower confidence region for $\risk(\lambda)$, for any $\lambda$
+(pointwise).  That is, that you can find an upper confidence bound (UCB)
+$\rupper(\lambda)$ such that
+%
+\begin{align*}
+%
+\p{\calset}{\risk(\lambda) \le \rupper(\lambda)} \ge 1 - \delta.
+%
+\end{align*}
+%
+This UCB is all you need!  There are lots of ways to construct it, using
+concentration inequalities, or even asymptotics (we will talk later).  But once
+you have it, you can take
+%
+\begin{align*}
+%
+\lambdahat := \inf\{\lambda: \rupper(\lambda') < \alpha
+\textrm{ for all }\lambda' > \lambda \}.
+%
+\end{align*}
+%
+Here's a proof that this works (in the case that $\risk(\lambda)$
+is continuous):
+%
+\begin{itemize}
+    \item Suppose we picked $\lambdahat$ ``too small:'' $\lambdahat <
+    \lambdastar$, and $\risk(\lambdahat) > \risk(\lambdastar) = \alpha$.  We
+    failed to achieve our bound --- the risk at $\lambdahat$ is too high.
+    %
+    \item But we chose $\lambdahat$ so that $\lambdahat < \lambdastar
+    \Rightarrow \rupper(\lambdastar) < \alpha = \risk(\lambdastar)$. In other
+    words, the risk $\risk(\lambdastar)$ is outside its confidence interval
+    $(-\infty, \rupper(\lambdastar))$.
+    %
+    \item By construction $\rupper(\cdot)$, this can happen with
+    probability at most $1 - \delta$.  Therefore we fail to control
+    risk with probability no more than $1-\delta$.
+    %
+\end{itemize}
+
+
+\paragraph{Solution step three: }
+We now need only choose an UCB.  Note that we can compute
+%
+\begin{align*}
+%
+\riskhat(\lambda) := \meann \loss(\y_n, \cfun_\lambda(\x_n)).
+%
+\end{align*}
+%
+For any $\lambda$, $\riskhat(\lambda)$ is an unbiased estimate of
+$\risk(\lambda)$.  Different concentration results of $\riskhat(\lambda)$ to its
+mean $\risk(\lambda)$ can give a family of UCB.
+
+The simplest example is Hoeffding in the case that $\loss(\cdot) \in [0,1]$:
+%
+\begin{align*}
+%
+\p{\calset}{\riskhat(\lambda) - \risk(\lambda) < -t} &\le
+\exp\left(-2\n t^2 \right) = \delta \Leftrightarrow \\
+\p{\calset}{\risk(\lambda) > \riskhat(\lambda) + t} &\le
+\exp\left(-2\n t^2 \right) = \delta \Leftrightarrow \\
+\rupper(\lambda) &:= \riskhat(\lambda) + \sqrt{\ln \delta / (-2 \n)}.
+%
+\end{align*}
+%
+This is loose, but easy to understand.  For bounded losses
+they recommend the Waudby-Smith-Ramdas bound, which is based 
+on a maximal inequality for martingales.
+
+For unbounded losses, you need to assume something.  They consider
+a Pinelis-Utev inequality ... and also simply asymptotic normal bounds.
+
+
+
+
+
+
+
+\section{Alternatives}
+
+This is not the only way to control risk.  In fact, it's not much like typical
+conformal inference --- it's more like a ``statistical tolerance region''
+\citep{krishnamoorthy:2009:toleranceregions}.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\printbibliography{}
+
+
+
+
+\end{document}
