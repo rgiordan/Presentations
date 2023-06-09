@@ -75,42 +75,111 @@
       \field{pages}{1\bibrangedash 34}
       \range{pages}{34}
     \endentry
-    \entry{krishnamoorthy:2009:toleranceregions}{book}{}
-      \name{author}{1}{}{%
+    \entry{gupta:2022:nestedconformal}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=78bcca1764fd7515215b08ba09377388}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa3fbc435b4d8b2745935acaf945a86b}{%
+           family={Kuchibhotla},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3a165d25499692f37e71605badc4645}{%
+           family={Ramdas},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{67f1e31f25ceecbce61b2e7eeef38a73}
+      \strng{fullhash}{67f1e31f25ceecbce61b2e7eeef38a73}
+      \strng{bibnamehash}{67f1e31f25ceecbce61b2e7eeef38a73}
+      \strng{authorbibnamehash}{67f1e31f25ceecbce61b2e7eeef38a73}
+      \strng{authornamehash}{67f1e31f25ceecbce61b2e7eeef38a73}
+      \strng{authorfullhash}{67f1e31f25ceecbce61b2e7eeef38a73}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pattern Recognition}
+      \field{title}{Nested conformal prediction and quantile out-of-bag ensemble methods}
+      \field{volume}{127}
+      \field{year}{2022}
+      \field{pages}{108496}
+      \range{pages}{1}
+    \endentry
+    \entry{krishnamoorthy:2009:statisticaltoleranceregions}{book}{}
+      \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=faf6ab05ab4758d0ce47a7790a00e9d4}{%
            family={Krishnamoorthy},
            familyi={K\bibinitperiod},
            given={K.},
            giveni={K\bibinitperiod},
            givenun=0}}%
-      }
-      \list{language}{1}{%
-        {eng}%
-      }
-      \list{location}{1}{%
-        {Hoboken, N.J}%
+        {{un=0,uniquepart=base,hash=a947a3d3975638eafa3061a80fec0ae0}{%
+           family={Mathew},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
-        {Wiley}%
+        {John Wiley \& Sons}%
       }
-      \strng{namehash}{faf6ab05ab4758d0ce47a7790a00e9d4}
-      \strng{fullhash}{faf6ab05ab4758d0ce47a7790a00e9d4}
-      \strng{bibnamehash}{faf6ab05ab4758d0ce47a7790a00e9d4}
-      \strng{authorbibnamehash}{faf6ab05ab4758d0ce47a7790a00e9d4}
-      \strng{authornamehash}{faf6ab05ab4758d0ce47a7790a00e9d4}
-      \strng{authorfullhash}{faf6ab05ab4758d0ce47a7790a00e9d4}
+      \strng{namehash}{65c7041c38b800f10de98f6fb069c73b}
+      \strng{fullhash}{65c7041c38b800f10de98f6fb069c73b}
+      \strng{bibnamehash}{65c7041c38b800f10de98f6fb069c73b}
+      \strng{authorbibnamehash}{65c7041c38b800f10de98f6fb069c73b}
+      \strng{authornamehash}{65c7041c38b800f10de98f6fb069c73b}
+      \strng{authorfullhash}{65c7041c38b800f10de98f6fb069c73b}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Statistical tolerance regions : {Theory}, applications, and computation}
-      \field{isbn}{9780470380260}
-      \field{series}{Wiley series in probability and statistics}
-      \field{title}{Statistical tolerance regions : theory, applications, and computation}
+      \field{title}{Statistical tolerance regions: {T}heory, applications, and computation}
       \field{year}{2009}
-      \keyw{Zones de tolérance (Statistique)}
+    \endentry
+    \entry{vovk:2012:conditionalconformal}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=760c92a699afd02bdbca6ee71f0c26f5}{%
+           family={Vovk},
+           familyi={V\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{760c92a699afd02bdbca6ee71f0c26f5}
+      \strng{fullhash}{760c92a699afd02bdbca6ee71f0c26f5}
+      \strng{bibnamehash}{760c92a699afd02bdbca6ee71f0c26f5}
+      \strng{authorbibnamehash}{760c92a699afd02bdbca6ee71f0c26f5}
+      \strng{authornamehash}{760c92a699afd02bdbca6ee71f0c26f5}
+      \strng{authorfullhash}{760c92a699afd02bdbca6ee71f0c26f5}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Asian conference on machine learning}
+      \field{title}{Conditional validity of inductive conformal predictors}
+      \field{year}{2012}
+      \field{pages}{475\bibrangedash 490}
+      \range{pages}{16}
     \endentry
   \enddatalist
 \endrefsection

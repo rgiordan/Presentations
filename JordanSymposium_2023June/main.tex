@@ -67,7 +67,6 @@ Tension: we want small sets (small $\lambda$), but also want small $\loss$
 (big $\lambda$).  This paper is all about how to choose $\lambda$
 to balance these desiderata with statistical guarantees.
 
-
 \paragraph{Problem: } How to use the calibration
 set $\calset$ to choose $\lambdahat$ so that the loss
 $\loss(\ynew, \cfun_{\lambdahat}(\xnew)$ is ``probably'' small,
@@ -75,9 +74,45 @@ where ``probably'' accounts for randomness in both $\calset$
 and in $(\xnew, \ynew)$?
 
 
+\section{Running example}
+
+The paper really shines in its creation of meaningful loss functions
+for complex settings.  But I think this short exposition will be 
+better served by a much more familiar example which connects
+more closely to more standard conformal inference.
+
+Suppose $\ynew \in \bbr$ (so it's like a regression problem), and
+we want to flag $\ynew$ that we think are too big.
+So what we want is a one-sided confidence interval for $\ynew$:
+%
+\begin{align*}
+%
+\cfun_\lambda(\xnew) ={}& \{ \y: \y \le \yhat + \lambda \}\\
+\loss(\y, \s) ={}& \ind{\lambda < \y}.
+%
+\end{align*}
+%
+So we incur a loss of one if we fail to cover.  This satisfies
+the above definitions.  
+
+Note that classical conformal inference gives a solution
+to this problem using the non-conformity score $\y - \yhat$,
+setting $\lambda$ to be an appropriate quantile,
+controlling 
+%
+\begin{align*}
+%
+\p{\calset,\znew}{\loss(\ynew, \cfun_{\lambdahat}(\xnew) \ge \alpha}
+%
+\end{align*}
+%
+This paper
+will do something a little different.
+
+
 \section{This paper's solution}
 
-\paragraph{Solution step one: } 
+\subsection{Define probably small} 
 First, the paper defines ``probably small'' as
 %
 \begin{align*}
@@ -100,10 +135,37 @@ to give it a name:
 %
 \end{align*}
 %
-This is not the only way to control risk, and we'll talk later
-about alternatives.
+Note that this is different than standard conformal prediction (see above),
+though the two are related.  \citet{vovk:2012:conditionalconformal} calls this
+``training conditional'' validity because the inner expectation has the
+calibration set fixed.  It is also a guarantee similar to ``tolerance regions''
+\citep{krishnamoorthy:2009:statisticaltoleranceregions}, which we will discuss
+if we have time.
 
-Now, if you knew the risk function, you would simply take
+\paragraph{Example. }
+In our running example,
+%
+\begin{align*}
+%
+\risk(\lambda) =
+    \expect{\znew}{\ind{\ynew - \yhat > \lambda}} = 
+    \p{\znew}{\ynew - \yhat > \lambda}.
+%
+\end{align*}
+%
+That is, $\risk(\lambda)$ is just one minus the distribution function of the
+non-conformity score, evaluated at $\lambda$.  So we want to choose $\lambdahat$
+so that it is larger than the true $1-\alpha$ quantile, with probability (in the
+calibration set) at least $1-\delta$.  This amounts to constructing a good
+estimate of the distribution function --- which we can do using the empirical
+distribution function on the calibration set.
+
+
+
+\subsection{Control the risk using the calibration set} 
+
+How to control $\risk(\cdot)$ using $\calset$? 
+If you knew the risk function, you would simply take
 %
 \begin{align*}
     %
@@ -119,12 +181,9 @@ require a uniform bound on the accuracy of our approximation, but it won't, due
 to a clever expolitation of monotonicity of the loss.
 
 
-\paragraph{Solution step two: } 
-
-How to control $\risk(\cdot)$ using $\calset$? The authors assume that you can
-form a one-sided lower confidence region for $\risk(\lambda)$, for any $\lambda$
-(pointwise).  That is, that you can find an upper confidence bound (UCB)
-$\rupper(\lambda)$ such that
+The authors assume that you can form a one-sided lower confidence region for
+$\risk(\lambda)$, for any $\lambda$ (pointwise).  That is, that you can find an
+upper confidence bound (UCB) $\rupper(\lambda)$ such that
 %
 \begin{align*}
 %
@@ -143,7 +202,7 @@ you have it, you can take
 %
 \end{align*}
 %
-Here's a proof that this works (in the case that $\risk(\lambda)$
+Here's their proof that this works (in the case that $\risk(\lambda)$
 is continuous):
 %
 \begin{itemize}
@@ -163,7 +222,8 @@ is continuous):
 \end{itemize}
 
 
-\paragraph{Solution step three: }
+\subsection{Choose an upper confidence bound} 
+
 We now need only choose an UCB.  Note that we can compute
 %
 \begin{align*}
@@ -188,24 +248,92 @@ The simplest example is Hoeffding in the case that $\loss(\cdot) \in [0,1]$:
 %
 \end{align*}
 %
-This is loose, but easy to understand.  For bounded losses
-they recommend the Waudby-Smith-Ramdas bound, which is based 
-on a maximal inequality for martingales.
+This is loose, but easy to understand.  For bounded losses they actually
+recommend the Waudby-Smith-Ramdas bound, which is based on a maximal inequality
+for martingales and is better able to take into account different
+variances for different $\lambda$.
 
 For unbounded losses, you need to assume something.  They consider
-a Pinelis-Utev inequality ... and also simply asymptotic normal bounds.
+a Pinelis-Utev inequality, but also consider asymptotic normal bounds.
+
+Again, the fact that $\risk(\lambda)$ is monotonic eliminates the need
+to use bounds of the form $\sup_{\lambda} (\riskhat(\lambda) - \risk(\lambda))$.
+Simple pointwise bounds are enough.
+
+
+\paragraph{Example. } In our example, we need to control
+%
+\begin{align*}
+%
+%\meann \ind{\y_n - \yhat_n > \lambda} - \p{\znew}{\ynew_n - \yhat(\xnew_n) > \lambda}.
+\meann \ind{\y_n - \yhat_n > \lambda} - \risk(\lambda),
+%
+\end{align*}
+%
+where we used the fact that the risk is the expected loss.  Note
+that this quantity is $1/N$ times a binomial random variable
+with probability $\risk(\lambda)$.
+
+If we knew $\risk(\lambda) = \rho$, then we can use the binomial
+distribution to find $t(\risk(\lambda))$ such that 
+%
+\begin{align*}
+%
+\p{\calset}{\meann \ind{\y_n - \yhat_n > \lambda} - \rho
+    \ge t(\rho)} \ge 1 - \delta.
+%
+\end{align*}
+%
+That is, we can form an exact, finite-sample test of the hypothesis
+$\risk(\lambda) = \rho$.  We can then invert the test to find
+a UCB:
+%
+\begin{align*}
+%
+\rupper(\lambda) := \sup \{\rho: 
+    \textrm{We do not reject }\rho\textrm{ for the observed } \calset\}.
+%
+\end{align*}
+%
+The paper generalizes this idea with a number of different concentration
+inequalities.
 
 
 
 
 
 
+\section{Experiments}
 
-\section{Alternatives}
+Their experiments exhibit a lot of clever loss functions, and show that
+their procedure results in reasonable (not too wide) intervals whose
+risk centers, roughly, on the target.  Going through the experiments
+is probably too much for a short oral talk; check out the paper.
 
-This is not the only way to control risk.  In fact, it's not much like typical
-conformal inference --- it's more like a ``statistical tolerance region''
-\citep{krishnamoorthy:2009:toleranceregions}.
+
+
+\section{A classical version}
+
+An alternative, more in the spirit of \citet{gupta:2022:nestedconformal} (from
+which the authors say they got the idea of nested sets) would be to use the
+smallest $\lambda$ needed to achieve a given loss on a \textit{particular
+example} as a non-conformity score:
+%
+\begin{align*}
+%
+\ell(\z_n) := \inf \{ \lambda: \loss(\y_n, \cfun_\lambda(\x_n)) \le \alpha \}.
+%
+\end{align*}
+%
+We could then take as $\lambdahat$ the appropriate quantile of $\ell(\z_n)$ over
+the calibration set.  This would guarantee
+%
+\begin{align*}
+%
+\p{\calset,\znew}{\loss(\ynew, \cfun_\lambda(\x_n)) \le \alpha}.
+%
+\end{align*}
+%
 
 
 

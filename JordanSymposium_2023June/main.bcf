@@ -2347,9 +2347,13 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">bates:2021:distributionpredictionsets</bcf:citekey>
-    <bcf:citekey order="2">krishnamoorthy:2009:toleranceregions</bcf:citekey>
-    <bcf:citekey order="3">bates:2021:distributionpredictionsets</bcf:citekey>
-    <bcf:citekey order="4">krishnamoorthy:2009:toleranceregions</bcf:citekey>
+    <bcf:citekey order="2">vovk:2012:conditionalconformal</bcf:citekey>
+    <bcf:citekey order="3">krishnamoorthy:2009:statisticaltoleranceregions</bcf:citekey>
+    <bcf:citekey order="4">gupta:2022:nestedconformal</bcf:citekey>
+    <bcf:citekey order="5">bates:2021:distributionpredictionsets</bcf:citekey>
+    <bcf:citekey order="6">vovk:2012:conditionalconformal</bcf:citekey>
+    <bcf:citekey order="7">krishnamoorthy:2009:statisticaltoleranceregions</bcf:citekey>
+    <bcf:citekey order="8">gupta:2022:nestedconformal</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
