@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  9 JUN 2023 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  9 JUN 2023 12:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,13 +580,18 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (5.86835pt too wide) in paragraph at lines 154--162
+Overfull \hbox (5.86835pt too wide) in paragraph at lines 161--169
 \OT1/cmr/m/n/10.95 That is, $\U/rsfs/m/n/10.95 R\OT1/cmr/m/n/10.95 (\OML/cmm/m/
 it/10.95 ^^U\OT1/cmr/m/n/10.95 )$ is just one mi-nus the dis-tri-bu-tion func-t
 ion of the non-conformity
  []
 
-[3] [4] [5] [6] (./main.aux)
+[3] [4] [5]
+Overfull \hbox (11.85986pt too wide) detected at line 366
+[]
+ []
+
+[6] [7] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5193CD3ED6F2EC905BB6670D367DCE3A;1386.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -594,10 +599,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17731 strings out of 480171
- 319521 string characters out of 5894489
- 1009951 words of memory out of 5000000
- 35501 multiletter control sequences out of 15000+600000
+ 17736 strings out of 480171
+ 319567 string characters out of 5894489
+ 1009929 words of memory out of 5000000
+ 35502 multiletter control sequences out of 15000+600000
  478317 words of font info for 63 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  60i,12n,68p,737b,1428s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -615,12 +620,13 @@ onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (6 pages, 188815 bytes).
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on main.pdf (7 pages, 203025 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
+ 184 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  65 words of extra memory for PDF output out of 10000 (max. 10000000)
 

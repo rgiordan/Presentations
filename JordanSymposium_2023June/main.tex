@@ -63,9 +63,16 @@ what a ``good'' set looks like.  Specifically, let's take
 %
 \end{itemize}
 %
-Tension: we want small sets (small $\lambda$), but also want small $\loss$
-(big $\lambda$).  This paper is all about how to choose $\lambda$
-to balance these desiderata with statistical guarantees.
+\paragraph{Tension:} We want small sets (small $\lambda$), but also want small
+$\loss$ (big $\lambda$).  This paper is all about how to choose $\lambda$ to
+balance these desiderata with statistical guarantees.
+
+\paragraph{How to choose sets? }The paper points out that for models which
+return an estimate of the relative probabilities of $\y$, one can
+correspondingly impute the probability of $\loss(\y, \s + \{\y\})$, and doing
+so greedily design a nested family of sets which is optimal if your model is
+correct.
+
 
 \paragraph{Problem: } How to use the calibration
 set $\calset$ to choose $\lambdahat$ so that the loss
@@ -93,7 +100,7 @@ So what we want is a one-sided confidence interval for $\ynew$:
 \end{align*}
 %
 So we incur a loss of one if we fail to cover.  This satisfies
-the above definitions.  
+the above definitions. $\square$
 
 Note that classical conformal inference gives a solution
 to this problem using the non-conformity score $\y - \yhat$,
@@ -106,8 +113,8 @@ controlling
 %
 \end{align*}
 %
-This paper
-will do something a little different.
+This paper will do something a little different, though we'll
+try to connect the two at the end.
 
 
 \section{This paper's solution}
@@ -158,9 +165,7 @@ non-conformity score, evaluated at $\lambda$.  So we want to choose $\lambdahat$
 so that it is larger than the true $1-\alpha$ quantile, with probability (in the
 calibration set) at least $1-\delta$.  This amounts to constructing a good
 estimate of the distribution function --- which we can do using the empirical
-distribution function on the calibration set.
-
-
+distribution function on the calibration set.  $\square$
 
 \subsection{Control the risk using the calibration set} 
 
@@ -272,7 +277,7 @@ Simple pointwise bounds are enough.
 %
 where we used the fact that the risk is the expected loss.  Note
 that this quantity is $1/N$ times a binomial random variable
-with probability $\risk(\lambda)$.
+with probability $\risk(\lambda)$.  
 
 If we knew $\risk(\lambda) = \rho$, then we can use the binomial
 distribution to find $t(\risk(\lambda))$ such that 
@@ -295,8 +300,10 @@ a UCB:
 %
 \end{align*}
 %
-The paper generalizes this idea with a number of different concentration
-inequalities.
+$\square$
+
+The paper generalizes the preceding idea with a number of different
+concentration inequalities.
 
 
 
@@ -314,27 +321,72 @@ is probably too much for a short oral talk; check out the paper.
 
 \section{A classical version}
 
-An alternative, more in the spirit of \citet{gupta:2022:nestedconformal} (from
-which the authors say they got the idea of nested sets) would be to use the
-smallest $\lambda$ needed to achieve a given loss on a \textit{particular
-example} as a non-conformity score:
-%
-\begin{align*}
-%
-\ell(\z_n) := \inf \{ \lambda: \loss(\y_n, \cfun_\lambda(\x_n)) \le \alpha \}.
-%
-\end{align*}
-%
-We could then take as $\lambdahat$ the appropriate quantile of $\ell(\z_n)$ over
-the calibration set.  This would guarantee
-%
-\begin{align*}
-%
-\p{\calset,\znew}{\loss(\ynew, \cfun_\lambda(\x_n)) \le \alpha}.
-%
-\end{align*}
-%
+Let's assume that each loss, $\lambda \mapsto \loss(\y_n, \cfun_\lambda(\x_n))$
+is also monotonic (non-increasing).
 
+An alternative to the present work would be to use the smallest $\lambda$ needed
+to achieve a given loss on a \textit{particular example} as a non-conformity
+score:
+%
+\begin{align*}
+%
+\ell_n := \ell(\z_n) := \inf \{ \lambda: \loss(\y_n, \cfun_\lambda(\x_n)) \le \alpha \}.
+%
+\end{align*}
+
+By monotonicity, if $\lambda \ge \ell(\z_n)$, then $\loss(\y_n,
+\cfun_\lambda(\x_n)) \le \alpha$.  So we want to choose $\lambdahat$ to
+guarantee that $\ell(\znew) \ge \lambdahat$ with high probability. To acheive
+this, we can take as $\lambdahat$ the appropriate quantile of the non-conformity
+scores: $\lambdahat := \ell_{(\lfloor \delta (\n + 1) \rfloor)}$. This would
+guarantee
+%
+\begin{align*}
+%
+\p{\calset,\znew}{\loss(\ynew, \cfun_{\lambdahat} (\ynew) \le \alpha}
+\ge
+\p{\calset,\znew}{\ell(\znew) \ge \lambdahat}
+\ge 1 - \delta.
+%
+\end{align*}
+%
+This is more in the spirit of \citet{gupta:2022:nestedconformal} (which the
+authors cite as the source of the idea of nested sets).
+
+\paragraph{Example. } In our example, the loss function is binary,
+so we can only control the probability that it's non-zero
+--- we cannot target a loss equal to any $\alpha \in (0, 1)$.
+But the formalism works; for any $\alpha > 0$,
+%
+\begin{align*}
+%
+\ell(\z_n) =
+\inf \{ \lambda: \loss(\y_n, \cfun_\lambda(\x_n)) \le \alpha \} &=
+\inf \{ \lambda: \ind{\y_n - \yhat \ge \lambda} \le \alpha \} = \y_n - \yhat.
+\end{align*}
+%
+So $\lambdahat$ is the $\lfloor \delta (\n + 1) \rfloor$-th quantile of the
+non-conformity scores, and this procedure returns the standard conformal
+one-sided interval. $\square$
+
+The nature of the bound is different, though as pointed out by
+\citet{vovk:2012:conditionalconformal}, one implies the other for bounded
+losses, and with different constants.  But the computational requirements are
+different as well.
+%
+\begin{itemize}
+%
+\item The present paper requires computation of $\rupper(\lambda)$ and then
+(roughly speaking) inversion of the map $\lambda \mapsto \rupper(\lambda)$.
+%
+\item The above approach requires inversion of the map $\lambda \mapsto
+\loss(\y_n, \cfun_\lambda(\x_n))$, but then only a quantile computation
+to get $\lambdahat$.
+%
+\end{itemize}
+%
+I expect this proposal to require more computational effort, especially
+for complicated loss functions.
 
 
 
