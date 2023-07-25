@@ -1,0 +1,142 @@
+\documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+
+\input{_headers}
+
+\def\red#1{\textcolor{red}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+\def\green#1{\textcolor{violet}{#1}}
+
+\def\undernote#1#2{\underbrace{#1}_{\mathclap{\substack{#2}}}}
+\def\overnote#1#2{\overbrace{#1}^{\mathclap{\substack{#2}}}}
+
+\DeclareMathOperator*{\argmax}{\mathrm{argmax}}
+\DeclareMathOperator*{\argmin}{\mathrm{argmin}}
+\DeclareMathOperator*{\esssup}{\mathrm{esssup}}
+\DeclareMathOperator*{\essinf}{\mathrm{essinf}}
+\DeclareMathOperator*{\argsup}{\mathrm{argsup}}
+\DeclareMathOperator*{\arginf}{\mathrm{arginf}}
+
+\newcommand{\fracat}[3]{\left. \frac{#1}{#2} \right|_{#3}}
+
+\def\expect#1#2{\underset{#1}{\mathbb{E}}\left[#2\right]}
+\def\sumn{\sum_{n=1}^{N}}
+\def\meann{\frac{1}{N}\sumn}
+\def\var#1#2{\underset{#1}{\mathrm{Var}}\left(#2\right)}
+\def\kl#1#2{\mathrm{KL}\left(#1 || #2\right)}
+
+\def\qdom{\mathcal{Q}}
+\def\qstar{q^*}
+\def\q{q}
+\def\p{p}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \title{Black Box Variational Bayes with a Deterministic Objective}
+
+% \subtitle{Faster, More Accurate, and Even More Black Box} 
+% \date{May 25th, 2023}
+
+% \author{Giordano, Ryan \inst{1} \and Ingram, Martin\inst{2} \and Broderick, Tamara\inst{1}}
+
+% \institute[] % (optional)
+% {
+%   \inst{1}%
+%   Massachusetts Institute of Technology
+%   \and
+%   \inst{2}%
+%   University of Melbourne, Australia
+% }
+
+
+% \frame{\titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Discussion of ``The Shrinkage-Delinkage Trade-off''}
+
+Variational inference (VI) finds
+$q^* := \argmin_{\q \in \qdom} \kl{\q}{\p}$ for an unknown target $\p$.
+%
+% \begin{align*}
+% %
+% %
+% \end{align*}
+%
+
+What should $\qdom$ be?
+
+\pause
+
+Classical VI takes a simple $\qdom$. Then $\p \notin \qdom$, but 
+you get computational benefits!
+
+\pause
+
+But when $\p \notin \qdom$, can get poor posterior approximations even in simple
+cases.  
+
+What to do?
+
+\pause
+%
+\begin{enumerate}
+%
+\item Don't care (``machine learning'')
+%
+\begin{itemize}
+    \item Evaluate by other criteria than
+    poterior approximations (e.g. prediction)
+    \item Maybe fine for some machine learning tasks
+\end{itemize}
+%
+\pause
+\item Make $\qdom$ more expressive (``modern VI'')
+%
+\begin{itemize}
+    \item Strong theoretical guarantees
+    \item High computational cost!
+\end{itemize}
+\pause
+%
+\item Try to capture important properties of $\p$ with simple $\qdom$
+% \item Understand how simple $\qdom$ fails for things we care about
+%
+\begin{itemize}
+    % \item We don't actually want the whole posterior
+    \item Begins with understanding how things go wrong (\textbf{this paper}!)
+    \item Hope to have our cake and eat it too (e.g. marginals \emph{and} easy computation)
+    \item Much harder!  But important, with big potential benefits
+\end{itemize}
+%
+\end{enumerate}
+%
+
+I would love to see more work like this!
+
+
+\end{frame}
+
+
+% \begin{frame}{References}
+
+%     \footnotesize
+    
+%     \bibliographystyle{plainnat}
+%     % Hide the references header
+%     % https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
+%     \begingroup
+%     \renewcommand{\section}[2]{}%
+%     \bibliography{references}
+%     \endgroup
+    
+%     %
+% \end{frame}
+
+\end{document}
