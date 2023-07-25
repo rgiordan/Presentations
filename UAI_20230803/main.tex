@@ -152,11 +152,11 @@ As the dimension $n$ of the matrix goes to infinity:
 % \textbf{How can we possibly estimate the entropy but not the variance?}
 
 \pause
-The key is ``per-component entropy gap'' means \textbf{entropy difference / dimension}.
+The key is ``per-component entropy gap'' means \textbf{entropy difference / $n$}.
 
 % It does not mean \textbf{entropy of every marginal}.
 
-In fact, it's not hard to show that the entropy gap is $O(\log n) \rightarrow \infty$.
+In fact, one can show that the entropy gap is $O(\log n) \rightarrow \infty$.
 % $\Sigma_\varepsilon$ give
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -173,7 +173,7 @@ Why is $n$ the right scaling?  Why do we care about the numerical entropy gap an
 
 % \textbf{Comparing entropies across dimensions is not (typically) meaningful.}
 \textbf{It's clear why variance matters.  Less so the entropy gap,
-epsecially as $n$ changes.}
+especially as $n$ changes.}
 
 % \textbf{Comparing entropies across dimensions is usually taboo for good reason!}
 
