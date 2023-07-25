@@ -2,6 +2,9 @@
 
 \input{_headers}
 
+% \usepackage{emoji}
+
+
 \def\red#1{\textcolor{red}{#1}}
 \def\blue#1{\textcolor{blue}{#1}}
 \def\green#1{\textcolor{violet}{#1}}
@@ -29,31 +32,13 @@
 \def\q{q}
 \def\p{p}
 
+\setbeamercolor{block title}{bg=cyan, fg=white}
+\setbeamercolor{block body}{bg=cyan!10}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
 \begin{document}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \title{Black Box Variational Bayes with a Deterministic Objective}
-
-% \subtitle{Faster, More Accurate, and Even More Black Box} 
-% \date{May 25th, 2023}
-
-% \author{Giordano, Ryan \inst{1} \and Ingram, Martin\inst{2} \and Broderick, Tamara\inst{1}}
-
-% \institute[] % (optional)
-% {
-%   \inst{1}%
-%   Massachusetts Institute of Technology
-%   \and
-%   \inst{2}%
-%   University of Melbourne, Australia
-% }
-
-
-% \frame{\titlepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -121,7 +106,81 @@ What to do?
 I would love to see more work like this!
 
 
+
+
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Discussion of ``The Shrinkage-Delinkage Trade-off''}
+
+Restricted variational families (mean field) can lead to poor posterior approximations.
+
+Two very common approaches to VI are:
+%
+\begin{itemize}
+\item ``Machine learning'': Ignore it (evaluate using some other criteria, like prediction)
+\item ``Modern VI'': Use more expressive families (at a computational cost)
+\end{itemize}
+%
+This paper tries to understand \emph{how} the restricted family goes wrong.  *fire emoji*
+
+\pause
+% \vspace{1em}
+% \hrulefill
+\hrulefill
+% \vspace{1em}
+
+This paper's most (initially) surprising conclusion is probably this:
+
+\begin{block}{Theorem 3.6}
+%
+Let the target distribution has the constant $\varepsilon$-correlation matrix.\\
+% $\Sigma_\varepsilon$.\\
+As the dimension $n$ of the matrix goes to infinity:
+%
+\begin{itemize}
+\item Each marginal mean field variance is wrong by $\varepsilon$
+\item The per-component entropy gap $\rightarrow 0$
+\end{itemize}
+%
+\end{block}
+
+% Initial reaction:
+% \textbf{How can we possibly estimate the entropy but not the variance?}
+
+\pause
+The key is ``per-component entropy gap'' means \textbf{entropy difference / dimension}.
+
+% It does not mean \textbf{entropy of every marginal}.
+
+In fact, it's not hard to show that the entropy gap is $O(\log n) \rightarrow \infty$.
+% $\Sigma_\varepsilon$ give
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \begin{align*}
+% % $
+% \textrm{Entropy gap } = \log \left( \varepsilon (n - 1) + 1 \right) - \log(1 - \varepsilon)
+%  = O(\log n)
+% %  $
+% \end{align*}
+%
+
+\pause
+Why is $n$ the right scaling?  Why do we care about the numerical entropy gap anyway?
+
+% \textbf{Comparing entropies across dimensions is not (typically) meaningful.}
+\textbf{It's clear why variance matters.  Less so the entropy gap,
+epsecially as $n$ changes.}
+
+% \textbf{Comparing entropies across dimensions is usually taboo for good reason!}
+
+
+
+\end{frame}
+
 
 
 % \begin{frame}{References}
