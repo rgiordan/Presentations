@@ -46,79 +46,9 @@
 
 \begin{frame}{Discussion of ``The Shrinkage-Delinkage Trade-off''}
 
-Variational inference (VI) finds
-$q^* := \argmin_{\q \in \qdom} \kl{\q}{\p}$ for an unknown target $\p$.
-%
-% \begin{align*}
-% %
-% %
-% \end{align*}
-%
-
-What should $\qdom$ be?
-
-\pause
-
-Classical VI takes a simple $\qdom$. Then $\p \notin \qdom$, but 
-you get computational benefits!
-
-\pause
-
-But when $\p \notin \qdom$, can get poor posterior approximations even in simple
-cases.  
-
-What to do?
-
-\pause
-%
-\begin{enumerate}
-%
-\item Don't care (``machine learning'')
-%
-\begin{itemize}
-    \item Evaluate by other criteria than
-    poterior approximations (e.g. prediction)
-    \item Maybe fine for some machine learning tasks
-\end{itemize}
-%
-\pause
-\item Make $\qdom$ more expressive (``modern VI'')
-%
-\begin{itemize}
-    \item Strong theoretical guarantees
-    \item High computational cost!
-\end{itemize}
-\pause
-%
-\item Try to capture important properties of $\p$ with simple $\qdom$
-% \item Understand how simple $\qdom$ fails for things we care about
-%
-\begin{itemize}
-    % \item We don't actually want the whole posterior
-    \item Begins with understanding how things go wrong (\textbf{this paper}!)
-    \item Hope to have our cake and eat it too (e.g. marginals \emph{and} easy computation)
-    \item Much harder!  But important, with big potential benefits
-\end{itemize}
-%
-\end{enumerate}
-%
-
-I would love to see more work like this!
-
-
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Discussion of ``The Shrinkage-Delinkage Trade-off''}
-
 Restricted variational families (mean field) can lead to poor posterior approximations.
 
-Two very common approaches to VI are:
+Two very common responses to this problem are:
 %
 \begin{itemize}
 \item ``Machine learning'': Ignore it (evaluate using some other criteria, like prediction)
@@ -135,9 +65,9 @@ This paper tries to understand \emph{how} the restricted family goes wrong.  *fi
 
 This paper's most (initially) surprising conclusion is probably this:
 
-\begin{block}{Theorem 3.6}
+\begin{block}{Theorem 3.6, paraphrased}
 %
-Let the target distribution has the constant $\varepsilon$-correlation matrix.\\
+Let the target distribution have the constant $\varepsilon$-correlation matrix.\\
 % $\Sigma_\varepsilon$.\\
 As the dimension $n$ of the matrix goes to infinity:
 %
@@ -156,7 +86,7 @@ The key is ``per-component entropy gap'' means \textbf{entropy difference / $n$}
 
 % It does not mean \textbf{entropy of every marginal}.
 
-In fact, one can show  $\textrm{Entropy gap } = O(\log n) \rightarrow \infty$.
+In fact, the entropy gap is $O(\log n) \rightarrow \infty$.
 \textbf{Why is $n$ the ``right'' scaling?}
 % $\Sigma_\varepsilon$ give
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,6 +111,8 @@ especially as $n$ changes.}
 
 
 \end{frame}
+
+
 
 
 
