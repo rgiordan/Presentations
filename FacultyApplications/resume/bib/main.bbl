@@ -1,0 +1,58 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{giordano:2015:lrvb}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=a58c0880582500e71e3bde96a7c741d7}{%
+           family={\me},
+           familyi={\bibinitperiod}}}%
+        {{hash=ef0c0022763a515dfddd0f863d3ce32d}{%
+           family={Broderick},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0442c01fb14007ee1da9ccea3dfe2597}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{52a7f26ebb1c7111aeec7ca2faf0ca49}
+      \strng{fullhash}{52a7f26ebb1c7111aeec7ca2faf0ca49}
+      \strng{bibnamehash}{52a7f26ebb1c7111aeec7ca2faf0ca49}
+      \strng{authorbibnamehash}{52a7f26ebb1c7111aeec7ca2faf0ca49}
+      \strng{authornamehash}{52a7f26ebb1c7111aeec7ca2faf0ca49}
+      \strng{authorfullhash}{52a7f26ebb1c7111aeec7ca2faf0ca49}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Linear response methods for accurate covariance estimates from mean field variational {B}ayes}
+      \field{year}{2015}
+      \true{nocite}
+      \field{pages}{1441\bibrangedash 1449}
+      \range{pages}{9}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
