@@ -4,17 +4,25 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
-\usepackage[style=verbose,maxnames=50,sorting=ynt]{biblatex}
+\usepackage[style=authortitle,maxnames=50,sorting=ydnt]{biblatex}
 \addbibresource{publications.bib}
 \setlength\bibitemsep{\baselineskip}
 
+% https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex
+% https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
+% http://linorg.usp.br/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf
 
-\def\me{\bf{Ryan J. Giordano}}
+\def\me{\bf{R.~Giordano}}
 
 
 \begin{document}
 
 \nocite{*}
-\printbibliography[title=Publications]
+% \printbibliography[title=Publications]
+
+\printbibliography[title=Preprints,keyword=preprint]
+\printbibliography[title=Submitted,keyword=submitted]
+\printbibliography[title=Published,keyword=published]
+
 
 \end{document}
