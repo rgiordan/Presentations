@@ -1,103 +1,30 @@
-\section{\sc Preprints / \\in preparation}
-
-\me \& \tamara (2023).
-The Bayesian Infinitesimal Jackknife for Variance.
-\emph{arXiv:2305.06466 [stat.ME]}
-\paperref{https://arxiv.org/abs/2305.06466}
 
 
-M.~Kasprzak, \me \& \tamara (2022).
-How good is your Gaussian approximation of the posterior? Finite-sample computable error bounds for a variety of useful divergences.\\
-\emph{arXiv:2209.14992 [math.ST]}.
-\paperref{https://arxiv.org/abs/2209.14992}
+% https://tex.stackexchange.com/questions/33330/make-one-authors-name-bold-every-time-it-shows-up-in-the-bibliography
+\newcommand{\makeauthorbold}[1]{%
+  \DeclareNameFormat{author}{%
+    \ifthenelse{\value{listcount}=1}
+    {%
+      {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\namepartfamily\addcomma\addspace \namepartgiveni}}{\namepartfamily\addcomma\addspace \namepartgiveni}}
+      %
+    }{\ifnumless{\value{listcount}}{\value{liststop}}
+        {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}
+        {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}%
+      }
+    \ifthenelse{\value{listcount}<\value{liststop}}
+    {\addcomma\space}{}
+  }
+}
 
-\mestar, M.~Ingram$^\star$ \& \tamara  (2023).
-Black Box Variational Inference with a Deterministic Objective: Faster, More Accurate, 
-and Even More Black Box.\\
-$\star$ = equal contribution first authors.
-\emph{arXiv:2304.05527 [cs.LG]}
-\paperref{https://arxiv.org/abs/2304.05527}
+\makeauthorbold{Giordano}
 
+\newpage
+\section{BIBHERE}
+\nocite{*}
+\printbibliography[title=Publications]
 
-\me, \mike, \& \tamara (2019).
-A Higher-Order Swiss Army Infinitesimal Jackknife.
-\emph{arXiv:1907.12116 [stat.ME]}.
-\paperref{https://arxiv.org/abs/1907.12116}
+\newpage
 
-\section{\sc Under review}
-
-\tamara, \mestar, R.~Meager$^\star$ \&  (2021).
-An Automatic Finite-Sample Robustness Metric: When Can Dropping a Little Data
-Make a Big Difference?\\
-$\star$ = equal contribution first authors (author order alphabetical).
-\emph{arXiv:2011.14999 [stat.ME]}. \paperref{https://arxiv.org/abs/2011.14999}\\
-Selected for the Nov 5th 2021 \textbf{Gary Chamberlain Online Seminar in Econometrics}.
-
-
-\section{\sc Publications}
-
-R.~Berlinghieri, B.~Trippe, B.~David, \me,  K.~Srinivasan, T.~{\"O}zg{\"o}kmen, X.~Junfei 
-\& \tamara (2023).
-Gaussian processes at the Helm (holtz): A more fluid model for ocean currents.
-\emph{Proceedings of the 40th International Conference on Machine Learning (ICML 2023)}
-\paperref{arXiv preprint arXiv:2302.10364}
-
-\mestar, \runjing{}$^\star$, \mike, \& \tamara (2021).
-Evaluating Sensitivity to the Stick-Breaking Prior in Bayesian Nonparametrics (with Discussion).
-\emph{Bayesian Analysis 18.1 (2023): 287-366} \paperref{https://arxiv.org/abs/2107.03584}. 
-Selected as a \textbf{discussion paper}.
-$\star$ = equal contribution first authors.
-
-\me, W.~Stephenson, \runjing, \mike, \& \tamara (2019).  A Swiss Army Infinitesimal
-Jackknife.  \emph{The 22nd International Conference on Artificial Intelligence
-and Statistics.} \paperref{https://arxiv.org/abs/1806.00550}
-One of three papers selected for an \textbf{AISTATS notable paper award}.
-
-
-\me, \tamara, \& \mike (2018).  Covariances, Robustness, and Variational Bayes.
-In \emph{Journal of Machine Learning Research.}
-\paperref{https://arxiv.org/abs/1709.02536}
-
-J.~Regier, K.~Fischer, K~.Pamnany, A.~Noack, J.~Revels, M.~Lam, S.~Howard,
-\me, D.~Schlegel, J.~McAuliffe, \& R.~Thomas (2019). Cataloging the Visible
-Universe Through Bayesian Inference in Julia at Petascale. In \emph{Journal of
-Parallel and Distributed Computing.}
-\paperref{https://doi.org/10.1016/j.jpdc.2018.12.008}
-
-J.~Regier, K.~Pamnany, K.~Fischer, A.~Noack, M.~Lam, J.~Revels, S.~Howard, \me,
-D.~Schlegel, J.~McAuliffe, R.~Thomas, \& Prabhat (2018).  Cataloging the Visible
-Universe Through Bayesian Inference at Petascale.  In \emph{IEEE International
-Parallel and Distributed Processing Symposium (IPDPS). IEEE, 2018.}
-\paperref{https://arxiv.org/abs/1801.10277}
-
-\me, \tamara, \& \mike (2015). Linear Response Methods for Accurate Covariance
-Estimates from Mean Field Variational Bayes. In \emph{Advances in Neural
-Information Processing Systems.}
-One of 67 papers selected for a \textbf{Spotlight presentation.}
-\paperref{https://arxiv.org/abs/1506.04088}
-
-R.~Winther, \me, M.~D.~Edge, \& R.~Nielsen (2015).  The Mind, the Lab, and the
-Field: Three Kinds of Populations in Scientific Practice.  In \emph{Studies in
-History and Philosophy of Science Part C: Studies in History and Philosophy of
-Biological and Biomedical Sciences.}
-\paperref{https://doi.org/10.1016/j.shpsc.2015.01.009}
-
-
-\section{\sc Workshop \\ Papers}
-
-\mestar, \runjing{}$^\star$, \mike, \& \tamara (2018).
-Evaluating Sensitivity to the Stick Breaking Prior in Bayesian Nonparametrics.
-In \emph{NeurIPS 2018 Bayesian Nonparametrics Workshop.}\\
-$\star$ = equal contribution first authors.
-\paperref{https://arxiv.org/abs/1810.06587}
-
-\mestar, \runjing{}$^\star$, N.~Varoquaux$^\star$, \mike, \& \tamara (2017).
-Measuring Cluster Stability for Bayesian Nonparametrics Using the Linear Bootstrap.
-In \emph{NeurIPS 2017 Advances in Approximate Bayesian Inference Workshop.}\\
-$\star$ = equal contribution first authors.
-\paperref{https://arxiv.org/abs/1712.01435}
-
-\me, \tamara, R.~Meager, J.~Huggins, \& \mike (2016). Fast Robustness
-Quantification with Variational Bayes. In \emph{2016 ICML Workshop on
-\#Data4Good: Machine Learning in Social Good Applications.}
-\paperref{https://arxiv.org/abs/1606.07153}
+% \printbibliography[title=Preprints,keyword=preprint]
+% \printbibliography[title=Under Review,keyword=submitted]
+% \printbibliography[title=Published,keyword=published]

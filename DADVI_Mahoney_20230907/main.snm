@@ -1,0 +1,11 @@
+\beamer@slide {alg:dadvi}{12}
+\beamer@slide {tab:model_desc}{17}
+\beamer@slide {fig:posterior_mean_graph}{20}
+\beamer@slide {fig:runtimes_arm_graph}{21}
+\beamer@slide {fig:runtimes_nonarm_graph}{22}
+\beamer@slide {fig:traces_arm_graph}{23}
+\beamer@slide {fig:traces_nonarm_graph}{24}
+\beamer@slide {fig:posterior_sd_graph}{30}
+\beamer@slide {fig:coverage}{31}
+\beamer@slide {eq:mfvb_conceit}{44}
+\beamer@slide {eq:deriv_is_cov}{44}
