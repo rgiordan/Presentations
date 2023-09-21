@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  21 SEP 2023 10:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  21 SEP 2023 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1349,202 +1349,184 @@ Package pdftex.def Info: static_figures/VB.png  used on input line 249.
 ] [14
 
 ]
-Overfull \vbox (0.13681pt too high) detected at line 384
+Overfull \vbox (9.61711pt too high) detected at line 529
  []
 
 [15
 
 ]
-Overfull \vbox (0.13681pt too high) detected at line 384
+Overfull \vbox (9.61711pt too high) detected at line 529
  []
 
 [16
 
 ]
-Overfull \vbox (0.13681pt too high) detected at line 384
+Overfull \vbox (9.61711pt too high) detected at line 529
  []
 
 [17
 
 ]
-Overfull \vbox (9.61711pt too high) detected at line 487
+Overfull \vbox (9.61711pt too high) detected at line 529
  []
 
 [18
 
-]
-Overfull \vbox (9.61711pt too high) detected at line 487
- []
+] [19
 
-[19
+] [20
 
-]
-Overfull \vbox (9.61711pt too high) detected at line 487
- []
-
-[20
-
-]
-Overfull \vbox (9.61711pt too high) detected at line 487
- []
-
-[21
+] [21
 
 ] [22
 
-] [23
-
-] [24
-
-] [25
-
 ]
-<figure/posterior_mean_graph-1.png, id=193, 614.295pt x 409.2891pt>
+<figure/posterior_mean_graph-1.png, id=171, 614.295pt x 409.2891pt>
 File: figure/posterior_mean_graph-1.png Graphic file (type png)
 <use figure/posterior_mean_graph-1.png>
 Package pdftex.def Info: figure/posterior_mean_graph-1.png  used on input line 
-626.
+668.
 (pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
 
-Overfull \vbox (22.80232pt too high) detected at line 626
+Overfull \vbox (22.80232pt too high) detected at line 668
+ []
+
+[23
+
+ <./figure/posterior_mean_graph-1.png (PNG copy)>]
+<figure/runtimes_arm_graph-1.png, id=178, 614.295pt x 409.2891pt>
+File: figure/runtimes_arm_graph-1.png Graphic file (type png)
+<use figure/runtimes_arm_graph-1.png>
+Package pdftex.def Info: figure/runtimes_arm_graph-1.png  used on input line 67
+6.
+(pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
+
+Overfull \vbox (13.60237pt too high) detected at line 676
+ []
+
+[24
+
+ <./figure/runtimes_arm_graph-1.png (PNG copy)>]
+<figure/runtimes_nonarm_graph-1.png, id=185, 614.295pt x 245.718pt>
+File: figure/runtimes_nonarm_graph-1.png Graphic file (type png)
+<use figure/runtimes_nonarm_graph-1.png>
+Package pdftex.def Info: figure/runtimes_nonarm_graph-1.png  used on input line
+ 684.
+(pdftex.def)             Requested size: 301.14778pt x 120.4591pt.
+ [25
+
+ <./figure/runtimes_nonarm_graph-1.png (PNG copy)>]
+<figure/traces_arm_graph-1.png, id=193, 614.295pt x 409.2891pt>
+File: figure/traces_arm_graph-1.png Graphic file (type png)
+<use figure/traces_arm_graph-1.png>
+Package pdftex.def Info: figure/traces_arm_graph-1.png  used on input line 692.
+
+(pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
+
+Overfull \vbox (22.80232pt too high) detected at line 692
  []
 
 [26
 
- <./figure/posterior_mean_graph-1.png (PNG copy)>]
-<figure/runtimes_arm_graph-1.png, id=200, 614.295pt x 409.2891pt>
-File: figure/runtimes_arm_graph-1.png Graphic file (type png)
-<use figure/runtimes_arm_graph-1.png>
-Package pdftex.def Info: figure/runtimes_arm_graph-1.png  used on input line 63
-4.
+ <./figure/traces_arm_graph-1.png (PNG copy)>]
+<figure/traces_nonarm_graph-1.png, id=200, 614.295pt x 409.2891pt>
+File: figure/traces_nonarm_graph-1.png Graphic file (type png)
+<use figure/traces_nonarm_graph-1.png>
+Package pdftex.def Info: figure/traces_nonarm_graph-1.png  used on input line 7
+00.
 (pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
 
-Overfull \vbox (13.60237pt too high) detected at line 634
+Overfull \vbox (21.44122pt too high) detected at line 700
  []
 
 [27
 
- <./figure/runtimes_arm_graph-1.png (PNG copy)>]
-<figure/runtimes_nonarm_graph-1.png, id=207, 614.295pt x 245.718pt>
-File: figure/runtimes_nonarm_graph-1.png Graphic file (type png)
-<use figure/runtimes_nonarm_graph-1.png>
-Package pdftex.def Info: figure/runtimes_nonarm_graph-1.png  used on input line
- 642.
-(pdftex.def)             Requested size: 301.14778pt x 120.4591pt.
- [28
+ <./figure/traces_nonarm_graph-1.png (PNG copy)>] [28
 
- <./figure/runtimes_nonarm_graph-1.png (PNG copy)>]
-<figure/traces_arm_graph-1.png, id=214, 614.295pt x 409.2891pt>
-File: figure/traces_arm_graph-1.png Graphic file (type png)
-<use figure/traces_arm_graph-1.png>
-Package pdftex.def Info: figure/traces_arm_graph-1.png  used on input line 650.
-
-(pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
-
-Overfull \vbox (22.80232pt too high) detected at line 650
+]
+Overfull \vbox (10.35191pt too high) detected at line 798
  []
 
 [29
 
- <./figure/traces_arm_graph-1.png (PNG copy)>]
-<figure/traces_nonarm_graph-1.png, id=221, 614.295pt x 409.2891pt>
-File: figure/traces_nonarm_graph-1.png Graphic file (type png)
-<use figure/traces_nonarm_graph-1.png>
-Package pdftex.def Info: figure/traces_nonarm_graph-1.png  used on input line 6
-58.
-(pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
-
-Overfull \vbox (21.44122pt too high) detected at line 658
+]
+Overfull \vbox (10.35191pt too high) detected at line 798
  []
 
 [30
 
- <./figure/traces_nonarm_graph-1.png (PNG copy)>] [31
+]
+Overfull \vbox (10.35191pt too high) detected at line 798
+ []
+
+[31
 
 ]
-Overfull \vbox (10.35191pt too high) detected at line 756
+Overfull \vbox (10.35191pt too high) detected at line 798
  []
 
 [32
 
 ]
-Overfull \vbox (10.35191pt too high) detected at line 756
+<figure/posterior_sd_graph-1.png, id=240, 614.295pt x 409.2891pt>
+File: figure/posterior_sd_graph-1.png Graphic file (type png)
+<use figure/posterior_sd_graph-1.png>
+Package pdftex.def Info: figure/posterior_sd_graph-1.png  used on input line 80
+7.
+(pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
+
+Overfull \vbox (13.60237pt too high) detected at line 807
  []
 
 [33
 
-]
-Overfull \vbox (10.35191pt too high) detected at line 756
+ <./figure/posterior_sd_graph-1.png (PNG copy)>]
+<figure/coverage-1.png, id=247, 614.295pt x 368.577pt>
+File: figure/coverage-1.png Graphic file (type png)
+<use figure/coverage-1.png>
+Package pdftex.def Info: figure/coverage-1.png  used on input line 815.
+(pdftex.def)             Requested size: 301.14778pt x 180.68866pt.
+
+Overfull \vbox (21.23131pt too high) detected at line 815
  []
 
 [34
 
-]
-Overfull \vbox (10.35191pt too high) detected at line 756
- []
+ <./figure/coverage-1.png (PNG copy)>] [35
 
-[35
+] [36
 
-]
-<figure/posterior_sd_graph-1.png, id=259, 614.295pt x 409.2891pt>
-File: figure/posterior_sd_graph-1.png Graphic file (type png)
-<use figure/posterior_sd_graph-1.png>
-Package pdftex.def Info: figure/posterior_sd_graph-1.png  used on input line 76
-5.
-(pdftex.def)             Requested size: 301.14778pt x 200.65958pt.
+] [37
 
-Overfull \vbox (13.60237pt too high) detected at line 765
- []
-
-[36
-
- <./figure/posterior_sd_graph-1.png (PNG copy)>]
-<figure/coverage-1.png, id=266, 614.295pt x 368.577pt>
-File: figure/coverage-1.png Graphic file (type png)
-<use figure/coverage-1.png>
-Package pdftex.def Info: figure/coverage-1.png  used on input line 773.
-(pdftex.def)             Requested size: 301.14778pt x 180.68866pt.
-
-Overfull \vbox (21.23131pt too high) detected at line 773
- []
-
-[37
-
- <./figure/coverage-1.png (PNG copy)>] [38
+] [38
 
 ] [39
 
 ] [40
 
-] [41
+]
+[41
 
 ] [42
 
 ] [43
 
-]
-[44
+] [44
 
-] [45
+] (./main.bbl) [45
 
 ] [46
 
-] [47
-
-] (./main.bbl) [48
-
-] [49
-
 ]
-Overfull \hbox (6.96289pt too wide) detected at line 1039
+Overfull \hbox (6.96289pt too wide) detected at line 1081
 []
  []
 
 
-Overfull \vbox (9.76578pt too high) detected at line 1039
+Overfull \vbox (9.76578pt too high) detected at line 1081
  []
 
-[50
+[47
 
 ]
 \tf@nav=\write6
@@ -1557,14 +1539,17 @@ Overfull \vbox (9.76578pt too high) detected at line 1039
 \openout8 = `main.snm'.
 
  (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30223 strings out of 480171
- 611996 string characters out of 5894489
- 863252 words of memory out of 5000000
- 47413 multiletter control sequences out of 15000+600000
+ 30215 strings out of 480171
+ 611923 string characters out of 5894489
+ 862252 words of memory out of 5000000
+ 47411 multiletter control sequences out of 15000+600000
  481206 words of font info for 72 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  128i,30n,122p,1853b,631s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1589,10 +1574,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (50 pages, 2702325 bytes).
+Output written on main.pdf (47 pages, 2696977 bytes).
 PDF statistics:
- 510 PDF objects out of 1000 (max. 8388607)
- 394 compressed objects within 4 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 377 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
