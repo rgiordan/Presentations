@@ -1,0 +1,68 @@
+
+
+\begin{frame}{}
+    \begin{center}
+        {\Huge \textbf{Fall 2023 Epilogue}}
+    \end{center}
+\end{frame}
+    
+\begin{frame}{Follow-on work: Robustness certification}
+
+    Some authors have been using our methods to argue that their analyses are
+    robust \citep{eubank:2022:enfranchisement, martinez:2022:trustdictator,
+    finger:2022:pesticidefreeadoption, turnbull:2022:mobilising,
+    falck:2022:systematic}.  But, technically, we can prove only non-robustness!
+
+    \vspace{1em}
+
+    For \emph{low-dimensional least squares problems}, some follow-on work has
+    proposed more computationally expensive, but sometimes more accurate,
+    approximations to the maximally influential set
+    \citep{moitra:2022:provablyauditingols, freund:2023:robustnessauditingols}.
+%
+    % \vspace{1em}
+%
+    Unlike our work, these alternatives can provide \emph{certificates of
+    robustness} rather than our \emph{certificates of non-robustness}.
+
+    \vspace{1em}
+
+    Fast and general methods for certifying robustness --- even 
+    in moderate-dimensional linear regression problems --- are still lacking.    
+
+\end{frame}    
+
+\begin{frame}{Follow-on work: High-dimensional Bayesian posteriors}
+
+    \vspace{1em}
+    We have also studied (and are still studying) the empirical influence
+    function for Bayesian posteriors approximated with MCMC
+    \citep{giordano:2023:bayesij}. Accomodating MCMC noise has been an
+    interesting challenge.
+
+    \vspace{1em}
+
+    We prove accuracy of the AMIP linear approximation under conditions similar
+    to a Bayesian central limit theorem.  
+    But we also show that the linear approximation can fail when
+    integrating out high-dimensional latent variables!
+
+    \vspace{1em}
+
+    So there is reason to believe AMIP will fail for many Bayes-like estimators
+    (e.g. applications of the EM algorithm).  
+    Special cases can still work (e.g. some hierarchical models), and our work
+    provides a framework for analyzing these special cases.  
+
+    \vspace{1em}
+
+    Much more work is still to be done!
+
+\end{frame}    
+
+
+% \begin{frame}{Follow-on work: Generalizing \texttt{zaminfluence}}
+
+%     The R package \texttt{zaminfluence} has gotten some attention 
+
+% \end{frame}    

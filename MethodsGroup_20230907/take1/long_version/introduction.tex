@@ -1,0 +1,131 @@
+\begin{frame}{Dropping data: Motivation}
+
+You're a data analyst, and you've
+
+\begin{itemize}
+    \item Gathered some exchangeable data,
+    \item Cleaned up / removed outliers,
+    \item Checked for correct specification, and
+    \item Drawn a conclusion from your statistical analysis (e.g., about
+    the sign / significance of some estimator).
+\end{itemize}
+
+\pause
+\textbf{Well done!}
+
+Would you be concerned if you could \textbf{reverse your conclusion} by removing
+a \textbf{small proportion} (say, $0.1\%$) of your data?
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Dropping data: Mexico Microcredit}
+
+Consider \citet{angelucci2015microcredit}, a randomized controlled trial study
+of the efficacy of microcredit in Mexico based on 16,560 data points.
+
+The variable ``Beta" estimates the effect of microcredit in US dollars.
+
+%\MicrocreditMexicoRerunTable{}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lll} \hline
+  & Left out points & Beta (SE) \\\hline
+Original & 0 & -4.55 (5.88) \\ \hline
+\onslide<2-> {Change sign & 1 & 0.4 (3.19) \\\hline }
+\onslide<3-> {Change significance & 14 & -10.96 (5.57) \\\hline }
+\onslide<4-> {Change both & 15 & 7.03 (2.55) \\\hline }
+\end{tabular}
+\end{table}
+
+\onslide<5-> { By removing very few data points ($15 / 16560 \approx 0.1\% $),
+we can reverse the qualitative conclusions of the original study! }
+
+\onslide<6-> {
+\textbf{Question:} Is the reported interval $-4.55 \pm (5.88)$ a reasonable
+description of the uncertainty in the estimated efficacy of microcredit?
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Dropping data: Motivation}
+
+Would you be concerned if you could \textbf{reverse your conclusion} by removing
+a \textbf{small proportion} (say, $0.1\%$) of your data?
+
+\pause
+\textbf{Not always!}
+
+% Consider randomized controlled trials in agriculture with a clearly
+% defined sample population, intervention, and quantifiable outcome.
+
+\pause
+\textbf{But sometimes, surely yes!}
+
+For example, often in economics:
+%
+\begin{itemize}
+\item Small fractions of data are missing not-at-random,
+\item Policy population is different from analyzed population,
+\item We report a convenient summary (e.g. mean) of a complex effect,
+\item Models are stylized proxies of reality.
+\end{itemize}
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Objective}
+
+Estimate the effect of leaving out $\lfloor \alpha N \rfloor$ datapoints,
+where $\alpha$ is small.
+\pause
+
+\vspace{1em}
+\textbf{Question 1: How do we find influential datapoints?}
+
+{
+\small
+
+The number of subsets ${N \choose \lfloor \alpha N \rfloor}$ can be very large
+even when $\alpha$ is very small.
+
+In the MX microcredit study, ${16560 \choose 15} \approx 1.4 \cdot 10^{51}$
+sets to check for $\alpha = 0.0009$.
+
+\pause
+We provide a fast, automatic approximation based on the \textbf{influence function}.
+}
+
+\pause
+\vspace{1em}
+\textbf{Question 2: What makes an estimator non-robust?}
+
+\pause
+Non-robustness to removal of $\lfloor \alpha N \rfloor$ points is:
+\vspace{-0.5em}
+\begin{itemize}
+    \item Not (necessarily) caused by misspecification,
+    \item Not (necessarily) caused by outliers,
+    \item Not captured by standard errors,
+    \item Not mitigated by large $N$,
+    \item Primarily determined by the \textbf{signal to noise} ratio
+    \begin{itemize}
+        \item[] ... in a sense which we will define.
+    \end{itemize}
+\end{itemize}
+
+
+\end{frame}

@@ -1,0 +1,13 @@
+I propose a method to assess the sensitivity of statistical analyses to the
+removal of a small fraction of the data.  Manually checking the influence of all
+possible small subsets is computationally infeasible, so I provide an
+approximation to find the most influential subset.  My metric, the ``Approximate
+Maximum Influence Perturbation,'' is automatically computable for common methods
+including (but not limited to) OLS, IV, MLE, GMM, and variational Bayes.  I
+provide finite-sample error bounds on the approximation performance and, at
+minimal extra cost, I provide an exact finite-sample lower bound on sensitivity.
+I find that sensitivity is driven by a signal-to-noise ratio in the inference
+problem, is not reflected in standard errors, does not disappear asymptotically,
+and is not due to misspecification.  While some empirical applications are
+robust, results of several economics papers can be overturned by removing less
+than 1% of the sample.

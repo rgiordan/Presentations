@@ -1,0 +1,193 @@
+\documentclass[10pt]{beamer}
+
+\usepackage[]{graphicx}
+\usepackage[]{color}
+
+\usepackage{alltt}
+
+% Beamer themer
+%\usetheme{metropolis}
+\usetheme{Warsaw}
+\setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{footline}[frame number]
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\usepackage{graphicx}
+
+
+\DeclareGraphicsExtensions{.pdf,.jpeg,.jpg,.png}
+
+\usepackage{subcaption}
+\usepackage{amsmath}
+
+\usepackage[authoryear]{natbib}
+
+\usepackage{tikz}
+% \usetikzlibrary{bayesnet}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+
+\usepackage[framemethod=TikZ, xcolor=RGB]{mdframed}
+\definecolor{mydarkblue}{rgb}{0,.06,.5}
+\definecolor{mydarkred}{rgb}{.5,0,.1}
+\definecolor{myroyalblue}{rgb}{0,.1,.8}
+\mdfdefinestyle{MyFrame}{%
+    linecolor=mydarkblue,
+    outerlinewidth=0.5pt,
+    roundcorner=2pt,
+    innertopmargin=2pt,
+    innerbottommargin=2pt,
+    innerrightmargin=2pt,
+    innerleftmargin=2pt,
+    backgroundcolor=blue!10}
+
+% Set a transparent background to match ggplot figures
+\setbeamercolor{background canvas}{bg=}
+
+\usepackage{xargs} % For def with default arguments
+\usepackage{mathrsfs} % For mathscr
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+% https://tex.stackexchange.com/questions/89166/centering-in-tabularx-and-x-columns
+\usepackage{tabularx}   % For horizontally filled tables
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{booktabs}    % For toprule among other things
+
+\usepackage{refstyle}
+\usepackage{varioref} % Use refstyle instead of varioref directly.
+
+\input{_math_defs}
+\input{_knitr_header}
+\input{figures_knitr}
+\input{_reference_defs}
+
+\DefineMacros{}
+
+\title{When Can Dropping a Little Data Make a Big Difference?}
+\author{Ryan Giordano (\texttt{rgiordan@mit.edu})}
+\date{January 2022}
+% \institute{University of California, Berkeley}
+
+\setbeamertemplate{Collaborators}[none]
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+% \maketitle
+
+\begin{frame}
+
+\begin{center}
+\large
+\textbf{
+An Automatic Finite-Sample Robustness Metric:
+\\Can Dropping a Little Data Make a Big Difference?}
+\end{center}
+
+\hrulefill
+
+Ryan Giordano (\texttt{rgiordan@mit.edu})\footnotemark[1]
+
+January 2022
+
+\footnotetext[1]{With coauthors Rachael Meager (LSE) and Tamara Broderick (MIT)}
+
+\end{frame}
+
+\input{introduction}
+
+% \begin{frame}{}
+
+% {\Large \textbf{Question 1:} \\ \vspace{0.5em}
+% \textbf{How do we find influential datapoints?}}
+
+% \end{frame}
+
+\input{approximation}
+
+% \begin{frame}{}
+
+% {\Large \textbf{Question 2:} \\ \vspace{0.5em}
+% \textbf{How does it work in practice?}}
+
+% \end{frame}
+
+\input{examples}
+
+% \begin{frame}{}
+
+% {\Large \textbf{What makes an estimator non-robust?}}
+
+% \end{frame}
+
+\input{determination}
+
+% \begin{frame}{}
+%
+% {\Large \textbf{Conclusion: \\Related work and future directions} }
+%
+% \end{frame}
+
+\input{conclusion}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Links and references}
+
+\footnotesize
+
+% {\bf A workshop paper: }\newline
+Tamara Broderick, Ryan Giordano, Rachael Meager
+(alphabetical authors) \\
+``An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data Change Conclusions?''
+\newline {\color{blue}\url{https://arxiv.org/abs/2011.14999}}
+
+
+\hrulefill
+
+Open-source software:
+\begin{tabular}{ll}
+R package \texttt{zaminfluence} &
+    \url{https://github.com/rgiordan/zaminfluence}\\
+Python package \texttt{vittles} &
+    \url{https://github.com/rgiordan/vittles}
+\end{tabular}
+
+\hrulefill
+
+Some related content can be found on my blog:\\
+\url{https://rgiordan.github.io/}
+
+%\vspace{-0.5em}
+\end{frame}
+
+
+\begin{frame}{References}
+
+\bibliographystyle{plainnat}
+% Hide the references header
+% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
+\begingroup
+\renewcommand{\section}[2]{}%
+{
+\tiny
+%\scriptsize
+\bibliography{bibliography}
+}
+\endgroup
+
+\end{frame}
+
+
+% \input{extras}
+
+\end{document}

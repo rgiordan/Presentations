@@ -1,0 +1,264 @@
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{What makes an analysis sensitive?  Preliminaries}
+%
+We are \textbf{robust to data dropping} if, for the $\Delta$
+that changes conclusions and $\w^*$ dropping the $\alphan$
+most influential points,
+%
+\begin{align*}
+% $
+%
+\Delta \ge \thetafunlin(\w^*) - \thetafun(\thetahat(\onevec))
+    % = {\color{red}- \sum_{n=1}^{\lfloor \alpha N \rfloor} \infl_{(n)} }
+    \onslide<3->{
+        =:   {\color{black} \noise } { \color{black} \shape}
+    }
+\onslide<6->{
+\quad\Leftrightarrow\quad
+    {\color{red}\frac{\Delta}{\noise} \ge \shape}.
+}
+\end{align*}
+%
+\begin{itemize}
+\onslide<2->{
+\item The ``signal'' $\Delta$ is the smallest change that reverses your conclusion
+}
+\onslide<4->{
+\item The ``noise''
+    $\noise^2 \rightarrow
+        \underset{N \rightarrow \infty}{\mathrm{lim}}
+            \mathrm{Var}(\sqrt{N}\phi)$
+    (``sandwich'' variance estimator)
+}
+\onslide<5->{
+\item The ``shape''
+    $\shape$
+    $\rightarrow$ a nonzero constant and is
+    $\le \sqrt{\alpha (1 - \alpha)}$
+}
+\end{itemize}
+
+
+%\vspace{1em}
+\onslide<6->{
+\hrulefill
+
+The \textbf{signal to noise ratio} $\frac{\Delta}{\noise}$
+determines robustness to data dropping
+}
+\onslide<6-7>{...}
+\onslide<8>{
+\textbf{and} sampling variability, but with \textbf{different thresholds}.
+}
+
+\onslide<7->{
+
+\hrulefill
+
+\textbf{Contrast with sampling variability.}
+
+\vspace{0.5em}
+A 95\% CI is given by
+$\thetafun(\thetahat(\onevec)) \pm \frac{1.96}{\sqrt{N}} \noise.$
+%
+We reject $\thetafun(\thetahat(\onevec)) + \Delta$ when
+%
+\begin{align*}
+%
+\thetafun(\thetahat(\onevec)) + \Delta \ge
+\thetafun(\thetahat(\onevec)) + \frac{1.96}{\sqrt{N}} \noise
+\onslide<8>{
+\quad\quad
+\Leftrightarrow
+\quad\quad
+{\color{red}
+\frac{\Delta}{\noise} \ge \frac{1.96}{\sqrt{N}.}
+}
+}
+%
+\end{align*}
+%
+}
+
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{What makes an analysis sensitive?}
+%
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+    Robust to data dropping:\\
+    (``dropping robustness'')\\
+    \vspace{1em}
+    $\textrm{SNR} := \frac{\Delta}{\noise} \ge \shape$
+\end{center}
+\end{minipage}
+%
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+    Robust to sampling variation:\\
+    (``sampling robustness'')\\
+    \vspace{1em}
+    $\textrm{SNR} := \frac{\Delta}{\noise} \ge
+        \frac{1.96}{\sqrt{N}}$
+\end{center}
+\end{minipage}
+
+\vspace{1em}
+
+\hrulefill
+
+\pause
+\vspace{0.5em} $\bullet\quad$
+\textbf{Dropping robustness $\ne$ sampling robustness in general.\\}
+\textit{Proof: }
+$\shape \ne \frac{1.96}{\sqrt{N}}$.
+
+\pause
+\vspace{0.5em} $\bullet\quad$
+\textbf{When the SNR is small, sufficiently large $N$
+produces sampling robustness, but not necessarily
+dropping robustness.\\}
+\textit{Proof: }
+$\frac{1.96}{\sqrt{N}} \rightarrow 0$, but $\shape \rightarrow$ a nonzero
+constant.
+
+\pause
+\vspace{0.5em} $\bullet\quad$
+\textbf{Statistical insignificance is dropping non-robust for large $N$.\\}
+\textit{Proof: }
+%
+Insignificance means
+$|\thetafun(\thetahat(\onevec))| \le \frac{1.96}{\sqrt{N}} \noise$.
+
+$\Rightarrow$ A result can be made significant by a change of no more than
+$\frac{1.96}{\sqrt{N}} \noise$.
+
+$\Rightarrow$ The SNR for a conclusion
+of ``insignificance'' is $\frac{\Delta}{\noise} \le \frac{1.96}{\sqrt{N}}
+\rightarrow 0 \le \shape$.
+
+\pause
+\vspace{0.5em} $\bullet\quad$
+\textbf{P-hacking is dropping non-robust for large $N$.\\}
+\textit{Proof: }P-hacked effect sizes are of the order
+$\frac{1.96}{\sqrt{N}} \noise$.
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{What makes an analysis sensitive?}
+%
+\begin{minipage}[t]{0.45\textwidth}
+\begin{center}
+    Robust to data dropping:\\
+    (``dropping robustness'')\\
+    \vspace{1em}
+    $\textrm{SNR} := \frac{\Delta}{\noise} \ge \shape$
+\end{center}
+\end{minipage}
+%
+\begin{minipage}[t]{0.45\textwidth}
+\begin{center}
+    Robust to gross errors:\\
+    (``gross error robustness'')\\
+    \vspace{1em}
+    Gross outliers cannot produce
+    arbitrarily large changes to $\thetafun$.
+\end{center}
+\end{minipage}
+
+\vspace{1em}
+\hrulefill
+
+\pause
+\vspace{1em} $\bullet\quad$
+\textbf{Dropping non-robustness is not driven by misspecification.\\}
+\textit{Proof: }
+Small $\Delta$ are dropping non-robust irrespective of specification.
+
+\pause
+\vspace{1em} $\bullet\quad$
+\textbf{Gross outliers primarily affect dropping robustness through $\noise$.\\}
+\textit{Proof: }
+For a fixed $\noise$, outliers decrease $\shape$.
+(Details in paper.)
+
+\pause
+\hrulefill
+
+\vspace{1em} Dropping robustness should \textbf{augment} other forms of
+robustness.
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{How to make an analysis less sensitive?}
+
+\begin{center}
+    Robust to data dropping:\\
+    (``dropping robustness'')\\
+    \vspace{1em}
+    $\textrm{SNR} := \frac{\Delta}{\noise} \ge \shape$
+\end{center}
+
+\vspace{1em}
+\hrulefill
+
+\vspace{1em}
+\textbf{To achieve dropping robustness,
+reduce $\noise$ and / or increase $\Delta$.\\}
+\textit{Proof: }
+Across typical distributions, $\shape$ varies little.
+(Details in paper.)
+
+% \vspace{1em}
+% \hrulefill
+
+\pause
+\vspace{1em}
+In the Mexico microcredit example,
+%
+\begin{align*}
+%
+\noise = \MxNoise
+\quad\quad\quad
+\thetafun(\thetahat(\onevec)) = \MxBetahat
+\quad\quad\quad
+N = \MxNobs
+%
+\end{align*}
+%
+The study overcame a very low signal to noise ratio with a very large $N$.
+
+\vspace{1em} This (canonical) response to low signal to noise ratio --- to
+gather more data --- produces small SEs, but cannot produce dropping
+robustness.
+
+\end{frame}

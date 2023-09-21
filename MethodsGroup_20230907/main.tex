@@ -1,0 +1,106 @@
+\documentclass[10pt]{beamer}
+
+\usepackage[]{graphicx}
+\usepackage[]{color}
+
+\usepackage{alltt}
+
+% Beamer themer
+%\usetheme{metropolis}
+\usetheme{Warsaw}
+\setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{footline}[frame number]
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+\usepackage{graphicx}
+
+\usepackage{listings}
+\lstset
+{
+    % language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
+
+\DeclareGraphicsExtensions{.pdf,.jpeg,.jpg,.png}
+
+\usepackage{subcaption}
+\usepackage{amsmath}
+
+\usepackage[authoryear]{natbib}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+% \usetikzlibrary{bayesnet}
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=1.13}
+\usetikzlibrary{math}
+
+\usepackage[framemethod=TikZ, xcolor=RGB]{mdframed}
+\definecolor{mydarkblue}{rgb}{0,.06,.5}
+\definecolor{mydarkred}{rgb}{.5,0,.1}
+\definecolor{myroyalblue}{rgb}{0,.1,.8}
+\mdfdefinestyle{MyFrame}{%
+    linecolor=mydarkblue,
+    outerlinewidth=0.5pt,
+    roundcorner=2pt,
+    innertopmargin=2pt,
+    innerbottommargin=2pt,
+    innerrightmargin=2pt,
+    innerleftmargin=2pt,
+    backgroundcolor=blue!10}
+
+% Set a transparent background to match ggplot figures
+\setbeamercolor{background canvas}{bg=}
+
+\usepackage{xargs} % For def with default arguments
+\usepackage{mathrsfs} % For mathscr
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+% https://tex.stackexchange.com/questions/89166/centering-in-tabularx-and-x-columns
+\usepackage{tabularx}   % For horizontally filled tables
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{booktabs}    % For toprule among other things
+
+\usepackage{refstyle}
+\usepackage{varioref} % Use refstyle instead of varioref directly.
+
+\input{_math_defs}
+\input{_knitr_header}
+\input{figures_knitr}
+\input{_reference_defs}
+
+\DefineMacros{}
+
+\title{When Can Dropping a Little Data Make a Big Difference?}
+\author{Ryan Giordano (\texttt{rgiordano@berkeley.edu})}
+\date{Fall 2023}
+\institute{University of California, Berkeley}
+
+\setbeamertemplate{Collaborators}[none]
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\input{introduction}
+
+\input{approximation}
+
+\input{examples}
+
+\input{determination}
+
+\input{conclusion}
+
+\input{epilogue}
+
+\input{extras}
+
+\end{document}

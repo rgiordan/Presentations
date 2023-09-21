@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Other forms of robustness}
+
+We proceeded as follows:
+\begin{enumerate}
+    \item Took presence of datapoints as a model input,
+    \item Formed an automatically-computable differential approximation,
+    \item Provided theory by analyzing higher-order derivatives,
+    \item Studied its effectiveness in problems with open-access data.
+\end{enumerate}
+
+\vspace{1em}
+\textbf{Presence of datapoints is only one model input of many!}
+
+\vspace{1em}
+\begin{itemize}
+    \item Prior sensitivity in Bayesian nonparametrics \citep{giordano2021bnp}
+    \item Model sensitivity of MCMC output
+        \citep{gustafson2000local, giordano2018covariances}
+    \item Cross-validation \citep{giordano2019swiss, wilson:2020:cv}
+    \item Cross-validation \citep{giordano2019swiss, wilson:2020:cv}
+    \item Frequentist variances of MCMC posteriors (in progress)
+\end{itemize}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Conclusion}
+
+\begin{itemize}
+\item You may be concerned if you could reverse your conclusion by removing
+a small proportion of your data.
+
+\pause \item We can quickly and automatically find an approximate influential
+set which is accurate for small sets.
+
+\pause \item Robustness to removing small sets is principally determined by the
+signal to noise ratio.
+
+\pause
+\item In the present work, we studied data dropping.  But we
+provide a framework for studying many other robustness
+questions, both to data and model perturbations.
+
+
+\end{itemize}
+
+\end{frame}

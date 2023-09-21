@@ -15,12 +15,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Black Box Variational Bayes with a Deterministic Objective}
+\setbeamerfont{title}{size=\Huge}
+\title{Black Box Variational Inference\\\hspace{1em}with a Deterministic Objective}
 
 \subtitle{Faster, More Accurate, and Even More Black Box} 
 \date{September 7th, 2023}
 
-\author{Giordano, Ryan \inst{1} \and Ingram, Martin\inst{2} \and Broderick, Tamara\inst{3}}
+\author{Giordano, Ryan \inst{1} \and Ingram, Martin\inst{3} \and Broderick, Tamara\inst{2}}
 
 \institute[] % (optional)
 {
@@ -151,6 +152,8 @@ $\Rightarrow$
 \end{align*}
 %
 We will be interested in means and covariances of the posterior $\post$.
+
+\pause
 %
 % Denote gradients with $\nabla$, e.g.,
 % %
@@ -181,7 +184,7 @@ We will be interested in means and covariances of the posterior $\post$.
 
     \textbf{How can we approximate the posterior more quickly?}
 
-    \textbf{One answer: variational Bayes.}
+    \textbf{One answer: variational inference.}
 
 \end{minipage}
 
@@ -202,14 +205,18 @@ We want the posterior $\post$.  Let $\kl{\q(\theta)}{\p(\theta)}$ denote KL dive
 %
 The KL divergence is zero if and only if the two distributions are the same.
 
+\pause
+
 %
 \begin{align*}
 %
 \textrm{A tautology: }&& \post &= \argmin_{\q} \kl{\q(\theta)}{\post} \\
-\textrm{Variational Bayes: }&& \qstar(\theta) &= \argmin_{\q \in \qdom} \kl{\q(\theta)}{\post}
-\textrm{ for some restricted }\qdom\\
+\textrm{Variational inference: }&& \qstar(\theta) &= \argmin_{\q \in \qdom} \kl{\q(\theta)}{\post}
+\quad\textrm{ ... for restricted }\qdom\\
 %
 \end{align*}
+%
+\pause
 %
 \begin{minipage}{0.4\textwidth}
     \includegraphics[width=\textwidth]{static_figures/VB}
@@ -237,11 +244,23 @@ The approximation can be poor because
 \item The family $\qdom$ isn't expressive enough
 \end{itemize}
 %
-
 %
 \end{minipage}
+\end{frame}
 
-When, in general, is $\qstar(\theta)$ a good approximation?  \textbf{It is hard to say.}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{When does variational inference work?}
+
+When, in general, is $\qstar(\theta)$ a good approximation for a given family $\qdom$?  
+
+\vspace{1em}
+
+\textbf{It is hard to say.}
 
 \end{frame}
 
@@ -257,7 +276,9 @@ To perform VI, we need to solve
 %
 \begin{align*}
 %
-\qstar(\theta) &= \argmin_{\q \in \qdom} \left( 
+\qstar(\theta) &= \argmin_{\q \in \qdom} 
+\overnote{
+\left( 
 \undernote{
     \expect{\q(\theta)}{\log \q(\theta)}
     }{\textrm{Entropy}} - 
@@ -265,17 +286,19 @@ To perform VI, we need to solve
     \expect{\q(\theta)}{\log \p(\theta, \y)}
 }{\textrm{Log joint probability}}
  - \overnote{\p(\y)}{\textrm{Constant}}
-\quad\right).
+\quad\right)}{\kl{\q(\theta)}{\p(\theta)}}.
 %
 \end{align*}
     
 How can we evaluate this objective?
 
+\pause
 \vspace{3em}
 \textbf{In the old days \citep{bishop:2006:pattern}: }Restrict to models with tractable expectations.
 
+\pause
 \vspace{3em}
-\textbf{Black-box VI \citep{ranganath:2014:bbvi}: }  Assume that 
+These days we use \textbf{Black-box VI \citep{ranganath:2014:bbvi}: }  Assume that 
 %
 \begin{itemize}
     \item We can sample from $\q(\theta)$ and evaluate $\log \q(\theta)$
@@ -462,7 +485,6 @@ Take \blue{better steps}, easily \green{assess convergence}, with less tuning.
 }
 
 \end{frame}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

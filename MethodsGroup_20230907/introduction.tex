@@ -1,0 +1,142 @@
+
+\begin{frame}
+
+\begin{center}
+\large
+\textbf{
+An Automatic Finite-Sample Robustness Metric:
+\\Can Dropping a Little Data Make a Big Difference?}
+\end{center}
+
+\hrulefill
+\vspace{1em}
+
+Ryan Giordano (\texttt{rgiordano@berkeley.edu})\footnotemark[1]
+
+Fall 2023
+
+\footnotetext[1]{With coauthors Rachael Meager (LSE) and Tamara Broderick (MIT)}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Dropping data: Mexico Microcredit}
+
+% The success of statistics has led to data from particular populations
+% being used increasingly to draw general conclusions.
+% %
+% Drawing the right conclusions affects peoples' lives!
+
+\vspace{1em} \textbf{Example:} \citet{angelucci2015microcredit}, a randomized
+controlled trial study of the efficacy of microcredit in Mexico based on $N =
+$16,560 data points. A regression was run to estimate the average effect of
+microcredit.
+
+\hrulefill
+
+\vspace{1em}
+\textbf{Original result: }
+Treatment effect statistically insignificant at 95\%.
+
+\vspace{1em}
+\textbf{Policy implication: } Disinvest in microcredit initiatives.
+
+\hrulefill
+
+\pause
+
+\vspace{1em} \textbf{Data dropping: } Can produce both positive and negative
+statististically significant results dropping no more than 15 data points
+($<$ 0.1\%).
+
+\vspace{1em}
+\textbf{Policy implication: } Run a higher-powered study (not just
+larger $N$).
+
+
+\hrulefill
+
+\pause
+
+Cannot find influential subsets by brute force!
+
+\vspace{1em}
+\textbf{We provide a fast, automatic tool to  approximately identify the
+most influential set of points.}
+
+
+\end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Outline}
+\begin{itemize}
+    \item Why and when might you care about sensitivity to data dropping?
+    \item How do we identify influential sets?  When is our method accurate?
+    \begin{itemize}
+        \item[] (A formalization of the problem and the
+            class of estimators we study.)
+    \end{itemize}
+    \item Examine real-life examples of analyses: some sensitive, some not.
+    \begin{itemize}
+        \item[] (The results may defy your intuition.)
+    \end{itemize}
+    \item What kinds of analyses are sensitive to data dropping?
+    \begin{itemize}
+    \item[] (Comparison to standard errors, gross errors, and how to mitigate.)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Dropping data: Motivation}
+
+When do you care that you can \textbf{reverse your conclusion} by removing a
+\textbf{small proportion} of your data?
+
+\pause \vspace{1em} Not always!  But sometimes you surely do, especially when
+you want to \textbf{generalize to unseen, systematically different populations}.
+
+\vspace{1em}
+Suppose you have a farm, and want to know whether
+your average yield is $>$ 170 bushels per acre.
+At harvest, you measure 200 bushels per acre.
+
+\pause
+\begin{itemize}
+    \item Scenario one: $>$ 170 bushels
+        per acre means you make a profit.
+        \begin{itemize}
+            \item Don’t care about sensitivity to small subsets.
+        \end{itemize}
+    \pause
+    \item Scenario two: Want to recommend methods to a distant friend.
+    \begin{itemize}
+        \item Might care about sensitivity to small subsets!
+    \end{itemize}
+\end{itemize}
+
+\pause
+
+\vspace{1em}
+Specifically, often in statistical applications:
+%
+\begin{itemize}
+\item Policy population is different from analyzed population,
+\item Small fractions of data are missing not-at-random,
+\item We report a convenient summary (e.g. mean) of a complex effect.
+% \item Models are stylized proxies of reality.
+\end{itemize}
+
+
+\end{frame}

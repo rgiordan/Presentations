@@ -1,0 +1,104 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Conclusion}
+
+\begin{itemize}
+\item You may be concerned if you could reverse your conclusion by removing
+a small proportion of your data.
+
+\pause \item We can quickly and automatically find an approximate influential
+set which is accurate for small sets.
+
+\pause \item Data dropping robustness is principally determined by the
+signal to noise ratio, and captures sensitivity distinct from sampling
+and gross error sensitivity.
+
+\end{itemize}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Links and references}
+
+\footnotesize
+
+% {\bf A workshop paper: }\newline
+Tamara Broderick, Ryan Giordano, Rachael Meager
+(alphabetical authors) \\
+``An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data Change Conclusions?''
+\newline {\color{blue}\url{https://arxiv.org/abs/2011.14999}}
+
+\hrulefill
+
+Select blog posts with more details: \hspace{1em}\url{https://rgiordan.github.io}
+\begin{itemize}
+\item \href{https://rgiordan.github.io/robustness/2021/09/17/amip_p_hacking.html}
+    {Data dropping sensitivity overcomes p-hacking}
+\item \href{https://rgiordan.github.io/amip/2021/12/17/reweighted_colinear_note.html}
+    {Collinearity in OLS after dropping}
+\item \href{https://rgiordan.github.io/amip/2021/12/01/influence_is_sum.html}
+    {Influence functions and sums}
+\item \href{https://rgiordan.github.io/amip/2021/11/08/bootstrap_influence.html}
+    {Connections to the bootstrap}
+% \item \href{https://rgiordan.github.io/differentiability/2021/07/20/norms.html}
+%     {When a norm is the quantity of interest}
+\end{itemize}
+
+
+\hrulefill
+
+Related software on \texttt{github}:
+\begin{itemize}
+\item \href{https://github.com/rgiordan/zaminfluence}
+{rgiordan/zaminfluence (for \texttt{R})}
+\item \href{https://github.com/rgiordan/vittles}
+{rgiordan/vittles (for \texttt{Python})}
+\end{itemize}
+
+\hrulefill
+
+Some of my work on other forms of robustness:
+%
+%\vspace{1em}
+\begin{itemize}
+    \item Prior sensitivity in Bayesian nonparametrics
+        \citep{giordano2021bnp}
+    \item Approximate cross-validation (and other reweightings)
+        \citep{giordano2019swiss, giordano2019higherorder}
+    \item Covariances and prior sensitivity for mean field VB
+        \citep{giordano2015lrvbnips, giordano2018covariances}
+    \item Model sensitivity of MCMC output \citep{giordano2018covariances}
+    \item Frequentist variances of MCMC posteriors (in progress)
+\end{itemize}
+
+%\vspace{-0.5em}
+\end{frame}
+
+
+\begin{frame}{References}
+
+\bibliographystyle{plainnat}
+% Hide the references header
+% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
+\begingroup
+\renewcommand{\section}[2]{}%
+{
+\tiny
+%\scriptsize
+\bibliography{bibliography}
+}
+\endgroup
+
+\end{frame}

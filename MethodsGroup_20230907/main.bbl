@@ -1,0 +1,166 @@
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Angelucci and De~Giorgi(2009)]{angelucci2009indirect}
+M.~Angelucci and G.~De~Giorgi.
+\newblock Indirect effects of an aid program: {H}ow do cash transfers affect
+  ineligibles' consumption?
+\newblock \emph{American Economic Review}, 99\penalty0 (1):\penalty0 486--508,
+  2009.
+
+\bibitem[Angelucci et~al.(2015)Angelucci, Karlan, and
+  Zinman]{angelucci2015microcredit}
+M.~Angelucci, D.~Karlan, and J.~Zinman.
+\newblock Microcredit impacts: {E}vidence from a randomized microcredit program
+  placement experiment by {C}ompartamos {B}anco.
+\newblock \emph{American Economic Journal: Applied Economics}, 7\penalty0
+  (1):\penalty0 151--82, 2015.
+
+\bibitem[Belsley et~al.(2005)Belsley, Kuh, and Welsch]{belsley2005regression}
+D.~Belsley, E.~Kuh, and R.~Welsch.
+\newblock \emph{Regression diagnostics: Identifying influential data and
+  sources of collinearity}.
+\newblock John Wiley \& Sons, 2005.
+
+\bibitem[Bickel et~al.(1993)Bickel, Klaassen, Ritov, and
+  Wellner]{bickel1993semiparametric}
+P.~Bickel, C.~Klaassen, Y.~Ritov, and J~Wellner.
+\newblock \emph{Efficient and adaptive estimation for semiparametric models},
+  volume~4.
+\newblock Johns Hopkins University Press Baltimore, 1993.
+
+\bibitem[Cook(1977)]{cook1977detection}
+D.~Cook.
+\newblock Detection of influential observation in linear regression.
+\newblock \emph{Technometrics}, 19\penalty0 (1):\penalty0 15--18, 1977.
+
+\bibitem[Eubank and Fresh(2022)]{eubank:2022:enfranchisement}
+N.~Eubank and A.~Fresh.
+\newblock Enfranchisement and incarceration after the 1965 voting rights act.
+\newblock \emph{American Political Science Review}, 116\penalty0 (3):\penalty0
+  791--806, 2022.
+
+\bibitem[Falck et~al.(2022)Falck, Rej, and Thesmar]{falck:2022:systematic}
+A.~Falck, A.~Rej, and D.~Thesmar.
+\newblock When do systematic strategies decay?
+\newblock \emph{Quantitative Finance}, 22\penalty0 (11):\penalty0 1955--1969,
+  2022.
+
+\bibitem[Finger and M{\"o}hring(2022)]{finger:2022:pesticidefreeadoption}
+R.~Finger and N.~M{\"o}hring.
+\newblock The adoption of pesticide-free wheat production and farmers'
+  perceptions of its environmental and health effects.
+\newblock \emph{Ecological Economics}, 198:\penalty0 107463, 2022.
+
+\bibitem[Finkelstein et~al.(2012)Finkelstein, Taubman, Wright, Bernstein,
+  Gruber, Newhouse, Allen, Baicker, and Group]{finkelstein2012oregon}
+A.~Finkelstein, S.~Taubman, B.~Wright, M.~Bernstein, J.~Gruber, J.~Newhouse,
+  H.~Allen, K.~Baicker, and Oregon Health~Study Group.
+\newblock The {O}regon health insurance experiment: {E}vidence from the first
+  year.
+\newblock \emph{The Quarterly Journal of Economics}, 127\penalty0 (3):\penalty0
+  1057--1106, 2012.
+
+\bibitem[Freund and Hopkins(2023)]{freund:2023:robustnessauditingols}
+D.~Freund and S.~Hopkins.
+\newblock Towards practical robustness auditing for linear regression.
+\newblock \emph{arXiv preprint arXiv:2307.16315}, 2023.
+
+\bibitem[Giordano and Broderick(2023)]{giordano:2023:bayesij}
+R.~Giordano and T.~Broderick.
+\newblock The bayesian infinitesimal jackknife for variance.
+\newblock \emph{arXiv preprint arXiv:2305.06466}, 2023.
+
+\bibitem[Giordano et~al.(2015)Giordano, Broderick, and
+  Jordan]{giordano2015lrvbnips}
+R.~Giordano, T.~Broderick, and M.~I. Jordan.
+\newblock Linear response methods for accurate covariance estimates from mean
+  field variational {Bayes}.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  28:\penalty0 1441--1449, 2015.
+
+\bibitem[Giordano et~al.(2018)Giordano, Broderick, and
+  Jordan]{giordano2018covariances}
+R.~Giordano, T.~Broderick, and M.~I. Jordan.
+\newblock Covariances, robustness and variational {B}ayes.
+\newblock \emph{The Journal of Machine Learning Research}, 19\penalty0
+  (1):\penalty0 1981--2029, 2018.
+
+\bibitem[Giordano et~al.(2019{\natexlab{a}})Giordano, Jordan, and
+  Broderick]{giordano2019higherorder}
+R.~Giordano, M.~I. Jordan, and T.~Broderick.
+\newblock A higher-order {S}wiss army infinitesimal jackknife.
+\newblock \emph{arXiv preprint arXiv:1907.12116}, 2019{\natexlab{a}}.
+
+\bibitem[Giordano et~al.(2019{\natexlab{b}})Giordano, Stephenson, Liu, Jordan,
+  and Broderick]{giordano2019swiss}
+R.~Giordano, W.~Stephenson, R.~Liu, M.~I. Jordan, and T.~Broderick.
+\newblock A {Swiss} army infinitesimal jackknife.
+\newblock In \emph{The 22nd International Conference on Artificial Intelligence
+  and Statistics}, pages 1139--1147. PMLR, 2019{\natexlab{b}}.
+
+\bibitem[Giordano et~al.(2021)Giordano, Liu, Jordan, and
+  Broderick]{giordano2021bnp}
+R.~Giordano, R.~Liu, M.~I. Jordan, and T.~Broderick.
+\newblock Evaluating sensitivity to the stick-breaking prior in {Bayesian}
+  nonparametrics.
+\newblock 2021.
+
+\bibitem[Hampel(1974)]{hampel1974influence}
+F.~Hampel.
+\newblock The influence curve and its role in robust estimation.
+\newblock \emph{Journal of the American Statistical Association}, 69\penalty0
+  (346):\penalty0 383--393, 1974.
+
+\bibitem[Hampel(1986)]{hampel1986robustbook}
+F.~Hampel.
+\newblock \emph{Robust statistics: {T}he approach based on influence
+  functions}, volume 196.
+\newblock Wiley-Interscience, 1986.
+
+\bibitem[Huber(1981)]{huber1981robust}
+P.~Huber.
+\newblock \emph{Robust Statistics}.
+\newblock John Wiley \& Sons, New York, 1981.
+
+\bibitem[Huber and Donoho(1983)]{huber:1983:notion}
+P.~Huber and D.~Donoho.
+\newblock The notion of breakdown point.
+\newblock \emph{A Festschrift for Erich L. Lehmann}, 1983.
+
+\bibitem[Martinez(2022)]{martinez:2022:trustdictator}
+L.~Martinez.
+\newblock How much should we trust the dictator’s gdp growth estimates?
+\newblock \emph{Journal of Political Economy}, 130\penalty0 (10):\penalty0
+  2731--2769, 2022.
+
+\bibitem[Mises(1947)]{mises1947asymptotic}
+R.~Mises.
+\newblock On the asymptotic distribution of differentiable statistical
+  functions.
+\newblock \emph{The Annals of Mathematical Statistics}, 18\penalty0
+  (3):\penalty0 309--348, 1947.
+
+\bibitem[Moitra and Rohatgi(2022)]{moitra:2022:provablyauditingols}
+A.~Moitra and D.~Rohatgi.
+\newblock Provably auditing ordinary least squares in low dimensions.
+\newblock \emph{arXiv preprint arXiv:2205.14284}, 2022.
+
+\bibitem[Reeds(1976)]{reeds1976thesis}
+J.~Reeds.
+\newblock \emph{On the definition of von {Mises} functionals}.
+\newblock PhD thesis, Statistics, Harvard University, 1976.
+
+\bibitem[Turnbull-Dugarte et~al.(2022)Turnbull-Dugarte, Townsley, Foos, and
+  Baron]{turnbull:2022:mobilising}
+S.~Turnbull-Dugarte, J.~Townsley, F.~Foos, and D.~Baron.
+\newblock Mobilising support when the stakes are high: {Mass} emails affect
+  constituent-to-legislator lobbying.
+\newblock \emph{European Journal of Political Research}, 61\penalty0
+  (2):\penalty0 601--619, 2022.
+
+\end{thebibliography}

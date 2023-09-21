@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Angelucci and De~Giorgi(2009)]{angelucci2009indirect}
+M.~Angelucci and G.~De~Giorgi.
+\newblock Indirect effects of an aid program: {H}ow do cash transfers affect
+  ineligibles' consumption?
+\newblock \emph{American Economic Review}, 99\penalty0 (1):\penalty0 486--508,
+  2009.
+
+\bibitem[Angelucci et~al.(2015)Angelucci, Karlan, and
+  Zinman]{angelucci2015microcredit}
+M.~Angelucci, D.~Karlan, and J.~Zinman.
+\newblock Microcredit impacts: {E}vidence from a randomized microcredit program
+  placement experiment by {C}ompartamos {B}anco.
+\newblock \emph{American Economic Journal: Applied Economics}, 7\penalty0
+  (1):\penalty0 151--82, 2015.
+
+\bibitem[Baydin et~al.(2017)Baydin, Pearlmutter, Radul, and
+  Siskind]{baydin2017automatic}
+A.~Baydin, B.~Pearlmutter, A.~Radul, and J.~Siskind.
+\newblock Automatic differentiation in machine learning: {A} survey.
+\newblock \emph{The Journal of Machine Learning Research}, 18\penalty0
+  (1):\penalty0 5595--5637, 2017.
+
+\bibitem[Finkelstein et~al.(2012)Finkelstein, Taubman, Wright, Bernstein,
+  Gruber, Newhouse, Allen, Baicker, and Group]{finkelstein2012oregon}
+A.~Finkelstein, S.~Taubman, B.~Wright, M.~Bernstein, J.~Gruber, J.~Newhouse,
+  H.~Allen, K.~Baicker, and Oregon Health~Study Group.
+\newblock The {O}regon health insurance experiment: {E}vidence from the first
+  year.
+\newblock \emph{The Quarterly Journal of Economics}, 127\penalty0 (3):\penalty0
+  1057--1106, 2012.
+
+\bibitem[Giordano et~al.(2018)Giordano, Broderick, and
+  Jordan]{giordano2018covariances}
+R.~Giordano, T.~Broderick, and M.~I. Jordan.
+\newblock Covariances, robustness and variational {B}ayes.
+\newblock \emph{The Journal of Machine Learning Research}, 19\penalty0
+  (1):\penalty0 1981--2029, 2018.
+
+\bibitem[Giordano et~al.(2019)Giordano, Stephenson, Liu, Jordan, and
+  Broderick]{giordano2019swiss}
+R.~Giordano, W.~Stephenson, R.~Liu, M.~I. Jordan, and T.~Broderick.
+\newblock A swiss army infinitesimal jackknife.
+\newblock In \emph{The 22nd International Conference on Artificial Intelligence
+  and Statistics}, pages 1139--1147. PMLR, 2019.
+
+\bibitem[Giordano et~al.(2021)Giordano, Liu, Jordan, and
+  Broderick]{giordano2021bnp}
+R.~Giordano, R.~Liu, M.~I. Jordan, and T.~Broderick.
+\newblock Evaluating sensitivity to the stick-breaking prior in {Bayesian}
+  nonparametrics.
+\newblock 2021.
+
+\bibitem[Gustafson(2000)]{gustafson2000local}
+P.~Gustafson.
+\newblock Local robustness in {B}ayesian analysis.
+\newblock In \emph{Robust {B}ayesian Analysis}, pages 71--88. Springer, 2000.
+
+\bibitem[Hampel(1986)]{hampel1986robustbook}
+F.~Hampel.
+\newblock \emph{Robust statistics: {T}he approach based on influence
+  functions}, volume 196.
+\newblock Wiley-Interscience, 1986.
+
+\bibitem[Wilson et~al.(2020)Wilson, Kasy, and Mackey]{wilson:2020:cv}
+A.~Wilson, M.~Kasy, and L.~Mackey.
+\newblock Approximate cross-validation: Guarantees for model assessment and
+  selection.
+\newblock In \emph{International Conference on Artificial Intelligence and
+  Statistics}, pages 4530--4540. PMLR, 2020.
+
+\end{thebibliography}
