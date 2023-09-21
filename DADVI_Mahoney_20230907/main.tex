@@ -296,7 +296,7 @@ How can we optimize this objective?
 %
 \begin{itemize}
     \item Parameterize the family $\qdom$ using $\eta \in \rdom{\etadim}$ (so we have $\q(\theta \vert \eta)$)
-    \item Re-write the objective as 
+    \item Re-write the objective (using the reparameterization trick) as 
     \begin{align*}
         %
         \argmin_{\eta} F(\eta)
@@ -304,10 +304,9 @@ How can we optimize this objective?
         %
     \end{align*}
     and we can use autodiff to differentiate $\eta \mapsto f(\eta, \z)$
-    \item Use stochastic optimization
+    \item Use stochastic optimization.
 \end{itemize}
 
-\pause
 % \pause
 % \vspace{3em}
 % \textbf{In the old days \citep{bishop:2006:pattern}: }Restrict to models with tractable expectations.
@@ -325,15 +324,21 @@ How can we optimize this objective?
 % %
 % Then use stochastic optimization.
 
-
 We will study \textbf{ADVI}, a particular BBVI method
 \citep{kucukelbir:2017:advi}.
 
-\begin{itemize}
-    \item Use a multivariate normal family (either ``mean field'' or full-rank).
-    \item Use the ``reparameterization trick'' to write the KL using $\normz$
-    \item Do SGD using draws from $\normz$
-\end{itemize}
+% \begin{itemize}
+%     \item Use a multivariate normal family (either ``mean field'' or full-rank).
+%     \item Use the ``reparameterization trick'' to write the KL using $\normz$
+%     \item Do SGD using draws from $\normz$
+% \end{itemize}
+
+\pause
+\hrulefill
+
+\blue{\textbf{We propose:}}\\Instead of \red{$\expect{\normz}{f(\eta, \z)}$},
+optimize \blue{$\meann f(\eta, \z_n)$} for fixed $\z_n \iid \normz$.
+
 
 % ADVI specifies a family $\qdom$ of $\thetadim$-dimensional Gaussian
 % distributions, parameterized by $\eta \in \etadom$, encoding the means and
