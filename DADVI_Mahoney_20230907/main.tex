@@ -296,15 +296,21 @@ How can we optimize this objective?
 %
 \begin{itemize}
     \item Parameterize the family $\qdom$ using $\eta \in \rdom{\etadim}$ (so we have $\q(\theta \vert \eta)$)
+    \begin{itemize}
+        \item We will study \textbf{ADVI}, which takes $\q(\theta \vert \eta)$
+        to be Gaussian
+        \citep{kucukelbir:2017:advi}.
+        \item The parameters $\eta$ are the means and covariance (``mean-field'' or ``full-rank'')
+    \end{itemize}
     \item Re-write the objective (using the reparameterization trick) as 
     \begin{align*}
         %
         \argmin_{\eta} F(\eta)
-        \quad\text{ where }\quad F(\eta) := \expect{\normz}{f(\eta, \z)},
+        \quad\text{ where }\quad F(\eta) := \expect{\normz}{f(\eta, \z)}.
         %
     \end{align*}
-    and we can use autodiff to differentiate $\eta \mapsto f(\eta, \z)$
-    \item Use stochastic optimization.
+    \item Use autodiff to differentiate $\eta \mapsto f(\eta, \z)$
+    \item Optimize with stochastic optimization using draws $\z_n \sim \normz$.
 \end{itemize}
 
 % \pause
@@ -324,8 +330,6 @@ How can we optimize this objective?
 % %
 % Then use stochastic optimization.
 
-We will study \textbf{ADVI}, a particular BBVI method
-\citep{kucukelbir:2017:advi}.
 
 % \begin{itemize}
 %     \item Use a multivariate normal family (either ``mean field'' or full-rank).
@@ -550,11 +554,13 @@ For each of a range of models (next slide), we compared:
     posterior.
     \item[]
     %
+    \pause
     \item \textbf{DADVI:}  We used $\znum=\DADVINumDraws$ draws for DADVI for
     each model. We optimized using an off-the-shelf second-order Newton trust region
     method (\texttt{trust-ncg} in \texttt{scipy.optimize.minimize}) with no
     tuning or preconditioning.
     %
+    \pause
     \item[]
     \item[]\textbf{Stochastic ADVI methods:}
     \item Mean field ADVI: We used the PyMC implementation of
