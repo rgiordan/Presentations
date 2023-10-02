@@ -1,0 +1,184 @@
+
+\begin{frame}[t]{Low dimensional problems}
+
+Let's consider models which obey a \textbf{Bayesian central limit theorem} (BCLT).
+
+% Example: \textbf{Overdispersed Poisson (negative binomial) observations.}
+Example: \textbf{Negative binomial models with an unkown parameter
+$\gamma$.}
+
+%
+% \begin{minipage}[t]{0.45\textwidth}
+% %
+% \begin{align*}
+% %
+%     &\textrm{Fix }\alpha\text{, }\beta.
+%     \textrm{  For }n={} 1,\ldots,N\textrm{, }\\
+%     &\x_n |\gamma \iid{}
+%         \mathrm{NegativeBinomial}\left(
+%             \alpha,  \frac{\beta}{\gamma + \beta}\right).
+% %
+% \end{align*}
+% %
+% \end{minipage}
+% %
+% \begin{minipage}[t]{0.45\textwidth}
+% %
+% \begin{align*}
+% %
+% %
+% &\textrm{Here, }\theta = \gamma \textrm{, }f(\gamma) = \gamma\textrm{, and}\\
+% &\log \p(\xvec \vert \gamma, \w) =
+%     \sumn \w_n \ell_n(\gamma).\\
+% % &\textrm{Why this parameterization? }\\
+% % &\textrm{This is the marginal of }\\
+% % &\lambda_n \sim \mathrm{Gamma}(\alpha, \beta) \textrm{ and }\\
+% % &\x_n \vert \gamma, \lambda \sim \mathrm{Poisson}(\gamma \lambda_n).
+% %
+% \end{align*}
+% %
+% \end{minipage}
+
+% \vspace{-1em}
+% (This is the marginal of $\lambda_n \sim \mathrm{Gamma}(\alpha, \beta)$ and $\x_n
+% \vert \lambda_n \sim \mathrm{Poisson}(\lambda_n)$.)
+
+% \spskip
+% \begin{minipage}{0.35\linewidth}
+% As $N \rightarrow \infty$, the posterior $\p(\gamma \vert \xvec)$
+% \textbf{concentrates} at a point.
+%
+% \spskip
+% Covariances go to zero.
+% \end{minipage}
+% %
+% \begin{minipage}{0.6\linewidth}
+% \BCLTDensitiesGraph{}
+% \end{minipage}
+
+
+\onslide<2->{
+\hrulefill
+
+\textbf{Bayesian central limit theorem (BCLT) fact: }Suppose that $\p(\gamma
+\vert \xvec)$ obeys a BCLT. For functions $\bar{a}(\gamma)$,
+$\bar{b}(\gamma)$, $\bar{c}(\gamma)$ satisfying some regularity conditions
+\citep{kass:1990:posteriorexpansions},
+%
+\begin{align*}
+%
+\expect{\p(\gamma \vert \xvec)}
+    {\bar{a}(\gamma) \bar{b}(\gamma)} ={}& O_p(N^{-1})
+    &
+\expect{\p(\theta \vert \xvec)}
+    {\bar{a}(\gamma) \bar{b}(\gamma) \bar{c}(\gamma)} ={}&
+    O_p(N^{-2}).
+%
+\end{align*}
+%
+\hrulefill
+}
+%
+
+\onslide<3->{
+\begin{align*}
+%
+\expect{p(\gamma \vert \xvec, \w_n)}{\gamma} -
+    \expect{p(\gamma \vert \xvec)}{\gamma} ={}&
+\blue{\infl_n} (\w_n - 1) && + \red{\err(\w_n)}
+\onslide<2->{
+\\={}&
+    \undernote{
+        \blue{\expect{\p(\gamma \vert \xvec)}{ \gammabar \ellbar_n(\gamma)}}
+        }{O_p(N^{-1})}
+    (\w_n - 1)
+    &&
+    + \frac{1}{2}
+    \undernote{
+    \red{\expect{\p(\gamma \vert \xvec, \wtil_n)}{
+        \gammabar
+        \ellbar_n(\gamma)
+        \ellbar_n(\gamma)}}
+    }{O_p(N^{-2})}
+    (\w_n - 1)^2
+}
+\\
+% \quad\quad\quad&
+% \blue{\infl_n = O_p(N^{-1})} \quad\quad\gg
+% && \red{\err(\w_n) = O_p(N^{-2})}
+%
+\end{align*}
+
+The map $\w_n \mapsto N \left( \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma} -
+\expect{\p(\gamma \vert \xvec)}{\gamma} \right)$ becomes linear as $N
+\rightarrow \infty$.
+}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%
+%
+% \begin{frame}[t]{Low dimensional problems}
+% %
+% \begin{align*}
+% %
+% \expect{p(\gamma \vert \xvec, \w_n)}{\gamma} -
+%     \expect{p(\gamma \vert \xvec)}{\gamma} ={}&
+% \blue{\infl_n} (\w_n - 1) && + \red{\err(\w_n)}
+% \onslide<2->{
+% \\={}&
+%     \undernote{
+%         \blue{\expect{\p(\gamma \vert \xvec)}{ \gammabar \ellbar_n(\gamma)}}
+%         }{O_p(N^{-1})}
+%     (\w_n - 1)
+%     &&
+%     + \frac{1}{2}
+%     \undernote{
+%     \red{\expect{\p(\gamma \vert \xvec, \wtil_n)}{
+%         \gammabar
+%         \ellbar_n(\gamma)
+%         \ellbar_n(\gamma)}}
+%     }{O_p(N^{-2})}
+%     (\w_n - 1)^2
+% }
+% \\
+% \quad\quad\quad&
+% \blue{\infl_n = O_p(N^{-1})} \quad\quad\gg
+% && \red{\err(\w_n) = O_p(N^{-2})}
+% %
+% \end{align*}
+% %
+% % \onslide<3->{
+% % \spskip
+% % \textbf{Theorem (Giordano et al. 2023): }
+% % The BCLT result is square summable over $n$.
+% % %
+% % \begin{align*}
+% % %
+% % \blue{\meann (N \infl_n)^2 ={} O_p(1)}
+% % %
+% % \quad\quad\quad\quad
+% % \red{\meann (N^2 \err(\w_n))^2 ={} O_p(1)}
+% % %
+% % \end{align*}
+% %
+% % \spskip
+% % \textbf{Corollary: }
+% % The linear approximation is consistent for LOO-CV.
+% % }
+%
+% \end{frame}
+%
+
+
+\begin{frame}{Experiments}
+
+\LowDimAccuracyGraph{}
+
+\end{frame}

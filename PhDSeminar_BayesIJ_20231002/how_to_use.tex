@@ -1,0 +1,70 @@
+\begin{frame}[t]{Data re-weighting.}
+
+\question{How can we use the approximation?}
+
+Assume the \blue{slope} is computable and \red{error} is small.
+%
+\expansion{}
+
+
+\pause
+\textbf{Cross validation.} 
+Let $\w_{(-n)}$ leave out point $n$, and loss
+$f_n(\theta) = -\ell_n(\theta)$.
+% $\expect{p(\theta \vert \x)}{\ell_n(\theta)}$.
+%
+%
+\begin{align*}
+\textrm{LOO CV loss} =
+\meann \expect{p(\theta \vert \x, w_{(-n)})}{f_n(\theta)}
+\approx 
+\meann \expect{p(\theta \vert \x)}{f_n(\theta)} - \meann \blue{\infl_n}
+\end{align*}
+%
+% \begin{align*}
+% %
+% \textrm{LOO  CV error} =
+% \sumn\left(
+% \expect{p(\theta \vert \x, w_{(-n)})}{f(\theta)} -
+% \expect{p(\theta \vert \x)}{f(\theta)}\right)^2
+% \red{\approx}{}&
+% \sumn \left( -\blue{\infl_n} \right)^2
+% %
+% \end{align*}
+%
+\pause
+\textbf{Bootstrap.}
+Draw bootstrap
+weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
+%
+\begin{align*}
+%
+\textrm{Bootstrap variance} =
+\var{\p(\w)}{\expect{p(\theta \vert \x, w)}{f(\theta)}}
+\red{\approx} \frac{1}{N^2} \sumn \left(\blue{\infl_n} -
+    \frac{1}{N} \sum_{n'=1}^N \blue{\infl_{n'}} \right)^2
+%
+\end{align*}
+%
+% Let $\infl_{(1)} \le \infl_{(2)}, \ldots \le \infl_{(N)}$.
+% denote sorted influence scores.
+\pause
+\textbf{Influential subsets:
+Approximate maximum influence perturbation (AMIP).}
+
+Let $W_{(-K)}$ denote weights leaving out $K$ points.
+%
+\begin{align*}
+%
+\max_{\w \in W_{(-K)}} \left(
+\expect{p(\theta \vert \x, w)}{f(\theta)} -
+\expect{p(\theta \vert \x)}{f(\theta)}
+\right) \red{\approx} - \sum_{n=1}^K \blue{\infl_{(n)}}.
+%
+\end{align*}
+%
+% \pause
+% \question{How to compute the slopes \blue{$\infl_n$}?
+% How large is the error \red{$\err(\w)$}?}
+
+\end{frame}

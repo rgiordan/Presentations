@@ -1,0 +1,52 @@
+\frametitle{Our proposal: The infinitesimal jackknife \citep {jaeckel:1972:infinitesimal}}
+
+\begin{minipage}{0.4\textwidth}
+    \ElectionData{}
+\end{minipage}
+\begin{minipage}{0.59\textwidth}
+%
+We propose using the {\em infinitesimal jackknife} (IJ).
+
+\spskip
+%\pause
+For $n=1,\ldots,N$:
+
+\begin{itemize}
+    \item Compute the ``influence score'':
+        $\infl_n :=
+        \cov{p(\theta, \z \vert \xvec)}{\theta, \log p(\x_n \vert \theta, \z)}$.
+    %\pause
+    \item Typically, approximate $\inflhat_n \approx \infl_n$ with MCMC.
+\end{itemize}
+
+%\pause
+\spskip
+Then estimate $\gcovtrue$ with the sample covariance:
+%
+\begin{align*}
+%
+\gcovijhat := N \, \varhat{n}{\inflhat_n}.
+%
+\end{align*}
+%
+%
+\end{minipage}
+
+%\pause \vfill \begin{center}
+{\Large  From MCMC output, $\gcovijhat$ can be computed in a few lines of code.}
+
+% %\pause \vfill \begin{center}
+% {\Large  From MCMC output, $\gcovijhat$ can be computed in a few lines of code.}
+%
+% %\pause
+% % {\Large For example, given an \texttt{rstanarm} model fit \texttt{rstan\_fit}:}
+%
+\end{center}
+%
+% \begin{semiverbatim}
+% > lp_draws <- rstanarm::log_lik(rstan_fit)
+% > influence_mat <- num_obs * cov(lp_draws, param_draws)
+% > ij_cov <- cov(influence_mat)
+% \end{semiverbatim}
+
+

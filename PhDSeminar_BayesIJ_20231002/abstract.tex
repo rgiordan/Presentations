@@ -1,0 +1,28 @@
+Effortless frequentist covariances of posterior expectations with the Bayesian infinitesimal jackknife
+
+Bayesian posterior means depend on the data, so when the data is an IID random
+sample from some population, the posterior mean also has some sampling
+variability. If this variability is too large, and a new dataset from the same
+data-generating distribution would lead to substantively different posterior
+conclusions, then the Bayesian analysis is not robust to an a priori
+plausible perturbation of the model inputs. Though the classical Bayesian
+central limit theorem states that Bayesian and frequentist variances coincide
+asymptotically under correct model specification, the two differ in general
+under model misspecification, or when the relevant data-sampling distribution is
+conditional on high-dimensional, unobserved latent variables.
+
+Standard methods for estimating frequentist variance, such as the Laplace
+approximation and the nonparametric bootstrap, can be analytically difficult or
+computationally expensive to apply to Markov Chain Monte Carlo (MCMC), one of
+the most popular methods for approximating Bayesian posteriors.  In contrast, we
+show that the infinitesimal jackknife (IJ) variance estimator, which is based on
+the influence function of robust statistics, can be easily computed from the
+standard output of a single set of MCMC samples.  Under conditions similar to
+the Bayesian central limit theorem, we prove that, like the Laplace
+approximation and bootstrap, the IJ consistently estimates the frequentist
+variance of the posterior mean.  In the presence of nuisance parameters that do
+not obey a central limit theorem, we show that the IJ covariance is inconsistent
+in general, but argue that, in many cases, it remains a reasonable approximation
+to the bootstrap at a much lower computational cost. We demonstrate the accuracy
+and computational simplicity of the IJ on a range of simulated and real-world
+experiments.
