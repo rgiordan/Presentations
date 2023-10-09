@@ -1,0 +1,125 @@
+\documentclass[twoside,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\input{_math_macros}
+
+\numberwithin{equation}{section}
+
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{xcolor}
+
+\def\red#1{\textcolor{red}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+\def\green#1{\textcolor{teal}{#1}}
+
+
+\begin{document}
+
+\title{Bochner's theorem notes}
+
+\author{Ryan Giordano}
+
+\maketitle
+
+\section*{Setup}
+
+Motivating settings:
+%
+\begin{itemize}
+    \item How can you extend discrete stationary processes to continuous ones?
+    \item Your collaborator has a crazy kernel fitting method.  How to check whether it's valid?
+\end{itemize}
+%
+
+Goals:
+%
+\begin{itemize}
+\item How can we tell whether a particular stationary kernel is positive definite?
+\item Can we define an expressive class of valid kernels?
+\end{itemize}
+
+
+Subsidiary goals:
+%
+\begin{itemize}
+\item What is a Fourier transform / inverse transform, and how to compute?
+\item Motivate some STAT205A material (by using it)
+\end{itemize}
+
+
+\newpage
+\section*{Fourier transforms}
+
+Transforms:
+%
+\begin{align*}
+    \fhat(\omega) :={}& \int_{-\infty}^{\infty} \exp(-2\pi i \omega x) f(x) dx &
+    \ftil_k :={}& \sum_{n=1}^N \exp(-2 \pi k (n - 1) / N) f_n \\
+    f(x) :={}& \int_{-\infty}^{\infty} \exp(2\pi i \omega x) \fhat(\omega) d\omega &
+    f_n :={}& \frac{1}{N} \sum_{k} \exp(2 \pi k (n - 1) / N) \ftil_k.
+\end{align*}
+%
+
+Linear operators:
+%
+\begin{itemize}
+    \item Addition and multiplication
+    \item Translation and scaling
+    \item Differentiation
+    \item Convolution
+\end{itemize}
+%
+
+Domains:
+%
+\begin{itemize}
+    \item Whole real line
+    \item Integers $\leftrightarrow$ $(-1/2, 1/2)$.
+\end{itemize}
+%
+Let $\omega = k + \omega_r$ for $k \in \mathbb{Z}$ and $\omega_r \in (-1/2, 1/2)$.\\
+Then for $n \in \mathbb{Z}$, $\exp(2\pi i \omega n) = \exp(2\pi i \omega_r n)$.
+
+Some formulas:
+%
+%
+\begin{itemize}
+    \item $\exp\left(-\frac{1}{2} x^2 \right) \leftrightarrow \sqrt{2\pi} \exp\left(-2 (\pi \omega)^2 \right)$
+    \item $1(-1/2 \le x \le 1/2) \leftrightarrow \sinc \omega = \sin \omega / \omega$
+    \item $(1 - |x|) 1(|x| < 1) \leftrightarrow (\sinc \omega)^2$
+\end{itemize}
+%
+
+%
+
+
+
+\newpage
+\section*{Bochner's theorem}
+
+Preliminaries:
+%
+\begin{itemize}
+    \item Fourier inversion theorem
+    \item Fubini's theorem
+    \item Dominated convergence theorem
+    \item Fatou's lemma
+    \item Characteristic function continuity
+\end{itemize}
+%
+Sketch:
+
+
+
+
+\newpage
+\section*{Gaussian Process Kernels for Pattern Discovery and Extrapolation}
+
+
+\end{document}
