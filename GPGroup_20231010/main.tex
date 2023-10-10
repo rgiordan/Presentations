@@ -32,8 +32,8 @@
 Motivating settings:
 %
 \begin{itemize}
-    \item How can you extend discrete stationary processes to continuous ones?
     \item Your collaborator has a crazy kernel fitting method.  How to check whether it's valid?
+    \item How can you extend discrete stationary processes to continuous ones?
 \end{itemize}
 %
 
@@ -88,7 +88,6 @@ Then for $n \in \mathbb{Z}$, $\exp(2\pi i \omega n) = \exp(2\pi i \omega_r n)$.
 
 Some formulas:
 %
-%
 \begin{itemize}
     \item $\exp\left(-\frac{1}{2} x^2 \right) \leftrightarrow \sqrt{2\pi} \exp\left(-2 (\pi \omega)^2 \right)$
     \item $1(-1/2 \le x \le 1/2) \leftrightarrow \sinc \omega = \sin \omega / \omega$
@@ -108,18 +107,45 @@ Preliminaries:
 \begin{itemize}
     \item Fourier inversion theorem
     \item Fubini's theorem
-    \item Dominated convergence theorem
     \item Fatou's lemma
     \item Characteristic function continuity
+    \item Dominated convergence theorem
 \end{itemize}
 %
 Sketch:
 
+%
+\begin{align*}
+    g(\omega, A) ={}& \frac{1}{A} \int_0^A \int_0^A K(x, y) \exp(-2 \pi i \omega (x - y)) dx dy \\
+        ={}& \int_{-\infty}^\infty \mu(\tau / A) K(\tau) \exp(-2 \pi i \omega \tau) d\tau \\
+\textrm{where }    \mu(x) ={}& 1(|x| < 1)(1 - |x|) \\
+    g(\omega, A, M) ={}& \mu(\omega / 2M) g(\omega, A) \\
+    \int_{-\infty}^\infty \left(\frac{\sin t}{t}\right)^2 dt ={}& \pi
+\end{align*}
+%
+
+Consequences:
+%
+\begin{itemize}
+    \item Check $K(\tau) \propto \exp(-|\tau|)$: FT $ = 1 / (1 + \pi^2 \omega^2) \ge 0$
+    \item Rectangular function cannot be a kernel
+    \item Bochner's theorem characterizes valid characteristic functions
+    \item Counterexamples: $K(\tau) = \delta(\tau)$, $K(\tau) = 1$
+    \item Mercer's theorem for bounded domains: $K(\tau): [-1/2,1/2] \mapsto \mathbb{R}$
+    %
+    \begin{align*}
+        K(\tau) = 
+            \sum_{k \in \mathbb{Z}} \exp(2 \pi i k (x - y)) \fhat_k = 
+            \sum_{k \in \mathbb{Z}} \cos(2 \pi k x) \cos(2 \pi k y) \fhat_k
+    \end{align*}
+    %
+    \item Decay of Fourier coefficients gives smoothness
+    \item Check our physicist's kernel
+    \item Gaussian Process Kernels for Pattern Discovery and Extrapolation
+\end{itemize}
 
 
 
-\newpage
-\section*{Gaussian Process Kernels for Pattern Discovery and Extrapolation}
 
 
 \end{document}
