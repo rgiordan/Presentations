@@ -123,13 +123,14 @@ $\Rightarrow$
         \item DADVI provides accurate estimates of its own approximation error
         \item But stochastic ADVI often results in better objective function values (eventually)
     \end{itemize}
-    \item Theory and shortcomings
-    \begin{itemize}
-        \item Pessimistic dimension dependence results from optimization theory
-        \item ...which do not apply in certain BBVI settings.
-        \item DADVI fails for expressive BBVI approximations (e.g. full-rank ADVI)
-        \item More work to be done!
-    \end{itemize}
+    \item Sketch of theory and shortcomings
+    % \item Theory and shortcomings
+    % \begin{itemize}
+    %     \item Pessimistic dimension dependence results from optimization theory
+    %     \item ...which do not apply in certain BBVI settings.
+    %     \item DADVI fails for expressive BBVI approximations (e.g. full-rank ADVI)
+    %     \item More work to be done!
+    % \end{itemize}
 \end{itemize}
 %
 \end{frame}
@@ -810,145 +811,45 @@ objective, so LR and M-estimator computations are unavailable.
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Previous theoretical results}
-\vspace{-3em}
-\begin{minipage}[t]{0.48\textwidth}
-    \begin{align*}
-        &\text{Intractable objective:} 
-        \\ \etastar %:={}& \argmin_{\eta \in \etadom} F(\eta)
-            ={}& 
-            \argmin_{\eta \in \etadom} \expect{\normz}{f(\eta, \z)}
-    \end{align*}    
-\end{minipage}
-\begin{minipage}[t]{0.48\textwidth}
-    \begin{align*}
-        &\text{SAA approximation (DADVI):} 
-        \\ \etahat(\Z) %:={}& \argmin_{\eta \in \etadom} \hat{F}(\eta | \Z)
-            ={}&  \argmin_{\eta \in \etadom} \meann f(\eta, \z_n).
-    \end{align*}
-\end{minipage}
-
-\hrulefill
-
-The idea of optimizing $\hat{F}$ instead of SG on $F$ is old and
-well-studied in the optimization literature, where $\hat{F}$
-is known as the \textbf{Sample average approximation (SAA)}.
-
-Yet SAA is rarely used for BBVI.\footnote{Some exceptions I'm aware of:
-\citet{giordano:2018:covariances,giordano:2022:bnp,wycoff:2022:sparsebayesianlasso,burroni:2023:saabbvi}.}
-One possible reason is the following:
-
-% \hrulefill
-
-\noindent
-\textbf{Theorem \citep{nemirovski:2009:sgdvsfixed}:}
-In general, the error of both SG and SAA scale as
-$\sqrt{\thetadim / \znum}$,
-where, for SG, $\znum$ is the \textit{total number of samples used}.
-
-\pause
-%
-\begin{itemize}
-\item For SG, each $\z_n$ gets used once (for a single gradient step)
-\item For SAA, each $\z_n$ gets used once per optimization step
-(of which the are many).
-\item Often, in higher dimensions, SAA requires more optimization steps.
-\end{itemize}
-%
-
-
-\noindent
-\textbf{Corollary: \citep{kim:2015:guidetosaa}}
-In general, for a given accuracy, the computation required for SAA 
-scales worse than SG as the dimension $\thetadim$ grows.
-
-\pause
-\textbf{
-But we got good results with $\thetadim$ as
-high as $\PotusParamDim$ using only
-only $\znum = \DADVINumDraws$.  Why?}
-
-
-\end{frame}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Some first steps}
+\begin{frame}{Theory and shortcomings (sketch)}
+    %
+    \begin{itemize}
+        \item SAA is hardly ever used for BBVI.\footnote{Some exceptions I'm
+        aware of:
+        \citet{giordano:2018:covariances,giordano:2022:bnp,wycoff:2022:sparsebayesianlasso,burroni:2023:saabbvi}.}
+        Why not?
+        %
+        \begin{itemize}
+            \item Optimization literature predicts poor
+            dimension dependence \citep{nemirovski:2009:sgdvsfixed}
+            \item Our experiments show that these results are too pessimistic
+            \item We prove better dimension dependence for SAA in some
+            simple statistics models
+            \item A gap remains between theory and experiment.
+        \end{itemize}
+        %
+        \pause
+        \item[]
+        \item Can I use SAA for very expressive approximating families?
+        %
+        \begin{itemize}
+            \item We prove that the SAA fails for high-dimensional full-rank
+                Gaussian approximations
+            \item We conjecture analogous problems with other 
+                expressive approximations
+        \end{itemize}
+        %
+    \end{itemize}
 
-\noindent
-\textbf{Theorem \citep{giordano:2023:dadvi}:} When $\post$ is multivariate
-normal, and we use the mean-field Gaussian approximation, then, for any
-particular entry $\eta_d$ of $\eta$, then $\abs{\etahat_d - \etastar_d} =
-O_p(N^{-1/2})$ irrespective of $\thetadim$.
-
-\pause
-\vspace{2em}
-\noindent
-\textbf{Theorem \citep{giordano:2023:dadvi}:} Assume $\post$ has a ``global-local''
-structure:
-%
-\begin{align*}
-\theta ={}& (\gamma, \lambda_1, \ldots, \lambda_\lambdadim) &
-\p(\gamma, \lambda_1, \ldots, \lambda_\lambdadim | \y) ={}&
-\prod_{d=1}^{\lambdadim} \p(\gamma, \lambda_d \vert \y).
-\end{align*}
-%
-Assume that the dimension of $\gamma$ and each $\lambda_d$ stays fixed as
-$\lambdadim$ grows.
-
-Under regularity conditions, the DADVI error
-scales as $\sqrt{\log \lambdadim / \znum}$, not $\sqrt{\lambdadim / \znum}$.
-
-\vspace{2em}
-
-\pause
-\noindent
-\textbf{Proposal: }  The ``in general'' analysis of \citep{nemirovski:2009:sgdvsfixed}
-is too general for many practically interesting BBVI problems.
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{A negative result for expressive approximations}
-
-\noindent
-\textbf{Theorem \citep{giordano:2023:dadvi}:}  Assume that $\znum < \thetadim$,
-and that we use a full-rank Gaussian approximation.  Then the DADVI objective is
-unbounded below, and optimization of the DADVI objective will approach a
-degenerate point mass at $\argmax_\theta \log \post$.
-
-\pause
-
-\vspace{2em}
-\noindent
-\textbf{Proof sketch: }For any value of the variational
-mean, the DADVI objective only depends on $\post$ evaluated
-in a subspace spanned by $\Z$.  The variational objective can be driven to 
-$-\infty$ by driving the variance to zero in the subspace orthogonal to $\Z$.
-
-\pause
-
-\vspace{2em}
-\noindent
-\textbf{Proposal: }  All sufficiently expressive variational approximations
-(e.g. normalizing flows) will fail in the same way in high dimensions. However,
-this pathology can be obscured and overlooked in practice by low-quality
-optimization.
-
-
-
+    \vspace{1em}
+    Given the benefits of DADVI over ADVI,
+    \textbf{there's more work to be done!}
+    %
 \end{frame}
 
 
@@ -1017,6 +918,8 @@ Giordano, R.$^*$, Ingram, M.$^*$, Broderick, T.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{extra_slides}
 
 \begin{frame}{Linear response covariances}
 %
