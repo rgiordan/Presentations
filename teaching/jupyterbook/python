@@ -1,0 +1,1 @@
+To create a custom kernel run: -m ipykernel install --user --name=KERNELNAME
