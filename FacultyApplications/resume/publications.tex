@@ -16,15 +16,27 @@
   }
 }
 
+\defbibheading{myheading}[My Bibliography]{%
+% \hrulefill
+  \section{\sc #1}%
+  \addcontentsline{toc}{section}{#1}%
+  \vspace{0.9\baselineskip} % Adjust the vertical spacing here
+}
+
+
 \makeauthorbold{Giordano}
 
 \newpage
-\section{BIBHERE}
+% \section{BIBHERE}
 \nocite{*}
-\printbibliography[title=Publications]
+% \printbibliography[title=Publications]
+% \newpage
 
-\newpage
+\printbibliography[title=Preprints,keyword=preprint,heading=myheading]
+% \newpage
 
-% \printbibliography[title=Preprints,keyword=preprint]
-% \printbibliography[title=Under Review,keyword=submitted]
-% \printbibliography[title=Published,keyword=published]
+\printbibliography[title=Under Review,keyword=submitted,heading=myheading]
+% \newpage
+
+\printbibliography[title=Published,keyword=published,heading=myheading]
+% \newpage
