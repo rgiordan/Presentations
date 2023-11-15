@@ -245,6 +245,44 @@
       \true{nocite}
       \keyw{submitted}
     \endentry
+    \entry{broderick:020:automatic}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
+           family={Broderick},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5826925894a0d58142c30cfa901c7dac}{%
+           family={Giordano},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=32175eadcd46871defad421bb0812d58}{%
+           family={Meager},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5c960ca384126b39b4e2608b1a7c96f7}
+      \strng{fullhash}{5c960ca384126b39b4e2608b1a7c96f7}
+      \strng{bibnamehash}{5c960ca384126b39b4e2608b1a7c96f7}
+      \strng{authorbibnamehash}{5c960ca384126b39b4e2608b1a7c96f7}
+      \strng{authornamehash}{5c960ca384126b39b4e2608b1a7c96f7}
+      \strng{authorfullhash}{5c960ca384126b39b4e2608b1a7c96f7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2011.14999}
+      \field{note}{(Author order alphabetical; Giordano and Meager are joint lead authors.)}
+      \field{title}{An automatic finite-sample robustness metric: {W}hen can dropping a little data make a big difference?}
+      \field{year}{2020}
+      \true{nocite}
+      \keyw{submitted}
+    \endentry
     \entry{giordano2019higher}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=5826925894a0d58142c30cfa901c7dac}{%
