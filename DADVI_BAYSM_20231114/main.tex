@@ -70,7 +70,7 @@ straightforward and accurate but slow.
     \begin{itemize}
         \item SG algorithms can be hard to tune
         \item Assessing convergence and stochastic error can be difficult
-        \item SG optimization can perform worse than second-order methods on tractable objectives
+        %\item SG optimization can perform worse than second-order methods on tractable objectives
     \end{itemize}
     %
     \item Many BBVI methods employ a \textbf{mean-field (MF) approximation} $\Rightarrow$
@@ -112,19 +112,27 @@ $\Rightarrow$
     \begin{itemize}
         \item Automatic differentiation variational inference (ADVI) (a BBVI method)
         \item Our approximation: ``Deterministic ADVI'' (DADVI)
-        \item Linear response (LR) covariances
-        \item Estimating approximation error
+        \item $^{\star}$Linear response (LR) covariances
+        \item $^{\star}$Estimating approximation error
     \end{itemize}
+\end{itemize}
+
+\onslide<2->{
+\begin{itemize}
     \item Experimental results: DADVI vs ADVI
     \begin{itemize}
         \item DADVI converges faster than ADVI, and requires no tuning
+        \item ADVI often results in better objective function values than DADVI (eventually), but
         \item DADVI's posterior mean estimates' accuracy are comparable to ADVI
-        \item DADVI+LR provides more accurate posterior variance estimates than ADVI
-        \item DADVI provides accurate estimates of its own approximation error
-        \item But stochastic ADVI often results in better objective function values (eventually)
+        \item $^{\star}$DADVI+LR provides more accurate posterior variance estimates than ADVI
+        \item $^{\star}$DADVI provides accurate estimates of its own approximation error
     \end{itemize}
-    \item Sketch of theory and shortcomings
-    % \item Theory and shortcomings
+\end{itemize}
+}
+
+\onslide<3->{
+\begin{itemize}
+    \item Sketch of theory and work to be done!
     % \begin{itemize}
     %     \item Pessimistic dimension dependence results from optimization theory
     %     \item ...which do not apply in certain BBVI settings.
@@ -133,6 +141,14 @@ $\Rightarrow$
     % \end{itemize}
 \end{itemize}
 %
+}
+
+\vfill
+\onslide<1->{
+    \hrulefill\\
+    $^{\star}$ Not covered in today's talk --- see our paper!    
+}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -180,7 +196,7 @@ We will be interested in means and covariances of the posterior $\post$.
         \text{Likelihood } \p(\y \vert \theta):&\quad \textrm{Time series with random effects}\\
         \text{Parameter }\theta:& \quad \PotusParamDim\textrm{-dimensional}\\
         \text{Interested in:}& \quad\textrm{Vote share on election day}\\
-        \text{MCMC time:}& \quad \PotusNUTSMinutes \textrm{ minutes (PyMC3 NUTS)}
+        \text{MCMC time:}& \quad \PotusNUTSMinutes \textrm{ minutes (PyMC NUTS)}
     \end{align*}
 
     \textbf{How can we approximate the posterior more quickly?}
@@ -211,76 +227,79 @@ The KL divergence is zero if and only if the two distributions are the same.
 %
 \begin{align*}
 %
-\textrm{A tautology: }&& \post &= \argmin_{\q} \kl{\q(\theta)}{\post} \\
+%\textrm{A tautology: }&& \post &= \argmin_{\q} \kl{\q(\theta)}{\post} \\
 \textrm{Variational inference: }&& \qstar(\theta) &= \argmin_{\q \in \qdom} \kl{\q(\theta)}{\post}
 \quad\textrm{ ... for restricted }\qdom\\
 %
 \end{align*}
 %
-\pause
-%
-\begin{minipage}{0.4\textwidth}
-    \includegraphics[width=\textwidth]{static_figures/VB}
-\end{minipage}
-\begin{minipage}{0.55\textwidth}
-We hope to choose $\qdom$ so that
-%
-\begin{itemize}
-\item The optimization problem is tractable
-%
-\begin{itemize}
-\item[$\rightarrow$] simple $\qdom$ are better
-\end{itemize}
-%
-\item The best approximation is a good one
-\begin{itemize}
-    \item[$\rightarrow$] complex $\qdom$ are better
-\end{itemize}    
-\end{itemize}
+% We will study \textbf{ADVI}, which takes $\q(\theta \vert \eta)$
+% to be Gaussian \citep{kucukelbir:2017:advi}.
 
-The approximation can be poor because
-%
-\begin{itemize}
-\item Poor optimization
-\item The family $\qdom$ isn't expressive enough
-\end{itemize}
-%
-%
-\end{minipage}
-\end{frame}
+% \pause
+% %
+% \begin{minipage}{0.4\textwidth}
+%     \includegraphics[width=\textwidth]{static_figures/VB}
+% \end{minipage}
+% \begin{minipage}{0.55\textwidth}
+% We hope to choose $\qdom$ so that
+% %
+% \begin{itemize}
+% \item The optimization problem is tractable
+% %
+% \begin{itemize}
+% \item[$\rightarrow$] simple $\qdom$ are better
+% \end{itemize}
+% %
+% \item The best approximation is a good one
+% \begin{itemize}
+%     \item[$\rightarrow$] complex $\qdom$ are better
+% \end{itemize}    
+% \end{itemize}
 
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The approximation can be poor because
+% %
+% \begin{itemize}
+% \item Poor optimization
+% \item The family $\qdom$ isn't expressive enough
+% \end{itemize}
+% %
+% %
+% \end{minipage}
+% \end{frame}
 
 
-\begin{frame}[t]{Black-box variational inference}
-%
-\begin{align*}
-%
-\textrm{VI needs to solve:   }\quad\quad
-\qstar(\theta) &= \argmin_{\q \in \qdom} 
+
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \begin{frame}[t]{Black-box variational inference}
+% %
+% \begin{align*}
+% %
+% \textrm{VI needs to solve:   }\quad\quad
+% \qstar(\theta) &= \argmin_{\q \in \qdom} 
+% % \undernote{
+% % \left( 
+% % \undernote{
+% %     \expect{\q(\theta)}{\log \q(\theta)}
+% %     }{\textrm{Entropy of }\q} - 
+% % \undernote{
+% %     \expect{\q(\theta)}{\log \p(\theta, \y)}
+% % }{\textrm{Often intractable}}
+% %  - \overnote{\p(\y)}{\textrm{Constant}}
+% % \quad\right)}{\kl{\q(\theta)}{\p(\theta)}}.
 % \undernote{
-% \left( 
-% \undernote{
-%     \expect{\q(\theta)}{\log \q(\theta)}
-%     }{\textrm{Entropy of }\q} - 
-% \undernote{
-%     \expect{\q(\theta)}{\log \p(\theta, \y)}
-% }{\textrm{Often intractable}}
-%  - \overnote{\p(\y)}{\textrm{Constant}}
-% \quad\right)}{\kl{\q(\theta)}{\p(\theta)}}.
-\undernote{
-    \kl{\q(\theta)}{\p(\theta)}
-}{
-\vspace{1em}\\
-\textrm{Involves the intractable integral }\\
-\expect{\q(\theta)}{\log \p(\theta, \y)}
-}
-%
-\end{align*}
+%     \kl{\q(\theta)}{\p(\theta)}
+% }{
+% \vspace{1em}\\
+% \textrm{Involves the intractable integral }\\
+% \expect{\q(\theta)}{\log \p(\theta, \y)}
+% }
+% %
+% \end{align*}
 
 How can we optimize this objective?
 \pause
@@ -292,7 +311,7 @@ How can we optimize this objective?
         \item We will study \textbf{ADVI}, which takes $\q(\theta \vert \eta)$
         to be Gaussian
         \citep{kucukelbir:2017:advi}.
-        % \item The parameters $\eta$ are the means and covariance (``mean-field'' or ``full-rank'')
+        \item The parameters $\eta$ are the means and covariance (``mean-field'' or ``full-rank'')
     \end{itemize}
     \item Re-write the objective (using the reparameterization trick) as 
     \begin{align*}
@@ -613,45 +632,45 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Comparisons}
+% \begin{frame}{Comparisons}
 
-To form a common scale for the accuracy of the
-posteriors, we report:
-%
-\begin{align*}
-\muerr_{\method} :={}& \frac{\mu_{\method} - \mu_{\nuts}}{\sigma_{\nuts}}
-&
-\sderr_{\method} :={}& \frac{\sigma_{\method} - \sigma_{\nuts}}{\sigma_{\nuts}}.
-%
-\end{align*}
-%
-where
-%
-\begin{align*}
-%
-\mu_{\method} :={}& \method \text{ posterior mean}
-&
-\sigma_{\method} :={}& \method\text{ posterior SD}.
-%
-\end{align*}
+% To form a common scale for the accuracy of the
+% posteriors, we report:
+% %
+% \begin{align*}
+% \muerr_{\method} :={}& \frac{\mu_{\method} - \mu_{\nuts}}{\sigma_{\nuts}}
+% &
+% \sderr_{\method} :={}& \frac{\sigma_{\method} - \sigma_{\nuts}}{\sigma_{\nuts}}.
+% %
+% \end{align*}
+% %
+% where
+% %
+% \begin{align*}
+% %
+% \mu_{\method} :={}& \method \text{ posterior mean}
+% &
+% \sigma_{\method} :={}& \method\text{ posterior SD}.
+% %
+% \end{align*}
    
-\pause
-\hrulefill
+% \pause
+% \hrulefill
 
-We measure computational cost using both
-%
-\begin{itemize}
-\item \textbf{Wall time} and 
-\item \textbf{Number of model evaluations} (gradients, Hessian-vector products).
-\end{itemize}
-%
+% We measure computational cost using both
+% %
+% \begin{itemize}
+% \item \textbf{Wall time} and 
+% \item \textbf{Number of model evaluations} (gradients, Hessian-vector products).
+% \end{itemize}
+% %
 
-We compare achieved objective values using a large number of independent samples.
+% We compare achieved objective values using a large number of independent samples.
 
-We report objective values and computation cost relative to DADVI.
+% We report objective values and computation cost relative to DADVI.
 
 
-\end{frame}
+% \end{frame}
 
 
 
@@ -712,84 +731,7 @@ $\Rightarrow$ DADVI is faster, simpler, and the posterior means are not worse.
 \item Improved (LR) posterior covariance esimates
 \end{itemize}
 %
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{Linear response covariances and sampling uncertainty}
-%
-% DADVI is faster, simpler, and the posterior means are not worse.
-
-% \textbf{But we can do even better!}
-
-% \hrulefill
-
-% \textbf{Approximation Error}
-\vspace{-2em}
-
-\begin{minipage}[t]{0.48\textwidth}
-    \begin{align*}
-        &\text{Intractable objective:} 
-        \\ \etastar %:={}& \argmin_{\eta \in \etadom} F(\eta)
-            ={}& 
-            \argmin_{\eta \in \etadom} \expect{\normz}{f(\eta, \z)}
-    \end{align*}    
-\end{minipage}
-\begin{minipage}[t]{0.48\textwidth}
-    \begin{align*}
-        &\text{DADVI approximation:} 
-        \\ \etahat(\Z) %:={}& \argmin_{\eta \in \etadom} \hat{F}(\eta | \Z)
-         ={}&  \argmin_{\eta \in \etadom} \meann f(\eta, \z_n).
-    \end{align*}
-\end{minipage}
-%
-
-% %
-% The DADVI estimator $\etahat(\Z)$ is random --- it depends
-% on $\Z = (\z_1, \ldots, \z_\znum)$.
-
-\hrulefill
-
-What is the error of the DADVI approximation $\etahat - \etastar$?
-
-\pause
-
-$\Leftrightarrow$ What is the distribution of the
-DADVI error $\etahat - \etastar$ under sampling of $\Z$?
-
-\textbf{Answer: } The same as a that of any M-estimator: 
-    asymptotically normal (as $\znum$ grows) 
-% with covariance given in terms of 
-% $\hess{\eta}{\klfullobj{\etastar}} \approx \hess{\eta}{\klobj{\etahat}}$
-
-\pause
-
-\hrulefill
-
-% \textbf{Linear response covariances}
-
-Posterior variances are often badly estimated by mean-field (MF) approximations.
-
-Linear response (LR) covariances improve covariance estimates by computing
-\textit{sensitivity} of the variational means to 
-particular perturbations.  \citep{giordano:2018:covariances}
-
-\textbf{Example: } With a correlated Gaussian $\post$,
-the ADVI means are exactly correct, the ADVI variances are underestimated,
-and LR covariances are exactly correct.
-
-\pause
-
-\hrulefill
-
-Both DADVI error and LR covariances can be computed from the DADVI objective.
-
-Stochastic ADVI does not produce an actual optimum of any tractable
-objective, so LR and M-estimator computations are unavailable.
+See paper for details!
 
 \end{frame}
 
@@ -801,16 +743,6 @@ objective, so LR and M-estimator computations are unavailable.
 \begin{frame}{Posterior standard deviation accuracy}
     \PosteriorSdAccuracy{}
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{DADVI approximation error accuracy}
-    \CoverageHistogram{}
-\end{frame}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
