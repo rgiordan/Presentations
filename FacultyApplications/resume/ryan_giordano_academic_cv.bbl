@@ -208,6 +208,47 @@
       \range{pages}{80}
       \keyw{published}
     \endentry
+    \entry{shiffman:2023:droppingsinglecell}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=72b023272f90f28eac38e5f9ba7a2dc0}{%
+           family={Shiffman},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5826925894a0d58142c30cfa901c7dac}{%
+           family={Giordano},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
+           family={Broderick},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1c4d3fc562bd002e63bfe2881ac57998}
+      \strng{fullhash}{1c4d3fc562bd002e63bfe2881ac57998}
+      \strng{bibnamehash}{1c4d3fc562bd002e63bfe2881ac57998}
+      \strng{authorbibnamehash}{1c4d3fc562bd002e63bfe2881ac57998}
+      \strng{authornamehash}{1c4d3fc562bd002e63bfe2881ac57998}
+      \strng{authorfullhash}{1c4d3fc562bd002e63bfe2881ac57998}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{q-bio.QM}
+      \field{eprinttype}{arXiv}
+      \field{title}{Could dropping a few cells change the takeaways from differential expression?}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2312.06159
+      \endverb
+      \keyw{preprint}
+    \endentry
     \entry{kasprzak:2022:bclt}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=7a1e11e1b6703dd1bfbf1d58b4a26324}{%

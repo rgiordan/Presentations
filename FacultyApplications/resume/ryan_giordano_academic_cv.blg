@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'ryan_giordano_academic_cv.blg'
-[37] biber:340> INFO - === Wed Nov 15, 2023, 13:43:51
-[44] Biber.pm:418> INFO - Reading 'ryan_giordano_academic_cv.bcf'
-[74] Biber.pm:969> INFO - Using all citekeys in bib section 0
-[81] Biber.pm:4383> INFO - Processing section 0
-[87] Biber.pm:4574> INFO - Looking for bibtex file 'publications.bib' for section 0
-[88] bibtex.pm:1713> INFO - LaTeX decoding ...
-[94] bibtex.pm:1518> INFO - Found BibTeX data source 'publications.bib'
-[176] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[176] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[176] Biber.pm:4203> INFO - Sorting list 'ydnt/global//global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
-[176] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[185] bbl.pm:654> INFO - Writing 'ryan_giordano_academic_cv.bbl' with encoding 'UTF-8'
-[193] bbl.pm:757> INFO - Output to ryan_giordano_academic_cv.bbl
+[38] biber:340> INFO - === Tue Dec 12, 2023, 09:23:13
+[45] Biber.pm:418> INFO - Reading 'ryan_giordano_academic_cv.bcf'
+[77] Biber.pm:969> INFO - Using all citekeys in bib section 0
+[83] Biber.pm:4383> INFO - Processing section 0
+[89] Biber.pm:4574> INFO - Looking for bibtex file 'publications.bib' for section 0
+[89] bibtex.pm:1713> INFO - LaTeX decoding ...
+[96] bibtex.pm:1518> INFO - Found BibTeX data source 'publications.bib'
+[178] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[178] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[178] Biber.pm:4203> INFO - Sorting list 'ydnt/global//global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[178] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[187] bbl.pm:654> INFO - Writing 'ryan_giordano_academic_cv.bbl' with encoding 'UTF-8'
+[194] bbl.pm:757> INFO - Output to ryan_giordano_academic_cv.bbl

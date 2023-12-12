@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  15 NOV 2023 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  12 DEC 2023 09:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -507,7 +507,7 @@ Overfull \hbox (40.41666pt too wide) in paragraph at lines 74--79
 (./awards.tex) (./publications.tex [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.69325pt too wide) in paragraph at lines 35--35
+Overfull \hbox (0.69325pt too wide) in paragraph at lines 42--42
 []\OT1/cmr/bx/n/10 Giordano, R.\OT1/cmr/m/n/10 , Brod-er-ick, T., ``The Bayesia
 n In-finites-i-mal Jack-knife for Vari-ance''. In: \OT1/cmr/m/it/10 arXiv prepr
 int
@@ -529,10 +529,10 @@ Package logreq Info: Writing requests to 'ryan_giordano_academic_cv.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15445 strings out of 480171
- 272960 string characters out of 5894489
+ 15449 strings out of 480171
+ 273144 string characters out of 5894489
  768603 words of memory out of 5000000
- 33244 multiletter control sequences out of 15000+600000
+ 33247 multiletter control sequences out of 15000+600000
  472066 words of font info for 38 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  60i,9n,68p,758b,1461s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -572,10 +572,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/marvosym/marvosym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /wasy-type1/wasy10.pfb>
-Output written on ryan_giordano_academic_cv.pdf (4 pages, 134007 bytes).
+Output written on ryan_giordano_academic_cv.pdf (4 pages, 136672 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
