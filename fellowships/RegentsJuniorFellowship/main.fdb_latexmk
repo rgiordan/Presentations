@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1712096454 "main.aux" "main.bbl" "main" 1712096857
+["bibtex main"] 1712098681 "main.aux" "main.bbl" "main" 1712099490
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1712096857 747 8f79a0b2034b48badf9c3a19b4e08f62 "lualatex"
+  "main.aux" 1712099490 747 1418740671390ded3845a7cd26a1c8c6 "lualatex"
   "references.bib" 1712095374 40012 ba1f397198a85b37af52518aeab94cdd ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1712096857 "main.tex" "main.pdf" "main" 1712096857
+["lualatex"] 1712099490 "main.tex" "main.pdf" "main" 1712099490
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -102,10 +102,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1688676452 4073795 a82a847ac97773bf4a607ab050efa3a1 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1710432830 4555432 c52d71834d1c75d98824804c400c464e ""
   "_headers.tex" 1712095638 980 507cbd6e89a8f0b67bf25d025cd1860b ""
-  "main.aux" 1712096857 747 8f79a0b2034b48badf9c3a19b4e08f62 "lualatex"
-  "main.bbl" 1712096454 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
-  "main.out" 1712096857 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.tex" 1712096856 1664 ee2c72e11826616dc1861321e00a8912 ""
+  "main.aux" 1712099490 747 1418740671390ded3845a7cd26a1c8c6 "lualatex"
+  "main.bbl" 1712098681 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
+  "main.out" 1712099490 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.tex" 1712099488 5919 df48b3ce074ad590456269ae3f2c6959 ""
   (generated)
   "main.aux"
   "main.log"
