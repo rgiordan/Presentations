@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1712269676 "main.aux" "main.bbl" "main" 1712269677
+["bibtex main"] 1712269768 "main.aux" "main.bbl" "main" 1712269768
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1712269677 3662 f089f91c294c3178aacb053c301896d7 "lualatex"
+  "main.aux" 1712269768 3240 c704aefc53720a42a7b0f2d06e6f8533 "lualatex"
   "references.bib" 1712269675 44159 07117694ebb145c65af548f69d752f41 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1712269677 "main.tex" "main.pdf" "main" 1712269677
+["lualatex"] 1712269768 "main.tex" "main.pdf" "main" 1712269768
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -145,10 +145,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1688676452 4073795 a82a847ac97773bf4a607ab050efa3a1 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1710432830 4555432 c52d71834d1c75d98824804c400c464e ""
   "_headers.tex" 1712095638 980 507cbd6e89a8f0b67bf25d025cd1860b ""
-  "main.aux" 1712269677 3662 f089f91c294c3178aacb053c301896d7 "lualatex"
-  "main.bbl" 1712269676 6759 7f38e522fc4c14ca5989cb185183baf4 "bibtex main"
-  "main.out" 1712269677 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.tex" 1712269636 7761 8072590621732c42f0d7f38a1761f2e4 ""
+  "main.aux" 1712269766 3539 dd6b98601a6828f6a79687f61b0b2306 "lualatex"
+  "main.bbl" 1712269767 5913 c1a321826d174bcb810ea4dadf8fa37f "bibtex main"
+  "main.out" 1712269766 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.tex" 1712269761 7778 6813f0dfb77cbf072898bf73660375f7 ""
   (generated)
   "main.aux"
   "main.log"

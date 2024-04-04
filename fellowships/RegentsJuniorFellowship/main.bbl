@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -78,13 +78,6 @@ F.~Hampel, E.~Ronchetti, P.~Rousseeuw, and W.~Stahel.
   functions}.
 \newblock Wiley-Interscience; New York, 1986.
 
-\bibitem[Hensman et~al.(2015)Hensman, Matthews, and
-  Ghahramani]{hensman:2015:gpclassificationscalable}
-J.~Hensman, A.~Matthews, and Z.~Ghahramani.
-\newblock Scalable variational {Gaussian} process classification.
-\newblock In \emph{Artificial Intelligence and Statistics}, pages 351--360.
-  PMLR, 2015.
-
 \bibitem[Li et~al.(2018)Li, Morgan, and Zaslavsky]{li:2018:balancingcovariates}
 F.~Li, K.~Morgan, and A.~Zaslavsky.
 \newblock Balancing covariates via propensity score weighting.
@@ -96,13 +89,6 @@ F.~Li, K.~Morgan, and A.~Zaslavsky.
 J.~Lopez-Martin, J.~Phillips, and A.~Gelman.
 \newblock Multilevel regression and poststratification case studies, 2022.
 \newblock URL \url{https://bookdown.org/jl5522/MRP-case-studies/}.
-
-\bibitem[McAuliffe et~al.(2006)McAuliffe, Blei, and
-  Jordan]{mcauliffe:2006:dpeb}
-J.~McAuliffe, D.~Blei, and M.~Jordan.
-\newblock Nonparametric empirical bayes for the {Dirichlet} process mixture
-  model.
-\newblock \emph{Statistics and Computing}, 16:\penalty0 5--14, 2006.
 
 \bibitem[Meager(2019)]{meager:2019:microcredit}
 R.~Meager.
@@ -139,12 +125,6 @@ J.~Regier, K.~Fischer, K.~Pamnany, A.~Noack, J.~Revels, M.~Lam, S.~Howard,
   {Julia} at petascale.
 \newblock \emph{Journal of Parallel and Distributed Computing}, 127:\penalty0
   89--104, 2019.
-
-\bibitem[Ro{\v{c}}kov{\'a} and George(2018)]{rovckova:2018:spikeandslablasso}
-V.~Ro{\v{c}}kov{\'a} and E.~George.
-\newblock The spike-and-slab lasso.
-\newblock \emph{Journal of the American Statistical Association}, 113\penalty0
-  (521):\penalty0 431--444, 2018.
 
 \bibitem[Talts et~al.(2018)Talts, Betancourt, Simpson, Vehtari, and
   Gelman]{talts:2018:sbc}

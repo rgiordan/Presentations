@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
-Illegal, another \bibstyle command---line 62 of file main.aux
+Illegal, another \bibstyle command---line 56 of file main.aux
  : \bibstyle
  :          {plainnat}
 I'm skipping whatever remains of this command
@@ -10,45 +10,45 @@ Database file #1: references.bib
 Warning--entry type for "lopezmartin:2022:mrptutorial" isn't style-file defined
 --line 1579 of file references.bib
 Warning--empty journal in gelman:2007:surveystruggles
-You've used 23 entries,
+You've used 20 entries,
             2773 wiz_defined-function locations,
-            729 strings with 8931 characters,
-and the built_in function-call counts, 10782 in all, are:
-= -- 948
-> -- 669
-< -- 11
-+ -- 227
-- -- 204
-* -- 882
-:= -- 1662
-add.period$ -- 72
-call.type$ -- 23
-change.case$ -- 136
-chr.to.int$ -- 23
-cite$ -- 47
-duplicate$ -- 471
-empty$ -- 864
-format.name$ -- 233
-if$ -- 2243
+            711 strings with 8470 characters,
+and the built_in function-call counts, 9216 in all, are:
+= -- 798
+> -- 588
+< -- 9
++ -- 200
+- -- 180
+* -- 756
+:= -- 1434
+add.period$ -- 62
+call.type$ -- 20
+change.case$ -- 119
+chr.to.int$ -- 20
+cite$ -- 41
+duplicate$ -- 397
+empty$ -- 733
+format.name$ -- 204
+if$ -- 1904
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 19
-newline$ -- 124
-num.names$ -- 92
-pop$ -- 284
+missing$ -- 16
+newline$ -- 109
+num.names$ -- 80
+pop$ -- 251
 preamble$ -- 1
-purify$ -- 114
+purify$ -- 100
 quote$ -- 0
-skip$ -- 379
+skip$ -- 322
 stack$ -- 0
-substring$ -- 362
-swap$ -- 44
-text.length$ -- 2
+substring$ -- 283
+swap$ -- 31
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 248
+type$ -- 215
 warning$ -- 1
-while$ -- 96
+while$ -- 80
 width$ -- 0
-write$ -- 299
+write$ -- 259
 (There was 1 error message)
