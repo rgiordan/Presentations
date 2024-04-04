@@ -47,58 +47,64 @@ and sensitivity analysis.
 
 Bayesian statistical techniques are a conceptually powerful set of tools for
 representing and quantifying uncertainty, and are increasingly popular across
-the physical and social sciences (CITE).  Often, a statistical analysis involves
-a single quantity of interest, such as the effect of a policy intervention
-(CITE), the type of an astronomical object (CITE), the outcome of an election
-(CITE), or the identity of an ancestral genetic population (CITE), and Bayesian
-statistics abile to propagate uncertainty from a any unknown latent modeling
-quantities to the final estimate.  But this conceptual strength is a
-computational weakness, since even approximately accounting for a large number
-of latent quantities is computationally intensive.  Bayesian estimates often
-take hours to days to compute, and it is of considerable interest to develop
-computationally efficient, approximate Bayesian procedures.
+the physical and social sciences.  Often, a statistical analysis involves a
+single quantity of interest, such as the effect of a policy intervention
+\citep{meager:2019:microcredit}, the type of an astronomical object
+\citep{regier:2019:cataloging}, the outcome of an election
+\citep{economist:2020:election}, or the identity of an ancestral genetic
+population \citep{pritchard:2000:inference}, and Bayesian statistics abile to
+propagate uncertainty from a any unknown latent modeling quantities to the final
+estimate.  But this conceptual strength is a computational weakness, since even
+approximately accounting for a large number of latent quantities is
+computationally intensive. Bayesian estimates often take hours to days to
+compute, and it is of considerable interest to develop computationally
+efficient, approximate Bayesian procedures \citep{blei:2017:variational,aabi}.
 
-I have recently shown that a slight modification of the preceding procedure can
-use neural network (NN) classifiers to learn low-dimensional marginals of
-Bayesian posteriors using only simulated data.  The idea is based on the
-estimation of log--likelihood ratios in simulation--based inference.
-Furthermore, the accuracy of the approximateion can be easily checked using
-simulation--based calibration (SBC), a well--known Bayesian validation
-procedure.  Note that SBC is rarely used in practice, since it is prohibitively
-computationally expensive in most   classical Bayesian procedures.  However, for
-a posterior approximation based on a NN classifier, SBC is computationally
-cheap.  For the cost of training a NN classifier, one can get closed-form
-estimates of Bayesian posterior marginals with strong, computable statistical
-accuracy guarantees.
+Together with a staff scientist at LBNL, I have recently developed a new
+approach to Bayesian inference based on neural network classifiers (NNC). The
+idea is derived from a technique for point estimation in simulation--based
+inference (SBI) (i.e., inference in problems without a tractable likelihood
+function), a technique I will refer to as SBI-NNC
+\citep{cranmer:2020:frontierofsimulation}.  Rather than learning a distribution
+directly (as is done in nearly all other ML--based Bayesian learning, e.g.
+\citep{papamakarios:2021:normalizing}), this technique uses the fact that
+optimal classifiers learn likelihood ratios. I have shown that a variant of the
+SBI-NNC trick can be applied to learn Bayesian marginals without having to learn
+the distribution of all the latent variables, at the cost of training a NNC on a
+single classification task.  I will refer to this technique as Bayes--NNC.
 
-To my knowledge, there are no existing techniques that offer the advantages of
-my proposed method. There has been recent interest in statistical procedures
-that improve computability by accounting only approximately for the dependence
-between large numbers of latent variables.  However, these approximations come
-without accuracy guarantees, and are known to be inaccurate in certain practical
-cases. The vast majority of existing research in approximate Bayesian
-computation attempts to model the entire high--dimensional distribution, even
-when only one variable is of interest.
+Both classical Bayesian procedures and the existing SBI-NNC trick are difficult
+to validate in practice, due to the lack of a computable ground truth.
+Amazingly, Bayes--NNC does not suffer from this shortcoming, and its accuracy is
+readily testable using simulation--based calibration (SBC)
+\citep{talts:2018:sbc}.  Put together, Bayes--NNC and SBC offer a way to learn
+Bayesian posterior densities with strong, computable statistical guarantees.
+Interestingly, though well--known, SBC is rarely used in practice, since it is
+typically computationally prohibitive to compute the posterior at many different
+datapoints.  However, Bayes--NNC learns the posterior for many datasets
+simultaneously, permitting efficient use of SBC in practice.  
 
-Though superficially distinct, recent work in simulation--based inference points
-towards a completely new set of Bayesian inference techniques for
-low--dimensional marginals.  Simulation--based inference is developed for
-problems which can be simulated, but for which no likelihood is available.  By a
-clever construction of simualted data, researchers are able to estimate log
-likelihood ratios using a neural network classifier (CITE).  These likelihood
-ratios are then used to compute maximum likelihood (points) estimates, rather
-than full distributions, and it is difficult to assess whether the likelihood
-ratios are accurate.
+To my knowledge, there are no existing Bayesian techniques that offer the
+advantages of Bayes-NNC and SBC.  Bayesian approaches to simulation--based
+inference are not new, but existing techniques are built on high--dimensional
+density approximation, such as normalizing flows
+\citep{cranmer:2020:frontierofsimulation}.  As with other approximate inference
+techniques, this set of tools approximates the entire posterior, even when only
+a low--dimensional marginal is of interest.  To the best of my (and my LBNL
+collaborator's) knowledge, the technique above is new, and offers a distinct set
+of computational tradeoffs relative to existing methods.  
 
-
-Note that Bayesian approaches to simulation--based inference are not new, but
-existing techniques are built on high--dimensional density approximation, such
-as normalizing flows.  As with other approximate inference techniques, this set
-of tools approximates the entire posterior, even when only a low--dimensional
-marginal is of interest.  To the best of my and my collaborator's knowledge, the
-technique above is new.  
-
-A large number of applications are immediate candidates for the above ideas.
+I would stress that Bayes--NNC is not at all limited to SBI problems. There are
+many problems with tractable likelihoods which are easy to simulate from and
+extremely computationally intensive to sample from.  There is every reason to
+believe that a training a NNC will be competitive with existing computational
+techniques, even neglecting the advantage of accompanying statistical
+guarantees.  A large number of fundamental statistical applications,
+superficially distinct from SBI problems, are immediate candidates for
+Bayes--NNC, such as sparse model selection (e.g.
+\citep{rovckova:2018:spikeandslablasso}), Gaussian process hyperparameter
+calibration (e.g. \citep{hensman:2015:gpclassificationscalable}), and
+unsupervised clustering (e.g. \citet{mcauliffe:2006:dpeb}).
 
 
 
@@ -108,27 +114,27 @@ Most modern surveys --- such as polling about the upcoming presidental election
 --- must overcome the fact that their sampled population is different from the
 target population.  For example, the set of people responding to an internet
 survey about political preferences is likely to differ systematically from the
-full population of voters.  As a consequence, survey responses are typically
-reweighted by key demographic variables in order to become more representative.
-As a diagnostic, it is very useful to be able to check that these weights are
-able to ``balance'' demographic quantities.  Unfortunately, the best and most
-commonly used statistical procedures for inferring the polling responses of rare
-demographic groups are nonlinear, and so do not readily admit diagnostic
-weights.
+full population of voters, and it is extremely useful to be able to check that
+the re-weighting is accurate, for example by checking that key demographic
+variables are balanced by the re-weighting.  Unfortunately, the most accurate
+and most commonly used statistical procedures for inferring the polling
+responses of rare demographic groups are nonlinear, and so do not readily admit
+diagnostic weights. 
 
-In order to provide diagnostic weights for such non--linear procedures, I
-propose forming local weights using a variant of the ``influence function'' of
-classical statistics.  With my collaborators, I have shown that local weights
-can automatically detect demographic imbalance in the implicit non--linear
-statistical procedure, provided a much--needed diagnostic that is currently
-unavailable.  Though the influence function is well--studied in the frequentist
-literature, it has been relatively neglected in the Bayesian literature until my
-recent work.
+In collaboration with a UC Berkeley professor of public policy, I have shown
+that one can compute ``local diagnoistic weights'' for non--linear statistical
+procedure, provided a much--needed diagnostic that is currently unavailable. The
+local weights I derive are closely related to the classical ``influence
+function'' of robust statistics.  Though the influence function is well--studied
+in the frequentist literature, it has been relatively neglected in the Bayesian
+literature (with my own recent work being an exception).
 
-Importantly, the local weights can be automatically computed with a 
-small library built on top of existing open--source software which
-is commonly used for survey analysis (CITE).  I have already implemented
-a similar package for a different sensitivity analysis (CITE).
+Importantly, the local weights can be automatically computed with a small
+library built on top of existing open--source software which is commonly used
+for survey analysis (CITE).  I have already implemented a similar package for a
+different style of sensitivity analysis (CITE), and we hope to be able to
+release open--source software relatively quickly.  
+
 
 
 
