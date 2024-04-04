@@ -7,52 +7,48 @@ Illegal, another \bibstyle command---line 62 of file main.aux
  :          {plainnat}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-Repeated entry---line 985 of file references.bib
- : @article{mises:1947:asymptotic
- :                               ,
-I'm skipping whatever remains of this entry
 Warning--entry type for "lopezmartin:2022:mrptutorial" isn't style-file defined
---line 1589 of file references.bib
+--line 1579 of file references.bib
 Warning--empty journal in gelman:2007:surveystruggles
-You've used 22 entries,
+You've used 23 entries,
             2773 wiz_defined-function locations,
-            724 strings with 8603 characters,
-and the built_in function-call counts, 10360 in all, are:
-= -- 912
-> -- 639
+            729 strings with 8931 characters,
+and the built_in function-call counts, 10782 in all, are:
+= -- 948
+> -- 669
 < -- 11
-+ -- 217
-- -- 195
-* -- 848
-:= -- 1593
-add.period$ -- 68
-call.type$ -- 22
-change.case$ -- 130
-chr.to.int$ -- 22
-cite$ -- 45
-duplicate$ -- 451
-empty$ -- 833
-format.name$ -- 223
-if$ -- 2157
++ -- 227
+- -- 204
+* -- 882
+:= -- 1662
+add.period$ -- 72
+call.type$ -- 23
+change.case$ -- 136
+chr.to.int$ -- 23
+cite$ -- 47
+duplicate$ -- 471
+empty$ -- 864
+format.name$ -- 233
+if$ -- 2243
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 18
-newline$ -- 118
-num.names$ -- 88
-pop$ -- 273
+missing$ -- 19
+newline$ -- 124
+num.names$ -- 92
+pop$ -- 284
 preamble$ -- 1
-purify$ -- 109
+purify$ -- 114
 quote$ -- 0
-skip$ -- 364
+skip$ -- 379
 stack$ -- 0
-substring$ -- 360
-swap$ -- 43
+substring$ -- 362
+swap$ -- 44
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 237
+type$ -- 248
 warning$ -- 1
-while$ -- 93
+while$ -- 96
 width$ -- 0
-write$ -- 285
-(There were 2 error messages)
+write$ -- 299
+(There was 1 error message)

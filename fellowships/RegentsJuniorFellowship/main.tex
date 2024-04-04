@@ -29,15 +29,15 @@
 
 I propose to spend the summer of 2024 working on two collaborative research
 projects.  The first, ``neural network classifiers for Bayesian posteriors,''
-promises to introduce a completely new set of Bayesian inference techniques with
-different computational tradeoffs than existing methods. The second,
-``black--box computable diagnostic weights for survey sampling,'' will bring a
-much--needed set of diagnostic tools to the vast majority of modern applied
-survey sampling.  These two projects are different in scope --- the first
-represents ground--breaking methodological research, and the second an
-application of my existing research to an urgent applied problem --- but each
-rests on and contributes to my existing work on approximate Bayesian computation
-and sensitivity analysis. 
+promises to introduce a completely new set of Bayesian inference techniques
+based on ideas from simulation--based inference. The second, ``black--box
+computable diagnostic weights for survey sampling,'' will bring a much--needed
+set of diagnostic tools to the vast majority of modern applied survey sampling.
+These two projects are different in scope --- the first represents
+ground--breaking methodological research, and the second an application of my
+existing research to an urgent applied problem --- but each rests on and
+contributes to my existing work and expertise on approximate Bayesian
+computation and sensitivity analysis. 
 
 
 
@@ -52,53 +52,54 @@ single quantity of interest, such as the effect of a policy intervention
 \citep{meager:2019:microcredit}, the type of an astronomical object
 \citep{regier:2019:cataloging}, the outcome of an election
 \citep{economist:2020:election}, or the identity of an ancestral genetic
-population \citep{pritchard:2000:inference}, and Bayesian statistics abile to
-propagate uncertainty from a any unknown latent modeling quantities to the final
+population \citep{pritchard:2000:inference}.  Bayesian statistics is able to
+propagate uncertainty from any unknown latent modeling quantities to the final
 estimate.  But this conceptual strength is a computational weakness, since even
 approximately accounting for a large number of latent quantities is
 computationally intensive. Bayesian estimates often take hours to days to
 compute, and it is of considerable interest to develop computationally
 efficient, approximate Bayesian procedures \citep{blei:2017:variational,aabi}.
 
-Together with a staff scientist at LBNL, I have recently developed a new
+In consultation with a staff scientist at LBNL, I have recently developed a new
 approach to Bayesian inference based on neural network classifiers (NNC). The
 idea is derived from a technique for point estimation in simulation--based
-inference (SBI) (i.e., inference in problems without a tractable likelihood
-function), a technique I will refer to as SBI-NNC
-\citep{cranmer:2020:frontierofsimulation}.  Rather than learning a distribution
-directly (as is done in nearly all other ML--based Bayesian learning, e.g.
-\citep{papamakarios:2021:normalizing}), this technique uses the fact that
-optimal classifiers learn likelihood ratios. I have shown that a variant of the
-SBI-NNC trick can be applied to learn Bayesian marginals without having to learn
-the distribution of all the latent variables, at the cost of training a NNC on a
-single classification task.  I will refer to this technique as Bayes--NNC.
+inference (SBI),\footnote{That is, inference in problems without a tractable
+likelihood function.} a technique I will refer to as SBI-NNC
+\citep{cranmer:2020:frontierofsimulation}.  Rather than learning a likelihood
+directly, SBI-NNC exploits the fact that optimal neural network classifiers
+learn likelihood ratios. I have shown that a variant of the SBI-NNC trick can be
+applied to learn Bayesian marginals without having to learn the distribution of
+all the latent variables, at the cost of training a NNC on a single
+classification task.  I will refer to my technique as Bayes--NNC.
 
 Both classical Bayesian procedures and the existing SBI-NNC trick are difficult
 to validate in practice, due to the lack of a computable ground truth.
 Amazingly, Bayes--NNC does not suffer from this shortcoming, and its accuracy is
 readily testable using simulation--based calibration (SBC)
 \citep{talts:2018:sbc}.  Put together, Bayes--NNC and SBC offer a way to learn
-Bayesian posterior densities with strong, computable statistical guarantees.
-Interestingly, though well--known, SBC is rarely used in practice, since it is
-typically computationally prohibitive to compute the posterior at many different
-datapoints.  However, Bayes--NNC learns the posterior for many datasets
-simultaneously, permitting efficient use of SBC in practice.  
+Bayesian posterior densities of low--dimensional quantities of interest with
+strong, computable statistical accuracy guarantees. Interestingly, SBC is
+well--known but rarely used in practice, since it is typically computationally
+prohibitive to compute the posterior at many different datapoints.  However,
+Bayes--NNC learns the posterior for many datasets simultaneously, permitting
+efficient use of SBC in practice.  
 
 To my knowledge, there are no existing Bayesian techniques that offer the
 advantages of Bayes-NNC and SBC.  Bayesian approaches to simulation--based
 inference are not new, but existing techniques are built on high--dimensional
 density approximation, such as normalizing flows
-\citep{cranmer:2020:frontierofsimulation}.  As with other approximate inference
-techniques, this set of tools approximates the entire posterior, even when only
-a low--dimensional marginal is of interest.  To the best of my (and my LBNL
-collaborator's) knowledge, the technique above is new, and offers a distinct set
-of computational tradeoffs relative to existing methods.  
+\citep{cranmer:2020:frontierofsimulation,papamakarios:2021:normalizing}.  As
+with other approximate inference techniques, this set of tools approximates the
+entire posterior, even when only a low--dimensional marginal is of interest.  To
+the best of my (and my LBNL collaborator's) knowledge, Bayes--NNC is new, and
+offers a distinct and advantageous set of computational tradeoffs relative to
+existing Bayesian inference methods.  
 
 I would stress that Bayes--NNC is not at all limited to SBI problems. There are
 many problems with tractable likelihoods which are easy to simulate from and
 extremely computationally intensive to sample from.  There is every reason to
 believe that a training a NNC will be competitive with existing computational
-techniques, even neglecting the advantage of accompanying statistical
+techniques, even neglecting the advantage of Bayes--NNC's statistical
 guarantees.  A large number of fundamental statistical applications,
 superficially distinct from SBI problems, are immediate candidates for
 Bayes--NNC, such as sparse model selection (e.g.
@@ -137,18 +138,11 @@ Importantly, the local weights can be automatically computed with a small
 library built on top of existing open--source software which is commonly used
 for survey analysis \citep{lopezmartin:2022:mrptutorial}.  I have already
 implemented a similar package for a different style of sensitivity analysis
-\citep{giordano:2024:zaminfluence}, and we expect to be able to release
-open--source software relatively quickly.  
+\citep{giordano:2020:amip,giordano:2024:zaminfluence}, and we expect to be able
+to release open--source software relatively quickly.  
 
 
-
-
-
-
-
-
-
-\newpage
+% \newpage
 
 \bibliography{references}
 \bibliographystyle{plainnat}

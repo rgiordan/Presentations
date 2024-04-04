@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -20,6 +20,15 @@ D.~Blei, A.~Kucukelbir, and J.~McAuliffe.
 \newblock Variational inference: {A} review for statisticians.
 \newblock \emph{Journal of the American Statistical Association}, 112\penalty0
   (518):\penalty0 859--877, 2017.
+
+\bibitem[Broderick et~al.(2020)Broderick, Giordano*, and
+  Meager*]{giordano:2020:amip}
+T.~Broderick, R.~Giordano*, and R.~Meager*.
+\newblock An automatic finite-sample robustness metric: {Can} dropping a little
+  data change conclusions?
+\newblock \emph{arXiv preprint arXiv:2011.14999}, 2020.
+\newblock *Following conventions in econometrics, the authors are listed
+  alphabetically. Giordano and Meager are equal contribution primary authors.
 
 \bibitem[Cranmer et~al.(2020)Cranmer, Brehmer, and
   Louppe]{cranmer:2020:frontierofsimulation}
