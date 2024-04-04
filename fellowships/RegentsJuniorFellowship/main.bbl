@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -9,6 +9,10 @@
 AABI.
 \newblock 6th symposium on advances in approximate {Bayesian} inference, 2024.
 \newblock URL \url{https://approximateinference.org/}.
+
+\bibitem[B. et~al.(2021)B., F., and H.]{benmichael:2021:multilevel}
+Eli B., Avi F., and Erin H.
+\newblock Multilevel calibration weighting for survey data, 2021.
 
 \bibitem[Blei et~al.(2017)Blei, Kucukelbir, and
   McAuliffe]{blei:2017:variational}
@@ -24,11 +28,46 @@ K.~Cranmer, J.~Brehmer, and G.~Louppe.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 117\penalty0
   (48):\penalty0 30055--30062, 2020.
 
+\bibitem[Gelman(1997)]{gelman:1997:poststratification}
+A.~Gelman.
+\newblock Poststratification into many categories using hierarchical logistic
+  regression.
+\newblock \emph{Survey Methodology}, 23:\penalty0 127, 1997.
+
+\bibitem[Gelman(2007)]{gelman:2007:surveystruggles}
+A.~Gelman.
+\newblock Struggles with survey weighting and regression modeling.
+\newblock 2007.
+
 \bibitem[Gelman and Heidemanns(2020)]{economist:2020:election}
 A.~Gelman and M.~Heidemanns.
 \newblock The {Economist}: {Forecasting} the {US} elections., 2020.
 \newblock URL \url{https://projects.economist.com/us-2020-forecast/president}.
 \newblock Data and model accessed Oct., 2020.
+
+\bibitem[Giordano(2024)]{giordano:2024:zaminfluence}
+R.~Giordano.
+\newblock Z-estimator approximate maximum influence: zaminfluence, 2024.
+\newblock URL \url{https://github.com/rgiordan/zaminfluence}.
+
+\bibitem[Giordano and Broderick(2023)]{giordano:2023:bayesij}
+R.~Giordano and T.~Broderick.
+\newblock The {Bayesian} infinitesimal jackknife for variance.
+\newblock \emph{arXiv preprint arXiv:2305.06466}, 2023.
+
+\bibitem[Giordano et~al.(2019)Giordano, Stephenson, Liu, Jordan, and
+  Broderick]{giordano:2019:swiss}
+R.~Giordano, W.~Stephenson, R.~Liu, M.~I. Jordan, and T.~Broderick.
+\newblock A {Swiss} army infinitesimal jackknife.
+\newblock In \emph{The 22nd International Conference on Artificial Intelligence
+  and Statistics}, pages 1139--1147. PMLR, 2019.
+
+\bibitem[Hampel et~al.(1986)Hampel, Ronchetti, Rousseeuw, and
+  Stahel]{hampel:1986:robust}
+F.~Hampel, E.~Ronchetti, P.~Rousseeuw, and W.~Stahel.
+\newblock \emph{Robust statistics: {T}he approach based on influence
+  functions}.
+\newblock Wiley-Interscience; New York, 1986.
 
 \bibitem[Hensman et~al.(2015)Hensman, Matthews, and
   Ghahramani]{hensman:2015:gpclassificationscalable}
@@ -36,6 +75,18 @@ J.~Hensman, A.~Matthews, and Z.~Ghahramani.
 \newblock Scalable variational {Gaussian} process classification.
 \newblock In \emph{Artificial Intelligence and Statistics}, pages 351--360.
   PMLR, 2015.
+
+\bibitem[Li et~al.(2018)Li, Morgan, and Zaslavsky]{li:2018:balancingcovariates}
+F.~Li, K.~Morgan, and A.~Zaslavsky.
+\newblock Balancing covariates via propensity score weighting.
+\newblock \emph{Journal of the American Statistical Association}, 113\penalty0
+  (521):\penalty0 390--400, 2018.
+
+\bibitem[Lopez-Martin et~al.(2022)Lopez-Martin, Phillips, and
+  Gelman]{lopezmartin:2022:mrptutorial}
+J.~Lopez-Martin, J.~Phillips, and A.~Gelman.
+\newblock Multilevel regression and poststratification case studies, 2022.
+\newblock URL \url{https://bookdown.org/jl5522/MRP-case-studies/}.
 
 \bibitem[McAuliffe et~al.(2006)McAuliffe, Blei, and
   Jordan]{mcauliffe:2006:dpeb}
@@ -50,6 +101,13 @@ R.~Meager.
   {B}ayesian hierarchical analysis of seven randomized experiments.
 \newblock \emph{American Economic Journal: Applied Economics}, 11\penalty0
   (1):\penalty0 57--91, 2019.
+
+\bibitem[Mises(1947)]{mises:1947:asymptotic}
+R.~Mises.
+\newblock On the asymptotic distribution of differentiable statistical
+  functions.
+\newblock \emph{The Annals of Mathematical Statistics}, 18\penalty0
+  (3):\penalty0 309--348, 1947.
 
 \bibitem[Papamakarios et~al.(2021)Papamakarios, Nalisnick, Rezende, Mohamed,
   and Lakshminarayanan]{papamakarios:2021:normalizing}

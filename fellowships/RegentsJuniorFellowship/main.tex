@@ -112,28 +112,33 @@ unsupervised clustering (e.g. \citet{mcauliffe:2006:dpeb}).
 
 Most modern surveys --- such as polling about the upcoming presidental election
 --- must overcome the fact that their sampled population is different from the
-target population.  For example, the set of people responding to an internet
-survey about political preferences is likely to differ systematically from the
-full population of voters, and it is extremely useful to be able to check that
-the re-weighting is accurate, for example by checking that key demographic
-variables are balanced by the re-weighting.  Unfortunately, the most accurate
-and most commonly used statistical procedures for inferring the polling
-responses of rare demographic groups are nonlinear, and so do not readily admit
-diagnostic weights. 
+target population \citep{gelman:2007:surveystruggles}.  For example, the set of
+people responding to an internet survey about political preferences is likely to
+differ systematically from the full population of voters, and it is extremely
+useful to be able to check that the re-weighting is accurate, for example by
+checking that key demographic variables are balanced by the re-weighting
+\citep{li:2018:balancingcovariates,benmichael:2021:multilevel}. Unfortunately,
+the most accurate and most commonly used statistical procedures for inferring
+the polling responses of rare demographic groups are nonlinear, and so do not
+readily admit diagnostic weights
+\citep{gelman:1997:poststratification,gelman:2007:surveystruggles}. 
 
 In collaboration with a UC Berkeley professor of public policy, I have shown
 that one can compute ``local diagnoistic weights'' for non--linear statistical
 procedure, provided a much--needed diagnostic that is currently unavailable. The
 local weights I derive are closely related to the classical ``influence
-function'' of robust statistics.  Though the influence function is well--studied
-in the frequentist literature, it has been relatively neglected in the Bayesian
-literature (with my own recent work being an exception).
+function'' of robust statistics
+\citep{mises:1947:asymptotic,hampel:1986:robust,giordano:2019:swiss}.  Though
+the influence function is well--studied in the frequentist literature, it has
+been relatively neglected in the Bayesian literature (with my own recent work,
+\citet{giordano:2023:bayesij}, being a notable exception).
 
 Importantly, the local weights can be automatically computed with a small
 library built on top of existing open--source software which is commonly used
-for survey analysis (CITE).  I have already implemented a similar package for a
-different style of sensitivity analysis (CITE), and we hope to be able to
-release open--source software relatively quickly.  
+for survey analysis \citep{lopezmartin:2022:mrptutorial}.  I have already
+implemented a similar package for a different style of sensitivity analysis
+\citep{giordano:2024:zaminfluence}, and we expect to be able to release
+open--source software relatively quickly.  
 
 
 

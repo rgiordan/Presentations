@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1712268567 "main.aux" "main.bbl" "main" 1712268568
+["bibtex main"] 1712269025 "main.aux" "main.bbl" "main" 1712269036
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1712268568 2372 4df072cf53de4c3b80ebd8bc6464fdc6 "lualatex"
-  "references.bib" 1712268547 42198 1effc39ee1120cb0954d8614770d61d1 ""
+  "main.aux" 1712269036 3556 8bbc4c8bb8930c9ad935b1bbc927c4ea "lualatex"
+  "references.bib" 1712268927 44430 dc2ee74d0e376daeb78d26d2516db29d ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1712268568 "main.tex" "main.pdf" "main" 1712268568
+["lualatex"] 1712269036 "main.tex" "main.pdf" "main" 1712269036
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -130,10 +130,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1688676452 4073795 a82a847ac97773bf4a607ab050efa3a1 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1710432830 4555432 c52d71834d1c75d98824804c400c464e ""
   "_headers.tex" 1712095638 980 507cbd6e89a8f0b67bf25d025cd1860b ""
-  "main.aux" 1712268568 2372 4df072cf53de4c3b80ebd8bc6464fdc6 "lualatex"
-  "main.bbl" 1712268567 3918 d5ca2b1b6e36643bf9d7788eb5fde677 "bibtex main"
-  "main.out" 1712268568 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.tex" 1712268555 7385 b8342e8bad1a54c30ba4069bf0f7c1f0 ""
+  "main.aux" 1712269036 3556 8bbc4c8bb8930c9ad935b1bbc927c4ea "lualatex"
+  "main.bbl" 1712269025 6312 7b8e8afb3a5c47f926c2d8fecd92cb1e "bibtex main"
+  "main.out" 1712269036 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.tex" 1712269033 7718 d996022b78455045f26bf0e426013a7f ""
   (generated)
   "main.aux"
   "main.log"
