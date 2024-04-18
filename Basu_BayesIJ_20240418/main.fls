@@ -883,14 +883,8 @@ INPUT ./figure/highdim_accuracy-1.png
 INPUT ./figure/highdim_accuracy-1.png
 INPUT ./figure/election_data-1.png
 INPUT ./figure/election_data-1.png
-INPUT ./figure/election_data-1.png
-INPUT ./figure/election_data-1.png
-INPUT ./figure/election_data-1.png
-INPUT ./figure/election_data-1.png
-INPUT ./figure/election_data-1.png
-INPUT ./figure/election_data-1.png
-INPUT ./figure/election_data-1.png
-INPUT ./figure/election_data-1.png
+INPUT ./figure/election_result-1.png
+INPUT ./figure/election_result-1.png
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT main.nav

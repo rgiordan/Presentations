@@ -137,48 +137,77 @@ contribution, not a datapoint.
 
 \begin{frame}{Observations and consequences}
 
-\begin{center}
-% We use models of the form $\p(\gamma, \lambda \vert \xvec)$ all the time.
-% Often we cannot marginalize (compute $\p(\gamma \vert \xvec)$) analytically.
 
-\end{center}
-
-\begin{minipage}{0.58\linewidth}
-    \begin{itemize}
-    %
-    \item<2-> When $\log \p(\x_n \vert \gamma, \lambda)$ is
-    the exchangeable unit,
-    our results are problematic for
-    %
-    \begin{itemize}
-    %
-    \item Linear approximations (IJ, AMIP, approx. CV)
-    \item The nonparametric bootstrap
-    % \item Stochastic gradient using data subsampling
-    \item All of the above for Bayes-like optimization procedures
-        (VB, the EM algorithm)
-    %
-    \end{itemize}
-    %
-    \item<3-> Even if the error $\red{\err(\w)}$ does not vanish,
-    it can still be small enough in practice to be useful.
-    %
-    \item<4-> There may be multiple ways to define ``exchangable unit'' in a given
-    problem.
-    %
-    \item<5-> But without nesting,
-    $\log \p(\x_n \vert \gamma, \lambda)$
-    may be the natural model-free exchangeable unit.
-    %
-    \end{itemize}
+\begin{minipage}{0.38\textwidth}
+    \ElectionData{}
 \end{minipage}
+\begin{minipage}{0.38\textwidth}
+    \ElectionResultsGlobal{}
+\end{minipage}
+
+
+
 %
-\begin{minipage}{0.4\linewidth}
-\ElectionData{}
-\end{minipage}
+\begin{itemize}
+\item We use often use models $\p(\gamma, \lambda \vert \xvec)$, and can't 
+      compute $\p(\gamma \vert \xvec)$ analytically.
+\item There may be multiple ways to define ``exchangable unit'' in a given
+      problem.
+\item[] ... But without nesting,
+        $\log \p(\x_n \vert \gamma, \lambda)$
+        may be the natural model-free exchangeable unit.
+\item Even if the error $\red{\err(\w)}$ does not vanish,
+      it can still be small enough in practice.
+      \item[] ... Especially given the linear approximation's huge computational advantage.
+\end{itemize}
+%
+\textbf{Preprint: }\citet{giordano:2023:bayesij} (\texttt{arXiv:2305.06466})
 
-
+    
 \end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{frame}{Observations and consequences}
+
+% \begin{minipage}{0.58\linewidth}
+%     \begin{itemize}
+%     %
+%     \item<2-> When $\log \p(\x_n \vert \gamma, \lambda)$ is
+%     the exchangeable unit,
+%     our results are problematic for
+%     %
+%     \begin{itemize}
+%     %
+%     \item Linear approximations (IJ, AMIP, approx. CV)
+%     \item The nonparametric bootstrap
+%     % \item Stochastic gradient using data subsampling
+%     \item All of the above for Bayes-like optimization procedures
+%         (VB, the EM algorithm)
+%     %
+%     \end{itemize}
+%     %
+%     \item<3-> Even if the error $\red{\err(\w)}$ does not vanish,
+%     it can still be small enough in practice to be useful.
+%     %
+%     \item<4-> There may be multiple ways to define ``exchangable unit'' in a given
+%     problem.
+%     %
+%     \item<5-> But without nesting,
+%     $\log \p(\x_n \vert \gamma, \lambda)$
+%     may be the natural model-free exchangeable unit.
+%     %
+%     \end{itemize}
+% \end{minipage}
+% %
+% % \begin{minipage}{0.4\linewidth}
+% % \ElectionData{}
+% % \end{minipage}
+
+
+% \end{frame}
 
 \begin{frame}
 
