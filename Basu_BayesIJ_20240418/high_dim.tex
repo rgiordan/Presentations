@@ -1,225 +1,85 @@
 \begin{frame}{High dimensional problems}
 
 \question{What about when the posterior doesn't obey a BCLT?}
-\spskip
 
-Suppose that $\p(\lambda \vert \xvec)$ does not concentrate.
-
-(E.g., $N$ is small, $\lambda$ grows in dimension or $\xvec$ is uninformative.)
-
-\pause
-
-\begin{align*}
-%
-\MoveEqLeft
-\expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)} -
-\expect{\p(\lambda \vert \xvec)}{f(\lambda)}
-\\={}&
-\blue{\infl_n} (\w_n - 1)
-&&
-+ \red{\err(\w_n)}
-\\={}&
-\undernote{
-\blue{\expect{\p(\lambda \vert \xvec)}
-             {\fbar(\lambda) \ellbar_n(\lambda)}}
-}{O_p(1)}
-(\w_n - 1)
-&&
-+ \frac{1}{2}
-\undernote{
-\red{
-\expect{\p(\lambda \vert \xvec, \wtil_n)}{
-    \fbar(\lambda)
-    \ellbar_n(\lambda)
-    \ellbar_n(\lambda)}
-}
-}{O_p(1)}
-(\w_n - 1)^2.
-%
-\end{align*}
-
-The error is of the same order as the slope.
-
-The map
-$\w_n \mapsto \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)}$ is nonlinear in general.
-
-\pause
-\spskip
-\question{Can we save the approximation when {\em some} parameters concentrate?}
-
-
-%
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{High dimensional problems}
-%
 Example: \textbf{Poisson model with random effects (REs)
-$\lambda$ and fixed effects $\gamma$.}
-% %
-% \begin{minipage}[t]{0.45\textwidth}
-%     %
-% \begin{align*}
-%     \textrm{Fix }&\alpha,\beta\textrm{. }\\
-%     \textrm{For }n={}&1,\ldots,N\textrm{, }g=1,\ldots,G,\\
-%     \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta)\\
-%     g_n \iid{}& \mathrm{Categorical}(1,\ldots,G)\\
-%     y_n | \lambda_n, \gamma, g_n \iid{}&
-%         \mathrm{Poisson}(\gamma \lambda_{g_n})\\
-% \end{align*}
-% %
-% \end{minipage}
-% \hspace{1em}
-% %
-% \begin{minipage}[t]{0.45\textwidth}
-% %
-% \begin{align*}
-% %
-% & \textrm{Here, }\theta = (\gamma, \lambda)\textrm{, }f(\theta) = \gamma\\
-% & \x_n ={} (y_n, g_n)
-% \textrm{ are IID given }\lambda, \gamma.\\
-% % \MoveEqLeft
-% &\textrm{Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
-% % \\
-% % &\quad  \sumn \w_n \log \p(\x_n \vert \lambda, \gamma) =
-%    \sumn \w_n \ell_n(\lambda, \gamma).
-% %
-% \end{align*}
-% %
-% \end{minipage}
-
-\pause
+$\lambda$ and fixed effect $\gamma$.}
 
 If the observations per random effect remains bounded as $N \rightarrow
 \infty$, then
+
+\begin{tabular}{ll}
+    Parameter $\lambda$ grows in dimension with $N$.& 
+    Parameter $\gamma$ is a scalar. \\
+    Marginally, $\p(\lambda \vert \xvec)$ does not concentrate. &
+    Marginally, $\p(\gamma \vert \xvec)$ obeys a BCLT. \\
+\end{tabular}
+% \begin{itemize}
+% %
+% \item Parameter $\lambda$ (``local'') grows in dimension with $N$.
+% \item Parameter $\gamma$ (``global'') is finite-dimensional.
+% \item Marginally $\p(\lambda \vert \xvec)$ does not concentrate.
+% \item Marginally, $\p(\gamma \vert \xvec)$ concentrates.
+% % \item Conditionally, $\p(\lambda \vert \gamma, \xvec)$ does not concentrate either.
+% %
+% \end{itemize}
 %
-\begin{itemize}
+% \begin{align*}
+% %
+% \MoveEqLeft
+% \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)} -
+% \expect{\p(\lambda \vert \xvec)}{f(\lambda)}
+% \\={}&
+% \blue{\infl_n} (\w_n - 1)
+% &&
+% + \red{\err(\w_n)}
+% \\={}&
+% \undernote{
+% \blue{\expect{\p(\lambda \vert \xvec)}
+%              {\fbar(\lambda) \ellbar_n(\lambda)}}
+% }{O_p(1)}
+% (\w_n - 1)
+% &&
+% + \frac{1}{2}
+% \undernote{
+% \red{
+% \expect{\p(\lambda \vert \xvec, \wtil_n)}{
+%     \fbar(\lambda)
+%     \ellbar_n(\lambda)
+%     \ellbar_n(\lambda)}
+% }
+% }{O_p(1)}
+% (\w_n - 1)^2.
+% %
+% \end{align*}
 %
-\item Parameter $\lambda$ (``local'') grows in dimension with $N$.
-\item Parameter $\gamma$ (``global'') is finite-dimensional.
-\item Marginally $\p(\lambda \vert \xvec)$ does not concentrate.
-\item Marginally, $\p(\gamma \vert \xvec)$ concentrates.
-% \item Conditionally, $\p(\lambda \vert \gamma, \xvec)$ does not concentrate either.
+
+\question{Does $\w_n \mapsto \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)}$ become linear as $N$ grows?}
+
+\textbf{Not in general. }
+Since $\p(\lambda \vert \xvec)$ doesn't concentrate, both the slope $\blue{\infl_n}$ and
+error $\red{\err(\w_n)}$ are $O(1)$ in general.
+% $\expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)}$
 %
-\end{itemize}
+$\Rightarrow$ The map
+$\w_n \mapsto \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)}$ is nonlinear in general.
 
 \spskip
-\pause
-\question{
-Can we save the approximation when {\em some} parameters concentrate?\\
-$\Rightarrow$
-Does the residual vanish asymptotically for
-$\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma}$?
-}
-
+\question{Does $\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$ become linear as $N$ grows?}
 %
-\end{frame}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{High dimensional problems}
-%
-We assume that $\p(\gamma \vert \xvec)$ concentrates but
-$\p(\lambda \vert \xvec)$ does not.  By our series expansion:
-%
-\begin{align*}
-%
-% \MoveEqLeft
-&
-\expect{\p(\gamma, \lambda \vert \xvec, \w_n)}{\gamma} -
-\expect{\p(\gamma, \lambda \vert \xvec)}{\gamma}
-={}
-\\
-&\quad\blue{\infl_n}(\w_n - 1) && +\red{\err(\w_n)}
-% \\&
-\\={}&
-\blue{
-\expect{\p(\gamma, \lambda \vert \xvec)}{
-    \gammabar \ellbar_n(\gamma,\lambda)}
-}
-(\w_n - 1)
-    && +
-    \frac{1}{2}
-    \red{
-    \expect{\p(\gamma, \lambda \vert \xvec, \wtil_n)}{
-        \gammabar
-        \ellbar_n(\gamma,\lambda)^2 }
-    }
-        (\w_n - 1)^2
-% \\&
-\onslide<2->{
-\\={}&
-%
-\blue{
-\expectop{\p(\gamma \vert \xvec)} \Big[
-    \gammabar
-    \undernote{
-        \expect{\p(\lambda \vert \gamma, \xvec)}
-               {\ellbar_n(\gamma,\lambda)}
-         }{F_1(\gamma)}
-    \Big]
-}
-        (\w_n - 1)
-    && +
-    \frac{1}{2}
-    \red{
-    \expectop{\p(\gamma \vert \xvec, \wtil_n)} \Big[
-        \gammabar
-        \undernote{
-            \expect{\p(\lambda \vert \xvec, \gamma, \wtil_n)}{
-                \ellbar_n(\gamma,\lambda)^2}
-            }{F_2(\gamma)}
-        \Big]
-    }
-        (\w_n - 1)^2
-}
-\onslide<3->{
-\\={}&
-\undernote{
-\blue{
-\expect{\p(\gamma \vert \xvec)}{
-    \gammabar F_1(\gamma)}
-}
-}{O_p(N^{-1})\\\text{(by $\p(\gamma \vert \xvec)$ concentration)}}
-    (\w_n - 1)
-    && +
-    \frac{1}{2}
-\undernote{
-\red{
-\expect{\p(\gamma \vert \xvec, \wtil_n)}{
-    \gammabar
-    F_2(\gamma) }
-}
-}{O_p(N^{-1})\\\text{(by $\p(\gamma \vert \xvec)$ concentration)}}
-        (\w_n - 1)^2
-%
-\\& \Rightarrow
-}
-\onslide<1->{
-\blue{\infl_n = O_p(N^{-1})} &&
-\red{\err(\w_n) = O_p(N^{-1})}
-}
-%
-\end{align*}
-%
-\onslide<4->{
-% The error is the same order as the linear approximation, and does not vanish after rescaling!
-
-The map $\w_n \mapsto N \left( \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma} -
-\expect{\p(\gamma \vert \xvec)}{\gamma} \right)$
-remains non-linear as $N \rightarrow \infty$.
-
+\theorem{
+\textbf{Theorem 5 of \citet{giordano:2023:bayesij}  (paraphrase): }\\
+In the linear approximation to $\expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$,
+both the slope $\blue{\infl_n}$ and the error $\red{\err(\w_n)}$ are $O_p(N^{-1})$ when
+$p(\lambda \vert \xvec, \gamma)$ does not concentrate, even if $\p(\gamma \vert \xvec)$
+obeys a BCLT marginally.  In general, \textbf{the posterior
+expectation does not become linear in $\w_n$ as $N$ grows.}
 }
 
 \end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

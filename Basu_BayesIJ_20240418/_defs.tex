@@ -9,6 +9,14 @@
 \end{mdframed}
 }
 
+\definecolor{theoremcolor}{RGB}{255,245,210}
+
+\def\theorem#1{
+\begin{mdframed}[style=MyFrame,backgroundcolor=theoremcolor]
+    #1
+\end{mdframed}
+}
+
 % Paper-specific math macros.
 \def\wtil{\tilde{w}}
 

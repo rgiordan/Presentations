@@ -68,7 +68,7 @@ We can write $\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}$.
         }
         \onslide<7->{
         \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[gray, thick, <-] (0.2,0.23) -- ++(0.1,0.25)
+            \draw[gray, thick, <-] (0.20,0.23) -- ++(0.15,0.3)
                     node[above,black,fill=white]
                     {\small $\expect{p(\theta \vert \x)}{f(\theta)}$};
         \end{scope}
@@ -262,13 +262,16 @@ By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w
 \end{align*}
 %
 
-$\Rightarrow $
-The map $\w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)} -
+\theorem{
+\textbf{Theorem 2 of \citet{giordano:2023:bayesij}  (paraphrase): }\\
+If the posterior $\p(\theta \vert \xvec)$ satisfies a kind of Bayesian central limit theorem 
+(BCLT),\footnote{Existing results are
+sufficient for a \textit{particular weight} \citep{kass:1990:posteriorexpansions}. 
+\citet{giordano:2023:bayesij} proves a kind of average convergence over all weights.}
+then the map $\w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)} -
 \expect{\p(\theta \vert \xvec)}{f(\theta)} \right)$ becomes linear as $N
 \rightarrow \infty$.
-
-(See \citep{kass:1990:posteriorexpansions} for a \textit{particular weight},
-\citep{giordano:2023:bayesij} for a kind of uniform convergence over datapoints.)
+}
 % \hrulefill
 
 % \textbf{Bayesian central limit theorem (BCLT) fact: }Suppose that $\p(\gamma
@@ -289,5 +292,27 @@ The map $\w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)} 
 % %
 % \hrulefill
 
+
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Example: A negative binomial model}
+
+    
+    Consider $\p(\xvec \vert \gamma) = \prod_{n=1}^N \textrm{NegativeBinomial}(\x_n \vert \gamma)$. Here, $\theta = \gamma$ is a scalar.  
+    
+    As $N \rightarrow \infty$, $\p(\gamma \vert \xvec)$ concentrates at rate $1 / \sqrt{N}$ (a BCLT).
+    
+    $\Rightarrow 
+    N \left( \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma} -
+    \expect{\p(\gamma \vert \xvec)}{\gamma} \right) = \blue{\infl_n} (\w_n - 1) + \red{O_p(N^{-1})}.
+    $
+    
+    
+    \vspace{1.5em}
+    \LowDimAccuracyGraph{}
+    
 
 \end{frame}
