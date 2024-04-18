@@ -1,0 +1,44 @@
+
+\begin{frame}
+\begin{center}
+\textbf{\Large Supplemental slides}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Non-equivalence of weighting (nonlinearity of marginalization)}
+%
+Consider a single datapoint.
+%
+\begin{align*}
+%
+\MoveEqLeft
+\log \p(\x_n \vert \gamma, \w_c)
+=\\&
+\log \left( \int \p(\x_n \vert \gamma, \lambda, \w_c)
+    \p(\lambda \vert \gamma) d\lambda \right)
+=\\&
+\log \left( \int \p(\x_n \vert \gamma, \lambda)^{\w_c}
+    \p(\lambda \vert \gamma) d\lambda \right)
+\red{\ne}\\&
+\log \left( \int \p(\x_n \vert \gamma, \lambda)
+    \p(\lambda \vert \gamma) d\lambda \right)^{\w_c}
+=\\&
+\w_c \log \p(\lambda \vert \gamma)
+%
+\end{align*}
+%
+\end{frame}
+
+
+\begin{frame}{Extended experimental results}
+    \ManyPlotsOne{}
+\end{frame}
+
+
+\begin{frame}{Extended experimental results}
+    \ManyPlotsTwo{}
+\end{frame}
