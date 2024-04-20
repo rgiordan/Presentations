@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  20 APR 2024 14:32
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  20 APR 2024 14:49
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1416,31 +1416,31 @@ echnical note
 ) (./main.aux)
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
+0.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1498,7 +1498,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1511,9 +1511,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count380
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1550,65 +1550,65 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 19.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 19.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 19.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 19.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 19.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 19.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 19.
-LaTeX Font Info:    Redeclaring math accent \check on input line 19.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 19.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 19.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 19.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 19.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 19.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 20.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 20.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 20.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 20.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 20.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 20.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 20.
+LaTeX Font Info:    Redeclaring math accent \check on input line 20.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 20.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 20.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 20.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 20.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 19.
+(Font)              `operators' in the math version `normal' on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/LiberationSerif(0)/m/n on input line
- 19.
+ 20.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 19.
+(Font)              `operators' in the math version `bold' on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/m/n on input lin
-e 19.
+e 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/m/n
- on input line 19.
+ on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/LiberationSerif(0)/m/it on input li
-ne 19.
+ne 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/b/n on input lin
-e 19.
+e 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/FiraSansLight(0)/m/n on input line 
-19.
+20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 19.
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/b/n
- on input line 19.
+ on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/LiberationSerif(0)/b/it on input l
-ine 19.
+ine 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/FiraSansLight(0)/b/n on input line
- 19.
+ 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/b/n on input line 19.
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/b/n on input line 20.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1616,7 +1616,7 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 (./main.nav)
-Overfull \vbox (10.92494pt too high) detected at line 21
+Overfull \vbox (10.92494pt too high) detected at line 22
  []
 
 [1
@@ -2178,72 +2178,68 @@ Overfull \vbox (22.9069pt too high) detected at line 122
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 205.
+(mdframed)              on input line 206.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 205.
+ mdframed uses option nobreak mdframed on input line 206.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 205.
+(mdframed)              on input line 206.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 205.
+ mdframed uses option nobreak mdframed on input line 206.
  [25
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 205.
+(mdframed)              on input line 206.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 205.
+ mdframed uses option nobreak mdframed on input line 206.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 205.
+(mdframed)              on input line 206.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 205.
+ mdframed uses option nobreak mdframed on input line 206.
  [26
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 205.
+(mdframed)              on input line 206.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 205.
+ mdframed uses option nobreak mdframed on input line 206.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 205.
+(mdframed)              on input line 206.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 205.
+ mdframed uses option nobreak mdframed on input line 206.
  [27
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 305.
+(mdframed)              on input line 206.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 305.
+ mdframed uses option nobreak mdframed on input line 206.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 305.
+(mdframed)              on input line 206.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 305.
-
-Overfull \vbox (19.59337pt too high) detected at line 305
- []
-
-[28
+ mdframed uses option nobreak mdframed on input line 206.
+ [28
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 305.
+(mdframed)              on input line 307.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 305.
+ mdframed uses option nobreak mdframed on input line 307.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 305.
+(mdframed)              on input line 307.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 305.
+ mdframed uses option nobreak mdframed on input line 307.
 
-Overfull \vbox (19.59337pt too high) detected at line 305
+Overfull \vbox (19.59337pt too high) detected at line 307
  []
 
 [29
@@ -2251,48 +2247,125 @@ Overfull \vbox (19.59337pt too high) detected at line 305
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 305.
+(mdframed)              on input line 307.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 305.
+ mdframed uses option nobreak mdframed on input line 307.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 305.
+(mdframed)              on input line 307.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 305.
+ mdframed uses option nobreak mdframed on input line 307.
 
-Overfull \vbox (19.59337pt too high) detected at line 305
+Overfull \vbox (19.59337pt too high) detected at line 307
  []
 
 [30
 
 ]
-<figure/lowdim_accuracy-1.png, id=240, 433.62pt x 216.81pt>
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 307.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 307.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 307.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 307.
+
+Overfull \vbox (19.59337pt too high) detected at line 307
+ []
+
+[31
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 307.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 307.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 307.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 307.
+
+Overfull \vbox (19.59337pt too high) detected at line 307
+ []
+
+[32
+
+]
+<figure/lowdim_accuracy-1.png, id=255, 433.62pt x 216.81pt>
 File: figure/lowdim_accuracy-1.png Graphic file (type png)
 <use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 329.
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 333.
 (luatex.def)             Requested size: 301.1566pt x 150.5816pt.
- [31
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 333.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 333.
+
+Overfull \vbox (14.83371pt too high) detected at line 333
+ []
+
+[33
 
 <./figure/lowdim_accuracy-1.png>]
 File: figure/lowdim_accuracy-1.png Graphic file (type png)
 <use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 329.
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 333.
 (luatex.def)             Requested size: 301.1566pt x 150.5816pt.
- [32
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 333.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 333.
+
+Overfull \vbox (14.83371pt too high) detected at line 333
+ []
+
+[34
 
 ]
 File: figure/lowdim_accuracy-1.png Graphic file (type png)
 <use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 329.
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 333.
 (luatex.def)             Requested size: 301.1566pt x 150.5816pt.
- [33
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 333.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 333.
+
+Overfull \vbox (14.83371pt too high) detected at line 333
+ []
+
+[35
+
+]
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 333.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 333.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 333.
+
+Overfull \vbox (14.83371pt too high) detected at line 333
+ []
+
+[36
 
 ]) (./high_dim.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 51.
+(mdframed)              on input line 53.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
+ mdframed uses option nobreak mdframed on input line 53.
 luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
  with language dflt
 
@@ -2302,149 +2375,80 @@ Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 51.
+(mdframed)              on input line 53.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
+ mdframed uses option nobreak mdframed on input line 53.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 51.
+(mdframed)              on input line 53.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-[34
-
-]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
- with language dflt
-
-Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
-(fontspec)                available for font 'LiberationSerif' with script
-(fontspec)                'CustomDefault' and language 'Default'.
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-[35
-
-]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
- with language dflt
-
-Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
-(fontspec)                available for font 'LiberationSerif' with script
-(fontspec)                'CustomDefault' and language 'Default'.
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-[36
-
-]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
- with language dflt
-
-Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
-(fontspec)                available for font 'LiberationSerif' with script
-(fontspec)                'CustomDefault' and language 'Default'.
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
+ mdframed uses option nobreak mdframed on input line 53.
 [37
 
 ]
-<figure/highdim_accuracy-1.png, id=286, 433.62pt x 216.81pt>
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
+luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
+[38
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
+luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
+[39
+
+]
+<figure/highdim_accuracy-1.png, id=299, 433.62pt x 216.81pt>
 File: figure/highdim_accuracy-1.png Graphic file (type png)
 <use figure/highdim_accuracy-1.png>
-Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 65.
+Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 67.
 (luatex.def)             Requested size: 301.1566pt x 150.5816pt.
- [38
+ [40
 
-<./figure/highdim_accuracy-1.png>]) (./exchangeability.tex [39
-
-]
-[40
-
-] [41
+<./figure/highdim_accuracy-1.png>]) (./exchangeability.tex [41
 
 ]
-File: figure/lowdim_accuracy-1.png Graphic file (type png)
-<use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 133.
-(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
-File: figure/highdim_accuracy-1.png Graphic file (type png)
-<use figure/highdim_accuracy-1.png>
-Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
+[42
 
-(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
- [42
-
-]
-File: figure/lowdim_accuracy-1.png Graphic file (type png)
-<use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 133.
-(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
-File: figure/highdim_accuracy-1.png Graphic file (type png)
-<use figure/highdim_accuracy-1.png>
-Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
-
-(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
- [43
+] [43
 
 ]
 File: figure/lowdim_accuracy-1.png Graphic file (type png)
@@ -2459,17 +2463,45 @@ Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
  [44
 
 ]
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 133.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+File: figure/highdim_accuracy-1.png Graphic file (type png)
+<use figure/highdim_accuracy-1.png>
+Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
+
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+ [45
+
+]
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 133.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+File: figure/highdim_accuracy-1.png Graphic file (type png)
+<use figure/highdim_accuracy-1.png>
+Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
+
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+ [46
+
+]
 File: figure/election_data-1.png Graphic file (type png)
 <use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 169.
+Package luatex.def Info: figure/election_data-1.png  used on input line 175.
 (luatex.def)             Requested size: 114.43236pt x 137.32545pt.
 File: figure/election_result-1.png Graphic file (type png)
 <use figure/election_result-1.png>
-Package luatex.def Info: figure/election_result-1.png  used on input line 169.
+Package luatex.def Info: figure/election_result-1.png  used on input line 175.
 (luatex.def)             Requested size: 114.43236pt x 137.32545pt.
- [45
 
-] (./main.bbl) [46
+Overfull \vbox (9.20418pt too high) detected at line 175
+ []
+
+[47
+
+] (./main.bbl) [48
 
 ])
 \tf@nav=\write6
@@ -2487,18 +2519,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 47263 strings out of 477805
+ 47282 strings out of 477805
  125031,1648299 words of node,token memory allocated
  10723 words of node memory still in use:
    48 hlist, 6 vlist, 2 rule, 68 disc, 6 local_par, 2 math, 234 glue, 33 kern, 6
 5 penalty, 873 glyph, 135 attribute, 113 glue_spec, 135 attribute_list, 4 write,
  1 pdf_start_link, 1 pdf_end_link, 6 pdf_dest, 1 pdf_action, 16 pdf_colorstack n
 odes
-   avail lists: 1:4,2:3392,3:1493,4:279,5:365,6:56,7:3365,8:54,9:1100,10:20,11:1
+   avail lists: 1:7,2:2553,3:1130,4:275,5:365,6:56,7:3365,8:54,9:1100,10:20,11:1
 37
- 64657 multiletter control sequences out of 65536+600000
- 98 fonts using 21604615 bytes
- 128i,31n,134p,1852b,1224s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64654 multiletter control sequences out of 65536+600000
+ 99 fonts using 22020623 bytes
+ 128i,31n,134p,1852b,1220s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
 xlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/l
@@ -2518,10 +2550,10 @@ cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
 
-Output written on main.pdf (46 pages, 737162 bytes).
+Output written on main.pdf (48 pages, 743340 bytes).
 
-PDF statistics: 421 PDF objects out of 1000 (max. 8388607)
- 321 compressed objects within 4 object streams
- 99 named destinations out of 1000 (max. 131072)
+PDF statistics: 433 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
+ 103 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

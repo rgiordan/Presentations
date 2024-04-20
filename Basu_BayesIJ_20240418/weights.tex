@@ -183,12 +183,13 @@ weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
 % \end{align*}
 % %
 
-\question{How to compute the slopes \blue{$\infl_n$}?
+\pause
+
+\question{How to compute the slopes \blue{$\infl_n$}?\\
 How large is the error \red{$\err(\w)$}?}
 
 \pause
 
-\hrulefill
 
 For simplicity, for the remainder of the presentation, we will
 consider a single weight.
@@ -227,7 +228,8 @@ How large is the error \red{$\err(\w)$}?}
     %
 \end{align*}
 
-        
+\pause
+
 Let an overbar mean posterior--mean zero.
 For example, $\thetabar := f(\theta) - \expect{\p(\theta \vert \xvec)}{f(\theta)}$.
 
@@ -243,7 +245,7 @@ By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w
 }}{\blue{\substack{
     \text{Estimatable with MCMC!} \\
     \text{\,}\\
-    \onslide<2->{\text{$= O_p(N^{-1})$ under posterior concentration}}
+    \onslide<3->{\text{$= O_p(N^{-1})$ under posterior concentration}}
 }}}
 &
 \red{\err(\w_n)} ={}&
@@ -258,13 +260,13 @@ By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w
 {\red{\substack{
     \text{Cannot compute directly (don't know $\wtil$)} \\ 
     \text{\,}\\
-    \onslide<2->{\text{$= O_p(N^{-2})$ under posterior concentration}}
+    \onslide<3->{\text{$= O_p(N^{-2})$ under posterior concentration}}
 }}}
 (\w_n - 1)^2
 %
 \end{align*}
 %
-\onslide<3->{
+\onslide<4->{
 \theorem{
 \textbf{Theorem \citep{giordano:2023:bayesij}  (paraphrase): }\\
 If the posterior $\p(\theta \vert \xvec)$ ``concentrates'' (e.g. as in the Bernstein--von Mises theorem),\footnote{Existing results are
@@ -325,5 +327,7 @@ becomes linear as $N\rightarrow \infty$, with slope $\lim_{N\rightarrow \infty} 
     \vspace{1.5em}
     \LowDimAccuracyGraph{}
     
+    \pause
+    \question{\textbf{Problem:} Most computationally hard Bayesian problems don't concentrate.}
 
 \end{frame}
