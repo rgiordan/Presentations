@@ -135,33 +135,24 @@ Assume the \blue{slope} is computable and \red{error} is small.
 \expansion{}
 
 
-\pause
-\textbf{Cross validation.} 
-Let $\w_{(-n)}$ leave out point $n$, and loss
-$f(\theta) = -\ell(\x_n \vert \theta)$.
-% $\expect{p(\theta \vert \x)}{\ell_n(\theta)}$.
-%
-%
-\begin{align*}
-\textrm{LOO CV loss at point }n =
-    \expect{p(\theta \vert \x, w_{(-n)})}{f(\theta)}
-\red{\approx} 
-    \expect{p(\theta \vert \x)}{f(\theta)} - \blue{\infl_{n}}
-\end{align*}
-%
+% \pause
+% \textbf{Cross validation.} 
+% Let $\w_{(-n)}$ leave out point $n$, and loss
+% $f(\theta) = -\ell(\x_n \vert \theta)$.
+% %
+% %
 % \begin{align*}
-% %
-% \textrm{LOO  CV error} =
-% \sumn\left(
-% \expect{p(\theta \vert \x, w_{(-n)})}{f(\theta)} -
-% \expect{p(\theta \vert \x)}{f(\theta)}\right)^2
-% \red{\approx}{}&
-% \sumn \left( -\blue{\infl_n} \right)^2
-% %
+% \textrm{LOO CV loss at point }n =
+%     \expect{p(\theta \vert \x, w_{(-n)})}{f(\theta)}
+% \red{\approx} 
+%     \expect{p(\theta \vert \x)}{f(\theta)} - \blue{\infl_{n}}
 % \end{align*}
 %
+%
+
 \pause
-\textbf{Bootstrap.}
+\textbf{Example: Approximate bootstrap.}
+
 Draw bootstrap
 weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
 %
@@ -176,28 +167,43 @@ weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
 %
 \end{align*}
 %
-% Let $\infl_{(1)} \le \infl_{(2)}, \ldots \le \infl_{(N)}$.
-% denote sorted influence scores.
-\pause
-\textbf{Influential subsets:
-Approximate maximum influence perturbation (AMIP).}
+% \pause
+% \textbf{Influential subsets:
+% Approximate maximum influence perturbation (AMIP).}
 
-Let $W_{(-K)}$ denote weights leaving out $K$ points.
+% Let $W_{(-K)}$ denote weights leaving out $K$ points.
+% %
+% \begin{align*}
+% %
+% \max_{\w \in W_{(-K)}} \left(
+% \expect{p(\theta \vert \x, w)}{f(\theta)} -
+% \expect{p(\theta \vert \x)}{f(\theta)}
+% \right) \red{\approx} - \sum_{n=1}^K \blue{\infl_{(n)}}.
+% %
+% \end{align*}
+% %
+
+\question{How to compute the slopes \blue{$\infl_n$}?
+How large is the error \red{$\err(\w)$}?}
+
+\pause
+
+\hrulefill
+
+For simplicity, for the remainder of the presentation, we will
+consider a single weight.
 %
 \begin{align*}
 %
-\max_{\w \in W_{(-K)}} \left(
-\expect{p(\theta \vert \x, w)}{f(\theta)} -
-\expect{p(\theta \vert \x)}{f(\theta)}
-\right) \red{\approx} - \sum_{n=1}^K \blue{\infl_{(n)}}.
+\expect{p(\theta \vert \xvec, \w_n)}{f(\theta)} -
+    \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
+    \blue{\infl_n} (\w_n - 1) + \red{\err(\w_n)}
 %
 \end{align*}
 %
-% \pause
-% \question{How to compute the slopes \blue{$\infl_n$}?
-% How large is the error \red{$\err(\w)$}?}
 
 \end{frame}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -213,20 +219,17 @@ Let $W_{(-K)}$ denote weights leaving out $K$ points.
 \question{How to compute the slopes \blue{$\infl_n$}?
 How large is the error \red{$\err(\w)$}?}
 
-For simplicity, for the remainder of the presentation, we will
-consider a single weight.
-%
 \begin{align*}
-%
-\expect{p(\theta \vert \xvec, \w_n)}{f(\theta)} -
-    \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
-    \blue{\infl_n} (\w_n - 1) + \red{\err(\w_n)}
-%
+    %
+    \expect{p(\theta \vert \xvec, \w_n)}{f(\theta)} -
+        \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
+        \blue{\infl_n} (\w_n - 1) + \red{\err(\w_n)}
+    %
 \end{align*}
-%
 
-Let an overbar mean posterior--mean zero
-(e.g., $\thetabar := f(\theta) - \expect{\p(\theta \vert \xvec)}{f(\theta)}$).
+        
+Let an overbar mean posterior--mean zero.
+For example, $\thetabar := f(\theta) - \expect{\p(\theta \vert \xvec)}{f(\theta)}$.
 
 By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w_n]$:
 %
@@ -240,7 +243,7 @@ By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w
 }}{\blue{\substack{
     \text{Estimatable with MCMC!} \\
     \text{\,}\\
-    \text{$= O_p(N^{-1})$ under a BCLT}
+    \onslide<2->{\text{$= O_p(N^{-1})$ under posterior concentration}}
 }}}
 &
 \red{\err(\w_n)} ={}&
@@ -255,22 +258,28 @@ By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w
 {\red{\substack{
     \text{Cannot compute directly (don't know $\wtil$)} \\ 
     \text{\,}\\
-    \text{$= O_p(N^{-2})$ under a BCLT}
+    \onslide<2->{\text{$= O_p(N^{-2})$ under posterior concentration}}
 }}}
 (\w_n - 1)^2
 %
 \end{align*}
 %
-
+\onslide<3->{
 \theorem{
-\textbf{Theorem 2 of \citet{giordano:2023:bayesij}  (paraphrase): }\\
-If the posterior $\p(\theta \vert \xvec)$ satisfies a kind of Bayesian central limit theorem 
-(BCLT),\footnote{Existing results are
+\textbf{Theorem \citep{giordano:2023:bayesij}  (paraphrase): }\\
+If the posterior $\p(\theta \vert \xvec)$ ``concentrates'' (e.g. as in the Bernstein--von Mises theorem),\footnote{Existing results are
 sufficient for a \textit{particular weight} \citep{kass:1990:posteriorexpansions}. 
-\citet{giordano:2023:bayesij} proves a kind of average convergence over all weights.}
-then the map $\w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)} -
-\expect{\p(\theta \vert \xvec)}{f(\theta)} \right)$ becomes linear as $N
-\rightarrow \infty$.
+\citet{giordano:2023:bayesij} proves that the result holds when averaged over all weights, as needed for
+variance estimation.}
+then
+%
+\begin{align*}
+    \w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)} -
+    \expect{\p(\theta \vert \xvec)}{f(\theta)} \right)
+\end{align*}
+%
+becomes linear as $N\rightarrow \infty$, with slope $\lim_{N\rightarrow \infty} \infl_n$.
+}
 }
 % \hrulefill
 
@@ -303,7 +312,8 @@ then the map $\w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\the
     
     Consider $\p(\xvec \vert \gamma) = \prod_{n=1}^N \textrm{NegativeBinomial}(\x_n \vert \gamma)$. Here, $\theta = \gamma$ is a scalar.  
     
-    As $N \rightarrow \infty$, $\p(\gamma \vert \xvec)$ concentrates at rate $1 / \sqrt{N}$ (a BCLT).
+    \pause
+    As $N \rightarrow \infty$, $\p(\gamma \vert \xvec)$ concentrates at rate $1 / \sqrt{N}$ (Bernstein--von Mises).
     
     $\Rightarrow 
     N \left( \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma} -
@@ -311,6 +321,7 @@ then the map $\w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\the
     $
     
     
+    \pause
     \vspace{1.5em}
     \LowDimAccuracyGraph{}
     

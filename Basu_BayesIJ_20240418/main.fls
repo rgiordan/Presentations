@@ -862,6 +862,10 @@ INPUT ./static_figures/e_beta_w.png
 INPUT ./figure/lowdim_accuracy-1.png
 INPUT ./figure/lowdim_accuracy-1.png
 INPUT ./figure/lowdim_accuracy-1.png
+INPUT ./figure/lowdim_accuracy-1.png
+INPUT ./figure/lowdim_accuracy-1.png
+INPUT ./figure/lowdim_accuracy-1.png
+INPUT ./figure/lowdim_accuracy-1.png
 INPUT ./high_dim.tex
 INPUT ./high_dim.tex
 INPUT ./figure/highdim_accuracy-1.png

@@ -87,8 +87,9 @@ contribution, not a datapoint.
     with $G = N$ and $g_n=n$.
 
     \begin{center}
-    \begin{minipage}{0.25\textwidth}
-        Approximation based on $\log \p(\x_n \vert \gamma)$.
+    \begin{minipage}{0.34\textwidth}
+        Uses $\log \p(\x_n \vert \gamma)$:\\
+        $\infl_n = \expect{\p(\gamma \vert \xvec)}{\gammabar \ellbar_n(\gamma)}$
 
         \onslide<2->{
         \spskip
@@ -97,14 +98,15 @@ contribution, not a datapoint.
         in general.
         }
     \end{minipage}
-    \begin{minipage}{0.7\textwidth}
+    \begin{minipage}{0.65\textwidth}
         \LowDimAccuracyGraph{}
         % \HighDimAccuracyGraph{}
     \end{minipage}
     %
 
-    \begin{minipage}{0.25\textwidth}
-        Approximation based on $\log \p(\x_n \vert \gamma, \lambda)$.
+    \begin{minipage}{0.34\textwidth}
+        Uses $\log \p(\x_n \vert \gamma, \lambda)$:\\
+        $\infl_n = \expect{\p(\gamma,\lambda \vert \xvec)}{\gammabar \ellbar_n(\gamma, \lambda)}$
 
         \onslide<2->{
         \spskip
@@ -119,7 +121,7 @@ contribution, not a datapoint.
         }
 
     \end{minipage}
-    \begin{minipage}{0.7\textwidth}
+    \begin{minipage}{0.65\textwidth}
         %\LowDimAccuracyGraph{}
         \HighDimAccuracyGraph{}
     \end{minipage}

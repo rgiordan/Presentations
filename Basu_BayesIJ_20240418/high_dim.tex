@@ -1,6 +1,6 @@
 \begin{frame}{High dimensional problems}
 
-\question{What about when the posterior doesn't obey a BCLT?}
+\question{What about when parts of the posterior don't concentrate?}
 
 Example: \textbf{Poisson model with random effects (REs)
 $\lambda$ and fixed effect $\gamma$.}
@@ -12,49 +12,14 @@ If the observations per random effect remains bounded as $N \rightarrow
     Parameter $\lambda$ grows in dimension with $N$.& 
     Parameter $\gamma$ is a scalar. \\
     Marginally, $\p(\lambda \vert \xvec)$ does not concentrate. &
-    Marginally, $\p(\gamma \vert \xvec)$ obeys a BCLT. \\
+    Marginally, $\p(\gamma \vert \xvec)$ concentrates. \\
 \end{tabular}
-% \begin{itemize}
-% %
-% \item Parameter $\lambda$ (``local'') grows in dimension with $N$.
-% \item Parameter $\gamma$ (``global'') is finite-dimensional.
-% \item Marginally $\p(\lambda \vert \xvec)$ does not concentrate.
-% \item Marginally, $\p(\gamma \vert \xvec)$ concentrates.
-% % \item Conditionally, $\p(\lambda \vert \gamma, \xvec)$ does not concentrate either.
-% %
-% \end{itemize}
-%
-% \begin{align*}
-% %
-% \MoveEqLeft
-% \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)} -
-% \expect{\p(\lambda \vert \xvec)}{f(\lambda)}
-% \\={}&
-% \blue{\infl_n} (\w_n - 1)
-% &&
-% + \red{\err(\w_n)}
-% \\={}&
-% \undernote{
-% \blue{\expect{\p(\lambda \vert \xvec)}
-%              {\fbar(\lambda) \ellbar_n(\lambda)}}
-% }{O_p(1)}
-% (\w_n - 1)
-% &&
-% + \frac{1}{2}
-% \undernote{
-% \red{
-% \expect{\p(\lambda \vert \xvec, \wtil_n)}{
-%     \fbar(\lambda)
-%     \ellbar_n(\lambda)
-%     \ellbar_n(\lambda)}
-% }
-% }{O_p(1)}
-% (\w_n - 1)^2.
-% %
-% \end{align*}
-%
 
-\question{Does $\w_n \mapsto \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)}$ become linear as $N$ grows?}
+\pause
+\question{Does 
+$\w_n \mapsto \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)} - \expect{\p(\lambda \vert \xvec)}{f(\lambda)}$ 
+become linear as $N$ grows? \\
+(Note $\p(\lambda \vert \xvec)$ does not concentrate.)}
 
 \textbf{Not in general. }
 Since $\p(\lambda \vert \xvec)$ doesn't concentrate, both the slope $\blue{\infl_n}$ and
@@ -64,20 +29,25 @@ error $\red{\err(\w_n)}$ are $O(1)$ in general.
 $\Rightarrow$ The map
 $\w_n \mapsto \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)}$ is nonlinear in general.
 
+\pause
 \spskip
-\question{Does $\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$ become linear as $N$ grows?}
+\question{Does $\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)} - \expect{\p(\gamma \vert \xvec)}{f(\gamma)}$ 
+become linear as $N$ grows?\\
+(Note $\p(\gamma \vert \xvec)$ \textit{does} concentrate.)}
 %
 
+\pause
 
 \theorem{
-\textbf{Theorem 5 of \citet{giordano:2023:bayesij}  (paraphrase): }\\
-In the linear approximation to $\expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$,
-both the slope $\blue{\infl_n}$ and the error $\red{\err(\w_n)}$ are $O_p(N^{-1})$ when
-$p(\lambda \vert \xvec, \gamma)$ does not concentrate, even if $\p(\gamma \vert \xvec)$
-obeys a BCLT marginally.  In general, \textbf{the posterior
-expectation does not become linear in $\w_n$ as $N$ grows.}
+\textbf{Theorem 5 of \citet{giordano:2023:bayesij}  (paraphrase): } In general, \textbf{no!}\\
+%
+Specifically, 
+% in the linear approximation to $\expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$,
+both the slope $\blue{\infl_n}$ and the error $\red{\err(\w_n)}$ are $O_p(N^{-1})$,
+\textbf{even if $\p(\gamma \vert \xvec)$ concentrates marginally,}
+when $p(\lambda \vert \xvec, \gamma)$ does not concentrate. 
 }
-
+%
 \end{frame}
 
 
@@ -86,6 +56,9 @@ expectation does not become linear in $\w_n$ as $N$ grows.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Experiments}
+
+Example: \textbf{Poisson model with random effects (REs)
+$\lambda$ and fixed effect $\gamma$.}
 
 \HighDimAccuracyGraph{}
 
