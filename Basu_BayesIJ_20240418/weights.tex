@@ -158,12 +158,11 @@ weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
 %
 \begin{align*}
 %
-\textrm{Bootstrap variance} =
-\var{\p(\w)}{\expect{p(\theta \vert \x, w)}{f(\theta)}}
-\red{\approx} \frac{1}{N^2} \sumn \left(\blue{\infl_n} -
-\overline{\blue{\infl}}
-    % \frac{1}{N} \sum_{n'=1}^N \blue{\infl_{n'}} 
-    \right)^2
+\textrm{Bootstrap variance} ={}&
+\var{\p(\w)}{\expect{p(\theta \vert \x, w)}{f(\theta)}} 
+\\\red{\approx}{}&
+  \var{\p(\w)}{\expect{p(\theta \vert \x)}{f(\theta)} + \blue{\infl_n}(\w_n - 1)} 
+\\={}& \frac{1}{N^2} \sumn \left(\blue{\infl_n} - \overline{\blue{\infl}}\right)^2.
 %
 \end{align*}
 %

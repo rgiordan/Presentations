@@ -30,30 +30,36 @@ We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
 \end{minipage}
 
 
-% \pause
+\pause
 % \hrulefill
 
-\onslide<2->{
-\textbf{Some typical model checking tasks:}
-}
+% \onslide<2->{
+% \textbf{Some typical model checking tasks:}
+% }
 
-\begin{itemize}
-    \item<2-> How well are polls fit under cross-validation (CV)? \citep{vehtari:2012:bayesianpredictivemodelassessment}
-    \subitem{Re-fit with data points removed one at a time}
+% \begin{itemize}
+%     \item<2-> How well are polls fit under cross-validation (CV)? \citep{vehtari:2012:bayesianpredictivemodelassessment}
+%     \subitem{Re-fit with data points removed one at a time}
     %
-    \item<3-> Is there high variability under re-sampling?
-    \citep{huggins:2023:bayesbag}
-    \subitem{Re-fit with bootstrap samples of data}
-    %
-    \item<4-> Are a small proportion (1\%) of polls
-    highly influential?
-    \citep{broderick:2020:automatic}
-    \subitem{Re-fit with sets of all $1\%$ of datapoints removed}
-\end{itemize}
+    % \item<3-> 
+\question{
+    The people who responded to the polls were randomly selected.  \\
+    If we had selected a different random sample, how much would our estimate have changed?
+    }
+        
+\textbf{Idea: } Re-fit with bootstrap samples of data \citep{huggins:2023:bayesbag}
 
-\onslide<5->{
-{\Large  Problem: Each MCMC run takes about $10$ hours (Stan, six cores).}
-}
+%
+%     \item<4-> Are a small proportion (1\%) of polls
+%     highly influential?
+%     \citep{broderick:2020:automatic}
+%     \subitem{Re-fit with sets of all $1\%$ of datapoints removed}
+% \end{itemize}
+
+% \onslide<5->{
+\pause
+\question{\textbf{Problem:} Each MCMC run takes about $10$ hours (Stan, six cores).}
+% }
 
 \end{frame}
 
@@ -127,7 +133,7 @@ We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
 \begin{frame}{Results}
 
 \spskip
-\question{We propose: Use posterior draws based on the full data,
+\question{Proposal: Use full--data posterior draws
 to form a linear approximation to {\em data reweightings}.}
 \onslide<2->{
 \begin{minipage}{0.43\textwidth}

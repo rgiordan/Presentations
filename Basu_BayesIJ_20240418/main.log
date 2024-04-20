@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  20 APR 2024 14:49
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  20 APR 2024 18:17
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1625,116 +1625,100 @@ Overfull \vbox (10.92494pt too high) detected at line 22
 <figure/election_data-1.png, id=22, 361.35pt x 433.62pt>
 File: figure/election_data-1.png Graphic file (type png)
 <use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 58.
+Package luatex.def Info: figure/election_data-1.png  used on input line 64.
 (luatex.def)             Requested size: 120.45337pt x 144.54405pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 3049) in paragraph at lines 58--58
+Underfull \hbox (badness 3049) in paragraph at lines 64--64
 []\TU/LiberationSerif(0)/m/n/8 Typ-i-cally, we com-pute Markov chain Monte Carlo
 
  []
 
-
-Overfull \vbox (16.17657pt too high) detected at line 58
- []
-
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
 [2
 
 <./figure/election_data-1.png>]
 File: figure/election_data-1.png Graphic file (type png)
 <use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 58.
+Package luatex.def Info: figure/election_data-1.png  used on input line 64.
 (luatex.def)             Requested size: 120.45337pt x 144.54405pt.
 
-Underfull \hbox (badness 3049) in paragraph at lines 58--58
+Underfull \hbox (badness 3049) in paragraph at lines 64--64
 []\TU/LiberationSerif(0)/m/n/8 Typ-i-cally, we com-pute Markov chain Monte Carlo
 
  []
 
-
-Overfull \vbox (16.17657pt too high) detected at line 58
- []
-
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
 [3
 
 ]
 File: figure/election_data-1.png Graphic file (type png)
 <use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 58.
+Package luatex.def Info: figure/election_data-1.png  used on input line 64.
 (luatex.def)             Requested size: 120.45337pt x 144.54405pt.
 
-Underfull \hbox (badness 3049) in paragraph at lines 58--58
+Underfull \hbox (badness 3049) in paragraph at lines 64--64
 []\TU/LiberationSerif(0)/m/n/8 Typ-i-cally, we com-pute Markov chain Monte Carlo
 
  []
 
-
-Overfull \vbox (16.17657pt too high) detected at line 58
- []
-
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
 [4
-
-]
-File: figure/election_data-1.png Graphic file (type png)
-<use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 58.
-(luatex.def)             Requested size: 120.45337pt x 144.54405pt.
-
-Underfull \hbox (badness 3049) in paragraph at lines 58--58
-[]\TU/LiberationSerif(0)/m/n/8 Typ-i-cally, we com-pute Markov chain Monte Carlo
-
- []
-
-
-Overfull \vbox (16.17657pt too high) detected at line 58
- []
-
-[5
-
-]
-File: figure/election_data-1.png Graphic file (type png)
-<use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 58.
-(luatex.def)             Requested size: 120.45337pt x 144.54405pt.
-
-Underfull \hbox (badness 3049) in paragraph at lines 58--58
-[]\TU/LiberationSerif(0)/m/n/8 Typ-i-cally, we com-pute Markov chain Monte Carlo
-
- []
-
-
-Overfull \vbox (16.17657pt too high) detected at line 58
- []
-
-[6
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 162.
+(mdframed)              on input line 168.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 162.
+ mdframed uses option nobreak mdframed on input line 168.
 File: figure/election_data-1.png Graphic file (type png)
 <use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 162.
+Package luatex.def Info: figure/election_data-1.png  used on input line 168.
 (luatex.def)             Requested size: 129.49042pt x 155.38849pt.
-<figure/election_result-1.png, id=86, 361.35pt x 433.62pt>
+<figure/election_result-1.png, id=56, 361.35pt x 433.62pt>
 File: figure/election_result-1.png Graphic file (type png)
 <use figure/election_result-1.png>
-Package luatex.def Info: figure/election_result-1.png  used on input line 162.
+Package luatex.def Info: figure/election_result-1.png  used on input line 168.
 (luatex.def)             Requested size: 129.49042pt x 155.38849pt.
 
-Overfull \hbox (5.35803pt too wide) in paragraph at lines 162--162
+Overfull \hbox (5.35803pt too wide) in paragraph at lines 168--168
 [][] 
  []
 
@@ -1807,27 +1791,27 @@ lt;+tlig;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
-Overfull \vbox (15.92514pt too high) detected at line 162
+Overfull \vbox (5.0002pt too high) detected at line 168
  []
 
-[7
+[5
 
 <./figure/election_result-1.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 162.
+(mdframed)              on input line 168.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 162.
+ mdframed uses option nobreak mdframed on input line 168.
 File: figure/election_data-1.png Graphic file (type png)
 <use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 162.
+Package luatex.def Info: figure/election_data-1.png  used on input line 168.
 (luatex.def)             Requested size: 129.49042pt x 155.38849pt.
 File: figure/election_result-1.png Graphic file (type png)
 <use figure/election_result-1.png>
-Package luatex.def Info: figure/election_result-1.png  used on input line 162.
+Package luatex.def Info: figure/election_result-1.png  used on input line 168.
 (luatex.def)             Requested size: 129.49042pt x 155.38849pt.
 
-Overfull \hbox (5.35803pt too wide) in paragraph at lines 162--162
+Overfull \hbox (5.35803pt too wide) in paragraph at lines 168--168
 [][] 
  []
 
@@ -1839,27 +1823,27 @@ Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
 (fontspec)                'CustomDefault' and language 'Default'.
 
 
-Overfull \vbox (15.92514pt too high) detected at line 162
+Overfull \vbox (5.0002pt too high) detected at line 168
  []
 
-[8
+[6
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 162.
+(mdframed)              on input line 168.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 162.
+ mdframed uses option nobreak mdframed on input line 168.
 File: figure/election_data-1.png Graphic file (type png)
 <use figure/election_data-1.png>
-Package luatex.def Info: figure/election_data-1.png  used on input line 162.
+Package luatex.def Info: figure/election_data-1.png  used on input line 168.
 (luatex.def)             Requested size: 129.49042pt x 155.38849pt.
 File: figure/election_result-1.png Graphic file (type png)
 <use figure/election_result-1.png>
-Package luatex.def Info: figure/election_result-1.png  used on input line 162.
+Package luatex.def Info: figure/election_result-1.png  used on input line 168.
 (luatex.def)             Requested size: 129.49042pt x 155.38849pt.
 
-Overfull \hbox (5.35803pt too wide) in paragraph at lines 162--162
+Overfull \hbox (5.35803pt too wide) in paragraph at lines 168--168
 [][] 
  []
 
@@ -1871,39 +1855,92 @@ Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
 (fontspec)                'CustomDefault' and language 'Default'.
 
 
-Overfull \vbox (15.92514pt too high) detected at line 162
+Overfull \vbox (5.0002pt too high) detected at line 168
  []
 
-[9
+[7
+
+] [8
+
+] [9
 
 ] [10
 
 ] [11
 
-] [12
-
-] [13
-
 ]) (./weights.tex
-<static_figures/orig_weights.png, id=126, 455.7025pt x 91.34125pt>
+<static_figures/orig_weights.png, id=97, 455.7025pt x 91.34125pt>
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
 Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
 2.
 (luatex.def)             Requested size: 117.44731pt x 23.54048pt.
-<static_figures/weights_loo.png, id=127, 444.66125pt x 105.39375pt>
+<static_figures/weights_loo.png, id=98, 444.66125pt x 105.39375pt>
 File: static_figures/weights_loo.png Graphic file (type png)
 <use static_figures/weights_loo.png>
 Package luatex.def Info: static_figures/weights_loo.png  used on input line 122
 .
 (luatex.def)             Requested size: 117.44731pt x 27.83754pt.
-<static_figures/boot_weights.png, id=128, 452.69125pt x 203.76125pt>
+<static_figures/boot_weights.png, id=99, 452.69125pt x 203.76125pt>
 File: static_figures/boot_weights.png Graphic file (type png)
 <use static_figures/boot_weights.png>
 Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
 2.
 (luatex.def)             Requested size: 117.44731pt x 52.86163pt.
-<static_figures/e_beta_w.png, id=129, 903.375pt x 903.375pt>
+<static_figures/e_beta_w.png, id=100, 903.375pt x 903.375pt>
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 122.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 122
+ []
+
+[12
+
+<./static_figures/orig_weights.png><./static_figures/weights_loo.png><./static_f
+igures/boot_weights.png><./static_figures/e_beta_w.png>]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+2.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 122
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+2.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 122.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 122
+ []
+
+[13
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+2.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 122
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+2.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
 File: static_figures/e_beta_w.png Graphic file (type png)
 <use static_figures/e_beta_w.png>
 Package luatex.def Info: static_figures/e_beta_w.png  used on input line 122.
@@ -1914,8 +1951,7 @@ Overfull \vbox (22.9069pt too high) detected at line 122
 
 [14
 
-<./static_figures/orig_weights.png><./static_figures/weights_loo.png><./static_f
-igures/boot_weights.png><./static_figures/e_beta_w.png>]
+]
 File: static_figures/orig_weights.png Graphic file (type png)
 <use static_figures/orig_weights.png>
 Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
@@ -2124,53 +2160,35 @@ Overfull \vbox (22.9069pt too high) detected at line 122
 [22
 
 ]
-File: static_figures/orig_weights.png Graphic file (type png)
-<use static_figures/orig_weights.png>
-Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
-2.
-(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
-File: static_figures/weights_loo.png Graphic file (type png)
-<use static_figures/weights_loo.png>
-Package luatex.def Info: static_figures/weights_loo.png  used on input line 122
-.
-(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
-File: static_figures/boot_weights.png Graphic file (type png)
-<use static_figures/boot_weights.png>
-Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
-2.
-(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
-File: static_figures/e_beta_w.png Graphic file (type png)
-<use static_figures/e_beta_w.png>
-Package luatex.def Info: static_figures/e_beta_w.png  used on input line 122.
-(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 205.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 205.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 205.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 205.
 
-Overfull \vbox (22.9069pt too high) detected at line 122
+Overfull \vbox (21.52206pt too high) detected at line 205
  []
 
 [23
 
 ]
-File: static_figures/orig_weights.png Graphic file (type png)
-<use static_figures/orig_weights.png>
-Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
-2.
-(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
-File: static_figures/weights_loo.png Graphic file (type png)
-<use static_figures/weights_loo.png>
-Package luatex.def Info: static_figures/weights_loo.png  used on input line 122
-.
-(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
-File: static_figures/boot_weights.png Graphic file (type png)
-<use static_figures/boot_weights.png>
-Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
-2.
-(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
-File: static_figures/e_beta_w.png Graphic file (type png)
-<use static_figures/e_beta_w.png>
-Package luatex.def Info: static_figures/e_beta_w.png  used on input line 122.
-(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 205.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 205.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 205.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 205.
 
-Overfull \vbox (22.9069pt too high) detected at line 122
+Overfull \vbox (21.52206pt too high) detected at line 205
  []
 
 [24
@@ -2178,68 +2196,84 @@ Overfull \vbox (22.9069pt too high) detected at line 122
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 205.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 206.
+ mdframed uses option nobreak mdframed on input line 205.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 205.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 206.
- [25
+ mdframed uses option nobreak mdframed on input line 205.
+
+Overfull \vbox (21.52206pt too high) detected at line 205
+ []
+
+[25
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 205.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 206.
+ mdframed uses option nobreak mdframed on input line 205.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 205.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 206.
- [26
+ mdframed uses option nobreak mdframed on input line 205.
+
+Overfull \vbox (21.52206pt too high) detected at line 205
+ []
+
+[26
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 306.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 206.
+ mdframed uses option nobreak mdframed on input line 306.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 306.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 206.
- [27
+ mdframed uses option nobreak mdframed on input line 306.
+
+Overfull \vbox (19.59337pt too high) detected at line 306
+ []
+
+[27
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 306.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 206.
+ mdframed uses option nobreak mdframed on input line 306.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 306.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 206.
- [28
+ mdframed uses option nobreak mdframed on input line 306.
+
+Overfull \vbox (19.59337pt too high) detected at line 306
+ []
+
+[28
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 307.
+(mdframed)              on input line 306.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 307.
+ mdframed uses option nobreak mdframed on input line 306.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 307.
+(mdframed)              on input line 306.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 307.
+ mdframed uses option nobreak mdframed on input line 306.
 
-Overfull \vbox (19.59337pt too high) detected at line 307
+Overfull \vbox (19.59337pt too high) detected at line 306
  []
 
 [29
@@ -2247,120 +2281,136 @@ Overfull \vbox (19.59337pt too high) detected at line 307
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 307.
+(mdframed)              on input line 306.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 307.
+ mdframed uses option nobreak mdframed on input line 306.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 307.
+(mdframed)              on input line 306.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 307.
+ mdframed uses option nobreak mdframed on input line 306.
 
-Overfull \vbox (19.59337pt too high) detected at line 307
+Overfull \vbox (19.59337pt too high) detected at line 306
  []
 
 [30
 
 ]
+<figure/lowdim_accuracy-1.png, id=225, 433.62pt x 216.81pt>
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 332.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 307.
+(mdframed)              on input line 332.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 307.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 307.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 307.
+ mdframed uses option nobreak mdframed on input line 332.
 
-Overfull \vbox (19.59337pt too high) detected at line 307
+Overfull \vbox (14.83371pt too high) detected at line 332
  []
 
 [31
 
-]
+<./figure/lowdim_accuracy-1.png>]
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 332.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 307.
+(mdframed)              on input line 332.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 307.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 307.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 307.
+ mdframed uses option nobreak mdframed on input line 332.
 
-Overfull \vbox (19.59337pt too high) detected at line 307
+Overfull \vbox (14.83371pt too high) detected at line 332
  []
 
 [32
 
 ]
-<figure/lowdim_accuracy-1.png, id=255, 433.62pt x 216.81pt>
 File: figure/lowdim_accuracy-1.png Graphic file (type png)
 <use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 333.
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 332.
 (luatex.def)             Requested size: 301.1566pt x 150.5816pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 333.
+(mdframed)              on input line 332.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 333.
+ mdframed uses option nobreak mdframed on input line 332.
 
-Overfull \vbox (14.83371pt too high) detected at line 333
+Overfull \vbox (14.83371pt too high) detected at line 332
  []
 
 [33
 
-<./figure/lowdim_accuracy-1.png>]
+]
 File: figure/lowdim_accuracy-1.png Graphic file (type png)
 <use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 333.
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 332.
 (luatex.def)             Requested size: 301.1566pt x 150.5816pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 333.
+(mdframed)              on input line 332.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 333.
+ mdframed uses option nobreak mdframed on input line 332.
 
-Overfull \vbox (14.83371pt too high) detected at line 333
+Overfull \vbox (14.83371pt too high) detected at line 332
  []
 
 [34
 
-]
-File: figure/lowdim_accuracy-1.png Graphic file (type png)
-<use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 333.
-(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
+]) (./high_dim.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 333.
+(mdframed)              on input line 53.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 333.
+ mdframed uses option nobreak mdframed on input line 53.
+luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
+ with language dflt
 
-Overfull \vbox (14.83371pt too high) detected at line 333
- []
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif' with script
+(fontspec)                'CustomDefault' and language 'Default'.
 
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
 [35
 
 ]
-File: figure/lowdim_accuracy-1.png Graphic file (type png)
-<use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 333.
-(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 333.
+(mdframed)              on input line 53.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 333.
+ mdframed uses option nobreak mdframed on input line 53.
+luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
+ with language dflt
 
-Overfull \vbox (14.83371pt too high) detected at line 333
- []
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif' with script
+(fontspec)                'CustomDefault' and language 'Default'.
 
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 53.
 [36
 
-]) (./high_dim.tex
+]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 53.
@@ -2386,69 +2436,43 @@ Package mdframed Info: mdframed inside a box
 [37
 
 ]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 53.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 53.
-luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
- with language dflt
-
-Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
-(fontspec)                available for font 'LiberationSerif' with script
-(fontspec)                'CustomDefault' and language 'Default'.
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 53.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 53.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 53.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 53.
-[38
-
-]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 53.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 53.
-luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
- with language dflt
-
-Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
-(fontspec)                available for font 'LiberationSerif' with script
-(fontspec)                'CustomDefault' and language 'Default'.
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 53.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 53.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 53.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 53.
-[39
-
-]
-<figure/highdim_accuracy-1.png, id=299, 433.62pt x 216.81pt>
+<figure/highdim_accuracy-1.png, id=269, 433.62pt x 216.81pt>
 File: figure/highdim_accuracy-1.png Graphic file (type png)
 <use figure/highdim_accuracy-1.png>
 Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 67.
 (luatex.def)             Requested size: 301.1566pt x 150.5816pt.
- [40
+ [38
 
-<./figure/highdim_accuracy-1.png>]) (./exchangeability.tex [41
+<./figure/highdim_accuracy-1.png>]) (./exchangeability.tex [39
 
 ]
-[42
+[40
 
-] [43
+] [41
+
+]
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 133.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+File: figure/highdim_accuracy-1.png Graphic file (type png)
+<use figure/highdim_accuracy-1.png>
+Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
+
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+ [42
+
+]
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 133.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+File: figure/highdim_accuracy-1.png Graphic file (type png)
+<use figure/highdim_accuracy-1.png>
+Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
+
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+ [43
 
 ]
 File: figure/lowdim_accuracy-1.png Graphic file (type png)
@@ -2463,30 +2487,6 @@ Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
  [44
 
 ]
-File: figure/lowdim_accuracy-1.png Graphic file (type png)
-<use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 133.
-(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
-File: figure/highdim_accuracy-1.png Graphic file (type png)
-<use figure/highdim_accuracy-1.png>
-Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
-
-(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
- [45
-
-]
-File: figure/lowdim_accuracy-1.png Graphic file (type png)
-<use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 133.
-(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
-File: figure/highdim_accuracy-1.png Graphic file (type png)
-<use figure/highdim_accuracy-1.png>
-Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 133.
-
-(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
- [46
-
-]
 File: figure/election_data-1.png Graphic file (type png)
 <use figure/election_data-1.png>
 Package luatex.def Info: figure/election_data-1.png  used on input line 175.
@@ -2499,9 +2499,9 @@ Package luatex.def Info: figure/election_result-1.png  used on input line 175.
 Overfull \vbox (9.20418pt too high) detected at line 175
  []
 
-[47
+[45
 
-] (./main.bbl) [48
+] (./main.bbl) [46
 
 ])
 \tf@nav=\write6
@@ -2519,17 +2519,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 47282 strings out of 477805
+ 47240 strings out of 477805
  125031,1648299 words of node,token memory allocated
- 10723 words of node memory still in use:
-   48 hlist, 6 vlist, 2 rule, 68 disc, 6 local_par, 2 math, 234 glue, 33 kern, 6
-5 penalty, 873 glyph, 135 attribute, 113 glue_spec, 135 attribute_list, 4 write,
- 1 pdf_start_link, 1 pdf_end_link, 6 pdf_dest, 1 pdf_action, 16 pdf_colorstack n
+ 7234 words of node memory still in use:
+   36 hlist, 6 vlist, 2 rule, 39 disc, 4 local_par, 2 math, 157 glue, 19 kern, 4
+7 penalty, 556 glyph, 101 attribute, 113 glue_spec, 101 attribute_list, 4 write,
+ 1 pdf_start_link, 1 pdf_end_link, 4 pdf_dest, 1 pdf_action, 12 pdf_colorstack n
 odes
-   avail lists: 1:7,2:2553,3:1130,4:275,5:365,6:56,7:3365,8:54,9:1100,10:20,11:1
-37
+   avail lists: 1:6,2:2622,3:1148,4:282,5:379,6:50,7:3759,8:55,9:1112,10:20,11:1
+63
  64654 multiletter control sequences out of 65536+600000
- 99 fonts using 22020623 bytes
+ 93 fonts using 21648439 bytes
  128i,31n,134p,1852b,1220s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
 xlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fon
@@ -2539,21 +2539,20 @@ ublic/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm7.pfb>
+Output written on main.pdf (46 pages, 731607 bytes).
 
-Output written on main.pdf (48 pages, 743340 bytes).
-
-PDF statistics: 433 PDF objects out of 1000 (max. 8388607)
- 331 compressed objects within 4 object streams
- 103 named destinations out of 1000 (max. 131072)
+PDF statistics: 401 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
+ 97 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
