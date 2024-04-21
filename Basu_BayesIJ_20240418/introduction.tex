@@ -67,67 +67,6 @@ We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%
-% \begin{frame}{Economist 2016 Election Model \citep{economist:2020:election}}
-%
-% \begin{minipage}{0.4\textwidth}
-%     \ElectionData{}
-% \end{minipage}
-% \begin{minipage}{0.59\textwidth}
-% %
-% Single MCMC run: 10 hours (Stan, six cores)
-%
-% $N = 361$ polls (data points)
-% %
-% \begin{itemize}
-% %
-% \item Bootstrap samples
-% \subitem{$100$ re-fits: 41 days}
-% \item Leave-one-out CV
-% \subitem{$361$ re-fits: 150 days}
-% \item Drop all sets of 4 datapoints ($\approx 1\%$ of 361)
-% \subitem{$361 \choose 4$ re-fits: 800,000 years}
-% %
-% \end{itemize}
-% %
-% \begin{center}
-% {\Large  An approximation is needed!}
-% \end{center}
-% %
-% \end{minipage}
-%
-% \pause
-% All these procedures can be expressed via {\em data reweighting}:
-% %
-% \begin{itemize}
-% %
-% \item Bootstrap: draw multinomial weights (equivalent to
-% sampling with replacement)
-% \item Leave-one-out CV: Set one weight at a time to zero
-% \item Influential subsets: Set four weights at a time to zero
-% %
-% \end{itemize}
-% %
-% \spskip
-% {\Large
-% \textbf{We propose: }Use posterior draws based on the full data,
-% to form a linear approximation to {\em data reweightings}.
-% }
-%
-%
-%
-% \end{frame}
-%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 \begin{frame}{Results}
@@ -191,8 +130,6 @@ asymptotically
 %
 \begin{itemize}
 %
-% \item Show that \blue{linear component$=O_p(N^{-1})$} and
-%     \red{error$ = O_p(N^{-2})$}
 \item As $N \rightarrow \infty$, the linear component provides
 an arbitrarily good approximation
 %
@@ -202,20 +139,13 @@ an arbitrarily good approximation
 \item High-dimensional problems
 \begin{itemize}
 %
-% \item Parameters that don't concentrate:
-%     \blue{linear component$=O_p(1)$} and
-%     \red{error$ = O_p(1)$}
-% \item Parameters that do concentrate:
-%     \blue{linear component$=O_p(N^{-1})$} and
-%     \red{error$ = O_p(N^{-1})$}
 \item The linear component is the same order as the error
 \item Even for parameters which concentrate, even as
 $N \rightarrow \infty$
 
 \pause
 \end{itemize}
-\item A trick question, and some implications of
-different weightings.
+\item What should the exchangeable unit be?
 %
 \end{itemize}
 %

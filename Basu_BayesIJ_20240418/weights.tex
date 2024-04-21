@@ -126,99 +126,17 @@ The re-scaled slope $N \infl_n$ is known as the
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Data re-weighting.}
-
-\question{How can we use the approximation?}
-
-Assume the \blue{slope} is computable and \red{error} is small.
-%
-\expansion{}
-
-
-% \pause
-% \textbf{Cross validation.} 
-% Let $\w_{(-n)}$ leave out point $n$, and loss
-% $f(\theta) = -\ell(\x_n \vert \theta)$.
-% %
-% %
-% \begin{align*}
-% \textrm{LOO CV loss at point }n =
-%     \expect{p(\theta \vert \x, w_{(-n)})}{f(\theta)}
-% \red{\approx} 
-%     \expect{p(\theta \vert \x)}{f(\theta)} - \blue{\infl_{n}}
-% \end{align*}
-%
-%
-
-\pause
-\textbf{Example: Approximate bootstrap.}
-
-Draw bootstrap
-weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
-%
-\begin{align*}
-%
-\textrm{Bootstrap variance} ={}&
-\var{\p(\w)}{\expect{p(\theta \vert \x, w)}{f(\theta)}} 
-\\\red{\approx}{}&
-  \var{\p(\w)}{\expect{p(\theta \vert \x)}{f(\theta)} + \blue{\infl_n}(\w_n - 1)} 
-\\={}& \frac{1}{N^2} \sumn \left(\blue{\infl_n} - \overline{\blue{\infl}}\right)^2.
-%
-\end{align*}
-%
-% \pause
-% \textbf{Influential subsets:
-% Approximate maximum influence perturbation (AMIP).}
-
-% Let $W_{(-K)}$ denote weights leaving out $K$ points.
-% %
-% \begin{align*}
-% %
-% \max_{\w \in W_{(-K)}} \left(
-% \expect{p(\theta \vert \x, w)}{f(\theta)} -
-% \expect{p(\theta \vert \x)}{f(\theta)}
-% \right) \red{\approx} - \sum_{n=1}^K \blue{\infl_{(n)}}.
-% %
-% \end{align*}
-% %
-
-\pause
-
-\question{How to compute the slopes \blue{$\infl_n$}?\\
-How large is the error \red{$\err(\w)$}?}
-
-\pause
-
-
-For simplicity, for the remainder of the presentation, we will
-consider a single weight.
-%
-\begin{align*}
-%
-\expect{p(\theta \vert \xvec, \w_n)}{f(\theta)} -
-    \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
-    \blue{\infl_n} (\w_n - 1) + \red{\err(\w_n)}
-%
-\end{align*}
-%
-
-\end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
     
-
 
 \begin{frame}[t]{Expressions for the slope and error}
 
 \question{How to compute the slopes \blue{$\infl_n$}?
 How large is the error \red{$\err(\w)$}?}
 
+For simplicity, for the remainder of the presentation, we will
+consider a single weight.
+%
 \begin{align*}
     %
     \expect{p(\theta \vert \xvec, \w_n)}{f(\theta)} -
@@ -229,7 +147,7 @@ How large is the error \red{$\err(\w)$}?}
 
 \pause
 
-Let an overbar mean posterior--mean zero.
+Let an overbar denote ``posterior--mean zero.''
 For example, $\thetabar := f(\theta) - \expect{\p(\theta \vert \xvec)}{f(\theta)}$.
 
 By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w_n]$:
@@ -307,26 +225,3 @@ becomes linear as $N\rightarrow \infty$, with slope $\lim_{N\rightarrow \infty} 
 
 
 
-
-\begin{frame}[t]{Example: A negative binomial model}
-
-    
-    Consider $\p(\xvec \vert \gamma) = \prod_{n=1}^N \textrm{NegativeBinomial}(\x_n \vert \gamma)$. Here, $\theta = \gamma$ is a scalar.  
-    
-    \pause
-    As $N \rightarrow \infty$, $\p(\gamma \vert \xvec)$ concentrates at rate $1 / \sqrt{N}$ (Bernstein--von Mises).
-    
-    $\Rightarrow 
-    N \left( \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma} -
-    \expect{\p(\gamma \vert \xvec)}{\gamma} \right) = \blue{\infl_n} (\w_n - 1) + \red{O_p(N^{-1})}.
-    $
-    
-    
-    \pause
-    \vspace{1.5em}
-    \LowDimAccuracyGraph{}
-    
-    \pause
-    \question{\textbf{Problem:} Most computationally hard Bayesian problems don't concentrate.}
-
-\end{frame}

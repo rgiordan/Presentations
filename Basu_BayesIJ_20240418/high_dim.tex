@@ -2,15 +2,15 @@
 
 \question{What about when parts of the posterior don't concentrate?}
 
-Example: \textbf{Poisson model with random effects (REs)
+Example: \textbf{Genearlized linear model with random effects (REs)
 $\lambda$ and fixed effect $\gamma$.}
 
-If the observations per random effect remains bounded as $N \rightarrow
-\infty$, then
+% If the observations per random effect remains bounded as $N \rightarrow
+% \infty$, then
 
 \begin{tabular}{ll}
-    Parameter $\lambda$ grows in dimension with $N$.& 
-    Parameter $\gamma$ is a scalar. \\
+%     Parameter $\lambda$ grows in dimension with $N$.& 
+%     Parameter $\gamma$ is a scalar. \\
     Marginally, $\p(\lambda \vert \xvec)$ does not concentrate. &
     Marginally, $\p(\gamma \vert \xvec)$ concentrates. \\
 \end{tabular}
@@ -46,22 +46,11 @@ Specifically, if $p(\lambda \vert \xvec, \gamma)$ does not concentrate, then \\
 --- even if $\p(\gamma \vert \xvec)$ concentrates marginally --- \\
 % in the linear approximation to $\expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$,
 both the slope $\blue{\infl_n}$ and the error $\red{\err(\w_n)}$ are $O_p(N^{-1})$, and so \\
-$N (\expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)} - \expect{\p(\gamma \vert \xvec)}{f(\gamma)}) 
-= \blue{N \infl_n (\w_n - 1)} + \red{N \err(\w_n)}$ is nonlinear.
+$N \left(\expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)} - \expect{\p(\gamma \vert \xvec)}{f(\gamma)} \right) 
+= \blue{N \infl_n (\w_n - 1)} + \red{N \err(\w_n)}$ is nonlinear.\\
+\\
+However, $\err(\w_n) \rightarrow 0$ as $\cov{p(\lambda \vert \xvec, \gamma)}{\lambda} \rightarrow 0$.
 }
 %
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Experiments}
-
-Example: \textbf{Poisson model with random effects (REs)
-$\lambda$ and fixed effect $\gamma$.}
-
-\HighDimAccuracyGraph{}
-
-\end{frame}

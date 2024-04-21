@@ -1,137 +1,3 @@
-\begin{frame}{A contradiction?}
-%
-\vspace{-1em}
-\begin{align*}
-%
-&\text{\textbf{Negative binomial observations.}}
-&
-&\text{\textbf{Poisson observations with random effects.}}
-\\
-&\text{\textbf{Asymptotically linear in $\w$.}}
-&
-&\text{\textbf{Asymptotically non-linear in $\w$.}}
-% \\
-% &\textrm{For }n= 1,\ldots,N\textrm{, }
-% &
-% &\textrm{For }n= 1,\ldots,N\textrm{, }g=1,\ldots,G\text{,}
-% \\
-% &\x_n |\gamma \iid{}
-%     \mathrm{NegativeBinomial}\left(
-%         \alpha,  \frac{\beta}{\gamma + \beta}\right)
-% &
-% &y_n | \lambda_n, \gamma, g_n \iid
-%     \mathrm{Poisson}(\gamma \lambda_{g_n})
-% \\
-% &&
-% &\quad\quad\text{where }\lambda_g \iid{} \mathrm{Gamma}(\alpha, \beta)
-% \\
-% &\x_n \textrm{ are IID given }\gamma
-% &
-% &\x_n = (\y_n, g_n) \textrm{ are IID given }\gamma, \lambda
-% \\
-% &  \theta = \gamma
-% &
-% & \theta = (\gamma, \lambda)
-\onslide<3->{
-\\
-&\log \p(\xvec \vert \gamma, \w^{m}) =
-    \sumn \w^{m}_n \log \p(\x_n \vert \gamma)
-&
-&\log \p(\xvec \vert \gamma, \lambda, \w^{c}) =
-    \sumn \w^{c}_n \log \p(\x_n \vert \lambda, \gamma)
-}
-%
-% \\
-% &\textrm{Not computable with }
-%     \gamma, \lambda \sim \p(\gamma, \lambda \vert \xvec)
-% &
-% &\textrm{Computable with }
-%     \gamma, \lambda \sim \p(\gamma, \lambda \vert \xvec)
-% \\
-% &\textrm{(don't typically know the marginal $\p(\gamma \vert \x_n)$)}
-\end{align*}
-
-\onslide<2->{
-\begin{center}
-    % \large
-With a constant regressor, Gamma REs, and one RE per observation,\\
-these are the same model, with the same $\p(\gamma \vert \xvec)$.
-
-% \spskip
-\textbf{Is $\expect{\p(\gamma \vert \xvec, \w)}{\gamma}$
-linear in the \only<1-2>{data weights}\only<3->{\red{data weights}}
-or not?}
-}
-
-\onslide<3->{
-\pause
-\spskip
-\textbf{\red{Trick question!}}  We weight a log likelihood
-contribution, not a datapoint.
-
-% % \spskip
-\textbf{The two weightings are not equivalent in general.}
-}
-
-\end{center}
-%
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Experimental results}
-    Our results were actually computed on \textbf{identical datasets}
-    with $G = N$ and $g_n=n$.
-
-    \begin{center}
-    \begin{minipage}{0.34\textwidth}
-        Uses $\log \p(\x_n \vert \gamma)$:\\
-        $\infl_n = \expect{\p(\gamma \vert \xvec)}{\gammabar \ellbar_n(\gamma)}$
-
-        \onslide<2->{
-        \spskip
-        Not computable from\\
-        $\gamma, \lambda \sim \p(\gamma, \lambda \vert \xvec)$\\
-        in general.
-        }
-    \end{minipage}
-    \begin{minipage}{0.65\textwidth}
-        \LowDimAccuracyGraph{}
-        % \HighDimAccuracyGraph{}
-    \end{minipage}
-    %
-
-    \begin{minipage}{0.34\textwidth}
-        Uses $\log \p(\x_n \vert \gamma, \lambda)$:\\
-        $\infl_n = \expect{\p(\gamma,\lambda \vert \xvec)}{\gammabar \ellbar_n(\gamma, \lambda)}$
-
-        \onslide<2->{
-        \spskip
-        Computable from\\
-        $\gamma, \lambda \sim \p(\gamma, \lambda \vert \xvec)$.
-        }
-
-        \onslide<3->{
-        \spskip
-        May still be useful when $\p(\lambda \vert \xvec)$
-        is {\em somewhat} concentrated.
-        }
-
-    \end{minipage}
-    \begin{minipage}{0.65\textwidth}
-        %\LowDimAccuracyGraph{}
-        \HighDimAccuracyGraph{}
-    \end{minipage}
-    %
-\end{center}
-    %
-    % \begin{minipage}{0.48\textwidth}
-    % \end{minipage}
-\end{frame}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -148,17 +14,16 @@ contribution, not a datapoint.
 \end{minipage}
 
 
-
+\pause
 %
 \begin{itemize}
-\item We use often use models $\p(\gamma, \lambda \vert \xvec)$, and can't 
-      compute $\p(\gamma \vert \xvec)$ analytically.
-\item There may be multiple ways to define ``exchangable unit'' in a given
-      problem.
-\item[] ... But without nesting,
-        $\log \p(\x_n \vert \gamma, \lambda)$
-        may be the natural model-free exchangeable unit.
-%\item[] ... and we have proven that the weight dependence is non--linear.
+\item We use often use models of the form $\p(\gamma, \lambda \vert \xvec)$.
+% \item There may be multiple ways to define ``exchangable unit'' in a given
+%       problem.
+% \item[] ... But
+%         $\log \p(\x_n \vert \gamma, \lambda)$
+%         is often the natural model-free exchangeable unit.
+% \item[] ... and we have proven that the weight dependence is non--linear.
 \item Even if the error $\red{\err(\w)}$ does not vanish,
       it can still be small enough in practice.
       \item[] ... Especially given the linear approximation's huge computational advantage.
@@ -166,56 +31,13 @@ contribution, not a datapoint.
 
 % \textbf{Can we do better in the presence of high-dimensional latent variables?}
 
-\hrulefill
-
 \textbf{Preprint: }\citet{giordano:2023:bayesij} (\texttt{arXiv:2305.06466})\\
-(The preprint focuses on variance estimation, and contains
-the present results as a lemma.)
+(The preprint focuses on variance estimation, the present results are found in the proofs.)
     
 \end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{Observations and consequences}
-
-% \begin{minipage}{0.58\linewidth}
-%     \begin{itemize}
-%     %
-%     \item<2-> When $\log \p(\x_n \vert \gamma, \lambda)$ is
-%     the exchangeable unit,
-%     our results are problematic for
-%     %
-%     \begin{itemize}
-%     %
-%     \item Linear approximations (IJ, AMIP, approx. CV)
-%     \item The nonparametric bootstrap
-%     % \item Stochastic gradient using data subsampling
-%     \item All of the above for Bayes-like optimization procedures
-%         (VB, the EM algorithm)
-%     %
-%     \end{itemize}
-%     %
-%     \item<3-> Even if the error $\red{\err(\w)}$ does not vanish,
-%     it can still be small enough in practice to be useful.
-%     %
-%     \item<4-> There may be multiple ways to define ``exchangable unit'' in a given
-%     problem.
-%     %
-%     \item<5-> But without nesting,
-%     $\log \p(\x_n \vert \gamma, \lambda)$
-%     may be the natural model-free exchangeable unit.
-%     %
-%     \end{itemize}
-% \end{minipage}
-% %
-% % \begin{minipage}{0.4\linewidth}
-% % \ElectionData{}
-% % \end{minipage}
 
 
-% \end{frame}
 
 \begin{frame}
 
