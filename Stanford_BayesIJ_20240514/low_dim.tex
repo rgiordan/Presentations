@@ -50,7 +50,7 @@
 \def\gcovtrue{V^g}
 % \def\gcovmaphat{\hat{V}^{\mathrm{MAP}}}
 % \def\gcovhat{\hat{V}^{g}}
-% \def\gcovij{V^{\mathrm{IJ}}}
+\def\gcovij{V^{\mathrm{IJ}}}
 % \def\gcovijhat{\hat{V}^{\mathrm{IJ}}}
 % \def\gcovboothat{\hat{V}^{\mathrm{Boot}}}
 % \def\gcovboot{V^{\mathrm{Boot}}}
@@ -83,10 +83,10 @@
 Under the above assumptions,
 %
 \begin{align}
-    \sqrt{N} \left( \expect{\post}{g(\theta)} - g(\thetatrue) \right)
+\sqrt{N} \left( \expect{\post}{g(\theta)} - g(\thetatrue) \right)
     \dlim{}& \normdist\left(0, \gcovtrue\right)
     \quad\textrm{and} \label{eq:expectation_limit}\\
-\frac{1}{N} \sumn \left(
+\gcovij := \frac{1}{N} \sumn \left(
     \blue{\infl_n - \overline{\infl}}
     \right)^2  
     \plim {}& \gcovtrue. \nonumber
@@ -98,6 +98,54 @@ Equation \ref{eq:expectation_limit} and the form of  $\gcovtrue$ is known (\cite
 
 Our contribution is a consistent estimator of $\gcovtrue$ using posterior samples 
 rather than $\thetahat$.
+
+\end{frame}
+
+
+\begin{frame}{Data Analysis Using Regression and Multilevel/Hierarchical Models.}
+
+    \begin{minipage}{0.49\textwidth}
+    
+    We ran \texttt{rstanarm} on 56 different models on 13 different datasets
+    from \citet{gelman:2006:arm},
+    including Gaussian and logistic regression, fixed and mixed-effects models.
+    
+    \spskip Across all models, we estimate 799 distinct covariances (regression
+    coefficients and log scale parameters).
+    
+    \spskip
+    Using the bootstrap as ground truth, compute the relative errors:
+    %
+    \begin{align*}
+    %
+    \frac{\gcovbayes - \gcovboot}{|\gcovboot|}
+    \,\,\,
+    \textrm{ and }
+    \,\,\,
+    \frac{\gcovij - \gcovboot}{|\gcovboot|}.
+    %
+    \end{align*}
+    %
+    % \spskip
+    % For each model:
+    % %
+    % \begin{itemize}
+    %     \item From one MCMC chain, compute $\gcovijhat$, $\gcovbayes$.
+    %     \item From 200 bootstraps, compute $\gcovboot$.
+    %     \item Compare the relative error to the bootstrap.
+    %     %\item Compute Monte Carlo SEs of everything.
+    % \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+        %\ARMZFig{}
+        \ARMRelFig{}
+        \textbf{Total compute time for all models:}
+    
+        \begin{tabular}{ll}
+        Initial fit: & 1.6 hours \\
+        Bootstrap: & 381.5 hours\\
+        \end{tabular}
+\end{minipage}
 
 \end{frame}
 

@@ -1,4 +1,150 @@
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
+
+
+\begin{frame}{A contradiction?}
+    %
+    \vspace{-1em}
+    \begin{align*}
+    %
+    &\text{\textbf{Negative binomial observations.}}
+    &
+    &\text{\textbf{Poisson observations with random effects.}}
+    \\
+    &\text{\textbf{Asymptotically linear in $\w$.}}
+    &
+    &\text{\textbf{Asymptotically non-linear in $\w$.}}
+    %
+    %
+    \end{align*}
+    
+    \onslide<2->{
+    \begin{center}
+        % \large
+    With a constant regressor, Gamma REs, and one RE per observation,\\
+    these are the same model, with the same $\p(\gamma \vert \xvec)$.
+    
+    % \spskip
+    \textbf{Is $\expect{\p(\gamma \vert \xvec, \w)}{\gamma}$
+    linear in the \only<1-2>{data weights}\only<3->{\red{data weights}}
+    or not?}
+    }
+    
+    
+    \end{center}
+    %
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%=
+
+
+\begin{frame}{A contradiction?}
+    %
+    \vspace{-1em}
+    \begin{align*}
+    %
+    &\text{\textbf{Negative binomial observations.}}
+    &
+    &\text{\textbf{Poisson observations with random effects.}}
+    \\
+    &\text{\textbf{Asymptotically linear in $\w$.}}
+    &
+    &\text{\textbf{Asymptotically non-linear in $\w$.}}
+    \end{align*}
+    %
+    \begin{center}
+        % \large
+    With a constant regressor, Gamma REs, and one RE per observation,\\
+    these are the same model, with the same $\p(\gamma \vert \xvec)$.
+    
+    % \spskip
+    \textbf{Is $\expect{\p(\gamma \vert \xvec, \w)}{\gamma}$
+    linear in the \only<1-2>{data weights}\only<3->{\red{data weights}}
+    or not?}
+    
+    \spskip
+
+    \textbf{\red{Trick question!}}  We weight a log likelihood
+    contribution, not a datapoint.
+
+    \begin{align*}
+        &\log \p(\xvec \vert \gamma, \w^{m}) =
+            \sumn \w^{m}_n \log \p(\x_n \vert \gamma)
+        &
+        &\log \p(\xvec \vert \gamma, \lambda, \w^{c}) =
+            \sumn \w^{c}_n \log \p(\x_n \vert \lambda, \gamma)
+        %
+    \end{align*}
+        
+
+    % % \spskip
+    \textbf{The two weightings are not equivalent in general.}
+    
+    \end{center}
+    %
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Experimental results}
+    Our results were actually computed on \textbf{identical datasets}
+    with $G = N$ and $g_n=n$.
+
+    \begin{center}
+    \begin{minipage}{0.34\textwidth}
+        Uses $\log \p(\x_n \vert \gamma)$:\\
+        $\infl_n = \expect{\p(\gamma \vert \xvec)}{\gammabar \ellbar_n(\gamma)}$
+
+        \onslide<2->{
+        \spskip
+        Not computable from\\
+        $\gamma, \lambda \sim \p(\gamma, \lambda \vert \xvec)$\\
+        in general.
+        }
+    \end{minipage}
+    \begin{minipage}{0.65\textwidth}
+        \LowDimAccuracyGraph{}
+        % \HighDimAccuracyGraph{}
+    \end{minipage}
+    %
+
+    \begin{minipage}{0.34\textwidth}
+        Uses $\log \p(\x_n \vert \gamma, \lambda)$:\\
+        $\infl_n = \expect{\p(\gamma,\lambda \vert \xvec)}{\gammabar \ellbar_n(\gamma, \lambda)}$
+
+        \onslide<2->{
+        \spskip
+        Computable from\\
+        $\gamma, \lambda \sim \p(\gamma, \lambda \vert \xvec)$.
+        }
+
+        \onslide<3->{
+        \spskip
+        May still be useful when $\p(\lambda \vert \xvec)$
+        is {\em somewhat} concentrated.
+        }
+
+    \end{minipage}
+    \begin{minipage}{0.65\textwidth}
+        %\LowDimAccuracyGraph{}
+        \HighDimAccuracyGraph{}
+    \end{minipage}
+    %
+\end{center}
+    %
+\end{frame}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -6,33 +152,52 @@
 \begin{frame}{Observations and consequences}
 
 
-\begin{minipage}{0.48\textwidth}
-    \ElectionData{}
-\end{minipage}
-\begin{minipage}{0.48\textwidth}
-    \ElectionResultsGlobal{}
-\end{minipage}
+% \begin{minipage}{0.48\textwidth}
+%     \ElectionData{}
+% \end{minipage}
+% \begin{minipage}{0.48\textwidth}
+%     \ElectionResultsGlobal{}
+% \end{minipage}
 
+\begin{itemize}
+\item For finite--dimensional models which concentrate asymptotically:
+\begin{itemize}
+    \item Posterior expectations are approximately linear in data weights
+    \item The linearized variance estimate (infinitesimal jackknife) is consistent
+    \item The residual of the von Mises expansion vanishes
+\end{itemize}
+\item For high--dimensional models which marginally concentrate only asymptotically:
+\begin{itemize}
+    \item Posterior expectations are not approximately linear in data weights
+    \item The linearized variance estimate (infinitesimal jackknife) is inconsistent
+    \item The residual of the von Mises expansion does not vanish
+    \item Even if the error $\red{\err(\w)}$ does not vanish,
+            it can still be small enough in practice.
+    \item[] ... Especially given the linear approximation's huge computational advantage.
+\end{itemize}
+\end{itemize}
 
 \pause
-%
 \begin{itemize}
-\item We use often use models of the form $\p(\gamma, \lambda \vert \xvec)$.
-% \item There may be multiple ways to define ``exchangable unit'' in a given
-%       problem.
-% \item[] ... But
-%         $\log \p(\x_n \vert \gamma, \lambda)$
-%         is often the natural model-free exchangeable unit.
-% \item[] ... and we have proven that the weight dependence is non--linear.
-\item Even if the error $\red{\err(\w)}$ does not vanish,
-      it can still be small enough in practice.
-      \item[] ... Especially given the linear approximation's huge computational advantage.
+    \item When the weighting is linear, there are many other applications:
+    \begin{itemize}
+        \item Cross-validation
+        \item Conformal inference
+        \item Identification of influential subsets
+    \end{itemize}
+    \item When the weighting is non--linear, the inconsistency results 
+    should apply more widely:
+    \begin{itemize}
+        \item The EM algorithm
+        \item The nonparametric bootstrap
+        \item Local prior sensitivity measures
+    \end{itemize}
 \end{itemize}
 
 % \textbf{Can we do better in the presence of high-dimensional latent variables?}
-
+\pause
 \textbf{Preprint: }\citet{giordano:2023:bayesij} (\texttt{arXiv:2305.06466})\\
-(The preprint focuses on variance estimation, the present results are found in the proofs.)
+(Major update in progress, coming soon.)
     
 \end{frame}
 

@@ -200,3 +200,132 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
 
 \end{frame}
     
+
+
+
+% von Mises stuff
+\def\gdist{\mathbb{G}}
+\def\fndist{\mathbb{F}_N}
+\def\ftdist{\mathbb{F}_N^{\t}}
+\def\fwdist{\mathbb{F}_{N}^{w}}
+\def\T{T}   % Stastistical functional
+\def\Tlin{T_{\mathrm{lin}}} % linearized functional
+\def\t{t}   % Path variable for von Mises expansion
+\def\g{g}   % Function of interest
+\def\xn{\x_{0}}   % Function of interest
+\def\prior{\pi}
+\def\ttil{\tilde{\t}}   % IVT value of t
+% \def\abs#1{\left\vert #1\right\vert }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Bayesian von--Mises Expansion}
+
+\question{How can we apply the single--weight result to variance computations?}
+
+\pause
+
+Define the ``generalized posterior'' functional
+%
+\begin{align*}
+    %
+    \T(\gdist, N) := \frac{
+        \int \g(\theta) \exp\left( N \int \ell(\xn \vert \theta) \gdist(d\xn)\right)
+            \prior(\theta) d\theta
+    }
+    {
+    \int \exp\left( N \int \ell(\xn \vert \theta) \gdist(d\xn)\right)
+        \prior(\theta) d\theta
+    }.
+    %
+\end{align*}
+%
+\pause
+
+Let $\fndist$ denote the empirical distribution.  Then
+%
+\begin{align*}
+    \expect{\post}{\g(\theta)} =
+    \frac{
+        \int \g(\theta) \exp\left( N \meann \ell(\x_n \vert \theta) \right)
+            \prior(\theta) d\theta
+    }
+    {
+    \int \exp\left( N \meann \ell(\x_n \vert \theta) \right)
+        \prior(\theta) d\theta
+    } = \T(\fndist, N).
+\end{align*}
+%
+\pause
+
+Let $\fdist$ denote the true distribution of $\x_n$, and
+let $\ftdist  = \t \fdist + (1 - \t) \fndist$. 
+
+We can study the \textit{von Mises expansion}:
+%
+\begin{align*}
+    \sqrt{N} \left(\expect{\post}{\g(\theta)} - \T(\fdist, N) \right) ={}&
+        \blue{\sqrt{N} \fracat{\partial \T(\ftdist, N)}{\partial \t}{\t = 0} (\fndist - \fdist)}
+        & + \red{\err(\ttil)}
+\\={}&
+\undernote{
+    \blue{\sqrt{N} \sumn (\infl_n - \overline{\infl})} }
+    {\textrm{\blue{Infinitesimal jackknife estimator}}} + o_p(1) 
+    & + \red{\err(\ttil)}.
+\end{align*}
+%
+
+\end{frame}
+
+\begin{frame}[t]{Bayesian von--Mises Expansion Results}
+
+\theorem{
+    \textbf{Theorem 3 \citep{giordano:2023:bayesij} (sketch): }\\
+    \textbf{(Consistency of the von--Mises expansion in finite dimensions) }\\
+    Under slightly stronger conditions our original finite--dimensional posterior 
+    consistency result, 
+    %
+\begin{align*}
+    \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \rightarrow 0
+    \quad\textrm{in the Bayesian von--Mises expansion.}
+\end{align*}
+%
+}
+
+\pause
+
+\theorem{
+\textbf{Theorem 4 \citep{giordano:2023:bayesij} (sketch, not yet on arxiv):}\\
+\textbf{(Inconsistency of the von--Mises expansion in infinite dimensions) }\\
+    Assume that $\x_n$ comes with a random group assignment $g_n \in 1,\ldots,G$.    
+    Conditional on $g$, $\x_n$ is modeled as a finite-dimensional exponential
+    family given $\lambda,\gamma$:
+    %
+    \begin{align*}
+        \log \p(x_n \vert g_n=g, \gamma, \lambda) = 
+            \tau(x_n)^\trans \eta_{g}(\gamma, \lambda) + \textrm{Constant}.
+    \end{align*}
+    %
+Define the average product of second moments:
+%
+\begin{align*}
+    \mathcal{V_N} :=
+    \frac{1}{N} \sum_{g=1}^G 
+        \expect{\fdist(\x_n)}{\tau(\x_n) \tau(\x_n)^\trans}
+        \cov{\p(\lambda, \gamma \vert \fdist)}{\eta_{g}(\gamma, \lambda)}.
+\end{align*}
+%
+If $\mathcal{V_N}$ is strictly bounded away from $0$ as $N\rightarrow \infty$, then
+%
+\begin{align*}
+    \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \rightarrow \infty
+    \quad\textrm{in the Bayesian von--Mises expansion.}
+\end{align*}
+%
+}
+
+\end{frame}
+
