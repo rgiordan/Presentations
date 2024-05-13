@@ -9,7 +9,7 @@
 
 \begin{frame}{Negative binomial experiment}
 
-Example: Negative binomial models with an unknown parameter $\gamma$.
+\question{Example: Negative binomial models with an unknown parameter $\gamma$.}
 %
 \begin{align*}
 \textrm{For }n={} 1,\ldots, N \textrm{ let }
@@ -98,5 +98,20 @@ Equation \ref{eq:expectation_limit} and the form of  $\gcovtrue$ is known (\cite
 
 Our contribution is a consistent estimator of $\gcovtrue$ using posterior samples 
 rather than $\thetahat$.
+
+\end{frame}
+
+
+
+\begin{frame}[c]{How to connect to the election data?}
+
+\begin{minipage}{0.48\textwidth}
+    \ElectionData{}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+    \ElectionResultsGlobal{}
+\end{minipage}
+
+\question{Problem: MCMC is only interesting when the posterior doesn't concentrate.}
 
 \end{frame}

@@ -1,56 +1,202 @@
+
 \begin{frame}{High dimensional problems}
+    %
+    \question{Example: Exponential families  with random effects (REs)
+    $\lambda$ and fixed effects $\gamma$.}
 
-\question{What about when parts of the posterior don't concentrate?}
-
-Example: \textbf{Generalized linear model with random effects (REs)
-$\lambda$ and fixed effect $\gamma$.}
-
-% If the observations per random effect remains bounded as $N \rightarrow
-% \infty$, then
-
-\begin{tabular}{ll}
-%     Parameter $\lambda$ grows in dimension with $N$.& 
-%     Parameter $\gamma$ is a scalar. \\
-    Marginally, $\p(\lambda \vert \xvec)$ does not concentrate. &
-    Marginally, $\p(\gamma \vert \xvec)$ concentrates. \\
-\end{tabular}
-
-% \pause
-% \question{Does 
-% $\w_n \mapsto \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)} - \expect{\p(\lambda \vert \xvec)}{f(\lambda)}$ 
-% become linear as $N$ grows? \\
-% (Note $\p(\lambda \vert \xvec)$ does not concentrate.)}
-
-% \textbf{Not in general. }
-% Since $\p(\lambda \vert \xvec)$ doesn't concentrate, both the slope $\blue{\infl_n}$ and
-% error $\red{\err(\w_n)}$ are $O(1)$ in general.
-% % $\expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)}$
-% %
-% $\Rightarrow$ The map
-% $\w_n \mapsto \expect{\p(\lambda \vert \xvec, \w_n)}{f(\lambda)}$ is nonlinear in general.
-
-\pause
+    \pause
+    
+    If the observations per random effect remains bounded as $N \rightarrow
+    \infty$, then
+    %
+    \begin{itemize}
+    %
+    \item Parameter $\lambda$ (``local'') grows in dimension with $N$.
+    \item Parameter $\gamma$ (``global'') is finite-dimensional.
+    \item Marginally $\p(\lambda \vert \xvec)$ does not concentrate.
+    \item Marginally, $\p(\gamma \vert \xvec)$ concentrates.
+    % \item Conditionally, $\p(\lambda \vert \gamma, \xvec)$ does not concentrate either.
+    %
+    \end{itemize}
+    
 \spskip
-\question{Does $\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)} - \expect{\p(\gamma \vert \xvec)}{f(\gamma)}$ 
-become linear as $N$ grows?\\
-(Note $\p(\gamma \vert \xvec)$ \textit{does} concentrate.)}
-%
-
 \pause
-\spskip
 
-\theorem{
-\textbf{Theorem 5 of \citet{giordano:2023:bayesij}  (paraphrase): } In general, \textbf{no!}\\
-%
-Specifically, if $p(\lambda \vert \xvec, \gamma)$ does not concentrate, then \\
---- even if $\p(\gamma \vert \xvec)$ concentrates marginally --- \\
-% in the linear approximation to $\expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$,
-both the slope $\blue{\infl_n}$ and the error $\red{\err(\w_n)}$ are $O_p(N^{-1})$, and so \\
-$N \left(\expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)} - \expect{\p(\gamma \vert \xvec)}{f(\gamma)} \right) 
-= \blue{N \infl_n (\w_n - 1)} + \red{N \err(\w_n)}$ is nonlinear.\\
-\\
-However, $\err(\w_n) \rightarrow 0$ as $\cov{p(\lambda \vert \xvec, \gamma)}{\lambda} \rightarrow 0$.
+In general, we cannot hope for an asymptotic analysis of
+$\expect{\p(\lambda, \gamma \vert \xvec)}{f(\lambda)}$.
+
+\spskip
+\pause
+\question{
+Can we save the approximation when {\em some} parameters concentrate?\\
+Does the residual vanish asymptotically for
+$\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma}$?
 }
+
 %
 \end{frame}
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{High dimensional problems}
+%
+We assume that $\p(\gamma \vert \xvec)$ concentrates but
+$\p(\lambda \vert \xvec)$ does not.  By our series expansion:
+%
+\begin{align*}
+%
+% \MoveEqLeft
+&
+\expect{\p(\gamma, \lambda \vert \xvec, \w_n)}{\gamma} -
+\expect{\p(\gamma, \lambda \vert \xvec)}{\gamma}
+={}
+\\
+&\quad\blue{\infl_n}(\w_n - 1) && +\red{\err(\w_n)}
+% \\&
+\\={}&
+\blue{
+\expect{\p(\gamma, \lambda \vert \xvec)}{
+    \gammabar \ellbar_n(\gamma,\lambda)}
+}
+(\w_n - 1)
+    && +
+    \frac{1}{2}
+    \red{
+    \expect{\p(\gamma, \lambda \vert \xvec, \wtil_n)}{
+        \gammabar
+        \ellbar_n(\gamma,\lambda)^2 }
+    }
+        (\w_n - 1)^2
+% \\&
+\onslide<2->{
+\\={}&
+%
+\blue{
+\expectop{\p(\gamma \vert \xvec)} \Big[
+    \gammabar
+    \undernote{
+        \expect{\p(\lambda \vert \gamma, \xvec)}
+                {\ellbar_n(\gamma,\lambda)}
+            }{F_1(\gamma)}
+    \Big]
+}
+        (\w_n - 1)
+    && +
+    \frac{1}{2}
+    \red{
+    \expectop{\p(\gamma \vert \xvec, \wtil_n)} \Big[
+        \gammabar
+        \undernote{
+            \expect{\p(\lambda \vert \xvec, \gamma, \wtil_n)}{
+                \ellbar_n(\gamma,\lambda)^2}
+            }{F_2(\gamma)}
+        \Big]
+    }
+        (\w_n - 1)^2
+}
+\onslide<3->{
+\\={}&
+\undernote{
+\blue{
+\expect{\p(\gamma \vert \xvec)}{
+    \gammabar F_1(\gamma)}
+}
+}{O_p(N^{-1})\\\text{(by $\p(\gamma \vert \xvec)$ concentration)}}
+    (\w_n - 1)
+    && +
+    \frac{1}{2}
+\undernote{
+\red{
+\expect{\p(\gamma \vert \xvec, \wtil_n)}{
+    \gammabar
+    F_2(\gamma) }
+}
+}{O_p(N^{-1})\\\text{(by $\p(\gamma \vert \xvec)$ concentration)}}
+        (\w_n - 1)^2
+%
+\\& \Rightarrow
+}
+\onslide<1->{
+\blue{\infl_n = O_p(N^{-1})} &&
+\red{\err(\w_n) = O_p(N^{-1})}
+}
+%
+\end{align*}
+%
+\onslide<4->{
+% The error is the same order as the linear approximation, and does not vanish after rescaling!
+
+\theorem{
+    \textbf{Corollary \citep{giordano:2023:bayesij}:}\\
+    In general, $\w_n \mapsto N \left( \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma} -
+    \expect{\p(\gamma \vert \xvec)}{\gamma} \right)$
+    remains non-linear as $N \rightarrow \infty$.    
+}
+
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Experiments}
+%
+\question{Example: Poisson regression with Gamma-distributed random effects}
+\begin{align*}
+\textrm{For }g=1,\ldots,G,\textrm{ }
+    \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta) \textrm{ for fixed }\alpha,\beta\\
+\textrm{For }n = 1,\ldots,N,\textrm{ }
+    g_n \iid{}& \mathrm{Categorical}(1,\ldots,G),\textrm{ }
+    y_n | \lambda_n, \gamma, g_n \iid{}
+        \mathrm{Poisson}(\gamma \lambda_{g_n}).\\
+\x_n ={} (y_n, g_n)
+\textrm{ are IID given } \lambda, \gamma. &
+\textrm{   Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
+   \sumn \w_n \ell_n(\lambda, \gamma).
+%
+\end{align*}
+
+\pause
+
+% \begin{minipage}[t]{0.45\textwidth}
+% %
+% \begin{align*}
+%     % \textrm{Fix }&\alpha,\beta\textrm{. }\\
+%     \textrm{For }n={}&1,\ldots,N\textrm{, }g=1,\ldots,G,\\
+%     \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta) \textrm{ for fixed }\alpha,\beta\\
+%     g_n \iid{}& \mathrm{Categorical}(1,\ldots,G)\\
+%     y_n \iid{}&
+%         \mathrm{Poisson}(\gamma \lambda_{g_n}) 
+%         \textrm{ given }
+%         \lambda_n, \gamma, g_n\\
+% \end{align*}
+% %
+% \end{minipage}
+% \hspace{1em}
+% %
+% \begin{minipage}[t]{0.45\textwidth}
+% %
+% \begin{align*}
+% %
+% & \x_n ={} (y_n, g_n)
+% \textrm{ are IID given }\lambda, \gamma.\\
+% &\textrm{Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
+% % \\
+%    \sumn \w_n \ell_n(\lambda, \gamma).
+% %
+% \end{align*}
+% %
+% \end{minipage}
+%
+% \vspace{-2em}
+\HighDimAccuracyGraph{}
+
+\end{frame}
+    
