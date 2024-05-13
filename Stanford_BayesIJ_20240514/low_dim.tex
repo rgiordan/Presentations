@@ -1,0 +1,74 @@
+
+
+    
+
+\begin{frame}[t]{Consistency theorem}
+
+    
+% Optima and related features of the log likelihood
+% \def\scorecov{\Sigma}
+% \def\scorecovhat{\hat\Sigma}
+\def\thetatrue{\theta_{\infty}}
+\def\thetahat{\hat\theta}
+
+% \def\info{\mathcal{I}}
+% \def\infoev{\lambda_\mathcal{I}}
+% \def\infoevhat{\hat{\lambda}_\mathcal{I}}
+% \def\infohat{\hat{\mathcal{I}}}
+
+\def\normdist{\mathcal{N}}
+
+% Covariances of g(\theta)
+% \def\gmeantrue{\mu^g}   % The true average posterior expectation
+\def\gcovtrue{V^g}
+% \def\gcovmaphat{\hat{V}^{\mathrm{MAP}}}
+% \def\gcovhat{\hat{V}^{g}}
+% \def\gcovij{V^{\mathrm{IJ}}}
+% \def\gcovijhat{\hat{V}^{\mathrm{IJ}}}
+% \def\gcovboothat{\hat{V}^{\mathrm{Boot}}}
+% \def\gcovboot{V^{\mathrm{Boot}}}
+% \def\gcovbayeshat{\hat{V}^{\mathrm{Bayes}}}
+% \def\gcovbayes{V^{\mathrm{Bayes}}}
+
+Assumptions sketch:
+%
+\begin{itemize}
+    \item A well--behaved MAP \textit{maximum a posteriori} estimator $\thetahat$ exists:
+    \begin{itemize}
+        \item The dimension of $\theta$ is fixed as $N \rightarrow \infty$.
+        \item The expected log likelihood has a unique maximum at $\thetatrue$
+        \item The observed log likelihood statisfies $\thetahat \rightarrow \thetatrue$
+        \item The expected log likelihood Hessian $\info$ is negative definite at $\thetatrue$ 
+    \end{itemize}
+    \item We can apply standard asymptotics:
+    \begin{itemize}
+    \item The log prior and log likelihood are four times continuously differentiable
+    \item The prior is proper, and a technical set of squared expectations are finite
+    \item The log likelihood derivatives are dominated by a square--integrable envelope function in a
+          neighborhood of $\theta_\infty$.
+    \end{itemize}
+\end{itemize}
+%
+\pause
+
+\theorem{
+\textbf{Theorem 2 \citep{giordano:2023:bayesij}: }\\
+Under the above assumptions,
+%
+\begin{align}
+    \sqrt{N} \left( \expect{\post}{g(\theta)} - g(\thetatrue) \right)
+    \dlim{}& \normdist\left(0, \gcovtrue\right)
+    \quad\textrm{and} \label{eq:expectation_limit}\\
+\frac{1}{N} \sumn \left(
+    \blue{\infl_n - \overline{\infl}}
+    \right)^2  
+    \plim {}& \gcovtrue. \nonumber
+\end{align}
+}
+
+Equation \ref{eq:expectation_limit} and the form of  $\gcovtrue$ is known (\citep{kleijn:2012:bvm}).  
+
+Our contribution is a consistent estimator of $\gcovtrue$ using posterior samples 
+rather than $\thetahat$.
+
+\end{frame}

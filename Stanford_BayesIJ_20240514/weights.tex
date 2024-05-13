@@ -1,0 +1,268 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Data re-weighting.}
+
+
+\onslide<2->{
+Augment the problem with {\em data weights} $\w_1, \ldots, \w_N$.
+We can write $\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}$.
+}
+\onslide<2->{
+%
+\begin{align*}
+%
+\ell_n(\theta) :={}& \log \p(\x_n \vert \theta)
+&
+\log \p(\xvec \vert \theta, \w) ={}&
+    \sumn \w_n \ell_n(\theta)
+%
+\end{align*}
+}
+
+\begin{minipage}{0.49\textwidth}
+    \onslide<2-> {
+    Original weights: \par
+    \includegraphics[width=0.78\textwidth]{static_figures/orig_weights}
+    }
+    \onslide<3-> {
+    \par Leave-one-out weights: \par
+    \includegraphics[width=0.78\textwidth]{static_figures/weights_loo}
+    }
+    \onslide<4-> {
+    \par Bootstrap weights: \par
+    \includegraphics[width=0.78\textwidth]{static_figures/boot_weights}
+    }
+\end{minipage}
+%\onslide<1->{
+\begin{minipage}{0.49\textwidth}
+    % https://www.overleaf.com/learn/latex/TikZ_package
+    % https://latexdraw.com/how-to-annotate-an-image-in-latex/
+    % https://tex.stackexchange.com/questions/9559/drawing-on-an-image-with-tikz
+    \begin{tikzpicture}
+        \onslide<5-> {
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {
+            %\includegraphics[width=0.98\textwidth]{static_figures/weight_slope}
+            \includegraphics[width=0.98\textwidth]{static_figures/e_beta_w}
+        };
+        }
+        \onslide<7->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[gray, thick, <-] (0.20,0.23) -- ++(0.15,0.3)
+                    node[above,black,fill=white]
+                    {\small $\expect{p(\theta \vert \x)}{f(\theta)}$};
+        \end{scope}
+        }
+        \onslide<6->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[gray, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
+                    node[left,black,fill=white]
+                    {\small $\expect{p(\theta \vert \x, \w_n)}{f(\theta)}$};
+        \end{scope}
+        }
+        \onslide<8->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[blue, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
+        \end{scope}
+        }
+        \onslide<9->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[gray, thick, <-] (0.4,0.35) -- ++(0.2,-0.08)
+                    node[right,black,fill=white]
+                    {\small Slope $ = \blue{\infl_n}$};
+        \end{scope}
+        }
+        \onslide<10->{
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            \draw[gray, thick, <-] (0.8,0.65) -- ++(0.02,-0.2)
+                    node[below,black,fill=white]
+                    {\small Error $ = \red{\err(\w_n)}$};
+            \draw[red, to-to] (0.8,0.76) -- ++(0,-0.07);
+        \end{scope}
+        }
+    \end{tikzpicture}
+%}
+\end{minipage}
+
+\onslide<11->{
+The re-scaled slope $N \infl_n$ is known as the
+``influence function'' at data point $\x_n$.
+%
+\vspace{-0.5em}
+\begin{align*}
+\expect{p(\theta \vert \xvec, \w)}{f(\theta)} -
+    \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
+    \sumn \blue{\infl_n} (\w_n - 1) +
+    \red{\err(\w_n)}
+    % \textrm{Higher order derivatives}
+%
+\end{align*}
+}
+%
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\begin{frame}[t]{Data re-weighting.}
+
+\question{How can we use the approximation?}
+
+Assume the \blue{slope} is computable and \red{error} is small.
+%
+%
+\begin{align*}
+    \expect{p(\theta \vert \xvec, \w)}{f(\theta)} -
+    \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
+    \sumn \blue{\infl_n} (\w_n - 1) + \red{\err}(\w_n)
+\end{align*}
+%
+%
+\pause
+\textbf{Bootstrap.}
+Draw bootstrap
+weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
+%
+\begin{align*}
+%
+\textrm{Bootstrap variance} ={}&
+\var{\p(\w)}{\expect{p(\theta \vert \xvec, w)}{f(\theta)}}
+\\={}&
+\var{\p(\w)}{
+    \sumn \blue{\infl_n} (\w_n - 1) + \red{\err}(\w_n)
+}
+\\=& 
+\frac{1}{N^2} \sumn \left(
+    \blue{\infl_n - \overline{\infl}}
+\right)^2 +
+\red{\textrm{Term involving }
+    \red{\err}(\w_n)
+    \textrm{ for }n =1,\dots,N
+}
+\\\red{\approx}{}& 
+\frac{1}{N^2} \sumn \left(
+    \blue{\infl_n - \overline{\infl}}
+\right)^2
+%
+\end{align*}
+    
+\end{frame}
+
+    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+    
+
+\begin{frame}[t]{Expressions for the slope and error}
+
+\question{How to compute the slopes \blue{$\infl_n$}?
+How large is the error \red{$\err(\w)$}?}
+
+For simplicity, let us consider a single weight for the moment.
+%
+\begin{align*}
+    %
+    \expect{p(\theta \vert \xvec, \w_n)}{f(\theta)} -
+        \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
+        \blue{\infl_n} (\w_n - 1) + \red{\err}(\w_n)
+    %
+\end{align*}
+
+\pause
+
+Let an overbar denote ``posterior--mean zero.''
+For example, $\thetabar := f(\theta) - \expect{\p(\theta \vert \xvec)}{f(\theta)}$.
+
+By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w_n]$:
+%
+\begin{align*}
+%
+\blue{\infl_n} ={}&
+    % \fracat{\partial \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)}}
+    %    {\partial \w_n}{\w_n =1}
+\undernote{\blue{
+    \expect{\p(\theta \vert \xvec)}{ \thetabar \ellbar_n(\theta)}
+}}{\blue{\substack{
+    \text{Estimatable with MCMC!} \\
+    \text{\,}\\
+    \onslide<3->{\text{$= O_p(N^{-1})$ under posterior concentration}}
+}}}
+&
+\red{\err(\w_n)} ={}&
+\frac{1}{2}
+\undernote{
+    \red{\expect{\p(\theta \vert \xvec, \wtil_n)}{
+        \thetabar
+        \ellbar_n(\theta)
+        \ellbar_n(\theta)}}
+}
+%{\red{\textrm{Cannot estimate (don't know $\wtil$)}}}
+{\red{\substack{
+    \text{Cannot compute directly (don't know $\wtil$)} \\ 
+    \text{\,}\\
+    \onslide<3->{\text{$= O_p(N^{-2})$ under posterior concentration}}
+}}}
+(\w_n - 1)^2
+%
+\end{align*}
+%
+\onslide<4->{
+\theorem{
+\textbf{Theorem 1 \citep{giordano:2023:bayesij}  (paraphrase): }\\
+If the posterior $\p(\theta \vert \xvec)$ ``concentrates'' (e.g. as in the Bernstein--von Mises theorem),\footnote{Existing results are
+sufficient for a \textit{particular weight} \citep{kass:1990:posteriorexpansions}. 
+\citet{giordano:2023:bayesij} proves that the result holds when averaged over all weights, as needed for
+variance estimation.}
+then
+%
+\begin{align*}
+    \w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)} -
+    \expect{\p(\theta \vert \xvec)}{f(\theta)} \right)
+\end{align*}
+%
+becomes linear as $N\rightarrow \infty$, with slope $\lim_{N\rightarrow \infty} \infl_n$.
+}
+}
+% \hrulefill
+
+% \textbf{Bayesian central limit theorem (BCLT) fact: }Suppose that $\p(\gamma
+% \vert \xvec)$ obeys a BCLT. For functions $\bar{a}(\gamma)$,
+% $\bar{b}(\gamma)$, $\bar{c}(\gamma)$ satisfying some regularity conditions
+% \citep{kass:1990:posteriorexpansions},
+% %
+% \begin{align*}
+% %
+% \expect{\p(\gamma \vert \xvec)}
+%     {\bar{a}(\gamma) \bar{b}(\gamma)} ={}& O_p(N^{-1})
+%     &
+% \expect{\p(\theta \vert \xvec)}
+%     {\bar{a}(\gamma) \bar{b}(\gamma) \bar{c}(\gamma)} ={}&
+%     O_p(N^{-2}).
+% %
+% \end{align*}
+% %
+% \hrulefill
+
+
+\end{frame}
+
+
+
