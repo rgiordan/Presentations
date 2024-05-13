@@ -1,8 +1,35 @@
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{frame}{Negative binomial experiment}
+
+Example: Negative binomial models with an unknown parameter $\gamma$.
+%
+\begin{align*}
+\textrm{For }n={} 1,\ldots, N \textrm{ let }
+    x_n |  \gamma \iid{}& \textrm{NegativeBinomial}\left(\alpha, \gamma \right)
+    \textrm{ for fixed }\alpha.\\
+\textrm{Write }\log \p(\xvec \vert \lambda, \gamma, \w) ={}&
+       \sumn \w_n \ell_n(\gamma).
+    %
+\end{align*}
+%
+\pause
+%
+\LowDimAccuracyGraph{}
+%   
+\end{frame}
+    
 
     
 
-\begin{frame}[t]{Consistency theorem}
+\begin{frame}[t]{Variance consistency theorem}
 
     
 % Optima and related features of the log likelihood
@@ -30,7 +57,7 @@
 % \def\gcovbayeshat{\hat{V}^{\mathrm{Bayes}}}
 % \def\gcovbayes{V^{\mathrm{Bayes}}}
 
-Assumptions sketch:
+\textbf{Assumptions sketch:}
 %
 \begin{itemize}
     \item A well--behaved MAP \textit{maximum a posteriori} estimator $\thetahat$ exists:
@@ -66,6 +93,7 @@ Under the above assumptions,
 \end{align}
 }
 
+\pause
 Equation \ref{eq:expectation_limit} and the form of  $\gcovtrue$ is known (\citep{kleijn:2012:bvm}).  
 
 Our contribution is a consistent estimator of $\gcovtrue$ using posterior samples 
