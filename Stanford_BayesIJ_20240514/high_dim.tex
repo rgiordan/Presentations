@@ -322,13 +322,16 @@ Inconsistency is suggested if $\red{\err(\ttil)}$ fails to vanish.
 Define the average product of second moments:
 %
 \begin{align*}
-    \mathcal{V_N} :=
-    \frac{1}{N} \sum_{g=1}^G 
+    \mathcal{V_N}(\gamma) :=
+    \frac{1}{G} \sum_{g=1}^G 
+    \trace{
         \expect{\fdist(\x_n)}{\tau(\x_n) \tau(\x_n)^\trans}
-        \cov{\p(\lambda, \gamma \vert \fdist)}{\eta_{g}(\gamma, \lambda)}.
+        \cov{\p(\lambda \vert \gamma, \fdist)}{\eta_{g}(\gamma, \lambda)}
+    }.
 \end{align*}
 %
-If $\mathcal{V_N}$ is strictly bounded away from $0$ as $N\rightarrow \infty$, then
+If $N \expect{\p(\gamma \vert \fdist)}{\fbar(\gamma) \mathcal{V_N}(\gamma)}$ is 
+strictly bounded away from $0$ as $N\rightarrow \infty$, then
 %
 \begin{align*}
     \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \rightarrow \infty
