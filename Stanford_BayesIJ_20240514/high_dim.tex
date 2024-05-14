@@ -143,65 +143,6 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Experiments}
-%
-\question{Example: Poisson regression with Gamma-distributed random effects}
-\begin{align*}
-\textrm{For }g=1,\ldots,G,\textrm{ }
-    \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta) \textrm{ for fixed }\alpha,\beta\\
-\textrm{For }n = 1,\ldots,N,\textrm{ }
-    g_n \iid{}& \mathrm{Categorical}(1,\ldots,G),\textrm{ }
-    y_n | \lambda_n, \gamma, g_n \iid{}
-        \mathrm{Poisson}(\gamma \lambda_{g_n}).\\
-\x_n ={} (y_n, g_n)
-\textrm{ are IID given } \lambda, \gamma. &
-\textrm{   Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
-   \sumn \w_n \ell_n(\lambda, \gamma).
-%
-\end{align*}
-
-\pause
-
-% \begin{minipage}[t]{0.45\textwidth}
-% %
-% \begin{align*}
-%     % \textrm{Fix }&\alpha,\beta\textrm{. }\\
-%     \textrm{For }n={}&1,\ldots,N\textrm{, }g=1,\ldots,G,\\
-%     \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta) \textrm{ for fixed }\alpha,\beta\\
-%     g_n \iid{}& \mathrm{Categorical}(1,\ldots,G)\\
-%     y_n \iid{}&
-%         \mathrm{Poisson}(\gamma \lambda_{g_n}) 
-%         \textrm{ given }
-%         \lambda_n, \gamma, g_n\\
-% \end{align*}
-% %
-% \end{minipage}
-% \hspace{1em}
-% %
-% \begin{minipage}[t]{0.45\textwidth}
-% %
-% \begin{align*}
-% %
-% & \x_n ={} (y_n, g_n)
-% \textrm{ are IID given }\lambda, \gamma.\\
-% &\textrm{Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
-% % \\
-%    \sumn \w_n \ell_n(\lambda, \gamma).
-% %
-% \end{align*}
-% %
-% \end{minipage}
-%
-% \vspace{-2em}
-\HighDimAccuracyGraph{}
-
-\end{frame}
-    
-
 
 
 % von Mises stuff
@@ -260,6 +201,8 @@ Let $\fndist$ denote the empirical distribution.  Then
 %
 \pause
 
+\hrulefill
+
 Let $\fdist$ denote the true distribution of $\x_n$, and
 let $\ftdist  = \t \fndist + (1 - \t) \fdist$. 
 
@@ -286,6 +229,9 @@ Inconsistency is suggested if $\red{\err(\ttil)}$ fails to vanish.
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -375,3 +321,36 @@ strictly bounded away from $0$ as $N\rightarrow \infty$, then
     \PoissonREGraph{}
     \end{minipage}
 \end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Experiments}
+    %
+    \question{Example: Poisson regression with Gamma-distributed random effects}
+    \begin{align*}
+    \textrm{For }g=1,\ldots,G,\textrm{ }
+        \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta) \textrm{ for fixed }\alpha,\beta\\
+    \textrm{For }n = 1,\ldots,N,\textrm{ }
+        g_n \iid{}& \mathrm{Categorical}(1,\ldots,G),\textrm{ }
+        y_n | \lambda_n, \gamma, g_n \iid{}
+            \mathrm{Poisson}(\gamma \lambda_{g_n}).\\
+    \x_n ={} (y_n, g_n)
+    \textrm{ are IID given } \lambda, \gamma. &
+    \textrm{   Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
+       \sumn \w_n \ell_n(\lambda, \gamma).
+    %
+    \end{align*}
+    
+    \pause
+    
+    \HighDimAccuracyGraph{}
+    
+    \end{frame}
+        
+    
+    
