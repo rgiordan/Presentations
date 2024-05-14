@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  14 MAY 2024 10:31
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  14 MAY 2024 10:44
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2628,32 +2628,40 @@ Package luatex.def Info: figure/highdim_accuracy-1.png  used on input line 147.
 (luatex.def)             Requested size: 195.74252pt x 97.87126pt.
  [59
 
+] [60
+
+] [61
+
 ]
-<figure/manyplots-1.png, id=433, 433.62pt x 216.81pt>
-File: figure/manyplots-1.png Graphic file (type png)
-<use figure/manyplots-1.png>
-Package luatex.def Info: figure/manyplots-1.png  used on input line 154.
-(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
- [60
+[62
 
-<./figure/manyplots-1.png>]
-<figure/manyplotstwo-1.png, id=439, 433.62pt x 216.81pt>
-File: figure/manyplotstwo-1.png Graphic file (type png)
-<use figure/manyplotstwo-1.png>
-Package luatex.def Info: figure/manyplotstwo-1.png  used on input line 158.
-(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
- [61
-
-<./figure/manyplotstwo-1.png>] [62
-
-] [63
-
-] [64
-
-] (./main.bbl)
-[65
+] (./main.bbl) [63
 
 ]) (./supplement.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 69.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 69.
+
+Overfull \vbox (3.84906pt too high) detected at line 69
+ []
+
+[64
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 69.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 69.
+
+Overfull \vbox (3.84906pt too high) detected at line 69
+ []
+
+[65
+
+]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 69.
@@ -2678,25 +2686,33 @@ Overfull \vbox (3.84906pt too high) detected at line 69
 [67
 
 ]
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 97.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 69.
+(mdframed)              on input line 97.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 69.
+ mdframed uses option nobreak mdframed on input line 97.
 
-Overfull \vbox (3.84906pt too high) detected at line 69
+Overfull \vbox (14.83371pt too high) detected at line 97
  []
 
 [68
 
 ]
+File: figure/lowdim_accuracy-1.png Graphic file (type png)
+<use figure/lowdim_accuracy-1.png>
+Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 97.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 69.
+(mdframed)              on input line 97.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 69.
+ mdframed uses option nobreak mdframed on input line 97.
 
-Overfull \vbox (3.84906pt too high) detected at line 69
+Overfull \vbox (14.83371pt too high) detected at line 97
  []
 
 [69
@@ -2733,38 +2749,6 @@ Overfull \vbox (14.83371pt too high) detected at line 97
 
 [71
 
-]
-File: figure/lowdim_accuracy-1.png Graphic file (type png)
-<use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 97.
-(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 97.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 97.
-
-Overfull \vbox (14.83371pt too high) detected at line 97
- []
-
-[72
-
-]
-File: figure/lowdim_accuracy-1.png Graphic file (type png)
-<use figure/lowdim_accuracy-1.png>
-Package luatex.def Info: figure/lowdim_accuracy-1.png  used on input line 97.
-(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 97.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 97.
-
-Overfull \vbox (14.83371pt too high) detected at line 97
- []
-
-[73
-
 ])
 \tf@nav=\write6
 
@@ -2781,7 +2765,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 47511 strings out of 477805
+ 47435 strings out of 477805
  125031,1648299 words of node,token memory allocated
  7438 words of node memory still in use:
    91 hlist, 13 vlist, 10 rule, 23 disc, 7 local_par, 12 math, 166 glue, 37 kern
@@ -2790,7 +2774,7 @@ te, 1 save_pos, 129 pdf_literal, 1 pdf_action, 34 pdf_colorstack, 1 pdf_setmatri
 x, 1 pdf_save, 1 pdf_restore nodes
    avail lists: 1:6,2:2112,3:788,4:358,5:489,6:61,7:4286,8:90,9:1723,10:20,11:34
 9
- 64787 multiletter control sequences out of 65536+600000
+ 64751 multiletter control sequences out of 65536+600000
  93 fonts using 21646519 bytes
  128i,31n,134p,1852b,1242s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
@@ -2812,10 +2796,10 @@ cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7
 .pfb>
-Output written on main.pdf (73 pages, 1314289 bytes).
+Output written on main.pdf (71 pages, 963344 bytes).
 
-PDF statistics: 599 PDF objects out of 1000 (max. 8388607)
- 447 compressed objects within 5 object streams
- 153 named destinations out of 1000 (max. 131072)
+PDF statistics: 587 PDF objects out of 1000 (max. 8388607)
+ 439 compressed objects within 5 object streams
+ 149 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
