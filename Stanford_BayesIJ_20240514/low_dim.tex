@@ -52,14 +52,14 @@
 % \textbf{Assumptions sketch:}
 %
 \begin{itemize}
-    \item Assume: A well--behaved MAP \textit{maximum a posteriori} estimator $\thetahat$ exists.
+    \item Assume (sketch): A well--behaved MAP \textit{maximum a posteriori} estimator $\thetahat$ exists.
     \begin{itemize}
-        \item The dimension of $\theta$ is fixed as $N \rightarrow \infty$.
-        \item The expected log likelihood has a unique maximum at $\thetatrue$
+        \item The dimension of $\theta$ is fixed as $N \rightarrow \infty$
+        \item The expected log likelihood has a strict maximum at $\thetatrue$
         \item The observed log likelihood statisfies $\thetahat \rightarrow \thetatrue$
-        \item The expected log likelihood Hessian $\info$ is negative definite at $\thetatrue$ 
+        \item The expected log likelihood Hessian is negative definite at $\thetatrue$ 
     \end{itemize}
-    \item Assume: We can apply standard asymptotics.
+    \item Assume (sketch): We can apply standard asymptotics.
     \begin{itemize}
     \item The log prior and log likelihood are four times continuously differentiable
     \item The prior is proper, and a technical set of squared expectations are finite
@@ -84,7 +84,7 @@ Under the above assumptions,
     \blue{\infl_n - \overline{\infl}}
     \right)^2  
     \plim {}& \gcovtrue. 
-    & \textrm{(our contribution)}\\
+    & \textrm{(Our contribution)}\\
     \nonumber
 \end{align*}
 }

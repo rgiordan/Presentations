@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  14 MAY 2024 15:59
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  14 MAY 2024 16:01
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2682,7 +2682,7 @@ cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7
 .pfb>
-Output written on main.pdf (62 pages, 1089193 bytes).
+Output written on main.pdf (62 pages, 1088932 bytes).
 
 PDF statistics: 544 PDF objects out of 1000 (max. 8388607)
  404 compressed objects within 5 object streams
