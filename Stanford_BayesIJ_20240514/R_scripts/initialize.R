@@ -2,27 +2,27 @@
 
 library(tidyverse)
 library(knitr)
-library(dplyr)
-library(reshape2)
-library(ggplot2)
-library(ggforce)
-library(gginnards)
-
+#library(dplyr)
+#library(reshape2)
+#library(ggplot2)
 library(xtable)
-
 library(gridExtra)
-library(patchwork)
-
 library(latex2exp)
+library(lubridate)
+library(ggpubr)
 
+
+library(ggforce) # For geom_ellipse
 
 # This must be run from within the git repo, obviously.
-git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
-
 paper_repo_loc <- "/home/rgiordan/Documents/git_repos/InfinitesimalJackknifeWorkbench/"
 paper_directory <- file.path(paper_repo_loc, "writing/bayes")
-data_path <- file.path(git_repo_loc, "src/bayes/simple_simulations/")
-r_script_path <- file.path(git_repo_loc, "Stanford_BayesIJ_20240514")
+
+git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
+paper_directory <- file.path(paper_repo_loc, "writing/bayes/")
+data_path <- file.path(paper_directory, "data")
+
+source(file.path(paper_directory, "R_scripts/plot_lib.R"))
 
 # opts_chunk$set(fig.width=4.9, fig.height=3)
 opts_chunk$set(fig.pos='!h', fig.align='center', dev='png', dpi=300)
@@ -46,23 +46,36 @@ DefineMacro <- function(macro_name, value, digits=3) {
   cat("\\newcommand{\\", macro_name, "}{", value_string, "}\n", sep="")
 }
 
-# Aspect ratio is height / width
-base_aspect_ratio <- 5 / (5 * 2)  # This one was working 7/7/21
-base_image_width <- 6
+# aspect ratio refers to height / width.
+if (single_column) {
+  # This is for the arxiv (single-column) version.
+  #base_aspect_ratio <- 3.5 / (5 * 2)
+  base_aspect_ratio <- 8 / (5 * 2)
+  base_image_width <- 5.5
+} else {
+  # This is for the AISTATS (two-column) submission.
+  base_aspect_ratio <- 8 / (5 * 2)
+  base_image_width <- 4.
+}
 
-SetImageSize <- function(aspect_ratio=base_aspect_ratio,
-                         image_width=1.0) {
-
-  ow <- sprintf("%0.3f\\linewidth", image_width * 0.98)
-  oh <- sprintf("%0.3f\\linewidth", aspect_ratio * image_width * 0.98)
-
-  fw <- base_image_width * image_width
-  fh <- fw * aspect_ratio
-
+# aspect ratio refers to height / width.
+SetImageSize <- function(aspect_ratio, image_width=base_image_width) {
+  ow <- "0.98\\linewidth"
+  oh <- sprintf("%0.3f\\linewidth", aspect_ratio * 0.98)
+  fw <- image_width
+  fh <- image_width * aspect_ratio
   opts_chunk$set(out.width=ow,
                  out.height=oh,
                  fig.width=fw,
                  fig.height=fh)
 }
 
-SetImageSize()
+
+SetFullImageSize <- function() SetImageSize(
+    aspect_ratio=base_aspect_ratio, image_width=base_image_width)
+
+SetShortImageSize <- function() SetImageSize(
+    aspect_ratio=0.7 * base_aspect_ratio, image_width=base_image_width)
+
+# Default to a full image.
+SetFullImageSize()
