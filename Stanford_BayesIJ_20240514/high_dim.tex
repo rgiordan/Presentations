@@ -329,3 +329,36 @@ If $\mathcal{V_N}$ is strictly bounded away from $0$ as $N\rightarrow \infty$, t
 
 \end{frame}
 
+
+
+
+\begin{frame}{More experimental results for Gamma--Poisson mixtures}
+    \begin{minipage}[c]{0.35\textwidth}
+        We ran simulations of the Gamma--Poisson mixture with
+        different ratios of $N / G$ \\(average observations per group).
+
+        \spskip
+        %
+        \begin{itemize}
+            \item When $N/G$ is small:
+            %
+            \begin{itemize}
+                \item IJ is biased significantly downwards
+                \item Bootstrap is biased somewhat downwards
+            \end{itemize}
+            %
+            \item When $N/G$ is larger:
+            %
+            \begin{itemize}
+                \item Both improve
+                \item Both remain somewhat biased
+                \item The IJ and bootstrap perform similarly
+            \end{itemize}
+            %
+        \end{itemize}
+    %
+    \end{minipage}
+    \begin{minipage}[c]{0.6\textwidth}
+    \PoissonREGraph{}
+    \end{minipage}
+\end{frame}

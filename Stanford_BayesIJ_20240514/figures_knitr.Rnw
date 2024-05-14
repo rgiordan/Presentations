@@ -81,7 +81,7 @@ source("R_scripts/ARM/z_score_graph.R", echo=knitr_debug, print.eval=TRUE)
 %
 <<graph_fig_cap2>>=
 figcap <- paste(
-    "The distribution of the relative errors.",
+    "The distribution of the relative errors.  ",
     "Log scale parameters include all variances or covariances that involve ",
     "at least one log scale parameters.",
     sep="")
