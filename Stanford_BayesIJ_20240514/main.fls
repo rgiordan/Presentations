@@ -885,16 +885,6 @@ INPUT ./static_figures/highdim_accuracy-1.png
 INPUT ./static_figures/highdim_accuracy-1.png
 INPUT ./main.bbl
 INPUT ./main.bbl
-INPUT ./supplement.tex
-INPUT ./supplement.tex
-INPUT ./static_figures/lowdim_accuracy-1.png
-INPUT ./static_figures/lowdim_accuracy-1.png
-INPUT ./static_figures/lowdim_accuracy-1.png
-INPUT ./static_figures/lowdim_accuracy-1.png
-INPUT ./static_figures/lowdim_accuracy-1.png
-INPUT ./static_figures/lowdim_accuracy-1.png
-INPUT ./static_figures/lowdim_accuracy-1.png
-INPUT ./static_figures/lowdim_accuracy-1.png
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm

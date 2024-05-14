@@ -4,8 +4,6 @@
     \question{Example: Exponential families  with random effects (REs)
     $\lambda$ and fixed effects $\gamma$.}
 
-    \pause
-    
     If the observations per random effect remains bounded as $N \rightarrow
     \infty$, then
     %
@@ -19,18 +17,19 @@
     %
     \end{itemize}
     
-\spskip
-\pause
-
-In general, we cannot hope for an asymptotic analysis of
-$\expect{\p(\lambda, \gamma \vert \xvec)}{f(\lambda)}$.
 
 \spskip
 \pause
 \question{
+In general, we cannot hope for an asymptotic analysis of
+    $\expect{\p(\lambda, \gamma \vert \xvec)}{f(\lambda)}$. \\
+%
+\spskip
 Can we save the approximation when {\em some} parameters concentrate?\\
+%
+\spskip
 Does the residual vanish asymptotically for
-$\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma}$?
+$\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$?
 }
 
 %
@@ -277,8 +276,19 @@ We can study the \textit{von Mises expansion}:
     & + \red{\err(\ttil)}.
 \end{align*}
 %
-
+%Consistency follows if $\red{\err(\ttil)}$ vanishes.
+Inconsistency is suggested if $\red{\err(\ttil)}$ fails to vanish.
+%
 \end{frame}
+
+
+
+
+
+
+
+
+
 
 \begin{frame}[t]{Bayesian von--Mises Expansion Results}
 
