@@ -58,6 +58,7 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
 \\
 &\quad\blue{\infl_n}(\w_n - 1) && +\red{\err(\w_n)}
 % \\&
+\onslide<2->{
 \\={}&
 \blue{
 \expect{\p(\gamma, \lambda \vert \xvec)}{
@@ -73,7 +74,8 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
     }
         (\w_n - 1)^2
 % \\&
-\onslide<2->{
+}
+\onslide<3->{
 \\={}&
 %
 \blue{
@@ -99,7 +101,7 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
     }
         (\w_n - 1)^2
 }
-\onslide<3->{
+\onslide<4->{
 \\={}&
 \undernote{
 \blue{
@@ -121,14 +123,14 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
 %
 \\& \Rightarrow
 }
-\onslide<1->{
+\onslide<5->{
 \blue{\infl_n = O_p(N^{-1})} &&
 \red{\err(\w_n) = O_p(N^{-1})}
 }
 %
 \end{align*}
 %
-\onslide<4->{
+\onslide<6->{
 % The error is the same order as the linear approximation, and does not vanish after rescaling!
 
 \theorem{
@@ -243,8 +245,6 @@ Define the ``generalized posterior'' functional
     %
 \end{align*}
 %
-\pause
-
 Let $\fndist$ denote the empirical distribution.  Then
 %
 \begin{align*}
@@ -262,7 +262,7 @@ Let $\fndist$ denote the empirical distribution.  Then
 \pause
 
 Let $\fdist$ denote the true distribution of $\x_n$, and
-let $\ftdist  = \t \fdist + (1 - \t) \fndist$. 
+let $\ftdist  = \t \fndist + (1 - \t) \fdist$. 
 
 We can study the \textit{von Mises expansion}:
 %

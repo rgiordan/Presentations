@@ -139,6 +139,7 @@ weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
 %
 \textrm{Bootstrap variance} ={}&
 \var{\p(\w)}{\expect{p(\theta \vert \xvec, w)}{f(\theta)}}
+\onslide<3->{
 \\={}&
 \var{\p(\w)}{
     \sumn \blue{\infl_n} (\w_n - 1) + \red{\err}(\w_n)
@@ -151,10 +152,16 @@ weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
     \red{\err}(\w_n)
     \textrm{ for }n =1,\dots,N
 }
-\\\red{\approx}{}& 
-\frac{1}{N^2} \sumn \left(
-    \blue{\infl_n - \overline{\infl}}
-\right)^2
+\\\red{\approx}{}&
+\frac{1}{N}
+\undernote{
+    \left( 
+    \frac{1}{N} \sumn \left(
+        \blue{\infl_n - \overline{\infl}}
+    \right)^2
+    \right)
+}{\textrm{``Infinitesimal jackknife variance estimate''}}
+}
 %
 \end{align*}
     

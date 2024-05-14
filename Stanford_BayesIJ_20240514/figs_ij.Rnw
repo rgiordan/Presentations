@@ -12,12 +12,15 @@ single_column <- FALSE # Not actually used
 knitr_debug <- FALSE # Set to true to see error output
 knitr_cache <- FALSE # Set to true to cache knitr output for this analysis.
 r_script_dir <- "../bayes/R_scripts/"
+r_script_dir <- paste0(
+    "/home/rgiordan/Documents/git_repos/",
+    "InfinitesimalJackknifeWorkbench/writing/bayes")
 source(file.path(r_script_dir, "initialize.R"), echo=FALSE)
-source(file.path(r_script_dir, "election/load_data.R"))
-source(file.path(r_script_dir, "ARM/load_data.R"))
-source(file.path(r_script_dir, "election/define_macros.R"))
-source(file.path(r_script_dir, "nuisance_example/load_data.R"))
-source(file.path(r_script_dir, "nuisance_example/n_over_g_graph.R"))
+# source(file.path(r_script_dir, "election/load_data.R"))
+# source(file.path(r_script_dir, "ARM/load_data.R"))
+# source(file.path(r_script_dir, "election/define_macros.R"))
+# source(file.path(r_script_dir, "nuisance_example/load_data.R"))
+# source(file.path(r_script_dir, "nuisance_example/n_over_g_graph.R"))
 
 
 # aspect ratio refers to height / width.
@@ -32,6 +35,26 @@ SetSlideImageSize <- function(width=0.98, aspect_ratio=4/5, r_width=5.0) {
                  fig.height=fh)
 }
 @
+
+<<load_data>>=
+source("R_scripts/ARM/load_data.R")
+source("R_scripts/ARM/load_pilots_data.R")
+source("R_scripts/BPA/load_data.R")
+source("R_scripts/election/load_data.R")
+source("R_scripts/poisson_sim/load_data.R")
+source("R_scripts/singular_example/load_data.R")
+@
+
+<<define_macros, results="asis">>=
+source("R_scripts/ARM/define_macros.R")
+source("R_scripts/ARM/define_pilots_macros.R")
+source("R_scripts/BPA/define_macros.R")
+source("R_scripts/election/define_macros.R")
+source("R_scripts/poisson_sim/define_macros.R")
+source("R_scripts/singular_example/define_macros.R")
+@
+
+
 
 
 
@@ -135,6 +158,32 @@ SetSlideImageSize(aspect_ratio=1.2, width=0.98)
 @
 <<relerr_graph, cache=knitr_cache, fig.show='hold'>>=
 source(file.path(r_script_dir, "ARM/z_score_graph.R"),
+       echo=knitr_debug, print.eval=TRUE)
+@
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% <<sim_ar_vars>>=
+% sim_ar <- 1.
+% sim_img_over_legend <- 2
+% sim_r_width <- 2.7
+% @
+
+\newcommand{\PoissonREGraph}{
+<<graph_fig_cap13>>=
+SetImageSize(aspect_ratio=10/10)
+figcap <- paste(
+    "The error of the IJ and bootstrap covariances for different values of ",
+    "$N$ and $G$.  The y-axis shows the difference between $N (V - \\hat{V}_{\\mathrm{sim}})$, where $V$ is either $\\gcovijhat$ or $\\gcovboothat$.",
+    sep="")
+@
+<<poisson_re_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/poisson_sim/comparison_graph.R",
        echo=knitr_debug, print.eval=TRUE)
 @
 }
