@@ -170,7 +170,7 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
 
 \pause
 
-Define the ``generalized posterior'' functional
+Define the ``generalized posterior'' functional ($\theta$ may be growing in dimension):
 %
 \begin{align*}
     %
@@ -185,7 +185,7 @@ Define the ``generalized posterior'' functional
     %
 \end{align*}
 %
-Let $\fndist$ denote the empirical distribution.  Then
+Let $\fndist$ denote the empirical distribution over $\x_n$.  Then
 %
 \begin{align*}
     \expect{\post}{\g(\theta)} =
@@ -199,8 +199,10 @@ Let $\fndist$ denote the empirical distribution.  Then
     } = \T(\fndist, N).
 \end{align*}
 %
+%\textbf{Bayesian concentration} happens as $N\rightarrow \infty$, \textbf{frequentist concentration}
+%happens as $\fndist \rightarrow \fdist$.\\
 \pause
-
+%
 \hrulefill
 
 Let $\fdist$ denote the true distribution of $\x_n$, and
@@ -255,8 +257,8 @@ Inconsistency is suggested if $\red{\err(\ttil)}$ fails to vanish.
 
 \theorem{
 \textbf{Theorem 4 \citep{giordano:2023:bayesij} (sketch, not yet on arxiv):}\\
-\textbf{(Inconsistency of the von--Mises expansion in infinite dimensions) }\\
-    Assume that $\x_n$ comes with a random group assignment $g_n \in 1,\ldots,G$.    
+\textbf{(Inconsistency of the von--Mises expansion in high dimensional exponential families) }\\
+    Assume that $\x_n$ comes with a equiprobable group assignment $g_n \in 1,\ldots,G$.\\    
     Conditional on $g$, $\x_n$ is modeled as a finite-dimensional exponential
     family given $\lambda,\gamma$:
     %
@@ -268,7 +270,7 @@ Inconsistency is suggested if $\red{\err(\ttil)}$ fails to vanish.
 Define the average product of second moments:
 %
 \begin{align*}
-    \mathcal{V_N}(\gamma) :=
+    \mathcal{V}_N(\gamma) :=
     \frac{1}{G} \sum_{g=1}^G 
     \trace{
         \expect{\fdist(\x_n)}{\tau(\x_n) \tau(\x_n)^\trans}
@@ -276,7 +278,7 @@ Define the average product of second moments:
     }.
 \end{align*}
 %
-If $N \expect{\p(\gamma \vert \fdist)}{\fbar(\gamma) \mathcal{V_N}(\gamma)}$ is 
+If $N \expect{\p(\gamma \vert \fdist)}{\fbar(\gamma) \mathcal{V}_N(\gamma)}$ is 
 strictly bounded away from $0$ as $N\rightarrow \infty$, then
 %
 \begin{align*}
@@ -289,6 +291,38 @@ strictly bounded away from $0$ as $N\rightarrow \infty$, then
 \end{frame}
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Experiments}
+    %
+    \question{Example: Poisson regression with Gamma-distributed random effects}
+    \begin{align*}
+    \textrm{For }g=1,\ldots,G,\textrm{ }
+        \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta) \textrm{ for fixed }\alpha,\beta\\
+    \textrm{For }n = 1,\ldots,N,\textrm{ }
+        g_n \iid{}& \mathrm{Categorical}(1,\ldots,G),\textrm{ }
+        y_n | \lambda_n, \gamma, g_n \iid{}
+            \mathrm{Poisson}(\gamma \lambda_{g_n}).\\
+    \x_n ={} (y_n, g_n)
+    \textrm{ are IID given } \lambda, \gamma. &
+    \textrm{   Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
+       \sumn \w_n \ell_n(\lambda, \gamma).
+    %
+    \end{align*}
+    
+    \pause
+    
+    \HighDimAccuracyGraph{}
+    
+\end{frame}
+        
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{frame}{More experimental results for Gamma--Poisson mixtures}
@@ -324,33 +358,3 @@ strictly bounded away from $0$ as $N\rightarrow \infty$, then
 
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Experiments}
-    %
-    \question{Example: Poisson regression with Gamma-distributed random effects}
-    \begin{align*}
-    \textrm{For }g=1,\ldots,G,\textrm{ }
-        \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta) \textrm{ for fixed }\alpha,\beta\\
-    \textrm{For }n = 1,\ldots,N,\textrm{ }
-        g_n \iid{}& \mathrm{Categorical}(1,\ldots,G),\textrm{ }
-        y_n | \lambda_n, \gamma, g_n \iid{}
-            \mathrm{Poisson}(\gamma \lambda_{g_n}).\\
-    \x_n ={} (y_n, g_n)
-    \textrm{ are IID given } \lambda, \gamma. &
-    \textrm{   Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
-       \sumn \w_n \ell_n(\lambda, \gamma).
-    %
-    \end{align*}
-    
-    \pause
-    
-    \HighDimAccuracyGraph{}
-    
-    \end{frame}
-        
-    
-    
