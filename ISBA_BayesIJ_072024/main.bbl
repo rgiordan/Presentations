@@ -1,0 +1,31 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Gelman and Heidemanns(2020)]{economist:2020:election}
+A.~Gelman and M.~Heidemanns.
+\newblock The {Economist}: {Forecasting} the {US} elections., 2020.
+\newblock URL \url{https://projects.economist.com/us-2020-forecast/president}.
+\newblock Data and model accessed Oct., 2020.
+
+\bibitem[Giordano and Broderick(2023)]{giordano:2023:bayesij}
+R.~Giordano and T.~Broderick.
+\newblock The {Bayesian} infinitesimal jackknife for variance.
+\newblock \emph{arXiv preprint arXiv:2305.06466}, 2023.
+
+\bibitem[Huggins and Miller(2023)]{huggins:2023:bayesbag}
+J.~Huggins and J.~Miller.
+\newblock Reproducible model selection using bagged posteriors.
+\newblock \emph{Bayesian Analysis}, 18\penalty0 (1):\penalty0 79--104, 2023.
+
+\bibitem[{von Mises}(1947)]{mises:1947:asymptotic}
+R.~{von Mises}.
+\newblock On the asymptotic distribution of differentiable statistical
+  functions.
+\newblock \emph{The Annals of Mathematical Statistics}, 18\penalty0
+  (3):\penalty0 309--348, 1947.
+
+\end{thebibliography}

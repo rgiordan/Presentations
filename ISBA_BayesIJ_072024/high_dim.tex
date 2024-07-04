@@ -1,0 +1,56 @@
+
+
+\begin{frame}[t]{Theoretical results}
+%
+\question{How good is the linear approximation (IJ covariance)?}
+%
+%
+\begin{align*}
+    \sqrt{N} \left( \expect{\post}{f(\theta)} - f(\theta_0) \right) 
+    \dlim \mathcal{N}( 0, \undernote{\Sigma}{\text{\blue{Want to estimate this}}} )
+    & \textrm{ for some }\theta_0
+\end{align*}
+%
+\pause
+\theorem{
+\textbf{Theorem 3 of \citet{giordano:2023:bayesij}  (paraphrase): }\\ 
+%
+If the parameter dimension is fixed, and Berstein--von Mises (BVM) theorem--like
+conditions hold, then the IJ covariance 
+is consistent, because $\red{\sqrt{N} \err(\w)} \plim 0$.
+}
+
+% $\Rightarrow$ Use one MCMC chain and the IJ instead of hundreds of MCMC chains with the bootstrap!
+
+\pause
+
+\vspace{1em}
+\question{Problem: we're doing MCMC because BVM does not hold.\\What if $f(\theta)$ concentrates
+marginally, but some components don't concentrate?}
+
+\pause
+
+\theorem{
+\textbf{Theorem 4 of \citet{giordano:2023:bayesij}  (paraphrase): }\\ 
+%
+In a flexible class of high--dimensional exponential family models,
+%
+\begin{itemize}
+\item  $\red{\sqrt{N} \err(\w)}$ does not converge to zero (so the IJ covariance is inconsistent), but...
+\item  $\red{\sqrt{N} \err(\w) = \ordlogp{1}}$, and proportional to the nuisance parameters' 
+posterior covariance
+\end{itemize}
+\textbf{even when $\p\left( f(\theta) | \xvec \right)$ obeys a BVM marginally. (!)}
+}
+
+%
+\begin{itemize}
+\item Proofs use the von Mises expansion to accomodate high--dimensional $\theta$ \citep{mises:1947:asymptotic}.
+\item[$\Rightarrow$] \textbf{Proofs (and experiments) strongly suggest the bootstrap is inconsistent as well.}
+\end{itemize}
+%
+
+
+\end{frame}
+
+

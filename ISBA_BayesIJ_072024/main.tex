@@ -1,0 +1,36 @@
+\documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif} % default family is serif
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+
+\input{_headers}
+% \input{_knitr_header}
+
+\title{Approximate data deletion and replication with the \\\hspace{0em}Bayesian influence function}
+
+\author{Ryan Giordano (\texttt{rgiordano@berkeley.edu}, UC Berkeley), Tamara Broderick (MIT)}
+
+\date{\textbf{2024 ISBA World Meeting}}
+
+\setbeamertemplate{Collaborators}[none]
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+\begin{document}
+
+\maketitle
+
+\input{introduction}
+
+\input{weights}
+
+\input{high_dim}
+%
+\input{exchangeability}
+
+%
+\input{supplement}
+
+
+\end{document}
