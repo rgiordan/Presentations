@@ -20,12 +20,13 @@ Model:
 
 %\pause
 \spskip
-Typically, we compute Markov chain Monte Carlo (MCMC) draws from the
-posterior $p(\theta \vert \xvec)$.
+We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
 
 %\pause
 \spskip
-We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
+Typically, we compute Markov chain Monte Carlo (MCMC) draws from the
+posterior $p(\theta \vert \xvec)$.
+
 
 \end{minipage}
 
@@ -46,7 +47,9 @@ We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
     The people who responded to the polls were randomly selected.  \\
     If we had selected a different random sample, how much would our estimate have changed?
     }
-        
+
+\pause
+
 \textbf{Idea: } Re-fit with bootstrap samples of data \citep{huggins:2023:bayesbag}
 
 %
@@ -57,7 +60,6 @@ We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
 % \end{itemize}
 
 % \onslide<5->{
-\pause
 \question{\textbf{Problem:} Each MCMC run takes about $10$ hours (Stan, six cores).}
 % }
 
@@ -108,32 +110,32 @@ to form a linear approximation to {\em data reweightings}.}
 
 
 
-\begin{frame}{Outline}
-%
-\begin{itemize}
-%
-\item Data reweighting
-%
-\begin{itemize}
-%
-\item Write the change in the posterior expectation
-    as \blue{linear component} $+$ \red{error}
-\item The \blue{linear component} can be computed from a
-single run of MCMC
-\item The \blue{linear component} can be used to estimate the frequentist
-variability of posterior expectations
-%
-\end{itemize}
-\item In finite dimensions, the linear approximation gives a consistent
-variance estimator
-\item In problems with high--dimensional nuisance parameters, the linear approximation is
-    %
-    \begin{itemize}
-    \item Inconsistent (!)
-    \item Even for parameters that marginally obey a Bernstein von--Mises theorem (!)
-    \item But the error is $O_p(1)$, and proportional a nuisance parameter posterior covariance.
-    \end{itemize}
-%
-\end{itemize}
-%
-\end{frame}
+% \begin{frame}{Outline}
+% %
+% \begin{itemize}
+% %
+% \item Data reweighting
+% %
+% \begin{itemize}
+% %
+% \item Write the change in the posterior expectation
+%     as \blue{linear component} $+$ \red{error}
+% \item The \blue{linear component} can be computed from a
+% single run of MCMC
+% \item The \blue{linear component} can be used to estimate the frequentist
+% variability of posterior expectations
+% %
+% \end{itemize}
+% \item In finite dimensions, the linear approximation gives a consistent
+% variance estimator
+% \item In problems with high--dimensional nuisance parameters, the linear approximation is
+%     %
+%     \begin{itemize}
+%     \item Inconsistent (!)
+%     \item Even for parameters that marginally obey a Bernstein von--Mises theorem (!)
+%     \item But the error is $O_p(1)$, and proportional a nuisance parameter posterior covariance.
+%     \end{itemize}
+% %
+% \end{itemize}
+% %
+% \end{frame}

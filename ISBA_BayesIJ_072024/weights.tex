@@ -26,7 +26,6 @@
 
 \onslide<2->{
 Augment the problem with {\em data weights} $\w_1, \ldots, \w_N$.
-We can write $\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}$.
 }
 \onslide<2->{
 %
@@ -36,7 +35,9 @@ We can write $\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}$.
 &
 \log \p(\xvec \vert \theta, \w) ={}&
     \sumn \w_n \ell_n(\theta)
-%
+&
+\Rightarrow \text{We write }\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}.
+    %
 \end{align*}
 }
 
@@ -144,6 +145,7 @@ The re-scaled slope $N \infl_n$ is known as the
     weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
 
     This is equivalent to re--sampling data with replacement.
+    \pause
     %
     \begin{align*}
     %
@@ -200,10 +202,7 @@ How can we analyze the error \red{$\err(\w)$}?}
 
 \pause
 
-Let an overbar denote ``posterior--mean zero.''
-For example, $\thetabar := f(\theta) - \expect{\p(\theta \vert \xvec)}{f(\theta)}$.
-
-By dominated convergence and the mean value theorem, for some $\wtil$:
+By dominated convergence,
 %
 \begin{align*}
 %
@@ -211,15 +210,19 @@ By dominated convergence and the mean value theorem, for some $\wtil$:
     % \fracat{\partial \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)}}
     %    {\partial \w_n}{\w_n =1}
 \undernote{\blue{
-    \cov{\p(\theta \vert \xvec)}{ \theta, \ell_n(\theta)}
+    \cov{\p(\theta \vert \xvec)}{ f(\theta), \ell_n(\theta)}
 }}{\blue{\substack{
     \text{Estimatable with MCMC!} \\
     % \text{\,}\\
     % \onslide<3->{\text{$= O_p(N^{-1})$ under posterior concentration}}
 }}}
-\\
-\\
+\end{align*}
+%
+%
 \onslide<3->{
+Furthermore, by the mean value theorem, for some $\wtil$,
+%
+\begin{align*}
 \red{\err(\w)} ={}&
 \frac{1}{2}
 \sum_{n=1}^N \sum_{n'=1}^N
@@ -237,9 +240,12 @@ By dominated convergence and the mean value theorem, for some $\wtil$:
     \text{But we can analyze it.}
 }}}
 (\w_n - 1)(\w_{n'} - 1)
-}
 %
 \end{align*}
+%
+Here, an overbar denotes ``posterior--mean zero.''
+For example, $\thetabar := f(\theta) - \expect{\p(\theta \vert \xvec)}{f(\theta)}$.
+}
 %
 % \onslide<4->{
 % \theorem{

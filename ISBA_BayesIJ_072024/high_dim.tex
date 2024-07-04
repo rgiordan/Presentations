@@ -2,14 +2,15 @@
 
 \begin{frame}[t]{Theoretical results}
 %
-\question{How good is the linear approximation (IJ covariance)?}
+\question{How good is the linear approximation (IJ covariance)
+as an approximation of the limiting variance of $\sqrt{N} \expect{\post}{f(\theta)}$?}
 %
 %
-\begin{align*}
-    \sqrt{N} \left( \expect{\post}{f(\theta)} - f(\theta_0) \right) 
-    \dlim \mathcal{N}( 0, \undernote{\Sigma}{\text{\blue{Want to estimate this}}} )
-    & \textrm{ for some }\theta_0
-\end{align*}
+% \begin{align*}
+%     \sqrt{N} \left( \expect{\post}{f(\theta)} - f(\theta_0) \right) 
+%     \dlim \mathcal{N}( 0, \undernote{\Sigma}{\text{\blue{Want to estimate this}}} )
+%     & \textrm{ for some }\theta_0
+% \end{align*}
 %
 \pause
 \theorem{
@@ -33,14 +34,14 @@ marginally, but some components don't concentrate?}
 \theorem{
 \textbf{Theorem 4 of \citet{giordano:2023:bayesij}  (paraphrase): }\\ 
 %
-In a flexible class of high--dimensional exponential family models,
+In a flexible class of high--dimensional exponential family models,\\
+\textbf{even when $\p\left( f(\theta) | \xvec \right)$ obeys a BVM marginally (!),}
 %
 \begin{itemize}
 \item  $\red{\sqrt{N} \err(\w)}$ does not converge to zero (so the IJ covariance is inconsistent), but...
 \item  $\red{\sqrt{N} \err(\w) = \ordlogp{1}}$, and proportional to the nuisance parameters' 
 posterior covariance
 \end{itemize}
-\textbf{even when $\p\left( f(\theta) | \xvec \right)$ obeys a BVM marginally. (!)}
 }
 
 %

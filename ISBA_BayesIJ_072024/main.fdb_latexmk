@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1720115337 "main.aux" "main.bbl" "main" 1720115458
+["bibtex main"] 1720125739 "main.aux" "main.bbl" "main" 1720125743
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1720115458 5533 e2c619afeb619ee389b992745ef2bddf "lualatex"
+  "main.aux" 1720125743 5489 f28b9372b56e38482d04b316795d6ce4 "lualatex"
   "references.bib" 1720108558 22538 977881ee80521ec726922e6c73bd108b ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1720115454 "main.tex" "main.pdf" "main" 1720115458
+["lualatex"] 1720125739 "main.tex" "main.pdf" "main" 1720125743
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -396,19 +396,19 @@
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1713476517 4555314 730eb04a0c5eb13602d9bcfb1d963bc4 ""
   "_defs.tex" 1720108558 4285 9ef0916af9bb4cceda1791b97d35d471 ""
   "_headers.tex" 1720108558 3179 cabd061155ce8caaf3832f61ea8d3ab2 ""
-  "exchangeability.tex" 1720115452 1594 ee4b48aafd0c936c0ec7460d4f594480 ""
+  "exchangeability.tex" 1720117267 1600 82db430bb116da0fa5c2f8126cc8460b ""
   "figs.tex" 1720108558 1771 c5d21bcc61db731575d609edd1a3289b ""
   "figs_ij.tex" 1720108558 1930 6aab219c5f505da2989c6734f7903b05 ""
   "figure/election_data-1.png" 1720108558 224986 58a083ec94579976f8a05fa2c7c33bdb ""
   "figure/election_result-1.png" 1720108558 63753 10c37659dd9bdefdda75c21030e40893 ""
   "figure/highdim_accuracy-1.png" 1720108558 46974 fb5eaa769b61e3d3fbf539987ff8e697 ""
   "figure/lowdim_accuracy-1.png" 1720108558 47010 bb735c28196e1de5112c8206d1c6c717 ""
-  "high_dim.tex" 1720115029 1647 22680d8959b5a1c4450440ef6797d33d ""
-  "introduction.tex" 1720114908 3295 6298a918754bbcac3c3ef6db26367e1b ""
-  "main.aux" 1720115458 5533 e2c619afeb619ee389b992745ef2bddf "lualatex"
-  "main.bbl" 1720115337 1251 30b84cc2ca2484c552ac244955e42407 "bibtex main"
-  "main.nav" 1720115458 1592 dc63ad2af724e2c97ee41f9226a58167 "lualatex"
-  "main.out" 1720115455 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "high_dim.tex" 1720117233 1744 d7e47e47d8e2823e75310f4f9e90fe6e ""
+  "introduction.tex" 1720125384 3347 8a63e218e58ec483e88a0e0d33d33a02 ""
+  "main.aux" 1720125743 5489 f28b9372b56e38482d04b316795d6ce4 "lualatex"
+  "main.bbl" 1720125739 1251 30b84cc2ca2484c552ac244955e42407 "bibtex main"
+  "main.nav" 1720125743 1503 dad2b7cee3d6205bdc7663de86087d77 "lualatex"
+  "main.out" 1720125740 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   "main.tex" 1720108632 767 1824a2c65f0e852f44fa398c644fde25 ""
   "qr_code_arxiv.png" 1720115195 160507 e33e547153db85bfb3876ec87919a1d5 ""
   "static_figures/boot_weights.png" 1720108558 37379 803250e2a9c9ab5f85a9c8248e0f2e1d ""
@@ -416,7 +416,7 @@
   "static_figures/orig_weights.png" 1720108558 25675 8a5ca16aeaaf0c307814f828a9cfc51e ""
   "static_figures/weights_loo.png" 1720108558 23254 c7e222233954534ea73e02def55454f7 ""
   "supplement.tex" 1720108558 5621 e5b0e6d11fd61823181c8fdeae319676 ""
-  "weights.tex" 1720112203 8168 8df7e344ab4ee9d86ac59e29ac0488d4 ""
+  "weights.tex" 1720125729 8246 ace6a63713becbf1327dec3d950e2dc4 ""
   (generated)
   "main.aux"
   "main.log"
