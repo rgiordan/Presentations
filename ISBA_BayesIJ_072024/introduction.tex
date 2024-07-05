@@ -1,8 +1,11 @@
 
 \begin{frame}{Economist 2016 Election Model \citep{economist:2020:election}}
 
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
     \ElectionData{}
+\end{minipage}
+\begin{minipage}{0.04\textwidth}
+\hfill
 \end{minipage}
 \begin{minipage}[t]{0.59\textwidth}
 
@@ -11,7 +14,6 @@ outcome from polling data.
 
 %\pause
 \spskip
-Model:
 \begin{itemize}
 \item $\xvec = \x_1, \ldots, \x_N =$ Polling data ($N = 361$).
 \item $\theta = $ Lots of random effects (day, pollster, etc.)
@@ -45,22 +47,19 @@ posterior $p(\theta \vert \xvec)$.
     % \item<3-> 
 \question{
     The people who responded to the polls were randomly selected.  \\
-    If we had selected a different random sample, how much would our estimate have changed?
+    If we had selected a different random sample, how much would our estimate have changed?\\
+    How can we estimate $\var{\xfdist}{\expect{p(\theta \vert \xvec)}{f(\theta)}}$?
     }
 
 \pause
-
-\textbf{Idea: } Re-fit with bootstrap samples of data \citep{huggins:2023:bayesbag}
-
 %
-%     \item<4-> Are a small proportion (1\%) of polls
-%     highly influential?
-%     \citep{broderick:2020:automatic}
-%     \subitem{Re-fit with sets of all $1\%$ of datapoints removed}
-% \end{itemize}
+\begin{itemize}
+\item The model is (surely) misspecified
+\item The posterior expectation marginalizes over many nuisance parameters
+\item We are interested re--sampling for \textit{this} election, not a hypothetical future election
+\end{itemize}
+%
 
-% \onslide<5->{
-\question{\textbf{Problem:} Each MCMC run takes about $10$ hours (Stan, six cores).}
 % }
 
 \end{frame}
@@ -73,9 +72,13 @@ posterior $p(\theta \vert \xvec)$.
 
 \begin{frame}{Results}
 
-\spskip
-\question{Proposal: Use full--data posterior draws
-to form a linear approximation to {\em data reweightings}.}
+\question{
+    \textbf{Idea: } Re-fit with bootstrap samples of data \citep{huggins:2023:bayesbag}\\
+    \textbf{Problem:} Each MCMC run takes about $10$ hours (Stan, six cores).\\
+    \textbf{Proposal:} Use full--data posterior draws
+    to form a linear approximation to {\em data reweightings}.
+}
+
 \onslide<2->{
 \begin{minipage}{0.43\textwidth}
     \ElectionData{}
@@ -94,11 +97,11 @@ to form a linear approximation to {\em data reweightings}.}
 %
 \begin{center}
 \begin{tabular}{ r l }
-    {\large  Compute time for 100 bootstraps:} &
-    {\large  51 days} \spskip\\
-    {\large  Compute time for the linear approximation:} &
-    {\large  Seconds}\\
-    {\large  (But note the approximation has some error)} &
+    {  Compute time for 100 bootstraps:} &
+    {  51 days} \spskip\\
+    {  Compute time for the linear approximation:} &
+    {  Seconds}\\
+    {  (But note the approximation has some error)} &
     \\
 \end{tabular}
 \end{center}

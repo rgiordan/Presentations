@@ -24,7 +24,7 @@
 \begin{frame}{Data re-weighting.}
 
 
-\onslide<2->{
+\onslide<1->{
 Augment the problem with {\em data weights} $\w_1, \ldots, \w_N$.
 }
 \onslide<2->{
@@ -204,9 +204,10 @@ How can we analyze the error \red{$\err(\w)$}?}
 
 By dominated convergence,
 %
-\begin{align*}
+%\begin{align*}
 %
-\blue{\infl_n} ={}&
+$
+\blue{\infl_n} ={}
     % \fracat{\partial \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)}}
     %    {\partial \w_n}{\w_n =1}
 \undernote{\blue{
@@ -216,7 +217,9 @@ By dominated convergence,
     % \text{\,}\\
     % \onslide<3->{\text{$= O_p(N^{-1})$ under posterior concentration}}
 }}}
-\end{align*}
+$.
+
+%\end{align*}
 %
 %
 \onslide<3->{
@@ -226,6 +229,12 @@ Furthermore, by the mean value theorem, for some $\wtil$,
 \red{\err(\w)} ={}&
 \frac{1}{2}
 \sum_{n=1}^N \sum_{n'=1}^N
+\red{\err_{nn'}(\w)}
+(\w_n - 1)(\w_{n'} - 1)
+%
+\quad\textrm{where}
+\\ 
+\red{\err_{nn'}(\w)} :={}&
 \undernote{
     \red{\expect{\p(\theta \vert \xvec, \wtil)}{
         \thetabar
@@ -239,8 +248,6 @@ Furthermore, by the mean value theorem, for some $\wtil$,
     \text{\,}\\
     \text{But we can analyze it.}
 }}}
-(\w_n - 1)(\w_{n'} - 1)
-%
 \end{align*}
 %
 Here, an overbar denotes ``posterior--mean zero.''
