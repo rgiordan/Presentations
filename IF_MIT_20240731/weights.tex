@@ -161,15 +161,73 @@ The re-scaled slope $N \infl_n$ is known as the
 The final line is also known as the ``infinitesimal jackknife''
 variance approximation.
 
-\vspace{2em}
-\pause
-\textbf{Other examples: Cross validation, conformal inference, outlier identification, etc. }
+% \vspace{2em}
+% \pause
+% \textbf{Other examples: Cross validation, conformal inference, outlier identification, etc. }
 
 
 \end{frame}
     
 
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Data re-weighting.}
+
+    \question{How can we use the approximation?}
+    
+
+    \textbf{Example: Approximate bootstrap.}
+    %
+    \begin{align*}
+    %
+    \textrm{Bootstrap variance} \red{\approx}{}&
+    \sumn \left(\blue{\infl_n} - \overline{\blue{\infl}}\right)^2.
+    %
+    \end{align*}
+
+    
+    \pause
+    \textbf{Example: Cross validation.} 
+    Let $\w_{(-n)}$ leave out point $n$, and loss
+    $f(\theta) = -\ell(\x_n \vert \theta)$.
+    %
+    %
+    \begin{align*}
+    \textrm{LOO CV loss at point }n =
+        \expect{p(\theta \vert \x, w_{(-n)})}{-\ell(\x_n \vert \theta)}
+    \red{\approx} 
+        \expect{p(\theta \vert \x)}{-\ell(\x_n \vert \theta)} - \blue{\infl_{n}}
+    \end{align*}
+    %
+    \pause
+    \textbf{Example: Influential subsets:
+    Approximate maximum influence perturbation (AMIP).}
+    
+    Let $W_{(-K)}$ denote weights leaving out $K$ points.
+    %
+    \begin{align*}
+    %
+    \max_{\w \in W_{(-K)}} \left(
+    \expect{p(\theta \vert \x, w)}{f(\theta)} -
+    \expect{p(\theta \vert \x)}{f(\theta)}
+    \right) \red{\approx} - \sum_{n=1}^K \blue{\infl_{(n)}}.
+    %
+    \end{align*}
+    %
+    
+    \pause
+    
+    \question{How to compute the slopes \blue{$\infl_n$}?\\
+    How large is the error \red{$\err(\w)$}?}
+    
+\end{frame}
+    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -293,6 +351,5 @@ For example, $\thetabar := f(\theta) - \expect{\p(\theta \vert \xvec)}{f(\theta)
 
 
 \end{frame}
-
 
 

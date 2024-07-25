@@ -20,6 +20,51 @@ outcome from polling data.
 \item $f(\theta) = $ Democratic \% of vote on election day
 \end{itemize}
 
+
+
+\end{minipage}
+
+%\pause
+\spskip
+We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
+
+%\pause
+\spskip
+Typically, we compute Markov chain Monte Carlo (MCMC) draws from the
+posterior $p(\theta \vert \xvec)$.
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Economist 2016 Election Model \citep{economist:2020:election}}
+
+\begin{minipage}[t]{0.35\textwidth}
+    \ElectionData{}
+\end{minipage}
+\begin{minipage}{0.04\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}[t]{0.59\textwidth}
+
+A time series model to predict the 2016 US presidential election
+outcome from polling data.
+
+%\pause
+\spskip
+\begin{itemize}
+\item $\xvec = \x_1, \ldots, \x_N =$ Polling data ($N = 361$).
+\item $\theta = $ Lots of random effects (day, pollster, etc.)
+\item $f(\theta) = $ Democratic \% of vote on election day
+\end{itemize}
+
 %\pause
 \spskip
 We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
@@ -34,17 +79,6 @@ posterior $p(\theta \vert \xvec)$.
 
 
 \pause
-% \hrulefill
-
-% \onslide<2->{
-% \textbf{Some typical model checking tasks:}
-% }
-
-% \begin{itemize}
-%     \item<2-> How well are polls fit under cross-validation (CV)? \citep{vehtari:2012:bayesianpredictivemodelassessment}
-%     \subitem{Re-fit with data points removed one at a time}
-    %
-    % \item<3-> 
 \question{
     The people who responded to the polls were randomly selected.  \\
     If we had selected a different random sample, how much would our estimate have changed?\\
@@ -64,8 +98,10 @@ posterior $p(\theta \vert \xvec)$.
 
 \end{frame}
 
-
-
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -88,6 +124,15 @@ posterior $p(\theta \vert \xvec)$.
     \node[anchor=south west,inner sep=0] (image) at (0,0) {
         \ElectionResultsGlobal{}
     };
+    \onslide<4->{
+    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+        \draw[gray, thick, <-] (0.55,0.1) -- ++(0.15,0.1)
+                node[right,black,fill=white]
+                {\small Both are approximations};
+        \draw[gray, thick, <-] (0.55,0.3) -- ++(0.15,-0.1);
+        \node[right] at (0.7, 0.15) { \small to the truth!};
+    \end{scope}
+    }
 \end{tikzpicture}
 \end{minipage}
 }
@@ -112,33 +157,3 @@ posterior $p(\theta \vert \xvec)$.
 \end{frame}
 
 
-
-% \begin{frame}{Outline}
-% %
-% \begin{itemize}
-% %
-% \item Data reweighting
-% %
-% \begin{itemize}
-% %
-% \item Write the change in the posterior expectation
-%     as \blue{linear component} $+$ \red{error}
-% \item The \blue{linear component} can be computed from a
-% single run of MCMC
-% \item The \blue{linear component} can be used to estimate the frequentist
-% variability of posterior expectations
-% %
-% \end{itemize}
-% \item In finite dimensions, the linear approximation gives a consistent
-% variance estimator
-% \item In problems with high--dimensional nuisance parameters, the linear approximation is
-%     %
-%     \begin{itemize}
-%     \item Inconsistent (!)
-%     \item Even for parameters that marginally obey a Bernstein von--Mises theorem (!)
-%     \item But the error is $O_p(1)$, and proportional a nuisance parameter posterior covariance.
-%     \end{itemize}
-% %
-% \end{itemize}
-% %
-% \end{frame}

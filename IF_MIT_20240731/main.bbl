@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -20,12 +20,5 @@ R.~Giordano and T.~Broderick.
 J.~Huggins and J.~Miller.
 \newblock Reproducible model selection using bagged posteriors.
 \newblock \emph{Bayesian Analysis}, 18\penalty0 (1):\penalty0 79--104, 2023.
-
-\bibitem[{von Mises}(1947)]{mises:1947:asymptotic}
-R.~{von Mises}.
-\newblock On the asymptotic distribution of differentiable statistical
-  functions.
-\newblock \emph{The Annals of Mathematical Statistics}, 18\penalty0
-  (3):\penalty0 309--348, 1947.
 
 \end{thebibliography}
