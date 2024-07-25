@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1721940197 "main.aux" "main.bbl" "main" 1721940201
+["bibtex main"] 1721941039 "main.aux" "main.bbl" "main" 1721941043
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1721940201 6296 60d12a23d1183a1236a7d3adefae739b "lualatex"
+  "main.aux" 1721941043 6653 58401a1a060bbfb52a1a5461d47c4fe2 "lualatex"
   "references.bib" 1721938299 22538 977881ee80521ec726922e6c73bd108b ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1721940197 "main.tex" "main.pdf" "main" 1721940201
+["lualatex"] 1721941039 "main.tex" "main.pdf" "main" 1721941043
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -404,11 +404,11 @@
   "figure/highdim_accuracy-1.png" 1721938299 46974 fb5eaa769b61e3d3fbf539987ff8e697 ""
   "figure/lowdim_accuracy-1.png" 1721938299 47010 bb735c28196e1de5112c8206d1c6c717 ""
   "high_dim.tex" 1721940120 1931 ff2283b220fa6bfa82a23b7d376a374e ""
-  "introduction.tex" 1721940191 3660 eca907d9c03295e9b36500a90a07d87a ""
-  "main.aux" 1721940201 6296 60d12a23d1183a1236a7d3adefae739b "lualatex"
-  "main.bbl" 1721940197 999 50c11bc8902e389c53fb87a7df849de3 "bibtex main"
-  "main.nav" 1721940201 1687 b5636220f655d45a255f3da6554be580 "lualatex"
-  "main.out" 1721940198 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "introduction.tex" 1721941032 4500 408147e9bf40710d68cce05ed2b497a5 ""
+  "main.aux" 1721941043 6653 58401a1a060bbfb52a1a5461d47c4fe2 "lualatex"
+  "main.bbl" 1721941039 999 50c11bc8902e389c53fb87a7df849de3 "bibtex main"
+  "main.nav" 1721941043 1691 01439c6ad42cd72fde1ff9a95faf3636 "lualatex"
+  "main.out" 1721941040 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   "main.tex" 1721938834 791 ca2b675c04814f3262f524f763690441 ""
   "static_figures/boot_weights.png" 1721938299 37379 803250e2a9c9ab5f85a9c8248e0f2e1d ""
   "static_figures/e_beta_w.png" 1721938299 13636 69efeda3bdea3f69a2fdaee946b7f957 ""

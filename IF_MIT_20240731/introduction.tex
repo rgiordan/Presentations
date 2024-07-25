@@ -15,23 +15,41 @@ outcome from polling data.
 %\pause
 \spskip
 \begin{itemize}
-\item $\xvec = \x_1, \ldots, \x_N =$ Polling data ($N = 361$).
-\item $\theta = $ Lots of random effects (day, pollster, etc.)
+\item $\xvec = \x_1, \ldots, \x_N =$ polling data.
+\item $\theta = $ parameters for everything we don't know:
+%
+\begin{itemize}
+\item Daily information shocks (time series residuals)
+\item Ideosyncracies of particular polling agencies
+\item Biases in polling methods
+\end{itemize}
+%
+\item Model polling randomness with $\p(\xvec | \theta)$
 \item $f(\theta) = $ Democratic \% of vote on election day
 \end{itemize}
-
-
-
+%
 \end{minipage}
 
-%\pause
-\spskip
-We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
+\pause
 
-%\pause
-\spskip
-Typically, we compute Markov chain Monte Carlo (MCMC) draws from the
-posterior $p(\theta \vert \xvec)$.
+\question{Many values of $\theta$ are consistent with the data.\\
+How can we account for our uncertainty when making election predictions?}
+\pause
+\textbf{Bayesian answer: }
+    Average over values that are plausibly consistent with the data.
+
+\pause
+\textbf{Formally:} Define a prior $\p(\theta)$, 
+compute the posterior $\p(\theta \vert \xvec)$, and estimate
+%
+\begin{itemize}
+\item[] $f(\theta) \approx \expect{p(\theta \vert \xvec)}{f(\theta)}$, with 
+uncertainty proportional to $\sqrt{\var{p(\theta \vert \xvec)}{f(\theta)}}$.
+\end{itemize}
+\pause
+% \spskip
+\textbf{Practically:} We compute Markov chain Monte Carlo (MCMC) draws from
+$p(\theta \vert \xvec)$.
 
 
 \end{frame}
@@ -88,8 +106,10 @@ posterior $p(\theta \vert \xvec)$.
 \pause
 %
 \begin{itemize}
-\item The model is (surely) misspecified
-\item The posterior expectation marginalizes over many nuisance parameters
+\item Except in special cases, we expect 
+    $\var{p(\theta \vert \xvec)}{f(\theta)} \ne \var{\xfdist}{\expect{p(\theta \vert \xvec)}{f(\theta)}}$
+% \item The model is (surely) misspecified
+% \item The posterior expectation marginalizes over many nuisance parameters
 \item We are interested re--sampling for \textit{this} election, not a hypothetical future election
 \end{itemize}
 %
