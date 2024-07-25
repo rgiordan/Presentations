@@ -1,0 +1,144 @@
+
+\begin{frame}{Economist 2016 Election Model \citep{economist:2020:election}}
+
+\begin{minipage}[t]{0.35\textwidth}
+    \ElectionData{}
+\end{minipage}
+\begin{minipage}{0.04\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}[t]{0.59\textwidth}
+
+A time series model to predict the 2016 US presidential election
+outcome from polling data.
+
+%\pause
+\spskip
+\begin{itemize}
+\item $\xvec = \x_1, \ldots, \x_N =$ Polling data ($N = 361$).
+\item $\theta = $ Lots of random effects (day, pollster, etc.)
+\item $f(\theta) = $ Democratic \% of vote on election day
+\end{itemize}
+
+%\pause
+\spskip
+We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
+
+%\pause
+\spskip
+Typically, we compute Markov chain Monte Carlo (MCMC) draws from the
+posterior $p(\theta \vert \xvec)$.
+
+
+\end{minipage}
+
+
+\pause
+% \hrulefill
+
+% \onslide<2->{
+% \textbf{Some typical model checking tasks:}
+% }
+
+% \begin{itemize}
+%     \item<2-> How well are polls fit under cross-validation (CV)? \citep{vehtari:2012:bayesianpredictivemodelassessment}
+%     \subitem{Re-fit with data points removed one at a time}
+    %
+    % \item<3-> 
+\question{
+    The people who responded to the polls were randomly selected.  \\
+    If we had selected a different random sample, how much would our estimate have changed?\\
+    How can we estimate $\var{\xfdist}{\expect{p(\theta \vert \xvec)}{f(\theta)}}$?
+    }
+
+\pause
+%
+\begin{itemize}
+\item The model is (surely) misspecified
+\item The posterior expectation marginalizes over many nuisance parameters
+\item We are interested re--sampling for \textit{this} election, not a hypothetical future election
+\end{itemize}
+%
+
+% }
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}{Results}
+
+\question{
+    \textbf{Idea: } Re-fit with bootstrap samples of data \citep{huggins:2023:bayesbag}\\
+    \textbf{Problem:} Each MCMC run takes about $10$ hours (Stan, six cores).\\
+    \textbf{Proposal:} Use full--data posterior draws
+    to form a linear approximation to {\em data reweightings}.
+}
+
+\onslide<2->{
+\begin{minipage}{0.43\textwidth}
+    \ElectionData{}
+\end{minipage}
+\begin{minipage}{0.43\textwidth}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {
+        \ElectionResultsGlobal{}
+    };
+\end{tikzpicture}
+\end{minipage}
+}
+%
+\onslide<3->{
+\vfill \begin{center}
+%
+\begin{center}
+\begin{tabular}{ r l }
+    {  Compute time for 100 bootstraps:} &
+    {  51 days} \spskip\\
+    {  Compute time for the linear approximation:} &
+    {  Seconds}\\
+    {  (But note the approximation has some error)} &
+    \\
+\end{tabular}
+\end{center}
+
+\end{center}
+}
+%
+\end{frame}
+
+
+
+% \begin{frame}{Outline}
+% %
+% \begin{itemize}
+% %
+% \item Data reweighting
+% %
+% \begin{itemize}
+% %
+% \item Write the change in the posterior expectation
+%     as \blue{linear component} $+$ \red{error}
+% \item The \blue{linear component} can be computed from a
+% single run of MCMC
+% \item The \blue{linear component} can be used to estimate the frequentist
+% variability of posterior expectations
+% %
+% \end{itemize}
+% \item In finite dimensions, the linear approximation gives a consistent
+% variance estimator
+% \item In problems with high--dimensional nuisance parameters, the linear approximation is
+%     %
+%     \begin{itemize}
+%     \item Inconsistent (!)
+%     \item Even for parameters that marginally obey a Bernstein von--Mises theorem (!)
+%     \item But the error is $O_p(1)$, and proportional a nuisance parameter posterior covariance.
+%     \end{itemize}
+% %
+% \end{itemize}
+% %
+% \end{frame}

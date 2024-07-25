@@ -1,0 +1,34 @@
+Probability example of coin flipping.
+
+Suppose that getting a heads is getting a good offer.  You only need one job offer.
+
+- Candidate selection is highly random for everything (awards, scholarships, college admissions, jobs, dating)
+- Don't eliminate yourself (flip a lot of coins)
+- Don't take tails too seriously, and cultivate an environment where it's okay to flip tails
+
+-----------------------------
+
+- Undergrad, applied to MIT, Cooper Union, Rice, UIUC.
+- Got mediocre grades in undergrad
+- Graduating, applied to many jobs, a friend recommended me for one
+- Peace Corps
+- For econ PhD, applied to Berkeley, MIT, Stanford, Wash U, masters at LSE, Harvard
+- After master's applied to lots of finance jobs, only got one
+- Randomly applied to Google, got very lucky, was totally underqualified, worked very hard
+- Applied to PhD programs, got into Berkeley and Chicago
+- Applied to fellowships, didn't get any
+- Was going to leave academia, Tamara encouraged me to stay
+- Applied for jobs, only got a couple, but that was enough.
+
+In a way, I'm only squeaking by the admissions process by flipping a lot of coins.
+
+But when I'm in, I seem to do a good job, and that leads people to see things in me
+that I don't always see in myself.  That helps deal with the bad flips, and helps me
+keep flipping.
+
+-----------------------------
+
+Talk about AMIP.
+
+Software
+https://github.com/rgiordan/zaminfluence
