@@ -16,17 +16,20 @@ as an approximation of the limiting variance of $\sqrt{N} \expect{\post}{f(\thet
 \theorem{
 \textbf{Theorem 3 of \citet{giordano:2023:bayesij}  (paraphrase): }\\ 
 %
-If the parameter dimension is fixed, and Berstein--von Mises (BVM) theorem--like
-conditions hold, then the IJ covariance 
-is consistent, because $\red{\sqrt{N} \err(\w)} \plim 0$.
-}
+If the parameter dimension is fixed, and the posterior ``concentrates at a
+point,'' (BVM applies) then the IJ covariance is consistent, because
+$\red{\sqrt{N} \err(\w)} \plim 0$. }
 
 % $\Rightarrow$ Use one MCMC chain and the IJ instead of hundreds of MCMC chains with the bootstrap!
 
 \pause
 
 \vspace{1em}
-\question{Problem: we're doing MCMC because BVM does not hold.\\What if $f(\theta)$ concentrates
+\question{But we're doing MCMC because the posterior does not concentrate ---\\
+at least, not for at
+some components of $\theta$.\\
+\spskip
+What if $f(\theta)$ concentrates
 marginally, but some components don't concentrate?}
 
 \pause
@@ -35,7 +38,7 @@ marginally, but some components don't concentrate?}
 \textbf{Theorem 4 of \citet{giordano:2023:bayesij}  (paraphrase \& conjecture): }\\ 
 %
 In a flexible class of high--dimensional exponential family models,\\
-\textbf{even when $\p\left( f(\theta) | \xvec \right)$ obeys a BVM marginally (!),}
+\textbf{even when $\p\left( f(\theta) | \xvec \right)$ concentrates marginally (!),}
 %
 \begin{itemize}
 \item  $\red{\sqrt{N} \err(\w)}$ does not converge to zero (so the IJ covariance is inconsistent), but...

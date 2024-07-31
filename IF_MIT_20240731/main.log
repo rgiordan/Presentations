@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  25 JUL 2024 13:59
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  31 JUL 2024 11:17
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2344,143 +2344,162 @@ Package mdframed Info: mdframed inside a box
 ]) (./high_dim.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
- [34
+ mdframed uses option nobreak mdframed on input line 61.
+
+Overfull \vbox (4.44612pt too high) detected at line 61
+ []
+
+[34
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
+
+Overfull \vbox (4.44612pt too high) detected at line 61
+ []
 
 [35
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
- [36
+ mdframed uses option nobreak mdframed on input line 61.
+
+Overfull \vbox (4.44612pt too high) detected at line 61
+ []
+
+[36
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
- [37
+ mdframed uses option nobreak mdframed on input line 61.
+
+Overfull \vbox (4.44612pt too high) detected at line 61
+ []
+
+[37
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
+ mdframed uses option nobreak mdframed on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 58.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 58.
- [38
+ mdframed uses option nobreak mdframed on input line 61.
+
+Overfull \vbox (4.44612pt too high) detected at line 61
+ []
+
+[38
 
 ]) (./exchangeability.tex
 File: figure/election_data-1.png Graphic file (type png)
@@ -2653,8 +2672,8 @@ Here is how much of LuaTeX's memory you used:
 , 44 penalty, 293 glyph, 170 attribute, 113 glue_spec, 170 attribute_list, 4 wri
 te, 24 pdf_literal, 22 pdf_colorstack, 2 pdf_setmatrix, 2 pdf_save, 2 pdf_restor
 e nodes
-   avail lists: 1:10,2:3929,3:1872,4:336,5:315,6:53,7:4272,8:63,9:775,10:15,11:2
-67
+   avail lists: 1:9,2:3957,3:1875,4:336,5:315,6:53,7:4494,8:63,9:775,10:15,11:29
+1
  64668 multiletter control sequences out of 65536+600000
  92 fonts using 21228591 bytes
  128i,31n,134p,1852b,1219s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2676,7 +2695,7 @@ msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm7.pfb>
-Output written on main.pdf (52 pages, 747947 bytes).
+Output written on main.pdf (52 pages, 748014 bytes).
 
 PDF statistics: 441 PDF objects out of 1000 (max. 8388607)
  336 compressed objects within 4 object streams
