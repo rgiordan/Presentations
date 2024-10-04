@@ -29,7 +29,7 @@ Can we save the approximation when {\em some} parameters concentrate?\\
 %
 \spskip
 Does the residual vanish asymptotically for
-$\w_n \mapsto \expect{\p(\gamma \vert \xvec, \w_n)}{f(\gamma)}$?
+$\w_n \mapsto \expect{\p(\gamma \vert \xvec; \w_n)}{f(\gamma)}$?
 }
 
 %
@@ -51,7 +51,7 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
 %
 % \MoveEqLeft
 &
-\expect{\p(\gamma, \lambda \vert \xvec, \w_n)}{\gamma} -
+\expect{\p(\gamma, \lambda \vert \xvec; \w_n)}{\gamma} -
 \expect{\p(\gamma, \lambda \vert \xvec)}{\gamma}
 ={}
 \\
@@ -67,7 +67,7 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
     && +
     \frac{1}{2}
     \red{
-    \expect{\p(\gamma, \lambda \vert \xvec, \wtil_n)}{
+    \expect{\p(\gamma, \lambda \vert \xvec; \wtil_n)}{
         \gammabar
         \ellbar_n(\gamma,\lambda)^2 }
     }
@@ -90,10 +90,10 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
     && +
     \frac{1}{2}
     \red{
-    \expectop{\p(\gamma \vert \xvec, \wtil_n)} \Big[
+    \expectop{\p(\gamma \vert \xvec; \wtil_n)} \Big[
         \gammabar
         \undernote{
-            \expect{\p(\lambda \vert \xvec, \gamma, \wtil_n)}{
+            \expect{\p(\lambda \vert \xvec, \gamma; \wtil_n)}{
                 \ellbar_n(\gamma,\lambda)^2}
             }{F_2(\gamma)}
         \Big]
@@ -113,7 +113,7 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
     \frac{1}{2}
 \undernote{
 \red{
-\expect{\p(\gamma \vert \xvec, \wtil_n)}{
+\expect{\p(\gamma \vert \xvec; \wtil_n)}{
     \gammabar
     F_2(\gamma) }
 }
@@ -134,7 +134,7 @@ $\p(\lambda \vert \xvec)$ does not.  By our series expansion:
 
 \theorem{
     \textbf{Corollary \citep{giordano:2023:bayesij}:}\\
-    In general, $\w_n \mapsto N \left( \expect{\p(\gamma \vert \xvec, \w_n)}{\gamma} -
+    In general, $\w_n \mapsto N \left( \expect{\p(\gamma \vert \xvec; \w_n)}{\gamma} -
     \expect{\p(\gamma \vert \xvec)}{\gamma} \right)$
     remains non-linear as $N \rightarrow \infty$.    
 }
@@ -308,7 +308,7 @@ strictly bounded away from $0$ as $N\rightarrow \infty$, then
             \mathrm{Poisson}(\gamma \lambda_{g_n}).\\
     \x_n ={} (y_n, g_n)
     \textrm{ are IID given } \lambda, \gamma. &
-    \textrm{   Write }\log \p(\xvec \vert \lambda, \gamma, \w) =
+    \textrm{   Write }\log \p(\xvec \vert \lambda, \gamma; \w) =
        \sumn \w_n \ell_n(\lambda, \gamma).
     %
     \end{align*}

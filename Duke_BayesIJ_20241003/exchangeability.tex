@@ -30,7 +30,7 @@
     these are the same model, with the same $\p(\gamma \vert \xvec)$.
     
     % \spskip
-    \textbf{Is $\expect{\p(\gamma \vert \xvec, \w)}{\gamma}$
+    \textbf{Is $\expect{\p(\gamma \vert \xvec; \w)}{\gamma}$
     linear in the \only<1-2>{data weights}\only<3->{\red{data weights}}
     or not?}
     }
@@ -64,7 +64,7 @@
         these are the same model, with the same $\p(\gamma \vert \xvec)$.
         
     % \spskip
-    \textbf{Is $\expect{\p(\gamma \vert \xvec, \w)}{\gamma}$
+    \textbf{Is $\expect{\p(\gamma \vert \xvec; \w)}{\gamma}$
     linear in the \red{data weights}
     or not?}
     
@@ -74,11 +74,11 @@
     contribution, not a datapoint.
 
     \begin{align*}
-        &\log \p(\xvec \vert \gamma, \w^{m}) =
+        &\log \p(\xvec \vert \gamma; \w^{m}) =
             \sumn \w^{m}_n 
             \textcolor{orange}{\log \p(\x_n \vert \gamma)}
         &
-        &\log \p(\xvec \vert \gamma, \lambda, \w^{c}) =
+        &\log \p(\xvec \vert \gamma, \lambda; \w^{c}) =
             \sumn \w^{c}_n 
             \textcolor{purple}{\log \p(\x_n \vert \lambda, \gamma)}
         %
