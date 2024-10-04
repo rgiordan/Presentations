@@ -1,0 +1,47 @@
+\documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif} % default family is serif
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+
+%\usepackage{movie15} % For animated gifs, doesn't work
+ 
+\usepackage{hyperref}
+
+\input{_headers}
+
+\input{_defs}
+\input{figs.tex}
+\input{figs_ij.tex}
+
+% \input{_knitr_header}
+
+\title{Hooray, VI reading group.}
+
+\author{Ryan Giordano \texttt{rgiordano@berkeley.edu}}
+
+
+\setbeamertemplate{Collaborators}[none]
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+\begin{document}
+
+\input{slides}
+
+\begin{frame}{References}
+
+\footnotesize
+
+\bibliographystyle{plainnat}
+% Hide the references header
+% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliography{references}
+\endgroup
+
+%
+\end{frame}
+    
+\end{document}

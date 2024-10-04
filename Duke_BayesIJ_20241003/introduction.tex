@@ -1,0 +1,154 @@
+
+\begin{frame}{Economist 2016 Election Model \citep{economist:2020:election}}
+
+\begin{minipage}[t]{0.4\textwidth}
+    \ElectionData{}
+\end{minipage}
+\begin{minipage}[t]{0.59\textwidth}
+
+A time series model to predict the 2016 US presidential election
+outcome from polling data.
+
+%\pause
+\spskip
+Model:
+\begin{itemize}
+\item $\xvec = \x_1, \ldots, \x_N =$ Polling data ($N = 361$).
+\item $\theta = $ Lots of random effects (day, pollster, etc.)
+\item $f(\theta) = $ Democratic \% of vote on election day
+\end{itemize}
+
+%\pause
+\spskip
+Typically, we compute Markov chain Monte Carlo (MCMC) draws from the
+posterior $p(\theta \vert \xvec)$.
+
+%\pause
+\spskip
+We want to know $\expect{p(\theta \vert \xvec)}{f(\theta)}$.
+
+\end{minipage}
+
+
+\pause
+% \hrulefill
+
+% \onslide<2->{
+% \textbf{Some typical model checking tasks:}
+% }
+
+% \begin{itemize}
+%     \item<2-> How well are polls fit under cross-validation (CV)? \citep{vehtari:2012:bayesianpredictivemodelassessment}
+%     \subitem{Re-fit with data points removed one at a time}
+    %
+    % \item<3-> 
+\question{
+    The people who responded to the polls were randomly selected.  \\
+    If we had selected a different random sample, how much would our estimate have changed?
+    }
+        
+\textbf{Idea: } Re-fit with bootstrap samples of data \citep{huggins:2023:bayesbag}
+
+%
+%     \item<4-> Are a small proportion (1\%) of polls
+%     highly influential?
+%     \citep{broderick:2020:automatic}
+%     \subitem{Re-fit with sets of all $1\%$ of datapoints removed}
+% \end{itemize}
+
+% \onslide<5->{
+\pause
+\question{\textbf{Problem:} Each MCMC run takes about $10$ hours (Stan, six cores).}
+% }
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}{Results}
+
+\spskip
+\question{Proposal: Use full--data posterior draws
+to form a linear approximation to {\em data reweightings}.}
+\onslide<1->{
+\begin{minipage}{0.43\textwidth}
+    \ElectionData{}
+\end{minipage}
+\begin{minipage}{0.43\textwidth}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {
+        \ElectionResultsGlobal{}
+    };
+\end{tikzpicture}
+\end{minipage}
+}
+%
+\onslide<2->{
+\vfill \begin{center}
+%
+\begin{center}
+\begin{tabular}{ r l }
+    {\large  Compute time for 100 bootstraps:} &
+    {\large  51 days} \spskip\\
+    {\large  Compute time for the linear approximation:} &
+    {\large  Seconds}\\
+    {\large  (But note the approximation has some error)} &
+    \\
+\end{tabular}
+\end{center}
+
+\end{center}
+}
+%
+\end{frame}
+
+
+
+\begin{frame}{Outline}
+%
+\begin{itemize}
+%
+\item Data reweighting
+%
+\begin{itemize}
+%
+\item Write the change in the posterior expectation
+    as \blue{linear component} $+$ \red{error}
+\item The \blue{linear component} can be computed from a
+single run of MCMC
+%
+\end{itemize}
+
+\pause
+%
+\item Finite-dimensional problems with posteriors which concentrate
+asymptotically
+%
+\begin{itemize}
+%
+\item As $N \rightarrow \infty$, the linear component provides
+an arbitrarily good approximation
+\item Consistent variance estimates via a uniform Bernstein--von Mises theorem
+%
+\end{itemize}
+%
+\pause
+\item High-dimensional problems
+\begin{itemize}
+%
+\item The linear component is the same order as the error
+\item Even for parameters which concentrate, even as
+$N \rightarrow \infty$
+\item Study the variance estimates via a Bayesian von--Mises expansion
+
+\pause
+\end{itemize}
+\item Some implications and future work
+%
+\end{itemize}
+%
+\end{frame}

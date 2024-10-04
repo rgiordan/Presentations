@@ -1,0 +1,42 @@
+
+\begin{frame}{Economist 2016 Election Model \citep{economist:2020:election}}
+
+\begin{minipage}[c]{0.45\textwidth}
+    \ElectionData{}
+\end{minipage}
+%
+\begin{minipage}[c]{0.45\textwidth}
+    Model each poll as
+%
+\begin{align*}
+    \y_i | \pi_i \sim{}& \mathrm{Binomial}(\pi_i) \\
+    \mathrm{Logit }\, \pi_i ={}& \mu^b_{s[i],t[i]} + \alpha_i +  \zeta_i^{state} + \xi_{s[i]}\\
+\end{align*}
+%
+
+\vspace{1em}
+Pack everything we don't know into 
+
+$$\theta \in \mathbb{R}^{15098}.$$
+
+\vspace{1em}
+If we knew $\theta$, we'd know the outcome of the election up to Binomial randomness.
+
+\vspace{1em}
+The questions is: \textbf{which values of $\theta$ are consistent with the data we saw?}
+
+\end{minipage}
+\end{frame}
+
+
+
+\begin{frame}{Forward and inverse problems}
+    \href{https://rgiordan.github.io/posts/2019-08-30-bayesian_as_inverse_problem.html}{(link to blog)}
+\end{frame}
+
+
+\begin{frame}{How to compute the posterior?}
+\end{frame}
+
+
+

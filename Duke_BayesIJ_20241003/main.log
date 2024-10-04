@@ -1,0 +1,2691 @@
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  3 OCT 2024 19:42
+ restricted system commands enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2021-11-15> patch level 1
+Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
+Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/home/rgiordan/.texlive2021/texmf-v
+ar/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2021-05-20.lua" from kpse-res
+olved path "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader-2021-
+05-20.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 3.116
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 3
+luaotfload | conf : Root cache directory is "/home/rgiordan/.texlive2021/texmf-v
+ar/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 4
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2022-01-21>
+Inserting `tracingstacklevels' at position 1 in `input_level_string'.
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2022/01/21 v3.65 A class for typesetting presentations
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count183
+)
+\beamer@tempbox=\box50
+\beamer@tempcount=\count184
+\c@beamerpauses=\count185
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+\beamer@slideinframe=\count186
+\beamer@minimum=\count187
+\beamer@decode@box=\box51
+)
+\beamer@commentbox=\box52
+\beamer@modecount=\count188
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\headdp=\dimen137
+\footheight=\dimen138
+\sidebarheight=\dimen139
+\beamer@tempdim=\dimen140
+\beamer@finalheight=\dimen141
+\beamer@animht=\dimen142
+\beamer@animdp=\dimen143
+\beamer@animwd=\dimen144
+\beamer@leftmargin=\dimen145
+\beamer@rightmargin=\dimen146
+\beamer@leftsidebar=\dimen147
+\beamer@rightsidebar=\dimen148
+\beamer@boxsize=\dimen149
+\beamer@vboxoffset=\dimen150
+\beamer@descdefault=\dimen151
+\beamer@descriptionwidth=\dimen152
+\beamer@lastskip=\skip47
+\beamer@areabox=\box53
+\beamer@animcurrent=\box54
+\beamer@animshowbox=\box55
+\beamer@sectionbox=\box56
+\beamer@logobox=\box57
+\beamer@linebox=\box58
+\beamer@sectioncount=\count189
+\beamer@subsubsectionmax=\count190
+\beamer@subsectionmax=\count191
+\beamer@sectionmax=\count192
+\beamer@totalheads=\count193
+\beamer@headcounter=\count194
+\beamer@partstartpage=\count195
+\beamer@sectionstartpage=\count196
+\beamer@subsectionstartpage=\count197
+\beamer@animationtempa=\count198
+\beamer@animationtempb=\count199
+\beamer@xpos=\count266
+\beamer@ypos=\count267
+\beamer@ypos@offset=\count268
+\beamer@showpartnumber=\count269
+\beamer@currentsubsection=\count270
+\beamer@coveringdepth=\count271
+\beamer@sectionadjust=\count272
+\beamer@toclastsection=\count273
+\beamer@tocsectionnumber=\count274
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+))
+\beamer@paperwidth=\skip48
+\beamer@paperheight=\skip49
+
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count275
+\Gm@cntv=\count276
+\c@Gm@tempcnt=\count277
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen163
+\pgfutil@tempdimb=\dimen164
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box59
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks21
+))
+\pgf@x=\dimen165
+\pgf@y=\dimen166
+\pgf@xa=\dimen167
+\pgf@ya=\dimen168
+\pgf@xb=\dimen169
+\pgf@yb=\dimen170
+\pgf@xc=\dimen171
+\pgf@yc=\dimen172
+\pgf@xd=\dimen173
+\pgf@yd=\dimen174
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count278
+\c@pgf@countb=\count279
+\c@pgf@countc=\count280
+\c@pgf@countd=\count281
+\t@pgf@toka=\toks22
+\t@pgf@tokb=\toks23
+\t@pgf@tokc=\toks24
+\pgf@sys@id@count=\count282
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+File: pgfsys-luatex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count283
+\pgfsyssoftpath@bigbuffer@items=\count284
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen175
+\pgfmath@count=\count285
+\pgfmath@box=\box60
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count286
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen176
+\pgf@picmaxx=\dimen177
+\pgf@picminy=\dimen178
+\pgf@picmaxy=\dimen179
+\pgf@pathminx=\dimen180
+\pgf@pathmaxx=\dimen181
+\pgf@pathminy=\dimen182
+\pgf@pathmaxy=\dimen183
+\pgf@xx=\dimen184
+\pgf@xy=\dimen185
+\pgf@yx=\dimen186
+\pgf@yy=\dimen187
+\pgf@zx=\dimen188
+\pgf@zy=\dimen189
+luaotfload | db : Font names database loaded from /home/rgiordan/.texlive2021/te
+xmf-var/luatex-cache/generic/names/luaotfload-names.luc)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen190
+\pgf@path@lasty=\dimen191
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen192
+\pgf@shorten@start@additional=\dimen193
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count287
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen194
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen195
+\pgf@pt@y=\dimen196
+\pgf@pt@temp=\dimen197
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen198
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen199
+\pgf@sys@shading@range@num=\count288
+\pgf@shadingcount=\count289
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box64
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/latex/extsizes/size8.clo
+File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count290
+\XC@countmixins=\count291
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks28
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen256
+\Hy@linkcounter=\count292
+\Hy@pagecounter=\count293
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count294
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4073.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4073.
+Package hyperref Info: Option `implicit' set `false' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count295
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen257
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count296
+\Field@Width=\dimen258
+\Fld@charsize=\dimen259
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+\Hy@abspage=\count297
+
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2021-06-07 v7.00m Hyperref driver for luaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count298
+\c@bookmark@seq@number=\count299
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks29
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+Package: sansmathaccent 2020/01/31
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
+)))))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+\beamer@argscount=\count300
+\beamer@lastskipcover=\skip50
+\beamer@trivlistdepth=\count301
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+\c@lecture=\count302
+\c@part=\count303
+\c@section=\count304
+\c@subsection=\count305
+\c@subsubsection=\count306
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+\beamer@framebox=\box65
+\beamer@frametitlebox=\box66
+\beamer@zoombox=\box67
+\beamer@zoomcount=\count307
+\beamer@zoomframecount=\count308
+\beamer@frametextheight=\dimen260
+\c@subsectionslide=\count309
+\beamer@frametopskip=\skip51
+\beamer@framebottomskip=\skip52
+\beamer@frametopskipautobreak=\skip53
+\beamer@framebottomskipautobreak=\skip54
+\beamer@envbody=\toks30
+\framewidth=\dimen261
+\c@framenumber=\count310
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+\beamer@verbatimfileout=\write4
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+\beamer@splitbox=\box68
+\beamer@autobreakcount=\count311
+\beamer@autobreaklastheight=\dimen262
+\beamer@frametitletoks=\toks31
+\beamer@framesubtitletoks=\toks32
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
+\beamer@footins=\box69
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+\beamer@frameboxcopy=\box70
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+\beamer@sbttoks=\toks33
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+\bmb@box=\box71
+\bmb@colorbox=\box72
+\bmb@boxwidth=\dimen263
+\bmb@boxheight=\dimen264
+\bmb@prevheight=\dimen265
+\bmb@temp=\dimen266
+\bmb@dima=\dimen267
+\bmb@dimb=\dimen268
+\bmb@prevheight=\dimen269
+)
+\beamer@blockheadheight=\dimen270
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks34
+)
+\beamer@bibiconwidth=\skip55
+\c@figure=\count312
+\c@table=\count313
+\abovecaptionskip=\skip56
+\belowcaptionskip=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+\beamer@section@min@dim=\dimen271
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks35
+\ex@=\dimen272
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen273
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count314
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count315
+\leftroot@=\count316
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count317
+\DOTSCASE@=\count318
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box73
+\strutbox@=\box74
+\big@size=\dimen274
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count319
+\c@MaxMatrixCols=\count320
+\dotsspace@=\muskip17
+\c@parentequation=\count321
+\dspbrk@lvl=\count322
+\tag@help=\toks36
+\row@=\count323
+\column@=\count324
+\maxfields@=\count325
+\andhelp@=\toks37
+\eqnshift@=\dimen275
+\alignsep@=\dimen276
+\tagshift@=\dimen277
+\tagwidth@=\dimen278
+\totwidth@=\dimen279
+\lineht@=\dimen280
+\@envbody=\toks38
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks39
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks40
+\thm@bodyfont=\toks41
+\thm@headfont=\toks42
+\thm@notefont=\toks43
+\thm@headpunct=\toks44
+\thm@preskip=\skip61
+\thm@postskip=\skip62
+\thm@headsep=\skip63
+\dth@everypar=\toks45
+)
+\c@theorem=\count326
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
+\beamer@dima=\dimen281
+\beamer@dimb=\dimen282
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfont
+s.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2022-01-12 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count327
+\l__pdf_internal_box=\box75
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2022/01/15 2.8a Font selection for XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count328
+\l__fontspec_language_int=\count329
+\l__fontspec_strnum_int=\count330
+\l__fontspec_tmp_int=\count331
+\l__fontspec_tmpa_int=\count332
+\l__fontspec_tmpb_int=\count333
+\l__fontspec_tmpc_int=\count334
+\l__fontspec_em_int=\count335
+\l__fontspec_emdef_int=\count336
+\l__fontspec_strong_int=\count337
+\l__fontspec_strongdef_int=\count338
+\l__fontspec_tmpa_dim=\dimen283
+\l__fontspec_tmpb_dim=\dimen284
+\l__fontspec_tmpc_dim=\dimen285
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+luaotfload | cache : Lookup cache loaded from /home/rgiordan/.texlive2021/texmf-
+var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+luaotfload | aux : font no 25 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 26 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 27 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 28 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'LiberationSerif(0)' created for font
+(fontspec)             'Liberation Serif' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"LiberationSerif:mode=node;script=latn;language=dflt;
++tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"LiberationSerif/B:mode=node;script=latn;language=dfl
+t;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"LiberationSerif/I:mode=node;script=latn;language=dfl
+t;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"LiberationSerif/BI:mode=node;script=latn;language=df
+lt;+tlig;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+(./_headers.tex (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip64
+\fb@frw=\dimen286
+\fb@frh=\dimen287
+\FrameRule=\dimen288
+\FrameSep=\dimen289
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 2021/01/29 v2.0g defines alltt environment
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerthememetr
+opolis.sty
+Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
+ (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+\pgfopts@list@add@a@toks=\toks46
+\pgfopts@list@add@b@toks=\toks47
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerinnerthem
+emetropolis.sty
+Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count339
+\calc@Bcount=\count340
+\calc@Adimen=\dimen290
+\calc@Bdimen=\dimen291
+\calc@Askip=\skip65
+\calc@Bskip=\skip66
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count341
+\calc@Cskip=\skip67
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box76
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen292
+\pgf@nodesepend=\dimen293
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen294
+\pgffor@skip=\dimen295
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count342
+\pgfplotmarksize=\dimen296
+)
+\tikz@lastx=\dimen297
+\tikz@lasty=\dimen298
+\tikz@lastxsaved=\dimen299
+\tikz@lastysaved=\dimen300
+\tikz@lastmovetox=\dimen301
+\tikz@lastmovetoy=\dimen302
+\tikzleveldistance=\dimen303
+\tikzsiblingdistance=\dimen304
+\tikz@figbox=\box77
+\tikz@figbox@bg=\box78
+\tikz@tempbox=\box79
+\tikz@tempbox@bg=\box80
+\tikztreelevel=\count343
+\tikznumberofchildren=\count344
+\tikznumberofcurrentchild=\count345
+\tikz@fig@count=\count346
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count347
+\pgfmatrixcurrentcolumn=\count348
+\pgf@matrix@numberofcolumns=\count349
+)
+\tikz@expandcount=\count350
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+\metropolis@titleseparator@linewidth=\skip68
+\metropolis@progressonsectionpage=\skip69
+\metropolis@progressonsectionpage@linewidth=\skip70
+\metropolis@blocksep=\skip71
+\metropolis@blockadjust=\skip72
+\metropolis@parskip=\skip73
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerouterthem
+emetropolis.sty
+Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
+\metropolis@frametitle@padding=\skip74
+\metropolis@progressinheadfoot=\skip75
+\metropolis@progressinheadfoot@linewidth=\skip76
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamercolorthem
+emetropolis.sty
+Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerfonttheme
+metropolis.sty
+Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+\c@fontsnotfound=\count351
+
+Package fontspec Info: Font family 'FiraSansLight(0)' created for font 'Fira
+(fontspec)             Sans Light' with options
+(fontspec)             [Ligatures=TeX,ItalicFont={Fira Sans Light
+(fontspec)             Italic},BoldFont={Fira Sans},BoldItalicFont={Fira Sans
+(fontspec)             Italic}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FiraSansLight:mode=node;script=latn;language=dflt;+t
+lig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"FiraSansLight:mode=node;script=latn;language=dflt;+t
+lig;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FiraSans:mode=node;script=latn;language=dflt;+tlig;"
+
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"FiraSans:mode=node;script=latn;language=dflt;+tlig;+
+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FiraSansLightItalic:mode=node;script=latn;language=d
+flt;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"FiraSansLightItalic:mode=node;script=latn;language=d
+flt;+tlig;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FiraSansItalic:mode=node;script=latn;language=dflt;+
+tlig;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"FiraSansItalic:mode=node;script=latn;language=dflt;+
+tlig;+smcp;"
+
+
+Package fontspec Info: Could not resolve font "FiraMonoMedium/I" (it probably
+(fontspec)             doesn't exist).
+
+luaotfload | aux : font no 48 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 49 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 50 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 51 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'FiraMono(0)' created for font 'Fira Mono'
+(fontspec)             with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,BoldFont={Fira
+(fontspec)             Mono Medium}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FiraMono:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"FiraMonoMedium:mode=node;script=latn;language=dflt;"
+
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"FiraMono/I:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"FiraMono/BI:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen305
+\captionmargin@=\dimen306
+\captionwidth=\dimen307
+\caption@tempdima=\dimen308
+\caption@indent=\dimen309
+\caption@parindent=\dimen310
+\caption@hangindent=\dimen311
+Package caption Info: beamer document class detected.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption-beamer.sto
+File: caption-beamer.sto 2020/08/22 v2.0 Adaption of the caption package to the
+ beamer document classes (AR)
+))
+\c@caption@flags=\count352
+\c@continuedfloat=\count353
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+)
+\c@subfigure=\count354
+\c@subtable=\count355
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip77
+\bibsep=\skip78
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count356
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tikz-bayesnet/tikzlibrarybayesnet.code
+.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.callouts.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.callouts.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodepartlowerbox=\box81
+\pgfnodeparttwobox=\box82
+\pgfnodepartthreebox=\box83
+\pgfnodepartfourbox=\box84
+\pgfnodeparttwentybox=\box85
+\pgfnodepartnineteenbox=\box86
+\pgfnodeparteighteenbox=\box87
+\pgfnodepartseventeenbox=\box88
+\pgfnodepartsixteenbox=\box89
+\pgfnodepartfifteenbox=\box90
+\pgfnodepartfourteenbox=\box91
+\pgfnodepartthirteenbox=\box92
+\pgfnodeparttwelvebox=\box93
+\pgfnodepartelevenbox=\box94
+\pgfnodeparttenbox=\box95
+\pgfnodepartninebox=\box96
+\pgfnodeparteightbox=\box97
+\pgfnodepartsevenbox=\box98
+\pgfnodepartsixbox=\box99
+\pgfnodepartfivebox=\box100
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarychains.code.tex
+File: tikzlibrarychains.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
+File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\arrowsize=\dimen312
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
+\pgfplots@luabackend@table=\catcodetable12
+\t@pgfplots@toka=\toks50
+\t@pgfplots@tokb=\toks51
+\t@pgfplots@tokc=\toks52
+\pgfplots@tmpa=\dimen313
+\c@pgfplots@coordindex=\count357
+\c@pgfplots@scanlineindex=\count358
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/luamath/pgflibraryluam
+ath.code.tex)
+Package pgfplots info on input line 290: luamath library shipped with pgf 3.1.9
+a is up-to-date
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+Package pgfplots info on input line 82: Found new luatex: initializing lua comm
+ands instead of write18 (shell-escape)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex
+\c@pgfplotsarray@tmp=\count359
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex
+\c@pgfplotstable@counta=\count360
+\t@pgfplotstable@a=\toks53
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+\c@pgfplotslibrarysurf@no=\count361
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-luatex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
+\pgfdecoratedcompleteddistance=\dimen314
+\pgfdecoratedremainingdistance=\dimen315
+\pgfdecoratedinputsegmentcompleteddistance=\dimen316
+\pgfdecoratedinputsegmentremainingdistance=\dimen317
+\pgf@decorate@distancetomove=\dimen318
+\pgf@decorate@repeatstate=\count362
+\pgfdecorationsegmentamplitude=\dimen319
+\pgfdecorationsegmentlength=\dimen320
+)
+\tikz@lib@dec@box=\box101
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex)
+\pgfplots@numplots=\count363
+\pgfplots@xmin@reg=\dimen321
+\pgfplots@xmax@reg=\dimen322
+\pgfplots@ymin@reg=\dimen323
+\pgfplots@ymax@reg=\dimen324
+\pgfplots@zmin@reg=\dimen325
+\pgfplots@zmax@reg=\dimen326
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex
+File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count364
+Package zref Info: New property: abspage on input line 66.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip79
+\c@mdf@globalstyle@cnt=\count365
+\mdf@skipabove@length=\skip80
+\mdf@skipbelow@length=\skip81
+\mdf@leftmargin@length=\skip82
+\mdf@rightmargin@length=\skip83
+\mdf@innerleftmargin@length=\skip84
+\mdf@innerrightmargin@length=\skip85
+\mdf@innertopmargin@length=\skip86
+\mdf@innerbottommargin@length=\skip87
+\mdf@splittopskip@length=\skip88
+\mdf@splitbottomskip@length=\skip89
+\mdf@outermargin@length=\skip90
+\mdf@innermargin@length=\skip91
+\mdf@linewidth@length=\skip92
+\mdf@innerlinewidth@length=\skip93
+\mdf@middlelinewidth@length=\skip94
+\mdf@outerlinewidth@length=\skip95
+\mdf@roundcorner@length=\skip96
+\mdf@footenotedistance@length=\skip97
+\mdf@userdefinedwidth@length=\skip98
+\mdf@needspace@length=\skip99
+\mdf@frametitleaboveskip@length=\skip100
+\mdf@frametitlebelowskip@length=\skip101
+\mdf@frametitlerulewidth@length=\skip102
+\mdf@frametitleleftmargin@length=\skip103
+\mdf@frametitlerightmargin@length=\skip104
+\mdf@shadowsize@length=\skip105
+\mdf@extratopheight@length=\skip106
+\mdf@subtitleabovelinewidth@length=\skip107
+\mdf@subtitlebelowlinewidth@length=\skip108
+\mdf@subtitleaboveskip@length=\skip109
+\mdf@subtitlebelowskip@length=\skip110
+\mdf@subtitleinneraboveskip@length=\skip111
+\mdf@subtitleinnerbelowskip@length=\skip112
+\mdf@subsubtitleabovelinewidth@length=\skip113
+\mdf@subsubtitlebelowlinewidth@length=\skip114
+\mdf@subsubtitleaboveskip@length=\skip115
+\mdf@subsubtitlebelowskip@length=\skip116
+\mdf@subsubtitleinneraboveskip@length=\skip117
+\mdf@subsubtitleinnerbelowskip@length=\skip118
+
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
+File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
+)
+\mdf@frametitlebox=\box102
+\mdf@footnotebox=\box103
+\mdf@splitbox@one=\box104
+\mdf@splitbox@two=\box105
+\mdf@splitbox@save=\box106
+\mdfsplitboxwidth=\skip119
+\mdfsplitboxtotalwidth=\skip120
+\mdfsplitboxheight=\skip121
+\mdfsplitboxdepth=\skip122
+\mdfsplitboxtotalheight=\skip123
+\mdfframetitleboxwidth=\skip124
+\mdfframetitleboxtotalwidth=\skip125
+\mdfframetitleboxheight=\skip126
+\mdfframetitleboxdepth=\skip127
+\mdfframetitleboxtotalheight=\skip128
+\mdffootnoteboxwidth=\skip129
+\mdffootnoteboxtotalwidth=\skip130
+\mdffootnoteboxheight=\skip131
+\mdffootnoteboxdepth=\skip132
+\mdffootnoteboxtotalheight=\skip133
+\mdftotallinewidth=\skip134
+\mdfboundingboxwidth=\skip135
+\mdfboundingboxtotalwidth=\skip136
+\mdfboundingboxheight=\skip137
+\mdfboundingboxdepth=\skip138
+\mdfboundingboxtotalheight=\skip139
+\mdf@freevspace@length=\skip140
+\mdf@horizontalwidthofbox@length=\skip141
+\mdf@verticalmarginwhole@length=\skip142
+\mdf@horizontalspaceofbox=\skip143
+\mdfsubtitleheight=\skip144
+\mdfsubsubtitleheight=\skip145
+\c@mdfcountframes=\count366
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- failed******
+
+\mdf@envdepth=\count367
+\c@mdf@env@i=\count368
+\c@mdf@env@ii=\count369
+\c@mdf@zref@counter=\count370
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xargs/xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks54
+\XKV@tempa@toks=\toks55
+)
+\XKV@depth=\count371
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\xargs@max=\count372
+\xargs@toksa=\toks56
+\xargs@toksb=\toks57
+)
+(./_defs.tex) (./figures_knitr.tex) (./figs_non_knitr.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2021/02/02 v1.28 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count373
+\l_MT_multwidth_dim=\dimen327
+\origjot=\skip146
+\l_MT_shortvdotswithinadjustabove_dim=\dimen328
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen329
+\l_MT_above_intertext_sep=\dimen330
+\l_MT_below_intertext_sep=\dimen331
+\l_MT_above_shortintertext_sep=\dimen332
+\l_MT_below_shortintertext_sep=\dimen333
+\xmathstrut@box=\box107
+\xmathstrut@dim=\dimen334
+))
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/pgfplotsthemeto
+l.sty
+Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON t
+echnical note
+) (./main.aux)
+\openout1 = main.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
+2.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=307.28987pt
+* \textheight=244.6939pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=9.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=7.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count374
+\scratchdimen=\dimen335
+\scratchbox=\box108
+\nofMPsegments=\count375
+\nofMParguments=\count376
+\everyMPshowfont=\toks58
+\MPscratchCnt=\count377
+\MPscratchDim=\dimen336
+\MPnumerator=\count378
+\makeMPintoPDFobject=\count379
+\everyMPtoPDFconversion=\toks59
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 22.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count380
+)
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
+
+(./main.out) (./main.out)
+\@outlinefile=\write5
+
+\openout5 = main.out
+
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
+-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-bibliography-dic
+tionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-environment-dict
+ionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-months-dictionar
+y-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-numbers-dictiona
+ry-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-theorem-dictiona
+ry-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 22.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 22.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 22.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 22.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 22.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 22.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 22.
+LaTeX Font Info:    Redeclaring math accent \check on input line 22.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 22.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 22.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 22.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 22.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 22.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 22.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/LiberationSerif(0)/m/n on input line
+ 22.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 22.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/m/n on input lin
+e 22.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/m/n
+ on input line 22.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/LiberationSerif(0)/m/it on input li
+ne 22.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/b/n on input lin
+e 22.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/FiraSansLight(0)/m/n on input line 
+22.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/b/n
+ on input line 22.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/LiberationSerif(0)/b/it on input l
+ine 22.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/FiraSansLight(0)/b/n on input line
+ 22.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/b/n on input line 22.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
+
+(./main.nav)
+Overfull \vbox (10.92494pt too high) detected at line 24
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction.tex
+<static_figures/election_data-1.png, id=22, 361.35pt x 433.62pt>
+File: static_figures/election_data-1.png Graphic file (type png)
+<use static_figures/election_data-1.png>
+Package luatex.def Info: static_figures/election_data-1.png  used on input line
+ 64.
+(luatex.def)             Requested size: 120.45337pt x 144.54405pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 3049) in paragraph at lines 64--64
+[]\TU/LiberationSerif(0)/m/n/8 Typ-i-cally, we com-pute Markov chain Monte Carlo
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+[2
+
+<./static_figures/election_data-1.png>]
+File: static_figures/election_data-1.png Graphic file (type png)
+<use static_figures/election_data-1.png>
+Package luatex.def Info: static_figures/election_data-1.png  used on input line
+ 64.
+(luatex.def)             Requested size: 120.45337pt x 144.54405pt.
+
+Underfull \hbox (badness 3049) in paragraph at lines 64--64
+[]\TU/LiberationSerif(0)/m/n/8 Typ-i-cally, we com-pute Markov chain Monte Carlo
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+[3
+
+]
+File: static_figures/election_data-1.png Graphic file (type png)
+<use static_figures/election_data-1.png>
+Package luatex.def Info: static_figures/election_data-1.png  used on input line
+ 64.
+(luatex.def)             Requested size: 120.45337pt x 144.54405pt.
+
+Underfull \hbox (badness 3049) in paragraph at lines 64--64
+[]\TU/LiberationSerif(0)/m/n/8 Typ-i-cally, we com-pute Markov chain Monte Carlo
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 64.
+[4
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 107.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 107.
+File: static_figures/election_data-1.png Graphic file (type png)
+<use static_figures/election_data-1.png>
+Package luatex.def Info: static_figures/election_data-1.png  used on input line
+ 107.
+(luatex.def)             Requested size: 129.49042pt x 155.38849pt.
+<static_figures/election_result-1.png, id=56, 361.35pt x 433.62pt>
+File: static_figures/election_result-1.png Graphic file (type png)
+<use static_figures/election_result-1.png>
+Package luatex.def Info: static_figures/election_result-1.png  used on input li
+ne 107.
+(luatex.def)             Requested size: 129.49042pt x 155.38849pt.
+
+Overfull \hbox (5.35803pt too wide) in paragraph at lines 107--107
+[][] 
+ []
+
+luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+luaotfload | aux : font no 25 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+luaotfload | aux : font no 25 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 26 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif/B' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+luaotfload | aux : font no 26 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 27 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif/I' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+luaotfload | aux : font no 27 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 28 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif/BI' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+luaotfload | aux : font no 28 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'LiberationSerif(1)' created for font
+(fontspec)             'Liberation Serif' with options
+(fontspec)             [Ligatures=TeX,Numbers={Monospaced}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"LiberationSerif:mode=node;script=latn;language=dflt;
++tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"LiberationSerif/B:mode=node;script=latn;language=dfl
+t;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"LiberationSerif/I:mode=node;script=latn;language=dfl
+t;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"LiberationSerif/BI:mode=node;script=latn;language=df
+lt;+tlig;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Overfull \vbox (5.0002pt too high) detected at line 107
+ []
+
+[5
+
+<./static_figures/election_result-1.png>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 107.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 107.
+File: static_figures/election_data-1.png Graphic file (type png)
+<use static_figures/election_data-1.png>
+Package luatex.def Info: static_figures/election_data-1.png  used on input line
+ 107.
+(luatex.def)             Requested size: 129.49042pt x 155.38849pt.
+File: static_figures/election_result-1.png Graphic file (type png)
+<use static_figures/election_result-1.png>
+Package luatex.def Info: static_figures/election_result-1.png  used on input li
+ne 107.
+(luatex.def)             Requested size: 129.49042pt x 155.38849pt.
+
+Overfull \hbox (5.35803pt too wide) in paragraph at lines 107--107
+[][] 
+ []
+
+luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+
+Overfull \vbox (5.0002pt too high) detected at line 107
+ []
+
+[6
+
+] [7
+
+] [8
+
+] [9
+
+] [10
+
+]) (./weights.tex
+<static_figures/orig_weights.png, id=91, 455.7025pt x 91.34125pt>
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+<static_figures/weights_loo.png, id=92, 444.66125pt x 105.39375pt>
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+<static_figures/boot_weights.png, id=93, 452.69125pt x 203.76125pt>
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+<static_figures/e_beta_w.png, id=94, 903.375pt x 903.375pt>
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[11
+
+<./static_figures/orig_weights.png><./static_figures/weights_loo.png><./static_f
+igures/boot_weights.png><./static_figures/e_beta_w.png>]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[12
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[13
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[14
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[15
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[16
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[17
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[18
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[19
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[20
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 107
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 10
+7.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 107.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (22.9069pt too high) detected at line 107
+ []
+
+[21
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 168.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 168.
+ [22
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 168.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 168.
+ [23
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 168.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 168.
+ [24
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 272.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 272.
+
+Overfull \vbox (19.59337pt too high) detected at line 272
+ []
+
+[25
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 272.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 272.
+
+Overfull \vbox (19.59337pt too high) detected at line 272
+ []
+
+[26
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 272.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 272.
+
+Overfull \vbox (19.59337pt too high) detected at line 272
+ []
+
+[27
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 272.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 272.
+
+Overfull \vbox (19.59337pt too high) detected at line 272
+ []
+
+[28
+
+]) (./low_dim.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 93.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 93.
+
+Overfull \hbox (2.07874pt too wide) detected at line 93
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 93.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 93.
+
+Overfull \vbox (17.69841pt too high) detected at line 93
+ []
+
+[29
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 93.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 93.
+
+Overfull \hbox (2.07874pt too wide) detected at line 93
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 93.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 93.
+
+Overfull \vbox (17.69841pt too high) detected at line 93
+ []
+
+[30
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 93.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 93.
+
+Overfull \hbox (2.07874pt too wide) detected at line 93
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 93.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 93.
+
+Overfull \vbox (17.69841pt too high) detected at line 93
+ []
+
+[31
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 122.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 122.
+<static_figures/lowdim_accuracy-1.png, id=262, 433.62pt x 216.81pt>
+File: static_figures/lowdim_accuracy-1.png Graphic file (type png)
+<use static_figures/lowdim_accuracy-1.png>
+Package luatex.def Info: static_figures/lowdim_accuracy-1.png  used on input li
+ne 122.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
+ [32
+
+<./static_figures/lowdim_accuracy-1.png>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 122.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 122.
+File: static_figures/lowdim_accuracy-1.png Graphic file (type png)
+<use static_figures/lowdim_accuracy-1.png>
+Package luatex.def Info: static_figures/lowdim_accuracy-1.png  used on input li
+ne 122.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
+ [33
+
+]
+<figure/normerr_graph-1.png, id=275, 397.485pt x 317.988pt>
+File: figure/normerr_graph-1.png Graphic file (type png)
+<use figure/normerr_graph-1.png>
+Package luatex.def Info: figure/normerr_graph-1.png  used on input line 177.
+(luatex.def)             Requested size: 132.50478pt x 105.99896pt.
+luaotfload | aux : font no 20 (nil) does not define feature tnum for script latn
+ with language dflt
+
+Package fontspec Warning: OpenType feature 'Numbers=Monospaced' (tnum) not
+(fontspec)                available for font 'LiberationSerif' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+[34
+
+<./figure/normerr_graph-1.png>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 193.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 193.
+File: static_figures/election_data-1.png Graphic file (type png)
+<use static_figures/election_data-1.png>
+Package luatex.def Info: static_figures/election_data-1.png  used on input line
+ 193.
+(luatex.def)             Requested size: 144.54846pt x 173.45816pt.
+File: static_figures/election_result-1.png Graphic file (type png)
+<use static_figures/election_result-1.png>
+Package luatex.def Info: static_figures/election_result-1.png  used on input li
+ne 193.
+(luatex.def)             Requested size: 144.54846pt x 173.45816pt.
+ [35
+
+]) (./high_dim.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 36.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 36.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 36.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 36.
+ [36
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 36.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 36.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 36.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 36.
+ [37
+
+]
+Overfull \hbox (36.41618pt too wide) detected at line 144
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 144.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 144.
+[38
+
+]
+Overfull \hbox (36.41618pt too wide) detected at line 144
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 144.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 144.
+[39
+
+]
+Overfull \hbox (36.41618pt too wide) detected at line 144
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 144.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 144.
+[40
+
+]
+Overfull \hbox (36.41618pt too wide) detected at line 144
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 144.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 144.
+[41
+
+]
+Overfull \hbox (36.41618pt too wide) detected at line 144
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 144.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 144.
+[42
+
+]
+Overfull \hbox (36.41618pt too wide) detected at line 144
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 144.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 144.
+[43
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 227.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 227.
+
+Overfull \vbox (1.80493pt too high) detected at line 227
+ []
+
+[44
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 227.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 227.
+
+Overfull \vbox (1.80493pt too high) detected at line 227
+ []
+
+[45
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 227.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 227.
+
+Overfull \vbox (1.80493pt too high) detected at line 227
+ []
+
+[46
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 291.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 291.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 291.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 291.
+
+Overfull \vbox (14.25703pt too high) detected at line 291
+ []
+
+[47
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 291.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 291.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 291.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 291.
+
+Overfull \vbox (14.25703pt too high) detected at line 291
+ []
+
+[48
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 320.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 320.
+<static_figures/highdim_accuracy-1.png, id=376, 433.62pt x 216.81pt>
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 320.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
+
+Overfull \vbox (13.4126pt too high) detected at line 320
+ []
+
+[49
+
+<./static_figures/highdim_accuracy-1.png>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 320.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 320.
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 320.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
+
+Overfull \vbox (13.4126pt too high) detected at line 320
+ []
+
+[50
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+[]\TU/LiberationSerif(1)/m/n/8 We ran sim-u-la-tions of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+\TU/LiberationSerif(1)/m/n/8 Gamma--Poisson mix-ture with
+ []
+
+<figure/poisson_re_graph-1.png, id=388, 397.485pt x 397.485pt>
+File: figure/poisson_re_graph-1.png Graphic file (type png)
+<use figure/poisson_re_graph-1.png>
+Package luatex.def Info: figure/poisson_re_graph-1.png  used on input line 357.
+
+(luatex.def)             Requested size: 180.6922pt x 180.6922pt.
+[51
+
+<./figure/poisson_re_graph-1.png>]) (./exchangeability.tex [52
+
+] [53
+
+]
+[54
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 95.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 95.
+ [55
+
+]
+File: static_figures/lowdim_accuracy-1.png Graphic file (type png)
+<use static_figures/lowdim_accuracy-1.png>
+Package luatex.def Info: static_figures/lowdim_accuracy-1.png  used on input li
+ne 147.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 147.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+ [56
+
+]
+File: static_figures/lowdim_accuracy-1.png Graphic file (type png)
+<use static_figures/lowdim_accuracy-1.png>
+Package luatex.def Info: static_figures/lowdim_accuracy-1.png  used on input li
+ne 147.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 147.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+ [57
+
+]
+File: static_figures/lowdim_accuracy-1.png Graphic file (type png)
+<use static_figures/lowdim_accuracy-1.png>
+Package luatex.def Info: static_figures/lowdim_accuracy-1.png  used on input li
+ne 147.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 147.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+ [58
+
+] [59
+
+] [60
+
+] [61
+
+] (./main.bbl) [62
+
+])
+\tf@nav=\write6
+
+\openout6 = main.nav
+\tf@toc=\write7
+
+\openout7 = main.toc
+\tf@snm=\write8
+
+\openout8 = main.snm
+ (./main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 47441 strings out of 477805
+ 125031,1648299 words of node,token memory allocated
+ 10929 words of node memory still in use:
+   56 hlist, 8 vlist, 5 rule, 70 disc, 7 local_par, 2 math, 233 glue, 35 kern, 6
+6 penalty, 828 glyph, 214 attribute, 113 glue_spec, 214 attribute_list, 4 write,
+ 1 pdf_start_link, 1 pdf_end_link, 6 pdf_dest, 2 pdf_action, 28 pdf_colorstack n
+odes
+   avail lists: 1:4,2:2396,3:885,4:358,5:494,6:60,7:3726,8:84,9:1768,10:20,11:30
+2
+ 64832 multiletter control sequences out of 65536+600000
+ 93 fonts using 21646519 bytes
+ 128i,31n,134p,1852b,1242s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
+xlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fon
+ts/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/l
+iberation2/LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7
+.pfb>
+Output written on main.pdf (62 pages, 1089290 bytes).
+
+PDF statistics: 544 PDF objects out of 1000 (max. 8388607)
+ 404 compressed objects within 5 object streams
+ 133 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+

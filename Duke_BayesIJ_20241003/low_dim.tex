@@ -1,0 +1,193 @@
+
+
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}[t]{Variance consistency theorem}
+
+\question{How do the results for a single weight translate into variance estimates?}
+%
+\begin{align*}
+    \var{\p(\w)}{\expect{p(\theta \vert \xvec, w)}{f(\theta)}}
+    = 
+    \frac{1}{N^2} \sumn \left(
+        \blue{\infl_n - \overline{\infl}}
+    \right)^2 +
+    \red{\textrm{Term involving }
+        \red{\err}(\w_n)
+        \textrm{ for }n =1,\dots,N
+    }
+\end{align*}
+%
+% Optima and related features of the log likelihood
+% \def\scorecov{\Sigma}
+% \def\scorecovhat{\hat\Sigma}
+\def\thetatrue{\theta_{\infty}}
+\def\thetahat{\hat\theta}
+
+% \def\info{\mathcal{I}}
+% \def\infoev{\lambda_\mathcal{I}}
+% \def\infoevhat{\hat{\lambda}_\mathcal{I}}
+% \def\infohat{\hat{\mathcal{I}}}
+
+\def\normdist{\mathcal{N}}
+
+% Covariances of g(\theta)
+% \def\gmeantrue{\mu^g}   % The true average posterior expectation
+\def\gcovtrue{V^g}
+% \def\gcovmaphat{\hat{V}^{\mathrm{MAP}}}
+% \def\gcovhat{\hat{V}^{g}}
+\def\gcovij{V^{\mathrm{IJ}}}
+% \def\gcovijhat{\hat{V}^{\mathrm{IJ}}}
+% \def\gcovboothat{\hat{V}^{\mathrm{Boot}}}
+% \def\gcovboot{V^{\mathrm{Boot}}}
+% \def\gcovbayeshat{\hat{V}^{\mathrm{Bayes}}}
+% \def\gcovbayes{V^{\mathrm{Bayes}}}
+
+\pause
+% \textbf{Assumptions sketch:}
+%
+\begin{itemize}
+    \item Assume (sketch): A well--behaved MAP \textit{maximum a posteriori} estimator $\thetahat$ exists.
+    \begin{itemize}
+        \item The dimension of $\theta$ is fixed as $N \rightarrow \infty$
+        \item The expected log likelihood has a strict maximum at $\thetatrue$
+        \item The observed log likelihood statisfies $\thetahat \rightarrow \thetatrue$
+        \item The expected log likelihood Hessian is negative definite at $\thetatrue$ 
+    \end{itemize}
+    \item Assume (sketch): We can apply standard asymptotics.
+    \begin{itemize}
+    \item The log prior and log likelihood are four times continuously differentiable
+    \item The prior is proper, and a technical set of prior expectations are finite
+    \item The log likelihood and its derivatives are dominated by a square--integrable envelope function 
+          for all $\theta$ in a neighborhood of $\theta_\infty$.
+    \end{itemize}
+\end{itemize}
+%
+\pause
+
+\theorem{
+\textbf{Theorem 2 \citep{giordano:2023:bayesij}: }
+Under the above assumptions,
+%
+\begin{align*}
+\sqrt{N} \left( \expect{\post}{g(\theta)} - g(\thetatrue) \right)
+    \dlim{}& \normdist\left(0, \gcovtrue\right)
+    %\label{eq:expectation_limit}
+    & \textrm{\citep{kleijn:2012:bvm}}\\
+\textrm{and} \quad
+\gcovij := \frac{1}{N} \sumn \left(
+    \blue{\infl_n - \overline{\infl}}
+    \right)^2  
+    \plim {}& \gcovtrue. 
+    & \textrm{(Our contribution)}\\
+    \nonumber
+\end{align*}
+}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{frame}{Negative binomial experiment}
+
+    \question{Example: Negative binomial models with an unknown parameter $\gamma$.}
+    %
+    \begin{align*}
+    \textrm{For }n={} 1,\ldots, N \textrm{ let }
+        x_n |  \gamma \iid{}& \textrm{NegativeBinomial}\left(r, \gamma \right)
+        \textrm{ for fixed }r.\\
+    \textrm{Write }\log \p(\xvec \vert \gamma, \w) ={}&
+           \sumn \w_n \ell_n(\gamma).
+        %
+    \end{align*}
+    %
+    \pause
+    %
+    \LowDimAccuracyGraph{}
+    %   
+\end{frame}
+        
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Data Analysis Using Regression and Multilevel/Hierarchical Models.}
+
+    \begin{minipage}{0.44\textwidth}
+    
+    We ran \texttt{rstanarm} on 56 different models on 13 different datasets
+    from \citet{gelman:2006:arm},
+    including Gaussian and logistic regression, fixed and mixed-effects models.
+    
+    \spskip Across all models, we estimate 799 distinct covariances (regression
+    coefficients and log scale parameters).
+    
+    \spskip
+    Using the bootstrap as ground truth, compute the relative errors:
+    %
+    \begin{align*}
+    %
+    \frac{\gcovbayes - \gcovboot}{|\gcovboot|}
+    \,\,\,
+    \textrm{ and }
+    \,\,\,
+    \frac{\gcovij - \gcovboot}{|\gcovboot|}.
+    %
+    \end{align*}
+    %
+    % \spskip
+    % For each model:
+    % %
+    % \begin{itemize}
+    %     \item From one MCMC chain, compute $\gcovijhat$, $\gcovbayes$.
+    %     \item From 200 bootstraps, compute $\gcovboot$.
+    %     \item Compare the relative error to the bootstrap.
+    %     %\item Compute Monte Carlo SEs of everything.
+    % \end{itemize}
+    \end{minipage}
+    \hspace{1em}
+    \begin{minipage}{0.44\textwidth}
+        %\ARMZFig{}
+        % \ARMRelFig{}
+        \ARMGraphDiff
+        \textbf{Total compute time for all models:}
+    
+        \begin{tabular}{ll}
+        Initial fit: & 1.6 hours \\
+        Bootstrap: & 381.5 hours\\
+        \end{tabular}
+\end{minipage}
+
+\end{frame}
+
+
+
+\begin{frame}[c]{How to connect to the election data?}
+
+\question{Problem: MCMC is only interesting when the posterior doesn't concentrate.}
+
+\begin{minipage}{0.48\textwidth}
+    \ElectionData{}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+    \ElectionResultsGlobal{}
+\end{minipage}
+
+
+\end{frame}
