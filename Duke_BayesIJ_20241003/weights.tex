@@ -11,7 +11,7 @@
 
 \onslide<1->{
 Augment the problem with {\em data weights} $\w_1, \ldots, \w_N$.
-We can write $\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}$.
+We can write $\expect{\p(\theta \vert \xvec; \w)}{f(\theta)}$.
 }
 \onslide<1->{
 %
@@ -19,7 +19,7 @@ We can write $\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}$.
 %
 \ell_n(\theta) :={}& \log \p(\x_n \vert \theta)
 &
-\log \p(\xvec \vert \theta, \w) ={}&
+\log \p(\xvec \vert \theta; \w) ={}&
     \sumn \w_n \ell_n(\theta)
 %
 \end{align*}
@@ -55,14 +55,14 @@ We can write $\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}$.
         \begin{scope}[x={(image.south east)},y={(image.north west)}]
             \draw[gray, thick, <-] (0.20,0.23) -- ++(0.15,0.3)
                     node[above,black,fill=white]
-                    {\small $\expect{p(\theta \vert \x)}{f(\theta)}$};
+                    {\small $\expect{p(\theta \vert \xvec)}{f(\theta)}$};
         \end{scope}
         }
         \onslide<6->{
         \begin{scope}[x={(image.south east)},y={(image.north west)}]
             \draw[gray, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
                     node[left,black,fill=white]
-                    {\small $\expect{p(\theta \vert \x, \w_n)}{f(\theta)}$};
+                    {\small $\expect{p(\theta \vert \xvec; \w_n)}{f(\theta)}$};
         \end{scope}
         }
         \onslide<8->{
@@ -81,7 +81,7 @@ We can write $\expect{\p(\theta \vert \xvec, \w)}{f(\theta)}$.
         \begin{scope}[x={(image.south east)},y={(image.north west)}]
             \draw[gray, thick, <-] (0.8,0.65) -- ++(0.02,-0.2)
                     node[below,black,fill=white]
-                    {\small Error $ = \red{\err(\w_n)}$};
+                    {\small Error $ = \red{\err_n(\w_n)}$};
             \draw[red, to-to] (0.8,0.76) -- ++(0,-0.07);
         \end{scope}
         }
@@ -95,10 +95,10 @@ The re-scaled slope $N \infl_n$ is known as the
 %
 \vspace{-0.5em}
 \begin{align*}
-\expect{p(\theta \vert \xvec, \w)}{f(\theta)} -
+\expect{p(\theta \vert \xvec; \w)}{f(\theta)} -
     \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
     \sumn \blue{\infl_n} (\w_n - 1) +
-    \red{\err(\w_n)}
+    \red{\err_n(\w)}
     % \textrm{Higher order derivatives}
 %
 \end{align*}
@@ -124,9 +124,9 @@ Assume the \blue{slope} is computable and \red{error} is small.
 %
 %
 \begin{align*}
-    \expect{p(\theta \vert \xvec, \w)}{f(\theta)} -
+    \expect{p(\theta \vert \xvec; \w)}{f(\theta)} -
     \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
-    \sumn \blue{\infl_n} (\w_n - 1) + \red{\err}(\w_n)
+    \sumn \blue{\infl_n} (\w_n - 1) + \red{\err_n(\w)}
 \end{align*}
 %
 %
@@ -138,18 +138,18 @@ weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
 \begin{align*}
 %
 \textrm{Bootstrap variance} ={}&
-\var{\p(\w)}{\expect{p(\theta \vert \xvec, w)}{f(\theta)}}
+\var{\p(\w)}{\expect{p(\theta \vert \xvec; \w)}{f(\theta)}}
 \onslide<3->{
 \\={}&
 \var{\p(\w)}{
-    \sumn \blue{\infl_n} (\w_n - 1) + \red{\err}(\w_n)
+    \sumn \blue{\infl_n} (\w_n - 1) + \red{\err_n(\w)}
 }
 \\=& 
 \frac{1}{N^2} \sumn \left(
     \blue{\infl_n - \overline{\infl}}
 \right)^2 +
 \red{\textrm{Term involving }
-    \red{\err}(\w_n)
+    \red{\err_n}(\w)
     \textrm{ for }n =1,\dots,N
 }
 \\\red{\approx}{}&
@@ -187,9 +187,9 @@ For simplicity, let us consider a single weight for the moment.
 %
 \begin{align*}
     %
-    \expect{p(\theta \vert \xvec, \w_n)}{f(\theta)} -
+    \expect{p(\theta \vert \xvec; \w_n)}{f(\theta)} -
         \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
-        \blue{\infl_n} (\w_n - 1) + \red{\err}(\w_n)
+        \blue{\infl_n} (\w_n - 1) + \red{\err_n(\w)}
     %
 \end{align*}
 
@@ -203,7 +203,7 @@ By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w
 \begin{align*}
 %
 \blue{\infl_n} ={}&
-    % \fracat{\partial \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)}}
+    % \fracat{\partial \expect{\p(\theta \vert \xvec; \w_n)}{f(\theta)}}
     %    {\partial \w_n}{\w_n =1}
 \undernote{\blue{
     \expect{\p(\theta \vert \xvec)}{ \thetabar \ellbar_n(\theta)}
@@ -213,10 +213,10 @@ By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w
     \onslide<3->{\text{$= O_p(N^{-1})$ under posterior concentration}}
 }}}
 &
-\red{\err(\w_n)} ={}&
+\red{\err_n(\w)} ={}&
 \frac{1}{2}
 \undernote{
-    \red{\expect{\p(\theta \vert \xvec, \wtil_n)}{
+    \red{\expect{\p(\theta \vert \xvec; \wtil_n)}{
         \thetabar
         \ellbar_n(\theta)
         \ellbar_n(\theta)}}
@@ -230,24 +230,33 @@ By dominated convergence and the mean value theorem, for some $\wtil_n \in [0,\w
 (\w_n - 1)^2
 %
 \end{align*}
-%
+
 \onslide<4->{
-\theorem{
-\textbf{Theorem 1 \citep{giordano:2023:bayesij}  (paraphrase): }\\
-If the posterior $\p(\theta \vert \xvec)$ ``concentrates'' (e.g. as in the Bernstein--von Mises theorem),\footnote{Existing results are
-sufficient for a \textit{particular weight} \citep{kass:1990:posteriorexpansions}. 
-\citet{giordano:2023:bayesij} proves that the result holds when averaged over all weights, as needed for
-variance estimation.}
-then
-%
-\begin{align*}
-    \w_n \mapsto N \left( \expect{\p(\theta \vert \xvec, \w_n)}{f(\theta)} -
-    \expect{\p(\theta \vert \xvec)}{f(\theta)} \right)
-\end{align*}
-%
-becomes linear as $N\rightarrow \infty$, with slope $\lim_{N\rightarrow \infty} \infl_n$.
+    The scaling $O_p(N^{-2})$ for the error is classical for 
+    a \emph{particular weight} \citep{kass:1990:posteriorexpansions}.  
+    
+    For variance estimation, we need (and prove) conditions under which the
+    $O_p(N^{-2})$ scaling applying sufficiently uniformly in \emph{all the weights}.    
 }
-}
+
+%
+% \onslide<4->{
+% \theorem{
+% \textbf{Theorem 1 \citep{giordano:2023:bayesij}  (paraphrase): }\\
+% If the posterior $\p(\theta \vert \xvec)$ ``concentrates'' (e.g. as in the Bernstein--von Mises theorem),\footnote{Existing results are
+% sufficient for a \textit{particular weight} \citep{kass:1990:posteriorexpansions}. 
+% \citet{giordano:2023:bayesij} proves that the result holds when averaged over all weights, as needed for
+% variance estimation.}
+% then
+% %
+% \begin{align*}
+%     \w_n \mapsto N \left( \expect{\p(\theta \vert \xvec; \w_n)}{f(\theta)} -
+%     \expect{\p(\theta \vert \xvec)}{f(\theta)} \right)
+% \end{align*}
+% %
+% becomes linear as $N\rightarrow \infty$, with slope $\lim_{N\rightarrow \infty} \infl_n$.
+% }
+% }
 % \hrulefill
 
 % \textbf{Bayesian central limit theorem (BCLT) fact: }Suppose that $\p(\gamma
