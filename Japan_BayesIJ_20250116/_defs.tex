@@ -1,0 +1,172 @@
+\def\trans{\intercal}   % transpose
+
+
+% Operators
+\def\diag#1{\mathrm{diag}\left(#1\right)}
+\def\trace#1{\mathrm{tr}\left(#1\right)}
+
+
+\def\undernote#1#2{\underbrace{#1}_{\mathclap{\substack{#2}}}}
+\def\overnote#1#2{\overbrace{#1}^{\mathclap{\substack{#2}}}}
+\def\question#1{
+\begin{mdframed}[style=MyFrame]
+\begin{center}
+#1
+\end{center}
+\end{mdframed}
+}
+
+\definecolor{theoremcolor}{RGB}{255,245,210}
+
+\def\theorem#1{
+\begin{mdframed}[style=MyFrame,backgroundcolor=theoremcolor]
+    #1
+\end{mdframed}
+}
+
+% Paper-specific math macros.
+\def\wtil{\tilde{w}}
+
+
+\def\red#1{\textcolor{red}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+
+
+% Operators
+\def\mbe{\mathbb{E}}%
+\def\ind#1{\mathbb{I}\left(#1\right)}
+\def\norm#1{\left\Vert #1\right\Vert }
+\def\evalat#1#2{\left.#1\right|_{#2}}
+\def\fracat#1#2#3{\left.\frac{#1}{#2}\right\vert_{#3}}
+\def\iid{\overset{iid}{\sim}}
+\def\indep{\overset{indep}{\sim}}
+%\def\argsup{\mathrm{argsup}\,}
+%\def\argmax{\mathrm{argmax}\,}
+\DeclareMathOperator*{\argmax}{\mathrm{argmax}}
+\DeclareMathOperator*{\argsup}{\mathrm{argsup}}
+\DeclareMathOperator*{\esssup}{\mathrm{esssup}}
+
+% Dimension of g(\theta)
+\def\gdim{D_g}
+
+% Expectation and centering
+\def\expect#1#2{\underset{#1}{\mathbb{E}}\left[#2\right]}
+\def\expectop#1{\underset{#1}{\mathbb{E}}}
+%\def\cent#1#2{\underset{#1}{\mathbb{C}}\left[#2\right]}
+\def\cov#1#2{\underset{#1}{\mathrm{Cov}}\left(#2\right)}
+\def\var#1#2{\underset{#1}{\mathrm{Var}}\left(#2\right)}
+\def\covhat#1#2{\underset{#1}{\widehat{\mathrm{Cov}}}\left(#2\right)}
+\def\varhat#1#2{\underset{#1}{\widehat{\mathrm{Var}}}\left(#2\right)}
+
+\def\p{p}
+\def\post{p(\theta | \xvec)}
+\def\postz{p(\theta, \z | \xvec)}
+\def\postpert#1{p(\theta | #1)}
+\def\postzpert#1{p(\theta, \z | #1)}
+\def\sumn{\sum_{n=1}^N}
+\def\meann{\frac{1}{N}\sum_{n=1}^N}
+\def\r{r}
+\def\y{y}
+\def\x{x}
+\def\xvec{X}
+\def\z{z}
+\def\w{w}
+\def\onevec{1_N}
+
+\def\fdist{\mathbb{F}}
+\def\xfdist{\xvec\iid\fdist}
+
+% von Mises stuff
+\def\gdist{\mathbb{G}}
+\def\fndist{\mathbb{F}_N}
+\def\fwdist{\mathbb{F}_{N}^{w}}
+\def\distdiff{\Delta}
+
+\def\thetadom{\Omega_\theta}
+\def\thetaball#1{B_{#1}}
+\def\deltaulln{\delta_{LLN}}
+
+% Information matrix stuff
+\def\info{\mathcal{I}}
+\def\infoev{\lambda_\mathcal{I}}
+\def\infoevhat{\hat{\lambda}_\mathcal{I}}
+\def\infohat{\hat{\mathcal{I}}}
+
+% Optima and related features of the log likelihood
+\def\scorecov{\Sigma}
+\def\scorecovhat{\hat\Sigma}
+\def\thetatrue{\theta_0}
+\def\thetahat{\hat\theta}
+\def\zhat{\hat\z}
+\def\thetatil{\tilde{\theta}}
+
+% BCLT residuals
+\def\resid#1{\mathscr{R}_{#1}}
+
+% Taylor series residual
+\def\tresid#1#2{\mathscr{T}_{(#1)}\left(#2\right)}
+
+% The regular event
+\def\regevent{\mathfrak{R}}
+
+% Covariances of g(\theta)
+\def\gcovtrue{V_{\fdist}}
+\def\gcovlim{V_{\infty}}
+\def\gcovmaphat{\hat{V}^{\mathrm{MAP}}}
+\def\gcovhat{\hat{V}_{\mathrm{CLT}}}
+\def\gcovij{V_{\mathrm{IJ}}}
+\def\gcovijhat{\hat{V}_{\mathrm{IJ}}}
+\def\gcovboothat{\hat{V}_{\mathrm{Boot}}}
+\def\gcovboot{V_{\mathrm{Boot}}}
+\def\gcovbayeshat{\hat{V}_{\mathrm{Bayes}}}
+\def\gcovbayes{V_{\mathrm{Bayes}}}
+
+% Influence function)
+\def\infl{\psi}
+\def\inflalt#1{\psi^{#1}}
+\def\inflx{\phi}
+\def\inflhat{\hat{\psi}}
+\def\err{\mathcal{E}}
+
+% Modes of convergence
+%\stackrel{p}{\rightarrow}
+\def\plim{\xrightarrow[N\rightarrow\infty]{prob}\,}
+\def\dlim{\xrightarrow[N\rightarrow\infty]{dist}\,}
+
+% Taylor expansion and gradient notation
+\def\ggrad#1{g_{(#1)}}
+\def\psigrad#1{\psi_{(#1)}}
+\def\ellgrad#1{\ell_{(#1)}}
+\def\phigrad#1{\phi_{(#1)}}
+\def\psigrad#1{\psi_{(#1)}}
+%\def\tgrad{T_{(1)}}
+\def\tgrad{\mathfrak{d}T}
+
+% Order notatoin
+\def\ord#1{O\left(#1\right)}
+\def\ordlog#1{\tilde{O}\left(#1\right)}
+\def\ordlogp#1{\tilde{O}_p\left(#1\right)}
+
+% Log likelihood
+\def\lik{\mathscr{L}}
+\def\likhat{\hat{\mathscr{L}}}
+\def\likk#1{\mathscr{L}_{(#1)}}
+\def\likhatk#1{\hat{\mathscr{L}}_{(#1)}}
+
+% Higher order notation
+% Bar is posterior centering, underbar is frequentist centering
+\def\gbar{\bar{\g}}
+\def\gbargrad#1{\bar{\g}_{(#1)}}
+\def\ghatgrad#1{\hat{\g}_{(#1)}}
+\def\fbar{\bar{f}}
+\def\thetabar{\fbar(\theta)}
+\def\gammabar{\bar{\gamma}}
+
+\def\ellbar{\bar{\ell}}
+\def\ellunderbar{\underline{\ell}}
+\def\ellbarbar{\underline{\ellbar}}
+\def\ellbargrad#1{\bar{\ell}_{(#1)}}
+\def\ellbarbargrad#1{\ellbarbar_{(#1)}}
+\def\ellunderbargrad#1{\ellunderbar_{(#1)}}
+\def\ellhatunderbar{\hat{\underline{\ell}}} % X-demeaned, centered at \thetahat
+\def\ellhatunderbargrad#1{\ellhatunderbar_{(#1)}}

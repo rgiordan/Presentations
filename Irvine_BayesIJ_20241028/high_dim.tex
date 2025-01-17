@@ -1,0 +1,360 @@
+
+\begin{frame}{High dimensional problems}
+    %
+    \question{Example: Exponential families  with random effects (REs)
+    $\lambda$ and fixed effects $\gamma$.}
+
+    If the observations per random effect remains bounded as $N \rightarrow
+    \infty$, then
+    %
+    \begin{itemize}
+    %
+    \item Parameter $\lambda$ (``local'') grows in dimension with $N$.
+    \item Parameter $\gamma$ (``global'') is finite-dimensional.
+    \item Marginally $\p(\lambda \vert \xvec)$ does not concentrate.
+    \item Marginally, $\p(\gamma \vert \xvec)$ concentrates.
+    % \item Conditionally, $\p(\lambda \vert \gamma, \xvec)$ does not concentrate either.
+    %
+    \end{itemize}
+    
+
+\spskip
+\pause
+\question{
+In general, we cannot hope for an asymptotic analysis of
+    $\expect{\p(\lambda, \gamma \vert \xvec)}{f(\lambda)}$. \\
+%
+\spskip
+Can we save the approximation when {\em some} parameters concentrate?\\
+%
+\spskip
+Does the residual vanish asymptotically for
+$\w_n \mapsto \expect{\p(\gamma \vert \xvec; \w_n)}{f(\gamma)}$?
+}
+
+%
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{High dimensional problems}
+%
+We assume that $\p(\gamma \vert \xvec)$ concentrates but
+$\p(\lambda \vert \xvec)$ does not.  By our series expansion:
+%
+\begin{align*}
+%
+% \MoveEqLeft
+&
+\expect{\p(\gamma, \lambda \vert \xvec; \w_n)}{\gamma} -
+\expect{\p(\gamma, \lambda \vert \xvec)}{\gamma}
+={}
+\\
+&\quad\blue{\infl_n}(\w_n - 1) && +\red{\err_n(\w)}
+% \\&
+\onslide<2->{
+\\={}&
+\blue{
+\expect{\p(\gamma, \lambda \vert \xvec)}{
+    \gammabar \ellbar_n(\gamma,\lambda)}
+}
+(\w_n - 1)
+    && +
+    \frac{1}{2}
+    \red{
+    \expect{\p(\gamma, \lambda \vert \xvec; \wtil_n)}{
+        \gammabar
+        \ellbar_n(\gamma,\lambda)^2 }
+    }
+        (\w_n - 1)^2
+% \\&
+}
+\onslide<3->{
+\\={}&
+%
+\blue{
+\expectop{\p(\gamma \vert \xvec)} \Big[
+    \gammabar
+    \undernote{
+        \expect{\p(\lambda \vert \gamma, \xvec)}
+                {\ellbar_n(\gamma,\lambda)}
+            }{F_1(\gamma)}
+    \Big]
+}
+        (\w_n - 1)
+    && +
+    \frac{1}{2}
+    \red{
+    \expectop{\p(\gamma \vert \xvec; \wtil_n)} \Big[
+        \gammabar
+        \undernote{
+            \expect{\p(\lambda \vert \xvec, \gamma; \wtil_n)}{
+                \ellbar_n(\gamma,\lambda)^2}
+            }{F_2(\gamma)}
+        \Big]
+    }
+        (\w_n - 1)^2
+}
+\onslide<4->{
+\\={}&
+\undernote{
+\blue{
+\expect{\p(\gamma \vert \xvec)}{
+    \gammabar F_1(\gamma)}
+}
+}{O_p(N^{-1})\\\text{(by $\p(\gamma \vert \xvec)$ concentration)}}
+    (\w_n - 1)
+    && +
+    \frac{1}{2}
+\undernote{
+\red{
+\expect{\p(\gamma \vert \xvec; \wtil_n)}{
+    \gammabar
+    F_2(\gamma) }
+}
+}{O_p(N^{-1})\\\text{(by $\p(\gamma \vert \xvec)$ concentration)}}
+        (\w_n - 1)^2
+%
+\\& \Rightarrow
+}
+\onslide<5->{
+\blue{\infl_n = O_p(N^{-1})} &&
+\red{\err_n(\w) = O_p(N^{-1})}
+}
+%
+\end{align*}
+%
+\onslide<6->{
+% The error is the same order as the linear approximation, and does not vanish after rescaling!
+
+\theorem{
+    \textbf{Corollary \citep{giordano:2023:bayesij}:}\\
+    In general, $\w_n \mapsto N \left( \expect{\p(\gamma \vert \xvec; \w_n)}{\gamma} -
+    \expect{\p(\gamma \vert \xvec)}{\gamma} \right)$
+    remains non-linear as $N \rightarrow \infty$.    
+}
+
+}
+
+\end{frame}
+
+
+
+% von Mises stuff
+\def\gdist{\mathbb{G}}
+\def\fndist{\mathbb{F}_N}
+\def\ftdist{\mathbb{F}_N^{\t}}
+\def\fwdist{\mathbb{F}_{N}^{w}}
+\def\T{T}   % Stastistical functional
+\def\Tlin{T_{\mathrm{lin}}} % linearized functional
+\def\t{t}   % Path variable for von Mises expansion
+\def\g{g}   % Function of interest
+\def\xn{\x_{0}}   % Function of interest
+\def\prior{\pi}
+\def\ttil{\tilde{\t}}   % IVT value of t
+% \def\abs#1{\left\vert #1\right\vert }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Bayesian von--Mises Expansion}
+
+\question{How can we apply the single--weight result to variance computations?}
+
+\pause
+
+Define the ``generalized posterior'' functional ($\theta$ may be growing in dimension):
+%
+\begin{align*}
+    %
+    \T(\gdist, N) := \frac{
+        \int \g(\theta) \exp\left( N \int \ell(\xn \vert \theta) \gdist(d\xn)\right)
+            \prior(\theta) d\theta
+    }
+    {
+    \int \exp\left( N \int \ell(\xn \vert \theta) \gdist(d\xn)\right)
+        \prior(\theta) d\theta
+    }.
+    %
+\end{align*}
+%
+Let $\fndist$ denote the empirical distribution over $\x_n$.  Then
+%
+\begin{align*}
+    \expect{\post}{\g(\theta)} =
+    \frac{
+        \int \g(\theta) \exp\left( N \meann \ell(\x_n \vert \theta) \right)
+            \prior(\theta) d\theta
+    }
+    {
+    \int \exp\left( N \meann \ell(\x_n \vert \theta) \right)
+        \prior(\theta) d\theta
+    } = \T(\fndist, N).
+\end{align*}
+%
+%\textbf{Bayesian concentration} happens as $N\rightarrow \infty$, \textbf{frequentist concentration}
+%happens as $\fndist \rightarrow \fdist$.\\
+\pause
+%
+\hrulefill
+
+Let $\fdist$ denote the true distribution of $\x_n$, and
+let $\ftdist  = \t \fndist + (1 - \t) \fdist$. 
+
+We can study the \textit{von Mises expansion}:
+%
+\begin{align*}
+    \sqrt{N} \left(\expect{\post}{\g(\theta)} - \T(\fdist, N) \right) ={}&
+        \blue{\sqrt{N} \fracat{\partial \T(\ftdist, N)}{\partial \t}{\t = 0} (\fndist - \fdist)}
+        & + \red{\err(\ttil)}
+\\={}&
+\undernote{
+    \blue{\sqrt{N} \sumn (\infl_n - \overline{\infl})} }
+    {\textrm{\blue{Infinitesimal jackknife estimator}}} + o_p(1) 
+    & + \red{\err(\ttil)}.
+\end{align*}
+%
+%Consistency follows if $\red{\err(\ttil)}$ vanishes.
+Inconsistency is suggested if $\red{\err(\ttil)}$ fails to vanish.
+%
+\end{frame}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{frame}[t]{Bayesian von--Mises Expansion Results}
+
+\theorem{
+    \textbf{Theorem 3 \citep{giordano:2023:bayesij} (sketch): }\\
+    \textbf{(Consistency of the von--Mises expansion in finite dimensions) }\\
+    Under slightly stronger conditions our original finite--dimensional posterior 
+    consistency result, 
+    %
+\begin{align*}
+    \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \rightarrow 0
+    \quad\textrm{in the Bayesian von--Mises expansion.}
+\end{align*}
+%
+}
+
+\pause
+
+\theorem{
+\textbf{Theorem 4 \citep{giordano:2023:bayesij} (sketch, not yet on arxiv):}\\
+\textbf{(Inconsistency of the von--Mises expansion in high dimensional exponential families) }\\
+    Assume that $\x_n$ comes with a equiprobable group assignment $g_n \in 1,\ldots,G$.\\    
+    Conditional on $g$, $\x_n$ is modeled as a finite-dimensional exponential
+    family given $\lambda,\gamma$:
+    %
+    \begin{align*}
+        \log \p(x_n \vert g_n=g, \gamma, \lambda) = 
+            \tau(x_n)^\trans \eta_{g}(\gamma, \lambda) + \textrm{Constant}.
+    \end{align*}
+    %
+Define the average product of second moments:
+%
+\begin{align*}
+    \mathcal{V}_N(\gamma) :=
+    \frac{1}{G} \sum_{g=1}^G 
+    \trace{
+        \expect{\fdist(\x_n)}{\tau(\x_n) \tau(\x_n)^\trans}
+        \cov{\p(\lambda \vert \gamma, \fdist)}{\eta_{g}(\gamma, \lambda)}
+    }.
+\end{align*}
+%
+If $N \expect{\p(\gamma \vert \fdist)}{\fbar(\gamma) \mathcal{V}_N(\gamma)}$ is 
+strictly bounded away from $0$ as $N\rightarrow \infty$, then
+%
+\begin{align*}
+    \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \rightarrow \infty
+    \quad\textrm{in the Bayesian von--Mises expansion.}
+\end{align*}
+%
+}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Experiments}
+    %
+    \question{Example: Poisson regression with Gamma-distributed random effects}
+    \begin{align*}
+    \textrm{For }g=1,\ldots,G,\textrm{ }
+        \lambda_g \iid{}& \mathrm{Gamma}(\alpha, \beta) \textrm{ for fixed }\alpha,\beta\\
+    \textrm{For }n = 1,\ldots,N,\textrm{ }
+        g_n \iid{}& \mathrm{Categorical}(1,\ldots,G),\textrm{ }
+        y_n | \lambda_n, \gamma, g_n \iid{}
+            \mathrm{Poisson}(\gamma \lambda_{g_n}).\\
+    \x_n ={} (y_n, g_n)
+    \textrm{ are IID given } \lambda, \gamma. &
+    \textrm{   Write }\log \p(\xvec \vert \lambda, \gamma; \w) =
+       \sumn \w_n \ell_n(\lambda, \gamma).
+    %
+    \end{align*}
+    
+    \pause
+    
+    \HighDimAccuracyGraph{}
+    
+\end{frame}
+        
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{More experimental results for Gamma--Poisson mixtures}
+    \begin{minipage}[c]{0.35\textwidth}
+        We ran simulations of the Gamma--Poisson mixture with
+        different ratios of $N / G$ \\(average observations per group).
+
+        \spskip
+        %
+        \begin{itemize}
+            \item When $N/G$ is small:
+            %
+            \begin{itemize}
+                \item IJ is biased significantly downwards
+                \item Bootstrap is biased somewhat downwards
+            \end{itemize}
+            %
+            \item When $N/G$ is larger:
+            %
+            \begin{itemize}
+                \item Both improve
+                \item Both remain somewhat biased
+                \item The IJ and bootstrap perform similarly
+            \end{itemize}
+            %
+        \end{itemize}
+    %
+    \end{minipage}
+    \begin{minipage}[c]{0.6\textwidth}
+    \PoissonREGraph{}
+    \end{minipage}
+\end{frame}
+
+
+
