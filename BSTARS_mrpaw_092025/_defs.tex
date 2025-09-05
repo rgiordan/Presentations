@@ -131,3 +131,22 @@
 \def\Ytil{\tilde{Y}}
 \def\Yhat{\hat{Y}}
 \def\Ysur{Y_{\sur}}
+
+\def\splitpage#1#2{
+\begin{minipage}{0.45\textwidth}
+    #1
+\end{minipage}
+\hfill\vrule\hfill
+\begin{minipage}{0.45\textwidth}
+    #2
+\end{minipage}
+}
+
+\def\splitpagenoline#1#2{
+\begin{minipage}{0.45\textwidth}
+    #1
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+    #2
+\end{minipage}
+}

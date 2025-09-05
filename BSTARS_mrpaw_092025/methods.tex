@@ -16,7 +16,7 @@ in which we observe only covariates.
 
 
 
-\begin{minipage}{0.45\textwidth}
+\splitpage{
     \centering
     \only<1>{
     \includegraphics[width=0.5\textwidth]{static_figures/survey_man.jpg}
@@ -24,20 +24,18 @@ in which we observe only covariates.
     \only<2->{
     \includegraphics[width=0.5\textwidth]{static_figures/survey_crazy_man.jpg}
     }
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
+}{
     \centering
     \includegraphics[width=0.5\textwidth]{static_figures/voting_man.jpg}
-\end{minipage}
+}
 
-\begin{minipage}{0.45\textwidth}
+\splitpage{
     \centering
     Observe $(\x_s, y_s)$ for $s = 1, \ldots, \nsur$\\
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
+}{
     \centering
     Observe $\x_p$ for $p = 1, \ldots, \ntar$\\
-\end{minipage}
+}
 
 \onslide<2->{
 \textbf{The problem is that the populations are very different.}
@@ -52,8 +50,11 @@ in which we observe only covariates.
 %
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Two approaches}
+\begin{frame}[t]{Two approaches}
 
 We want $\mu := \meantar \y_p$, but don't observe $\y_p$ in the target population.
 
@@ -63,20 +64,59 @@ We want $\mu := \meantar \y_p$, but don't observe $\y_p$ in the target populatio
 \end{itemize}
 %
 
-\begin{minipage}{0.45\textwidth}
+\splitpage{
     \centering
     \textbf{Calibration weighting}
-
-    Use
-
-    $\muhat_{\cal} := \meansur w_s y_s$
-
-    For some weights $w_s$ on the survey data.
-\end{minipage}
-\hfill\vrule\hfill
-\begin{minipage}{0.45\textwidth}
+}{
     \centering
-    \textbf{Model--based}
-\end{minipage}
+    \textbf{Bayesian hierarchical modeling (MrP)}
+}
+
+\splitpage{
+    \centering
+    Choose ``calibration weights'' $w_s$\\
+    (e.g.~raking weights)
+}{
+    \centering
+    Choose a model $\p(\y | x, \theta)$ and prior $\p(\theta)$\\
+    (e.g.~Hierarchical logitstic regression)
+}
+
+\splitpage{
+    \centering
+    $\muhat_{\cal} = \meansur w_s y_s$
+}{
+    \centering
+    Take $\yhat_p = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_p}$ and\\
+    $\muhat_{\mrp} = \meantar \yhat_p$
+}
+
+\splitpage{
+    \centering
+    Dependence on $\y_s$ is obvious\\
+    ($\w_s$ typically chosen using only $\x$)
+}{
+    \centering
+    Dependence on $\y_s$ very complicated\\
+    (Typically via MCMC draws from $\p(\theta \vert \textrm{Survey data})$)
+}
+
+\splitpage{
+    \centering
+    Weights give interpretable diagnostics:
+    %
+    \begin{itemize}
+        \item Frequentist variability
+        \item Partial pooling
+        \item Regressor balance
+    \end{itemize}
+    %
+}{
+    \centering
+    \textbf{Black box}
+}
+
+We open the MrP black box, and provide versions of all these diagnostics,
+for nonlinear hierarchical models fit with MCMC.
 
 \end{frame}

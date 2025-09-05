@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1757029049 "main.aux" "main.bbl" "main" 1757029312
+["bibtex main"] 1757104534 "main.aux" "main.bbl" "main" 1757105489
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1757029312 1968 e7d62a79b0cab87ba1d4242449233b64 "lualatex"
+  "main.aux" 1757105488 1968 e7d62a79b0cab87ba1d4242449233b64 "lualatex"
   "references.bib" 1757026435 767 e4db95de5660ad5ea6578a052ffbca4a ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1757029310 "main.tex" "main.pdf" "main" 1757029312
+["lualatex"] 1757105487 "main.tex" "main.pdf" "main" 1757105489
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -56,6 +56,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -392,16 +393,16 @@
   "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1621631105 13788 7d84439d2254ecfafc462aa76f790a5d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1688676452 4073795 a82a847ac97773bf4a607ab050efa3a1 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1713476517 4555314 730eb04a0c5eb13602d9bcfb1d963bc4 ""
-  "_defs.tex" 1757012266 3537 3256c351aabfa04640a3d2f92630a54c ""
+  "_defs.tex" 1757104147 3828 0b774048d089ac0e96e5cdffeca669d7 ""
   "_headers.tex" 1757027821 3186 49476da67961bf3848c32cf18d158dfc ""
   "figures_knitr.tex" 1757012288 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "introduction.tex" 1757026870 1847 a3901db30f775781b6edcbfe3c9e649f ""
-  "main.aux" 1757029312 1968 e7d62a79b0cab87ba1d4242449233b64 "lualatex"
-  "main.bbl" 1757029049 865 9af6b9d89f1469e0d385b5d1702de3d7 "bibtex main"
-  "main.nav" 1757029312 659 535b86bfb4c5ad4c88fa2b459f37b681 "lualatex"
-  "main.out" 1757029311 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "introduction.tex" 1757104259 1803 3c500e5277f841814a198572f2a62ce4 ""
+  "main.aux" 1757105488 1968 e7d62a79b0cab87ba1d4242449233b64 "lualatex"
+  "main.bbl" 1757104534 865 9af6b9d89f1469e0d385b5d1702de3d7 "bibtex main"
+  "main.nav" 1757105488 659 535b86bfb4c5ad4c88fa2b459f37b681 "lualatex"
+  "main.out" 1757105488 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   "main.tex" 1757027661 1192 f057fd05c69dd9b7f90803bffe464dac ""
-  "methods.tex" 1757029309 1957 e53683edb2654e59554058f9c77e3fec ""
+  "methods.tex" 1757105486 2878 211b2c51876839e7da0fb672608e0233 ""
   "static_figures/survey_crazy_man.jpg" 1757028250 29616 36ac7003c50949c58ea9f98177d268fe ""
   "static_figures/survey_man.jpg" 1757028163 21961 ad68661d4066e24c0413d3db3837ca8c ""
   "static_figures/voting_man.jpg" 1757028194 22321 ba1b893f73b1be3cf5861bc7922d9d47 ""

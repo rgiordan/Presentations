@@ -1,0 +1,44 @@
+
+\begin{frame}{Future work}
+
+How do you peform model checking with sensitivity analysis?
+
+Existing methods evaluate whether the analysis changes ``a lot'' when you:
+%
+\begin{itemize}
+\item Parametrically perturb the model (e.g.~fit a richer model class)
+\item Non--parameterically perturb the data (e.g.~produce gross outliers)
+\end{itemize}
+%
+The problem is:
+%
+\begin{itemize}
+\item How much is ``a lot''?
+\item Non--parametric data perturbations are hard to reason about
+\item It's hard to say whether parametric model changes are enough
+\end{itemize}
+%
+
+
+Instead, we
+%
+\begin{itemize}
+\item Parametrically perturb the data
+\item Observe whether our model could detect the change
+\end{itemize}
+%
+\begin{itemize}
+\item Know exactly the expected change (don't have to decide on what ``a lot'' means)
+\item Easy to reason about whether the data perturbation is reasonable
+\item Don't need to propose an alternative model, instead study the model you have
+\end{itemize}
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
