@@ -1,7 +1,6 @@
 
 \begin{frame}{Are US non-voters becoming more Republican?}
 
-
 \splitpage{
     \centering
     \textbf{Blue Rose research says yes:}
@@ -20,33 +19,45 @@
     \\[1em]
     \citep{datademocracyblog:2025} (Berkeley professor co--author, major professional researchers)
 }
-% \vspace{1em}
-
-Several factors drive the disagreement:
+\vspace{1em}
+% Several factors drive the disagreement:
 %
+\hrule
 \begin{itemize}
-\item The problem is very hard (it's difficult to poll non--voters)
+\item The problem is very hard (it's difficult to accurately poll non--voters)
 \item Different data sources
 %
-\begin{itemize}
-    \item Blue Rose aggregates its own private data
-    \item The \emph{On Data and Democracy} posts use public data, e.g.~the
-        cooperative election study (CES).
-\end{itemize}
+% \begin{itemize}
+%     \item Blue Rose aggregates its own private data
+%     \item The \emph{On Data and Democracy} posts use public data, e.g.~the
+%           cooperative election study (CES)
+% \end{itemize}
 %
 \item \textbf{Very different statistical methods:} $\star$
 \begin{itemize}
-    \item Blue Rose uses Bayesian hierarchical modeling
-    \item The CES uses calibration weighting
+    \item Blue Rose uses Bayesian hierarchical modeling (MrP)
+    \item The CES uses weighted averages (calibration weighting)
 \end{itemize}
 %
 \end{itemize}
 
-\textbf{Our work won't resolve the dispute.}  (Anyway, we'd need access to Blue Rose's private
-data and modeling to even try.)
+\begin{block}{Our contribution}
+    We provide a calibration weighting interpretation of MrP analyses that:
+    %
+\begin{itemize}
+    \item Is easily computable from MCMC draws and standard software, and
+    \item Defines MrP versions of the diagnostics that motivate calibration weighting.
+\end{itemize}
+%
+Our ``MrP approximate weights'' (MrPaw) admit apples-to-apples comparisons between
+these very different methodologies.
+%
+\end{block}
+% \textbf{Our work won't resolve the dispute.}  (Anyway, we'd need access to Blue Rose's private
+% data and modeling to even try.)
 
-But we can form a like--to--like comparison between the methodologies.  (And hope that
-Blue Rose tries our software package.)
+% But we can form a like--to--like comparison between the methodologies.  (And hope that
+% Blue Rose tries our software package.)
 
 \end{frame}
 
@@ -56,3 +67,14 @@ Blue Rose tries our software package.)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{frame}{Outline}
+%
+\begin{itemize}
+    \item Introduce the statisical problem and two methods (calibration weighting and MrP)
+    \item Describe one of the classical diagnostics (covariate balance)
+    \item Define MrPaw \& state a key theorem
+    \item Real-world results
+    \item Future directions
+\end{itemize}
+%
+\end{frame}

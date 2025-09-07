@@ -120,3 +120,222 @@ We open the MrP black box, and provide versions of all these diagnostics,
 for nonlinear hierarchical models fit with MCMC.
 
 \end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Covariate balance}
+
+What do we want out of calibration weights?
+
+$$
+\textrm{Target average} =
+\meantar \y_p \approx \meansur \w_s \y_s
+= \textrm{Weighted survey average}
+$$
+
+We can't check this, because we don't observe $\y_p$.  But we can check
+whether
+
+$$
+% \textrm{Target average regeressor} =
+    \meantar \x_p = \meansur \w_s \x_s
+% =    \textrm{Weighted survey average regressor}
+$$
+
+Such weights satisfy ``covariate balance'' for $\x$.
+
+You can check covariate balance for any calibration weighting estimator.
+
+Even more, covariate balance is the criterion for a popular class of calibration
+weight estimators:
+
+\begin{block}{Raking calibration weights}
+% Select calibration weights to satisfy
+$$
+\begin{aligned}
+    \textrm{ Take }
+    \w_1, \ldots, \w_{\Nsur} :={}& \argmin \sumsur (\w_s - \w_s^{\mathrm{ref}})^2 \\
+    \textrm{Subject to }
+    \meantar f(\x_p) ={}& \meansur \w_s f(\x_s)
+    \textrm{ for some function }f(\cdot).
+\end{aligned}
+$$
+\end{block}
+
+
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Covariate balance}
+
+Why would you want covariate balance?  Some commonly stated reasons:
+
+%
+\begin{itemize}
+\item To reduce the variance of inverse propensity weights (IPW)
+\item To check the accuracy of IPW
+\item To exactly balance ``important regressors''
+\end{itemize}
+%
+Common to these motivations is the following concen:
+
+% \begin{block}{Why covariate balance?}
+    We want to balance $f(\x)$ because we think
+    $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$.
+    % \\[1em]
+
+    Covariate balance ensures that such variation is captured
+    by our calibration estimator.
+% \end{block}
+
+
+\begin{block}{General covariate balance check}
+    Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
+    $$
+    \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
+    $$
+    We know the change this perturbation produces in the target distribution:
+    $$
+    \mu(\ytil) - \mu(\y) = \delta \meantar f(\x_p)
+    $$
+    Covariate balance for an estimator $\muhat$ checks whether
+    $\muhat(\ytil) - \muhat(\y) = \mu(\ytil) - \mu(\y)$.
+\end{block}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{MrPaw}
+
+How to form a notion of covariate balance for estimators that are not weighted averages?
+
+\splitpage{
+    \centering
+    \textbf{Calibration weights}\\
+    $\muhat_{\cal} = \meansur w_s y_s$
+}{
+    \centering
+    \textbf{MrP}\\
+    Take $\yhat_p = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_p}$ and\\
+    $\muhat_{\mrp} = \meantar \yhat_p$
+}
+
+
+\vspace{1em}
+\hrulefill\\
+\textbf{Step one: Define weights.}
+
+Noting that $w_s = \frac{d}{d \y_s} \muhat_{\cal}$, we can define
+
+$$
+\wmrp_s := \frac{d}{d\y_s} \muhat_{\mrp}. %= \meantar \frac{d}{d\y_s} \yhat_p.
+$$
+
+It happens that the needed derivatives are given
+by simple a posterior covariances involving only the inverse
+link function $m(\x; \theta)$ and
+log likelihood \citep{giordano:2018:covariances}:
+
+$$
+\frac{d \yhat_p}{d\y_s}  =
+    \cov{\p(\theta \vert \textrm{Survey data})}{
+        m(\x_p; \theta),
+        \frac{\partial}{\partial \y} \log p(\y \vert \theta, \x_s)}
+$$
+
+These can be computed using standard MCMC software \citep{brms}.
+
+No other weight definition will do --- in some cases,
+MrP is exactly a calibration estimator (e.g. linear regression with flat priors),
+and we want the definitions to coincide in that case.
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Covariate balance}
+
+
+How to form a notion of covariate balance for estimators that are not weighted averages?
+
+\splitpage{
+    \centering
+    \textbf{Calibration weights}\\
+    $\muhat_{\cal} = \meansur w_s y_s$
+}{
+    \centering
+    \textbf{MrP}\\
+    Take $\yhat_p = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_p}$ and\\
+    $\muhat_{\mrp} = \meantar \yhat_p$
+}
+
+\vspace{1em}
+\hrulefill\\
+\textbf{Step two: Specify a Taylor series.}
+
+\def\new{\mathrm{new}}
+Suppose we wanted to re--compute MrP with new
+survey responses $\y_s^{\new}$.
+
+$$
+\muhat_{\mrp}(\y_1^\new, \ldots, \y_{\nsur}^\new) =
+\sumsur \w_s^\mrp (\y_s^\new  - \y_s) + \mathrm{Residual}
+$$
+
+In general, MrP is truly nonlinear. The residual is only small when $\y_s^\new \approx \y_s$!
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Covariate balance}
+
+
+How to form a notion of covariate balance for estimators that are not weighted averages?
+
+\splitpage{
+    \centering
+    \textbf{Calibration weights}\\
+    $\muhat_{\cal} = \meansur w_s y_s$
+}{
+    \centering
+    \textbf{MrP}\\
+    Take $\yhat_p = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_p}$ and\\
+    $\muhat_{\mrp} = \meantar \yhat_p$
+}
+
+\vspace{1em}
+\hrulefill\\
+\textbf{Step three: Define a data perturbation that captures regression balance.}
+
+
+
+\end{frame}
+
+
+
