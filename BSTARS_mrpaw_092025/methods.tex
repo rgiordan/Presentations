@@ -155,15 +155,22 @@ weight estimators:
 
 \begin{block}{Raking calibration weights}
 % Select calibration weights to satisfy
-$$
-\begin{aligned}
-    \textrm{ Take }
-    \w_1, \ldots, \w_{\Nsur} :={}& \argmin \sumsur (\w_s - \w_s^{\mathrm{ref}})^2 \\
-    \textrm{Subject to }
-    \meantar f(\x_p) ={}& \meansur \w_s f(\x_s)
-    \textrm{ for some function }f(\cdot).
-\end{aligned}
-$$
+``Raking'' selects weights that
+%
+\begin{itemize}
+    \item Are as ``close as possible'' to some reference weights
+    \item Under the constraint that they balance some selected regressors.
+\end{itemize}
+%
+% $$
+% \begin{aligned}
+%     \textrm{ Take }
+%     \w_1, \ldots, \w_{\Nsur} :={}& \argmin \sumsur (\w_s - \w_s^{\mathrm{ref}})^2 \\
+%     \textrm{Subject to }
+%     \meantar f(\x_p) ={}& \meansur \w_s f(\x_s)
+%     \textrm{ for some function }f(\cdot).
+% \end{aligned}
+% $$
 \end{block}
 
 
@@ -172,6 +179,45 @@ $$
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Why covariate balance?}
+
+% Why would you want covariate balance?  Some commonly stated reasons:
+% %
+% \begin{itemize}
+% \item To reduce the variance of inverse propensity weights (IPW)
+% \item To check the accuracy of IPW
+% \item To exactly balance ``important regressors''
+% \end{itemize}
+%
+% Common to these motivations is the following concen:
+
+\begin{alertblock}{Why covariate balance?}
+We want to balance $f(\x)$ because we think
+$\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
+and want to check whether our estimator can capture this variability.
+\end{alertblock}
+
+
+This motivates the following \textbf{generalized covariate balance check}:
+
+\begin{block}{General covariate balance check (informal)}
+    Define a \emph{new response variable} $\ytil$ such that
+    $$
+    \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
+    $$
+    We know the change this is supposed to induce in the target population.\\[1em]
+
+    Covariate balance checks whether our estimators produce the same change.
+    %
+\end{block}
+
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -179,42 +225,54 @@ $$
 
 \begin{frame}[t]{Covariate balance}
 
-Why would you want covariate balance?  Some commonly stated reasons:
 
-%
-\begin{itemize}
-\item To reduce the variance of inverse propensity weights (IPW)
-\item To check the accuracy of IPW
-\item To exactly balance ``important regressors''
-\end{itemize}
-%
-Common to these motivations is the following concen:
-
-% \begin{block}{Why covariate balance?}
-    We want to balance $f(\x)$ because we think
-    $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$.
-    % \\[1em]
-
-    Covariate balance ensures that such variation is captured
-    by our calibration estimator.
-% \end{block}
-
-
-\begin{block}{General covariate balance check}
+\begin{block}{General covariate balance check (formal)}
     Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
     $$
-    We know the change this perturbation produces in the target distribution:
+    We know the expected change this perturbation produces in the target distribution:
     $$
-    \mu(\ytil) - \mu(\y) = \delta \meantar f(\x_p)
+    \begin{aligned}
+            \expect{}{\mu(\ytil) - \mu(\y) | \x} =
+            \meantar \left(\expect{}{\ytil | \x_p} - \expect{}{\y | \x_p}\right) =
+            \delta \meantar f(\x_p)
+    \end{aligned}
     $$
-    Covariate balance for an estimator $\muhat$ checks whether
-    $\muhat(\ytil) - \muhat(\y) = \mu(\ytil) - \mu(\y)$.
+    Covariate balance checks whether an estimator $\muhat(\cdot)$ produces
+    the same change:
+    $$
+    \begin{aligned}
+    \muhat(\ytil) - \muhat(\y)
+        \overset{\textrm{check}}{=}
+        \delta \meantar f(\x_p).
+    \end{aligned}
+    $$
 \end{block}
+
+When $\muhat(\y)$ is a calibration estimator, this is the same as covariate balance
+in expectation:
+$$
+\begin{aligned}
+    \expect{}{\muhat(\ytil) - \muhat(\y) | \x} =
+    % \meansur \w_s \left(\expect{}{\ytil | \x_p} - \expect{}{\y | \x_p}\right) =
+    \delta \meansur \w_s f(\x_p) \overset{\textrm{check}}{=}
+        \delta \meantar f(\x_p).
+\end{aligned}
+$$
+%
+But now all we need to do is compare $\muhat(\ytil) - \muhat(\y)$ for
+``nearby'' $\ytil$ and $\y$.
+
 
 
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
@@ -224,19 +282,7 @@ Common to these motivations is the following concen:
 
 \begin{frame}[t]{MrPaw}
 
-How to form a notion of covariate balance for estimators that are not weighted averages?
-
-\splitpage{
-    \centering
-    \textbf{Calibration weights}\\
-    $\muhat_{\cal} = \meansur w_s y_s$
-}{
-    \centering
-    \textbf{MrP}\\
-    Take $\yhat_p = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_p}$ and\\
-    $\muhat_{\mrp} = \meantar \yhat_p$
-}
-
+We need to approximate $\muhat_{\mrp}(\ytil) - \muhat_{\mrp}(\y)$.
 
 \vspace{1em}
 \hrulefill\\
@@ -316,26 +362,68 @@ In general, MrP is truly nonlinear. The residual is only small when $\y_s^\new \
 \begin{frame}[t]{Covariate balance}
 
 
-How to form a notion of covariate balance for estimators that are not weighted averages?
-
-\splitpage{
-    \centering
-    \textbf{Calibration weights}\\
-    $\muhat_{\cal} = \meansur w_s y_s$
-}{
-    \centering
-    \textbf{MrP}\\
-    Take $\yhat_p = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_p}$ and\\
-    $\muhat_{\mrp} = \meantar \yhat_p$
-}
-
-\vspace{1em}
-\hrulefill\\
 \textbf{Step three: Define a data perturbation that captures regression balance.}
 
-
+Recall that our $\y$ is binary.  How can we produce a $\ytil$ such that
+$\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$?
+%
+\begin{itemize}
+    \item Use an estimate of $\expect{}{\y \vert \x}$ to draw new binary data, or
+    \item Allow $\ytil$ to take values other than $\{0,1\}$ and set
+        $\ytil = \y + \delta \f(\x)$.
+\end{itemize}
+%
+Focus on the second (we have examples of the first).
 
 \end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Covariate balance}
+
+\begin{block}{Theorem}
+    %
+    \begin{itemize}
+        \item Let $\ytil = \y + \delta \f(\x)$,
+        \item $\muhat_{\mrp}$ be a hierachical logistic regression posterior expectation, and
+        % \item $\mathcal{F}$ a class of functions such that
+        %     $\sup_{\f \in \mathcal{F}} \expect{}{\norm{\x \f(\x)}_2^2} < \infty$
+        \item $\mathcal{F}$ be a class of uniformly bounded functions on $\x$.
+    \end{itemize}
+    %
+    Then, with probability approaching one, as $N \rightarrow \infty$,
+    $$
+    \begin{aligned}
+        \sup_{\f \in \mathcal{F}} \left(
+            \muhat_\mrp(\ytil) -
+            \left(\muhat_\mrp(\y) + \sumsur \w_s^{\mrp} \delta \f(\x_s) \right)
+            \right)
+        = O(\delta^2)
+        \quad\textrm{as }\delta \rightarrow 0
+    \end{aligned}
+    $$
+\end{block}
+
+The supremum over $\mathcal{F}$ is the primary technical contribution!
+It means we are justified in searching over regressors
+to find imbalance.
+
+Draws on our prior work on uniform and finite--sample error bounds for Bernstein--von Mises
+theorem--like results \citep{giordano:2024:bayesij,kasprzak:2025:laplace}.
+
+In practice, compute
+$$
+\textrm{Imbalance}(\f) := \sumsur \w_s^{\mrp} \f(\x_s)  - \meantar \f(\x_p)
+$$
+for any $\f(\cdot)$ you think might capture variability in $\y$.
+
+\end{frame}
+
+
 
 
 
