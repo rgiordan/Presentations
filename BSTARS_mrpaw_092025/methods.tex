@@ -192,7 +192,7 @@ weight estimators:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Why covariate balance?}
+\begin{frame}[t]{Generalized covariate balance checks}
 
 % Why would you want covariate balance?  Some commonly stated reasons:
 % %
@@ -211,7 +211,7 @@ and want to check whether our estimator can capture this variability.
 This motivates the following \textbf{generalized covariate balance check}:
 
 \only<2>{
-\begin{block}{Generalized covariate balance check (informal)}
+\begin{block}{Generalized covariate balance (GCB) (informal)}
     Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
@@ -224,7 +224,7 @@ This motivates the following \textbf{generalized covariate balance check}:
 }
 
 \only<3->{
-\begin{block}{Generalized covariate balance check (formal)}
+\begin{block}{Generalized covariate balance (GCB) (formal)}
     Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
@@ -241,7 +241,14 @@ This motivates the following \textbf{generalized covariate balance check}:
     the same change:
     $$
     \begin{aligned}
-    \muhat(\ytil) - \muhat(\y)
+        \underbrace{
+        \muhat(\ytil) - \muhat(\y)
+        }_{
+            \substack{
+                \text{Replace weighted averages} \\
+                \text{with changes in an estimator}
+            }
+        }
         \overset{\textrm{check}}{=}
         \delta \meantar f(\x_p).
     \end{aligned}
@@ -251,193 +258,13 @@ This motivates the following \textbf{generalized covariate balance check}:
 
 \onslide<4->{
     When $\muhat(\cdot) = \muhat_\cal(\cdot)$,
-    this recovers the standard covariate balance check.
+    GCB recovers the standard covariate balance check.
 }
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Covariate balance}
-
-
-
-When $\muhat(\y)$ is a calibration estimator, this is the same as covariate balance
-in expectation:
-$$
-\begin{aligned}
-    \expect{}{\muhat(\ytil) - \muhat(\y) | \x} =
-    % \meansur \w_s \left(\expect{}{\ytil | \x_p} - \expect{}{\y | \x_p}\right) =
-    \delta \meansur \w_s f(\x_p) \overset{\textrm{check}}{=}
-        \delta \meantar f(\x_p).
-\end{aligned}
-$$
-%
-But now all we need to do is compare $\muhat(\ytil) - \muhat(\y)$ for
-``nearby'' $\ytil$ and $\y$.
-
-
-
-\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{MrPaw}
-
-We need to approximate $\muhat_{\mrp}(\ytil) - \muhat_{\mrp}(\y)$.
-
-\vspace{1em}
-\hrulefill\\
-\textbf{Step one: Define weights.}
-
-Noting that $w_s = \frac{d}{d \y_s} \muhat_{\cal}$, we can define
-
-$$
-\wmrp_s := \frac{d}{d\y_s} \muhat_{\mrp}. %= \meantar \frac{d}{d\y_s} \yhat_p.
-$$
-
-It happens that the needed derivatives are given
-by simple a posterior covariances involving only the inverse
-link function $m(\x; \theta)$ and
-log likelihood \citep{giordano:2018:covariances}:
-
-$$
-\frac{d \yhat_p}{d\y_s}  =
-    \cov{\p(\theta \vert \textrm{Survey data})}{
-        m(\x_p; \theta),
-        \frac{\partial}{\partial \y} \log p(\y \vert \theta, \x_s)}
-$$
-
-These can be computed using standard MCMC software \citep{brms}.
-
-No other weight definition will do --- in some cases,
-MrP is exactly a calibration estimator (e.g. linear regression with flat priors),
-and we want the definitions to coincide in that case.
-
-\end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Covariate balance}
-
-
-How to form a notion of covariate balance for estimators that are not weighted averages?
-
-\splitpage{
-    \centering
-    \textbf{Calibration weights}\\
-    $\muhat_{\cal} = \meansur w_s y_s$
-}{
-    \centering
-    \textbf{MrP}\\
-    Take $\yhat_p = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_p}$ and\\
-    $\muhat_{\mrp} = \meantar \yhat_p$
-}
-
-\vspace{1em}
-\hrulefill\\
-\textbf{Step two: Specify a Taylor series.}
-
-\def\new{\mathrm{new}}
-Suppose we wanted to re--compute MrP with new
-survey responses $\y_s^{\new}$.
-
-$$
-\muhat_{\mrp}(\y_1^\new, \ldots, \y_{\nsur}^\new) =
-\sumsur \w_s^\mrp (\y_s^\new  - \y_s) + \mathrm{Residual}
-$$
-
-In general, MrP is truly nonlinear. The residual is only small when $\y_s^\new \approx \y_s$!
-
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Covariate balance}
-
-
-\textbf{Step three: Define a data perturbation that captures regression balance.}
-
-Recall that our $\y$ is binary.  How can we produce a $\ytil$ such that
-$\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$?
-%
-\begin{itemize}
-    \item Use an estimate of $\expect{}{\y \vert \x}$ to draw new binary data, or
-    \item Allow $\ytil$ to take values other than $\{0,1\}$ and set
-        $\ytil = \y + \delta \f(\x)$.
-\end{itemize}
-%
-Focus on the second (we have examples of the first).
-
-\end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Covariate balance}
-
-\begin{block}{Theorem}
-    %
-    \begin{itemize}
-        \item Let $\ytil = \y + \delta \f(\x)$,
-        \item $\muhat_{\mrp}$ be a hierachical logistic regression posterior expectation, and
-        % \item $\mathcal{F}$ a class of functions such that
-        %     $\sup_{\f \in \mathcal{F}} \expect{}{\norm{\x \f(\x)}_2^2} < \infty$
-        \item $\mathcal{F}$ be a class of uniformly bounded functions on $\x$.
-    \end{itemize}
-    %
-    Then, with probability approaching one, as $N \rightarrow \infty$,
-    $$
-    \begin{aligned}
-        \sup_{\f \in \mathcal{F}} \left(
-            \muhat_\mrp(\ytil) -
-            \left(\muhat_\mrp(\y) + \sumsur \w_s^{\mrp} \delta \f(\x_s) \right)
-            \right)
-        = O(\delta^2)
-        \quad\textrm{as }\delta \rightarrow 0
-    \end{aligned}
-    $$
-\end{block}
-
-The supremum over $\mathcal{F}$ is the primary technical contribution!
-It means we are justified in searching over regressors
-to find imbalance.
-
-Draws on our prior work on uniform and finite--sample error bounds for Bernstein--von Mises
-theorem--like results \citep{giordano:2024:bayesij,kasprzak:2025:laplace}.
-
-In practice, compute
-$$
-\textrm{Imbalance}(\f) := \sumsur \w_s^{\mrp} \f(\x_s)  - \meantar \f(\x_p)
-$$
-for any $\f(\cdot)$ you think might capture variability in $\y$.
-
-\end{frame}
-
-
-
-
-

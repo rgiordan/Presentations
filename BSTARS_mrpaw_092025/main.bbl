@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -20,31 +20,11 @@ A.~Bonica, R.~Fordham, J.~Grumbach, and E.~Tiburcio.
   \url{https://data4democracy.substack.com/p/did-non-voters-really-flip-republican},
   April 2025.
 
-\bibitem[Bürkner(2017)]{brms}
-Paul-Christian Bürkner.
-\newblock {brms}: An {R} package for {Bayesian} multilevel models using {Stan}.
-\newblock \emph{Journal of Statistical Software}, 80\penalty0 (1):\penalty0
-  1--28, 2017.
-\newblock \doi{10.18637/jss.v080.i01}.
-
-\bibitem[Giordano and Broderick(2024)]{giordano:2024:bayesij}
-R.~Giordano and T.~Broderick.
-\newblock The {Bayesian} infinitesimal jackknife for variance, 2024.
-\newblock URL \url{https://arxiv.org/abs/2305.06466}.
-
 \bibitem[Giordano et~al.(2018)Giordano, Broderick, and
   Jordan]{giordano:2018:covariances}
 R.~Giordano, T.~Broderick, and M.~I. Jordan.
 \newblock Covariances, robustness and variational bayes.
 \newblock \emph{Journal of machine learning research}, 19\penalty0 (51), 2018.
-
-\bibitem[Kasprzak et~al.(2025)Kasprzak, Giordano, and
-  Broderick]{kasprzak:2025:laplace}
-M.~Kasprzak, R.~Giordano, and T.~Broderick.
-\newblock How good is your {Laplace} approximation of the bayesian posterior?
-  {Finite}-sample computable error bounds for a variety of useful divergences,
-  2025.
-\newblock URL \url{https://arxiv.org/abs/2209.14992}.
 
 \bibitem[Solon et~al.(2015)Solon, Haider, and
   Wooldridge]{solon:2015:weightingfor}

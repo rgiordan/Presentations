@@ -1,0 +1,92 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Generalized covariate balance for MrP}
+
+% To apply GCB to MrP, we need two things:
+% %
+% \begin{itemize}
+%     \item To define a $\ytil$ with $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$
+%     \item To evaluate $\muhat_\mrp(\ytil) - \muhat_\mrp(\y)$.
+% \end{itemize}
+% %
+\textbf{Step one:} Construct
+$\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.
+\pause
+
+\textbf{Problem:} Our $\y$ is binary!  (We're motivated by hierarchical linear regression.)
+
+\pause
+Two possibilities:
+%
+\begin{itemize}
+    \item Allow $\ytil$ to take values other than $\{0,1\}$ and set
+        $\ytil = \y + \delta \f(\x)$, or
+    \item Use an estimate of $\expect{}{\y \vert \x}$ to draw new binary $\ytil$.
+\end{itemize}
+%
+We define theory and methods for the first, and provide tools for generating data
+using the second method for potentially problematic regressors.
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Generalized covariate balance for MrP}
+
+\textbf{Step one:} Take $\ytil = \y + \delta f(\x)$.\\
+\textbf{Step two:} Evaluate $\muhat_\mrp(\ytil) - \muhat(\y)$.
+
+\pause
+
+\textbf{Problem:} $\muhat_\mrp(\cdot)$ is computed with MCMC.
+%
+\begin{itemize}
+\item Takes hours to re-run, and
+\item Output is noisy, and $\muhat_\mrp(\ytil) - \muhat(\y)$ may be small.
+\end{itemize}
+%
+
+\pause
+\begin{block}{Taylor series}
+Form the approximation
+$$
+\muhat_{\mrp}(\ytil) =
+    \sumsur \w_s^\mrp (\ytil_s  - \y_s) + \mathrm{Residual}
+\quad\textrm{where}\quad
+    \wmrp_s := \frac{d}{d\y_s} \muhat_{\mrp}(\y). %= \meantar \frac{d}{d\y_s} \yhat_p.
+$$
+\end{block}
+
+\only<3>{
+If MrP were linear (e.g.~if you use OLS instead of hierarchical
+logistic regression), then
+%
+\begin{itemize}
+\item The residual is zero,
+\item $\muhat_{\mrp}(\y) = \sumsur \w_s^\mrp \y_s$, and so
+\item $\muhat_{\mrp}(\ytil)$ is a calibration weighting
+estimator, and $\wmrp_s$ are its weights.  (Cite Gelman)
+\end{itemize}
+%
+In general, MrP is truly nonlinear. The residual is only small when $\ytil \approx \y$
+(i.e., when $\delta \ll 1$).
+}
+
+\only<4->{
+It happens that the needed derivatives are given
+by simple a posterior covariances involving only the inverse
+link function $m(\x; \theta)$ and
+log likelihood \citep{giordano:2018:covariances}.
+}
+
+
+
+\end{frame}
