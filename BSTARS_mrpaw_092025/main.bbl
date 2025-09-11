@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -45,5 +45,12 @@ M.~Kasprzak, R.~Giordano, and T.~Broderick.
   {Finite}-sample computable error bounds for a variety of useful divergences,
   2025.
 \newblock URL \url{https://arxiv.org/abs/2209.14992}.
+
+\bibitem[Solon et~al.(2015)Solon, Haider, and
+  Wooldridge]{solon:2015:weightingfor}
+G.~Solon, S.~Haider, and J.~Wooldridge.
+\newblock What are we weighting for?
+\newblock \emph{Journal of Human resources}, 50\penalty0 (2):\penalty0
+  301--316, 2015.
 
 \end{thebibliography}

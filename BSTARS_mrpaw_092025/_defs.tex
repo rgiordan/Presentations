@@ -20,21 +20,21 @@
 
 % Sets of data in the survey and target
 
-\def\sur{S}
-\def\tar{T}
-\def\nsur{\mathcal{N}_{\sur}}
-\def\ntar{\mathcal{N}_{\tar}}
+\def\sur{\mathcal{S}}
+\def\tar{\mathcal{T}}
+\def\nsur{S}
+\def\ntar{T}
 
-\def\Nsur{N_{\sur}}
-\def\Ntar{N_{\tar}}
+\def\Nsur{S}
+\def\Ntar{T}
 
 \def\f{f}
 \def\sumn{\sum_{n=1}^N}
 \def\meann{\frac{1}{N} \sum_{n=1}^N}
-\def\sumsur{\sum_{n \in \nsur}}
-\def\sumtar{\sum_{n \in \ntar}}
-\def\meansur{\frac{1}{\Nsur} \sum_{n \in \nsur}}
-\def\meantar{\frac{1}{\Ntar} \sum_{n \in \ntar}}
+\def\sumsur{\sum_{s=1}^\Nsur}
+\def\sumtar{\sum_{t=1}^\Ntar}
+\def\meansur{\frac{1}{\Nsur} \sumsur}
+\def\meantar{\frac{1}{\Ntar} \sumtar}
 
 
 % Distributions of x or (x, y) in the survey and target
@@ -136,20 +136,21 @@
 \def\Ysur{Y_{\sur}}
 
 \def\splitpage#1#2{
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}[t]{0.45\textwidth}
     #1
 \end{minipage}
 \hfill\vrule\hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}[t]{0.45\textwidth}
     #2
 \end{minipage}
 }
 
 \def\splitpagenoline#1#2{
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}[t]{0.45\textwidth}
     #1
 \end{minipage}
-\begin{minipage}{0.45\textwidth}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
     #2
 \end{minipage}
 }

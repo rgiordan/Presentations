@@ -15,7 +15,6 @@ We want the average response in a target population,
 in which we observe only covariates.
 
 
-
 \splitpage{
     \centering
     \only<1>{
@@ -34,7 +33,7 @@ in which we observe only covariates.
     Observe $(\x_s, y_s)$ for $s = 1, \ldots, \nsur$\\
 }{
     \centering
-    Observe $\x_p$ for $p = 1, \ldots, \ntar$\\
+    Observe $\x_t$ for $t = 1, \ldots, \ntar$\\
 }
 
 \onslide<2->{
@@ -56,54 +55,65 @@ in which we observe only covariates.
 
 \begin{frame}[t]{Two approaches}
 
-We want $\mu := \meantar \y_p$, but don't observe $\y_p$ in the target population.
+We want $\mu := \meantar \y_t$, but don't observe target population $\y_t$.
 
 \begin{itemize}
-    \item Assume $p(y | x)$ is the same in both populations,
-    \item But the distribution of $x$ may be different in the survey and target.
+    \item Assume $p(y | \x)$ is the same in both populations,
+    \item But the distribution of $\x$ may be different in the survey and target.
 \end{itemize}
 %
+\pause
 
-\splitpage{
+\splitpagenoline{
     \centering
     \textbf{Calibration weighting}
 }{
     \centering
     \textbf{Bayesian hierarchical modeling (MrP)}
 }
-
+%
+%\\\hrulefill\\
+\\[1em]
+%
 \splitpage{
     \centering
+    $\blacktriangleright$
     Choose ``calibration weights'' $w_s$\\
     (e.g.~raking weights)
 }{
     \centering
-    Choose a model $\p(\y | x, \theta)$ and prior $\p(\theta)$\\
+    $\blacktriangleright$
+    Choose model $\p(\y | x, \theta)$ and prior $\p(\theta)$\\
     (e.g.~Hierarchical logitstic regression)
-}
-
-\splitpage{
+} \pause
+%
+\\[1em]
+\splitpagenoline{
     \centering
+    $\blacktriangleright$ Take
     $\muhat_{\cal} = \meansur w_s y_s$
 }{
     \centering
-    Take $\yhat_p = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_p}$ and\\
-    $\muhat_{\mrp} = \meantar \yhat_p$
-}
-
-\splitpage{
+    $\blacktriangleright$ Take
+    $\yhat_t = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_t}$ and\\
+    $\muhat_{\mrp} = \meantar \yhat_t$
+}\pause
+%
+\\[1em]
+\splitpagenoline{
     \centering
-    Dependence on $\y_s$ is obvious\\
+    $\blacktriangleright$ Dependence on $\y_s$ is obvious\\
     ($\w_s$ typically chosen using only $\x$)
 }{
     \centering
-    Dependence on $\y_s$ very complicated\\
+    $\blacktriangleright$ Dependence on $\y_s$ very complicated\\
     (Typically via MCMC draws from $\p(\theta \vert \textrm{Survey data})$)
-}
-
-\splitpage{
+}\pause
+%
+\\[1em]
+\splitpagenoline{
     \centering
-    Weights give interpretable diagnostics:
+    $\blacktriangleright$ Weights give interpretable diagnostics:
     %
     \begin{itemize}
         \item Frequentist variability
@@ -113,11 +123,11 @@ We want $\mu := \meantar \y_p$, but don't observe $\y_p$ in the target populatio
     %
 }{
     \centering
-    \textbf{Black box}
+    $\blacktriangleright$ \textbf{Black box}\\
+    \pause
+    $\leftarrow$ (We open this box, providing analogues of all these diagnostics)
 }
 
-We open the MrP black box, and provide versions of all these diagnostics,
-for nonlinear hierarchical models fit with MCMC.
 
 \end{frame}
 
@@ -127,19 +137,16 @@ for nonlinear hierarchical models fit with MCMC.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Covariate balance}
+\begin{frame}[t]{What are we weighting for?\footnote{Pun attributable to \citet{solon:2015:weightingfor}}}
 
-What do we want out of calibration weights?
 
+We want:
 $$
-\textrm{Target average} =
+\textrm{Target average response} =
 \meantar \y_p \approx \meansur \w_s \y_s
-= \textrm{Weighted survey average}
+= \textrm{Weighted survey average response }
 $$
-
-We can't check this, because we don't observe $\y_p$.  But we can check
-whether
-
+We can't check this, because we don't observe $\y_p$.  \pause But we can check whether:
 $$
 % \textrm{Target average regeressor} =
     \meantar \x_p = \meansur \w_s \x_s
@@ -150,6 +157,7 @@ Such weights satisfy ``covariate balance'' for $\x$.
 
 You can check covariate balance for any calibration weighting estimator.
 
+\pause
 Even more, covariate balance is the criterion for a popular class of calibration
 weight estimators:
 
@@ -196,17 +204,15 @@ weight estimators:
 %
 % Common to these motivations is the following concen:
 
-\begin{alertblock}{Why covariate balance?}
 We want to balance $f(\x)$ because we think
 $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
 and want to check whether our estimator can capture this variability.
-\end{alertblock}
-
 
 This motivates the following \textbf{generalized covariate balance check}:
 
-\begin{block}{General covariate balance check (informal)}
-    Define a \emph{new response variable} $\ytil$ such that
+\only<2>{
+\begin{block}{Generalized covariate balance check (informal)}
+    Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
     $$
@@ -215,18 +221,10 @@ This motivates the following \textbf{generalized covariate balance check}:
     Covariate balance checks whether our estimators produce the same change.
     %
 \end{block}
+}
 
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Covariate balance}
-
-
-\begin{block}{General covariate balance check (formal)}
+\only<3->{
+\begin{block}{Generalized covariate balance check (formal)}
     Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
@@ -239,7 +237,7 @@ This motivates the following \textbf{generalized covariate balance check}:
             \delta \meantar f(\x_p)
     \end{aligned}
     $$
-    Covariate balance checks whether an estimator $\muhat(\cdot)$ produces
+    Then, check whether your estimator $\muhat(\cdot)$ produces
     the same change:
     $$
     \begin{aligned}
@@ -249,6 +247,22 @@ This motivates the following \textbf{generalized covariate balance check}:
     \end{aligned}
     $$
 \end{block}
+}
+
+\onslide<4->{
+    When $\muhat(\cdot) = \muhat_\cal(\cdot)$,
+    this recovers the standard covariate balance check.
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Covariate balance}
+
+
 
 When $\muhat(\y)$ is a calibration estimator, this is the same as covariate balance
 in expectation:
