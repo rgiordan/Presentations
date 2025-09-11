@@ -85,8 +85,58 @@ It happens that the needed derivatives are given
 by simple a posterior covariances involving only the inverse
 link function $m(\x; \theta)$ and
 log likelihood \citep{giordano:2018:covariances}.
+\\[1em]
+These can be computed using standard MCMC software (e.g.~\citet{brms}).
 }
 
 
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Covariate balance}
+
+\begin{block}{Theorem}
+    %
+    \begin{itemize}
+        \item Let $\ytil = \y + \delta \f(\x)$,
+        \item $\muhat_{\mrp}$ be a hierachical logistic regression posterior expectation, and
+        % \item $\mathcal{F}$ a class of functions such that
+        %     $\sup_{\f \in \mathcal{F}} \expect{}{\norm{\x \f(\x)}_2^2} < \infty$
+        \item $\mathcal{F}$ be a Donsker class of uniformly bounded functions on $\x$.
+    \end{itemize}
+    %
+    Then, with probability approaching one, as $N \rightarrow \infty$,
+    $$
+    \begin{aligned}
+        \sup_{\f \in \mathcal{F}} \left(
+            \muhat_\mrp(\ytil) -
+            \left(\muhat_\mrp(\y) + \sumsur \w_s^{\mrp} \delta \f(\x_s) \right)
+            \right)
+        = O(\delta^2)
+        \quad\textrm{as }\delta \rightarrow 0
+    \end{aligned}
+    $$
+\end{block}
+
+The supremum over $\mathcal{F}$ is the primary technical contribution!
+It means we are justified in searching over regressors
+to find imbalance.
+
+Draws on our prior work on uniform and finite--sample error bounds for Bernstein--von Mises
+theorem--like results \citep{giordano:2024:bayesij,kasprzak:2025:laplace}.
+
+% In practice, compute
+% $$
+% \textrm{Imbalance}(\f) := \sumsur \w_s^{\mrp} \f(\x_s)  - \meantar \f(\x_p)
+% $$
+% for any $\f(\cdot)$ you think might capture variability in $\y$.
+
+\end{frame}
+
+
+
+
