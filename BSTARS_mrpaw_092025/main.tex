@@ -14,9 +14,8 @@
 \input{figures_knitr.tex}
 
 
-\title{MrPaw}
-
-\author{Ryan Giordano (\texttt{rgiordano@berkeley.edu}, UC Berkeley), ..,}
+\title{Local Weighting--Based Diagnostics for Bayesian Poststratification}
+\author{Ryan Giordano, Alice Cima, Erin Hartman, Jared Murray, Avi Feller}
 
 \date{\textbf{Berkeley BSTARS September 2025}}
 
@@ -32,6 +31,39 @@
 \input{methods}
 
 \input{taylor}
+
+
+
+\begin{frame}{Experiment}
+
+Show using the Alexander experiment that
+%
+\begin{itemize}
+    \item The MrPaw approximation is accurate, even up to a standard deviation away
+    \item Differential imbalance actually exists between raking and MrP and we can detect it
+    \item We can make binary datasets for the changes, and there's variability in how to do that
+\end{itemize}
+%
+Remind that we can do frequentist variance and partial pooling too.
+
+\end{frame}
+
+\begin{frame}{Experiment}
+\includegraphics[height=0.9\textheight]{static_figures/mrpaw.png}
+\end{frame}
+
+
+
+\begin{frame}{Future work and generalizations}
+%
+\begin{itemize}
+    \item Instance of a very general class of local consistency checks that generalize
+          classical regression checks (work with Sequoia)
+    \item Versions for GLMMs (work with Vladimir)
+    \item Going beyond classical Bayesian sensitivity (work with Lucas)
+\end{itemize}
+%
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
