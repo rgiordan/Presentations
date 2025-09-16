@@ -53,7 +53,7 @@ source("figures_knitr/imbalance_primary.R", print.eval=TRUE)
 
 \newcommand{\AlexanderImbalanceInteraction}{
 <<>>=
-figcap <- paste0("Imbalance plot for interaction effects")
+figcap <- paste0("Imbalance plot for select interaction effects")
 @
 <<alexanderinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
 source("figures_knitr/imbalance_interaction.R", print.eval=TRUE)

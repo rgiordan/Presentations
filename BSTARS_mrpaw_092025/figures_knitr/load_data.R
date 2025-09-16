@@ -8,6 +8,9 @@ sim_data <- LoadIntoEnvironment(
 basic_data <- LoadIntoEnvironment(
     file.path(data_path, "alexander_basic_data.Rdata"))
 
+refit_data <- LoadIntoEnvironment(
+  file.path(data_path, sprintf("alexander_%s_refit.Rdata", col_pert_clean)))
+
 
 clean_regressors <- function(reg) {
   df <- data.frame(reg=reg) %>%
