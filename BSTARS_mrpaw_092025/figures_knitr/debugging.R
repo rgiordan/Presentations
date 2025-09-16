@@ -20,10 +20,4 @@ DefineMacro <- function(macro_name, value, digits=3) {
 }
 
 
-basic_metrics <- basic_data$basic_metrics
-DefineMacro("AlexNSur", basic_metrics$n_survey)
-DefineMacro("AlexNTar", basic_metrics$n_target)
-DefineMacro("AlexSurmean", basic_metrics$survey_mean, digits=3)
-DefineMacro("AlexMrp", basic_metrics$mrp, digits=3)
-DefineMacro("AlexRaking", basic_metrics$raking, digits=3)
 
