@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1757983582 "main.aux" "main.bbl" "main" 1757983760
+["bibtex main"] 1757984851 "main.aux" "main.bbl" "main" 1757984853
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1757983760 4362 68e9d9caf06d6298a357649fe9dead5c "lualatex"
-  "references.bib" 1757981769 3413 862aa8857ddcee5ca1d4caa44d8da089 ""
+  "main.aux" 1757984853 4296 d029e8521e2d982a9de3bacd675b0203 "lualatex"
+  "references.bib" 1757984848 3494 e3d8245fcd9e86558773ede9e098fcb7 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1757983758 "main.tex" "main.pdf" "main" 1757983760
+["lualatex"] 1757984851 "main.tex" "main.pdf" "main" 1757984853
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -402,14 +402,14 @@
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1713476517 4555314 730eb04a0c5eb13602d9bcfb1d963bc4 ""
   "_defs.tex" 1757632035 3848 1049a836db4b6f58577f8fe98d57350d ""
   "_headers.tex" 1757980330 3441 5897480488e33992f2740302ddb74abd ""
-  "experiments.tex" 1757983756 1106 cd0d97218fa66c54d1a7d2fe19370db6 ""
+  "experiments.tex" 1757984809 2238 ed6ca0c2c995f9b8d39cfe49c6fba54b ""
   "figure/alexanderbalance-1.png" 1757983758 102129 878a6c7c9894b698059e55ec6a65bbda ""
   "figures_knitr.tex" 1757983758 875 4a3a1ff110a831c06542f489d88cc3e7 ""
   "introduction.tex" 1757631612 2621 692953cdbc3c77a84cdce2e40ab56d0e ""
-  "main.aux" 1757983760 4362 68e9d9caf06d6298a357649fe9dead5c "lualatex"
-  "main.bbl" 1757983582 3046 a5d198202d37700a72e481dc6c1ec28a "bibtex main"
-  "main.nav" 1757983760 1499 f00fbb03a1daf6c14ea9b0c050a7f69e "lualatex"
-  "main.out" 1757983759 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.aux" 1757984853 4296 d029e8521e2d982a9de3bacd675b0203 "lualatex"
+  "main.bbl" 1757984851 2918 3ab8a416ec8fc5731805ea038a3d0cfc "bibtex main"
+  "main.nav" 1757984853 1499 f00fbb03a1daf6c14ea9b0c050a7f69e "lualatex"
+  "main.out" 1757984852 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   "main.tex" 1757983487 1671 70b576ff37d247340dfde595d1fbfe26 ""
   "methods.tex" 1757979557 7143 0f6580ac02188c41d00c2733b7b31b90 ""
   "static_figures/survey_crazy_man.jpg" 1757028250 29616 36ac7003c50949c58ea9f98177d268fe ""

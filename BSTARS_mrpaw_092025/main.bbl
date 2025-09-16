@@ -5,10 +5,11 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Alexander(2023)]{alexander:2023:telling}
-R.~Alexander.
-\newblock \emph{Telling Stories with Data: {With} Applications in R}.
-\newblock Chapman and Hall/CRC, 2023.
+\bibitem[Alexander(2019)]{alexander:2019:namechange}
+M.~Alexander.
+\newblock Analyzing name changes after marriage using a non-representative
+  survey, 2019.
+\newblock URL \url{https://www.monicaalexander.com/posts/2019-08-07-mrp/}.
 
 \bibitem[{Blue Rose Research}(2024)]{blueroseresearch:2024}
 {Blue Rose Research}.
@@ -31,6 +32,11 @@ Paul-Christian Bürkner.
 \newblock \emph{Journal of Statistical Software}, 80\penalty0 (1):\penalty0
   1--28, 2017.
 \newblock \doi{10.18637/jss.v080.i01}.
+
+\bibitem[Cohen(2019)]{cohen:2019:namechange}
+P.~Cohen.
+\newblock Marital name change survey, Apr 2019.
+\newblock URL \url{osf.io/uzqdn}.
 
 \bibitem[Giordano and Broderick(2024)]{giordano:2024:bayesij}
 R.~Giordano and T.~Broderick.
@@ -64,12 +70,5 @@ G.~Solon, S.~Haider, and J.~Wooldridge.
 \newblock What are we weighting for?
 \newblock \emph{Journal of Human resources}, 50\penalty0 (2):\penalty0
   301--316, 2015.
-
-\bibitem[Tausanovitch et~al.(2019)Tausanovitch, Vavreck, Reny, Hayes, and
-  Rudkin]{tausanovitch:2019:democracy}
-C.~Tausanovitch, L.~Vavreck, T.~Reny, A.~Hayes, and A.~Rudkin.
-\newblock Democracy fund {UCLA} nationscape methodology and representativeness
-  assessment.
-\newblock \emph{Democracy Fund Voter Study Group}, 2019.
 
 \end{thebibliography}

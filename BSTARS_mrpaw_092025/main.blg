@@ -3,49 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: references.bib
-Repeated entry---line 105 of file references.bib
- : @article{brms
- :              ,
-I'm skipping whatever remains of this entry
 You've used 10 entries,
             2773 wiz_defined-function locations,
-            649 strings with 6634 characters,
-and the built_in function-call counts, 4394 in all, are:
-= -- 364
-> -- 312
-< -- 4
-+ -- 106
-- -- 96
-* -- 357
-:= -- 700
+            651 strings with 6569 characters,
+and the built_in function-call counts, 4185 in all, are:
+= -- 354
+> -- 274
+< -- 5
++ -- 94
+- -- 84
+* -- 328
+:= -- 657
 add.period$ -- 32
 call.type$ -- 10
-change.case$ -- 61
+change.case$ -- 58
 chr.to.int$ -- 10
 cite$ -- 20
-duplicate$ -- 179
-empty$ -- 337
-format.name$ -- 108
-if$ -- 898
+duplicate$ -- 169
+empty$ -- 338
+format.name$ -- 96
+if$ -- 863
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 6
+missing$ -- 3
 newline$ -- 60
 num.names$ -- 40
-pop$ -- 138
+pop$ -- 134
 preamble$ -- 1
-purify$ -- 52
+purify$ -- 48
 quote$ -- 0
-skip$ -- 156
+skip$ -- 154
 stack$ -- 0
 substring$ -- 61
-swap$ -- 11
+swap$ -- 12
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 105
+type$ -- 110
 warning$ -- 0
 while$ -- 34
 width$ -- 0
 write$ -- 134
-(There was 1 error message)
