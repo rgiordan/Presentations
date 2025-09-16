@@ -38,3 +38,24 @@ figcap <- paste0("Balance checks for Alexander")
 source("figures_knitr/predictions_plot.R", print.eval=TRUE)
 @
 }
+
+
+
+\newcommand{\AlexanderImbalancePrimary}{
+<<>>=
+figcap <- paste0("Imbalance plot for primary effects")
+@
+<<alexanderprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/imbalance_primary.R", print.eval=TRUE)
+@
+}
+
+
+\newcommand{\AlexanderImbalanceInteraction}{
+<<>>=
+figcap <- paste0("Imbalance plot for interaction effects")
+@
+<<alexanderinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/imbalance_interaction.R", print.eval=TRUE)
+@
+}

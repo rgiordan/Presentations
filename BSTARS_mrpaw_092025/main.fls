@@ -782,6 +782,12 @@ INPUT ./taylor.tex
 INPUT ./taylor.tex
 INPUT ./experiments.tex
 INPUT ./experiments.tex
+INPUT ./figure/alexanderprimary-1.png
+INPUT ./figure/alexanderprimary-1.png
+INPUT ./figure/alexanderprimary-1.png
+INPUT ./figure/alexanderinteraction-1.png
+INPUT ./figure/alexanderinteraction-1.png
+INPUT ./figure/alexanderinteraction-1.png
 INPUT ./figure/alexanderbalance-1.png
 INPUT ./figure/alexanderbalance-1.png
 INPUT ./figure/alexanderbalance-1.png
