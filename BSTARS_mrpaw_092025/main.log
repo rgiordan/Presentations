@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 SEP 2025 13:44
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 SEP 2025 15:19
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1041,13 +1041,6 @@ Package caption Info: Hyperref support is turned off
 \c@subfigure=\count354
 \c@subtable=\count355
 )
-(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip77
-\bibsep=\skip78
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count356
-)
 (/usr/share/texlive/texmf-dist/tex/latex/tikz-bayesnet/tikzlibrarybayesnet.code
 .tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
@@ -1150,8 +1143,8 @@ Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
 \t@pgfplots@tokb=\toks51
 \t@pgfplots@tokc=\toks52
 \pgfplots@tmpa=\dimen313
-\c@pgfplots@coordindex=\count357
-\c@pgfplots@scanlineindex=\count358
+\c@pgfplots@coordindex=\count356
+\c@pgfplots@scanlineindex=\count357
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
 .tex))
@@ -1176,13 +1169,13 @@ tructure.code.tex)
 tructureext.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
 .code.tex
-\c@pgfplotsarray@tmp=\count359
+\c@pgfplotsarray@tmp=\count358
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
 x.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
-\c@pgfplotstable@counta=\count360
+\c@pgfplotstable@counta=\count359
 \t@pgfplotstable@a=\toks53
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
@@ -1195,7 +1188,7 @@ de.tex))
 .tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
 fshading.code.tex
-\c@pgfplotslibrarysurf@no=\count361
+\c@pgfplotslibrarysurf@no=\count360
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
 shading.pgfsys-luatex.def)))
@@ -1227,7 +1220,7 @@ e.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen316
 \pgfdecoratedinputsegmentremainingdistance=\dimen317
 \pgf@decorate@distancetomove=\dimen318
-\pgf@decorate@repeatstate=\count362
+\pgf@decorate@repeatstate=\count361
 \pgfdecorationsegmentamplitude=\dimen319
 \pgfdecorationsegmentlength=\dimen320
 )
@@ -1243,7 +1236,7 @@ zlibrarydecorations.pathreplacing.code.tex
 decorations.pathreplacing.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
 ntourlua.code.tex)
-\pgfplots@numplots=\count363
+\pgfplots@numplots=\count362
 \pgfplots@xmin@reg=\dimen321
 \pgfplots@xmax@reg=\dimen322
 \pgfplots@ymin@reg=\dimen323
@@ -1270,53 +1263,53 @@ Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
 Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count364
+\c@abspage=\count363
 Package zref Info: New property: abspage on input line 66.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip79
-\c@mdf@globalstyle@cnt=\count365
-\mdf@skipabove@length=\skip80
-\mdf@skipbelow@length=\skip81
-\mdf@leftmargin@length=\skip82
-\mdf@rightmargin@length=\skip83
-\mdf@innerleftmargin@length=\skip84
-\mdf@innerrightmargin@length=\skip85
-\mdf@innertopmargin@length=\skip86
-\mdf@innerbottommargin@length=\skip87
-\mdf@splittopskip@length=\skip88
-\mdf@splitbottomskip@length=\skip89
-\mdf@outermargin@length=\skip90
-\mdf@innermargin@length=\skip91
-\mdf@linewidth@length=\skip92
-\mdf@innerlinewidth@length=\skip93
-\mdf@middlelinewidth@length=\skip94
-\mdf@outerlinewidth@length=\skip95
-\mdf@roundcorner@length=\skip96
-\mdf@footenotedistance@length=\skip97
-\mdf@userdefinedwidth@length=\skip98
-\mdf@needspace@length=\skip99
-\mdf@frametitleaboveskip@length=\skip100
-\mdf@frametitlebelowskip@length=\skip101
-\mdf@frametitlerulewidth@length=\skip102
-\mdf@frametitleleftmargin@length=\skip103
-\mdf@frametitlerightmargin@length=\skip104
-\mdf@shadowsize@length=\skip105
-\mdf@extratopheight@length=\skip106
-\mdf@subtitleabovelinewidth@length=\skip107
-\mdf@subtitlebelowlinewidth@length=\skip108
-\mdf@subtitleaboveskip@length=\skip109
-\mdf@subtitlebelowskip@length=\skip110
-\mdf@subtitleinneraboveskip@length=\skip111
-\mdf@subtitleinnerbelowskip@length=\skip112
-\mdf@subsubtitleabovelinewidth@length=\skip113
-\mdf@subsubtitlebelowlinewidth@length=\skip114
-\mdf@subsubtitleaboveskip@length=\skip115
-\mdf@subsubtitlebelowskip@length=\skip116
-\mdf@subsubtitleinneraboveskip@length=\skip117
-\mdf@subsubtitleinnerbelowskip@length=\skip118
+\mdf@templength=\skip77
+\c@mdf@globalstyle@cnt=\count364
+\mdf@skipabove@length=\skip78
+\mdf@skipbelow@length=\skip79
+\mdf@leftmargin@length=\skip80
+\mdf@rightmargin@length=\skip81
+\mdf@innerleftmargin@length=\skip82
+\mdf@innerrightmargin@length=\skip83
+\mdf@innertopmargin@length=\skip84
+\mdf@innerbottommargin@length=\skip85
+\mdf@splittopskip@length=\skip86
+\mdf@splitbottomskip@length=\skip87
+\mdf@outermargin@length=\skip88
+\mdf@innermargin@length=\skip89
+\mdf@linewidth@length=\skip90
+\mdf@innerlinewidth@length=\skip91
+\mdf@middlelinewidth@length=\skip92
+\mdf@outerlinewidth@length=\skip93
+\mdf@roundcorner@length=\skip94
+\mdf@footenotedistance@length=\skip95
+\mdf@userdefinedwidth@length=\skip96
+\mdf@needspace@length=\skip97
+\mdf@frametitleaboveskip@length=\skip98
+\mdf@frametitlebelowskip@length=\skip99
+\mdf@frametitlerulewidth@length=\skip100
+\mdf@frametitleleftmargin@length=\skip101
+\mdf@frametitlerightmargin@length=\skip102
+\mdf@shadowsize@length=\skip103
+\mdf@extratopheight@length=\skip104
+\mdf@subtitleabovelinewidth@length=\skip105
+\mdf@subtitlebelowlinewidth@length=\skip106
+\mdf@subtitleaboveskip@length=\skip107
+\mdf@subtitlebelowskip@length=\skip108
+\mdf@subtitleinneraboveskip@length=\skip109
+\mdf@subtitleinnerbelowskip@length=\skip110
+\mdf@subsubtitleabovelinewidth@length=\skip111
+\mdf@subsubtitlebelowlinewidth@length=\skip112
+\mdf@subsubtitleaboveskip@length=\skip113
+\mdf@subsubtitlebelowskip@length=\skip114
+\mdf@subsubtitleinneraboveskip@length=\skip115
+\mdf@subsubtitleinnerbelowskip@length=\skip116
 
 (/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
@@ -1326,43 +1319,43 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \mdf@splitbox@one=\box104
 \mdf@splitbox@two=\box105
 \mdf@splitbox@save=\box106
-\mdfsplitboxwidth=\skip119
-\mdfsplitboxtotalwidth=\skip120
-\mdfsplitboxheight=\skip121
-\mdfsplitboxdepth=\skip122
-\mdfsplitboxtotalheight=\skip123
-\mdfframetitleboxwidth=\skip124
-\mdfframetitleboxtotalwidth=\skip125
-\mdfframetitleboxheight=\skip126
-\mdfframetitleboxdepth=\skip127
-\mdfframetitleboxtotalheight=\skip128
-\mdffootnoteboxwidth=\skip129
-\mdffootnoteboxtotalwidth=\skip130
-\mdffootnoteboxheight=\skip131
-\mdffootnoteboxdepth=\skip132
-\mdffootnoteboxtotalheight=\skip133
-\mdftotallinewidth=\skip134
-\mdfboundingboxwidth=\skip135
-\mdfboundingboxtotalwidth=\skip136
-\mdfboundingboxheight=\skip137
-\mdfboundingboxdepth=\skip138
-\mdfboundingboxtotalheight=\skip139
-\mdf@freevspace@length=\skip140
-\mdf@horizontalwidthofbox@length=\skip141
-\mdf@verticalmarginwhole@length=\skip142
-\mdf@horizontalspaceofbox=\skip143
-\mdfsubtitleheight=\skip144
-\mdfsubsubtitleheight=\skip145
-\c@mdfcountframes=\count366
+\mdfsplitboxwidth=\skip117
+\mdfsplitboxtotalwidth=\skip118
+\mdfsplitboxheight=\skip119
+\mdfsplitboxdepth=\skip120
+\mdfsplitboxtotalheight=\skip121
+\mdfframetitleboxwidth=\skip122
+\mdfframetitleboxtotalwidth=\skip123
+\mdfframetitleboxheight=\skip124
+\mdfframetitleboxdepth=\skip125
+\mdfframetitleboxtotalheight=\skip126
+\mdffootnoteboxwidth=\skip127
+\mdffootnoteboxtotalwidth=\skip128
+\mdffootnoteboxheight=\skip129
+\mdffootnoteboxdepth=\skip130
+\mdffootnoteboxtotalheight=\skip131
+\mdftotallinewidth=\skip132
+\mdfboundingboxwidth=\skip133
+\mdfboundingboxtotalwidth=\skip134
+\mdfboundingboxheight=\skip135
+\mdfboundingboxdepth=\skip136
+\mdfboundingboxtotalheight=\skip137
+\mdf@freevspace@length=\skip138
+\mdf@horizontalwidthofbox@length=\skip139
+\mdf@verticalmarginwhole@length=\skip140
+\mdf@horizontalspaceofbox=\skip141
+\mdfsubtitleheight=\skip142
+\mdfsubsubtitleheight=\skip143
+\c@mdfcountframes=\count365
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- failed******
 
-\mdf@envdepth=\count367
-\c@mdf@env@i=\count368
-\c@mdf@env@ii=\count369
-\c@mdf@zref@counter=\count370
+\mdf@envdepth=\count366
+\c@mdf@env@i=\count367
+\c@mdf@env@ii=\count368
+\c@mdf@zref@counter=\count369
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xargs/xargs.sty
@@ -1376,10 +1369,10 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks54
 \XKV@tempa@toks=\toks55
 )
-\XKV@depth=\count371
+\XKV@depth=\count370
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\xargs@max=\count372
+\xargs@max=\count371
 \xargs@toksa=\toks56
 \xargs@toksb=\toks57
 )
@@ -1389,9 +1382,9 @@ Package: mathtools 2021/02/02 v1.28 mathematical typesetting tools
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count373
+\g_MT_multlinerow_int=\count372
 \l_MT_multwidth_dim=\dimen327
-\origjot=\skip146
+\origjot=\skip144
 \l_MT_shortvdotswithinadjustabove_dim=\dimen328
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen329
 \l_MT_above_intertext_sep=\dimen330
@@ -1437,15 +1430,249 @@ Package trimclip Info: No clipping driver 'tc-luatex.def' available.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count374
+\c@checkoddpage=\count373
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box109
-\sift@deathcycles=\count375
+\sift@deathcycles=\count374
 \@vwid@loff=\dimen347
 \@vwid@roff=\dimen348
-))) (./_defs.tex) (./figures_knitr.tex)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count375
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count376
+\c@listtotal=\count377
+\c@listcount=\count378
+\c@liststart=\count379
+\c@liststop=\count380
+\c@citecount=\count381
+\c@citetotal=\count382
+\c@multicitecount=\count383
+\c@multicitetotal=\count384
+\c@instcount=\count385
+\c@maxnames=\count386
+\c@minnames=\count387
+\c@maxitems=\count388
+\c@minitems=\count389
+\c@citecounter=\count390
+\c@maxcitecounter=\count391
+\c@savedcitecounter=\count392
+\c@uniquelist=\count393
+\c@uniquename=\count394
+\c@refsection=\count395
+\c@refsegment=\count396
+\c@maxextratitle=\count397
+\c@maxextratitleyear=\count398
+\c@maxextraname=\count399
+\c@maxextradate=\count400
+\c@maxextraalpha=\count401
+\c@abbrvpenalty=\count402
+\c@highnamepenalty=\count403
+\c@lownamepenalty=\count404
+\c@maxparens=\count405
+\c@parenlevel=\count406
+\blx@tempcnta=\count407
+\blx@tempcntb=\count408
+\blx@tempcntc=\count409
+\c@blx@maxsection=\count410
+\c@blx@maxsegment@0=\count411
+\blx@notetype=\count412
+\blx@parenlevel@text=\count413
+\blx@parenlevel@foot=\count414
+\c@blx@sectionciteorder@0=\count415
+\blx@entrysetcounter=\count416
+\blx@biblioinstance=\count417
+\labelnumberwidth=\skip145
+\labelalphawidth=\skip146
+\biblabelsep=\skip147
+\bibitemsep=\skip148
+\bibnamesep=\skip149
+\bibinitsep=\skip150
+\bibparsep=\skip151
+\bibhang=\skip152
+\blx@bcfin=\read3
+\blx@bcfout=\write5
+\blx@langwohyphens=\language2
+\c@mincomprange=\count418
+\c@maxcomprange=\count419
+\c@mincompwidth=\count420
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'authoryear.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count421
+\c@savedafterword=\count422
+\c@annotator=\count423
+\c@savedannotator=\count424
+\c@author=\count425
+\c@savedauthor=\count426
+\c@bookauthor=\count427
+\c@savedbookauthor=\count428
+\c@commentator=\count429
+\c@savedcommentator=\count430
+\c@editor=\count431
+\c@savededitor=\count432
+\c@editora=\count433
+\c@savededitora=\count434
+\c@editorb=\count435
+\c@savededitorb=\count436
+\c@editorc=\count437
+\c@savededitorc=\count438
+\c@foreword=\count439
+\c@savedforeword=\count440
+\c@holder=\count441
+\c@savedholder=\count442
+\c@introduction=\count443
+\c@savedintroduction=\count444
+\c@namea=\count445
+\c@savednamea=\count446
+\c@nameb=\count447
+\c@savednameb=\count448
+\c@namec=\count449
+\c@savednamec=\count450
+\c@translator=\count451
+\c@savedtranslator=\count452
+\c@shortauthor=\count453
+\c@savedshortauthor=\count454
+\c@shorteditor=\count455
+\c@savedshorteditor=\count456
+\c@labelname=\count457
+\c@savedlabelname=\count458
+\c@institution=\count459
+\c@savedinstitution=\count460
+\c@lista=\count461
+\c@savedlista=\count462
+\c@listb=\count463
+\c@savedlistb=\count464
+\c@listc=\count465
+\c@savedlistc=\count466
+\c@listd=\count467
+\c@savedlistd=\count468
+\c@liste=\count469
+\c@savedliste=\count470
+\c@listf=\count471
+\c@savedlistf=\count472
+\c@location=\count473
+\c@savedlocation=\count474
+\c@organization=\count475
+\c@savedorganization=\count476
+\c@origlocation=\count477
+\c@savedoriglocation=\count478
+\c@origpublisher=\count479
+\c@savedorigpublisher=\count480
+\c@publisher=\count481
+\c@savedpublisher=\count482
+\c@language=\count483
+\c@savedlanguage=\count484
+\c@origlanguage=\count485
+\c@savedoriglanguage=\count486
+\c@pageref=\count487
+\c@savedpageref=\count488
+\shorthandwidth=\skip153
+\shortjournalwidth=\skip154
+\shortserieswidth=\skip155
+\shorttitlewidth=\skip156
+\shortauthorwidth=\skip157
+\shorteditorwidth=\skip158
+\locallabelnumberwidth=\skip159
+\locallabelalphawidth=\skip160
+\localshorthandwidth=\skip161
+\localshortjournalwidth=\skip162
+\localshortserieswidth=\skip163
+\localshorttitlewidth=\skip164
+\localshortauthorwidth=\skip165
+\localshorteditorwidth=\skip166
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count489
+\c@textcitetotal=\count490
+\c@textcitemaxnames=\count491
+\c@biburlbigbreakpenalty=\count492
+\c@biburlbreakpenalty=\count493
+\c@biburlnumpenalty=\count494
+\c@biburlucpenalty=\count495
+\c@biburllcpenalty=\count496
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count497
+)
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count498
+\c@bbx:relatedtotal=\count499
+))
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2022-01-21 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+)))
+(./_defs.tex) (./figures_knitr.tex)
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -1457,7 +1684,10 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 l.sty
 Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON t
 echnical note
-) (./main.aux)
+)
+\@quotelevel=\count500
+\@quotereset=\count501
+ (./main.aux)
 \openout1 = main.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -1522,16 +1752,16 @@ LaTeX Font Info:    ... okay on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count376
+\scratchcounter=\count502
 \scratchdimen=\dimen349
 \scratchbox=\box110
-\nofMPsegments=\count377
-\nofMParguments=\count378
+\nofMPsegments=\count503
+\nofMParguments=\count504
 \everyMPshowfont=\toks58
-\MPscratchCnt=\count379
+\MPscratchCnt=\count505
 \MPscratchDim=\dimen350
-\MPnumerator=\count380
-\makeMPintoPDFobject=\count381
+\MPnumerator=\count506
+\makeMPintoPDFobject=\count507
 \everyMPtoPDFconversion=\toks59
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1553,16 +1783,16 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count382
+\c@section@level=\count508
 )
 LaTeX Info: Redefining \ref on input line 26.
 LaTeX Info: Redefining \pageref on input line 26.
 LaTeX Info: Redefining \nameref on input line 26.
 
 (./main.out) (./main.out)
-\@outlinefile=\write5
+\@outlinefile=\write6
 
-\openout5 = main.out
+\openout6 = main.out
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1659,6 +1889,22 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+
+\openout5 = main.bcf
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 26.
+Package biblatex Info: Reference segment=0 on input line 26.
 (./main.nav)
 Overfull \vbox (10.92494pt too high) detected at line 28
  []
@@ -1666,40 +1912,52 @@ Overfull \vbox (10.92494pt too high) detected at line 28
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \vbox (16.3187pt too high) detected at line 62
+Overfull \vbox (27.2827pt too high) detected at line 60
  []
 
 [2
 
-] [3
+]
+Overfull \vbox (27.2827pt too high) detected at line 60
+ []
+
+[3
+
+]
+Overfull \vbox (27.2827pt too high) detected at line 60
+ []
+
+[4
+
+] [5
 
 ]) (./methods.tex
-<static_figures/survey_man.jpg, id=38, 597.23125pt x 803.0pt>
+<static_figures/survey_man.jpg, id=59, 597.23125pt x 803.0pt>
 File: static_figures/survey_man.jpg Graphic file (type jpg)
 <use static_figures/survey_man.jpg>
 Package luatex.def Info: static_figures/survey_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 92.94957pt.
-<static_figures/voting_man.jpg, id=39, 606.265pt x 803.0pt>
+<static_figures/voting_man.jpg, id=60, 606.265pt x 803.0pt>
 File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [4
+ [6
 
 <./static_figures/survey_man.jpg><./static_figures/voting_man.jpg>]
-<static_figures/survey_crazy_man.jpg, id=47, 724.7075pt x 803.0pt>
+<static_figures/survey_crazy_man.jpg, id=68, 724.7075pt x 803.0pt>
 File: static_figures/survey_crazy_man.jpg Graphic file (type jpg)
 <use static_figures/survey_crazy_man.jpg>
 Package luatex.def Info: static_figures/survey_crazy_man.jpg  used on input lin
@@ -1709,7 +1967,7 @@ File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [5
+ [7
 
 <./static_figures/survey_crazy_man.jpg>]
 File: static_figures/survey_crazy_man.jpg Graphic file (type jpg)
@@ -1721,20 +1979,16 @@ File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [6
-
-] [7
-
-] [8
+ [8
 
 ] [9
 
-]
-[10
+] [10
 
 ] [11
 
-] [12
+]
+[12
 
 ] [13
 
@@ -1746,23 +2000,23 @@ Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 
 ] [17
 
-]
-Overfull \vbox (7.16354pt too high) detected at line 264
- []
+] [18
 
-[18
+] [19
 
 ]
-Overfull \vbox (7.16354pt too high) detected at line 264
+Overfull \vbox (16.29715pt too high) detected at line 269
  []
 
-[19
+[20
 
-]) (./taylor.tex [20
+]
+Overfull \vbox (16.29715pt too high) detected at line 269
+ []
 
-] [21
+[21
 
-] [22
+]) (./taylor.tex [22
 
 ] [23
 
@@ -1774,98 +2028,117 @@ Overfull \vbox (7.16354pt too high) detected at line 264
 
 ] [27
 
-]) (./experiments.tex [28
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+] [32
+
+])
+(./experiments.tex [33
 
 ]
-<figure/alexanderprimary-1.png, id=202, 469.755pt x 281.853pt>
+<figure/alexanderprimary-1.png, id=242, 469.755pt x 281.853pt>
 File: figure/alexanderprimary-1.png Graphic file (type png)
 <use figure/alexanderprimary-1.png>
-Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 64.
+Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 31.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [29
+ [34
 
 <./figure/alexanderprimary-1.png>]
-<figure/alexanderinteraction-1.png, id=209, 469.755pt x 281.853pt>
+<figure/alexanderinteraction-1.png, id=249, 469.755pt x 281.853pt>
 File: figure/alexanderinteraction-1.png Graphic file (type png)
 <use figure/alexanderinteraction-1.png>
 Package luatex.def Info: figure/alexanderinteraction-1.png  used on input line 
-69.
+36.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [30
+ [35
 
 <./figure/alexanderinteraction-1.png>]
-<figure/alexandercontpred-1.png, id=216, 469.755pt x 281.853pt>
+<figure/alexandercontpred-1.png, id=256, 469.755pt x 281.853pt>
 File: figure/alexandercontpred-1.png Graphic file (type png)
 <use figure/alexandercontpred-1.png>
-Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 74.
+Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 41.
 
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [31
+ [36
 
 <./figure/alexandercontpred-1.png>]
-<figure/alexanderdiscretepred-1.png, id=224, 469.755pt x 281.853pt>
+<figure/alexanderdiscretepred-1.png, id=263, 469.755pt x 281.853pt>
 File: figure/alexanderdiscretepred-1.png Graphic file (type png)
 <use figure/alexanderdiscretepred-1.png>
 Package luatex.def Info: figure/alexanderdiscretepred-1.png  used on input line
- 80.
+ 47.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [32
+ [37
 
 <./figure/alexanderdiscretepred-1.png>]
-<figure/alexanderbinarypred-1.png, id=231, 469.755pt x 281.853pt>
+<figure/alexanderbinarypred-1.png, id=270, 469.755pt x 281.853pt>
 File: figure/alexanderbinarypred-1.png Graphic file (type png)
 <use figure/alexanderbinarypred-1.png>
-Package luatex.def Info: figure/alexanderbinarypred-1.png  used on input line 8
-7.
+Package luatex.def Info: figure/alexanderbinarypred-1.png  used on input line 5
+4.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [33
+ [38
 
 <./figure/alexanderbinarypred-1.png>]
-<figure/alexanderrefit-1.png, id=238, 469.755pt x 281.853pt>
+<figure/alexanderrefit-1.png, id=277, 469.755pt x 281.853pt>
 File: figure/alexanderrefit-1.png Graphic file (type png)
 <use figure/alexanderrefit-1.png>
-Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 102.
+Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 69.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [34
+ [39
 
 <./figure/alexanderrefit-1.png>]
 File: figure/alexanderrefit-1.png Graphic file (type png)
 <use figure/alexanderrefit-1.png>
-Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 102.
+Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 69.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [35
+ [40
 
-]) [36
-
-] (./main.bbl) [37
+]) [41
 
 ]
-\tf@nav=\write6
+Overfull \vbox (107.76062pt too high) detected at line 74
+ []
 
-\openout6 = main.nav
-\tf@toc=\write7
+[42
 
-\openout7 = main.toc
-\tf@snm=\write8
+</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+\tf@nav=\write7
 
-\openout8 = main.snm
- (./main.aux)
+\openout7 = main.nav
+\tf@toc=\write8
+
+\openout8 = main.toc
+\tf@snm=\write9
+
+\openout9 = main.snm
+
+(./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: AEA4B6A8AE45636C75679C2F0DFA4493;93.
+Package logreq Info: Writing requests to 'main.run.xml'.
+
+\openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 46886 strings out of 477805
- 125031,1648299 words of node,token memory allocated
- 18113 words of node memory still in use:
-   88 hlist, 8 vlist, 5 rule, 94 disc, 11 local_par, 16 math, 439 glue, 64 kern,
- 138 penalty, 1445 glyph, 271 attribute, 113 glue_spec, 271 attribute_list, 4 wr
-ite, 7 pdf_start_link, 7 pdf_end_link, 10 pdf_dest, 7 pdf_action, 36 pdf_colorst
-ack nodes
-   avail lists: 1:3,2:649,3:309,4:242,5:210,6:70,7:3997,8:64,9:607,10:21,11:273
- 65272 multiletter control sequences out of 65536+600000
- 97 fonts using 21534687 bytes
- 128i,19n,134p,1852b,713s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53726 strings out of 477805
+ 125031,2373549 words of node,token memory allocated
+ 20620 words of node memory still in use:
+   85 hlist, 9 vlist, 15 rule, 92 disc, 14 local_par, 26 math, 488 glue, 54 kern
+, 151 penalty, 1504 glyph, 518 attribute, 121 glue_spec, 518 attribute_list, 18 
+write, 28 pdf_literal, 13 pdf_start_link, 13 pdf_end_link, 11 pdf_dest, 13 pdf_a
+ction, 126 pdf_colorstack nodes
+   avail lists: 1:6,2:275,3:435,4:335,5:241,6:65,7:4219,8:61,9:647,10:18,11:253
+ 71992 multiletter control sequences out of 65536+600000
+ 97 fonts using 21354367 bytes
+ 128i,19n,134p,1852b,1886s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
 /usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/fonts/truetyp
@@ -1879,10 +2152,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (37 pages, 926587 bytes).
+Output written on main.pdf (42 pages, 948848 bytes).
 
-PDF statistics: 335 PDF objects out of 1000 (max. 8388607)
- 254 compressed objects within 3 object streams
- 91 named destinations out of 1000 (max. 131072)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 389 PDF objects out of 1000 (max. 8388607)
+ 300 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 131072)
+ 24 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -30,10 +30,10 @@ in which we observe only covariates.
 
 \splitpage{
     \centering
-    Observe $(\x_s, y_s)$ for $s = 1, \ldots, \nsur$\\
+    Observe \surcol{$(\x_i, y_i)$ for $i = 1, \ldots, \nsur$}\\
 }{
     \centering
-    Observe $\x_t$ for $t = 1, \ldots, \ntar$\\
+    Observe \tarcol{$\x_j$ for $j = 1, \ldots, \ntar$}\\
 }
 
 \onslide<2->{
@@ -55,7 +55,8 @@ in which we observe only covariates.
 
 \begin{frame}[t]{Two approaches}
 
-We want $\mu := \meantar \y_t$, but don't observe target population $\y_t$.
+We want $\tarcol{\mu := \meantar \y_j}$,
+but don't observe target population $\tarcol{\y_j}$.
 
 \begin{itemize}
     \item Assume $p(y | \x)$ is the same in both populations,
@@ -78,7 +79,7 @@ We want $\mu := \meantar \y_t$, but don't observe target population $\y_t$.
 \splitpagenoline{
     \centering
     $\blacktriangleright$
-    Choose ``calibration weights'' $w_s$\\
+    Choose ``calibration weights'' \surcol{$w_i$}\\
     (e.g.~raking weights)
 }{
     \centering
@@ -91,23 +92,24 @@ We want $\mu := \meantar \y_t$, but don't observe target population $\y_t$.
 \splitpagenoline{
     \centering
     $\blacktriangleright$ Take
-    $\muhat_{\cal} = \meansur w_s y_s$
+    $\surcol{\muhat_{\cal} = \meansur w_i y_i}$
 }{
     \centering
     $\blacktriangleright$ Take
-    $\yhat_t = \expect{\p(\theta \vert \textrm{Survey data})}{\y | \x_t}$ and\\
-    $\muhat_{\mrp} = \meantar \yhat_t$
+    $\tarcol{\yhat_t} =
+        \expect{\postsur}{\y | \tarcol{\x_j}}$ and\\
+    $\surcol{\muhat_{\mrp}} = \tarcol{\meantar \yhat_j}$
 }\pause
 %
 \\[1em]
 \splitpagenoline{
     \centering
-    $\blacktriangleright$ Dependence on $\y_s$ is obvious\\
-    ($\w_s$ typically chosen using only $\x$)
+    $\blacktriangleright$ Dependence on \surcol{$\y_i$} is obvious\\
+    (\surcol{$\w_s$} typically chosen using only $\x$)
 }{
     \centering
-    $\blacktriangleright$ Dependence on $\y_s$ very complicated\\
-    (Typically via MCMC draws from $\p(\theta \vert \textrm{Survey data})$)
+    $\blacktriangleright$ Dependence on \surcol{$\y_s$} very complicated\\
+    (Typically via MCMC draws from $\postsur$)
 }\pause
 %
 \\[1em]
@@ -137,25 +139,26 @@ We want $\mu := \meantar \y_t$, but don't observe target population $\y_t$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{What are we weighting for?\footnote{Pun attributable to \citet{solon:2015:weightingfor}}}
+\begin{frame}[t]{What are we weighting for?\footnote{Pun attributable to \textcite{solon:2015:weightingfor}}}
 
 
 We want:
 $$
-\textrm{Target average response} =
-\meantar \y_p \approx \meansur \w_s \y_s
-= \textrm{Weighted survey average response }
+\tarcol{\textrm{Target average response} =
+\meantar \y_j} \approx \surcol{\meansur \w_i \y_i
+= \textrm{Weighted survey average response }}
 $$
-We can't check this, because we don't observe $\y_p$.  \pause But we can check whether:
+We can't check this, because we don't observe $\tarcol{\y_j}$.  \pause But we can check whether:
 $$
 % \textrm{Target average regeressor} =
-    \meantar \x_p = \meansur \w_s \x_s
+    \tarcol{\meantar \x_j} = \surcol{\meansur \w_i \x_i}
 % =    \textrm{Weighted survey average regressor}
 $$
 
 Such weights satisfy ``covariate balance'' for $\x$.
 
-You can check covariate balance for any calibration weighting estimator.
+You can check covariate balance for any calibration weighting estimator,
+and any function $\f(\x)$.
 
 \pause
 Even more, covariate balance is the criterion for a popular class of calibration
@@ -207,11 +210,9 @@ weight estimators:
 We want to balance $f(\x)$ because we think
 $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
 and want to check whether our estimator can capture this variability.
-
-This motivates the following \textbf{generalized covariate balance check}:
 %
 \only<2>{
-\begin{block}{Generalized covariate balance (GCB) (informal)}
+\begin{block}{Balance--informed sensitivity check (BISC) (informal)}
     Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
@@ -224,7 +225,7 @@ This motivates the following \textbf{generalized covariate balance check}:
 }
 %
 \only<3->{
-\begin{block}{Generalized covariate balance (GCB) (formal)}
+\begin{block}{Balance--informed sensitivity check (BISC) (formal)}
     Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
@@ -232,25 +233,27 @@ This motivates the following \textbf{generalized covariate balance check}:
     We know the expected change this perturbation produces in the target distribution:
     $$
     \begin{aligned}
+        \tarcol{
             \expect{}{\mu(\ytil) - \mu(\y) | \x} =
             \meantar \left(\expect{}{\ytil | \x_p} - \expect{}{\y | \x_p}\right) =
-            \delta \meantar f(\x_p)
+            \delta \meantar f(\x_j)}
     \end{aligned}
     $$
     Then, check whether your estimator $\muhat(\cdot)$ produces
-    the same change:
+    the same change for observed \surcol{$\ytil, \y$}:
     $$
     \begin{aligned}
         \underbrace{
-        \muhat(\ytil) - \muhat(\y)
+        \surcol{\muhat(\ytil) - \muhat(\y)}
         }_{
             \substack{
                 \text{Replace weighted averages} \\
                 \text{with changes in an estimator}
             }
         }
-        \overset{\textrm{check}}{=}
-        \delta \meantar f(\x_p).
+        \overset{\textrm{check}}{\approx}
+        \tarcol{
+        \delta \meantar f(\x_j).}
     \end{aligned}
     $$
 \end{block}
@@ -258,7 +261,9 @@ This motivates the following \textbf{generalized covariate balance check}:
 
 \onslide<4->{
     When $\muhat(\cdot) = \muhat_\cal(\cdot)$,
-    GCB recovers the standard covariate balance check.
+    BISC recovers the standard covariate balance check. \\[1em]
+    When $\muhat(\cdot) = \muhat_\mrp(\cdot)$ and $\delta$ is small,
+    BISC recovers our proposal. \\[1em]
 }
 
 \end{frame}

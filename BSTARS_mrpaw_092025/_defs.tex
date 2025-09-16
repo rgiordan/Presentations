@@ -28,11 +28,16 @@
 \def\Nsur{S}
 \def\Ntar{T}
 
+\def\tarcol#1{\textcolor{red}{#1}}
+\def\surcol#1{\textcolor{blue}{#1}}
+
+\def\postsur{\surcol{\p(\theta \vert \textrm{Survey data})}}
+
 \def\f{f}
 \def\sumn{\sum_{n=1}^N}
 \def\meann{\frac{1}{N} \sum_{n=1}^N}
-\def\sumsur{\sum_{s=1}^\Nsur}
-\def\sumtar{\sum_{t=1}^\Ntar}
+\def\sumsur{\sum_{i=1}^\Nsur}
+\def\sumtar{\sum_{j=1}^\Ntar}
 \def\meansur{\frac{1}{\Nsur} \sumsur}
 \def\meantar{\frac{1}{\Ntar} \sumtar}
 

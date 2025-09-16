@@ -1,46 +1,18 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
-The style file: plainnat.bst
-Database file #1: references.bib
-You've used 10 entries,
-            2773 wiz_defined-function locations,
-            651 strings with 6569 characters,
-and the built_in function-call counts, 4185 in all, are:
-= -- 354
-> -- 274
-< -- 5
-+ -- 94
-- -- 84
-* -- 328
-:= -- 657
-add.period$ -- 32
-call.type$ -- 10
-change.case$ -- 58
-chr.to.int$ -- 10
-cite$ -- 20
-duplicate$ -- 169
-empty$ -- 338
-format.name$ -- 96
-if$ -- 863
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 3
-newline$ -- 60
-num.names$ -- 40
-pop$ -- 134
-preamble$ -- 1
-purify$ -- 48
-quote$ -- 0
-skip$ -- 154
-stack$ -- 0
-substring$ -- 61
-swap$ -- 12
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 110
-warning$ -- 0
-while$ -- 34
-width$ -- 0
-write$ -- 134
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[36] biber:340> INFO - === Tue Sep 16, 2025, 15:19:12
+[44] Biber.pm:418> INFO - Reading 'main.bcf'
+[75] Biber.pm:972> INFO - Found 10 citekeys in bib section 0
+[82] Biber.pm:4383> INFO - Processing section 0
+[96] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[97] bibtex.pm:1713> INFO - LaTeX decoding ...
+[102] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[150] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[150] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[150] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[150] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[157] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[162] bbl.pm:757> INFO - Output to main.bbl
+[162] Biber.pm:130> WARN - legacy month field 'April' in entry 'datademocracyblog:2025' is not an integer - this will probably not sort properly.
+[162] Biber.pm:130> WARN - legacy month field 'Apr' in entry 'cohen:2019:namechange' is not an integer - this will probably not sort properly.
+[162] Biber.pm:132> INFO - WARNINGS: 2

@@ -1,44 +1,11 @@
 
-
-% \begin{frame}{Real Data}
-% Frustratingly I made this, but using information about Alexander's book, the "stories" example
-% Textbook example from Chapter 16 of ``Telling Stories With Data.'' \citep{alexander:2023:telling}
-
-% \begin{itemize}
-%     %
-%     \item \textbf{Target population:} US Population Aged 18+ (ACS) \citep{ipumsusa}
-%     \item \textbf{Survey population:} The Nationscape survey June--Oct 2020 \citep{tausanovitch:2019:democracy}
-%     \item \textbf{Respose:}  ``If
-%         the election for president were going to be held now and the Democratic
-%         nominee was Joe Biden and the Republican nominee was Donald Trump, would you
-%         vote for \ldots'' (Biden = 1, Trump = 0, other answers excluded)
-%     \item For regressors, use bins of age, education,
-%     %
-% \end{itemize}
-
-% $$
-% \begin{aligned}
-%     \textrm{Survey observations:} &&  \Nsur ={}& \AlexNSur  \\
-%     \textrm{Target observations (rows):} &&  \Ntar ={}& \AlexNTar \\
-%     \\
-%     \textrm{Uncorrected survey mean:} && \meansur \y_n ={}& \AlexSurmean \\
-%     \textrm{Raking:} && \muhat_\cal ={}& \AlexRaking \\
-%     \textrm{MrP:} && \muhat_\mrp ={}& \AlexMrp
-%         \quad(\textrm{Post. sd} = \AlexMrpSD)\\
-% \end{aligned}
-% $$
-% %
-% \end{frame}
-
-
-
 \begin{frame}{Real Data}
-Analysis of changing names after marriage (based on \citet{alexander:2019:namechange})
+Analysis of changing names after marriage (based on \textcite{alexander:2019:namechange})
 
 \begin{itemize}
     %
-    \item \textbf{Target population:} ACS survey of US population 2017--2022 \citep{ipumsusa})
-    \item \textbf{Survey population:} Marital Name Change Survey \citep{cohen:2019:namechange}
+    \item \textbf{Target population:} ACS survey of US population 2017--2022 \parencite{ipumsusa})
+    \item \textbf{Survey population:} Marital Name Change Survey \parencite{cohen:2019:namechange}
     \item \textbf{Respose:}  Did the female partner keep their name after marriage?
     \item For regressors, use bins of age, education, state, and decade married.
     %

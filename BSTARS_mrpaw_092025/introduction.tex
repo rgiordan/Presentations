@@ -9,7 +9,7 @@
         And because less-engaged voters swung away from [Democrats], an expanded
         electorate meant a more Republican electorate.''
     \\[1em]
-    \citep{blueroseresearch:2024} (On Ezra Klein show, major professional pollsters)
+    \parencite{blueroseresearch:2024} (On Ezra Klein show, major professional pollsters)
 }{
     \textbf{\emph{On Data and Democracy} says no:}
     \\[1em]
@@ -17,9 +17,10 @@
     ``Claims of a decisive pro-Republican shift among the overall non-voting population are
     not supported by the most reliable, large-scale post-election data currently available.''
     \\[1em]
-    \citep{datademocracyblog:2025} (Berkeley professor co--author, major professional researchers)
+    \parencite{datademocracyblog:2025} (Berkeley professor co--author, major professional researchers)
 }
 \vspace{1em}
+\pause
 % Several factors drive the disagreement:
 %
 \hrule
@@ -36,28 +37,25 @@
 \item \textbf{Very different statistical methods:} $\star$
 \begin{itemize}
     \item Blue Rose uses Bayesian hierarchical modeling (MrP)
-    \item The CES uses weighted averages (calibration weighting)
+    \item The CES uses calibration weighting (CW)
 \end{itemize}
 %
 \end{itemize}
+
+\pause
 
 \begin{block}{Our contribution}
-    We provide a calibration weighting interpretation of MrP analyses that:
+    We define ``MrP local equivalent weights'' (MrPlew) that:
     %
 \begin{itemize}
-    \item Is easily computable from MCMC draws and standard software, and
-    \item Defines MrP versions of key diagnostics that motivate calibration weighting.
+    \item Are easily computable from MCMC draws and standard software, and
+    \item Provide MrP versions of key diagnostics that motivate calibration weighting.
 \end{itemize}
 %
-We provide apples-to-apples comparisons between
-MrP and calibration weighting.
+\textbf{$\Rightarrow$ MrPlew provide apples-to-apples comparisons between
+MrP and calibration weighting.}
 %
 \end{block}
-% \textbf{Our work won't resolve the dispute.}  (Anyway, we'd need access to Blue Rose's private
-% data and modeling to even try.)
-
-% But we can form a like--to--like comparison between the methodologies.  (And hope that
-% Blue Rose tries our software package.)
 
 \end{frame}
 
@@ -70,10 +68,10 @@ MrP and calibration weighting.
 \begin{frame}{Outline}
 %
 \begin{itemize}
-    \item Introduce the statisical problem and two methods (calibration weighting and MrP)
-    \item Describe one of the classical calibration weighting diagnostics (covariate balance)
-    \item Define MrPaw \& state a key theorem
-    \item Real-world results
+    \item Introduce the statisical problem and two methods (CW and MrP)
+    \item Describe covariate balance, one of the classical CW diagnostics
+    \item Define MrPlew weights and connect them to covariate balance
+    \item Example of real-world results
     \item Future directions
 \end{itemize}
 %
