@@ -66,7 +66,8 @@ $$
 \end{block}
 
 \only<5>{
-The weights are given by weighted averages of posterior covariances  \parencite{giordano:2018:covariances}.
+    \textbf{Computation: }
+The weights are given by weighted averages of posterior covariances  \footcite{giordano:2018:covariances}.
 \\[1em]
 They can be easily computed with standard software\footnote{We use \texttt{brms} \parencite{brms}.}
 \textbf{without re--running MCMC}.\\
@@ -74,14 +75,20 @@ They can be easily computed with standard software\footnote{We use \texttt{brms}
 
 
 \only<6>{
-    We state conditions under which, as $\delta \rightarrow 0$, and $N \rightarrow \infty$, \\
-    the residual is of lower order than the MrPlew term, \textit{uniformly in $\f(\cdot)$}.\\[1em]
+    %
+    \textbf{Theory: }
+We state conditions under which, as $\delta \rightarrow 0$, and $N \rightarrow \infty$,
+\begin{itemize}
+\item The residual is of lower order than the MrPlew term,
+\item \textit{Uniformly} over a very wide class of $\f(\cdot)$.
+\end{itemize}
+%
+\textbf{Uniformity} is the hard part, but this justifies
+using MrPlew to \textit{identify} problematic $\f(\cdot)$.
 
-    Based on prior work on uniform and finite--sample error bounds
-    for Bernstein--von Mises theorem--like results \parencite{giordano:2024:bayesij}.\\[1em]
-
-    (See also \textcite{kasprzak:2025:laplace}!)
-
+Builds on earlier work on uniform error bounds
+for Bernstein--von Mises theorem(--ish) results
+\footcite{giordano:2024:bayesij,kasprzak:2025:laplace}.
 }
 
 
@@ -104,51 +111,4 @@ In general, MrP is truly nonlinear. The residual is only small when $\ytil \appr
 
 
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Covariate balance}
-
-\begin{block}{Theorem}
-    %
-    \begin{itemize}
-        \item Let $\ytil = \y + \delta \f(\x)$,
-        \item $\muhat_{\mrp}$ be a hierachical logistic regression posterior expectation, and
-        % \item $\mathcal{F}$ a class of functions such that
-        %     $\sup_{\f \in \mathcal{F}} \expect{}{\norm{\x \f(\x)}_2^2} < \infty$
-        \item $\mathcal{F}$ be a Donsker class of uniformly bounded functions on $\x$.
-    \end{itemize}
-    %
-    Then, with probability approaching one, as $N \rightarrow \infty$,
-    $$
-    \begin{aligned}
-        \sup_{\f \in \mathcal{F}} \left(
-            \muhat_\mrp(\ytil) -
-            \left(\muhat_\mrp(\y) + \sumsur \w_s^{\mrp} \delta \f(\x_s) \right)
-            \right)
-        = O(\delta^2)
-        \quad\textrm{as }\delta \rightarrow 0
-    \end{aligned}
-    $$
-\end{block}
-
-The supremum over $\mathcal{F}$ is the primary technical contribution!
-It means we are justified in searching over regressors
-to find imbalance.
-
-Draws on our prior work on uniform and finite--sample error bounds for Bernstein--von Mises
-theorem--like results \parencite{giordano:2024:bayesij,kasprzak:2025:laplace}.
-
-% In practice, compute
-% $$
-% \textrm{Imbalance}(\f) := \sumsur \w_s^{\mrp} \f(\x_s)  - \meantar \f(\x_p)
-% $$
-% for any $\f(\cdot)$ you think might capture variability in $\y$.
-
-\end{frame}
-
-
-
 

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 SEP 2025 15:19
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 SEP 2025 15:52
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1912,31 +1912,31 @@ Overfull \vbox (10.92494pt too high) detected at line 28
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \vbox (27.2827pt too high) detected at line 60
+Overfull \vbox (16.35776pt too high) detected at line 62
  []
 
 [2
 
 ]
-Overfull \vbox (27.2827pt too high) detected at line 60
+Overfull \vbox (16.35776pt too high) detected at line 62
  []
 
 [3
 
 ]
-Overfull \vbox (27.2827pt too high) detected at line 60
+Overfull \vbox (16.35776pt too high) detected at line 62
  []
 
 [4
@@ -2032,81 +2032,83 @@ Overfull \vbox (16.29715pt too high) detected at line 269
 
 ] [29
 
-] [30
+]
+Overfull \vbox (6.0026pt too high) detected at line 113
+ []
+
+[30
 
 ] [31
 
-] [32
-
-])
-(./experiments.tex [33
+]) (./experiments.tex [32
 
 ]
-<figure/alexanderprimary-1.png, id=242, 469.755pt x 281.853pt>
+<figure/alexanderprimary-1.png, id=234, 469.755pt x 281.853pt>
 File: figure/alexanderprimary-1.png Graphic file (type png)
 <use figure/alexanderprimary-1.png>
 Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 31.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [34
+ [33
 
 <./figure/alexanderprimary-1.png>]
-<figure/alexanderinteraction-1.png, id=249, 469.755pt x 281.853pt>
+<figure/alexanderinteraction-1.png, id=241, 469.755pt x 281.853pt>
 File: figure/alexanderinteraction-1.png Graphic file (type png)
 <use figure/alexanderinteraction-1.png>
 Package luatex.def Info: figure/alexanderinteraction-1.png  used on input line 
 36.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [35
+
+[34
 
 <./figure/alexanderinteraction-1.png>]
-<figure/alexandercontpred-1.png, id=256, 469.755pt x 281.853pt>
+<figure/alexandercontpred-1.png, id=248, 469.755pt x 281.853pt>
 File: figure/alexandercontpred-1.png Graphic file (type png)
 <use figure/alexandercontpred-1.png>
 Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 41.
 
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [36
+ [35
 
 <./figure/alexandercontpred-1.png>]
-<figure/alexanderdiscretepred-1.png, id=263, 469.755pt x 281.853pt>
+<figure/alexanderdiscretepred-1.png, id=255, 469.755pt x 281.853pt>
 File: figure/alexanderdiscretepred-1.png Graphic file (type png)
 <use figure/alexanderdiscretepred-1.png>
 Package luatex.def Info: figure/alexanderdiscretepred-1.png  used on input line
  47.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [37
+ [36
 
 <./figure/alexanderdiscretepred-1.png>]
-<figure/alexanderbinarypred-1.png, id=270, 469.755pt x 281.853pt>
+<figure/alexanderbinarypred-1.png, id=262, 469.755pt x 281.853pt>
 File: figure/alexanderbinarypred-1.png Graphic file (type png)
 <use figure/alexanderbinarypred-1.png>
 Package luatex.def Info: figure/alexanderbinarypred-1.png  used on input line 5
 4.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [38
+ [37
 
 <./figure/alexanderbinarypred-1.png>]
-<figure/alexanderrefit-1.png, id=277, 469.755pt x 281.853pt>
+<figure/alexanderrefit-1.png, id=269, 469.755pt x 281.853pt>
 File: figure/alexanderrefit-1.png Graphic file (type png)
 <use figure/alexanderrefit-1.png>
 Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 69.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [39
+ [38
 
 <./figure/alexanderrefit-1.png>]
 File: figure/alexanderrefit-1.png Graphic file (type png)
 <use figure/alexanderrefit-1.png>
 Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 69.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [40
+ [39
 
-]) [41
+]) [40
 
 ]
 Overfull \vbox (107.76062pt too high) detected at line 74
  []
 
-[42
+[41
 
 </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write7
@@ -2128,17 +2130,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53726 strings out of 477805
+ 53720 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 20620 words of node memory still in use:
-   85 hlist, 9 vlist, 15 rule, 92 disc, 14 local_par, 26 math, 488 glue, 54 kern
-, 151 penalty, 1504 glyph, 518 attribute, 121 glue_spec, 518 attribute_list, 18 
+ 20344 words of node memory still in use:
+   85 hlist, 9 vlist, 15 rule, 89 disc, 14 local_par, 26 math, 485 glue, 52 kern
+, 148 penalty, 1475 glyph, 518 attribute, 121 glue_spec, 518 attribute_list, 18 
 write, 28 pdf_literal, 13 pdf_start_link, 13 pdf_end_link, 11 pdf_dest, 13 pdf_a
 ction, 126 pdf_colorstack nodes
-   avail lists: 1:6,2:275,3:435,4:335,5:241,6:65,7:4219,8:61,9:647,10:18,11:253
- 71992 multiletter control sequences out of 65536+600000
+   avail lists: 1:5,2:273,3:429,4:335,5:243,6:65,7:4155,8:61,9:647,10:18,11:238
+ 71988 multiletter control sequences out of 65536+600000
  97 fonts using 21354367 bytes
- 128i,19n,134p,1852b,1886s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,19n,134p,1852b,1978s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
 /usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/fonts/truetyp
@@ -2152,10 +2154,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (42 pages, 948848 bytes).
+Output written on main.pdf (41 pages, 945266 bytes).
 
-PDF statistics: 389 PDF objects out of 1000 (max. 8388607)
- 300 compressed objects within 3 object streams
- 102 named destinations out of 1000 (max. 131072)
+PDF statistics: 381 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 100 named destinations out of 1000 (max. 131072)
  24 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -2357,22 +2357,20 @@
     <bcf:citekey order="10">giordano:2018:covariances</bcf:citekey>
     <bcf:citekey order="11">brms</bcf:citekey>
     <bcf:citekey order="12">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="13">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="14">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="14">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="15">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="16">ipumsusa</bcf:citekey>
-    <bcf:citekey order="17">cohen:2019:namechange</bcf:citekey>
-    <bcf:citekey order="18">blueroseresearch:2024</bcf:citekey>
-    <bcf:citekey order="19">datademocracyblog:2025</bcf:citekey>
-    <bcf:citekey order="20">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="21">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="22">brms</bcf:citekey>
-    <bcf:citekey order="23">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="24">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="25">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="26">ipumsusa</bcf:citekey>
-    <bcf:citekey order="27">cohen:2019:namechange</bcf:citekey>
+    <bcf:citekey order="12">kasprzak:2025:laplace</bcf:citekey>
+    <bcf:citekey order="13">alexander:2019:namechange</bcf:citekey>
+    <bcf:citekey order="14">ipumsusa</bcf:citekey>
+    <bcf:citekey order="15">cohen:2019:namechange</bcf:citekey>
+    <bcf:citekey order="16">blueroseresearch:2024</bcf:citekey>
+    <bcf:citekey order="17">datademocracyblog:2025</bcf:citekey>
+    <bcf:citekey order="18">solon:2015:weightingfor</bcf:citekey>
+    <bcf:citekey order="19">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="20">brms</bcf:citekey>
+    <bcf:citekey order="21">giordano:2024:bayesij</bcf:citekey>
+    <bcf:citekey order="22">kasprzak:2025:laplace</bcf:citekey>
+    <bcf:citekey order="23">alexander:2019:namechange</bcf:citekey>
+    <bcf:citekey order="24">ipumsusa</bcf:citekey>
+    <bcf:citekey order="25">cohen:2019:namechange</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -187,12 +187,9 @@
     \endentry
     \entry{giordano:2024:bayesij}{misc}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=5826925894a0d58142c30cfa901c7dac}{%
-           family={Giordano},
-           familyi={G\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
+           family={\textbf{G.}},
+           familyi={G\bibinitperiod}}}%
         {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
            family={Broderick},
            familyi={B\bibinitperiod},
@@ -200,12 +197,12 @@
            giveni={T\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{966d49b9e90c5f10d56cdaf234a7f83f}
-      \strng{fullhash}{966d49b9e90c5f10d56cdaf234a7f83f}
-      \strng{bibnamehash}{966d49b9e90c5f10d56cdaf234a7f83f}
-      \strng{authorbibnamehash}{966d49b9e90c5f10d56cdaf234a7f83f}
-      \strng{authornamehash}{966d49b9e90c5f10d56cdaf234a7f83f}
-      \strng{authorfullhash}{966d49b9e90c5f10d56cdaf234a7f83f}
+      \strng{namehash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{fullhash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{bibnamehash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{authorbibnamehash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{authornamehash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{authorfullhash}{7818a3b816cc44a1c7d710dc04422778}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -228,12 +225,9 @@
     \endentry
     \entry{giordano:2018:covariances}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=5826925894a0d58142c30cfa901c7dac}{%
-           family={Giordano},
-           familyi={G\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
+           family={\textbf{G.}},
+           familyi={G\bibinitperiod}}}%
         {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
            family={Broderick},
            familyi={B\bibinitperiod},
@@ -247,12 +241,12 @@
            giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{2429af76baf6a52918444be0920fadc4}
-      \strng{fullhash}{2429af76baf6a52918444be0920fadc4}
-      \strng{bibnamehash}{2429af76baf6a52918444be0920fadc4}
-      \strng{authorbibnamehash}{2429af76baf6a52918444be0920fadc4}
-      \strng{authornamehash}{2429af76baf6a52918444be0920fadc4}
-      \strng{authorfullhash}{2429af76baf6a52918444be0920fadc4}
+      \strng{namehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{fullhash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{bibnamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{authorbibnamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{authornamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{authorfullhash}{3efc6c7b93520a4e81a2eb98513f4c5c}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -273,12 +267,9 @@
            given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=5826925894a0d58142c30cfa901c7dac}{%
-           family={Giordano},
-           familyi={G\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
+           family={\textbf{G.}},
+           familyi={G\bibinitperiod}}}%
         {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
            family={Broderick},
            familyi={B\bibinitperiod},
@@ -286,12 +277,12 @@
            giveni={T\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{34ba06d966e363646bb860f55fa9dbf4}
-      \strng{fullhash}{34ba06d966e363646bb860f55fa9dbf4}
-      \strng{bibnamehash}{34ba06d966e363646bb860f55fa9dbf4}
-      \strng{authorbibnamehash}{34ba06d966e363646bb860f55fa9dbf4}
-      \strng{authornamehash}{34ba06d966e363646bb860f55fa9dbf4}
-      \strng{authorfullhash}{34ba06d966e363646bb860f55fa9dbf4}
+      \strng{namehash}{f01219f4a0ba5b44ec84dcd91e937d38}
+      \strng{fullhash}{f01219f4a0ba5b44ec84dcd91e937d38}
+      \strng{bibnamehash}{f01219f4a0ba5b44ec84dcd91e937d38}
+      \strng{authorbibnamehash}{f01219f4a0ba5b44ec84dcd91e937d38}
+      \strng{authornamehash}{f01219f4a0ba5b44ec84dcd91e937d38}
+      \strng{authorfullhash}{f01219f4a0ba5b44ec84dcd91e937d38}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
