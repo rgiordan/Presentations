@@ -1,9 +1,14 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alexander(2023)]{alexander:2023:telling}
+R.~Alexander.
+\newblock \emph{Telling Stories with Data: {With} Applications in R}.
+\newblock Chapman and Hall/CRC, 2023.
 
 \bibitem[{Blue Rose Research}(2024)]{blueroseresearch:2024}
 {Blue Rose Research}.
@@ -46,11 +51,25 @@ M.~Kasprzak, R.~Giordano, and T.~Broderick.
   2025.
 \newblock URL \url{https://arxiv.org/abs/2209.14992}.
 
+\bibitem[Ruggles et~al.(2024)Ruggles, Flood, Sobek, Backman, Chen, Cooper,
+  Richards, Rodgers, and S.]{ipumsusa}
+S.~Ruggles, S.~Flood, M.~Sobek, D.~Backman, A.~Chen, G.~Cooper, S.~Richards,
+  R.~Rodgers, and Megan S.
+\newblock {IPUMS USA}: {Version 15.0} [dataset], 2024.
+\newblock URL \url{https://usa.ipums.org}.
+
 \bibitem[Solon et~al.(2015)Solon, Haider, and
   Wooldridge]{solon:2015:weightingfor}
 G.~Solon, S.~Haider, and J.~Wooldridge.
 \newblock What are we weighting for?
 \newblock \emph{Journal of Human resources}, 50\penalty0 (2):\penalty0
   301--316, 2015.
+
+\bibitem[Tausanovitch et~al.(2019)Tausanovitch, Vavreck, Reny, Hayes, and
+  Rudkin]{tausanovitch:2019:democracy}
+C.~Tausanovitch, L.~Vavreck, T.~Reny, A.~Hayes, and A.~Rudkin.
+\newblock Democracy fund {UCLA} nationscape methodology and representativeness
+  assessment.
+\newblock \emph{Democracy Fund Voter Study Group}, 2019.
 
 \end{thebibliography}
