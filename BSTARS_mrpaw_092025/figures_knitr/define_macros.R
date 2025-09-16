@@ -17,3 +17,7 @@ DefineMacro("AlexSurmean", basic_metrics$survey_mean, digits=3)
 DefineMacro("AlexMrp", basic_metrics$mrp, digits=3)
 DefineMacro("AlexMrpSD", basic_metrics$mrp_sd, digits=3)
 DefineMacro("AlexRaking", basic_metrics$raking, digits=3)
+
+
+DefineMacro("RefitTimeHours", as.numeric(refit_data$total_refit_time, units = "hours"), digits=1)
+DefineMacro("MrPawTimeSecs", as.numeric(refit_data$mean_mrpaw_time, units = "secs"), digits=1)

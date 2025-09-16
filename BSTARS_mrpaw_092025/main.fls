@@ -800,6 +800,8 @@ INPUT ./figure/alexanderbinarypred-1.png
 INPUT ./figure/alexanderrefit-1.png
 INPUT ./figure/alexanderrefit-1.png
 INPUT ./figure/alexanderrefit-1.png
+INPUT ./figure/alexanderrefit-1.png
+INPUT ./figure/alexanderrefit-1.png
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT main.nav
