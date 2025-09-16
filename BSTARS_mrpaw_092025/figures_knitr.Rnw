@@ -28,17 +28,7 @@ source("figures_knitr/define_macros.R")
 }
 
 %%%%%%%%%%%%%%%%%%%%%%
-% Tables
-
-\newcommand{\AlexanderBandFig}{
-<<>>=
-figcap <- paste0("Balance checks for Alexander")
-@
-<<alexanderbalance, cache=cache, fig.show='hold', fig.cap=figcap>>=
-source("figures_knitr/predictions_plot.R", print.eval=TRUE)
-@
-}
-
+% Plots
 
 
 \newcommand{\AlexanderImbalancePrimary}{
@@ -57,5 +47,49 @@ figcap <- paste0("Imbalance plot for select interaction effects")
 @
 <<alexanderinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
 source("figures_knitr/imbalance_interaction.R", print.eval=TRUE)
+@
+}
+
+
+\newcommand{\AlexanderPredictionInit}{
+<<>>=
+@
+}
+
+
+% Define the prediction graphs
+<<predcition_setup, cache=cache>>=
+source("figures_knitr/predictions_plot.R")
+@
+
+
+\newcommand{\AlexanderPredictionFig}{
+<<>>=
+figcap <- paste0("Continuous predictions Alexander")
+@
+<<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(pred_plot_1)
+@
+}
+
+
+
+\newcommand{\AlexanderPredictionFigTwo}{
+<<>>=
+figcap <- paste0("Continuous predictions Alexander")
+@
+<<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(pred_plot_2)
+@
+}
+
+
+
+\newcommand{\AlexanderPredictionFigThree}{
+<<>>=
+figcap <- paste0("Continuous predictions Alexander")
+@
+<<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(pred_plot_3)
 @
 }

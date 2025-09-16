@@ -17,7 +17,7 @@ interaction_imb_df <-
 
 
 
-interaction_imb_df gi%>%
+interaction_imb_df %>%
   ggplot() + 
   geom_bar(
     aes(fill=name, y=value, x=reg_clean),

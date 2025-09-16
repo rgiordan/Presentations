@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1758051138 "main.aux" "main.bbl" "main" 1758051140
+["bibtex main"] 1758053857 "main.aux" "main.bbl" "main" 1758053859
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1758051140 4871 05d40055aa53aa1a92f7239e9a99f157 "lualatex"
+  "main.aux" 1758053859 5435 a2f1b291864b4b537e4c2d61bdfb71b6 "lualatex"
   "references.bib" 1757984848 3494 e3d8245fcd9e86558773ede9e098fcb7 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1758051138 "main.tex" "main.pdf" "main" 1758051140
+["lualatex"] 1758053857 "main.tex" "main.pdf" "main" 1758053859
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -402,16 +402,18 @@
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1713476517 4555314 730eb04a0c5eb13602d9bcfb1d963bc4 ""
   "_defs.tex" 1757632035 3848 1049a836db4b6f58577f8fe98d57350d ""
   "_headers.tex" 1757980330 3441 5897480488e33992f2740302ddb74abd ""
-  "experiments.tex" 1758049419 2375 855ee53fdfc75350b5f7bc3696939ac6 ""
-  "figure/alexanderbalance-1.png" 1758051136 100693 0446947a4ac4e899b2e3ba8a69d0d8b4 ""
-  "figure/alexanderinteraction-1.png" 1758051136 104142 d450ec041e73ab60298fbefee0699c2a ""
-  "figure/alexanderprimary-1.png" 1758051136 81395 f242fc043c6f7d3b411aa38721e8ad90 ""
-  "figures_knitr.tex" 1758051136 1694 2677d5425aace6c3188d29ca831d846b ""
+  "experiments.tex" 1758053851 2530 28f0fce1721a67684d1e210e20582754 ""
+  "figure/alexandercontpred-1.png" 1758053854 109931 f3a50652cb9b68e88e92a71ed2ddb450 ""
+  "figure/alexanderdiscretepred-1.png" 1758053854 97673 b271724a61a32b9d30f75583f4baf0df ""
+  "figure/alexanderinteraction-1.png" 1758053854 104142 d450ec041e73ab60298fbefee0699c2a ""
+  "figure/alexanderprimary-1.png" 1758053853 81395 f242fc043c6f7d3b411aa38721e8ad90 ""
+  "figure/alexanderrefit-1.png" 1758053854 143744 4c8bfb14875cff208a79228b039e68b2 ""
+  "figures_knitr.tex" 1758053854 2573 b1d9af2f2bff5eb73fb7bce9839c5a1e ""
   "introduction.tex" 1757631612 2621 692953cdbc3c77a84cdce2e40ab56d0e ""
-  "main.aux" 1758051140 4871 05d40055aa53aa1a92f7239e9a99f157 "lualatex"
-  "main.bbl" 1758051138 2918 3ab8a416ec8fc5731805ea038a3d0cfc "bibtex main"
-  "main.nav" 1758051140 1685 7d96814a1e730e2e865d11854e05e34b "lualatex"
-  "main.out" 1758051139 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.aux" 1758053859 5435 a2f1b291864b4b537e4c2d61bdfb71b6 "lualatex"
+  "main.bbl" 1758053857 2918 3ab8a416ec8fc5731805ea038a3d0cfc "bibtex main"
+  "main.nav" 1758053859 1871 5479ca73408aa29c9325a8b265cd5513 "lualatex"
+  "main.out" 1758053858 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   "main.tex" 1757983487 1671 70b576ff37d247340dfde595d1fbfe26 ""
   "methods.tex" 1757979557 7143 0f6580ac02188c41d00c2733b7b31b90 ""
   "static_figures/survey_crazy_man.jpg" 1757028250 29616 36ac7003c50949c58ea9f98177d268fe ""
