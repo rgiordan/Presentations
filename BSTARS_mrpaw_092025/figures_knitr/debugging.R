@@ -13,10 +13,12 @@ source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 #source(file.path(paper_directory, "figures_knitr/imbalance_primary.R"), print.eval=TRUE)
 #source(file.path(paper_directory, "figures_knitr/imbalance_interaction.R"), print.eval=TRUE)
 
+source(file.path(paper_directory, "figures_knitr/predictions_plot.R"), print.eval=TRUE)
 
 
 
 
+# This defines but does not print three refit plots
 
 clean_sim_method <- function(method) {
   case_when(
@@ -26,6 +28,8 @@ clean_sim_method <- function(method) {
     TRUE ~ "UNKNOWN"
   )
 }
+
+lwd_val <- 1.2
 
 method_levels <- c("MRP", "Raking", "Target")
 prediction_constants_df <-
@@ -47,29 +51,27 @@ method_colors <- c(
   "Target" = "#619CFF"
 )
 
-pred_plot_1 <- 
+
+base_plot <-
   predictions_band_df %>%
-    ggplot(aes(x=delta)) +
-    geom_line(aes(y=value, x=delta, color=method, group=name), 
-              data=prediction_constants_df, lwd=2) +
-    xlab(TeX("$\\delta$")) +
-    ylab(sprintf(
-      "Change in target population mean\n(Recall MrP = %0.2f)", basic_data$basic_metrics$mrp)) +
-    scale_color_manual(values = method_colors) +
-    scale_fill_manual(values = method_colors) +
-    guides(fill="none") + labs(color="Method")
-  
+  ggplot(aes(x=delta)) +
+  xlab(TeX("$\\delta$")) +
+  ylab(sprintf(
+    "Change in target population mean\n(Recall MrP = %0.2f)",
+    basic_data$basic_metrics$mrp)) +
+  scale_color_manual(values = method_colors) +
+  scale_fill_manual(values = method_colors) +
+  guides(fill="none") + labs(color="Method") +
+  ylim(0, 0.062)
 
-pred_plot_2 <- 
-  pred_plot_1 +
-  geom_ribbon(alpha=0.2, aes(ymin=q10, ymax=q90, fill=method, group=name))
 
-delta_df <- refit_data$delta_df
-pred_plot_3 <- 
-  pred_plot_1 +
-  geom_line(aes(x=delta, y=mrp_diff_refit, color="MRP", linetype="Refit"), lwd=2, data=delta_df) +
-  geom_line(aes(x=delta, y=pred_mrp_diff, color="MRP", linetype="Prediction"), lwd=2, data=delta_df) +
-  geom_line(aes(x=delta, y=raking_diff, color="Raking"), data=delta_df, lwd=2) + 
-  labs(linetype="Prediction or Posterior")
-pred_plot_3
+method_linetypes <- c(
+  "Mean pred." = "solid",
+  "Binary pred." = "dashed",
+  "Refit" = "dotted"
+)
 
+pred_plot_3 +
+  scale_linetype_manual(values=method_linetypes) +
+  guides(colour = guide_legend(order = 1),
+         linteype = guide_legend(order = 2)) 

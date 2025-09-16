@@ -89,7 +89,19 @@ print(pred_plot_2)
 <<>>=
 figcap <- paste0("Continuous predictions Alexander")
 @
-<<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
+<<alexanderbinarypred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(pred_plot_3)
+@
+}
+
+
+
+
+\newcommand{\AlexanderPredictionFigFour}{
+<<>>=
+figcap <- paste0("Continuous predictions Alexander")
+@
+<<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(pred_plot_4)
 @
 }
