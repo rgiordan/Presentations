@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not edit the TeX file your work
+% will be overwritten.  Edit the RnW
+% file instead.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<setup, include=FALSE, cache=FALSE>>=
+knitr_debug <- FALSE # Set to true to see error output
+
+rerun_all <- TRUE
+
+# Set to true to cache knitr output for this analysis.
+cache <- TRUE && (!rerun_all)
+
+source("figures_knitr/initialize.R", echo=FALSE)
+@
+
+<<load_data>>=
+source("figures_knitr/load_data.R")
+@
+
+\newcommand{\DefineMacros}{
+<<define_macros, results="asis">>=
+source("figures_knitr/define_macros.R")
+@
+}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+
+\newcommand{\AlexanderBandFig}{
+<<>>=
+figcap <- paste0("Balance checks for Alexander")
+@
+<<alexanderbalance, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/predictions_plot.R", print.eval=TRUE)
+@
+}

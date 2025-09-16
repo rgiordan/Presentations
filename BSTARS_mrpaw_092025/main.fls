@@ -780,9 +780,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT ./taylor.tex
 INPUT ./taylor.tex
-INPUT ./static_figures/mrpaw.png
-INPUT ./static_figures/mrpaw.png
-INPUT ./static_figures/mrpaw.png
+INPUT ./experiments.tex
+INPUT ./experiments.tex
+INPUT ./figure/alexanderbalance-1.png
+INPUT ./figure/alexanderbalance-1.png
+INPUT ./figure/alexanderbalance-1.png
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT main.nav

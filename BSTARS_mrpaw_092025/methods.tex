@@ -75,7 +75,7 @@ We want $\mu := \meantar \y_t$, but don't observe target population $\y_t$.
 %\\\hrulefill\\
 \\[1em]
 %
-\splitpage{
+\splitpagenoline{
     \centering
     $\blacktriangleright$
     Choose ``calibration weights'' $w_s$\\
@@ -209,7 +209,7 @@ $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
 and want to check whether our estimator can capture this variability.
 
 This motivates the following \textbf{generalized covariate balance check}:
-
+%
 \only<2>{
 \begin{block}{Generalized covariate balance (GCB) (informal)}
     Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that
@@ -222,7 +222,7 @@ This motivates the following \textbf{generalized covariate balance check}:
     %
 \end{block}
 }
-
+%
 \only<3->{
 \begin{block}{Generalized covariate balance (GCB) (formal)}
     Pick a small $\delta$, and define a \emph{new response variable} $\ytil$ such that

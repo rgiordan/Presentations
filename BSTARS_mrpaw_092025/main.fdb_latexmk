@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1757719097 "main.aux" "main.bbl" "main" 1757719099
+["bibtex main"] 1757981067 "main.aux" "main.bbl" "main" 1757981121
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1757719099 3755 fdcea50ba20c38f704727761261a8c66 "lualatex"
+  "main.aux" 1757981121 3833 90cdf10b800346cfe18be31c9a835fdc "lualatex"
   "references.bib" 1757631253 2340 7d05310287f9af3044d05769d2cd2d1e ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1757719097 "main.tex" "main.pdf" "main" 1757719099
+["lualatex"] 1757981119 "main.tex" "main.pdf" "main" 1757981121
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -401,16 +401,17 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1688676452 4073795 a82a847ac97773bf4a607ab050efa3a1 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1713476517 4555314 730eb04a0c5eb13602d9bcfb1d963bc4 ""
   "_defs.tex" 1757632035 3848 1049a836db4b6f58577f8fe98d57350d ""
-  "_headers.tex" 1757463808 3439 712b1c378b161369b87b415058cb8648 ""
-  "figures_knitr.tex" 1757012288 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "_headers.tex" 1757980330 3441 5897480488e33992f2740302ddb74abd ""
+  "experiments.tex" 1757981038 53 4523a8a6a90cf2313e36705b44830d13 ""
+  "figure/alexanderbalance-1.png" 1757981119 102129 878a6c7c9894b698059e55ec6a65bbda ""
+  "figures_knitr.tex" 1757981119 685 ea3a3553c68f895fc53b5e1cb9144f0c ""
   "introduction.tex" 1757631612 2621 692953cdbc3c77a84cdce2e40ab56d0e ""
-  "main.aux" 1757719099 3755 fdcea50ba20c38f704727761261a8c66 "lualatex"
-  "main.bbl" 1757719097 2228 9e7be9f89e028b632cf42006355b5475 "bibtex main"
-  "main.nav" 1757719099 1499 f00fbb03a1daf6c14ea9b0c050a7f69e "lualatex"
-  "main.out" 1757719098 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.tex" 1757719094 2196 e0d6303fd90512053385469f469e6df8 ""
-  "methods.tex" 1757633258 7135 376754e271d3812c0fd3ecffce5db456 ""
-  "static_figures/mrpaw.png" 1757719019 100210 dca207d275d1d3d5916313c4ecf0270b ""
+  "main.aux" 1757981121 3833 90cdf10b800346cfe18be31c9a835fdc "lualatex"
+  "main.bbl" 1757981067 2228 9e7be9f89e028b632cf42006355b5475 "bibtex main"
+  "main.nav" 1757981121 1406 1a0e6bacf3d54a75e958177a93abbef9 "lualatex"
+  "main.out" 1757981120 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.tex" 1757980998 1654 29608b5b457daddb0af75ab5dc3bd916 ""
+  "methods.tex" 1757979557 7143 0f6580ac02188c41d00c2733b7b31b90 ""
   "static_figures/survey_crazy_man.jpg" 1757028250 29616 36ac7003c50949c58ea9f98177d268fe ""
   "static_figures/survey_man.jpg" 1757028163 21961 ad68661d4066e24c0413d3db3837ca8c ""
   "static_figures/voting_man.jpg" 1757028194 22321 ba1b893f73b1be3cf5861bc7922d9d47 ""
