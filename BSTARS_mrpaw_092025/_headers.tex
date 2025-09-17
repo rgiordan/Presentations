@@ -83,6 +83,7 @@
 \usepackage{xargs} % For def with default arguments
 
 
+\usepackage{csquotes}
 
 % \input{static_figs.tex}
 \newcommand{\spskip}{\vspace{1em}}
@@ -116,3 +117,5 @@
 \usepackage[style=authoryear]{biblatex}
 %\usepackage[authoryear]{natbib}
 \addbibresource{references.bib}
+\AtBeginBibliography{\def\UrlFont{\relax}}
+

@@ -2351,64 +2351,28 @@
     <bcf:citekey order="4">datademocracyblog:2025</bcf:citekey>
     <bcf:citekey order="5">blueroseresearch:2024</bcf:citekey>
     <bcf:citekey order="6">datademocracyblog:2025</bcf:citekey>
-    <bcf:citekey order="7">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="8">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="9">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="10">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="11">brms</bcf:citekey>
-    <bcf:citekey order="12">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="12">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="13">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="14">ipumsusa</bcf:citekey>
-    <bcf:citekey order="15">cohen:2019:namechange</bcf:citekey>
-    <bcf:citekey order="16">blueroseresearch:2024</bcf:citekey>
-    <bcf:citekey order="17">datademocracyblog:2025</bcf:citekey>
+    <bcf:citekey order="7">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="8">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="8">benmichael:2021:multilevel</bcf:citekey>
+    <bcf:citekey order="8">chattopadhyay:2023:implied</bcf:citekey>
+    <bcf:citekey order="9">gelman:2007:strugglesrejoinder</bcf:citekey>
+    <bcf:citekey order="10">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="11">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="11">benmichael:2021:multilevel</bcf:citekey>
+    <bcf:citekey order="11">chattopadhyay:2023:implied</bcf:citekey>
+    <bcf:citekey order="12">gelman:2007:strugglesrejoinder</bcf:citekey>
+    <bcf:citekey order="13">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="14">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="14">benmichael:2021:multilevel</bcf:citekey>
+    <bcf:citekey order="14">chattopadhyay:2023:implied</bcf:citekey>
+    <bcf:citekey order="15">gelman:2007:strugglesrejoinder</bcf:citekey>
+    <bcf:citekey order="16">solon:2015:weightingfor</bcf:citekey>
+    <bcf:citekey order="17">solon:2015:weightingfor</bcf:citekey>
     <bcf:citekey order="18">solon:2015:weightingfor</bcf:citekey>
     <bcf:citekey order="19">giordano:2018:covariances</bcf:citekey>
     <bcf:citekey order="20">brms</bcf:citekey>
     <bcf:citekey order="21">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="22">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="23">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="24">ipumsusa</bcf:citekey>
-    <bcf:citekey order="25">cohen:2019:namechange</bcf:citekey>
-  </bcf:section>
-  <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="nyt">
-    <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1">volume</bcf:sortitem>
-      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
-    </bcf:sort>
-  </bcf:sortingtemplate>
-  <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="nyt/global//global/global"
-                type="entry"
-                sortingtemplatename="nyt"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
-</bcf:controlfile>
+    <bcf:citekey order="21">kasprzak:2025:laplace</bcf:citekey>
+    <bcf:citekey order="22">alexander:2019:namechange</bcf:citekey>
+    <bcf:citekey order="23">ipumsusa</bcf:citekey>
+    <bcf:citekey order="24">cohen:2019:namechange</bcf:citekey>

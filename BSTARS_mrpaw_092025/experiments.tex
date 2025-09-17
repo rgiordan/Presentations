@@ -1,11 +1,11 @@
 
 \begin{frame}{Real Data}
-Analysis of changing names after marriage (based on \textcite{alexander:2019:namechange})
+Analysis of changing names after marriage (based on \textcite{alexander:2019:namechange}).
 
 \begin{itemize}
     %
-    \item \textbf{Target population:} ACS survey of US population 2017--2022 \parencite{ipumsusa})
-    \item \textbf{Survey population:} Marital Name Change Survey \parencite{cohen:2019:namechange}
+    \item \textbf{Target population:} ACS survey of US population 2017--2022 \footcite{ipumsusa}
+    \item \textbf{Survey population:} Marital Name Change Survey \footcite{cohen:2019:namechange}
     \item \textbf{Respose:}  Did the female partner keep their name after marriage?
     \item For regressors, use bins of age, education, state, and decade married.
     %
@@ -16,7 +16,7 @@ $$
     \textrm{Survey observations:} &&  \Nsur ={}& \AlexNSur  \\
     \textrm{Target observations (rows):} &&  \Ntar ={}& \AlexNTar \\
     \\
-    \textrm{Uncorrected survey mean:} && \meansur \y_n ={}& \AlexSurmean \\
+    \textrm{Uncorrected survey mean:} && \surcol{\meansur \y_i} ={}& \AlexSurmean \\
     \textrm{Raking:} && \muhat_\cal ={}& \AlexRaking \\
     \textrm{MrP:} && \muhat_\mrp ={}& \AlexMrp
         \quad(\textrm{Post. sd} = \AlexMrpSD)\\

@@ -7,7 +7,7 @@ We have a survey population, for whom we observe:
 %
 \begin{itemize}
  \item Covariates $\x$ (e.g.~race, gender, zip code, age, education level)
- \item Responses $\y$ (e.g.~A binary response to ``do you support policy such--and--such'')
+ \item Responses $\y$ (e.g.~A binary response to ``do you support Trump'')
 \end{itemize}
 %
 
@@ -37,7 +37,7 @@ in which we observe only covariates.
 }
 
 \onslide<2->{
-\textbf{The problem is that the populations are very different.}
+\textbf{The problem is that the populations may be very different.}
 }
 
 \onslide<3->{
@@ -84,8 +84,8 @@ but don't observe target population $\tarcol{\y_j}$.
 }{
     \centering
     $\blacktriangleright$
-    Choose model $\p(\y | x, \theta)$ and prior $\p(\theta)$\\
-    (e.g.~Hierarchical logitstic regression)
+    Choose model $\expect{\y \vert \x} = m(\theta^\trans \x)$ and prior $\p(\theta)$\\
+    (e.g.~Hierarchical logistic regression)
 } \pause
 %
 \\[1em]
@@ -96,7 +96,7 @@ but don't observe target population $\tarcol{\y_j}$.
 }{
     \centering
     $\blacktriangleright$ Take
-    $\tarcol{\yhat_t} =
+    $\tarcol{\yhat_j} =
         \expect{\postsur}{\y | \tarcol{\x_j}}$ and\\
     $\surcol{\muhat_{\mrp}} = \tarcol{\meantar \yhat_j}$
 }\pause
@@ -105,10 +105,10 @@ but don't observe target population $\tarcol{\y_j}$.
 \splitpagenoline{
     \centering
     $\blacktriangleright$ Dependence on \surcol{$\y_i$} is obvious\\
-    (\surcol{$\w_s$} typically chosen using only $\x$)
+    (\surcol{$\w_i$} typically chosen using only $\x$)
 }{
     \centering
-    $\blacktriangleright$ Dependence on \surcol{$\y_s$} very complicated\\
+    $\blacktriangleright$ Dependence on \surcol{$\y_i$} very complicated\\
     (Typically via MCMC draws from $\postsur$)
 }\pause
 %
@@ -133,6 +133,54 @@ but don't observe target population $\tarcol{\y_j}$.
 
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Prior work}
+
+\textcite{gelman:2007:struggles} observes that MrP is a CW estimator when
+one uses linear regression to form $\yhat$:
+$$
+\begin{aligned}
+% \yhat_j ={}& \x_j^\trans \betahat  =
+%     \x_j^\trans \left(\sumsur \x_i \x_i^\trans \right)^{-1} \sumsur \x_i \y_i \Rightarrow \\
+\muhat_{\mrp} ={}& \meantar \yhat_j =
+\meantar \x_j^\trans \betahat =
+\sumsur
+\underbrace{
+\left(\meantar \x_j^\trans \left(\sum_{i'=1}^{\Nsur} \x_{i'} \x_{i'}^\trans \right)^{-1} \x_i\right)
+}_{\w^\mrp_i}  \y_i \\
+\end{aligned}
+$$
+
+Most existing literature on comparing CW and MrP focus on such linear models.
+\footcite{gelman:2007:struggles,benmichael:2021:multilevel,chattopadhyay:2023:implied}
+
+\onslide<2->{
+But what if you use a non--linear link function?  Or a hierarchical model?
+\vspace{1em}
+\hrulefill
+\begin{displayquote}
+``It would also be desirable to use nonlinear methods such as regression trees ...
+but then it would seem difficult to construct
+even approximately equivalent weights.  Weighting and fully nonlinear models
+would seem to be completely incompatible methods.''
+--- \parencite{gelman:2007:strugglesrejoinder}
+\end{displayquote}
+}
+ \onslide<3->{
+\vspace{-2.5em}
+\begin{block}{Our approach}
+For nonlinear models, we will \textit{define}
+\surcol{$\w^\mrp_i = \frac{\partial \muhat_{\mrp}}{\partial \y_i}$}.
+
+Our primary task is then to \textbf{rigorously justify} such weights' use in common diagnostics.
+\end{block}
+}
+
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -269,7 +317,3 @@ and want to check whether our estimator can capture this variability.
 \end{frame}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
