@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 SEP 2025 19:24
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 SEP 2025 19:31
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1920,9 +1920,8 @@ Package biblatex Info: Automatic encoding selection.
 
 \openout5 = main.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 26.
 Package biblatex Info: Reference segment=0 on input line 26.
 (./main.nav)
@@ -1932,15 +1931,8 @@ Overfull \vbox (10.92494pt too high) detected at line 28
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction.tex
-
-LaTeX Warning: Citation 'blueroseresearch:2024' on page 2 undefined on input li
-ne 62.
-
-
-LaTeX Warning: Citation 'datademocracyblog:2025' on page 2 undefined on input l
-ine 62.
-
 LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1957,30 +1949,12 @@ Overfull \vbox (16.35776pt too high) detected at line 62
 [2
 
 ]
-
-LaTeX Warning: Citation 'blueroseresearch:2024' on page 3 undefined on input li
-ne 62.
-
-
-LaTeX Warning: Citation 'datademocracyblog:2025' on page 3 undefined on input l
-ine 62.
-
-
 Overfull \vbox (16.35776pt too high) detected at line 62
  []
 
 [3
 
 ]
-
-LaTeX Warning: Citation 'blueroseresearch:2024' on page 4 undefined on input li
-ne 62.
-
-
-LaTeX Warning: Citation 'datademocracyblog:2025' on page 4 undefined on input l
-ine 62.
-
-
 Overfull \vbox (16.35776pt too high) detected at line 62
  []
 
@@ -1989,12 +1963,12 @@ Overfull \vbox (16.35776pt too high) detected at line 62
 ] [5
 
 ]) (./methods.tex
-<static_figures/survey_man.jpg, id=44, 597.23125pt x 803.0pt>
+<static_figures/survey_man.jpg, id=55, 597.23125pt x 803.0pt>
 File: static_figures/survey_man.jpg Graphic file (type jpg)
 <use static_figures/survey_man.jpg>
 Package luatex.def Info: static_figures/survey_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 92.94957pt.
-<static_figures/voting_man.jpg, id=45, 606.265pt x 803.0pt>
+<static_figures/voting_man.jpg, id=56, 606.265pt x 803.0pt>
 File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
@@ -2002,7 +1976,7 @@ Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
  [6
 
 <./static_figures/survey_man.jpg><./static_figures/voting_man.jpg>]
-<static_figures/survey_crazy_man.jpg, id=53, 724.7075pt x 803.0pt>
+<static_figures/survey_crazy_man.jpg, id=64, 724.7075pt x 803.0pt>
 File: static_figures/survey_crazy_man.jpg Graphic file (type jpg)
 <use static_figures/survey_crazy_man.jpg>
 Package luatex.def Info: static_figures/survey_crazy_man.jpg  used on input lin
@@ -2062,83 +2036,16 @@ Overfull \vbox (4.18842pt too high) detected at line 134
 
 [14
 
-]
+] [15
 
-LaTeX Warning: Citation 'gelman:2007:struggles' on page 15 undefined on input l
-ine 183.
+] [16
 
-
-LaTeX Warning: Citation 'gelman:2007:struggles' on page 15 undefined on input l
-ine 183.
-
-
-LaTeX Warning: Citation 'benmichael:2021:multilevel' on page 15 undefined on in
-put line 183.
-
-
-LaTeX Warning: Citation 'chattopadhyay:2023:implied' on page 15 undefined on in
-put line 183.
-
-
-LaTeX Warning: Citation 'gelman:2007:strugglesrejoinder' on page 15 undefined o
-n input line 183.
-
-[15
-
-]
-
-LaTeX Warning: Citation 'gelman:2007:struggles' on page 16 undefined on input l
-ine 183.
-
-
-LaTeX Warning: Citation 'gelman:2007:struggles' on page 16 undefined on input l
-ine 183.
-
-
-LaTeX Warning: Citation 'benmichael:2021:multilevel' on page 16 undefined on in
-put line 183.
-
-
-LaTeX Warning: Citation 'chattopadhyay:2023:implied' on page 16 undefined on in
-put line 183.
-
-
-LaTeX Warning: Citation 'gelman:2007:strugglesrejoinder' on page 16 undefined o
-n input line 183.
-
-[16
-
-]
-
-LaTeX Warning: Citation 'gelman:2007:struggles' on page 17 undefined on input l
-ine 183.
-
-
-LaTeX Warning: Citation 'gelman:2007:struggles' on page 17 undefined on input l
-ine 183.
-
-
-LaTeX Warning: Citation 'benmichael:2021:multilevel' on page 17 undefined on in
-put line 183.
-
-
-LaTeX Warning: Citation 'chattopadhyay:2023:implied' on page 17 undefined on in
-put line 183.
-
-
-LaTeX Warning: Citation 'gelman:2007:strugglesrejoinder' on page 17 undefined o
-n input line 183.
-
-[17
+] [17
 
 ]
 Overfull \hbox (1.30382pt too wide) detected at line 237
 [][] \OMS/cmsy/m/n/8  [][]
  []
-
-
-LaTeX Warning: Citation 'solon:2015:weightingfor' on page 18 undefined on input
- line 237.
 
 [18
 
@@ -2147,20 +2054,12 @@ Overfull \hbox (1.30382pt too wide) detected at line 237
 [][] \OMS/cmsy/m/n/8  [][]
  []
 
-
-LaTeX Warning: Citation 'solon:2015:weightingfor' on page 19 undefined on input
- line 237.
-
 [19
 
 ]
 Overfull \hbox (1.30382pt too wide) detected at line 237
 [][] \OMS/cmsy/m/n/8  [][]
  []
-
-
-LaTeX Warning: Citation 'solon:2015:weightingfor' on page 20 undefined on input
- line 237.
 
 [20
 
@@ -2196,47 +2095,18 @@ Overfull \vbox (17.57495pt too high) detected at line 317
 
 ] [32
 
-]
-
-LaTeX Warning: Citation 'giordano:2018:covariances' on page 33 undefined on inp
-ut line 111.
-
-
-LaTeX Warning: Citation 'brms' on page 33 undefined on input line 111.
-
-[33
+] [33
 
 ]
-
-LaTeX Warning: Citation 'giordano:2024:bayesij' on page 34 undefined on input l
-ine 111.
-
-
-LaTeX Warning: Citation 'kasprzak:2025:laplace' on page 34 undefined on input l
-ine 111.
-
-
 Overfull \vbox (6.74696pt too high) detected at line 111
  []
 
 [34
 
-]) (./experiments.tex
-
-LaTeX Warning: Citation 'alexander:2019:namechange' on page 35 undefined on inp
-ut line 26.
-
-
-LaTeX Warning: Citation 'ipumsusa' on page 35 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'cohen:2019:namechange' on page 35 undefined on input l
-ine 26.
-
-[35
+]) (./experiments.tex [35
 
 ]
-<figure/alexanderprimary-1.png, id=213, 469.755pt x 281.853pt>
+<figure/alexanderprimary-1.png, id=270, 469.755pt x 281.853pt>
 File: figure/alexanderprimary-1.png Graphic file (type png)
 <use figure/alexanderprimary-1.png>
 Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 31.
@@ -2244,7 +2114,7 @@ Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 31.
  [36
 
 <./figure/alexanderprimary-1.png>]
-<figure/alexanderinteraction-1.png, id=220, 469.755pt x 281.853pt>
+<figure/alexanderinteraction-1.png, id=277, 469.755pt x 281.853pt>
 File: figure/alexanderinteraction-1.png Graphic file (type png)
 <use figure/alexanderinteraction-1.png>
 Package luatex.def Info: figure/alexanderinteraction-1.png  used on input line 
@@ -2253,7 +2123,7 @@ Package luatex.def Info: figure/alexanderinteraction-1.png  used on input line
  [37
 
 <./figure/alexanderinteraction-1.png>]
-<figure/alexandercontpred-1.png, id=227, 469.755pt x 281.853pt>
+<figure/alexandercontpred-1.png, id=284, 469.755pt x 281.853pt>
 File: figure/alexandercontpred-1.png Graphic file (type png)
 <use figure/alexandercontpred-1.png>
 Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 41.
@@ -2262,7 +2132,7 @@ Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 41.
  [38
 
 <./figure/alexandercontpred-1.png>]
-<figure/alexanderdiscretepred-1.png, id=234, 469.755pt x 281.853pt>
+<figure/alexanderdiscretepred-1.png, id=291, 469.755pt x 281.853pt>
 File: figure/alexanderdiscretepred-1.png Graphic file (type png)
 <use figure/alexanderdiscretepred-1.png>
 Package luatex.def Info: figure/alexanderdiscretepred-1.png  used on input line
@@ -2271,7 +2141,7 @@ Package luatex.def Info: figure/alexanderdiscretepred-1.png  used on input line
  [39
 
 <./figure/alexanderdiscretepred-1.png>]
-<figure/alexanderbinarypred-1.png, id=241, 469.755pt x 281.853pt>
+<figure/alexanderbinarypred-1.png, id=299, 469.755pt x 281.853pt>
 File: figure/alexanderbinarypred-1.png Graphic file (type png)
 <use figure/alexanderbinarypred-1.png>
 Package luatex.def Info: figure/alexanderbinarypred-1.png  used on input line 5
@@ -2280,12 +2150,13 @@ Package luatex.def Info: figure/alexanderbinarypred-1.png  used on input line 5
  [40
 
 <./figure/alexanderbinarypred-1.png>]
-<figure/alexanderrefit-1.png, id=248, 469.755pt x 281.853pt>
+<figure/alexanderrefit-1.png, id=306, 469.755pt x 281.853pt>
 File: figure/alexanderrefit-1.png Graphic file (type png)
 <use figure/alexanderrefit-1.png>
 Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 69.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [41
+
+[41
 
 <./figure/alexanderrefit-1.png>]
 File: figure/alexanderrefit-1.png Graphic file (type png)
@@ -2294,29 +2165,78 @@ Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 69.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
  [42
 
-]) (./future_work.tex [43
+]) (./future_work.tex
+<static_figures/alice.jpg, id=319, 131.74219pt x 131.74219pt>
+File: static_figures/alice.jpg Graphic file (type jpg)
+<use static_figures/alice.jpg>
+Package luatex.def Info: static_figures/alice.jpg  used on input line 81.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+<static_figures/sequoia.jpg, id=320, 131.74219pt x 131.74219pt>
+File: static_figures/sequoia.jpg Graphic file (type jpg)
+<use static_figures/sequoia.jpg>
+Package luatex.def Info: static_figures/sequoia.jpg  used on input line 81.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+<static_figures/lucas.jpg, id=321, 131.74219pt x 131.74219pt>
+File: static_figures/lucas.jpg Graphic file (type jpg)
+<use static_figures/lucas.jpg>
+Package luatex.def Info: static_figures/lucas.jpg  used on input line 81.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+ [43
 
-] [44
+<./static_figures/alice.jpg><./static_figures/sequoia.jpg><./static_figures/luca
+s.jpg>]
+File: static_figures/alice.jpg Graphic file (type jpg)
+<use static_figures/alice.jpg>
+Package luatex.def Info: static_figures/alice.jpg  used on input line 81.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+File: static_figures/sequoia.jpg Graphic file (type jpg)
+<use static_figures/sequoia.jpg>
+Package luatex.def Info: static_figures/sequoia.jpg  used on input line 81.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+File: static_figures/lucas.jpg Graphic file (type jpg)
+<use static_figures/lucas.jpg>
+Package luatex.def Info: static_figures/lucas.jpg  used on input line 81.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+
+[44
 
 ])
-! Too many }'s.
-\endframe ->\egroup 
-                    \begingroup \def \@currenvir {frame}
-l.41 \end{frame}
-              
-? X
+Overfull \vbox (18.93634pt too high) detected at line 63
+ []
 
+[45
+
+</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+\tf@nav=\write7
+
+\openout7 = main.nav
+\tf@toc=\write8
+
+\openout8 = main.toc
+\tf@snm=\write9
+
+\openout9 = main.snm
+
+(./main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'main.run.xml'.
+
+\openout1 = main.run.xml
+)
 
 Here is how much of LuaTeX's memory you used:
- 54148 strings out of 477805
- 125031,2373549 words of node,token memory allocated 7517 words of node memory still in use:
-   49 hlist, 7 vlist, 5 rule, 59 disc, 9 local_par, 1 dir, 167 glue, 26 kern, 33
- penalty, 472 glyph, 167 attribute, 121 glue_spec, 167 attribute_list, 1 write, 
-8 pdf_literal, 48 pdf_colorstack nodes
-   avail lists: 1:5,2:974,3:259,4:248,5:276,6:79,7:3809,8:72,9:742,10:17,11:274
- 72413 multiletter control sequences out of 65536+600000
- 97 fonts using 21354367 bytes
- 128i,19n,134p,1852b,1688s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54379 strings out of 477805
+ 125031,2373549 words of node,token memory allocated
+ 24807 words of node memory still in use:
+   84 hlist, 8 vlist, 19 rule, 123 disc, 15 local_par, 26 math, 576 glue, 59 ker
+n, 168 penalty, 1894 glyph, 603 attribute, 121 glue_spec, 603 attribute_list, 18
+ write, 13 pdf_start_link, 13 pdf_end_link, 14 pdf_dest, 13 pdf_action, 156 pdf_
+colorstack nodes
+   avail lists: 1:5,2:364,3:415,4:395,5:245,6:68,7:5197,8:64,9:678,10:26,11:247
+ 72572 multiletter control sequences out of 65536+600000
+ 99 fonts using 22010543 bytes
+ 128i,19n,134p,1852b,2003s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
 /usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/fonts/truetyp
@@ -2333,10 +2253,10 @@ s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (44 pages, 967753 bytes).
+Output written on main.pdf (45 pages, 1039809 bytes).
 
-PDF statistics: 346 PDF objects out of 1000 (max. 8388607)
- 252 compressed objects within 3 object streams
- 95 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 433 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
+ 111 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
