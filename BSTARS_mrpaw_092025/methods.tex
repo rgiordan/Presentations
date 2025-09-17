@@ -80,11 +80,13 @@ but don't observe target population $\tarcol{\y_j}$.
     \centering
     $\blacktriangleright$
     Choose ``calibration weights'' \surcol{$w_i$}\\
+    using only the regressors $\x$\\
     (e.g.~raking weights)
 }{
     \centering
     $\blacktriangleright$
-    Choose model $\expect{\y \vert \x} = m(\theta^\trans \x)$ and prior $\p(\theta)$\\
+    Choose $\expect{}{\y \vert \x, \theta} = m(\theta^\trans \x)$,\\
+    choose prior $\p(\theta | \Sigma) \p(\Sigma)$\\
     (e.g.~Hierarchical logistic regression)
 } \pause
 %
@@ -104,11 +106,11 @@ but don't observe target population $\tarcol{\y_j}$.
 \\[1em]
 \splitpagenoline{
     \centering
-    $\blacktriangleright$ Dependence on \surcol{$\y_i$} is obvious\\
-    (\surcol{$\w_i$} typically chosen using only $\x$)
+    $\blacktriangleright$ Dependence of \surcol{$\muhat_{\cal}$} on \surcol{$\y_i$} is clear\\
+    % (\surcol{$\w_i$} typically chosen using only $\x$)
 }{
     \centering
-    $\blacktriangleright$ Dependence on \surcol{$\y_i$} very complicated\\
+    $\blacktriangleright$ Dependence of $\muhat_\mrp$ on \surcol{$\y_i$} very complicated\\
     (Typically via MCMC draws from $\postsur$)
 }\pause
 %
@@ -146,17 +148,23 @@ $$
 \begin{aligned}
 % \yhat_j ={}& \x_j^\trans \betahat  =
 %     \x_j^\trans \left(\sumsur \x_i \x_i^\trans \right)^{-1} \sumsur \x_i \y_i \Rightarrow \\
-\muhat_{\mrp} ={}& \meantar \yhat_j =
-\meantar \x_j^\trans \betahat =
-\sumsur
+\surcol{\muhat_{\mrp}} ={}& \tarcol{\meantar \yhat_j} =
+\tarcol{\meantar \x_j^\trans} \surcol{\betahat} =
+\surcol{\sumsur}
 \underbrace{
-\left(\meantar \x_j^\trans \left(\sum_{i'=1}^{\Nsur} \x_{i'} \x_{i'}^\trans \right)^{-1} \x_i\right)
-}_{\w^\mrp_i}  \y_i \\
+\left(\tarcol{\meantar \x_j^\trans}
+    \surcol{
+        \left(\sum_{i'=1}^{\Nsur} \x_{i'} \x_{i'}^\trans \right)^{-1} \x_i
+    }
+\right)
+}_{\surcol{\w^\mrp_i}}  \surcol{\y_i} \\
 \end{aligned}
 $$
 
 Most existing literature on comparing CW and MrP focus on such linear models.
-\footcite{gelman:2007:struggles,benmichael:2021:multilevel,chattopadhyay:2023:implied}
+\footnote{
+    For example,
+    \textcite{gelman:2007:struggles,benmichael:2021:multilevel,chattopadhyay:2023:implied}.}
 
 \onslide<2->{
 But what if you use a non--linear link function?  Or a hierarchical model?
@@ -182,6 +190,17 @@ Our primary task is then to \textbf{rigorously justify} such weights' use in com
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{The weights can look very different!}
+
+    \centering
+    Does this mean anything?  Are the differences important?
+
+    \WeightPlot{}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

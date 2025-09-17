@@ -31,6 +31,16 @@ source("figures_knitr/define_macros.R")
 % Plots
 
 
+\newcommand{\WeightPlot}{
+<<>>=
+figcap <- paste0("Comparison between raking and MrPlew weights for a particular example")
+@
+<<weightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/weights_plot.R", print.eval=TRUE)
+@
+}
+
+
 \newcommand{\AlexanderImbalancePrimary}{
 <<>>=
 figcap <- paste0("Imbalance plot for primary effects")

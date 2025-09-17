@@ -808,6 +808,9 @@ INPUT ./static_figures/survey_crazy_man.jpg
 INPUT ./static_figures/survey_crazy_man.jpg
 INPUT ./static_figures/voting_man.jpg
 INPUT ./static_figures/voting_man.jpg
+INPUT ./figure/weightplot-1.png
+INPUT ./figure/weightplot-1.png
+INPUT ./figure/weightplot-1.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
