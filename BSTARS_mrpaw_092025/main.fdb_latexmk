@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1758077120 "main.bcf" "main.bbl" "main" 1758078704
-  "main.bcf" 1758078704 109952 9dc640b4b762455e1241344cbdf2641e "lualatex"
+["biber main"] 1758077120 "main.bcf" "main.bbl" "main" 1758079267
+  "main.bcf" 1758079267 109952 9dc640b4b762455e1241344cbdf2641e "lualatex"
   "references.bib" 1758074454 4420 c020ccf69e0ae413aa7dac9d465033fd ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1758078701 "main.tex" "main.pdf" "main" 1758078704
+["lualatex"] 1758079264 "main.tex" "main.pdf" "main" 1758079267
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -417,7 +417,7 @@
   "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1621631105 13788 7d84439d2254ecfafc462aa76f790a5d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1688676452 4073795 a82a847ac97773bf4a607ab050efa3a1 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1713476517 4555314 730eb04a0c5eb13602d9bcfb1d963bc4 ""
-  "_defs.tex" 1758077969 3997 99712d92a49ea10127ecb99f1264d197 ""
+  "_defs.tex" 1758079003 3997 76af4b8b34edd0009779c4e6a6c8905c ""
   "_headers.tex" 1758075026 3580 0ee6a6310833fe6449e50592a061ee1a ""
   "experiments.tex" 1758064159 1625 c8b333ebb42f8c53e07d6f167d4291cd ""
   "figure/alexanderbinarypred-1.png" 1758077169 133632 4084747a707271fdcbc80a79f9dec0e0 ""
@@ -430,11 +430,11 @@
   "figures_knitr.tex" 1758077169 3420 08a2a5d9ba66e5521cd207e633063f89 ""
   "future_work.tex" 1758076291 2437 c5b7198554aa0b3e4fe90ee7da678815 ""
   "introduction.tex" 1758077509 2349 5378f421ad000b46fd04d0fba1d3cc5f ""
-  "main.aux" 1758078704 9657 adb9cdc7405ea9f33fed912ab2aca63c "lualatex"
+  "main.aux" 1758079267 9528 6c3d84627a1a32a0944efc0537963754 "lualatex"
   "main.bbl" 1758077121 22077 5f95f06cb57876467204c7b63f9e0435 "biber main"
-  "main.nav" 1758078704 2057 7b897a16a493e1224c2e04b7ff98e322 "lualatex"
-  "main.out" 1758078703 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1758078704 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
+  "main.nav" 1758079267 1964 91586b893c27d0c737ed7d199f4386a9 "lualatex"
+  "main.out" 1758079265 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1758079267 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
   "main.tex" 1758075915 1416 623bad5e30f1fd03b36b575d9eb2678a ""
   "methods.tex" 1758078700 9652 4457f0d738959d3061ef704078675108 ""
   "static_figures/alice.jpg" 1758075461 13170 bee87fd4d96042960ced90e03e7db734 ""
@@ -443,7 +443,7 @@
   "static_figures/survey_crazy_man.jpg" 1757028250 29616 36ac7003c50949c58ea9f98177d268fe ""
   "static_figures/survey_man.jpg" 1757028163 21961 ad68661d4066e24c0413d3db3837ca8c ""
   "static_figures/voting_man.jpg" 1757028194 22321 ba1b893f73b1be3cf5861bc7922d9d47 ""
-  "taylor.tex" 1758063921 3767 ef1497b477615f66622975aaaa5a7370 ""
+  "taylor.tex" 1758079263 2949 f7ebc4b96afe2ffd37ff6a4836bc7364 ""
   (generated)
   "main.aux"
   "main.bcf"

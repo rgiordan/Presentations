@@ -1,36 +1,4 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Generalized covariate balance for MrP}
-
-\textbf{Step one:} Construct
-$\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.
-\pause
-
-\textbf{Problem:} Our $\y$ is binary!  (We're motivated by hierarchical linear regression.)
-
-\pause
-Two possibilities:
-%
-\begin{itemize}
-    \item Allow $\ytil$ to take values other than $\{0,1\}$ and set
-        $\ytil = \y + \delta \f(\x)$, or
-    \item Use an estimate of $\expect{}{\y \vert \x}$ to draw new binary $\ytil$.
-\end{itemize}
-%
-Our approach:
-%
-\begin{itemize}
-    \item Use $\ytil = \y + \delta \f(\x)$ to identify problematic ``imbalanced'' $\f(\x)$
-    \item Sanity check by generating binary $\ytil$ using $\f(\x)$ (which is fast and easy)
-\end{itemize}
-
-
-\end{frame}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,10 +6,9 @@ Our approach:
 
 \begin{frame}[t]{Generalized covariate balance for MrP}
 
-\textbf{Step one:} Construct
+Suppose I have
 $\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.\\
-\pause
-\textbf{Step two:} Evaluate \surcol{$\muhat_\mrp(\ytil) - \muhat(\y)$}.
+Now I need to evaluate \surcol{$\muhat_\mrp(\ytil) - \muhat_\mrp(\y)$}.
 \pause
 
 \textbf{Problem:} \surcol{$\muhat_\mrp(\cdot)$} is computed with MCMC.
@@ -64,6 +31,12 @@ $$
 $$
 }
 \end{block}
+
+\only<4>{
+Only valid \textbf{locally}: for ``small'' $\norm{\ytil - \y}$.\\[1em]
+
+But that's okay --- we are considering small perturbations.
+}
 
 \only<5>{
 \textbf{Use in BISC: } For a wide set of judiciously chosen $\f(\cdot)$, check
@@ -96,7 +69,7 @@ They can be easily computed with standard software\footnote{We use \texttt{brms}
 \textbf{Theory: }
 We state conditions under which, as $\delta \rightarrow 0$, and $N \rightarrow \infty$,
 \begin{itemize}
-\item The residual is of lower order than the MrPlew term,
+\item The error is of lower order than the MrPlew term,
 \item \textit{Uniformly} over a very wide class of $\f(\cdot)$.
 \end{itemize}
 %

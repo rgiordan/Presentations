@@ -136,3 +136,35 @@ Focus on the second (we have examples of the first).
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Generalized covariate balance for MrP}
+
+\textbf{Step one:} Construct
+$\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.
+\pause
+
+\textbf{Problem:} Our $\y$ is binary!  (We're motivated by hierarchical linear regression.)
+
+\pause
+Two possibilities:
+%
+\begin{itemize}
+    \item Allow $\ytil$ to take values other than $\{0,1\}$ and set
+        $\ytil = \y + \delta \f(\x)$, or
+    \item Use an estimate of $\expect{}{\y \vert \x}$ to draw new binary $\ytil$.
+\end{itemize}
+%
+Our approach:
+%
+\begin{itemize}
+    \item Use $\ytil = \y + \delta \f(\x)$ to identify problematic ``imbalanced'' $\f(\x)$
+    \item Sanity check by generating binary $\ytil$ using $\f(\x)$ (which is fast and easy)
+\end{itemize}
+
+
+\end{frame}
+
