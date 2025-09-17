@@ -61,24 +61,18 @@ source("figures_knitr/imbalance_interaction.R", print.eval=TRUE)
 }
 
 
-\newcommand{\AlexanderPredictionInit}{
-<<>>=
-@
-}
-
-
 % Define the prediction graphs
 <<predcition_setup, cache=cache>>=
 source("figures_knitr/predictions_plot.R")
 @
 
 
-\newcommand{\AlexanderPredictionFig}{
+\newcommand{\AlexanderPredictionFigOne}{
 <<>>=
 figcap <- paste0("Continuous predictions Alexander")
 @
 <<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(pred_plot_1)
+print(base_plot)
 @
 }
 
@@ -89,29 +83,29 @@ print(pred_plot_1)
 figcap <- paste0("Continuous predictions Alexander")
 @
 <<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(pred_plot_2)
+print(plt1)
 @
 }
 
 
 
-\newcommand{\AlexanderPredictionFigThree}{
-<<>>=
-figcap <- paste0("Continuous predictions Alexander")
-@
-<<alexanderbinarypred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(pred_plot_3)
-@
-}
+% \newcommand{\AlexanderPredictionFigThree}{
+% <<>>=
+% figcap <- paste0("Continuous predictions Alexander")
+% @
+% <<alexanderbinarypred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(pred_plot_3)
+% @
+% }
 
 
 
 
-\newcommand{\AlexanderPredictionFigFour}{
-<<>>=
-figcap <- paste0("Continuous predictions Alexander")
-@
-<<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(pred_plot_4)
-@
-}
+% \newcommand{\AlexanderPredictionFigFour}{
+% <<>>=
+% figcap <- paste0("Continuous predictions Alexander")
+% @
+% <<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(pred_plot_4)
+% @
+% }

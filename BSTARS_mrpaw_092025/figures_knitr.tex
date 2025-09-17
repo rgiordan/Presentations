@@ -35,7 +35,7 @@
 
 }
 
-\caption[Comparison between raking and MrPlew weights]{Comparison between raking and MrPlew weights}\label{fig:weightplot}
+\caption[Comparison between raking and MrPlew weights for a particular example]{Comparison between raking and MrPlew weights for a particular example}\label{fig:weightplot}
 \end{figure}
 
 \end{knitrout}
@@ -74,16 +74,11 @@
 }
 
 
-\newcommand{\AlexanderPredictionInit}{
-
-}
-
-
 % Define the prediction graphs
 
 
 
-\newcommand{\AlexanderPredictionFig}{
+\newcommand{\AlexanderPredictionFigOne}{
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
@@ -117,35 +112,23 @@
 
 
 
-\newcommand{\AlexanderPredictionFigThree}{
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
-
-{\centering \includegraphics[width=0.98\linewidth,height=0.588\linewidth]{figure/alexanderbinarypred-1} 
-
-}
-
-\caption[Continuous predictions Alexander]{Continuous predictions Alexander}\label{fig:alexanderbinarypred}
-\end{figure}
-
-\end{knitrout}
-}
+% \newcommand{\AlexanderPredictionFigThree}{
+% <<>>=
+% figcap <- paste0("Continuous predictions Alexander")
+% @
+% <<alexanderbinarypred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(pred_plot_3)
+% @
+% }
 
 
 
 
-\newcommand{\AlexanderPredictionFigFour}{
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
-
-{\centering \includegraphics[width=0.98\linewidth,height=0.588\linewidth]{figure/alexanderrefit-1} 
-
-}
-
-\caption[Continuous predictions Alexander]{Continuous predictions Alexander}\label{fig:alexanderrefit}
-\end{figure}
-
-\end{knitrout}
-}
+% \newcommand{\AlexanderPredictionFigFour}{
+% <<>>=
+% figcap <- paste0("Continuous predictions Alexander")
+% @
+% <<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(pred_plot_4)
+% @
+% }
