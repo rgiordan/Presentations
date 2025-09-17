@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 SEP 2025 19:47
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 SEP 2025 20:11
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2001,37 +2001,37 @@ Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
  [8
 
 ]
-Overfull \vbox (15.19539pt too high) detected at line 136
+Overfull \vbox (4.18842pt too high) detected at line 139
  []
 
 [9
 
 ]
-Overfull \vbox (15.19539pt too high) detected at line 136
+Overfull \vbox (4.18842pt too high) detected at line 139
  []
 
 [10
 
 ]
-Overfull \vbox (15.19539pt too high) detected at line 136
+Overfull \vbox (4.18842pt too high) detected at line 139
  []
 
 [11
 
 ]
-Overfull \vbox (15.19539pt too high) detected at line 136
+Overfull \vbox (4.18842pt too high) detected at line 139
  []
 
 [12
 
 ]
-Overfull \vbox (15.19539pt too high) detected at line 136
+Overfull \vbox (4.18842pt too high) detected at line 139
  []
 
 [13
 
 ]
-Overfull \vbox (15.19539pt too high) detected at line 136
+Overfull \vbox (4.18842pt too high) detected at line 139
  []
 
 [14
@@ -2043,33 +2043,33 @@ Overfull \vbox (15.19539pt too high) detected at line 136
 ] [17
 
 ]
-<figure/weightplot-1.png, id=152, 469.755pt x 281.853pt>
+<figure/weightplot-1.png, id=151, 469.755pt x 281.853pt>
 File: figure/weightplot-1.png Graphic file (type png)
 <use figure/weightplot-1.png>
-Package luatex.def Info: figure/weightplot-1.png  used on input line 203.
+Package luatex.def Info: figure/weightplot-1.png  used on input line 208.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
 
-Overfull \vbox (0.24309pt too high) detected at line 203
+Overfull \vbox (0.24309pt too high) detected at line 208
  []
 
 [18
 
 <./figure/weightplot-1.png>]
-Overfull \hbox (1.30382pt too wide) detected at line 256
+Overfull \hbox (1.30382pt too wide) detected at line 261
 [][] \OMS/cmsy/m/n/8  [][]
  []
 
 [19
 
 ]
-Overfull \hbox (1.30382pt too wide) detected at line 256
+Overfull \hbox (1.30382pt too wide) detected at line 261
 [][] \OMS/cmsy/m/n/8  [][]
  []
 
 [20
 
 ]
-Overfull \hbox (1.30382pt too wide) detected at line 256
+Overfull \hbox (1.30382pt too wide) detected at line 261
 [][] \OMS/cmsy/m/n/8  [][]
  []
 
@@ -2080,13 +2080,13 @@ Overfull \hbox (1.30382pt too wide) detected at line 256
 ] [23
 
 ]
-Overfull \vbox (17.57495pt too high) detected at line 336
+Overfull \vbox (17.94214pt too high) detected at line 341
  []
 
 [24
 
 ]
-Overfull \vbox (17.57495pt too high) detected at line 336
+Overfull \vbox (17.94214pt too high) detected at line 341
  []
 
 [25
@@ -2118,7 +2118,7 @@ Overfull \vbox (6.74696pt too high) detected at line 111
 ]) (./experiments.tex [36
 
 ]
-<figure/alexanderprimary-1.png, id=278, 469.755pt x 281.853pt>
+<figure/alexanderprimary-1.png, id=277, 469.755pt x 281.853pt>
 File: figure/alexanderprimary-1.png Graphic file (type png)
 <use figure/alexanderprimary-1.png>
 Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 31.
@@ -2126,7 +2126,7 @@ Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 31.
  [37
 
 <./figure/alexanderprimary-1.png>]
-<figure/alexanderinteraction-1.png, id=285, 469.755pt x 281.853pt>
+<figure/alexanderinteraction-1.png, id=284, 469.755pt x 281.853pt>
 File: figure/alexanderinteraction-1.png Graphic file (type png)
 <use figure/alexanderinteraction-1.png>
 Package luatex.def Info: figure/alexanderinteraction-1.png  used on input line 
@@ -2135,7 +2135,7 @@ Package luatex.def Info: figure/alexanderinteraction-1.png  used on input line
  [38
 
 <./figure/alexanderinteraction-1.png>]
-<figure/alexandercontpred-1.png, id=292, 469.755pt x 281.853pt>
+<figure/alexandercontpred-1.png, id=291, 469.755pt x 281.853pt>
 File: figure/alexandercontpred-1.png Graphic file (type png)
 <use figure/alexandercontpred-1.png>
 Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 41.
@@ -2144,7 +2144,7 @@ Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 41.
  [39
 
 <./figure/alexandercontpred-1.png>]
-<figure/alexanderdiscretepred-1.png, id=300, 469.755pt x 281.853pt>
+<figure/alexanderdiscretepred-1.png, id=299, 469.755pt x 281.853pt>
 File: figure/alexanderdiscretepred-1.png Graphic file (type png)
 <use figure/alexanderdiscretepred-1.png>
 Package luatex.def Info: figure/alexanderdiscretepred-1.png  used on input line
@@ -2153,7 +2153,7 @@ Package luatex.def Info: figure/alexanderdiscretepred-1.png  used on input line
  [40
 
 <./figure/alexanderdiscretepred-1.png>]
-<figure/alexanderbinarypred-1.png, id=307, 469.755pt x 281.853pt>
+<figure/alexanderbinarypred-1.png, id=306, 469.755pt x 281.853pt>
 File: figure/alexanderbinarypred-1.png Graphic file (type png)
 <use figure/alexanderbinarypred-1.png>
 Package luatex.def Info: figure/alexanderbinarypred-1.png  used on input line 5
@@ -2162,7 +2162,7 @@ Package luatex.def Info: figure/alexanderbinarypred-1.png  used on input line 5
  [41
 
 <./figure/alexanderbinarypred-1.png>]
-<figure/alexanderrefit-1.png, id=315, 469.755pt x 281.853pt>
+<figure/alexanderrefit-1.png, id=314, 469.755pt x 281.853pt>
 File: figure/alexanderrefit-1.png Graphic file (type png)
 <use figure/alexanderrefit-1.png>
 Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 69.
@@ -2178,17 +2178,17 @@ Package luatex.def Info: figure/alexanderrefit-1.png  used on input line 69.
  [43
 
 ]) (./future_work.tex
-<static_figures/alice.jpg, id=327, 131.74219pt x 131.74219pt>
+<static_figures/alice.jpg, id=326, 131.74219pt x 131.74219pt>
 File: static_figures/alice.jpg Graphic file (type jpg)
 <use static_figures/alice.jpg>
 Package luatex.def Info: static_figures/alice.jpg  used on input line 81.
 (luatex.def)             Requested size: 66.37567pt x 66.37749pt.
-<static_figures/sequoia.jpg, id=328, 131.74219pt x 131.74219pt>
+<static_figures/sequoia.jpg, id=327, 131.74219pt x 131.74219pt>
 File: static_figures/sequoia.jpg Graphic file (type jpg)
 <use static_figures/sequoia.jpg>
 Package luatex.def Info: static_figures/sequoia.jpg  used on input line 81.
 (luatex.def)             Requested size: 66.37567pt x 66.37749pt.
-<static_figures/lucas.jpg, id=329, 131.74219pt x 131.74219pt>
+<static_figures/lucas.jpg, id=328, 131.74219pt x 131.74219pt>
 File: static_figures/lucas.jpg Graphic file (type jpg)
 <use static_figures/lucas.jpg>
 Package luatex.def Info: static_figures/lucas.jpg  used on input line 81.
@@ -2245,7 +2245,7 @@ Here is how much of LuaTeX's memory you used:
 n, 168 penalty, 1894 glyph, 603 attribute, 121 glue_spec, 603 attribute_list, 18
  write, 13 pdf_start_link, 13 pdf_end_link, 14 pdf_dest, 13 pdf_action, 156 pdf_
 colorstack nodes
-   avail lists: 1:5,2:364,3:415,4:395,5:245,6:71,7:5197,8:64,9:705,10:26,11:247
+   avail lists: 1:5,2:364,3:415,4:395,5:245,6:71,7:5197,8:64,9:664,10:26,11:247
  72592 multiletter control sequences out of 65536+600000
  99 fonts using 22010543 bytes
  128i,19n,134p,1852b,2004s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2259,16 +2259,15 @@ s/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
 i6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (46 pages, 1109563 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (46 pages, 1099876 bytes).
 
-PDF statistics: 441 PDF objects out of 1000 (max. 8388607)
- 339 compressed objects within 4 object streams
+PDF statistics: 437 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
  114 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

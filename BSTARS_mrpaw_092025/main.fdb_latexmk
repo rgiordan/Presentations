@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1758077120 "main.bcf" "main.bbl" "main" 1758077237
-  "main.bcf" 1758077237 109952 9dc640b4b762455e1241344cbdf2641e "lualatex"
+["biber main"] 1758077120 "main.bcf" "main.bbl" "main" 1758078704
+  "main.bcf" 1758078704 109952 9dc640b4b762455e1241344cbdf2641e "lualatex"
   "references.bib" 1758074454 4420 c020ccf69e0ae413aa7dac9d465033fd ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1758077233 "main.tex" "main.pdf" "main" 1758077237
+["lualatex"] 1758078701 "main.tex" "main.pdf" "main" 1758078704
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -59,7 +59,6 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
@@ -418,7 +417,7 @@
   "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1621631105 13788 7d84439d2254ecfafc462aa76f790a5d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1688676452 4073795 a82a847ac97773bf4a607ab050efa3a1 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1713476517 4555314 730eb04a0c5eb13602d9bcfb1d963bc4 ""
-  "_defs.tex" 1758065038 3998 a12e9470d21361cec34393159d40126d ""
+  "_defs.tex" 1758077969 3997 99712d92a49ea10127ecb99f1264d197 ""
   "_headers.tex" 1758075026 3580 0ee6a6310833fe6449e50592a061ee1a ""
   "experiments.tex" 1758064159 1625 c8b333ebb42f8c53e07d6f167d4291cd ""
   "figure/alexanderbinarypred-1.png" 1758077169 133632 4084747a707271fdcbc80a79f9dec0e0 ""
@@ -430,14 +429,14 @@
   "figure/weightplot-1.png" 1758077167 75207 37363fbfd03d0178bc52beeb98f3b69a ""
   "figures_knitr.tex" 1758077169 3420 08a2a5d9ba66e5521cd207e633063f89 ""
   "future_work.tex" 1758076291 2437 c5b7198554aa0b3e4fe90ee7da678815 ""
-  "introduction.tex" 1758064909 2331 d4030cd6796a90e3069dc9449aaffe7c ""
-  "main.aux" 1758077237 9657 adb9cdc7405ea9f33fed912ab2aca63c "lualatex"
+  "introduction.tex" 1758077509 2349 5378f421ad000b46fd04d0fba1d3cc5f ""
+  "main.aux" 1758078704 9657 adb9cdc7405ea9f33fed912ab2aca63c "lualatex"
   "main.bbl" 1758077121 22077 5f95f06cb57876467204c7b63f9e0435 "biber main"
-  "main.nav" 1758077237 2057 7b897a16a493e1224c2e04b7ff98e322 "lualatex"
-  "main.out" 1758077235 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1758077237 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
+  "main.nav" 1758078704 2057 7b897a16a493e1224c2e04b7ff98e322 "lualatex"
+  "main.out" 1758078703 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1758078704 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
   "main.tex" 1758075915 1416 623bad5e30f1fd03b36b575d9eb2678a ""
-  "methods.tex" 1758077232 9471 bd0b5cd594a80929c492305bb4ba24e6 ""
+  "methods.tex" 1758078700 9652 4457f0d738959d3061ef704078675108 ""
   "static_figures/alice.jpg" 1758075461 13170 bee87fd4d96042960ced90e03e7db734 ""
   "static_figures/lucas.jpg" 1758075423 24748 6570bf0b8f66b088925101c5f66295c5 ""
   "static_figures/sequoia.jpg" 1758075435 20444 525b2d4ed028386bccb7c9f37dacfbe2 ""
