@@ -69,7 +69,7 @@ source("figures_knitr/predictions_plot.R")
 
 \newcommand{\AlexanderPredictionFigOne}{
 <<>>=
-figcap <- paste0("Continuous predictions Alexander")
+figcap <- paste0("Predictions for the name change dataset")
 @
 <<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(base_plot)
@@ -80,7 +80,7 @@ print(base_plot)
 
 \newcommand{\AlexanderPredictionFigTwo}{
 <<>>=
-figcap <- paste0("Continuous predictions Alexander")
+figcap <- paste0("Predictions and refit for the name change dataset")
 @
 <<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(plt1)

@@ -1,0 +1,242 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Linear response covariances and sampling uncertainty}
+    %
+    % DADVI is faster, simpler, and the posterior means are not worse.
+    
+    % \textbf{But we can do even better!}
+    
+    % \hrulefill
+    
+    % \textbf{Approximation Error}
+    \vspace{-2em}
+    
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            &\text{Intractable objective:} 
+            \\ \etastar %:={}& \argmin_{\eta \in \etadom} F(\eta)
+                ={}& 
+                \argmin_{\eta \in \etadom} \expect{\normz}{f(\eta, \z)}
+        \end{align*}    
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            &\text{DADVI approximation:} 
+            \\ \etahat(\Z) %:={}& \argmin_{\eta \in \etadom} \hat{F}(\eta | \Z)
+             ={}&  \argmin_{\eta \in \etadom} \meann f(\eta, \z_n).
+        \end{align*}
+    \end{minipage}
+    %
+    
+    % %
+    % The DADVI estimator $\etahat(\Z)$ is random --- it depends
+    % on $\Z = (\z_1, \ldots, \z_\znum)$.
+    
+    \hrulefill
+    
+    What is the error of the DADVI approximation $\etahat - \etastar$?
+    
+    \pause
+    
+    $\Leftrightarrow$ What is the distribution of the
+    DADVI error $\etahat - \etastar$ under sampling of $\Z$?
+    
+    \textbf{Answer: } The same as a that of any M-estimator: 
+        asymptotically normal (as $\znum$ grows) 
+    % with covariance given in terms of 
+    % $\hess{\eta}{\klfullobj{\etastar}} \approx \hess{\eta}{\klobj{\etahat}}$
+    
+    \pause
+    
+    \hrulefill
+    
+    % \textbf{Linear response covariances}
+    
+    Posterior variances are often badly estimated by mean-field (MF) approximations.
+    
+    Linear response (LR) covariances improve covariance estimates by computing
+    \textit{sensitivity} of the variational means to 
+    particular perturbations.  \citep{giordano:2018:covariances}
+    
+    \textbf{Example: } With a correlated Gaussian $\post$,
+    the ADVI means are exactly correct, the ADVI variances are underestimated,
+    and LR covariances are exactly correct.
+    
+    \pause
+    
+    \hrulefill
+    
+    Both DADVI error and LR covariances can be computed from the DADVI objective.
+    
+    Stochastic ADVI does not produce an actual optimum of any tractable
+    objective, so LR and M-estimator computations are unavailable.
+    
+    \end{frame}
+    
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    % \begin{frame}{Posterior standard deviation accuracy}
+    %     \PosteriorSdAccuracy{}
+    % \end{frame}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \begin{frame}{DADVI approximation error accuracy}
+        \CoverageHistogram{}
+    \end{frame}
+    
+    
+
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Previous theoretical results}
+    \vspace{-3em}
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            &\text{Intractable objective:} 
+            \\ \etastar %:={}& \argmin_{\eta \in \etadom} F(\eta)
+                ={}& 
+                \argmin_{\eta \in \etadom} \expect{\normz}{f(\eta, \z)}
+        \end{align*}    
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            &\text{SAA approximation (DADVI):} 
+            \\ \etahat(\Z) %:={}& \argmin_{\eta \in \etadom} \hat{F}(\eta | \Z)
+                ={}&  \argmin_{\eta \in \etadom} \meann f(\eta, \z_n).
+        \end{align*}
+    \end{minipage}
+    
+    \hrulefill
+    
+    The idea of optimizing $\hat{F}$ instead of SG on $F$ is old and
+    well-studied in the optimization literature, where $\hat{F}$
+    is known as the \textbf{Sample average approximation (SAA)}.
+    
+    Yet SAA is rarely used for BBVI.\footnote{Some exceptions I'm aware of:
+    \citet{giordano:2018:covariances,giordano:2022:bnp,wycoff:2022:sparsebayesianlasso,burroni:2023:saabbvi}.}
+    One possible reason is the following:
+    
+    % \hrulefill
+    
+    \noindent
+    \textbf{Theorem \citep{nemirovski:2009:sgdvsfixed}:}
+    In general, the error of both SG and SAA scale as
+    $\sqrt{\thetadim / \znum}$,
+    where, for SG, $\znum$ is the \textit{total number of samples used}.
+    
+    \pause
+    %
+    \begin{itemize}
+    \item For SG, each $\z_n$ gets used once (for a single gradient step)
+    \item For SAA, each $\z_n$ gets used once per optimization step
+    (of which the are many).
+    \item Often, in higher dimensions, SAA requires more optimization steps.
+    \end{itemize}
+    %
+    
+    
+    \noindent
+    \textbf{Corollary: \citep{kim:2015:guidetosaa}}
+    In general, for a given accuracy, the computation required for SAA 
+    scales worse than SG as the dimension $\thetadim$ grows.
+    
+    \pause
+    \textbf{
+    But we got good results with $\thetadim$ as
+    high as $\PotusParamDim$ using only
+    only $\znum = \DADVINumDraws$.  Why?}
+    
+    
+    \end{frame}
+    
+    
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \begin{frame}{Some first steps}
+    
+    \noindent
+    \textbf{Theorem \citep{giordano:2023:dadvi}:} When $\post$ is multivariate
+    normal, and we use the mean-field Gaussian approximation, then, for any
+    particular entry $\eta_d$ of $\eta$, then $\abs{\etahat_d - \etastar_d} =
+    O_p(N^{-1/2})$ irrespective of $\thetadim$.
+    
+    \pause
+    \vspace{2em}
+    \noindent
+    \textbf{Theorem \citep{giordano:2023:dadvi}:} Assume $\post$ has a ``global-local''
+    structure:
+    %
+    \begin{align*}
+    \theta ={}& (\gamma, \lambda_1, \ldots, \lambda_\lambdadim) &
+    \p(\gamma, \lambda_1, \ldots, \lambda_\lambdadim | \y) ={}&
+    \prod_{d=1}^{\lambdadim} \p(\gamma, \lambda_d \vert \y).
+    \end{align*}
+    %
+    Assume that the dimension of $\gamma$ and each $\lambda_d$ stays fixed as
+    $\lambdadim$ grows.
+    
+    Under regularity conditions, the DADVI error
+    scales as $\sqrt{\log \lambdadim / \znum}$, not $\sqrt{\lambdadim / \znum}$.
+    
+    \vspace{2em}
+    
+    \pause
+    \noindent
+    \textbf{Proposal: }  The ``in general'' analysis of \citep{nemirovski:2009:sgdvsfixed}
+    is too general for many practically interesting BBVI problems.
+    
+    \end{frame}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    
+    \begin{frame}{A negative result for expressive approximations}
+    
+    \noindent
+    \textbf{Theorem \citep{giordano:2023:dadvi}:}  Assume that $\znum < \thetadim$,
+    and that we use a full-rank Gaussian approximation.  Then the DADVI objective is
+    unbounded below, and optimization of the DADVI objective will approach a
+    degenerate point mass at $\argmax_\theta \log \post$.
+    
+    \pause
+    
+    \vspace{2em}
+    \noindent
+    \textbf{Proof sketch: }For any value of the variational
+    mean, the DADVI objective only depends on $\post$ evaluated
+    in a subspace spanned by $\Z$.  The variational objective can be driven to 
+    $-\infty$ by driving the variance to zero in the subspace orthogonal to $\Z$.
+    
+    \pause
+    
+    \vspace{2em}
+    \noindent
+    \textbf{Proposal: }  All sufficiently expressive variational approximations
+    (e.g. normalizing flows) will fail in the same way in high dimensions. However,
+    this pathology can be obscured and overlooked in practice by low-quality
+    optimization.
+    
+    
+    
+    \end{frame}
+    
