@@ -184,6 +184,11 @@ would seem to be completely incompatible methods.''
 --- \parencite{gelman:2007:strugglesrejoinder}
 \end{displayquote}
 }
+\vspace{1em}
+
+Let's spend some time discussing why it is reasonable
+to even attempt such a thing as forming approximate equivalent
+weights for non--linear estimators.
 
 \end{frame}
 
@@ -207,8 +212,9 @@ Consider logistic regression MrP:
 %
 Suppose $\x \in \mathcal{X}$ is discrete and saturated.
 
-\textbf{Then logistic MrP is a CW estimator!}
+\textbf{Then logistic MrP is a CW estimator.}
 
+\pause
 \def\ybar{\overline{y}}
 \def\Ntarc{N_T^c}
 \def\Nsurc{N_S^c}
@@ -233,8 +239,94 @@ $$
 \end{aligned}
 $$
 
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Nearly equivalent weights for (some) logistic regression MrP}
+
+\def\alphav{\mathbf{\alpha}}
+%
+\begin{itemize}
+    \item Model $\m(\x^\trans \beta) = \mathrm{Logistic}(\x^\trans \beta)$, with MLE $\betahat$.
+    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \betahat)$.
+\end{itemize}
+%
+Suppose $\x \in \mathcal{X}$ is continuous, but there exists $\alphav$
+such that
+$\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$.
+
+\textbf{Then logistic MrP is approximately a CW estimator.}\pause
+% The MLE satisfies
+% $\meansur m(\betahat^\trans \x_i) = \meansur \y_i \x_i$.  So
+$$
+\begin{aligned}
+\muhat_\mrp ={}& \meantar \m(\x_j^\trans \betahat) \pause
+\\ \approx{}&
+    \int \m(\x^\trans \betahat) \ptar(\x) d\x
+    & \textrm{(Law of large numbers)} \pause
+\\ ={}&
+    \int \frac{\ptar(\x)}{\psur(\x)} \m(\x^\trans \betahat) \psur(\x) d\x
+    & \textrm{(Multiply by $\psur(\x) / \psur(\x)$)} \pause
+\\ \approx{}&
+    \int \left( \alphav^\trans \x\right) \m(\x^\trans \betahat) \psur(\x) d\x
+    & \textrm{(By assumption)} \pause
+\\ \approx{}&
+    \alphav^\trans \meansur \x_i \m(\x_i^\trans \betahat)
+    & \textrm{(Law of large numbers)}\pause
+\\={}&
+    \alphav^\trans \meansur \x_i \y_i
+    & \textrm{(Property of exponential family MLEs)}
+\end{aligned}
+$$
+
 
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Nearly equivalent weights for (some) logistic regression MrP}
+
+\def\alphav{\mathbf{\alpha}}
+%
+\begin{itemize}
+    \item Model $\m(\x^\trans \beta) = \mathrm{Logistic}(\x^\trans \beta)$, with MLE $\betahat$.
+    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \betahat)$.
+\end{itemize}
+%
+Suppose $\x \in \mathcal{X}$ is continuous, but there exists $\alphav$
+such that
+$\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$.
+
+\textbf{Then logistic MrP is approximately a CW estimator.}
+$$
+\begin{aligned}
+\muhat_\mrp =
+    \meantar \m(\x_j^\trans \betahat) ={}
+    \meansur \alphav^\trans \x_i \y_i + \textrm{Small error}
+\end{aligned}
+$$
+
+We don't observe $\frac{\ptar(\x)}{\psur(\x)}$, so it's hard to estimate $\alpha$
+directly.
+
+\begin{block}{Key idea (informal)}
+\centering
+\vspace{1em}
+    If $\muhat_\mrp \approx \meansur \w_i^\mrp \y_i$ for some $\w_i^\mrp$, then
+    $\frac{\partial \muhat_\mrp}{\partial \y_i} \approx \w_i^\mrp.$\\
+\vspace{1em}
+\end{block}
+
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

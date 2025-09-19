@@ -2364,27 +2364,13 @@
     <bcf:citekey order="13">solon:2015:weightingfor</bcf:citekey>
     <bcf:citekey order="14">solon:2015:weightingfor</bcf:citekey>
     <bcf:citekey order="15">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="16">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="17">brms</bcf:citekey>
-    <bcf:citekey order="18">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="18">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="19">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="20">ipumsusa</bcf:citekey>
-    <bcf:citekey order="21">cohen:2019:namechange</bcf:citekey>
-    <bcf:citekey order="22">blueroseresearch:2024</bcf:citekey>
-    <bcf:citekey order="23">datademocracyblog:2025</bcf:citekey>
-    <bcf:citekey order="24">gelman:2007:struggles</bcf:citekey>
-    <bcf:citekey order="25">benmichael:2021:multilevel</bcf:citekey>
-    <bcf:citekey order="26">chattopadhyay:2023:implied</bcf:citekey>
-    <bcf:citekey order="27">gelman:2007:strugglesrejoinder</bcf:citekey>
-    <bcf:citekey order="28">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="29">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="30">brms</bcf:citekey>
-    <bcf:citekey order="31">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="32">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="33">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="34">ipumsusa</bcf:citekey>
-    <bcf:citekey order="35">cohen:2019:namechange</bcf:citekey>
+    <bcf:citekey order="16">blueroseresearch:2024</bcf:citekey>
+    <bcf:citekey order="17">datademocracyblog:2025</bcf:citekey>
+    <bcf:citekey order="18">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="19">benmichael:2021:multilevel</bcf:citekey>
+    <bcf:citekey order="20">chattopadhyay:2023:implied</bcf:citekey>
+    <bcf:citekey order="21">gelman:2007:strugglesrejoinder</bcf:citekey>
+    <bcf:citekey order="22">solon:2015:weightingfor</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
