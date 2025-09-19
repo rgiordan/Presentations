@@ -1,0 +1,136 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{What are we weighting for?\footnote{Pun attributable to \textcite{solon:2015:weightingfor}}}
+
+
+We want:
+$$
+\tarcol{\textrm{Target average response} =
+\meantar \y_j} \approx \surcol{\meansur \w_i \y_i
+= \textrm{Weighted survey average response }}
+$$
+We can't check this, because we don't observe $\tarcol{\y_j}$.  \pause But we can check whether:
+$$
+% \textrm{Target average regeressor} =
+    \tarcol{\meantar \x_j} = \surcol{\meansur \w_i \x_i}
+% =    \textrm{Weighted survey average regressor}
+$$
+
+Such weights satisfy ``covariate balance'' for $\x$.
+
+You can check covariate balance for any calibration weighting estimator,
+and any function $\f(\x)$.
+
+\pause
+Even more, covariate balance is the criterion for a popular class of calibration
+weight estimators:
+
+\begin{block}{Raking calibration weights}
+% Select calibration weights to satisfy
+``Raking'' selects weights that
+%
+\begin{itemize}
+    \item Are as ``close as possible'' to some reference weights
+    \item Under the constraint that they balance some selected regressors.
+\end{itemize}
+%
+% $$
+% \begin{aligned}
+%     \textrm{ Take }
+%     \w_1, \ldots, \w_{\Nsur} :={}& \argmin \sumsur (\w_s - \w_s^{\mathrm{ref}})^2 \\
+%     \textrm{Subject to }
+%     \meantar f(\x_p) ={}& \meansur \w_s f(\x_s)
+%     \textrm{ for some function }f(\cdot).
+% \end{aligned}
+% $$
+\end{block}
+
+
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Generalized covariate balance checks}
+
+% Why would you want covariate balance?  Some commonly stated reasons:
+% %
+% \begin{itemize}
+% \item To reduce the variance of inverse propensity weights (IPW)
+% \item To check the accuracy of IPW
+% \item To exactly balance ``important regressors''
+% \end{itemize}
+%
+% Common to these motivations is the following concen:
+
+We want to balance $f(\x)$ because we think
+$\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
+and want to check whether our estimator can capture this variability.
+%
+\only<2>{
+\begin{block}{Balance--informed sensitivity check (BISC) (informal)}
+    Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
+    $$
+    \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
+    $$
+    We know the change this is supposed to induce in the target population.\\[1em]
+
+    Covariate balance checks whether our estimators produce the same change.
+    %
+\end{block}
+}
+%
+\only<3->{
+\begin{block}{Balance--informed sensitivity check (BISC) (formal)}
+    Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
+    $$
+    \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
+    $$
+    We know the expected change this perturbation produces in the target distribution:
+    $$
+    \begin{aligned}
+        \tarcol{
+            \expect{}{\mu(\ytil) - \mu(\y) | \x} =
+            \meantar \left(\expect{}{\ytil | \x_p} - \expect{}{\y | \x_p}\right) =
+            \delta \meantar f(\x_j)}
+    \end{aligned}
+    $$
+    Then, check whether your estimator $\muhat(\cdot)$ produces
+    the same change for observed \surcol{$\ytil, \y$}:
+    $$
+    \begin{aligned}
+        \underbrace{
+        \surcol{\muhat(\ytil) - \muhat(\y)}
+        }_{
+            \substack{
+                \text{Replace weighted averages} \\
+                \text{with changes in an estimator}
+            }
+        }
+        \overset{\textrm{check}}{\approx}
+        \tarcol{
+        \delta \meantar f(\x_j).}
+    \end{aligned}
+    $$
+\end{block}
+}
+
+\onslide<4->{
+    When $\muhat(\cdot) = \muhat_\cal(\cdot)$,
+    BISC recovers the standard covariate balance check. \\[1em]
+    When $\muhat(\cdot) = \muhat_\mrp(\cdot)$ and $\delta$ is small,
+    BISC recovers our proposal. \\[1em]
+}
+
+\end{frame}
+
+
+

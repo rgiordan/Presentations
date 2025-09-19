@@ -1,0 +1,68 @@
+\documentclass[8pt]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+
+%\setbeamercovered{transparent}
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif} % default family is serif
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+
+\input{_headers}
+% \input{_knitr_header}
+
+\input{_defs}
+\input{figures_knitr.tex}
+
+\DefineMacros{}
+
+\title{Locally Equivalent Weights for Bayesian MrP}
+\author{Ryan Giordano, Alice Cima, Erin Hartman, Jared Murray, Avi Feller}
+
+\date{\textbf{UT Austin Statistics Seminar September 2025}}
+
+\setbeamertemplate{Collaborators}[none]
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+\begin{document}
+
+\maketitle
+
+\input{introduction}
+
+\input{methods}
+
+\input{balance}
+
+\input{taylor}
+
+\input{experiments}
+
+\input{future_work}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{References}
+
+\renewcommand*{\bibfont}{\normalfont\tiny}
+
+%\footnotesize
+
+% \bibliographystyle{plainnat}
+% Hide the references header
+% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
+% \begingroup
+% \renewcommand{\section}[2]{}%
+% \bibliography{references}
+% \endgroup
+
+\printbibliography[heading=none]
+
+\end{frame}
+
+
+\end{document}

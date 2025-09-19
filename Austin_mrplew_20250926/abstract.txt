@@ -1,0 +1,18 @@
+Local Weighting--Based Diagnostics for Bayesian Poststratification
+
+Multilevel Regression with Post-stratification (MrP) has become a workhorse
+method for estimating population quantities using non-probability surveys, and
+is the primary alternative to traditional survey calibration weights, e.g.~ as
+computed by raking.  For simple linear regression models, MrP methods admit
+``equivalent weights'', allowing for direct comparisons between MrP and
+traditional calibration weights (Gelman 2006).  In the present paper, we develop
+a more general framework for computing and interpreting ``MrP approximate
+weights'' (MrPaw), which admit direct comparison with calibration weights in
+terms of important diagnostic quantities such as covariate balance, frequentist
+sampling variability, and partial pooling.  MrPaw is based on a local equivalent
+weighting approximation, which we show in theory and practice to be accurate.
+Importantly, MrPaw can be easily computed based on existing MCMC samples and
+conveniently wraps standard MrP software implementations.  We illustrate our
+approach for several canonical studies that use MrP, including for the binary
+outcome of vote choice, showing a high degree of variability in the performance
+of MrP models in terms of frequentist diagnostics relative to raking.

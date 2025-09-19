@@ -1,0 +1,162 @@
+
+\def\argmax#1{\mathrm{argmax}_{#1}\,}
+\def\argmin#1{\mathrm{argmin}_{#1}\,}
+\def\cov#1#2{\mathrm{Cov}_{#1}\left( #2\right)\,}
+\def\expect#1#2{\mathbb{E}_{#1}\left[ #2\right]\,}
+\def\var#1#2{\mathrm{Var}_{#1}\left( #2\right)\,}
+\def\cumulant#1#2{\mathcal{K}_{#1}\left( #2\right)\,}
+\def\expecthat#1#2{\hat{\mathbb{E}}_{#1}\left[ #2\right]\,}
+\newcommand{\fracat}[3]{\left. \frac{#1}{#2} \right|_{#3}}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\diag#1{\textrm{Diag}\left( #1\right)}
+\def\ord#1{\mathcal{O}\left( #1\right)}
+\def\ordp#1{\mathcal{O}_p\left( #1\right)}
+\def\gauss#1{\mathcal{N}\left( #1\right)}
+\def\trans{\intercal} % transpose
+\def\id{I} % Identity matrix
+\def\iid{\overset{iid}{\sim}}
+\def\rdom#1{\mathbb{R}^{#1}}
+\def\ind#1{\mathbb{I}\left(#1\right)}
+
+% Sets of data in the survey and target
+
+\def\sur{\mathcal{S}}
+\def\tar{\mathcal{T}}
+\def\nsur{{N_S}}
+\def\ntar{{N_T}}
+
+\def\Nsur{{N_S}}
+\def\Ntar{{N_T}}
+
+\def\tarcol#1{\textcolor{red}{#1}}
+\def\surcol#1{\textcolor{blue}{#1}}
+
+\def\postsur{\surcol{\p(\theta \vert \textrm{Survey data})}}
+
+\def\f{f}
+\def\sumn{\sum_{n=1}^N}
+\def\meann{\frac{1}{N} \sum_{n=1}^N}
+\def\sumsur{\sum_{i=1}^\Nsur}
+\def\sumtar{\sum_{j=1}^\Ntar}
+\def\meansur{\frac{1}{\Nsur} \sumsur}
+\def\meantar{\frac{1}{\Ntar} \sumtar}
+
+
+% Distributions of x or (x, y) in the survey and target
+% p is common to both (for p(y | x))
+\def\psur{{\mathcal{P}_{S}}}
+\def\ptar{{\mathcal{P}_{T}}}
+\def\ptarhat{{\hat{\mathcal{P}}_{T}}}
+\def\p{\mathcal{P}}
+\def\post{\p(\beta \vert \sur )}
+\newcommand{\postd}[1][\delta]{\p(\beta \vert \sur, #1)}
+
+
+
+% Different MrP estimates
+\def\mrp{\mathrm{MrP}}
+\def\ols{\mathrm{OLS}}
+\def\cal{\mathrm{CW}}
+\def\glm{\mathrm{GLM}}
+\def\hwt{\mathrm{HT}} % Horwitz--Thompson
+
+% Population estimator
+\newcommand{\muhat}[1][]{\hat{\mu}^{#1}}
+\newcommand{\w}[1][]{w^{#1}}
+
+
+% Link function, usually expit.
+\def\m{m}
+\def\mhat{\hat{\m}}
+\def\minv{\m^{-1}}
+\def\betahat{\hat{\beta}} % Regression coefficient
+\def\betastar{\overset{*}{\beta}} % Regression coefficient
+\def\betadom{\rdom{D_\beta}}
+% \def\thetahat{\hat{\theta}} % All parameters
+% \def\thetastar{\overset{*}{\theta}} % All parameters
+
+% BCLT quantities
+\def\g{g} % Quantity of interest
+\def\info{\mathcal{I}}
+\def\infohat{\hat{\info}}
+\def\resid{\mathcal{E}}
+\def\V{V} % Limiting variance
+\def\Vhat{\hat{V}} % Limiting variance estimate
+
+\def\tautil{\tilde{\tau}} % Intermediate value for covariate balance
+\def\A{A} % Log partition function
+\def\Ap{A^{+}} % Log partition function
+\def\Agrad#1{A_{(#1)}} % Log partition function derivative
+\def\betaball{\mathcal{B}_{\delta}} % Neighborhood of thetastar
+\def\deltamax{\delta_{+}} % Maximum value of \delta
+\def\deltadom{[0, \deltamax]} % Maximum value of \delta
+
+% % Estimating equation
+% \def\G{G}
+% \def\H{H}
+% \def\Hhat{\hat{H}}
+% \def\t{t} % Implicit function theorem perturbation
+
+
+% Different "weights"
+
+
+
+% The regressors actually used in MrP (as opposed to x)
+% which is all observed data.
+\def\Ztar{Z_{\tar}}
+\def\Zsur{Z_{\sur}}
+\def\z{z}
+
+% THe full observed regressors, possibly distinct from what 
+% is actually in the regression
+\def\x{\mathbf{x}}
+\def\X{X}
+\def\Xtar{X_{\tar}}
+\def\Xsur{X_{\sur}}
+
+
+% The response weighting error
+\def\r{r}  % New (missing) regressor
+\def\rdim{D_r}  % New (missing) regressor
+\def\Rsur{R_{\sur}}  % New (missing) sample regressor
+\def\Rtar{R_{\tar}}  % New (missing) target regressor
+
+% % dyhat / dy
+% \def\W{W}
+\def\w{w}
+\def\wmrp{w^{\mrp}}
+\def\wv{\mathbf{w}}
+% \def\Wols{W_{OLS}}
+% \def\Wglm{W_{GLM}}
+% \def\Wbhm{W_{BHM}}
+
+
+% The response vector and values
+\def\y{y}
+\def\yhat{\hat{y}}
+\def\ytil{\tilde{y}}
+\def\Ytil{\tilde{Y}}
+\def\Yhat{\hat{Y}}
+\def\Ysur{Y_{\sur}}
+
+\def\splitpage#1#2{
+\begin{minipage}[t]{0.45\textwidth}
+    #1
+\end{minipage}
+\hfill\vrule\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    #2
+\end{minipage}
+}
+
+\def\splitpagenoline#1#2{
+\begin{minipage}[t]{0.45\textwidth}
+    #1
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    #2
+\end{minipage}
+}

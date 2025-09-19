@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not edit the TeX file your work
+% will be overwritten.  Edit the RnW
+% file instead.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<setup, include=FALSE, cache=FALSE>>=
+knitr_debug <- FALSE # Set to true to see error output
+
+rerun_all <- TRUE
+
+# Set to true to cache knitr output for this analysis.
+cache <- TRUE && (!rerun_all)
+
+source("figures_knitr/initialize.R", echo=FALSE)
+@
+
+<<load_data>>=
+source("figures_knitr/load_data.R")
+@
+
+\newcommand{\DefineMacros}{
+<<define_macros, results="asis">>=
+source("figures_knitr/define_macros.R")
+@
+}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Plots
+
+
+\newcommand{\WeightPlot}{
+<<>>=
+figcap <- paste0("Comparison between raking and MrPlew weights for a particular example")
+@
+<<weightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/weights_plot.R", print.eval=TRUE)
+@
+}
+
+
+\newcommand{\AlexanderImbalancePrimary}{
+<<>>=
+figcap <- paste0("Imbalance plot for primary effects")
+@
+<<alexanderprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/imbalance_primary.R", print.eval=TRUE)
+@
+}
+
+
+\newcommand{\AlexanderImbalanceInteraction}{
+<<>>=
+figcap <- paste0("Imbalance plot for select interaction effects")
+@
+<<alexanderinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/imbalance_interaction.R", print.eval=TRUE)
+@
+}
+
+
+% Define the prediction graphs
+<<predcition_setup, cache=cache>>=
+source("figures_knitr/predictions_plot.R")
+@
+
+
+\newcommand{\AlexanderPredictionFigOne}{
+<<>>=
+figcap <- paste0("Predictions for the name change dataset")
+@
+<<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(base_plot)
+@
+}
+
+
+
+\newcommand{\AlexanderPredictionFigTwo}{
+<<>>=
+figcap <- paste0("Predictions and refit for the name change dataset")
+@
+<<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(plt1)
+@
+}
+
+
+
+% \newcommand{\AlexanderPredictionFigThree}{
+% <<>>=
+% figcap <- paste0("Continuous predictions Alexander")
+% @
+% <<alexanderbinarypred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(pred_plot_3)
+% @
+% }
+
+
+
+
+% \newcommand{\AlexanderPredictionFigFour}{
+% <<>>=
+% figcap <- paste0("Continuous predictions Alexander")
+% @
+% <<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(pred_plot_4)
+% @
+% }
