@@ -33,6 +33,7 @@
 \def\surcol#1{\textcolor{blue}{#1}}
 
 \def\postsur{\surcol{\p(\theta \vert \textrm{Survey data})}}
+\def\post{\postsur}
 
 \def\f{f}
 \def\sumn{\sum_{n=1}^N}
@@ -49,7 +50,7 @@
 \def\ptar{{\mathcal{P}_{T}}}
 \def\ptarhat{{\hat{\mathcal{P}}_{T}}}
 \def\p{\mathcal{P}}
-\def\post{\p(\beta \vert \sur )}
+%\def\post{\p(\beta \vert \sur )}
 \newcommand{\postd}[1][\delta]{\p(\beta \vert \sur, #1)}
 
 
@@ -102,6 +103,7 @@
 % Different "weights"
 
 
+\def\thetahat{\hat{\theta}}
 
 % The regressors actually used in MrP (as opposed to x)
 % which is all observed data.

@@ -150,11 +150,11 @@ but don't observe target population $\tarcol{\y_j}$.
 one uses linear regression to form $\yhat$:
 $$
 \begin{aligned}
-% \yhat_j ={}& \x_j^\trans \betahat  =
+% \yhat_j ={}& \x_j^\trans \thetahat  =
 %     \x_j^\trans \left(\sumsur \x_i \x_i^\trans \right)^{-1} \sumsur \x_i \y_i \Rightarrow \\
 \surcol{\muhat_{\mrp}} ={}& \tarcol{\meantar \yhat_j} =
 \tarcol{\meantar }
-\underbrace{\tarcol{\x_j^\trans} \surcol{\betahat}}_{\textrm{Linear in }\surcol{\y_i}}
+\underbrace{\tarcol{\x_j^\trans} \surcol{\thetahat}}_{\textrm{Linear in }\surcol{\y_i}}
 % =
 % \surcol{\sumsur}
 % \underbrace{
@@ -201,18 +201,15 @@ weights for non--linear estimators.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{Equivalent weights for (some) logistic regression MrP}
-
-Consider logistic regression MrP:
 %
 \begin{itemize}
-    \item Model $\m(\x^\trans \beta) = \mathrm{Logistic}(\x^\trans \beta)$
-    \item Let $\betahat$ be the MLE
-    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \betahat)$.
+    \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
+    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
+    \item Suppose $\x \in \mathcal{X}$ is discrete and saturated.
 \end{itemize}
 %
-Suppose $\x \in \mathcal{X}$ is discrete and saturated.
 
-\textbf{Then logistic MrP is a CW estimator.}
+\textbf{Then MrP is a CW estimator.}
 
 \pause
 \def\ybar{\overline{y}}
@@ -221,15 +218,15 @@ Suppose $\x \in \mathcal{X}$ is discrete and saturated.
 %
 \begin{itemize}
     % \item Let $N_S^c$ (or $\Ntar^c$) denote the \# of survey (or target) observations with $\x_n = c$.
-    % \item When $\x_n = c$, $\m(\x_j^\trans \betahat) = \frac{1}{\Nsur^c} \sumsur \y_i \ind{\x_n = c}$.
+    % \item When $\x_n = c$, $\m(\x_j^\trans \thetahat) = \frac{1}{\Nsur^c} \sumsur \y_i \ind{\x_n = c}$.
     \item Let $\ybar_S^c$ denote the survey average among $\x = c$ for $c \in \mathcal{X}$
-    \item For $\x = c$, $m(\betahat^\trans \x) = \ybar_S^c$
+    \item For $\x = c$, $m(\thetahat^\trans \x) = \ybar_S^c$
     \item Let $\Nsurc$ (or $\Nsurc$) denote the \# of survey (or target) observations with $\x_n = c$.
 \end{itemize}
 %
 $$
 \begin{aligned}
-\muhat_\mrp ={}& \meantar \m(\x_j^\trans \betahat)
+\muhat_\mrp ={}& \meantar \m(\x_j^\trans \thetahat)
             = \frac{1}{\Ntar} \sum_{c \in \mathcal{X}}
             \underbrace{\Ntarc \ybar_S^c}_{\textrm{Linear in }\y_i}
         = \meansur \w_i^\mrp \y_i
@@ -251,31 +248,30 @@ $$
 \def\alphav{\mathbf{\alpha}}
 %
 \begin{itemize}
-    \item Model $\m(\x^\trans \beta) = \mathrm{Logistic}(\x^\trans \beta)$, with MLE $\betahat$.
-    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \betahat)$.
+    \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
+    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
+    \item Suppose there exists $\alphav$ such that
+            $\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$.
 \end{itemize}
 %
-Suppose $\x \in \mathcal{X}$ is continuous, but there exists $\alphav$
-such that
-$\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$.
 
-\textbf{Then logistic MrP is approximately a CW estimator.}\pause
+\textbf{Then MrP is \textit{approximately} a CW estimator.}\pause
 % The MLE satisfies
-% $\meansur m(\betahat^\trans \x_i) = \meansur \y_i \x_i$.  So
+% $\meansur m(\thetahat^\trans \x_i) = \meansur \y_i \x_i$.  So
 $$
 \begin{aligned}
-\muhat_\mrp ={}& \meantar \m(\x_j^\trans \betahat) \pause
+\muhat_\mrp ={}& \meantar \m(\x_j^\trans \thetahat) \pause
 \\ \approx{}&
-    \int \m(\x^\trans \betahat) \ptar(\x) d\x
+    \int \m(\x^\trans \thetahat) \ptar(\x) d\x
     & \textrm{(Law of large numbers)} \pause
 \\ ={}&
-    \int \frac{\ptar(\x)}{\psur(\x)} \m(\x^\trans \betahat) \psur(\x) d\x
+    \int \frac{\ptar(\x)}{\psur(\x)} \m(\x^\trans \thetahat) \psur(\x) d\x
     & \textrm{(Multiply by $\psur(\x) / \psur(\x)$)} \pause
 \\ \approx{}&
-    \int \left( \alphav^\trans \x\right) \m(\x^\trans \betahat) \psur(\x) d\x
+    \int \left( \alphav^\trans \x\right) \m(\x^\trans \thetahat) \psur(\x) d\x
     & \textrm{(By assumption)} \pause
 \\ \approx{}&
-    \alphav^\trans \meansur \x_i \m(\x_i^\trans \betahat)
+    \alphav^\trans \meansur \x_i \m(\x_i^\trans \thetahat)
     & \textrm{(Law of large numbers)}\pause
 \\={}&
     \alphav^\trans \meansur \x_i \y_i
@@ -296,36 +292,82 @@ $$
 \def\alphav{\mathbf{\alpha}}
 %
 \begin{itemize}
-    \item Model $\m(\x^\trans \beta) = \mathrm{Logistic}(\x^\trans \beta)$, with MLE $\betahat$.
-    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \betahat)$.
+    \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
+    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
+    \item Suppose there exists $\alphav$ such that
+            $\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$.
 \end{itemize}
-%
-Suppose $\x \in \mathcal{X}$ is continuous, but there exists $\alphav$
-such that
-$\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$.
-
-\textbf{Then logistic MrP is approximately a CW estimator.}
 $$
 \begin{aligned}
 \muhat_\mrp =
-    \meantar \m(\x_j^\trans \betahat) ={}
+    \meantar \m(\x_j^\trans \thetahat) ={}
     \meansur \alphav^\trans \x_i \y_i + \textrm{Small error}
 \end{aligned}
 $$
 
 We don't observe $\frac{\ptar(\x)}{\psur(\x)}$, so it's hard to estimate $\alpha$
-directly.
+directly.\pause
 
 \begin{block}{Key idea (informal)}
 \centering
 \vspace{1em}
     If $\muhat_\mrp \approx \meansur \w_i^\mrp \y_i$ for some $\w_i^\mrp$, then
-    $\frac{\partial \muhat_\mrp}{\partial \y_i} \approx \w_i^\mrp.$\\
+$$\w_i^\mrp \approx \frac{\partial \muhat_\mrp}{\partial \y_i}$$\\
+\vspace{1em}
+\end{block}\pause
+
+For logistic regression, could compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
+using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019:swiss}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Locally equivalent weights for hierarchical logistic regression MrP}
+
+\def\Y{\surcol{Y_S}}
+\def\Ytil{\surcol{\tilde{Y}_S}}
+%
+\begin{itemize}
+    \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$.
+    \item Set a hierarchical prior $\p(\theta \vert \Sigma)\p(\Sigma)$,
+            use MCMC to draw from $\post$.
+    \item MrP is $\muhat_\mrp = \meantar \expect{\post}{\m(\x_j^\trans \theta)}$.
+\end{itemize}
+\pause
+\begin{block}{MrP locally equivalent weights (MrPlew)}
+\centering
+\vspace{1em}
+For new data $\Ytil$, form a series expansion
+$$
+\begin{aligned}
+\muhat_\mrp(\Ytil) \approx{}& \muhat_\mrp(\Y) + \sumsur \w_i^\mrp (\ytil_i - \y_i)\quad
+\textrm{where}\quad \w_i^\mrp :={} \frac{\partial \muhat_\mrp}{\partial \y_i}.
+\end{aligned}
+$$
+Our task is to rigorously show that even such local weights can be used
+diagnostically.
+% We call such $\w_i^\mrp$ \textbf{MrP locally equivalent weights}, or \textbf{MrPlew}.
 \vspace{1em}
 \end{block}
+%
+\pause
+\begin{itemize}
+\item If $\muhat_\mrp$ is linear in $\Y$, this definition recovers the true weights
+\item Whether or not $\muhat_\mrp$ is linear in $\Y$, this definition is valid
+    ``locally'' for $\Ytil$ ``nearby'' $\Y$.
+\item For MCMC, compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
+using Bayesian sensitivity analysis.\footcite{gustafson:1996:localposterior,giordano:2018:covariances}
+\end{itemize}
+%
 
 
 \end{frame}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
