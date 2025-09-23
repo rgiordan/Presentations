@@ -772,6 +772,15 @@ INPUT ./static_figures/ryan_giordano.jpeg
 INPUT ./static_figures/alice.jpg
 INPUT ./static_figures/alice.jpg
 INPUT ./static_figures/alice.jpg
+INPUT ./static_figures/erin_hartman.jpg
+INPUT ./static_figures/erin_hartman.jpg
+INPUT ./static_figures/erin_hartman.jpg
+INPUT ./static_figures/jared_murray.png
+INPUT ./static_figures/jared_murray.png
+INPUT ./static_figures/jared_murray.png
+INPUT ./static_figures/avi_feller.jpg
+INPUT ./static_figures/avi_feller.jpg
+INPUT ./static_figures/avi_feller.jpg
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./introduction.tex
 INPUT ./introduction.tex
