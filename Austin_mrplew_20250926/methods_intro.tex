@@ -207,7 +207,7 @@ The map from $\Ysur = \y_1, \ldots, \y_{\Nsur} \mapsto \m(\x_j^\trans \thetahat)
 \emph{inherently nonlinear}.
 
 But \emph{some sample averages}
-of $\m(\x_j^\trans \thetahat)$ can be approximately linear.
+of $\m(\x_j^\trans \thetahat)$ can be approximately linear.\pause
 
 \begin{block}{Example \#1}
 Additionally suppose $\x \in \mathcal{X}$ is discrete and saturated.
@@ -222,9 +222,9 @@ Additionally suppose $\x \in \mathcal{X}$ is discrete and saturated.
 \begin{itemize}
     % \item Let $N_S^c$ (or $\Ntar^c$) denote the \# of survey (or target) observations with $\x_n = c$.
     % \item When $\x_n = c$, $\m(\x_j^\trans \thetahat) = \frac{1}{\Nsur^c} \sumsur \y_i \ind{\x_n = c}$.
-    \item Let $\ybar_S^c$ denote the survey average among $\x = c$ for $c \in \mathcal{X}$
-    \item For $\x = c$, the MLE satisfies $m(\thetahat^\trans \x) = \ybar_S^c$
-    \item Let $\Nsurc$ (or $\Nsurc$) denote the \# of survey (or target) observations with $\x_n = c$.
+    \item Let $\ybar_S^c$ denote the survey average among $\x = c$ for $c \in \mathcal{X}$\pause
+    \item For $\x = c$, the MLE satisfies $m(\thetahat^\trans \x) = \ybar_S^c$\pause
+    \item Let $\Nsurc$ (or $\Nsurc$) denote the \# of survey (or target) observations with $\x_n = c$.\pause
 \end{itemize}
 %
 $$
@@ -350,7 +350,7 @@ using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019
 %
 No reason to think $\Ysur \mapsto \muhat_\mrp(\Ysur)$ is even approximately linear.
 
-Butg we can still compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
+Butg we can still compute and analyze $\w_i^\mrp := \frac{\partial \muhat_\mrp}{\partial \y_i}$
 using Bayesian sensitivity analysis!
 \footcite{gustafson:1996:localposterior,giordano:2018:covariances}
 
