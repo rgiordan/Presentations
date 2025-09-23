@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[38] biber:340> INFO - === Tue Sep 23, 2025, 16:21:37
-[45] Biber.pm:418> INFO - Reading 'main.bcf'
-[77] Biber.pm:972> INFO - Found 8 citekeys in bib section 0
-[83] Biber.pm:4383> INFO - Processing section 0
-[89] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[90] bibtex.pm:1713> INFO - LaTeX decoding ...
-[98] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[137] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[137] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[137] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[137] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[141] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[143] bbl.pm:757> INFO - Output to main.bbl
+[37] biber:340> INFO - === Tue Sep 23, 2025, 16:55:58
+[44] Biber.pm:418> INFO - Reading 'main.bcf'
+[76] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
+[82] Biber.pm:4383> INFO - Processing section 0
+[88] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[89] bibtex.pm:1713> INFO - LaTeX decoding ...
+[97] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[131] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[131] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[131] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[131] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[136] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[138] bbl.pm:757> INFO - Output to main.bbl

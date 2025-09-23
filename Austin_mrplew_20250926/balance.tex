@@ -4,9 +4,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{What are we weighting for?\footnote{Pun attributable to \textcite{solon:2015:weightingfor}}}
-
-
-We want:
 $$
 \tarcol{\textrm{Target average response} =
 \meantar \y_j} \approx \surcol{\meansur \w_i \y_i
@@ -31,21 +28,12 @@ weight estimators:
 \begin{block}{Raking calibration weights}
 % Select calibration weights to satisfy
 ``Raking'' selects weights that
-%
+\vspace{-0.5em}
 \begin{itemize}
     \item Are as ``close as possible'' to some reference weights
     \item Under the constraint that they balance some selected regressors.
 \end{itemize}
 %
-% $$
-% \begin{aligned}
-%     \textrm{ Take }
-%     \w_1, \ldots, \w_{\Nsur} :={}& \argmin \sumsur (\w_s - \w_s^{\mathrm{ref}})^2 \\
-%     \textrm{Subject to }
-%     \meantar f(\x_p) ={}& \meansur \w_s f(\x_s)
-%     \textrm{ for some function }f(\cdot).
-% \end{aligned}
-% $$
 \end{block}
 
 
@@ -59,7 +47,7 @@ weight estimators:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Generalized covariate balance checks}
+\begin{frame}[t]{Balance checks as sensitivity analysis}
 
 % Why would you want covariate balance?  Some commonly stated reasons:
 % %
@@ -71,7 +59,7 @@ weight estimators:
 %
 % Common to these motivations is the following concen:
 
-We want to balance $f(\x)$ because we think
+One reason to balance $f(\x)$ is because we think
 $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
 and want to check whether our estimator can capture this variability.
 %
@@ -115,7 +103,7 @@ and want to check whether our estimator can capture this variability.
                 \text{with changes in an estimator}
             }
         }
-        \overset{\textrm{check}}{\approx}
+        \overset{\textrm{\textbf{check}}}{\approx}
         \tarcol{
         \delta \meantar f(\x_j).}
     \end{aligned}
@@ -126,11 +114,116 @@ and want to check whether our estimator can capture this variability.
 \onslide<4->{
     When $\muhat(\cdot) = \muhat_\cal(\cdot)$,
     BISC recovers the standard covariate balance check. \\[1em]
-    When $\muhat(\cdot) = \muhat_\mrp(\cdot)$ and $\delta$ is small,
-    BISC recovers our proposal. \\[1em]
+    We will use $\muhat(\cdot) = \muhat_\mrp(\cdot)$.
 }
 
 \end{frame}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{BISC for MrP}
+
+Suppose I have
+$\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.\\
+Now I need to evaluate \surcol{$\muhat_\mrp(\ytil) - \muhat_\mrp(\y)$}.
+\pause
+
+\textbf{Problem:} \surcol{$\muhat_\mrp(\cdot)$} is computed with MCMC.
+%
+\begin{itemize}
+\item Each MCMC run typically takes hours, and
+\item Output is noisy, and \surcol{$\muhat_\mrp(\ytil) - \muhat_\mrp(\y)$} may be small.
+\end{itemize}
+%
+
+\pause
+\begin{block}{MrP Local Equivalent Weights (MrPlew)}
+Form the first-order Taylor series approximation
+\surcol{
+$$
+\muhat_{\mrp}(\ytil) - \muhat_\mrp(\y) \approx
+    \sumsur \w_i^\mrp (\ytil_i  - \y_i)
+\quad\textrm{where}\quad
+    \wmrp_i := \frac{d}{d\y_i} \muhat_{\mrp}(\y).
+$$
+}
+\end{block}
+
+
+\only<4>{
+\textbf{Computation: }
+The weights are given by weighted averages of posterior covariances  \footcite{giordano:2018:covariances}.
+\\[1em]
+They can be easily computed with standard software\footnote{We use \texttt{brms} \parencite{brms}.}
+\textbf{without re--running MCMC}.\\
+}
+
+
+
+\only<5>{
+\textbf{Use in BISC: } For a wide set of judiciously chosen $\f(\cdot)$, check
+$$
+\surcol{
+ %   \underset{
+ %       \approx \muhat_{\mrp}(\ytil) - \muhat_\mrp(\y)
+ %   }{
+    \delta \sumsur \w_i^\mrp \f(\x_i)}
+ %   }
+        \overset{\textrm{check}}{\approx}
+%\underset{
+%    \approx \tarcol{\expect{}{\mu(\ytil) - \mu(\y)}}
+%}{
+    \tarcol{\delta \meantar f(\x_j).}
+%}
+$$
+
+
+}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Theory}
+
+
+
+\begin{block}{BISC Theorem: (sketch)}
+    We state conditions for Bayesian hierarchical logistic regression under which
+$$
+\onslide<4->{\sup_{f \in \mathcal{F}}}
+\abs{
+    \muhat_{\mrp}(\ytil) - \muhat_\mrp(\y)
+    - \delta \sumsur \w_i^\mrp \f(\x_i)
+}
+\only<1>{ = \textrm{Small?}}
+\only<2->{ = O(\delta^2)}
+\onslide<3->{\textrm{ as }N \rightarrow \infty}
+$$
+\onslide<4->{
+    For a very broad class\footnote{Donsker with uniformly bounded
+    $\expect{}{\x \f(\x)}$.} of $\mathcal{F}$.
+}
+\end{block}
+
+\onslide<4->{
+    \textbf{Uniformity justifies searching for ``imabalanced'' $\f$.}
+}
+
+\onslide<5->{
+The uniformity result builds on our earlier work on uniform
+and finite--sample error bounds
+for Bernstein--von Mises theorem--like results
+\footcite{giordano:2024:bayesij,kasprzak:2025:laplace}.
+}
+
+
+\end{frame}
