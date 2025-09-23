@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1758668462 "main.bcf" "main.bbl" "main" 1758668589
-  "main.bcf" 1758668589 109557 29492d9ac2b42b4b3f9df54f1111b9ec "lualatex"
+["biber main"] 1758669696 "main.bcf" "main.bbl" "main" 1758669705
+  "main.bcf" 1758669705 109036 89a106b2e59b72d7f4c90d35ceb81bfc "lualatex"
   "references.bib" 1758306874 5235 3d0a719c98e62881362d053fbb57fb36 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1758668586 "main.tex" "main.pdf" "main" 1758668589
+["lualatex"] 1758669702 "main.tex" "main.pdf" "main" 1758669705
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -56,6 +56,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb" 1248133631 33536 2645d35275aa4ba040fe69615db002f1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb" 1248133631 33366 60462f3d16c3d0f024f1f856e64b09cd ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -415,14 +416,13 @@
   "figure/weightplot-1.png" 1758301041 75207 37363fbfd03d0178bc52beeb98f3b69a ""
   "figures_knitr.tex" 1758301041 3122 706c4441adfeb69ead8a94c782026dff ""
   "future_work.tex" 1758308580 2421 d00978fde29e91fe430709eea730c2e2 ""
-  "introduction.tex" 1758668577 2898 4a7548bee02f3390a30e24c23e44ff66 ""
-  "main.aux" 1758668589 7347 297d3f42130b8062d317b46d8e74bc80 "lualatex"
-  "main.bbl" 1758668462 15135 d1d9d2166733ec6f6362fa8e6a8bf31b "biber main"
-  "main.nav" 1758668589 1503 b327219ad06d1bf0db170c0113545082 "lualatex"
-  "main.out" 1758668588 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1758668589 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
-  "main.tex" 1758668261 1945 45b45a6a5091c90c9fd956562957be63 ""
-  "methods.tex" 1758307210 11364 6846003b0cfb2f0ba2843165f4f7e482 ""
+  "main.aux" 1758669705 6258 4a867592da765523c8fb06f217fdcb24 "lualatex"
+  "main.bbl" 1758669697 12224 cf2f92cc4d893e914d0875ccc0a052fe "biber main"
+  "main.nav" 1758669705 1321 b715908ad4bd7e1dd4bfb8fa56ab77f8 "lualatex"
+  "main.out" 1758669704 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1758669705 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
+  "main.tex" 1758668645 1952 78ee2f4e3a946b2d3c74f984c1336c64 ""
+  "methods_intro.tex" 1758669692 11812 31fcebe4b5689c2219050d9655cce486 ""
   "static_figures/alice.jpg" 1758301041 13170 bee87fd4d96042960ced90e03e7db734 ""
   "static_figures/avi_feller.jpg" 1758663146 13270 1893adb88ca0fbc19284e37e996c5e9b ""
   "static_figures/erin_hartman.jpg" 1758663141 17696 f25364a07362865e72a7c693bbe634c3 ""

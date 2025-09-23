@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  23 SEP 2025 16:03
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  23 SEP 2025 16:21
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1962,56 +1962,31 @@ Overfull \vbox (10.92494pt too high) detected at line 42
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./static_figures/ryan_giorda
 no.jpeg><./static_figures/alice.jpg><./static_figures/erin_hartman.jpg><./static
 _figures/jared_murray.png><./static_figures/avi_feller.jpg>]
-(./introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+(./methods_intro.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
 
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \vbox (16.35776pt too high) detected at line 62
- []
-
-[2
-
-]
-Overfull \vbox (16.35776pt too high) detected at line 62
- []
-
-[3
-
-]
-Overfull \vbox (16.35776pt too high) detected at line 62
- []
-
-[4
-
-] [5
-
-] [6
-
-] [7
-
-]) (./methods.tex
-<static_figures/survey_man.jpg, id=71, 597.23125pt x 803.0pt>
+<static_figures/survey_man.jpg, id=27, 597.23125pt x 803.0pt>
 File: static_figures/survey_man.jpg Graphic file (type jpg)
 <use static_figures/survey_man.jpg>
 Package luatex.def Info: static_figures/survey_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 92.94957pt.
-<static_figures/voting_man.jpg, id=72, 606.265pt x 803.0pt>
+<static_figures/voting_man.jpg, id=28, 606.265pt x 803.0pt>
 File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [8
+ [2
 
 <./static_figures/survey_man.jpg><./static_figures/voting_man.jpg>]
-<static_figures/survey_crazy_man.jpg, id=80, 724.7075pt x 803.0pt>
+<static_figures/survey_crazy_man.jpg, id=37, 724.7075pt x 803.0pt>
 File: static_figures/survey_crazy_man.jpg Graphic file (type jpg)
 <use static_figures/survey_crazy_man.jpg>
 Package luatex.def Info: static_figures/survey_crazy_man.jpg  used on input lin
@@ -2021,7 +1996,7 @@ File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [9
+ [3
 
 <./static_figures/survey_crazy_man.jpg>]
 File: static_figures/survey_crazy_man.jpg Graphic file (type jpg)
@@ -2033,53 +2008,93 @@ File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [10
+ [4
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 140
  []
 
-[11
+[5
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 140
  []
 
-[12
+[6
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 140
  []
 
-[13
+[7
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 140
  []
 
-[14
+[8
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 140
+ []
+
+[9
+
+]
+Overfull \vbox (4.18842pt too high) detected at line 140
+ []
+
+[10
+
+] [11
+
+] [12
+
+] [13
+
+] [14
+
+]
+Overfull \vbox (14.77217pt too high) detected at line 288
  []
 
 [15
 
 ]
-Overfull \vbox (4.18842pt too high) detected at line 140
+Overfull \vbox (14.77217pt too high) detected at line 288
  []
 
 [16
 
-] [17
+]
+Overfull \vbox (14.77217pt too high) detected at line 288
+ []
 
-] [18
+[17
 
-] [19
+]
+Overfull \vbox (14.77217pt too high) detected at line 288
+ []
 
-] [20
+[18
 
-] [21
+]
+Overfull \vbox (14.77217pt too high) detected at line 288
+ []
+
+[19
+
+]
+Overfull \vbox (14.77217pt too high) detected at line 288
+ []
+
+[20
+
+]
+Overfull \vbox (14.77217pt too high) detected at line 288
+ []
+
+[21
 
 ] [22
 
@@ -2093,51 +2108,38 @@ Overfull \vbox (4.18842pt too high) detected at line 140
 
 ] [27
 
-] [28
-
-] [29
-
-] [30
-
 ]
-[31
-
-] [32
-
-] [33
-
-]
-<figure/weightplot-1.png, id=256, 469.755pt x 281.853pt>
+<figure/weightplot-1.png, id=215, 469.755pt x 281.853pt>
 File: figure/weightplot-1.png Graphic file (type png)
 <use figure/weightplot-1.png>
-Package luatex.def Info: figure/weightplot-1.png  used on input line 383.
+Package luatex.def Info: figure/weightplot-1.png  used on input line 401.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
 
-Overfull \vbox (0.24309pt too high) detected at line 383
+Overfull \vbox (0.24309pt too high) detected at line 401
  []
 
-[34
+[28
 
-<./figure/weightplot-1.png>]) (./future_work.tex [35
+<./figure/weightplot-1.png>]) (./future_work.tex [29
 
 ]
 File: static_figures/alice.jpg Graphic file (type jpg)
 <use static_figures/alice.jpg>
 Package luatex.def Info: static_figures/alice.jpg  used on input line 84.
 (luatex.def)             Requested size: 66.37567pt x 66.37749pt.
-<static_figures/sequoia.jpg, id=269, 131.74219pt x 131.74219pt>
+<static_figures/sequoia.jpg, id=228, 131.74219pt x 131.74219pt>
 File: static_figures/sequoia.jpg Graphic file (type jpg)
 <use static_figures/sequoia.jpg>
 Package luatex.def Info: static_figures/sequoia.jpg  used on input line 84.
 (luatex.def)             Requested size: 66.37567pt x 66.37749pt.
-<static_figures/lucas.jpg, id=270, 131.74219pt x 131.74219pt>
+<static_figures/lucas.jpg, id=229, 131.74219pt x 131.74219pt>
 File: static_figures/lucas.jpg Graphic file (type jpg)
 <use static_figures/lucas.jpg>
 Package luatex.def Info: static_figures/lucas.jpg  used on input line 84.
 (luatex.def)             Requested size: 66.37567pt x 66.37749pt.
- [36
+ [30
 
-<./static_figures/sequoia.jpg><./static_figures/lucas.jpg>]) [37
+<./static_figures/sequoia.jpg><./static_figures/lucas.jpg>]) [31
 
 </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write7
@@ -2158,21 +2160,21 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54160 strings out of 477805
+ 54093 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 17363 words of node memory still in use:
-   65 hlist, 8 vlist, 15 rule, 110 disc, 11 local_par, 6 math, 370 glue, 38 kern
-, 102 penalty, 1309 glyph, 424 attribute, 121 glue_spec, 424 attribute_list, 14 
-write, 3 pdf_start_link, 3 pdf_end_link, 10 pdf_dest, 3 pdf_action, 116 pdf_colo
-rstack nodes
-   avail lists: 1:6,2:803,3:254,4:315,5:263,6:91,7:3571,8:71,9:1270,10:26,11:223
-
- 72484 multiletter control sequences out of 65536+600000
+ 13666 words of node memory still in use:
+   55 hlist, 8 vlist, 13 rule, 91 disc, 9 local_par, 2 math, 280 glue, 34 kern, 
+73 penalty, 996 glyph, 355 attribute, 121 glue_spec, 355 attribute_list, 12 writ
+e, 1 pdf_start_link, 1 pdf_end_link, 8 pdf_dest, 1 pdf_action, 96 pdf_colorstack
+ nodes
+   avail lists: 1:6,2:1063,3:217,4:275,5:300,6:95,7:2680,8:53,9:1327,10:21,11:18
+2
+ 72436 multiletter control sequences out of 65536+600000
  86 fonts using 21028247 bytes
- 128i,17n,134p,1852b,2109s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,17n,134p,1852b,2000s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
-/usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fon
-ts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/fonts/truetyp
+/usr/share/fonts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share
+/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fonts/truetyp
 e/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/liberation2
 /LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
@@ -2183,12 +2185,13 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (37 pages, 933312 bytes).
+type1/public/amsfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (31 pages, 929997 bytes).
 
-PDF statistics: 364 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 131072)
+PDF statistics: 325 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

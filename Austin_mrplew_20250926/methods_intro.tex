@@ -144,7 +144,7 @@ but don't observe target population $\tarcol{\y_j}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Prior work}
+\begin{frame}{Prior work: Equivalent weights for linear models}
 
 \textcite{gelman:2007:struggles} observes that MrP is a CW estimator when
 one uses linear regression to form $\yhat$:
@@ -186,10 +186,6 @@ would seem to be completely incompatible methods.''
 }
 \vspace{1em}
 
-Let's spend some time discussing why it is reasonable
-to even attempt such a thing as forming approximate equivalent
-weights for non--linear estimators.
-
 \end{frame}
 
 
@@ -205,11 +201,18 @@ weights for non--linear estimators.
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
     \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
-    \item Suppose $\x \in \mathcal{X}$ is discrete and saturated.
 \end{itemize}
-%
 
-\textbf{Then MrP is a CW estimator.}
+The map from $\Ysur = \y_1, \ldots, \y_{\Nsur} \mapsto \m(\x_j^\trans \thetahat)$ is
+\emph{inherently nonlinear}.
+
+But \emph{some sample averages}
+of $\m(\x_j^\trans \thetahat)$ can be approximately linear.
+
+\begin{block}{Example \#1}
+Additionally suppose $\x \in \mathcal{X}$ is discrete and saturated.
+        \textbf{Then MrP is a CW estimator.}
+\end{block}
 
 \pause
 \def\ybar{\overline{y}}
@@ -220,7 +223,7 @@ weights for non--linear estimators.
     % \item Let $N_S^c$ (or $\Ntar^c$) denote the \# of survey (or target) observations with $\x_n = c$.
     % \item When $\x_n = c$, $\m(\x_j^\trans \thetahat) = \frac{1}{\Nsur^c} \sumsur \y_i \ind{\x_n = c}$.
     \item Let $\ybar_S^c$ denote the survey average among $\x = c$ for $c \in \mathcal{X}$
-    \item For $\x = c$, $m(\thetahat^\trans \x) = \ybar_S^c$
+    \item For $\x = c$, the MLE satisfies $m(\thetahat^\trans \x) = \ybar_S^c$
     \item Let $\Nsurc$ (or $\Nsurc$) denote the \# of survey (or target) observations with $\x_n = c$.
 \end{itemize}
 %
@@ -243,19 +246,21 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Nearly equivalent weights for (some) logistic regression MrP}
+\begin{frame}[t]{Approximately equivalent weights for (some) logistic regression MrP}
 
 \def\alphav{\mathbf{\alpha}}
 %
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
     \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
-    \item Suppose there exists $\alphav$ such that
-            $\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$.
 \end{itemize}
 %
+\begin{block}{Example \#2}
+Suppose
+    $\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
+    \textbf{Then MrP is a \emph{approximately} a CW estimator.}
+\end{block}\pause
 
-\textbf{Then MrP is \textit{approximately} a CW estimator.}\pause
 % The MLE satisfies
 % $\meansur m(\thetahat^\trans \x_i) = \meansur \y_i \x_i$.  So
 $$
@@ -294,26 +299,30 @@ $$
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
     \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
-    \item Suppose there exists $\alphav$ such that
-            $\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$.
 \end{itemize}
+%
+\begin{block}{Example \#2}
+Suppose
+    $\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
+    \textbf{Then MrP is a \emph{approximately} a CW estimator.}
+\end{block}
+
 $$
 \begin{aligned}
 \muhat_\mrp =
     \meantar \m(\x_j^\trans \thetahat) ={}
-    \meansur \alphav^\trans \x_i \y_i + \textrm{Small error}
+    \meansur
+    \underbrace{\w_i^\mrp}_{\alphav^\trans \x_i} \y_i + \textrm{Small error}
 \end{aligned}
 $$
-
-We don't observe $\frac{\ptar(\x)}{\psur(\x)}$, so it's hard to estimate $\alpha$
+But what are the weights?
+We don't observe $\frac{\ptar(\x)}{\psur(\x)}$, so can't estimate $\alpha$
 directly.\pause
 
 \begin{block}{Key idea (informal)}
 \centering
-\vspace{1em}
-    If $\muhat_\mrp \approx \meansur \w_i^\mrp \y_i$ for some $\w_i^\mrp$, then
-$$\w_i^\mrp \approx \frac{\partial \muhat_\mrp}{\partial \y_i}$$\\
-\vspace{1em}
+If $\muhat_\mrp$ is approximately linear, then
+$\w_i^\mrp \approx \frac{\partial \muhat_\mrp}{\partial \y_i}.$\\
 \end{block}\pause
 
 For logistic regression, could compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
@@ -338,6 +347,13 @@ using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019
             use MCMC to draw from $\post$.
     \item MrP is $\muhat_\mrp = \meantar \expect{\post}{\m(\x_j^\trans \theta)}$.
 \end{itemize}
+%
+No reason to think $\Ysur \mapsto \muhat_\mrp(\Ysur)$ is even approximately linear.
+
+Butg we can still compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
+using Bayesian sensitivity analysis!
+\footcite{gustafson:1996:localposterior,giordano:2018:covariances}
+
 \pause
 \begin{block}{MrP locally equivalent weights (MrPlew)}
 \centering
@@ -349,20 +365,22 @@ $$
 \textrm{where}\quad \w_i^\mrp :={} \frac{\partial \muhat_\mrp}{\partial \y_i}.
 \end{aligned}
 $$
-Our task is to rigorously show that even such local weights can be used
-diagnostically.
-% We call such $\w_i^\mrp$ \textbf{MrP locally equivalent weights}, or \textbf{MrPlew}.
 \vspace{1em}
 \end{block}
 %
 \pause
-\begin{itemize}
-\item If $\muhat_\mrp$ is linear in $\Y$, this definition recovers the true weights
-\item Whether or not $\muhat_\mrp$ is linear in $\Y$, this definition is valid
-    ``locally'' for $\Ytil$ ``nearby'' $\Y$.
-\item For MCMC, compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
-using Bayesian sensitivity analysis.\footcite{gustafson:1996:localposterior,giordano:2018:covariances}
-\end{itemize}
+\textbf{
+Our task is to rigorously show that even such local weights can be used
+diagnostically.
+}
+
+% \begin{itemize}
+% \item If $\muhat_\mrp$ is linear in $\Y$, this definition recovers the true weights
+% \item Whether or not $\muhat_\mrp$ is linear in $\Y$, this definition is valid
+%     ``locally'' for $\Ytil$ ``nearby'' $\Y$.
+% \item For MCMC, compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
+% using Bayesian sensitivity analysis.\footcite{gustafson:1996:localposterior,giordano:2018:covariances}
+% \end{itemize}
 %
 
 
