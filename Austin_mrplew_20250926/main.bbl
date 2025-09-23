@@ -19,6 +19,47 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{benmichael:2021:multilevel}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=002098d4f02069e5bb8d356f24aa10a8}{%
+           family={B.},
+           familyi={B\bibinitperiod},
+           given={Eli},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e635e79316fdf9c435924f13052f1e6}{%
+           family={F.},
+           familyi={F\bibinitperiod},
+           given={Avi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64c4095a0ceb0077b2b5dfaedf21620e}{%
+           family={H.},
+           familyi={H\bibinitperiod},
+           given={Erin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ea477c82ac24a80b2321849d3acef0e3}
+      \strng{fullhash}{ea477c82ac24a80b2321849d3acef0e3}
+      \strng{bibnamehash}{ea477c82ac24a80b2321849d3acef0e3}
+      \strng{authorbibnamehash}{ea477c82ac24a80b2321849d3acef0e3}
+      \strng{authornamehash}{ea477c82ac24a80b2321849d3acef0e3}
+      \strng{authorfullhash}{ea477c82ac24a80b2321849d3acef0e3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{Multilevel calibration weighting for survey data}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2102.09052
+      \endverb
+    \endentry
     \entry{blueroseresearch:2024}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2e93e02a386560bf8ce78b70f8c6d0c3}{%
@@ -85,6 +126,253 @@
       \field{month}{4}
       \field{title}{Did Non-Voters Really Flip {Republican} in 2024? {The} Evidence Says No.}
       \field{year}{2025}
+    \endentry
+    \entry{chattopadhyay:2023:implied}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e504975fe938395866c8f6413737cabe}{%
+           family={Chattopadhyay},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af7d8838b9448f3a6a242f660d603b53}{%
+           family={Zubizarreta},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{2bdd722d0f02a653b320d070681fff23}
+      \strng{fullhash}{2bdd722d0f02a653b320d070681fff23}
+      \strng{bibnamehash}{2bdd722d0f02a653b320d070681fff23}
+      \strng{authorbibnamehash}{2bdd722d0f02a653b320d070681fff23}
+      \strng{authornamehash}{2bdd722d0f02a653b320d070681fff23}
+      \strng{authorfullhash}{2bdd722d0f02a653b320d070681fff23}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrika}
+      \field{number}{3}
+      \field{title}{On the implied weights of linear regression for causal inference}
+      \field{volume}{110}
+      \field{year}{2023}
+      \field{pages}{615\bibrangedash 629}
+      \range{pages}{15}
+    \endentry
+    \entry{giordano:2018:covariances}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
+           family={\textbf{G.}},
+           familyi={G\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
+           family={Broderick},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0442c01fb14007ee1da9ccea3dfe2597}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{fullhash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{bibnamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{authorbibnamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{authornamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{authorfullhash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of machine learning research}
+      \field{number}{51}
+      \field{title}{Covariances, robustness and variational bayes}
+      \field{volume}{19}
+      \field{year}{2018}
+    \endentry
+    \entry{giordano:2019:swiss}{inproceedings}{}
+      \name{author}{5}{ul=2}{%
+        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
+           family={\textbf{G.}},
+           familyi={G\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=78d57a6bfe4caefdb9aa3d53f0943f70}{%
+           family={Stephenson},
+           familyi={S\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=47fa1cfa42f039e59f4e014c1941c712}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0442c01fb14007ee1da9ccea3dfe2597}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
+           family={Broderick},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{17c5310b566bfca0538033156b74b576}
+      \strng{fullhash}{3ff6ab439e93920fdb742a33ecb8a4a0}
+      \strng{bibnamehash}{17c5310b566bfca0538033156b74b576}
+      \strng{authorbibnamehash}{17c5310b566bfca0538033156b74b576}
+      \strng{authornamehash}{17c5310b566bfca0538033156b74b576}
+      \strng{authorfullhash}{3ff6ab439e93920fdb742a33ecb8a4a0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The 22nd International Conference on Artificial Intelligence and Statistics}
+      \field{title}{A swiss army infinitesimal jackknife}
+      \field{year}{2019}
+      \field{pages}{1139\bibrangedash 1147}
+      \range{pages}{9}
+    \endentry
+    \entry{gelman:2007:strugglesrejoinder}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ba82e2f52cafc6076f0de4ae6be66db0}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{fullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{bibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authorbibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authornamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authorfullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Science}
+      \field{number}{2}
+      \field{title}{{Rejoinder:} {Struggles} with survey weighting and regression modelling}
+      \field{volume}{22}
+      \field{year}{2007}
+      \field{pages}{184\bibrangedash 188}
+      \range{pages}{5}
+    \endentry
+    \entry{gelman:2007:struggles}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ba82e2f52cafc6076f0de4ae6be66db0}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{fullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{bibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authorbibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authornamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authorfullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Struggles with survey weighting and regression modeling}
+      \field{year}{2007}
+    \endentry
+    \entry{gustafson:1996:localposterior}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8a755d2d13c958222d8f8fb09da639c9}{%
+           family={Gustafson},
+           familyi={G\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{8a755d2d13c958222d8f8fb09da639c9}
+      \strng{fullhash}{8a755d2d13c958222d8f8fb09da639c9}
+      \strng{bibnamehash}{8a755d2d13c958222d8f8fb09da639c9}
+      \strng{authorbibnamehash}{8a755d2d13c958222d8f8fb09da639c9}
+      \strng{authornamehash}{8a755d2d13c958222d8f8fb09da639c9}
+      \strng{authorfullhash}{8a755d2d13c958222d8f8fb09da639c9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Statistics}
+      \field{number}{1}
+      \field{title}{Local sensitivity of posterior expectations}
+      \field{volume}{24}
+      \field{year}{1996}
+      \field{pages}{174\bibrangedash 195}
+      \range{pages}{22}
+    \endentry
+    \entry{krantz:2012:implicit}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=103df34e16530481ed318e7a009071fc}{%
+           family={Krantz},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5392047654beb2bc3d25d2dad02918b9}{%
+           family={Parks},
+           familyi={P\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{a66a02e167af0ebc7052a1604def3607}
+      \strng{fullhash}{a66a02e167af0ebc7052a1604def3607}
+      \strng{bibnamehash}{a66a02e167af0ebc7052a1604def3607}
+      \strng{authorbibnamehash}{a66a02e167af0ebc7052a1604def3607}
+      \strng{authornamehash}{a66a02e167af0ebc7052a1604def3607}
+      \strng{authorfullhash}{a66a02e167af0ebc7052a1604def3607}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Implicit Function Theorem: History, Theory, and Applications}
+      \field{year}{2012}
     \endentry
   \enddatalist
 \endrefsection
