@@ -10,7 +10,7 @@ DefineMacro <- function(macro_name, value, digits=3) {
   cat("\\newcommand{\\", macro_name, "}{", value_string, "}\n", sep="")
 }
 
-basic_metrics <- basic_data$basic_metrics
+basic_metrics <- alex$basic_data$basic_metrics
 DefineMacro("AlexNSur", basic_metrics$n_survey)
 DefineMacro("AlexNTar", basic_metrics$n_target)
 DefineMacro("AlexSurmean", basic_metrics$survey_mean, digits=3)
@@ -18,6 +18,24 @@ DefineMacro("AlexMrp", basic_metrics$mrp, digits=3)
 DefineMacro("AlexMrpSD", basic_metrics$mrp_sd, digits=3)
 DefineMacro("AlexRaking", basic_metrics$raking, digits=3)
 
+refit_data <- alex$refit_data
+DefineMacro("AlexRefitTimeHours",
+  as.numeric(refit_data$total_refit_time, units = "hours"), digits=1)
+DefineMacro("AlexMrPawTimeSecs",
+  as.numeric(refit_data$mean_mrpaw_time, units = "secs"), digits=1)
 
-DefineMacro("RefitTimeHours", as.numeric(refit_data$total_refit_time, units = "hours"), digits=1)
-DefineMacro("MrPawTimeSecs", as.numeric(refit_data$mean_mrpaw_time, units = "secs"), digits=1)
+
+
+basic_metrics <- lax$basic_data$basic_metrics
+DefineMacro("LaxNSur", basic_metrics$n_survey)
+DefineMacro("LaxNTar", basic_metrics$n_target)
+DefineMacro("LaxSurmean", basic_metrics$survey_mean, digits=3)
+DefineMacro("LaxMrp", basic_metrics$mrp, digits=3)
+DefineMacro("LaxMrpSD", basic_metrics$mrp_sd, digits=3)
+DefineMacro("LaxRaking", basic_metrics$raking, digits=3)
+
+refit_data <- lax$refit_data
+DefineMacro("LaxRefitTimeHours",
+  as.numeric(refit_data$total_refit_time, units = "hours"), digits=1)
+DefineMacro("LaxMrPawTimeSecs",
+  as.numeric(refit_data$mean_mrpaw_time, units = "secs"), digits=1)

@@ -37,15 +37,15 @@ alex$refit_data <- LoadIntoEnvironment(
   file.path(data_path, sprintf("alexander_%s_refit.Rdata", alex$col_pert_clean)))
 
 
-alex$basic_metrics <- basic_data$basic_metrics
+alex$basic_metrics <- alex$basic_data$basic_metrics
 alex$basic_data$imb_plot_df <-
-  basic_metrics$imb_df %>%
+  alex$basic_metrics$imb_df %>%
   select(reg, interaction, mrp_x, raking_x, poststrat_x) %>%
   pivot_longer(cols=c(mrp_x, raking_x, poststrat_x)) %>%
   mutate(reg_clean=clean_regressors(reg)) %>%
   mutate(name=clean_method(name))
 
-alex$basic_data$pert_col_clean <- clean_regressors(sim_data$col_pert)
+alex$basic_data$pert_col_clean <- clean_regressors(alex$sim_data$col_pert)
 
 
 # Lax Philips data
@@ -61,16 +61,16 @@ lax$basic_data <- LoadIntoEnvironment(
     file.path(data_path, "laxphilips_basic_data.Rdata"))
 
 lax$refit_data <- LoadIntoEnvironment(
-  file.path(data_path, sprintf("alexander_%s_refit.Rdata", col_pert_clean)))
+  file.path(data_path, sprintf("laxphilips_%s_refit.Rdata", lax$col_pert_clean)))
 
 
-lax$basic_metrics <- basic_data$basic_metrics
+lax$basic_metrics <- lax$basic_data$basic_metrics
 lax$basic_data$imb_plot_df <-
-  basic_metrics$imb_df %>%
+  lax$basic_metrics$imb_df %>%
   select(reg, interaction, mrp_x, raking_x, poststrat_x) %>%
   pivot_longer(cols=c(mrp_x, raking_x, poststrat_x)) %>%
   mutate(reg_clean=clean_regressors(reg)) %>%
   mutate(name=clean_method(name))
 
-lax$basic_data$pert_col_clean <- clean_regressors(sim_data$col_pert)
+lax$basic_data$pert_col_clean <- clean_regressors(lax$sim_data$col_pert)
 

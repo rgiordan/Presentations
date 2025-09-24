@@ -8,8 +8,8 @@ cache <- FALSE
 setwd(base_dir)
 source(file.path(base_dir, "figures_knitr/initialize.R"))
 source(file.path(paper_directory, "figures_knitr/load_data.R"))
-
 source(file.path(paper_directory, "figures_knitr/define_macros.R"))
+
 source(file.path(paper_directory, "figures_knitr/predictions_plot.R"), print.eval=TRUE)
 
 #source(file.path(paper_directory, "figures_knitr/imbalance_primary.R"), print.eval=TRUE)
