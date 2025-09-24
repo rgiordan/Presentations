@@ -187,6 +187,72 @@ $$
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Generating $\ytil$}
+%
+\begin{itemize}
+\item We have defined BISC in terms of $\ytil$ such that
+$\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$
+\item We have approximated $\muhat_{\mrp}(\ytil) - \muhat_\mrp(\y)$ for $\ytil \approx \y$
+\end{itemize}
+%
+How to get such a $\ytil$?  \textbf{Recall $\y$ is binary!}  Two approaches:
+
+
+\splitpagenoline{
+    \centering
+    \textbf{Option 1:} Force $\ytil$ to be binary.
+    %
+    \begin{enumerate}
+    \item Make \textit{some} guess $\hat{m}(\x) \approx \expect{}{\y \vert \x}$
+    %
+    \begin{itemize}
+    \item E.g.~Posterior mean, or
+    \item Shrunken posterior mean, or
+    \item Some values that gives the same posterior
+    \end{itemize}
+    %
+    \item Take $u_n \iid \mathrm{Unif}(0,1)$
+    \item Assume $\y_n = \ind{u_n \le \hat{m}(\x_n)}$
+    \item Draw $u_n \vert \y_n$
+    \item Set $\ytil_n = \ind{u_n \le \hat{m}(\x_n)+ \delta \x_n}$
+%
+\end{enumerate}
+%
+} {
+    \centering
+    \textbf{Option 2:} Allow $\ytil$ to take generic values.
+    \begin{enumerate}
+        \item Set $\ytil_n = \y_n + \delta \f(\x_n)$.
+    \end{enumerate}
+} \pause
+%
+\\[1em]
+\splitpagenoline{
+%
+\begin{itemize}
+\item Realistic
+\item Have to pick $\hat{m}(\x)$
+\item $\Ytil - \Ysur$ not infinitesimally small
+\item \textbf{Sanity check for theory}
+\end{itemize}
+%
+}
+{
+\begin{itemize}
+\item Not realistic
+\item No additional assumptions
+\item $\Ytil - \Ysur$ may be infinitesimally small
+\item \textbf{Use for theory}
+\end{itemize}
+}
+
+
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -197,11 +263,12 @@ $$
 
 
 \begin{block}{BISC Theorem: (sketch)}
+    Take $\ytil_n = \y_n + \delta \f(\x_n)$.\\[1em]
     We state conditions for Bayesian hierarchical logistic regression under which
 $$
 \onslide<4->{\sup_{f \in \mathcal{F}}}
 \abs{
-    \muhat_{\mrp}(\ytil) - \muhat_\mrp(\y)
+    \muhat_{\mrp}(\Ysur) - \muhat_\mrp(\Ysur)
     - \delta \sumsur \w_i^\mrp \f(\x_i)
 }
 \only<1>{ = \textrm{Small?}}
