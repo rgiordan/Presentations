@@ -8,6 +8,16 @@ clean_sd_method <- function(method) {
   )
 }
 
+
+clean_dataset_name <- function(analysis) {
+  case_when(
+    analysis == "alexander" ~ "Name change dataset",
+    analysis == "laxphilips" ~ "Gay marriage dataset",
+    TRUE ~ "UNKNOWN"
+  )
+}
+
+
 # Both ij_sd and sd are of the MrP estimator
 method_colors <- c(
   "MrPlew estimate" = "#F8766D",
@@ -27,11 +37,12 @@ boot_df <-
     )), by="analysis") %>%
   pivot_longer(cols=-analysis) %>%
   filter(name %in% c("sd", "ij_sd", "raking_sd")) %>%
-  mutate(method_label=clean_sd_method(name))
+  mutate(method_label=clean_sd_method(name)) %>%
+  mutate(analysis_label=clean_dataset_name(analysis))
 
 
 plt <- boot_df %>%
-  ggplot(aes(x=analysis, y=value, fill=method_label)) +
+  ggplot(aes(x=analysis_label, y=value, fill=method_label)) +
   geom_bar(position = "dodge", stat = "identity") +
   scale_fill_manual(values=method_colors) +
   xlab(NULL) +
