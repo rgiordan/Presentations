@@ -14,6 +14,20 @@ source("figures_knitr/predictions_plot.R")
 source("figures_knitr/imbalance_primary.R")
 source("figures_knitr/imbalance_interaction.R")
 
-source(file.path(paper_directory, "figures_knitr/weights_plot.R"), print.eval=TRUE)
+#source(file.path(paper_directory, "figures_knitr/weights_plot.R"), print.eval=TRUE)
+
+source("figures_knitr/predictions_plot.R")
+alex_refit_plots$base_plot
+alex_refit_plots$plt1
 
 
+
+sim_data <- alex$sim_data
+sim_data$col_pert
+sim_data$predictions_df %>%
+  ggplot() +
+  geom_line(aes(x=delta, y=raking_diff_continuous, color="raking")) +
+  geom_line(aes(x=delta, y=raking_diff, color="raking bin")) +
+  geom_line(aes(x=delta, y=pststrt_diff, color="poststrat")) +
+  geom_line(aes(x=delta, y=mrp_pred_continuous, color="mrp"))
+  

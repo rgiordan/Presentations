@@ -9,8 +9,13 @@ clean_sim_method <- function(method) {
   )
   }
 
-get_prediction_plots <- function(sim_data, basic_data) {
+get_prediction_plots <- function(analysis_list) {
   lwd_val <- 0.6
+
+  delta_df <- analysis_list$refit_data$delta_df
+  sim_data <- analysis_list$sim_data
+  delta_df <- analysis_list$refit_data$delta_df
+  basic_data <- analysis_list$basic_data
 
   method_levels <- c("MRP", "Raking", "Target")
   prediction_constants_df <-
@@ -36,8 +41,6 @@ get_prediction_plots <- function(sim_data, basic_data) {
     "Actual" = "solid"
   )
 
-  delta_df <- refit_data$delta_df
-
   base_plot <-
     ggplot() +
     xlab(TeX("$\\delta$")) +
@@ -47,7 +50,6 @@ get_prediction_plots <- function(sim_data, basic_data) {
     scale_color_manual(values = method_colors) +
     scale_fill_manual(values = method_colors) +
     guides(fill="none") + labs(color="Method") +
-    ylim(0, 0.062) +
     geom_line(aes(y=value, x=delta, color=method, group=name), lwd=lwd_val,
               data=prediction_constants_df %>%
                 filter(name == "pststrt_diff")) +
@@ -70,5 +72,5 @@ get_prediction_plots <- function(sim_data, basic_data) {
 }
 
 
-alex_refit_plots <- get_prediction_plots(alex$sim_data, alex$basic_data)
-lax_refit_plots <- get_prediction_plots(lax$sim_data, lax$basic_data)
+alex_refit_plots <- get_prediction_plots(alex)
+lax_refit_plots <- get_prediction_plots(lax)
