@@ -7,7 +7,19 @@ clean_sim_method <- function(method) {
     method == "Truth" ~ "Target",
     TRUE ~ "UNKNOWN"
   )
-  }
+}
+
+method_colors <- c(
+  "MRP" = "#F8766D",
+  "Raking" = "#00BA38",
+  "Target" = "#619CFF"
+)
+
+method_linetypes <- c(
+  "Mean pred." = "solid",
+  "Prediction" = "dashed",
+  "Actual" = "solid"
+)
 
 get_prediction_plots <- function(analysis_list) {
   lwd_val <- 0.6
@@ -29,17 +41,7 @@ get_prediction_plots <- function(analysis_list) {
     mutate(method=clean_sim_method(method)) %>%
     mutate(method=factor(method, levels=method_levels))
 
-  method_colors <- c(
-    "MRP" = "#F8766D",
-    "Raking" = "#00BA38",
-    "Target" = "#619CFF"
-  )
 
-  method_linetypes <- c(
-    "Mean pred." = "solid",
-    "Prediction" = "dashed",
-    "Actual" = "solid"
-  )
 
   base_plot <-
     ggplot() +

@@ -116,6 +116,7 @@ print(alex_refit_plots$plt1)
 % @
 % }
 
+%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -158,5 +159,19 @@ figcap <- paste0("Predictions and refit for the gay marriage dataset")
 @
 <<laxdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(lax_refit_plots$plt1)
+@
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand{\BootstrapPlot}{
+<<>>=
+figcap <- paste0("Frequentist standard deviation estimates")
+@
+<<bootplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/bootstrap_comparison.R", print.eval=TRUE)
 @
 }

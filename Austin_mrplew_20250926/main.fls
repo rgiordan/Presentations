@@ -844,6 +844,9 @@ INPUT ./figure/laxcontpred-1.png
 INPUT ./figure/laxdiscretepred-1.png
 INPUT ./figure/laxdiscretepred-1.png
 INPUT ./figure/laxdiscretepred-1.png
+INPUT ./figure/bootplot-1.png
+INPUT ./figure/bootplot-1.png
+INPUT ./figure/bootplot-1.png
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm
