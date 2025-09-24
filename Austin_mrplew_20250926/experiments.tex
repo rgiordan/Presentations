@@ -69,10 +69,6 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{frame}{Real Data: Lax Philips}
 Analysis of national support for gay marriage.\footnote{Based on \textcite{kastellec:2010:laxmrp},
 see also \textcite{lax:2009:gay}.}
@@ -101,3 +97,40 @@ $$
 $$
 %
 \end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Covariate balance for primary effects}
+\LaxImbalancePrimary{}
+\end{frame}
+
+
+\begin{frame}{Covariate balance for interaction effects}
+\LaxImbalanceInteraction{}
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Predictions}
+    \LaxPredictionFigOne{}
+\end{frame}
+
+
+\begin{frame}[t]{Predictions and actual MCMC results}
+    \LaxPredictionFigTwo{}
+    \vspace{-3em}
+    $$
+    \begin{aligned}
+        \textrm{Running ten MCMC refits:}\quad & \LaxRefitTimeHours \textrm{ hours} &
+        \textrm{Computing approximate weights:}\quad &\LaxMrPawTimeSecs \textrm{ seconds}\\
+    \end{aligned}
+    $$
+\end{frame}
+

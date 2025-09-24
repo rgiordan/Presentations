@@ -31,8 +31,7 @@ source("figures_knitr/define_macros.R")
 % Define the graph lists
 <<graph_setup, cache=cache>>=
 source("figures_knitr/predictions_plot.R")
-source("figures_knitr/imbalance_primary.R")
-source("figures_knitr/imbalance_interaction.R")
+source("figures_knitr/imbalance_plots.R")
 @
 
 
@@ -57,7 +56,7 @@ source("figures_knitr/weights_plot.R", print.eval=TRUE)
 figcap <- paste0("Imbalance plot for primary effects")
 @
 <<alexanderprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(alex_primary_imb)
+print(alex_imb_plots$primary_plt)
 @
 }
 
@@ -67,7 +66,7 @@ print(alex_primary_imb)
 figcap <- paste0("Imbalance plot for select interaction effects")
 @
 <<alexanderinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(alex_inter_imb)
+print(alex_imb_plots$interaction_plt)
 @
 }
 
@@ -116,3 +115,48 @@ print(alex_refit_plots$plt1)
 % print(pred_plot_4)
 % @
 % }
+
+
+
+
+\newcommand{\LaxImbalancePrimary}{
+<<>>=
+figcap <- paste0("Imbalance plot for primary effects")
+@
+<<laxprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_imb_plots$primary_plt)
+@
+}
+
+
+\newcommand{\LaxImbalanceInteraction}{
+<<>>=
+figcap <- paste0("Imbalance plot for select interaction effects")
+@
+<<laxinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_imb_plots$interaction_plt)
+@
+}
+
+
+
+
+\newcommand{\LaxPredictionFigOne}{
+<<>>=
+figcap <- paste0("Predictions for the gay marriage dataset")
+@
+<<laxcontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_refit_plots$base_plot)
+@
+}
+
+
+
+\newcommand{\LaxPredictionFigTwo}{
+<<>>=
+figcap <- paste0("Predictions and refit for the gay marriage dataset")
+@
+<<laxdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_refit_plots$plt1)
+@
+}

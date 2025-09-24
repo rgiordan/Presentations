@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  23 SEP 2025 17:44
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  23 SEP 2025 17:58
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2016,7 +2016,44 @@ Overfull \vbox (2.59439pt too high) detected at line 65
 
 <./figure/alexanderdiscretepred-1.png>] [7
 
-]) [8
+]
+<figure/laxprimary-1.png, id=83, 469.755pt x 281.853pt>
+File: figure/laxprimary-1.png Graphic file (type png)
+<use figure/laxprimary-1.png>
+Package luatex.def Info: figure/laxprimary-1.png  used on input line 111.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [8
+
+<./figure/laxprimary-1.png>]
+<figure/laxinteraction-1.png, id=90, 469.755pt x 281.853pt>
+File: figure/laxinteraction-1.png Graphic file (type png)
+<use figure/laxinteraction-1.png>
+Package luatex.def Info: figure/laxinteraction-1.png  used on input line 116.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+[9
+
+<./figure/laxinteraction-1.png>]
+<figure/laxcontpred-1.png, id=97, 469.755pt x 281.853pt>
+File: figure/laxcontpred-1.png Graphic file (type png)
+<use figure/laxcontpred-1.png>
+Package luatex.def Info: figure/laxcontpred-1.png  used on input line 123.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [10
+
+<./figure/laxcontpred-1.png>]
+<figure/laxdiscretepred-1.png, id=104, 469.755pt x 281.853pt>
+File: figure/laxdiscretepred-1.png Graphic file (type png)
+<use figure/laxdiscretepred-1.png>
+Package luatex.def Info: figure/laxdiscretepred-1.png  used on input line 135.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+Overfull \vbox (2.59439pt too high) detected at line 135
+ []
+
+[11
+
+<./figure/laxdiscretepred-1.png>]) [12
 
 </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write7
@@ -2037,15 +2074,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53986 strings out of 477805
+ 54150 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 10013 words of node memory still in use:
+ 10017 words of node memory still in use:
    43 hlist, 8 vlist, 10 rule, 50 disc, 6 local_par, 10 math, 226 glue, 21 kern,
- 69 penalty, 697 glyph, 237 attribute, 121 glue_spec, 237 attribute_list, 9 writ
+ 69 penalty, 697 glyph, 238 attribute, 121 glue_spec, 238 attribute_list, 9 writ
 e, 5 pdf_start_link, 5 pdf_end_link, 5 pdf_dest, 5 pdf_action, 66 pdf_colorstack
  nodes
-   avail lists: 1:5,2:487,3:181,4:216,5:180,6:28,7:2132,8:48,9:735,10:23,11:142
- 72380 multiletter control sequences out of 65536+600000
+   avail lists: 1:5,2:379,3:181,4:216,5:180,6:28,7:2132,8:47,9:735,10:23,11:142
+ 72460 multiletter control sequences out of 65536+600000
  80 fonts using 18883719 bytes
  128i,13n,134p,1852b,2052s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fo
@@ -2056,10 +2093,10 @@ lic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on main.pdf (8 pages, 989234 bytes).
+Output written on main.pdf (12 pages, 1445640 bytes).
 
-PDF statistics: 141 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 131072)
+PDF statistics: 174 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
