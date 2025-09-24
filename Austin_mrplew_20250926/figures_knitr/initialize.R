@@ -8,7 +8,7 @@ library(latex2exp)
 
 # This must be run from within the git repo, obviously.
 git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
-paper_directory <- file.path(git_repo_loc, "BSTARS_mrpaw_092025")
+paper_directory <- file.path(git_repo_loc, "Austin_mrplew_20250926")
 data_path <- file.path(paper_directory, "figures_knitr/data")
 script_directory <- file.path(paper_directory, "figures_knitr")
 

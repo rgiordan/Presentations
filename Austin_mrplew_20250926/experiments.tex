@@ -1,4 +1,8 @@
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{Real Data: Marital Name Change Survey}
 Analysis of changing names after marriage (based on \textcite{alexander:2019:namechange}).
 
@@ -25,6 +29,11 @@ $$
 %
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \begin{frame}{Covariate balance for primary effects}
 \AlexanderImbalancePrimary{}
@@ -43,14 +52,6 @@ $$
 \end{frame}
 
 
-
-
-% \begin{frame}{Figure}
-%     \AlexanderPredictionFigThree{}
-% \end{frame}
-
-
-
 \begin{frame}[t]{Predictions and actual MCMC results}
     \AlexanderPredictionFigTwo{}
     \vspace{-3em}
@@ -63,3 +64,39 @@ $$
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Real Data: Lax Philips}
+Analysis of national support for gay marriage.\footnote{Based on \textcite{kastellec:2010:laxmrp},
+see also \textcite{lax:2009:gay}.}
+
+\begin{itemize}
+    %
+    \item \textbf{Target population:} US Census Public Use Microdata Sample 2000
+    \item \textbf{Survey population:} Combined national-level polls from 2004
+    \item \textbf{Respose:}  ``Do you favor allowing gay and lesbian couples to marry legally?''
+    \item For regressors, use race, gender, age, education, state, region,
+        and continuous statewide religion and political characteristics, including
+        some analyst--selected interactions.
+    %
+\end{itemize}
+
+$$
+\begin{aligned}
+    \textrm{Survey observations:} &&  \Nsur ={}& \LaxNSur  \\
+    \textrm{Target observations (rows):} &&  \Ntar ={}& \LaxNTar \\
+    \\
+    \textrm{Uncorrected survey mean:} && \surcol{\meansur \y_i} ={}& \LaxSurmean \\
+    \textrm{Raking:} && \muhat_\cal ={}& \LaxRaking \\
+    \textrm{MrP:} && \muhat_\mrp ={}& \LaxMrp
+        \quad(\textrm{Post. sd} = \LaxMrpSD)\\
+\end{aligned}
+$$
+%
+\end{frame}

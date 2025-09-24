@@ -19,199 +19,230 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{brms}{article}{}
+    \entry{alexander:2019:namechange}{misc}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
-           family={Bürkner},
-           familyi={B\bibinitperiod},
-           given={Paul-Christian},
-           giveni={P\bibinithyphendelim C\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
-      \strng{fullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
-      \strng{bibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
-      \strng{authorbibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
-      \strng{authornamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
-      \strng{authorfullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Statistical Software}
-      \field{number}{1}
-      \field{title}{{brms}: An {R} Package for {Bayesian} Multilevel Models Using {Stan}}
-      \field{volume}{80}
-      \field{year}{2017}
-      \field{pages}{1\bibrangedash 28}
-      \range{pages}{28}
-      \verb{doi}
-      \verb 10.18637/jss.v080.i01
-      \endverb
-    \endentry
-    \entry{giordano:2024:bayesij}{misc}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
-           family={\textbf{G.}},
-           familyi={G\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
-           family={Broderick},
-           familyi={B\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{7818a3b816cc44a1c7d710dc04422778}
-      \strng{fullhash}{7818a3b816cc44a1c7d710dc04422778}
-      \strng{bibnamehash}{7818a3b816cc44a1c7d710dc04422778}
-      \strng{authorbibnamehash}{7818a3b816cc44a1c7d710dc04422778}
-      \strng{authornamehash}{7818a3b816cc44a1c7d710dc04422778}
-      \strng{authorfullhash}{7818a3b816cc44a1c7d710dc04422778}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{stat.ME}
-      \field{eprinttype}{arXiv}
-      \field{title}{The {Bayesian} Infinitesimal Jackknife for Variance}
-      \field{year}{2024}
-      \verb{eprint}
-      \verb 2305.06466
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2305.06466
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2305.06466
-      \endverb
-    \endentry
-    \entry{giordano:2018:covariances}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
-           family={\textbf{G.}},
-           familyi={G\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
-           family={Broderick},
-           familyi={B\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0442c01fb14007ee1da9ccea3dfe2597}{%
-           family={Jordan},
-           familyi={J\bibinitperiod},
-           given={M.\bibnamedelimi I.},
-           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{fullhash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{bibnamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{authorbibnamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{authornamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{authorfullhash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of machine learning research}
-      \field{number}{51}
-      \field{title}{Covariances, robustness and variational bayes}
-      \field{volume}{19}
-      \field{year}{2018}
-    \endentry
-    \entry{kasprzak:2025:laplace}{misc}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=7a1e11e1b6703dd1bfbf1d58b4a26324}{%
-           family={Kasprzak},
-           familyi={K\bibinitperiod},
+        {{un=0,uniquepart=base,hash=858eed3fb827d5bd9a3e800a2e13a830}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
            given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
-           family={\textbf{G.}},
-           familyi={G\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
-           family={Broderick},
-           familyi={B\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod},
+      }
+      \strng{namehash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{fullhash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{bibnamehash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{authorbibnamehash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{authornamehash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{authorfullhash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analyzing name changes after marriage using a non-representative survey}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.monicaalexander.com/posts/2019-08-07-mrp/
+      \endverb
+      \verb{url}
+      \verb https://www.monicaalexander.com/posts/2019-08-07-mrp/
+      \endverb
+    \endentry
+    \entry{cohen:2019:namechange}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=916d3a027b84e50541df203c243cc949}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{f01219f4a0ba5b44ec84dcd91e937d38}
-      \strng{fullhash}{f01219f4a0ba5b44ec84dcd91e937d38}
-      \strng{bibnamehash}{f01219f4a0ba5b44ec84dcd91e937d38}
-      \strng{authorbibnamehash}{f01219f4a0ba5b44ec84dcd91e937d38}
-      \strng{authornamehash}{f01219f4a0ba5b44ec84dcd91e937d38}
-      \strng{authorfullhash}{f01219f4a0ba5b44ec84dcd91e937d38}
+      \list{publisher}{1}{%
+        {OSF}%
+      }
+      \strng{namehash}{916d3a027b84e50541df203c243cc949}
+      \strng{fullhash}{916d3a027b84e50541df203c243cc949}
+      \strng{bibnamehash}{916d3a027b84e50541df203c243cc949}
+      \strng{authorbibnamehash}{916d3a027b84e50541df203c243cc949}
+      \strng{authornamehash}{916d3a027b84e50541df203c243cc949}
+      \strng{authorfullhash}{916d3a027b84e50541df203c243cc949}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Marital Name Change Survey}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.17605/OSF.IO/UZQDN
+      \endverb
+      \verb{urlraw}
+      \verb osf.io/uzqdn
+      \endverb
+      \verb{url}
+      \verb osf.io/uzqdn
+      \endverb
+    \endentry
+    \entry{kastellec:2010:laxmrp}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cd3ce42f4b33a2324332df490038f73f}{%
+           family={Kastellec},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f29c23acd8dfbb54d7885fac280019fd}{%
+           family={Lax},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8338762af5fa2c2697a2fba62677b0e}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{fullhash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{bibnamehash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{authorbibnamehash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{authornamehash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{authorfullhash}{bc27de996766d0e6a1ff853e715038be}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{math.ST}
-      \field{eprinttype}{arXiv}
-      \field{title}{How good is your {Laplace} approximation of the Bayesian posterior? {Finite}-sample computable error bounds for a variety of useful divergences}
-      \field{year}{2025}
-      \verb{eprint}
-      \verb 2209.14992
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2209.14992
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2209.14992
-      \endverb
+      \field{journaltitle}{Unpublished manuscript, Princeton University}
+      \field{number}{3}
+      \field{title}{Estimating state public opinion with multi-level regression and poststratification using {R}}
+      \field{volume}{29}
+      \field{year}{2010}
     \endentry
-    \entry{solon:2015:weightingfor}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=c5b6acd644dfe02912c084f0ae65bd69}{%
-           family={Solon},
-           familyi={S\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
+    \entry{lax:2009:gay}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f29c23acd8dfbb54d7885fac280019fd}{%
+           family={Lax},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=4a06d2557759f9618fa60f06484247ba}{%
-           family={Haider},
-           familyi={H\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4c490ec53df75b364e324ded72f6a107}{%
-           family={Wooldridge},
-           familyi={W\bibinitperiod},
+        {{un=0,uniquepart=base,hash=a8338762af5fa2c2697a2fba62677b0e}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
            given={J.},
            giveni={J\bibinitperiod},
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {University of Wisconsin Press}%
+        {Cambridge University Press}%
       }
-      \strng{namehash}{fb7e454cfc49d7f0b510c8b385c799bd}
-      \strng{fullhash}{fb7e454cfc49d7f0b510c8b385c799bd}
-      \strng{bibnamehash}{fb7e454cfc49d7f0b510c8b385c799bd}
-      \strng{authorbibnamehash}{fb7e454cfc49d7f0b510c8b385c799bd}
-      \strng{authornamehash}{fb7e454cfc49d7f0b510c8b385c799bd}
-      \strng{authorfullhash}{fb7e454cfc49d7f0b510c8b385c799bd}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \strng{namehash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{fullhash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{bibnamehash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{authorbibnamehash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{authornamehash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{authorfullhash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Human resources}
-      \field{number}{2}
-      \field{title}{What are we weighting for?}
-      \field{volume}{50}
-      \field{year}{2015}
-      \field{pages}{301\bibrangedash 316}
-      \range{pages}{16}
+      \field{journaltitle}{American Political Science Review}
+      \field{number}{3}
+      \field{title}{Gay rights in the states: {Public} opinion and policy responsiveness}
+      \field{volume}{103}
+      \field{year}{2009}
+      \field{pages}{367\bibrangedash 386}
+      \range{pages}{20}
+    \endentry
+    \entry{ipumsusa}{misc}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=46d6c25f34f2fb26c2343032df7218ef}{%
+           family={Ruggles},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc171747b6e84a1d2e5552348842c74e}{%
+           family={Flood},
+           familyi={F\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4060390cea1aeb68a05ff1b15f454686}{%
+           family={Sobek},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=356be3359a55f9e1c3b35aa3196210db}{%
+           family={Backman},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=744dc10976e4d0c4c2cdc2072da8d405}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c1aa00be89638890275cedf054e31fb}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4167256345c9a97f76d7db01a4b2d270}{%
+           family={Richards},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b43d8354c1f61db47e901ce7ecc87786}{%
+           family={Rodgers},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50c91ba6d8200a48b247b8dc6f49bd67}{%
+           family={S.},
+           familyi={S\bibinitperiod},
+           given={Megan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{acc91ce2eb33f3732cab1f6cf0cdcbb2}
+      \strng{fullhash}{3f6ce2618919822da0ec5f8938a9bd22}
+      \strng{bibnamehash}{acc91ce2eb33f3732cab1f6cf0cdcbb2}
+      \strng{authorbibnamehash}{acc91ce2eb33f3732cab1f6cf0cdcbb2}
+      \strng{authornamehash}{acc91ce2eb33f3732cab1f6cf0cdcbb2}
+      \strng{authorfullhash}{3f6ce2618919822da0ec5f8938a9bd22}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{IPUMS USA}: {Version 15.0} [dataset]}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.18128/D010.V15.0
+      \endverb
+      \verb{urlraw}
+      \verb https://usa.ipums.org
+      \endverb
+      \verb{url}
+      \verb https://usa.ipums.org
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
