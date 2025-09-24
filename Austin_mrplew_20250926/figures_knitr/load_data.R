@@ -74,3 +74,6 @@ lax$basic_data$imb_plot_df <-
 
 lax$basic_data$pert_col_clean <- clean_regressors(lax$sim_data$col_pert)
 
+
+# Bootstrap data
+boot_env <- LoadIntoEnvironment(file.path(data_path, "bootstrap_results.Rdata"))

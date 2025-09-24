@@ -20,10 +20,22 @@ source("figures_knitr/imbalance_plots.R")
 # alex_refit_plots$plt1
 
 
+ggplot(boot_env$samples_df) +
+  geom_point(aes(x=diff, y=diff_pred)) +
+  facet_grid(~ analysis) +
+  geom_abline()
 
-source("figures_knitr/imbalance_plots.R")
-alex_imb_plots$interaction_plt
-lax_imb_plots$interaction_plt
+# Create the grouped bar chart
+boot_env$mrp_df %>%
+  pivot_longer(-analysis) %>%
+  filter(name %in% c("sd", "sd_pred", "ij_sd")) %>%
+  ggplot(aes(x=analysis, y=value, fill=name)) +
+  geom_bar(position = "dodge", stat = "identity")
 
-
-lax_imb_plots$primary_plt
+# 
+# source("figures_knitr/imbalance_plots.R")
+# alex_imb_plots$interaction_plt
+# lax_imb_plots$interaction_plt
+# 
+# 
+# lax_imb_plots$primary_plt

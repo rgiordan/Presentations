@@ -16,3 +16,15 @@ source(file.path(paper_directory, "figures_knitr/predictions_plot.R"), print.eva
 #source(file.path(paper_directory, "figures_knitr/weights_plot.R"), print.eval=TRUE)
 
 
+boot_env
+ggplot(boot_list$mrp_df) +
+  geom_point(aes(x=diff, y=diff_pred)) +
+  facet_grid(~ analysis) +
+  geom_abline()
+
+# Create the grouped bar chart
+mrp_df %>%
+  pivot_longer(-analysis) %>%
+  filter(name %in% c("sd", "sd_pred", "ij_sd")) %>%
+  ggplot(aes(x=analysis, y=value, fill=name)) +
+  geom_bar(position = "dodge", stat = "identity")
