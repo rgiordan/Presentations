@@ -27,6 +27,17 @@ source("figures_knitr/define_macros.R")
 @
 }
 
+
+% Define the graph lists
+<<graph_setup, cache=cache>>=
+source("figures_knitr/predictions_plot.R")
+source("figures_knitr/imbalance_primary.R")
+source("figures_knitr/imbalance_interaction.R")
+@
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%
 % Plots
 
@@ -46,7 +57,7 @@ source("figures_knitr/weights_plot.R", print.eval=TRUE)
 figcap <- paste0("Imbalance plot for primary effects")
 @
 <<alexanderprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
-source("figures_knitr/imbalance_primary.R", print.eval=TRUE)
+print(alex_primary_imb)
 @
 }
 
@@ -56,15 +67,11 @@ source("figures_knitr/imbalance_primary.R", print.eval=TRUE)
 figcap <- paste0("Imbalance plot for select interaction effects")
 @
 <<alexanderinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
-source("figures_knitr/imbalance_interaction.R", print.eval=TRUE)
+print(alex_inter_imb)
 @
 }
 
 
-% Define the prediction graphs
-<<predcition_setup, cache=cache>>=
-source("figures_knitr/predictions_plot.R")
-@
 
 
 \newcommand{\AlexanderPredictionFigOne}{
@@ -72,7 +79,7 @@ source("figures_knitr/predictions_plot.R")
 figcap <- paste0("Predictions for the name change dataset")
 @
 <<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(base_plot)
+print(alex_refit_plots$base_plot)
 @
 }
 
@@ -83,7 +90,7 @@ print(base_plot)
 figcap <- paste0("Predictions and refit for the name change dataset")
 @
 <<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(plt1)
+print(alex_refit_plots$plt1)
 @
 }
 

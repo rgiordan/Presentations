@@ -4,12 +4,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Real Data: Marital Name Change Survey}
-Analysis of changing names after marriage (based on \textcite{alexander:2019:namechange}).
+Analysis of changing names after marriage\footnote{
+    Based on \textcite{alexander:2019:namechange}.}.
 
 \begin{itemize}
     %
     \item \textbf{Target population:} ACS survey of US population 2017--2022 \footcite{ipumsusa}
-    \item \textbf{Survey population:} Marital Name Change Survey \footcite{cohen:2019:namechange}
+    \item \textbf{Survey population:} Marital Name Change Survey (from Twitter)\footcite{cohen:2019:namechange}
     \item \textbf{Respose:}  Did the female partner keep their name after marriage?
     \item For regressors, use bins of age, education, state, and decade married.
     %
@@ -35,33 +36,33 @@ $$
 
 
 
-% \begin{frame}{Covariate balance for primary effects}
-% \AlexanderImbalancePrimary{}
-% \end{frame}
+\begin{frame}{Covariate balance for primary effects}
+\AlexanderImbalancePrimary{}
+\end{frame}
 
 
-% \begin{frame}{Covariate balance for interaction effects}
-% \AlexanderImbalanceInteraction{}
-% \end{frame}
+\begin{frame}{Covariate balance for interaction effects}
+\AlexanderImbalanceInteraction{}
+\end{frame}
 
 
 
 
-% \begin{frame}[t]{Predictions}
-%     \AlexanderPredictionFigOne{}
-% \end{frame}
+\begin{frame}[t]{Predictions}
+    \AlexanderPredictionFigOne{}
+\end{frame}
 
 
-% \begin{frame}[t]{Predictions and actual MCMC results}
-%     \AlexanderPredictionFigTwo{}
-%     \vspace{-3em}
-%     $$
-%     \begin{aligned}
-%         \textrm{Running ten MCMC refits:}\quad & \RefitTimeHours \textrm{ hours} &
-%         \textrm{Computing approximate weights:}\quad &\MrPawTimeSecs \textrm{ seconds}\\
-%     \end{aligned}
-%     $$
-% \end{frame}
+\begin{frame}[t]{Predictions and actual MCMC results}
+    \AlexanderPredictionFigTwo{}
+    \vspace{-3em}
+    $$
+    \begin{aligned}
+        \textrm{Running ten MCMC refits:}\quad & \AlexRefitTimeHours \textrm{ hours} &
+        \textrm{Computing approximate weights:}\quad &\AlexMrPawTimeSecs \textrm{ seconds}\\
+    \end{aligned}
+    $$
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

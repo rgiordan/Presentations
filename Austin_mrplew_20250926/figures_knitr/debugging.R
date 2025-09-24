@@ -10,10 +10,10 @@ source(file.path(base_dir, "figures_knitr/initialize.R"))
 source(file.path(paper_directory, "figures_knitr/load_data.R"))
 source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 
-source(file.path(paper_directory, "figures_knitr/predictions_plot.R"), print.eval=TRUE)
+source("figures_knitr/predictions_plot.R")
+source("figures_knitr/imbalance_primary.R")
+source("figures_knitr/imbalance_interaction.R")
 
-#source(file.path(paper_directory, "figures_knitr/imbalance_primary.R"), print.eval=TRUE)
-#source(file.path(paper_directory, "figures_knitr/imbalance_interaction.R"), print.eval=TRUE)
-#source(file.path(paper_directory, "figures_knitr/weights_plot.R"), print.eval=TRUE)
+source(file.path(paper_directory, "figures_knitr/weights_plot.R"), print.eval=TRUE)
 
 
