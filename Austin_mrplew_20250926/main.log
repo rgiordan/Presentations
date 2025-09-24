@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  24 SEP 2025 13:52
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  24 SEP 2025 14:15
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1997,7 +1997,37 @@ Package luatex.def Info: figure/bootplot-1.png  used on input line 74.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
  [4
 
-<./figure/bootplot-1.png>]) [5
+<./figure/bootplot-1.png>]) (./future_work.tex [5
+
+] [6
+
+] [7
+
+]
+File: static_figures/alice.jpg Graphic file (type jpg)
+<use static_figures/alice.jpg>
+Package luatex.def Info: static_figures/alice.jpg  used on input line 124.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+<static_figures/question-mark.jpg, id=79, 1927.2pt x 1927.2pt>
+File: static_figures/question-mark.jpg Graphic file (type jpg)
+<use static_figures/question-mark.jpg>
+Package luatex.def Info: static_figures/question-mark.jpg  used on input line 1
+24.
+(luatex.def)             Requested size: 66.37567pt x 66.37083pt.
+<static_figures/sequoia.jpg, id=80, 131.74219pt x 131.74219pt>
+File: static_figures/sequoia.jpg Graphic file (type jpg)
+<use static_figures/sequoia.jpg>
+Package luatex.def Info: static_figures/sequoia.jpg  used on input line 124.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+<static_figures/lucas.jpg, id=81, 131.74219pt x 131.74219pt>
+File: static_figures/lucas.jpg Graphic file (type jpg)
+<use static_figures/lucas.jpg>
+Package luatex.def Info: static_figures/lucas.jpg  used on input line 124.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+ [8
+
+<./static_figures/question-mark.jpg><./static_figures/sequoia.jpg><./static_figu
+res/lucas.jpg>]) [9
 
 </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write7
@@ -2018,34 +2048,35 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53910 strings out of 477805
+ 54009 strings out of 477805
  125031,2373549 words of node,token memory allocated
  3337 words of node memory still in use:
    25 hlist, 8 vlist, 6 rule, 9 disc, 2 local_par, 4 math, 67 glue, 12 kern, 23 
 penalty, 151 glyph, 90 attribute, 121 glue_spec, 90 attribute_list, 5 write, 2 p
 df_start_link, 2 pdf_end_link, 1 pdf_dest, 2 pdf_action, 26 pdf_colorstack nodes
 
-   avail lists: 1:5,2:465,3:216,4:192,5:164,6:37,7:1877,8:40,9:535,10:23,11:111
- 72333 multiletter control sequences out of 65536+600000
- 83 fonts using 19954943 bytes
+   avail lists: 1:5,2:506,3:216,4:198,5:171,6:54,7:2684,8:40,9:535,10:23,11:216
+ 72395 multiletter control sequences out of 65536+600000
+ 86 fonts using 20849047 bytes
  128i,16n,134p,1852b,1882s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
-/usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fon
-ts/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/l
-iberation2/LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (5 pages, 1009998 bytes).
+</usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Medium.otf></
+usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></u
+sr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fonts
+/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/lib
+eration2/LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (9 pages, 1209740 bytes).
 
-PDF statistics: 137 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
+PDF statistics: 168 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
