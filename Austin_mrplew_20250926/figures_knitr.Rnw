@@ -32,6 +32,7 @@ source("figures_knitr/define_macros.R")
 <<graph_setup, cache=cache>>=
 source("figures_knitr/predictions_plot.R")
 source("figures_knitr/imbalance_plots.R")
+source("figures_knitr/weights_plot.R")
 @
 
 
@@ -41,19 +42,29 @@ source("figures_knitr/imbalance_plots.R")
 % Plots
 
 
-\newcommand{\WeightPlot}{
+\newcommand{\AlexanderWeightPlot}{
 <<>>=
-figcap <- paste0("Comparison between raking and MrPlew weights for a particular example")
+figcap <- paste0("Comparison between raking and MrPlew weights for the Name Change dataset")
 @
-<<weightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
-source("figures_knitr/weights_plot.R", print.eval=TRUE)
+<<alexanderweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(alex_weight_scatterplot)
+@
+}
+
+
+\newcommand{\LaxWeightPlot}{
+<<>>=
+figcap <- paste0("Comparison between raking and MrPlew weights for the Gay Marriage dataset")
+@
+<<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_weight_scatterplot)
 @
 }
 
 
 \newcommand{\AlexanderImbalancePrimary}{
 <<>>=
-figcap <- paste0("Imbalance plot for primary effects")
+figcap <- paste0("Imbalance plot for primary effects in the Name Change dataset")
 @
 <<alexanderprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(alex_imb_plots$primary_plt)
@@ -63,7 +74,7 @@ print(alex_imb_plots$primary_plt)
 
 \newcommand{\AlexanderImbalanceInteraction}{
 <<>>=
-figcap <- paste0("Imbalance plot for select interaction effects")
+figcap <- paste0("Imbalance plot for select interaction effects in the Name Change dataset")
 @
 <<alexanderinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(alex_imb_plots$interaction_plt)
@@ -75,7 +86,7 @@ print(alex_imb_plots$interaction_plt)
 
 \newcommand{\AlexanderPredictionFigOne}{
 <<>>=
-figcap <- paste0("Predictions for the name change dataset")
+figcap <- paste0("Predictions on binary data for the Name Change dataset")
 @
 <<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(alex_refit_plots$base_plot)
@@ -86,7 +97,7 @@ print(alex_refit_plots$base_plot)
 
 \newcommand{\AlexanderPredictionFigTwo}{
 <<>>=
-figcap <- paste0("Predictions and refit for the name change dataset")
+figcap <- paste0("Predictions and refit on binary data for the Name Change dataset")
 @
 <<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(alex_refit_plots$plt1)
@@ -95,34 +106,13 @@ print(alex_refit_plots$plt1)
 
 
 
-% \newcommand{\AlexanderPredictionFigThree}{
-% <<>>=
-% figcap <- paste0("Continuous predictions Alexander")
-% @
-% <<alexanderbinarypred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-% print(pred_plot_3)
-% @
-% }
-
-
-
-
-% \newcommand{\AlexanderPredictionFigFour}{
-% <<>>=
-% figcap <- paste0("Continuous predictions Alexander")
-% @
-% <<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
-% print(pred_plot_4)
-% @
-% }
-
 %%%%%%%%%%%%%%%%%%%%%%
 
 
 
 \newcommand{\LaxImbalancePrimary}{
 <<>>=
-figcap <- paste0("Imbalance plot for primary effects")
+figcap <- paste0("Imbalance plot for primary effects in the Gay Marriage dataset")
 @
 <<laxprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(lax_imb_plots$primary_plt)
@@ -132,7 +122,7 @@ print(lax_imb_plots$primary_plt)
 
 \newcommand{\LaxImbalanceInteraction}{
 <<>>=
-figcap <- paste0("Imbalance plot for select interaction effects")
+figcap <- paste0("Imbalance plot for select interaction effects in the Gay Marriage dataset")
 @
 <<laxinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(lax_imb_plots$interaction_plt)
@@ -144,7 +134,7 @@ print(lax_imb_plots$interaction_plt)
 
 \newcommand{\LaxPredictionFigOne}{
 <<>>=
-figcap <- paste0("Predictions for the gay marriage dataset")
+figcap <- paste0("Predictions on binary data for the Gay Marriage dataset")
 @
 <<laxcontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(lax_refit_plots$base_plot)
@@ -155,7 +145,7 @@ print(lax_refit_plots$base_plot)
 
 \newcommand{\LaxPredictionFigTwo}{
 <<>>=
-figcap <- paste0("Predictions and refit for the gay marriage dataset")
+figcap <- paste0("Predictions and refit on binary data for the Gay Marriage dataset")
 @
 <<laxdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(lax_refit_plots$plt1)

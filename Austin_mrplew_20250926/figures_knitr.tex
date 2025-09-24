@@ -41,16 +41,32 @@
 % Plots
 
 
-\newcommand{\WeightPlot}{
+\newcommand{\AlexanderWeightPlot}{
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
 
-{\centering \includegraphics[width=0.98\linewidth,height=0.588\linewidth]{figure/weightplot-1} 
+{\centering \includegraphics[width=0.98\linewidth,height=0.588\linewidth]{figure/alexanderweightplot-1} 
 
 }
 
-\caption[Comparison between raking and MrPlew weights for a particular example]{Comparison between raking and MrPlew weights for a particular example}\label{fig:weightplot}
+\caption[Comparison between raking and MrPlew weights for the Name Change dataset]{Comparison between raking and MrPlew weights for the Name Change dataset}\label{fig:alexanderweightplot}
+\end{figure}
+
+\end{knitrout}
+}
+
+
+\newcommand{\LaxWeightPlot}{
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.588\linewidth]{figure/laxweightplot-1} 
+
+}
+
+\caption[Comparison between raking and MrPlew weights for the Gay Marriage dataset]{Comparison between raking and MrPlew weights for the Gay Marriage dataset}\label{fig:laxweightplot}
 \end{figure}
 
 \end{knitrout}
@@ -66,7 +82,7 @@
 
 }
 
-\caption[Imbalance plot for primary effects]{Imbalance plot for primary effects}\label{fig:alexanderprimary}
+\caption[Imbalance plot for primary effects in the Name Change dataset]{Imbalance plot for primary effects in the Name Change dataset}\label{fig:alexanderprimary}
 \end{figure}
 
 \end{knitrout}
@@ -82,7 +98,7 @@
 
 }
 
-\caption[Imbalance plot for select interaction effects]{Imbalance plot for select interaction effects}\label{fig:alexanderinteraction}
+\caption[Imbalance plot for select interaction effects in the Name Change dataset]{Imbalance plot for select interaction effects in the Name Change dataset}\label{fig:alexanderinteraction}
 \end{figure}
 
 \end{knitrout}
@@ -100,7 +116,7 @@
 
 }
 
-\caption[Predictions for the name change dataset]{Predictions for the name change dataset}\label{fig:alexandercontpred}
+\caption[Predictions on binary data for the Name Change dataset]{Predictions on binary data for the Name Change dataset}\label{fig:alexandercontpred}
 \end{figure}
 
 \end{knitrout}
@@ -117,34 +133,13 @@
 
 }
 
-\caption[Predictions and refit for the name change dataset]{Predictions and refit for the name change dataset}\label{fig:alexanderdiscretepred}
+\caption[Predictions and refit on binary data for the Name Change dataset]{Predictions and refit on binary data for the Name Change dataset}\label{fig:alexanderdiscretepred}
 \end{figure}
 
 \end{knitrout}
 }
 
 
-
-% \newcommand{\AlexanderPredictionFigThree}{
-% <<>>=
-% figcap <- paste0("Continuous predictions Alexander")
-% @
-% <<alexanderbinarypred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-% print(pred_plot_3)
-% @
-% }
-
-
-
-
-% \newcommand{\AlexanderPredictionFigFour}{
-% <<>>=
-% figcap <- paste0("Continuous predictions Alexander")
-% @
-% <<alexanderrefit, cache=cache, fig.show='hold', fig.cap=figcap>>=
-% print(pred_plot_4)
-% @
-% }
 
 %%%%%%%%%%%%%%%%%%%%%%
 
@@ -159,7 +154,7 @@
 
 }
 
-\caption[Imbalance plot for primary effects]{Imbalance plot for primary effects}\label{fig:laxprimary}
+\caption[Imbalance plot for primary effects in the Gay Marriage dataset]{Imbalance plot for primary effects in the Gay Marriage dataset}\label{fig:laxprimary}
 \end{figure}
 
 \end{knitrout}
@@ -175,7 +170,7 @@
 
 }
 
-\caption[Imbalance plot for select interaction effects]{Imbalance plot for select interaction effects}\label{fig:laxinteraction}
+\caption[Imbalance plot for select interaction effects in the Gay Marriage dataset]{Imbalance plot for select interaction effects in the Gay Marriage dataset}\label{fig:laxinteraction}
 \end{figure}
 
 \end{knitrout}
@@ -193,7 +188,7 @@
 
 }
 
-\caption[Predictions for the gay marriage dataset]{Predictions for the gay marriage dataset}\label{fig:laxcontpred}
+\caption[Predictions on binary data for the Gay Marriage dataset]{Predictions on binary data for the Gay Marriage dataset}\label{fig:laxcontpred}
 \end{figure}
 
 \end{knitrout}
@@ -210,7 +205,7 @@
 
 }
 
-\caption[Predictions and refit for the gay marriage dataset]{Predictions and refit for the gay marriage dataset}\label{fig:laxdiscretepred}
+\caption[Predictions and refit on binary data for the Gay Marriage dataset]{Predictions and refit on binary data for the Gay Marriage dataset}\label{fig:laxdiscretepred}
 \end{figure}
 
 \end{knitrout}

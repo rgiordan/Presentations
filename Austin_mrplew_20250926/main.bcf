@@ -2345,36 +2345,8 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="2">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="3">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="4">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="5">brms</bcf:citekey>
-    <bcf:citekey order="6">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="6">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="7">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="7">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="8">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="8">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="9">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="9">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="10">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="10">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="11">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="12">ipumsusa</bcf:citekey>
-    <bcf:citekey order="13">cohen:2019:namechange</bcf:citekey>
-    <bcf:citekey order="14">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="15">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="16">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="17">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="18">brms</bcf:citekey>
-    <bcf:citekey order="19">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="20">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="21">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="22">ipumsusa</bcf:citekey>
-    <bcf:citekey order="23">cohen:2019:namechange</bcf:citekey>
-    <bcf:citekey order="24">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="25">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="1">giordano:2024:bayesij</bcf:citekey>
+    <bcf:citekey order="2">giordano:2024:bayesij</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

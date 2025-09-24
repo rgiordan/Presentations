@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  24 SEP 2025 13:24
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  24 SEP 2025 13:52
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1961,167 +1961,43 @@ Overfull \vbox (10.92494pt too high) detected at line 42
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./static_figures/ryan_giorda
 no.jpeg><./static_figures/alice.jpg><./static_figures/erin_hartman.jpg><./static
-_figures/jared_murray.png><./static_figures/avi_feller.jpg>] (./balance.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+_figures/jared_murray.png><./static_figures/avi_feller.jpg>]
+(./bootstrap.tex
+<figure/alexanderweightplot-1.png, id=27, 469.755pt x 281.853pt>
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 2
+8.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+<figure/laxweightplot-1.png, id=28, 469.755pt x 281.853pt>
+File: figure/laxweightplot-1.png Graphic file (type png)
+<use figure/laxweightplot-1.png>
+Package luatex.def Info: figure/laxweightplot-1.png  used on input line 28.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+ [2
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+<./figure/alexanderweightplot-1.png><./figure/laxweightplot-1.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (1.30382pt too wide) detected at line 41
-[][] \OMS/cmsy/m/n/8  [][]
- []
-
-[2
+) [3
 
 ]
-Overfull \hbox (1.30382pt too wide) detected at line 41
-[][] \OMS/cmsy/m/n/8  [][]
- []
-
-[3
-
-]
-Overfull \hbox (1.30382pt too wide) detected at line 41
-[][] \OMS/cmsy/m/n/8  [][]
- []
-
-[4
-
-] [5
-
-] [6
-
-]
-Overfull \vbox (13.94214pt too high) detected at line 120
- []
-
-[7
-
-]
-Overfull \vbox (13.94214pt too high) detected at line 120
- []
-
-[8
-
-] [9
-
-] [10
-
-] [11
-
-] [12
-
-] [13
-
-] [14
-
-] [15
-
-] [16
-
-] [17
-
-] [18
-
-] [19
-
-] [20
-
-])
-(./experiments.tex [21
-
-]
-<figure/alexanderprimary-1.png, id=180, 469.755pt x 281.853pt>
-File: figure/alexanderprimary-1.png Graphic file (type png)
-<use figure/alexanderprimary-1.png>
-Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 41.
-(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [22
-
-<./figure/alexanderprimary-1.png>]
-<figure/alexanderinteraction-1.png, id=187, 469.755pt x 281.853pt>
-File: figure/alexanderinteraction-1.png Graphic file (type png)
-<use figure/alexanderinteraction-1.png>
-Package luatex.def Info: figure/alexanderinteraction-1.png  used on input line 
-46.
-(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [23
-
-<./figure/alexanderinteraction-1.png>]
-<figure/alexandercontpred-1.png, id=194, 469.755pt x 281.853pt>
-File: figure/alexandercontpred-1.png Graphic file (type png)
-<use figure/alexandercontpred-1.png>
-Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 53.
-
-(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [24
-
-<./figure/alexandercontpred-1.png>]
-<figure/alexanderdiscretepred-1.png, id=201, 469.755pt x 281.853pt>
-File: figure/alexanderdiscretepred-1.png Graphic file (type png)
-<use figure/alexanderdiscretepred-1.png>
-Package luatex.def Info: figure/alexanderdiscretepred-1.png  used on input line
- 65.
-(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
-
-Overfull \vbox (2.59439pt too high) detected at line 65
- []
-
-[25
-
-<./figure/alexanderdiscretepred-1.png>] [26
-
-]
-<figure/laxprimary-1.png, id=218, 469.755pt x 281.853pt>
-File: figure/laxprimary-1.png Graphic file (type png)
-<use figure/laxprimary-1.png>
-Package luatex.def Info: figure/laxprimary-1.png  used on input line 111.
-(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [27
-
-<./figure/laxprimary-1.png>]
-<figure/laxinteraction-1.png, id=225, 469.755pt x 281.853pt>
-File: figure/laxinteraction-1.png Graphic file (type png)
-<use figure/laxinteraction-1.png>
-Package luatex.def Info: figure/laxinteraction-1.png  used on input line 116.
-(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
-[28
-
-<./figure/laxinteraction-1.png>]
-<figure/laxcontpred-1.png, id=232, 469.755pt x 281.853pt>
-File: figure/laxcontpred-1.png Graphic file (type png)
-<use figure/laxcontpred-1.png>
-Package luatex.def Info: figure/laxcontpred-1.png  used on input line 123.
-(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [29
-
-<./figure/laxcontpred-1.png>]
-<figure/laxdiscretepred-1.png, id=239, 469.755pt x 281.853pt>
-File: figure/laxdiscretepred-1.png Graphic file (type png)
-<use figure/laxdiscretepred-1.png>
-Package luatex.def Info: figure/laxdiscretepred-1.png  used on input line 135.
-(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
-
-Overfull \vbox (2.59439pt too high) detected at line 135
- []
-
-[30
-
-<./figure/laxdiscretepred-1.png>]
-<figure/bootplot-1.png, id=246, 469.755pt x 281.853pt>
+<figure/bootplot-1.png, id=56, 469.755pt x 281.853pt>
 File: figure/bootplot-1.png Graphic file (type png)
 <use figure/bootplot-1.png>
-Package luatex.def Info: figure/bootplot-1.png  used on input line 149.
+Package luatex.def Info: figure/bootplot-1.png  used on input line 74.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
- [31
+ [4
 
-<./figure/bootplot-1.png>]) [32
+<./figure/bootplot-1.png>]) [5
 
 </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write7
@@ -2142,36 +2018,34 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54348 strings out of 477805
+ 53910 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 19497 words of node memory still in use:
-   66 hlist, 8 vlist, 15 rule, 101 disc, 11 local_par, 20 math, 443 glue, 48 ker
-n, 127 penalty, 1478 glyph, 471 attribute, 121 glue_spec, 471 attribute_list, 14
- write, 10 pdf_start_link, 10 pdf_end_link, 10 pdf_dest, 10 pdf_action, 116 pdf_
-colorstack nodes
-   avail lists: 1:5,2:639,3:317,4:316,5:240,6:64,7:4063,8:58,9:707,10:24,11:202
- 72589 multiletter control sequences out of 65536+600000
- 97 fonts using 21355487 bytes
- 128i,19n,134p,1852b,2049s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 3337 words of node memory still in use:
+   25 hlist, 8 vlist, 6 rule, 9 disc, 2 local_par, 4 math, 67 glue, 12 kern, 23 
+penalty, 151 glyph, 90 attribute, 121 glue_spec, 90 attribute_list, 5 write, 2 p
+df_start_link, 2 pdf_end_link, 1 pdf_dest, 2 pdf_action, 26 pdf_colorstack nodes
+
+   avail lists: 1:5,2:465,3:216,4:192,5:164,6:37,7:1877,8:40,9:535,10:23,11:111
+ 72333 multiletter control sequences out of 65536+600000
+ 83 fonts using 19954943 bytes
+ 128i,16n,134p,1852b,1882s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
 /usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/l
 iberation2/LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (32 pages, 1625347 bytes).
+ic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (5 pages, 1009998 bytes).
 
-PDF statistics: 345 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 84 named destinations out of 1000 (max. 131072)
+PDF statistics: 137 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

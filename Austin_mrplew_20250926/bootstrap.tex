@@ -1,0 +1,74 @@
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Standard error estimation}
+\centering
+%\only<1>
+{
+Does this mean anything?  \\
+\textbf{Yes: }We can meaningful sum these weights against regressors.\\[1em]
+}
+
+%\only<2>
+{
+What else might it mean?\\
+\textbf{Does the spread relate to frequentist variance?}
+}
+
+\splitpagenoline{
+    \AlexanderWeightPlot{}
+}{
+    \LaxWeightPlot{}
+}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Standard error estimation}
+
+
+
+\begin{block}{Standard error consistency theorm: (sketch)}
+
+For Bayesian hierarchical logictic regression, define
+$$
+\varepsilon_n = \y_n - \expect{\post}{\m(\x_n^\trans \theta)}
+\quad\textrm{and}\quad
+\psi_n := \Nsur \w_n^\mrp \varepsilon_n.
+$$
+
+We state mild conditions under which, as $N \rightarrow \infty$,
+$$
+\begin{aligned}
+    \sqrt{N}\left(\muhat_\mrp - \mu_\infty \right) \rightarrow{}&
+    \mathcal{N}\left(0, V\right) \quad\textrm{for some $\mu_\infty$ and variance $V$, and}\\
+\meansur (\psi_n - \overline{\psi})^2 \rightarrow{}& V.
+\end{aligned}
+$$
+\end{block}
+
+The use of $\w_n^\mrp$ is exactly analogous to the use of raking weights
+for standard error estimation.
+
+This builds on our earlier work on the Bayesian
+infinitesimal jackknife\footcite{giordano:2024:bayesij}.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Standard error estimation}
+\BootstrapPlot{}
+\end{frame}

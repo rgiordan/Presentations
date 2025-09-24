@@ -1,9 +1,3 @@
-\beamer@slide {fig:alexanderprimary}{22}
-\beamer@slide {fig:alexanderinteraction}{23}
-\beamer@slide {fig:alexandercontpred}{24}
-\beamer@slide {fig:alexanderdiscretepred}{25}
-\beamer@slide {fig:laxprimary}{27}
-\beamer@slide {fig:laxinteraction}{28}
-\beamer@slide {fig:laxcontpred}{29}
-\beamer@slide {fig:laxdiscretepred}{30}
-\beamer@slide {fig:bootplot}{31}
+\beamer@slide {fig:alexanderweightplot}{2}
+\beamer@slide {fig:laxweightplot}{2}
+\beamer@slide {fig:bootplot}{4}
