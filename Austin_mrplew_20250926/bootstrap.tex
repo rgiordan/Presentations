@@ -72,3 +72,32 @@ infinitesimal jackknife\footcite{giordano:2024:bayesij}.
 \begin{frame}[t]{Standard error estimation}
 \BootstrapPlot{}
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Other uses}
+\centering
+
+\onslide<1->{
+\textbf{Covariate balance }corresponds by BISC.\\
+\textbf{Weight spread }measures frequentist standard errors.\\[1em]
+}
+
+\onslide<2->{
+\textbf{Partial pooling }is BISC with different targets (e.g. sub--populations).\\
+\textbf{Negative weights }indicate \emph{non--monotonicity} of $\Ysur \mapsto \muhat_\mrp(\Ysur)$.\\[1em]
+}
+
+\onslide<3->{
+\textbf{Other checks?}
+}
+
+\splitpagenoline{
+    \AlexanderWeightPlot{}
+}{
+    \LaxWeightPlot{}
+}
+\end{frame}
