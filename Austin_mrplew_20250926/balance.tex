@@ -256,15 +256,15 @@ How to get such a $\ytil$?  \textbf{Recall $\y$ is binary!}  \onslide<2->{
 $$
 \onslide<4->{\sup_{f \in \mathcal{F}}}
 \abs{
-    \muhat_{\mrp}(\Ysur) - \muhat_\mrp(\Ysur)
-    - \delta \sumsur \w_i^\mrp \f(\x_i)
+    \muhatmrp[\Ytil] - \muhatmrp
+    - \delta \surcol{\sumsur \w_i^\mrp \f(\x_i)}
 }
 \only<1>{ = \textrm{Small?}}
 \only<2->{ = O(\delta^2)}
 \onslide<3->{\textrm{ as }N \rightarrow \infty}
 $$
 \onslide<4->{
-    For a very broad class\footnote{Measurable functions with uniformly bounded
+    For a very broad class\footnote{Donsker class of measurable functions with uniformly bounded
     $\expect{}{\x \f(\x)}$.} of $\mathcal{F}$.
 }
 \end{block}
