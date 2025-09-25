@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  25 SEP 2025 15:05
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  25 SEP 2025 16:41
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2142,22 +2142,110 @@ Overfull \vbox (14.77217pt too high) detected at line 299
 
 ] [37
 
+] [38
+
 ]
 <figure/alexanderweightplot-1.png, id=278, 469.755pt x 281.853pt>
 File: figure/alexanderweightplot-1.png Graphic file (type png)
 <use figure/alexanderweightplot-1.png>
 Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 4
-12.
+13.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
 
-Overfull \vbox (0.24309pt too high) detected at line 412
+Overfull \vbox (0.24309pt too high) detected at line 413
  []
 
-[38
+[39
 
-<./figure/alexanderweightplot-1.png>]) [39
+<./figure/alexanderweightplot-1.png>]) (./balance.tex
+Overfull \hbox (1.30382pt too wide) detected at line 41
+[][] \OMS/cmsy/m/n/8  [][]
+ []
 
-</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+[40
+
+]
+Overfull \hbox (1.30382pt too wide) detected at line 41
+[][] \OMS/cmsy/m/n/8  [][]
+ []
+
+[41
+
+]
+Overfull \hbox (1.30382pt too wide) detected at line 41
+[][] \OMS/cmsy/m/n/8  [][]
+ []
+
+[42
+
+] [43
+
+] [44
+
+]
+Overfull \vbox (14.78406pt too high) detected at line 121
+ []
+
+[45
+
+]
+Overfull \vbox (14.78406pt too high) detected at line 121
+ []
+
+[46
+
+] [47
+
+] [48
+
+] [49
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 244
+ []
+
+[50
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 244
+ []
+
+[51
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 244
+ []
+
+[52
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 244
+ []
+
+[53
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 244
+ []
+
+[54
+
+] [55
+
+] [56
+
+] [57
+
+] [58
+
+] [59
+
+]) [60
+
+</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [61
+
+
+]
 \tf@nav=\write7
 
 \openout7 = main.nav
@@ -2176,39 +2264,41 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54149 strings out of 477805
+ 54253 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 17412 words of node memory still in use:
-   65 hlist, 8 vlist, 15 rule, 110 disc, 11 local_par, 6 math, 372 glue, 38 kern
-, 102 penalty, 1310 glyph, 429 attribute, 121 glue_spec, 429 attribute_list, 14 
-write, 3 pdf_start_link, 3 pdf_end_link, 10 pdf_dest, 3 pdf_action, 118 pdf_colo
-rstack nodes
-   avail lists: 1:6,2:1085,3:254,4:322,5:299,6:91,7:3577,8:72,9:1375,10:26,11:22
-3
- 72492 multiletter control sequences out of 65536+600000
- 85 fonts using 20790319 bytes
- 128i,17n,134p,1852b,2000s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 3144 words of node memory still in use:
+   24 hlist, 8 vlist, 6 rule, 6 disc, 2 local_par, 56 glue, 13 kern, 18 penalty,
+ 125 glyph, 133 attribute, 121 glue_spec, 133 attribute_list, 5 write, 1 pdf_des
+t, 28 pdf_colorstack nodes
+   avail lists: 1:6,2:1741,3:474,4:490,5:361,6:105,7:6889,8:85,9:1421,10:26,11:3
+98
+ 72544 multiletter control sequences out of 65536+600000
+ 98 fonts using 21772615 bytes
+ 128i,19n,134p,1852b,2000s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
 /usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/fonts/truetyp
 e/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/liberation2
 /LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msbm10.pfb>
-Output written on main.pdf (39 pages, 920187 bytes).
+s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm7.pfb>
+Output written on main.pdf (61 pages, 998061 bytes).
 
-PDF statistics: 380 PDF objects out of 1000 (max. 8388607)
- 288 compressed objects within 3 object streams
- 90 named destinations out of 1000 (max. 131072)
+PDF statistics: 532 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 137 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

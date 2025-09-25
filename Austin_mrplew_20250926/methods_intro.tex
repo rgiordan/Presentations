@@ -359,40 +359,41 @@ using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019
 \end{itemize}
 %
 No reason to think $\Ysur \mapsto \muhatmrp$ is even approximately \textbf{globally} linear.
+% But we can still compute and analyze
+% $\surcol{\w_i^\mrp} := \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
+% using Bayesian sensitivity analysis!
+% \footcite{gustafson:1996:localposterior,giordano:2018:covariances}
 
-But we can still compute and analyze
-$\surcol{\w_i^\mrp} := \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
-using Bayesian sensitivity analysis!
-\footcite{gustafson:1996:localposterior,giordano:2018:covariances}
-
-\pause
-\begin{block}{MrP locally equivalent weights (MrPlew)}
-\centering
-\vspace{1em}
-For new data $\Ytil$, form a \textbf{local equivalent weighting}
-$$
-\begin{aligned}
-\muhatmrp[\Ytil] \approx{}& \muhatmrp + \surcol{\sumsur \w_i^\mrp (\ytil_i - \y_i)}\quad
-\textrm{where}\quad \surcol{\w_i^\mrp} :={} \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.
-\end{aligned}
-$$
-\vspace{1em}
-\end{block}
-%
-\pause
-\textbf{
-Our task is to rigorously show that even such local weights can be used
-diagnostically.
+\onslide<2->{
+    \begin{block}{MrP locally equivalent weights (MrPlew)}
+    \centering
+    \vspace{1em}
+    For new data $\Ytil$, form a \textbf{MrP locally equivalent weighting}:
+    $$
+    \begin{aligned}
+    \muhatmrp[\Ytil] \approx{}& \muhatmrp + \surcol{\sumsur \w_i^\mrp (\ytil_i - \y_i)}\quad
+    \textrm{where}\quad \surcol{\w_i^\mrp} :={} \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.
+    \end{aligned}
+    $$
+    \vspace{1em}
+    \end{block}
+    %
 }
 
-% \begin{itemize}
-% \item If $\muhat_\mrp$ is linear in $\Ysur, this definition recovers the true weights
-% \item Whether or not $\muhat_\mrp$ is linear in $\Ysur, this definition is valid
-%     ``locally'' for $\Ytil$ ``nearby'' $\Ysur.
-% \item For MCMC, compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
-% using Bayesian sensitivity analysis.\footcite{gustafson:1996:localposterior,giordano:2018:covariances}
-% \end{itemize}
-%
+\only<3>{
+    The weights are given by weighted averages of posterior covariances  \footcite{giordano:2018:covariances}.
+    \\[1em]
+    They can be easily computed with standard software\footnote{We use \texttt{brms} \parencite{brms}.}
+    \textbf{without re--running MCMC}.\\
+}
+
+\only<4>{
+    \textbf{
+        Our task is to rigorously show that even such local weights can be used
+        diagnostically.
+    }
+}
+
 
 
 \end{frame}
