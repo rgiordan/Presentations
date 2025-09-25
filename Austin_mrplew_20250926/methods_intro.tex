@@ -56,7 +56,7 @@ in which we observe only covariates.
 \begin{frame}[t]{Two approaches}
 
 We want $\tarcol{\mu := \meantar \y_j}$,
-but don't observe target population $\tarcol{\y_j}$.
+but don't observe target population $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, \y_{\Nsur}\}}$.
 
 \begin{itemize}
     \item Assume $p(y | \x)$ is the same in both populations,
@@ -95,13 +95,13 @@ but don't observe target population $\tarcol{\y_j}$.
 \splitpagenoline{
     \centering
     $\blacktriangleright$ Take
-    $\surcol{\muhat_{\cal} = \meansur w_i y_i}$
+    $\muhatcw = \surcol{\meansur w_i y_i}$
 }{
     \centering
     $\blacktriangleright$ Take
     $\tarcol{\yhat_j} =
         \expect{\postsur}{\y | \tarcol{\x_j}}$ and\\
-    $\surcol{\muhat_{\mrp}} = \tarcol{\meantar \yhat_j}$
+    $\muhatmrp = \tarcol{\meantar \yhat_j}$
 }\pause
 %
 \\[1em]
@@ -152,9 +152,9 @@ $$
 \begin{aligned}
 % \yhat_j ={}& \x_j^\trans \thetahat  =
 %     \x_j^\trans \left(\sumsur \x_i \x_i^\trans \right)^{-1} \sumsur \x_i \y_i \Rightarrow \\
-\surcol{\muhat_{\mrp}} ={}& \tarcol{\meantar \yhat_j} =
+\muhatmrp ={}& \tarcol{\meantar \yhat_j} =
 \tarcol{\meantar }
-\underbrace{\tarcol{\x_j^\trans} \surcol{\thetahat}}_{\textrm{Linear in }\surcol{\y_i}}
+\underbrace{\tarcol{\x_j^\trans} \surcol{\thetahat}}_{\textrm{Linear in }\surcol{\Ysur}}
 % =
 % \surcol{\sumsur}
 % \underbrace{
@@ -203,7 +203,7 @@ would seem to be completely incompatible methods.''
     \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
 \end{itemize}
 
-The map from $\Ysur = \y_1, \ldots, \y_{\Nsur} \mapsto \m(\x_j^\trans \thetahat)$ is
+The map from $\surcol{\Ysur} \mapsto \m(\x_j^\trans \thetahat)$ is
 \emph{inherently nonlinear}.
 
 But \emph{some sample averages}
@@ -216,26 +216,26 @@ Additionally suppose $\x \in \mathcal{X}$ is discrete and saturated.
 
 \pause
 \def\ybar{\overline{y}}
-\def\Ntarc{N_T^c}
-\def\Nsurc{N_S^c}
+\def\Ntarc{\tarcol{N_T^c}}
+\def\Nsurc{\surcol{N_S^c}}
 %
 \begin{itemize}
     % \item Let $N_S^c$ (or $\Ntar^c$) denote the \# of survey (or target) observations with $\x_n = c$.
     % \item When $\x_n = c$, $\m(\x_j^\trans \thetahat) = \frac{1}{\Nsur^c} \sumsur \y_i \ind{\x_n = c}$.
-    \item Let $\ybar_S^c$ denote the survey average among $\x = c$ for $c \in \mathcal{X}$\pause
-    \item For $\x = c$, the MLE satisfies $m(\thetahat^\trans \x) = \ybar_S^c$\pause
-    \item Let $\Nsurc$ (or $\Nsurc$) denote the \# of survey (or target) observations with $\x_n = c$.\pause
+    \item Let \surcol{$\ybar_S^c$} denote the survey average among $\x = c$ for $c \in \mathcal{X}$\pause
+    \item For $\x = c$, the MLE satisfies $m(\thetahat^\trans \x) = \surcol{\ybar_S^c}$\pause
+    \item Let $\Nsurc$ (or $\Ntarc$) denote the \# of survey (or target) observations with $\x_n = c$.\pause
 \end{itemize}
 %
 $$
 \begin{aligned}
-\muhat_\mrp ={}& \meantar \m(\x_j^\trans \thetahat)
-            = \frac{1}{\Ntar} \sum_{c \in \mathcal{X}}
-            \underbrace{\Ntarc \ybar_S^c}_{\textrm{Linear in }\y_i}
-        = \meansur \w_i^\mrp \y_i
+\muhatmrp ={}& \tarcol{\meantar \m(\x_j^\trans \thetahat)}
+            = \frac{1}{\tarcol{\Ntar}} \sum_{c \in \mathcal{X}}
+            \underbrace{\Ntarc \surcol{\ybar_S^c}}_{\textrm{Linear in }\surcol{\Ysur}}
+        = \surcol{\meansur \w_i^\mrp \y_i}
 \\ \textrm{For }
-\w_i^\mrp ={}&
-    \frac{\Ntarc / \Ntar}{\Nsurc / \Nsur} \textrm{ when }\x_i=c.
+\surcol{\w_i^\mrp} ={}&
+    \frac{\Ntarc / \tarcol{\Ntar}}{\Nsurc / \surcol{\Nsur}} \textrm{ when }\x_i=c.
 \end{aligned}
 $$
 
