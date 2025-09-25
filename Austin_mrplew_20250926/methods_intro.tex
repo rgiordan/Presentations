@@ -257,7 +257,7 @@ $$
 %
 \begin{block}{Example \#2}
 Suppose
-    $\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
+    $\frac{\tarcol{\ptar}(\x)}{\surcol{\psur}(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
     \textbf{Then MrP is a \emph{approximately} a CW estimator.}
 \end{block}\pause
 
@@ -265,21 +265,32 @@ Suppose
 % $\meansur m(\thetahat^\trans \x_i) = \meansur \y_i \x_i$.  So
 $$
 \begin{aligned}
-\muhat_\mrp ={}& \meantar \m(\x_j^\trans \thetahat) \pause
+\muhatmrp ={}& \tarcol{\meantar \m(\x_j^\trans \thetahat)} \pause
 \\ \approx{}&
-    \int \m(\x^\trans \thetahat) \ptar(\x) d\x
+    \int \tarcol{
+        \m(\x^\trans \thetahat) \ptar(\x) d\x
+    }
     & \textrm{(Law of large numbers)} \pause
 \\ ={}&
-    \int \frac{\ptar(\x)}{\psur(\x)} \m(\x^\trans \thetahat) \psur(\x) d\x
+    \int
+    \surcol{
+        \frac{\tarcol{\ptar(\x)}}{\psur(\x)} \m(\x^\trans \thetahat) \psur(\x) d\x
+    }
     & \textrm{(Multiply by $\psur(\x) / \psur(\x)$)} \pause
 \\ \approx{}&
-    \int \left( \alphav^\trans \x\right) \m(\x^\trans \thetahat) \psur(\x) d\x
+    \int \surcol{
+        \left( \alphav^\trans \x\right) \m(\x^\trans \thetahat) \psur(\x) d\x
+    }
     & \textrm{(By assumption)} \pause
 \\ \approx{}&
-    \alphav^\trans \meansur \x_i \m(\x_i^\trans \thetahat)
+    \surcol{
+        \alphav^\trans \meansur \x_i \m(\x_i^\trans \thetahat)
+    }
     & \textrm{(Law of large numbers)}\pause
 \\={}&
-    \alphav^\trans \meansur \x_i \y_i
+    \surcol{
+        \alphav^\trans \meansur \x_i \y_i
+    }
     & \textrm{(Property of exponential family MLEs)}
 \end{aligned}
 $$
@@ -309,10 +320,12 @@ Suppose
 
 $$
 \begin{aligned}
-\muhat_\mrp =
-    \meantar \m(\x_j^\trans \thetahat) ={}
-    \meansur
-    \underbrace{\w_i^\mrp}_{\alphav^\trans \x_i} \y_i + \textrm{Small error}
+\muhatmrp =
+    \tarcol{\meantar \m(\x_j^\trans \thetahat)} ={}
+    \surcol{
+        \meansur
+        \underbrace{\w_i^\mrp}_{\alphav^\trans \x_i} \y_i + \textrm{Small error}
+    }
 \end{aligned}
 $$
 But what are the weights?
