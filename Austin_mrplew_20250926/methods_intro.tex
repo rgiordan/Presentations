@@ -200,7 +200,7 @@ would seem to be completely incompatible methods.''
 %
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
-    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
+    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
 \end{itemize}
 
 The map from $\surcol{\Ysur} \mapsto \m(\x_j^\trans \thetahat)$ is
@@ -252,7 +252,7 @@ $$
 %
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
-    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
+    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
 \end{itemize}
 %
 \begin{block}{Example \#2}
@@ -309,7 +309,7 @@ $$
 %
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
-    \item MrP is $\muhat_\mrp = \meantar \m(\x_j^\trans \thetahat)$.
+    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
 \end{itemize}
 %
 \begin{block}{Example \#2}
@@ -324,8 +324,8 @@ $$
     \tarcol{\meantar \m(\x_j^\trans \thetahat)} ={}
     \surcol{
         \meansur
-        \underbrace{\w_i^\mrp}_{\alphav^\trans \x_i} \y_i + \textrm{Small error}
-    }
+        \underbrace{\w_i^\mrp}_{\alphav^\trans \x_i} \y_i
+    }  + \textrm{Small error}
 \end{aligned}
 $$
 But what are the weights?
@@ -334,11 +334,11 @@ directly.\pause
 
 \begin{block}{Key idea (informal)}
 \centering
-If $\muhat_\mrp$ is approximately linear, then
-$\w_i^\mrp \approx \frac{\partial \muhat_\mrp}{\partial \y_i}.$\\
+If $\muhatmrp$ is approximately linear, then
+$\surcol{\w_i^\mrp} \approx \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.$\\
 \end{block}\pause
 
-For logistic regression, could compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
+For logistic regression, compute and analyze $\frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
 using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019:swiss}
 
 \end{frame}
@@ -350,20 +350,18 @@ using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{Locally equivalent weights for hierarchical logistic regression MrP}
-
-\def\Y{\surcol{Y_S}}
-\def\Ytil{\surcol{\tilde{Y}_S}}
 %
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$.
     \item Set a hierarchical prior $\p(\theta \vert \Sigma)\p(\Sigma)$,
             use MCMC to draw from $\post$.
-    \item MrP is $\muhat_\mrp = \meantar \expect{\post}{\m(\x_j^\trans \theta)}$.
+    \item MrP is $\muhatmrp = \tarcol{\meantar \expect{\post}{\m(\x_j^\trans \theta)}}$.
 \end{itemize}
 %
-No reason to think $\Ysur \mapsto \muhat_\mrp(\Ysur)$ is even approximately linear.
+No reason to think $\Ysur \mapsto \muhatmrp$ is even approximately \textbf{globally} linear.
 
-But we can still compute and analyze $\w_i^\mrp := \frac{\partial \muhat_\mrp}{\partial \y_i}$
+But we can still compute and analyze
+$\surcol{\w_i^\mrp} := \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
 using Bayesian sensitivity analysis!
 \footcite{gustafson:1996:localposterior,giordano:2018:covariances}
 
@@ -371,11 +369,11 @@ using Bayesian sensitivity analysis!
 \begin{block}{MrP locally equivalent weights (MrPlew)}
 \centering
 \vspace{1em}
-For new data $\Ytil$, form a series expansion
+For new data $\Ytil$, form a \textbf{local equivalent weighting}
 $$
 \begin{aligned}
-\muhat_\mrp(\Ytil) \approx{}& \muhat_\mrp(\Y) + \sumsur \w_i^\mrp (\ytil_i - \y_i)\quad
-\textrm{where}\quad \w_i^\mrp :={} \frac{\partial \muhat_\mrp}{\partial \y_i}.
+\muhatmrp[\Ytil] \approx{}& \muhatmrp + \surcol{\sumsur \w_i^\mrp (\ytil_i - \y_i)}\quad
+\textrm{where}\quad \surcol{\w_i^\mrp} :={} \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.
 \end{aligned}
 $$
 \vspace{1em}
@@ -388,9 +386,9 @@ diagnostically.
 }
 
 % \begin{itemize}
-% \item If $\muhat_\mrp$ is linear in $\Y$, this definition recovers the true weights
-% \item Whether or not $\muhat_\mrp$ is linear in $\Y$, this definition is valid
-%     ``locally'' for $\Ytil$ ``nearby'' $\Y$.
+% \item If $\muhat_\mrp$ is linear in $\Ysur, this definition recovers the true weights
+% \item Whether or not $\muhat_\mrp$ is linear in $\Ysur, this definition is valid
+%     ``locally'' for $\Ytil$ ``nearby'' $\Ysur.
 % \item For MCMC, compute and analyze $\frac{\partial \muhat_\mrp}{\partial \y_i}$
 % using Bayesian sensitivity analysis.\footcite{gustafson:1996:localposterior,giordano:2018:covariances}
 % \end{itemize}

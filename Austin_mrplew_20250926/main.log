@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  25 SEP 2025 13:48
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  25 SEP 2025 15:05
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2147,10 +2147,10 @@ Overfull \vbox (14.77217pt too high) detected at line 299
 File: figure/alexanderweightplot-1.png Graphic file (type png)
 <use figure/alexanderweightplot-1.png>
 Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 4
-14.
+12.
 (luatex.def)             Requested size: 301.14392pt x 180.69064pt.
 
-Overfull \vbox (0.24309pt too high) detected at line 414
+Overfull \vbox (0.24309pt too high) detected at line 412
  []
 
 [38
@@ -2183,7 +2183,7 @@ Here is how much of LuaTeX's memory you used:
 , 102 penalty, 1310 glyph, 429 attribute, 121 glue_spec, 429 attribute_list, 14 
 write, 3 pdf_start_link, 3 pdf_end_link, 10 pdf_dest, 3 pdf_action, 118 pdf_colo
 rstack nodes
-   avail lists: 1:6,2:1045,3:254,4:319,5:299,6:91,7:3577,8:72,9:1363,10:26,11:22
+   avail lists: 1:6,2:1085,3:254,4:322,5:299,6:91,7:3577,8:72,9:1375,10:26,11:22
 3
  72492 multiletter control sequences out of 65536+600000
  85 fonts using 20790319 bytes
@@ -2205,7 +2205,7 @@ public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on main.pdf (39 pages, 918418 bytes).
+Output written on main.pdf (39 pages, 920187 bytes).
 
 PDF statistics: 380 PDF objects out of 1000 (max. 8388607)
  288 compressed objects within 3 object streams
