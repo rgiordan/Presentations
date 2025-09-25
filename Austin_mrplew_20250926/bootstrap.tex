@@ -41,26 +41,26 @@ What else might it mean?\\
 
 For Bayesian hierarchical logictic regression, define
 $$
-\varepsilon_n = \y_n - \expect{\post}{\m(\x_n^\trans \theta)}
+\surcol{\varepsilon_i = \y_i - \expect{\post}{\m(\x_i^\trans \theta)}}
 \quad\textrm{and}\quad
-\psi_n := \Nsur \w_n^\mrp \varepsilon_n.
+\surcol{\psi_i := \Nsur \w_i^\mrp \varepsilon_i}.
 $$
 
 We state mild conditions under which, as $N \rightarrow \infty$,
 $$
 \begin{aligned}
-    \sqrt{N}\left(\muhat_\mrp - \mu_\infty \right) \rightarrow{}&
-    \mathcal{N}\left(0, V\right) \quad\textrm{for some $\mu_\infty$ and variance $V$, and}\\
-\meansur (\psi_n - \overline{\psi})^2 \rightarrow{}& V.
+    \sqrt{N}\left(\muhatmrp - \tarcol{\mu_\infty} \right) \rightarrow{}&
+    \mathcal{N}\left(0, V\right) \quad\textrm{for some $\tarcol{\mu_\infty}$ and variance $V$, and}\\
+\surcol{\meansur (\psi_i - \overline{\psi})^2} \rightarrow{}& V.
 \end{aligned}
 $$
 \end{block}
 
-The use of $\w_n^\mrp$ is exactly analogous to the use of raking weights
+The use of $\surcol{\w_i^\mrp}$ is exactly analogous to the use of raking weights
 for standard error estimation.
 
 This builds on our earlier work on the Bayesian
-infinitesimal jackknife\footcite{giordano:2024:bayesij}.
+infinitesimal jackknife.\footcite{giordano:2024:bayesij}
 
 \end{frame}
 
@@ -88,7 +88,7 @@ infinitesimal jackknife\footcite{giordano:2024:bayesij}.
 
 \onslide<2->{
 \textbf{Partial pooling }is BISC with different targets (e.g. sub--populations).\\
-\textbf{Negative weights }indicate \emph{non--monotonicity} of $\Ysur \mapsto \muhat_\mrp(\Ysur)$.\\[1em]
+\textbf{Negative weights }indicate \emph{non--monotonicity} of $\Ysur \mapsto \muhatmrp$.\\[1em]
 }
 
 \onslide<3->{

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  25 SEP 2025 16:43
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  25 SEP 2025 16:49
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1706,7 +1706,17 @@ echnical note
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `fig:alexanderweightplot' multiply defined.
+
+
+LaTeX Warning: Label `fig:alexanderweightplot' multiply defined.
+
+
+LaTeX Warning: Label `fig:laxweightplot' multiply defined.
+
+)
 \openout1 = main.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -2240,9 +2250,199 @@ Overfull \vbox (14.67451pt too high) detected at line 244
 
 ] [59
 
-]) [60
+]) (./experiments.tex [60
 
-</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [61
+]
+<figure/alexanderprimary-1.png, id=429, 469.755pt x 281.853pt>
+File: figure/alexanderprimary-1.png Graphic file (type png)
+<use figure/alexanderprimary-1.png>
+Package luatex.def Info: figure/alexanderprimary-1.png  used on input line 41.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [61
+
+<./figure/alexanderprimary-1.png>]
+<figure/alexanderinteraction-1.png, id=437, 469.755pt x 281.853pt>
+File: figure/alexanderinteraction-1.png Graphic file (type png)
+<use figure/alexanderinteraction-1.png>
+Package luatex.def Info: figure/alexanderinteraction-1.png  used on input line 
+46.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [62
+
+<./figure/alexanderinteraction-1.png>]
+<figure/alexandercontpred-1.png, id=444, 469.755pt x 281.853pt>
+File: figure/alexandercontpred-1.png Graphic file (type png)
+<use figure/alexandercontpred-1.png>
+Package luatex.def Info: figure/alexandercontpred-1.png  used on input line 53.
+
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [63
+
+<./figure/alexandercontpred-1.png>]
+<figure/alexanderdiscretepred-1.png, id=451, 469.755pt x 281.853pt>
+File: figure/alexanderdiscretepred-1.png Graphic file (type png)
+<use figure/alexanderdiscretepred-1.png>
+Package luatex.def Info: figure/alexanderdiscretepred-1.png  used on input line
+ 65.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+Overfull \vbox (2.59439pt too high) detected at line 65
+ []
+
+[64
+
+<./figure/alexanderdiscretepred-1.png>] [65
+
+]
+<figure/laxprimary-1.png, id=468, 469.755pt x 281.853pt>
+File: figure/laxprimary-1.png Graphic file (type png)
+<use figure/laxprimary-1.png>
+Package luatex.def Info: figure/laxprimary-1.png  used on input line 111.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [66
+
+<./figure/laxprimary-1.png>]
+<figure/laxinteraction-1.png, id=475, 469.755pt x 281.853pt>
+File: figure/laxinteraction-1.png Graphic file (type png)
+<use figure/laxinteraction-1.png>
+Package luatex.def Info: figure/laxinteraction-1.png  used on input line 116.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+[67
+
+<./figure/laxinteraction-1.png>]
+<figure/laxcontpred-1.png, id=482, 469.755pt x 281.853pt>
+File: figure/laxcontpred-1.png Graphic file (type png)
+<use figure/laxcontpred-1.png>
+Package luatex.def Info: figure/laxcontpred-1.png  used on input line 123.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [68
+
+<./figure/laxcontpred-1.png>]
+<figure/laxdiscretepred-1.png, id=489, 469.755pt x 281.853pt>
+File: figure/laxdiscretepred-1.png Graphic file (type png)
+<use figure/laxdiscretepred-1.png>
+Package luatex.def Info: figure/laxdiscretepred-1.png  used on input line 135.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+Overfull \vbox (2.59439pt too high) detected at line 135
+ []
+
+[69
+
+<./figure/laxdiscretepred-1.png>]) (./bootstrap.tex
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 2
+8.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'fig:alexan
+derweightplot'
+<figure/laxweightplot-1.png, id=496, 469.755pt x 281.853pt>
+File: figure/laxweightplot-1.png Graphic file (type png)
+<use figure/laxweightplot-1.png>
+Package luatex.def Info: figure/laxweightplot-1.png  used on input line 28.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+[70
+
+<./figure/laxweightplot-1.png>]
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 2
+8.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+File: figure/laxweightplot-1.png Graphic file (type png)
+<use figure/laxweightplot-1.png>
+Package luatex.def Info: figure/laxweightplot-1.png  used on input line 28.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+ [71
+
+]
+Overfull \hbox (0.69998pt too wide) detected at line 65
+ []
+ []
+
+[72
+
+]
+<figure/bootplot-1.png, id=517, 469.755pt x 281.853pt>
+File: figure/bootplot-1.png Graphic file (type png)
+<use figure/bootplot-1.png>
+Package luatex.def Info: figure/bootplot-1.png  used on input line 74.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [73
+
+<./figure/bootplot-1.png>]
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 1
+03.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'fig:alexan
+derweightplot'
+File: figure/laxweightplot-1.png Graphic file (type png)
+<use figure/laxweightplot-1.png>
+Package luatex.def Info: figure/laxweightplot-1.png  used on input line 103.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'fig:laxwei
+ghtplot'
+[74
+
+]
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 1
+03.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+File: figure/laxweightplot-1.png Graphic file (type png)
+<use figure/laxweightplot-1.png>
+Package luatex.def Info: figure/laxweightplot-1.png  used on input line 103.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+ [75
+
+]
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 1
+03.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+File: figure/laxweightplot-1.png Graphic file (type png)
+<use figure/laxweightplot-1.png>
+Package luatex.def Info: figure/laxweightplot-1.png  used on input line 103.
+(luatex.def)             Requested size: 135.50867pt x 81.30519pt.
+ [76
+
+]) (./future_work.tex [77
+
+] [78
+
+] [79
+
+]
+<static_figures/question-mark.jpg, id=554, 1927.2pt x 1927.2pt>
+File: static_figures/question-mark.jpg Graphic file (type jpg)
+<use static_figures/question-mark.jpg>
+Package luatex.def Info: static_figures/question-mark.jpg  used on input line 1
+28.
+(luatex.def)             Requested size: 66.37567pt x 66.37083pt.
+<static_figures/sequoia.jpg, id=555, 131.74219pt x 131.74219pt>
+File: static_figures/sequoia.jpg Graphic file (type jpg)
+<use static_figures/sequoia.jpg>
+Package luatex.def Info: static_figures/sequoia.jpg  used on input line 128.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+<static_figures/lucas.jpg, id=556, 131.74219pt x 131.74219pt>
+File: static_figures/lucas.jpg Graphic file (type jpg)
+<use static_figures/lucas.jpg>
+Package luatex.def Info: static_figures/lucas.jpg  used on input line 128.
+(luatex.def)             Requested size: 66.37567pt x 66.37749pt.
+ [80
+
+<./static_figures/question-mark.jpg><./static_figures/sequoia.jpg><./static_figu
+res/lucas.jpg>]) [81
+
+</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [82
 
 
 ]
@@ -2255,7 +2455,11 @@ Overfull \vbox (14.67451pt too high) detected at line 244
 \tf@snm=\write9
 
 \openout9 = main.snm
- (./main.aux)
+
+(./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2264,41 +2468,43 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54253 strings out of 477805
+ 54942 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 3144 words of node memory still in use:
-   24 hlist, 8 vlist, 6 rule, 6 disc, 2 local_par, 56 glue, 13 kern, 18 penalty,
- 125 glyph, 133 attribute, 121 glue_spec, 133 attribute_list, 5 write, 1 pdf_des
-t, 28 pdf_colorstack nodes
-   avail lists: 1:6,2:1741,3:474,4:490,5:361,6:105,7:6889,8:85,9:1421,10:26,11:3
-98
- 72544 multiletter control sequences out of 65536+600000
- 98 fonts using 21772615 bytes
- 128i,19n,134p,1852b,2000s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf><
-/usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fon
-ts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/fonts/truetyp
-e/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/liberation2
-/LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm7.pfb>
-Output written on main.pdf (61 pages, 998316 bytes).
+ 12648 words of node memory still in use:
+   47 hlist, 8 vlist, 11 rule, 69 disc, 7 local_par, 8 math, 267 glue, 29 kern, 
+71 penalty, 931 glyph, 331 attribute, 121 glue_spec, 331 attribute_list, 10 writ
+e, 4 pdf_start_link, 4 pdf_end_link, 6 pdf_dest, 4 pdf_action, 78 pdf_colorstack
+ nodes
+   avail lists: 1:6,2:1356,3:496,4:480,5:354,6:98,7:6504,8:77,9:1393,10:26,11:35
+3
+ 72801 multiletter control sequences out of 65536+600000
+ 100 fonts using 22248471 bytes
+ 128i,19n,134p,1852b,2049s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Medium.otf></
+usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></u
+sr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/fonts
+/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/fonts/truetype/
+liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/liberation2/L
+iberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m7.pfb>
+Output written on main.pdf (82 pages, 2382435 bytes).
 
-PDF statistics: 532 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 137 named destinations out of 1000 (max. 131072)
+PDF statistics: 693 PDF objects out of 1000 (max. 8388607)
+ 535 compressed objects within 6 object streams
+ 194 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

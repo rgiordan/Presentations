@@ -19,6 +19,36 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{alexander:2019:namechange}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=858eed3fb827d5bd9a3e800a2e13a830}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{fullhash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{bibnamehash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{authorbibnamehash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{authornamehash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \strng{authorfullhash}{858eed3fb827d5bd9a3e800a2e13a830}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analyzing name changes after marriage using a non-representative survey}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.monicaalexander.com/posts/2019-08-07-mrp/
+      \endverb
+      \verb{url}
+      \verb https://www.monicaalexander.com/posts/2019-08-07-mrp/
+      \endverb
+    \endentry
     \entry{benmichael:2021:multilevel}{misc}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=002098d4f02069e5bb8d356f24aa10a8}{%
@@ -196,6 +226,43 @@
       \field{year}{2023}
       \field{pages}{615\bibrangedash 629}
       \range{pages}{15}
+    \endentry
+    \entry{cohen:2019:namechange}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=916d3a027b84e50541df203c243cc949}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {OSF}%
+      }
+      \strng{namehash}{916d3a027b84e50541df203c243cc949}
+      \strng{fullhash}{916d3a027b84e50541df203c243cc949}
+      \strng{bibnamehash}{916d3a027b84e50541df203c243cc949}
+      \strng{authorbibnamehash}{916d3a027b84e50541df203c243cc949}
+      \strng{authornamehash}{916d3a027b84e50541df203c243cc949}
+      \strng{authorfullhash}{916d3a027b84e50541df203c243cc949}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Marital Name Change Survey}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.17605/OSF.IO/UZQDN
+      \endverb
+      \verb{urlraw}
+      \verb osf.io/uzqdn
+      \endverb
+      \verb{url}
+      \verb osf.io/uzqdn
+      \endverb
     \endentry
     \entry{giordano:2024:bayesij}{misc}{}
       \name{author}{2}{}{%
@@ -423,6 +490,45 @@
       \verb https://arxiv.org/abs/2209.14992
       \endverb
     \endentry
+    \entry{kastellec:2010:laxmrp}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cd3ce42f4b33a2324332df490038f73f}{%
+           family={Kastellec},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f29c23acd8dfbb54d7885fac280019fd}{%
+           family={Lax},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8338762af5fa2c2697a2fba62677b0e}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{fullhash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{bibnamehash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{authorbibnamehash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{authornamehash}{bc27de996766d0e6a1ff853e715038be}
+      \strng{authorfullhash}{bc27de996766d0e6a1ff853e715038be}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Unpublished manuscript, Princeton University}
+      \field{number}{3}
+      \field{title}{Estimating state public opinion with multi-level regression and poststratification using {R}}
+      \field{volume}{29}
+      \field{year}{2010}
+    \endentry
     \entry{krantz:2012:implicit}{book}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=103df34e16530481ed318e7a009071fc}{%
@@ -455,6 +561,125 @@
       \field{labeltitlesource}{title}
       \field{title}{The Implicit Function Theorem: History, Theory, and Applications}
       \field{year}{2012}
+    \endentry
+    \entry{lax:2009:gay}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f29c23acd8dfbb54d7885fac280019fd}{%
+           family={Lax},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8338762af5fa2c2697a2fba62677b0e}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{fullhash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{bibnamehash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{authorbibnamehash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{authornamehash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \strng{authorfullhash}{4fe8afe713278c0ed52e3b5554ca883c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Political Science Review}
+      \field{number}{3}
+      \field{title}{Gay rights in the states: {Public} opinion and policy responsiveness}
+      \field{volume}{103}
+      \field{year}{2009}
+      \field{pages}{367\bibrangedash 386}
+      \range{pages}{20}
+    \endentry
+    \entry{ipumsusa}{misc}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=46d6c25f34f2fb26c2343032df7218ef}{%
+           family={Ruggles},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc171747b6e84a1d2e5552348842c74e}{%
+           family={Flood},
+           familyi={F\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4060390cea1aeb68a05ff1b15f454686}{%
+           family={Sobek},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=356be3359a55f9e1c3b35aa3196210db}{%
+           family={Backman},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=744dc10976e4d0c4c2cdc2072da8d405}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c1aa00be89638890275cedf054e31fb}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4167256345c9a97f76d7db01a4b2d270}{%
+           family={Richards},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b43d8354c1f61db47e901ce7ecc87786}{%
+           family={Rodgers},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50c91ba6d8200a48b247b8dc6f49bd67}{%
+           family={S.},
+           familyi={S\bibinitperiod},
+           given={Megan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{acc91ce2eb33f3732cab1f6cf0cdcbb2}
+      \strng{fullhash}{3f6ce2618919822da0ec5f8938a9bd22}
+      \strng{bibnamehash}{acc91ce2eb33f3732cab1f6cf0cdcbb2}
+      \strng{authorbibnamehash}{acc91ce2eb33f3732cab1f6cf0cdcbb2}
+      \strng{authornamehash}{acc91ce2eb33f3732cab1f6cf0cdcbb2}
+      \strng{authorfullhash}{3f6ce2618919822da0ec5f8938a9bd22}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{IPUMS USA}: {Version 15.0} [dataset]}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.18128/D010.V15.0
+      \endverb
+      \verb{urlraw}
+      \verb https://usa.ipums.org
+      \endverb
+      \verb{url}
+      \verb https://usa.ipums.org
+      \endverb
     \endentry
     \entry{solon:2015:weightingfor}{article}{}
       \name{author}{3}{}{%
