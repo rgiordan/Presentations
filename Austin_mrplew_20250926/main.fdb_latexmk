@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1758861510 "main.bcf" "main.bbl" "main" 1758862003
-  "main.bcf" 1758862003 111052 a8c84e8d808e748141a10a6a0b594d07 "lualatex"
+["biber main"] 1758861510 "main.bcf" "main.bbl" "main" 1758862145
+  "main.bcf" 1758862144 111052 a8c84e8d808e748141a10a6a0b594d07 "lualatex"
   "references.bib" 1758672441 5825 22d4701d339f743aa656f4f98c2ad6e9 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1758861998 "main.tex" "main.pdf" "main" 1758862003
+["lualatex"] 1758862140 "main.tex" "main.pdf" "main" 1758862145
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -440,13 +440,13 @@
   "figure/laxprimary-1.png" 1758746209 116348 15d43bbf310411d42e1b778f45374a02 ""
   "figure/laxweightplot-1.png" 1758746207 259624 a68595e0cf6599b25d34f687825d2eaa ""
   "figures_knitr.tex" 1758746209 5796 0e76a221a9243cc27c48969e178bf9fb ""
-  "future_work.tex" 1758861997 3742 3080632cc6d0d123d3546355edf87650 ""
+  "future_work.tex" 1758862138 3742 02d6b26b11cf1037d33bebf7a6249cbc ""
   "introduction.tex" 1758860907 2999 5a100e2826f6972c5a052978bad5cc97 ""
-  "main.aux" 1758862003 14726 5ca0d833b80421c88037a0d45b58dcdd "lualatex"
+  "main.aux" 1758862144 14726 5ca0d833b80421c88037a0d45b58dcdd "lualatex"
   "main.bbl" 1758861510 28632 e9ae0d0c804877f91449a9bbc2c0cb62 "biber main"
-  "main.nav" 1758862003 3363 8c0e0ba5704a70d58b7e4ed5fcd34666 "lualatex"
-  "main.out" 1758862000 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1758862003 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
+  "main.nav" 1758862144 3363 8c0e0ba5704a70d58b7e4ed5fcd34666 "lualatex"
+  "main.out" 1758862142 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1758862144 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
   "main.tex" 1758843846 1966 006d5b8677f28fabcc7bf6fe9e0ff908 ""
   "methods_intro.tex" 1758861504 13103 97d9126c85672f7ce142015d541c36ad ""
   "static_figures/alice.jpg" 1758301041 13170 bee87fd4d96042960ced90e03e7db734 ""
@@ -458,7 +458,7 @@
   "static_figures/sequoia.jpg" 1758301041 20444 525b2d4ed028386bccb7c9f37dacfbe2 ""
   "static_figures/survey_crazy_man.jpg" 1758301041 29616 36ac7003c50949c58ea9f98177d268fe ""
   "static_figures/survey_man.jpg" 1758301041 21961 ad68661d4066e24c0413d3db3837ca8c ""
-  "static_figures/vladimir_palmin.png" 1758861961 2727246 bdfba99e01f8ea85c9275fccb03dfa66 ""
+  "static_figures/vladimir_palmin.jpg" 1758862130 222623 f4e61624dd4e033ad9f2378f2512b0c5 ""
   "static_figures/voting_man.jpg" 1758301041 22321 ba1b893f73b1be3cf5861bc7922d9d47 ""
   (generated)
   "main.aux"
