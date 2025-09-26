@@ -56,7 +56,7 @@ in which we observe only covariates.
 \begin{frame}[t]{Two approaches}
 
 We want $\tarcol{\mu := \meantar \y_j}$,
-but don't observe target population $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, \y_{\Nsur}\}}$.
+but don't observe target $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, \y_{\Nsur}\}}$.
 
 \begin{itemize}
     \item Assume $p(y | \x)$ is the same in both populations,
@@ -123,9 +123,10 @@ but don't observe target population $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_
     $\blacktriangleright$ Weights give interpretable diagnostics:
     %
     \begin{itemize}
+        \item Regressor balance
         \item Frequentist variability
         \item Partial pooling
-        \item Regressor balance
+        \item Extraplolation
     \end{itemize}
     %
 }{
@@ -192,54 +193,54 @@ would seem to be completely incompatible methods.''
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Equivalent weights for (some) logistic regression MrP}
-%
-\begin{itemize}
-    \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
-    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
-\end{itemize}
+% \begin{frame}[t]{Equivalent weights for (some) logistic regression MrP}
+% %
+% \begin{itemize}
+%     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
+%     \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
+% \end{itemize}
 
-The map from $\surcol{\Ysur} \mapsto \m(\x_j^\trans \thetahat)$ is
-\emph{inherently nonlinear}.
+% The map from $\surcol{\Ysur} \mapsto \m(\x_j^\trans \thetahat)$ is
+% \emph{inherently nonlinear}.
 
-But \emph{some sample averages}
-of $\m(\x_j^\trans \thetahat)$ can be approximately linear.\pause
+% But \emph{some sample averages}
+% of $\m(\x_j^\trans \thetahat)$ can be approximately linear.\pause
 
-\begin{block}{Example \#1}
-Additionally suppose $\x \in \mathcal{X}$ is discrete and saturated.
-        \textbf{Then MrP is a CW estimator.}
-\end{block}
+% \begin{block}{Example \#1}
+% Additionally suppose $\x \in \mathcal{X}$ is discrete and saturated.
+%         \textbf{Then MrP is a CW estimator.}
+% \end{block}
 
-\pause
-\def\ybar{\overline{y}}
-\def\Ntarc{\tarcol{N_T^c}}
-\def\Nsurc{\surcol{N_S^c}}
-%
-\begin{itemize}
-    % \item Let $N_S^c$ (or $\Ntar^c$) denote the \# of survey (or target) observations with $\x_n = c$.
-    % \item When $\x_n = c$, $\m(\x_j^\trans \thetahat) = \frac{1}{\Nsur^c} \sumsur \y_i \ind{\x_n = c}$.
-    \item Let \surcol{$\ybar_S^c$} denote the survey average among $\x = c$ for $c \in \mathcal{X}$\pause
-    \item For $\x = c$, the MLE satisfies $m(\thetahat^\trans \x) = \surcol{\ybar_S^c}$\pause
-    \item Let $\Nsurc$ (or $\Ntarc$) denote the \# of survey (or target) observations with $\x_n = c$.\pause
-\end{itemize}
-%
-$$
-\begin{aligned}
-\muhatmrp ={}& \tarcol{\meantar \m(\x_j^\trans \thetahat)}
-            = \frac{1}{\tarcol{\Ntar}} \sum_{c \in \mathcal{X}}
-            \underbrace{\Ntarc \surcol{\ybar_S^c}}_{\textrm{Linear in }\surcol{\Ysur}}
-        = \surcol{\meansur \w_i^\mrp \y_i}
-\\ \textrm{For }
-\surcol{\w_i^\mrp} ={}&
-    \frac{\Ntarc / \tarcol{\Ntar}}{\Nsurc / \surcol{\Nsur}} \textrm{ when }\x_i=c.
-\end{aligned}
-$$
+% \pause
+% \def\ybar{\overline{y}}
+% \def\Ntarc{\tarcol{N_T^c}}
+% \def\Nsurc{\surcol{N_S^c}}
+% %
+% \begin{itemize}
+%     % \item Let $N_S^c$ (or $\Ntar^c$) denote the \# of survey (or target) observations with $\x_n = c$.
+%     % \item When $\x_n = c$, $\m(\x_j^\trans \thetahat) = \frac{1}{\Nsur^c} \sumsur \y_i \ind{\x_n = c}$.
+%     \item Let \surcol{$\ybar_S^c$} denote the survey average among $\x = c$ for $c \in \mathcal{X}$\pause
+%     \item For $\x = c$, the MLE satisfies $m(\thetahat^\trans \x) = \surcol{\ybar_S^c}$\pause
+%     \item Let $\Nsurc$ (or $\Ntarc$) denote the \# of survey (or target) observations with $\x_n = c$.\pause
+% \end{itemize}
+% %
+% $$
+% \begin{aligned}
+% \muhatmrp ={}& \tarcol{\meantar \m(\x_j^\trans \thetahat)}
+%             = \frac{1}{\tarcol{\Ntar}} \sum_{c \in \mathcal{X}}
+%             \underbrace{\Ntarc \surcol{\ybar_S^c}}_{\textrm{Linear in }\surcol{\Ysur}}
+%         = \surcol{\meansur \w_i^\mrp \y_i}
+% \\ \textrm{For }
+% \surcol{\w_i^\mrp} ={}&
+%     \frac{\Ntarc / \tarcol{\Ntar}}{\Nsurc / \surcol{\Nsur}} \textrm{ when }\x_i=c.
+% \end{aligned}
+% $$
 
-\end{frame}
+% \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -254,15 +255,41 @@ $$
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
     \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
 \end{itemize}
+
+\pause
+The map from $\surcol{\Ysur} \mapsto \m(\x_j^\trans \thetahat)$ is
+\emph{inherently nonlinear}.
+
+But \emph{some sample averages}
+of $\m(\x_j^\trans \thetahat)$ can be approximately linear.
+\pause
 %
-\begin{block}{Example \#2}
+\begin{block}{Example}
 Suppose
     $\frac{\tarcol{\ptar}(\x)}{\surcol{\psur}(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
     \textbf{Then MrP is a \emph{approximately} a CW estimator.}
-\end{block}\pause
+\end{block}
 
-% The MLE satisfies
-% $\meansur m(\thetahat^\trans \x_i) = \meansur \y_i \x_i$.  So
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Approximately equivalent weights for (some) logistic regression MrP}
+
+\def\alphav{\mathbf{\alpha}}
+%
+\begin{itemize}
+    \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
+    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
+\end{itemize}
+
+\begin{block}{Example}
+Suppose
+    $\frac{\tarcol{\ptar}(\x)}{\surcol{\psur}(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
+    \textbf{Then MrP is a \emph{approximately} a CW estimator.}
+\end{block}
+\pause
 $$
 \begin{aligned}
 \muhatmrp ={}& \tarcol{\meantar \m(\x_j^\trans \thetahat)} \pause
@@ -312,7 +339,7 @@ $$
     \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
 \end{itemize}
 %
-\begin{block}{Example \#2}
+\begin{block}{Example}
 Suppose
     $\frac{\ptar(\x)}{\psur(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
     \textbf{Then MrP is a \emph{approximately} a CW estimator.}
@@ -328,6 +355,7 @@ $$
     }  + \textrm{Small error}
 \end{aligned}
 $$
+\pause
 But what are the weights?
 We don't observe $\frac{\ptar(\x)}{\psur(\x)}$, so can't estimate $\alpha$
 directly.\pause
