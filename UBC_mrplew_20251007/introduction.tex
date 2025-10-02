@@ -1,0 +1,99 @@
+
+\begin{frame}{Are US non-voters becoming more Republican?}
+
+\splitpage{
+    \centering
+    \textbf{Blue Rose research says yes:}
+    \\[1em]
+    ``Politically disengaged voters have become much more Republican,
+        and because less-engaged voters swung away from [Democrats], an expanded
+        electorate meant a more Republican electorate.''
+    \\[1em]
+    \parencite{blueroseresearch:2024} \\
+    (major professional pollsters)
+}{
+    \textbf{\emph{On Data and Democracy} says no:}
+    \\[1em]
+    \centering
+    ``Claims of a decisive pro-Republican shift among the overall non-voting population are
+    not supported by the most reliable, large-scale post-election data currently available.''
+    \\[1em]
+    \parencite{datademocracyblog:2025} \\
+    (major professional researchers)
+}
+\vspace{1em}
+\pause
+% Several factors drive the disagreement:
+%
+\hrule
+\begin{itemize}
+\item The problem is very hard (it's difficult to accurately poll non--voters)
+\item Different data sources
+%
+% \begin{itemize}
+%     \item Blue Rose aggregates its own private data
+%     \item The \emph{On Data and Democracy} posts use public data, e.g.~the
+%           cooperative election study (CES)
+% \end{itemize}
+%
+\item $\star$$\star$$\star$ \textbf{Different statistical methods}
+\begin{itemize}
+    \item Blue Rose uses Bayesian hierarchical modeling (MrP)
+    \item On Data and Democracy is using calibration weighting (CW)
+\end{itemize}
+%
+\end{itemize}
+
+\pause
+
+\begin{block}{Our contribution}
+    We define ``MrP local equivalent weights'' (MrPlew) that:
+    %
+\begin{itemize}
+    \item Are easily computable from MCMC draws and standard software, and
+    \item Provide MrP versions of key diagnostics that motivate calibration weighting.
+\end{itemize}
+%
+\textbf{$\Rightarrow$ MrPlew provides direct comparisons between
+MrP and calibration weighting.}
+%
+\end{block}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Outline}
+%
+%
+\begin{itemize}
+    \item Introduce the statisical problem
+    %
+    \begin{itemize}
+        \item Contrast CW and MrP
+        \item Prior work: Equivalent weights for linear models
+        \item Interlude: Approximate equivalent weights for some non--linear models
+        \item Our key idea: Locally equivalent weights for general non--linear models
+    \end{itemize} \pause
+    %
+    \item Locally equivalent weights for covariate balance
+    \begin{itemize}
+        \item Describe classical covariate balance
+        \item Introduce a MrPlew ``balance inspired sensitivity check''
+        \item Theoretical support
+        \item Examples of real-world results
+    \end{itemize} \pause
+    \item Other uses of locally equivalent weights
+    \begin{itemize}
+            \item Frequentist variance estimation
+            \item Parital pooling
+            \item The meaning of negative weights
+    \end{itemize}
+    \item Future directions
+\end{itemize}
+%
+\end{frame}

@@ -1,0 +1,285 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{What are we weighting for?\footnote{Pun attributable to \textcite{solon:2015:weightingfor}}}
+$$
+\tarcol{\textrm{Target average response} =
+\meantar \y_j} \approx \surcol{\meansur \w_i \y_i
+= \textrm{Weighted survey average response }}
+$$
+We can't check this, because we don't observe $\tarcol{\y_j}$.  \pause But we can check whether:
+$$
+% \textrm{Target average regeressor} =
+    \tarcol{\meantar \x_j} = \surcol{\meansur \w_i \x_i}
+% =    \textrm{Weighted survey average regressor}
+$$
+
+Such weights satisfy ``covariate balance'' for $\x$.
+
+You can check covariate balance for any calibration weighting estimator,
+and any function $\f(\x)$.
+
+\pause
+Even more, covariate balance is the criterion for a popular class of calibration
+weight estimators:
+
+\begin{block}{Raking calibration weights}
+% Select calibration weights to satisfy
+``Raking'' selects weights that
+\vspace{-0.5em}
+\begin{itemize}
+    \item Are as ``close as possible'' to some reference weights
+    \item Under the constraint that they balance some selected regressors.
+\end{itemize}
+%
+\end{block}
+
+
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Balance checks as sensitivity analysis}
+
+% Why would you want covariate balance?  Some commonly stated reasons:
+% %
+% \begin{itemize}
+% \item To reduce the variance of inverse propensity weights (IPW)
+% \item To check the accuracy of IPW
+% \item To exactly balance ``important regressors''
+% \end{itemize}
+%
+% Common to these motivations is the following concen:
+
+One reason to balance $f(\x)$ is because we think
+$\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
+and want to check whether our estimator can capture this variability.
+%
+\only<2>{
+\begin{block}{Balance--informed sensitivity check (BISC) (informal)}
+    Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
+    $$
+    \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
+    $$
+    We know the change this is supposed to induce in the target population.\\[1em]
+
+    Covariate balance checks whether our estimators produce the same change.
+    %
+\end{block}
+}
+%
+\only<3->{
+\begin{block}{Balance--informed sensitivity check (BISC) (formal)}
+    Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
+    $$
+    \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
+    $$
+    We know the expected change this perturbation produces in the target distribution:
+    $$
+    \begin{aligned}
+        \tarcol{
+            \expect{}{\mu(\ytil) - \mu(\y) | \x} =
+            \meantar \left(\expect{}{\ytil | \x_p} - \expect{}{\y | \x_p}\right) =
+            \delta \meantar f(\x_j)}
+    \end{aligned}
+    $$
+    Then, check whether your estimator $\muhat(\cdot)$ produces
+    the same change for observed $\Ytil, \Ysur$:
+    $$
+    \begin{aligned}
+        \underbrace{
+            \tarcol{\muhat}(\Ytil) -
+            \tarcol{\muhat}(\Ysur)
+        }_{
+            \substack{
+                \text{Replace weighted averages} \\
+                \text{with changes in an estimator}
+            }
+        }
+        \overset{\textrm{\textbf{check}}}{\approx}
+        \tarcol{
+        \delta \meantar f(\x_j).}
+    \end{aligned}
+    $$
+\end{block}
+}
+
+\onslide<4->{
+    When $\tarcol{\muhat}(\cdot) = \muhatcw[\cdot]$,
+    BISC recovers the standard covariate balance check. \\[1em]
+    We will study $\tarcol{\muhat}(\cdot) = \muhatmrp[\cdot]$.
+}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{BISC for MrP}
+
+Suppose I have
+$\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.\\
+Now I need to evaluate \surcol{$\muhatmrp[\ytil] - \muhatmrp$}.
+\pause
+
+\textbf{Problem:} \surcol{$\muhatmrp[\cdot]$} is computed with MCMC.
+%
+\begin{itemize}
+\item Each MCMC run typically takes hours, and
+\item Output is noisy, and \surcol{$\muhatmrp[\ytil] - \muhatmrp$} may be small.
+\end{itemize}
+%
+\pause
+\textbf{Solution:} Use our local approximation, MrPlew!
+
+\begin{block}{Balance informed sensitivity check with MrPlew:}
+For a wide set of judiciously chosen $\f(\cdot)$, check
+$$
+\muhatmrp[\Ytil] - \muhatmrp \approx
+    \surcol{\sumsur \w_i^\mrp (\ytil_i - \y_i)} \approx
+    \underbrace{
+        \delta  \surcol{\sumsur \w_i^\mrp \f(\x_i)}
+            \overset{\textrm{check}}{\approx}
+        \delta \tarcol{\meantar f(\x_j).}
+    }_{\textrm{What you actually check}}
+$$
+\end{block}
+
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Generating $\ytil$}
+%
+\begin{itemize}
+\item We have defined BISC in terms of $\ytil$ such that
+$\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$
+\item We have approximated $\muhatmrp[\Ytil] - \muhatmrp$ for $\ytil \approx \y$
+\end{itemize}
+%
+
+How to get such a $\ytil$?  \textbf{Recall $\y$ is binary!}  \onslide<2->{
+    \textbf{Two solutions, with their own pros and cons:}
+}
+\splitpagenoline{
+    \centering
+    \onslide<2->{
+        \textbf{Option 1:} Force $\ytil$ to be binary.
+    }
+    %
+    \onslide<3->{
+        \begin{enumerate}
+        \item Make \textit{some} guess $\hat{m}(\x) \approx \expect{}{\y \vert \x}$
+        %
+        \begin{itemize}
+        \item E.g.~Posterior mean, or
+        \item Shrunken posterior mean, or
+        \item Some values that gives the same posterior
+        \end{itemize}
+        %
+        \item Take \surcol{$u_i \iid \mathrm{Unif}(0,1)$}
+        \item Assume \surcol{$\y_i = \ind{u_i \le \hat{m}(\x_i)}$}
+        \item Draw \surcol{$u_n \vert \y_n$}
+        \item Set \surcol{$\ytil_i = \ind{u_i \le \hat{m}(\x_i)+ \delta \x_i}$}
+    }
+%
+\end{enumerate}
+%
+} {
+    \centering
+    \onslide<2->{
+        \textbf{Option 2:} Allow $\ytil$ to take generic values.
+    }
+    \onslide<4->{
+        \begin{enumerate}
+            \item Set \surcol{$\ytil_i = \y_i + \delta \f(\x_i)$}.
+            \item Then you're done.
+            \item There is nothing else to do.
+        \end{enumerate}
+    }
+}
+%
+\\[1em]
+\onslide<5->{
+    \splitpagenoline{
+    %
+\textbf{Pros and cons:}
+    \begin{itemize}
+    \item Realistic
+    \item Have to pick $\hat{m}(\x)$
+    \item \surcol{$\Ytil - \Ysur$} not infinitesimally small
+    \item \textbf{Use for checks \& experiments}
+    \end{itemize}
+    %
+    }
+    {
+\textbf{Pros and cons:}
+    \begin{itemize}
+    \item Not realistic
+    \item No additional assumptions
+    \item \surcol{$\Ytil - \Ysur$} may be infinitesimally small
+    \item \textbf{Use for theory}
+    \end{itemize}
+    }
+}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Theory}
+
+\textbf{When is the local approximation accurate?}
+
+\begin{block}{BISC Theorem: (sketch)}
+    Take $\ytil_n = \y_n + \delta \f(\x_n)$.\\[1em]
+    We state conditions for Bayesian hierarchical logistic regression under which
+$$
+\onslide<4->{\sup_{f \in \mathcal{F}}}
+\abs{
+    \muhatmrp[\Ytil] - \muhatmrp
+    - \delta \surcol{\sumsur \w_i^\mrp \f(\x_i)}
+}
+\only<1>{ = \textrm{Small}}
+\only<2->{ = O(\delta^2)}
+\onslide<3->{\textrm{ as }N \rightarrow \infty}
+$$
+\onslide<4->{
+    For a very broad class\footnote{Donsker class of measurable functions with uniformly bounded
+    $\expect{}{\x \f(\x)}$.} of $\mathcal{F}$.
+}
+\end{block}
+
+\onslide<4->{
+    \textbf{Uniformity justifies searching for ``imbalanced'' $\f$.}
+}
+
+\onslide<5->{
+The uniformity result builds on our earlier work on uniform
+and finite--sample error bounds
+for Bernstein--von Mises theorem--like results
+\footcite{giordano:2024:bayesij,kasprzak:2025:laplace}.
+}
+
+
+\end{frame}

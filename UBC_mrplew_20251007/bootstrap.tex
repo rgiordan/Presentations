@@ -1,0 +1,103 @@
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Standard error estimation}
+\centering
+%\only<1>
+{
+Does this mean anything?  \\
+\textbf{Yes: }We can meaningful sum these weights against regressors.\\[1em]
+What else might it mean?\\
+}
+
+\onslide<2->
+{
+\textbf{Does the spread relate to frequentist variance?}
+}
+
+\splitpagenoline{
+    \AlexanderWeightPlot{}
+}{
+    \LaxWeightPlot{}
+}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Standard error estimation}
+
+
+
+\begin{block}{Standard error consistency theorm: (sketch)}
+
+For Bayesian hierarchical logictic regression, define
+$$
+\surcol{\varepsilon_i = \y_i - \expect{\post}{\m(\x_i^\trans \theta)}}
+\quad\textrm{and}\quad
+\surcol{\psi_i := \Nsur \w_i^\mrp \varepsilon_i}.
+$$
+
+We state mild conditions under which, as $\Nsur \rightarrow \infty$,
+$$
+\begin{aligned}
+    \sqrt{\Nsur}\left(\muhatmrp - \tarcol{\mu_\infty} \right) \rightarrow{}&
+    \mathcal{N}\left(0, V\right) \quad\textrm{for some $\tarcol{\mu_\infty}$ and variance $V$, and}\\
+\surcol{\meansur (\psi_i - \overline{\psi})^2} \rightarrow{}& V.
+\end{aligned}
+$$
+\end{block}
+
+The use of $\surcol{\w_i^\mrp}$ is exactly analogous to the use of raking weights
+for standard error estimation.
+
+This builds on our earlier work on the Bayesian
+infinitesimal jackknife.\footcite{giordano:2024:bayesij}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Standard error estimation}
+\BootstrapPlot{}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Other uses}
+\centering
+
+\onslide<1->{
+\textbf{Covariate balance }corresponds by BISC.\\
+\textbf{Weight spread }measures frequentist standard errors.\\[1em]
+}
+
+\onslide<2->{
+\textbf{Partial pooling }is BISC with different targets (e.g. sub--populations).\\
+\textbf{Negative weights }indicate \emph{non--monotonicity} of $\Ysur \mapsto \muhatmrp$.\\[1em]
+}
+
+\onslide<3->{
+\textbf{Other checks?}
+}
+
+\splitpagenoline{
+    \AlexanderWeightPlot{}
+}{
+    \LaxWeightPlot{}
+}
+\end{frame}
