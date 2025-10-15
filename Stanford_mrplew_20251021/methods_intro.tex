@@ -379,6 +379,7 @@ using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019
 
 \begin{frame}[t]{Locally equivalent weights for hierarchical logistic regression MrP}
 %
+\vspace{-1em}
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$.
     \item Set a hierarchical prior $\p(\theta \vert \Sigma)\p(\Sigma)$,
@@ -386,7 +387,7 @@ using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019
     \item MrP is $\muhatmrp = \tarcol{\meantar \expect{\post}{\m(\x_j^\trans \theta)}}$.
 \end{itemize}
 %
-No reason to think $\Ysur \mapsto \muhatmrp$ is even approximately \textbf{globally} linear.\\[1em]
+No reason to think $\Ysur \mapsto \muhatmrp$ is even approximately \textbf{globally} linear.
 
 \onslide<2->{
 But we can still compute and analyze
@@ -396,6 +397,7 @@ using Bayesian sensitivity analysis!
 
 \begin{block}{MrP weights for MCMC}
 \centering
+\vspace{-1em}
 $$
 \begin{aligned}
 \surcol{\w_i^\mrp} :={} \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}
@@ -405,11 +407,29 @@ $$
     \surcol{
     \cov{\post}{\tarcol{\m(\x_j^\trans \theta)}, \theta^\trans \surcol{\x_i}}
     }
-}_{\color{black}\textrm{Can estimate with orignal MCMC samples}}
+}_{\color{black}\textrm{Can estimate without rerunning MCMC!}}
 \end{aligned}
 $$
-\vspace{1em}
+\vspace{-1em}
 \end{block}
+}
+
+\onslide<3->{
+\textbf{What do these weights mean?}  There are now two distinct possibilities:
+%
+\begin{itemize}
+    \item ``Locally implicit weights''
+    %
+\begin{itemize}
+\item An estimator of $\ptar(\x) / \psur(\x)$ (via Riesz regression applied to the Gateaux derivative)
+\end{itemize}
+%
+    \item ``Locally equivalent weights'' \onslide<4->{ $\leftarrow$ \textbf{The present talk will focus on this interpretation}}
+\begin{itemize}
+\item A characterization of $\Ysur \mapsto \muhatmrp$ for diagnostics and interpretation
+\end{itemize}
+\end{itemize}
+%
 }
 
 
