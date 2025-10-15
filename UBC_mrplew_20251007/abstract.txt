@@ -1,4 +1,4 @@
-Local Weighting--Based Diagnostics for Bayesian Poststratification
+Locally Equivalent Weights for Bayesian Multilevel Regression with Post-stratification
 
 Multilevel Regression with Post-stratification (MrP) has become a workhorse
 method for estimating population quantities using non-probability surveys, and

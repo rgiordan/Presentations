@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not edit the TeX file your work
+% will be overwritten.  Edit the RnW
+% file instead.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<setup, include=FALSE, cache=FALSE>>=
+knitr_debug <- FALSE # Set to true to see error output
+
+rerun_all <- TRUE
+
+# Set to true to cache knitr output for this analysis.
+cache <- TRUE && (!rerun_all)
+
+source("figures_knitr/initialize.R", echo=FALSE)
+@
+
+<<load_data>>=
+source("figures_knitr/load_data.R")
+@
+
+\newcommand{\DefineMacros}{
+<<define_macros, results="asis">>=
+source("figures_knitr/define_macros.R")
+@
+}
+
+
+% Define the graph lists
+<<graph_setup, cache=cache>>=
+source("figures_knitr/predictions_plot.R")
+source("figures_knitr/imbalance_plots.R")
+source("figures_knitr/weights_plot.R")
+@
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Plots
+
+
+\newcommand{\AlexanderWeightPlot}{
+<<>>=
+figcap <- paste0("Comparison between raking and MrPlew weights for the Name Change dataset")
+@
+<<alexanderweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(alex_weight_scatterplot)
+@
+}
+
+
+\newcommand{\LaxWeightPlot}{
+<<>>=
+figcap <- paste0("Comparison between raking and MrPlew weights for the Gay Marriage dataset")
+@
+<<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_weight_scatterplot)
+@
+}
+
+
+\newcommand{\AlexanderImbalancePrimary}{
+<<>>=
+figcap <- paste0("Imbalance plot for primary effects in the Name Change dataset")
+@
+<<alexanderprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(alex_imb_plots$primary_plt)
+@
+}
+
+
+\newcommand{\AlexanderImbalanceInteraction}{
+<<>>=
+figcap <- paste0("Imbalance plot for select interaction effects in the Name Change dataset")
+@
+<<alexanderinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(alex_imb_plots$interaction_plt)
+@
+}
+
+
+
+
+\newcommand{\AlexanderPredictionFigOne}{
+<<>>=
+figcap <- paste0("Predictions on binary data for the Name Change dataset")
+@
+<<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(alex_refit_plots$base_plot)
+@
+}
+
+
+
+\newcommand{\AlexanderPredictionFigTwo}{
+<<>>=
+figcap <- paste0("Predictions and refit on binary data for the Name Change dataset")
+@
+<<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(alex_refit_plots$plt1)
+@
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand{\LaxImbalancePrimary}{
+<<>>=
+figcap <- paste0("Imbalance plot for primary effects in the Gay Marriage dataset")
+@
+<<laxprimary, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_imb_plots$primary_plt)
+@
+}
+
+
+\newcommand{\LaxImbalanceInteraction}{
+<<>>=
+figcap <- paste0("Imbalance plot for select interaction effects in the Gay Marriage dataset")
+@
+<<laxinteraction, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_imb_plots$interaction_plt)
+@
+}
+
+
+
+
+\newcommand{\LaxPredictionFigOne}{
+<<>>=
+figcap <- paste0("Predictions on binary data for the Gay Marriage dataset")
+@
+<<laxcontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_refit_plots$base_plot)
+@
+}
+
+
+
+\newcommand{\LaxPredictionFigTwo}{
+<<>>=
+figcap <- paste0("Predictions and refit on binary data for the Gay Marriage dataset")
+@
+<<laxdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(lax_refit_plots$plt1)
+@
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand{\BootstrapPlot}{
+<<>>=
+figcap <- paste0("Frequentist standard deviation estimates")
+@
+<<bootplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/bootstrap_comparison.R", print.eval=TRUE)
+@
+}

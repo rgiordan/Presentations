@@ -1,0 +1,141 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Real Data: Marital Name Change Survey}
+Analysis of changing names after marriage\footnote{
+    Based on \textcite{alexander:2019:namechange}.}.
+
+\begin{itemize}
+    %
+    \item \textbf{Target population:} ACS survey of US population 2017--2022 \footcite{ipumsusa}
+    \item \textbf{Survey population:} Marital Name Change Survey (from Twitter)\footcite{cohen:2019:namechange}
+    \item \textbf{Respose:}  Did the female partner keep their name after marriage?
+    \item For regressors, use bins of age, education, state, and decade married.
+    %
+\end{itemize}
+
+$$
+\begin{aligned}
+    \textrm{Survey observations:} &&  \surcol{\Nsur} ={}& \AlexNSur  \\
+    \textrm{Target observations (rows):} &&  \tarcol{\Ntar} ={}& \AlexNTar \\
+    \\
+    \textrm{Uncorrected survey mean:} && \surcol{\meansur \y_i} ={}& \AlexSurmean \\
+    \textrm{Raking:} && \muhatcw ={}& \AlexRaking \\
+    \textrm{MrP:} && \muhatmrp ={}& \AlexMrp
+        \quad(\textrm{Post. sd} = \AlexMrpSD)\\
+\end{aligned}
+$$
+%
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Covariate balance for primary effects}
+\AlexanderImbalancePrimary{}
+\end{frame}
+
+
+\begin{frame}{Covariate balance for interaction effects}
+\AlexanderImbalanceInteraction{}
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Predictions}
+    \AlexanderPredictionFigOne{}
+\end{frame}
+
+
+\begin{frame}[t]{Predictions and actual MCMC results}
+    \AlexanderPredictionFigTwo{}
+    \vspace{-3em}
+    $$
+    \begin{aligned}
+        \textrm{Running ten MCMC refits:}\quad & \AlexRefitTimeHours \textrm{ hours} &
+        \textrm{Computing approximate weights:}\quad &\AlexMrPawTimeSecs \textrm{ seconds}\\
+    \end{aligned}
+    $$
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Real Data: Lax Philips}
+Analysis of national support for gay marriage.\footnote{Based on \textcite{kastellec:2010:laxmrp},
+see also \textcite{lax:2009:gay}.}
+
+\begin{itemize}
+    %
+    \item \textbf{Target population:} US Census Public Use Microdata Sample 2000
+    \item \textbf{Survey population:} Combined national-level polls from 2004
+    \item \textbf{Respose:}  ``Do you favor allowing gay and lesbian couples to marry legally?''
+    \item For regressors, use race, gender, age, education, state, region,
+        and continuous statewide religion and political characteristics, including
+        some analyst--selected interactions.
+    %
+\end{itemize}
+
+$$
+\begin{aligned}
+    \textrm{Survey observations:} &&  \surcol{\Nsur} ={}& \LaxNSur  \\
+    \textrm{Target observations (rows):} &&  \tarcol{\Ntar} ={}& \LaxNTar \\
+    \\
+    \textrm{Uncorrected survey mean:} && \surcol{\meansur \y_i} ={}& \LaxSurmean \\
+    \textrm{Raking:} && \muhat_\cal ={}& \LaxRaking \\
+    \textrm{MrP:} && \muhat_\mrp ={}& \LaxMrp
+        \quad(\textrm{Post. sd} = \LaxMrpSD)\\
+\end{aligned}
+$$
+%
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Covariate balance for primary effects}
+\LaxImbalancePrimary{}
+\end{frame}
+
+
+\begin{frame}{Covariate balance for interaction effects}
+\LaxImbalanceInteraction{}
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Predictions}
+    \LaxPredictionFigOne{}
+\end{frame}
+
+
+\begin{frame}[t]{Predictions and actual MCMC results}
+    \LaxPredictionFigTwo{}
+    \vspace{-3em}
+    $$
+    \begin{aligned}
+        \textrm{Running ten MCMC refits:}\quad & \LaxRefitTimeHours \textrm{ hours} &
+        \textrm{Computing approximate weights:}\quad &\LaxMrPawTimeSecs \textrm{ seconds}\\
+    \end{aligned}
+    $$
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
