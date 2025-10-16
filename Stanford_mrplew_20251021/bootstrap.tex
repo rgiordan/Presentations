@@ -6,13 +6,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Standard error estimation}
+\begin{frame}[c]{The weights can look very different!}
 \centering
 %\only<1>
 {
 Does this mean anything?  \\
-\textbf{Yes: }We can meaningful sum these weights against regressors.\\[1em]
-What else might it mean?\\
+% \textbf{Yes: }We can meaningful sum these weights against regressors.\\[1em]
+% What else might it mean?\\
 }
 
 \onslide<2->
@@ -36,6 +36,8 @@ What else might it mean?\\
 \begin{frame}[c]{Standard error estimation}
 
 
+Suppose we have $\muhatcw = \meantar \w_j \y_j$.
+
 
 \begin{block}{Standard error consistency theorm: (sketch)}
 
@@ -47,10 +49,12 @@ $$
 $$
 
 We state mild conditions under which, as $\Nsur \rightarrow \infty$,
+for some $\tarcol{\mu_\infty}$ and variance $V$,
 $$
 \begin{aligned}
     \sqrt{\Nsur}\left(\muhatmrp - \tarcol{\mu_\infty} \right) \rightarrow{}&
-    \mathcal{N}\left(0, V\right) \quad\textrm{for some $\tarcol{\mu_\infty}$ and variance $V$, and}\\
+    \mathcal{N}\left(0, V\right)
+    \textrm{ and }
 \surcol{\meansur (\psi_i - \overline{\psi})^2} \rightarrow{}& V.
 \end{aligned}
 $$

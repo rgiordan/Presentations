@@ -21,16 +21,18 @@
 
 % Sets of data in the survey and target
 
-\def\sur{\mathcal{S}}
-\def\tar{\mathcal{T}}
-\def\nsur{{N_S}}
-\def\ntar{{N_T}}
-
-\def\Nsur{{N_S}}
-\def\Ntar{{N_T}}
-
 \def\tarcol#1{\textcolor{red}{#1}}
 \def\surcol#1{\textcolor{blue}{#1}}
+
+
+\def\sur{\mathcal{S}}
+\def\tar{\mathcal{T}}
+\def\nsur{{\surcol{N_S}}}
+\def\ntar{{\tarcol{N_T}}}
+
+\def\Nsur{{\surcol{N_S}}}
+\def\Ntar{{\tarcol{N_T}}}
+
 
 \def\postsur{\surcol{\p(\theta \vert \textrm{Survey data})}}
 \def\post{\postsur}

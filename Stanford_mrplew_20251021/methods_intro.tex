@@ -193,55 +193,6 @@ would seem to be completely incompatible methods.''
 
 
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}[t]{Equivalent weights for (some) logistic regression MrP}
-% %
-% \begin{itemize}
-%     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
-%     \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
-% \end{itemize}
-
-% The map from $\surcol{\Ysur} \mapsto \m(\x_j^\trans \thetahat)$ is
-% \emph{inherently nonlinear}.
-
-% But \emph{some sample averages}
-% of $\m(\x_j^\trans \thetahat)$ can be approximately linear.\pause
-
-% \begin{block}{Example \#1}
-% Additionally suppose $\x \in \mathcal{X}$ is discrete and saturated.
-%         \textbf{Then MrP is a CW estimator.}
-% \end{block}
-
-% \pause
-% \def\ybar{\overline{y}}
-% \def\Ntarc{\tarcol{N_T^c}}
-% \def\Nsurc{\surcol{N_S^c}}
-% %
-% \begin{itemize}
-%     % \item Let $N_S^c$ (or $\Ntar^c$) denote the \# of survey (or target) observations with $\x_n = c$.
-%     % \item When $\x_n = c$, $\m(\x_j^\trans \thetahat) = \frac{1}{\Nsur^c} \sumsur \y_i \ind{\x_n = c}$.
-%     \item Let \surcol{$\ybar_S^c$} denote the survey average among $\x = c$ for $c \in \mathcal{X}$\pause
-%     \item For $\x = c$, the MLE satisfies $m(\thetahat^\trans \x) = \surcol{\ybar_S^c}$\pause
-%     \item Let $\Nsurc$ (or $\Ntarc$) denote the \# of survey (or target) observations with $\x_n = c$.\pause
-% \end{itemize}
-% %
-% $$
-% \begin{aligned}
-% \muhatmrp ={}& \tarcol{\meantar \m(\x_j^\trans \thetahat)}
-%             = \frac{1}{\tarcol{\Ntar}} \sum_{c \in \mathcal{X}}
-%             \underbrace{\Ntarc \surcol{\ybar_S^c}}_{\textrm{Linear in }\surcol{\Ysur}}
-%         = \surcol{\meansur \w_i^\mrp \y_i}
-% \\ \textrm{For }
-% \surcol{\w_i^\mrp} ={}&
-%     \frac{\Ntarc / \tarcol{\Ntar}}{\Nsurc / \surcol{\Nsur}} \textrm{ when }\x_i=c.
-% \end{aligned}
-% $$
-
-% \end{frame}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -271,6 +222,9 @@ Suppose
 \end{block}
 
 \end{frame}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -363,7 +317,7 @@ directly.\pause
 \begin{block}{Key idea (informal)}
 \centering
 If $\muhatmrp$ is approximately linear, then
-$\surcol{\w_i^\mrp} \approx \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.$\\
+$\surcol{\w_i^\mrp} \approx \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.$\\
 \end{block}\pause
 
 For logistic regression, compute and analyze $\frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
@@ -391,7 +345,7 @@ No reason to think $\Ysur \mapsto \muhatmrp$ is even approximately \textbf{globa
 
 \onslide<2->{
 But we can still compute and analyze
-$\surcol{\w_i^\mrp} := \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
+$\surcol{\w_i^\mrp} := \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
 using Bayesian sensitivity analysis!
 \footcite{diaconis:1986:bayesconsistency,gustafson:1996:localposterior,efron:2015:frequentist,giordano:2018:covariances}
 
@@ -400,9 +354,9 @@ using Bayesian sensitivity analysis!
 \vspace{-1em}
 $$
 \begin{aligned}
-\surcol{\w_i^\mrp} :={} \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}
+\surcol{\w_i^\mrp} :={} \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}
 =
-\tarcol{\meantar}
+\nsur \tarcol{\meantar}
 \underbrace{
     \surcol{
     \cov{\post}{\tarcol{\m(\x_j^\trans \theta)}, \theta^\trans \surcol{\x_i}}
@@ -470,13 +424,6 @@ $$
     %
 % }
 
-% \only<3>{
-%     The weights are given by weighted averages of posterior covariances  \footcite{giordano:2018:covariances}.
-%     \\[1em]
-%     They can be easily computed with standard software\footnote{We use \texttt{brms} \parencite{brms}.}
-%     \textbf{without re--running MCMC}.\\
-% }
-
 \vspace{2em}
 % \only<4>{
     \textbf{
@@ -485,22 +432,20 @@ $$
      }
 % }
 
-
-
 \end{frame}
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{The weights can look very different!}
+% \begin{frame}{The weights can look very different!}
 
-    \centering
-    Does this mean anything?  Are the differences important?
+%     \centering
+%     Does this mean anything?  Are the differences important?
 
-    \AlexanderWeightPlot{}
-\end{frame}
+%     \AlexanderWeightPlot{}
+% \end{frame}
 
 
