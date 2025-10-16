@@ -443,8 +443,8 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{Locally equivalent weights for hierarchical logistic regression MrP}
-
 %
+\vspace{-1em}
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$.
     \item Set a hierarchical prior $\p(\theta \vert \Sigma)\p(\Sigma)$,
@@ -452,9 +452,9 @@ $$
     \item MrP is $\muhatmrp = \tarcol{\meantar \expect{\post}{\m(\x_j^\trans \theta)}}$.
 \end{itemize}
 %
-No reason to think $\Ysur \mapsto \muhatmrp$ is even approximately \textbf{globally} linear.
-
-\onslide<2->{
+\vspace{4em}
+%No reason to think $\Ysur \mapsto \muhatmrp$ is even approximately \textbf{globally} linear.
+% \onslide<2->{
     \begin{block}{MrP locally equivalent weights (MrPlew)}
     \centering
     \vspace{1em}
@@ -468,21 +468,22 @@ No reason to think $\Ysur \mapsto \muhatmrp$ is even approximately \textbf{globa
     \vspace{1em}
     \end{block}
     %
-}
+% }
 
-\only<3>{
-    The weights are given by weighted averages of posterior covariances  \footcite{giordano:2018:covariances}.
-    \\[1em]
-    They can be easily computed with standard software\footnote{We use \texttt{brms} \parencite{brms}.}
-    \textbf{without re--running MCMC}.\\
-}
+% \only<3>{
+%     The weights are given by weighted averages of posterior covariances  \footcite{giordano:2018:covariances}.
+%     \\[1em]
+%     They can be easily computed with standard software\footnote{We use \texttt{brms} \parencite{brms}.}
+%     \textbf{without re--running MCMC}.\\
+% }
 
-\only<4>{
+\vspace{2em}
+% \only<4>{
     \textbf{
-        Our task is to rigorously show that even such local weights can be used
-        diagnostically.
-    }
-}
+        Our task is to rigorously show that even such local weights can be meaningfully
+        used diagnostically in the same ways we use global weights.
+     }
+% }
 
 
 

@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1760570084 "main.bcf" "main.bbl" "main" 1760570270
-  "main.bcf" 1760570269 112096 1cf3beffa565712f5bad3687a6aa674b "lualatex"
+["biber main"] 1760651692 "main.bcf" "main.bbl" "main" 1760651961
+  "main.bcf" 1760651961 112212 dd49cfd7c3472a6a28854fde5e19dfb4 "lualatex"
   "references.bib" 1760569481 6359 e8570ea13982f1bf5bcbe3dc61961e68 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1760570265 "main.tex" "main.pdf" "main" 1760570270
+["lualatex"] 1760651956 "main.tex" "main.pdf" "main" 1760651961
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -445,13 +445,13 @@
   "figures_knitr.tex" 1759869479 5796 0e76a221a9243cc27c48969e178bf9fb ""
   "future_work.tex" 1759869479 3742 02d6b26b11cf1037d33bebf7a6249cbc ""
   "introduction.tex" 1759869479 2999 5a100e2826f6972c5a052978bad5cc97 ""
-  "main.aux" 1760570269 16595 fb4074e2383598871be01c81f752d7fd "lualatex"
-  "main.bbl" 1760570085 32618 0dbd641751ecceca6a1f8d3b7801e160 "biber main"
-  "main.nav" 1760570269 3456 34abd3d4ba50ef25d52471cfd2c85af6 "lualatex"
-  "main.out" 1760570266 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1760570269 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
+  "main.aux" 1760651961 16794 97b0524e6c7636df11f8301c1c34019b "lualatex"
+  "main.bbl" 1760651693 31326 eb650f683c9e78ab51cde4b4f0240cf8 "biber main"
+  "main.nav" 1760651961 3456 86426920d72a5cadf47360338efc82bf "lualatex"
+  "main.out" 1760651958 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1760651961 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
   "main.tex" 1759869479 1985 31ec0bc55b8328497c460786d831e5e5 ""
-  "methods_intro.tex" 1760570263 14864 a73df09e252fb0030530e3e7c68feaba ""
+  "methods_intro.tex" 1760651955 15062 e043c2d04b69d230b8cef5341eb976c5 ""
   "static_figures/alice.jpg" 1759869479 13170 bee87fd4d96042960ced90e03e7db734 ""
   "static_figures/avi_feller.jpg" 1759869479 13270 1893adb88ca0fbc19284e37e996c5e9b ""
   "static_figures/erin_hartman.jpg" 1759869479 17696 f25364a07362865e72a7c693bbe634c3 ""
