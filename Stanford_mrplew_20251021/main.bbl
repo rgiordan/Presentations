@@ -98,6 +98,50 @@
       \field{pages}{615\bibrangedash 629}
       \range{pages}{15}
     \endentry
+    \entry{deville:1993:generalizedraking}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=90980981e5eccd150a155aa796371a15}{%
+           family={Deville},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e01ae76f634b18f8711a153b0d841868}{%
+           family={Särndal},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b4e21747c8adf2db3e7db8998274e89}{%
+           family={Sautory},
+           familyi={S\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{bb49b6048faeee7f6dd999544c8fbb98}
+      \strng{fullhash}{bb49b6048faeee7f6dd999544c8fbb98}
+      \strng{bibnamehash}{bb49b6048faeee7f6dd999544c8fbb98}
+      \strng{authorbibnamehash}{bb49b6048faeee7f6dd999544c8fbb98}
+      \strng{authornamehash}{bb49b6048faeee7f6dd999544c8fbb98}
+      \strng{authorfullhash}{bb49b6048faeee7f6dd999544c8fbb98}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American statistical Association}
+      \field{number}{423}
+      \field{title}{Generalized raking procedures in survey sampling}
+      \field{volume}{88}
+      \field{year}{1993}
+      \field{pages}{1013\bibrangedash 1020}
+      \range{pages}{8}
+    \endentry
     \entry{diaconis:1986:bayesconsistency}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=9ff44a16f7d469553346fa96a058c21e}{%
@@ -165,6 +209,71 @@
       \field{year}{2015}
       \field{pages}{617\bibrangedash 646}
       \range{pages}{30}
+    \endentry
+    \entry{fuller:2011:sampling}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ccb3d1ca929c77018d21c9cccc3f877f}{%
+           family={Fuller},
+           familyi={F\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{ccb3d1ca929c77018d21c9cccc3f877f}
+      \strng{fullhash}{ccb3d1ca929c77018d21c9cccc3f877f}
+      \strng{bibnamehash}{ccb3d1ca929c77018d21c9cccc3f877f}
+      \strng{authorbibnamehash}{ccb3d1ca929c77018d21c9cccc3f877f}
+      \strng{authornamehash}{ccb3d1ca929c77018d21c9cccc3f877f}
+      \strng{authorfullhash}{ccb3d1ca929c77018d21c9cccc3f877f}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sampling statistics}
+      \field{year}{2011}
+    \endentry
+    \entry{giordano:2024:bayesij}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=87ea7e10b7efd4496291cf69d187d0a6}{%
+           family={\textbf{G.}},
+           familyi={G\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ef0c0022763a515dfddd0f863d3ce32d}{%
+           family={Broderick},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{fullhash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{bibnamehash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{authorbibnamehash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{authornamehash}{7818a3b816cc44a1c7d710dc04422778}
+      \strng{authorfullhash}{7818a3b816cc44a1c7d710dc04422778}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{The {Bayesian} Infinitesimal Jackknife for Variance}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2305.06466
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2305.06466
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2305.06466
+      \endverb
     \endentry
     \entry{giordano:2018:covariances}{article}{}
       \name{author}{3}{}{%

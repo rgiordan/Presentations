@@ -36,17 +36,26 @@ Does this mean anything?  \\
 \begin{frame}[c]{Standard error estimation}
 
 
-Suppose we have $\muhatcw = \meantar \w_j \y_j$.
+Let $\varemp{\cdot}$ denote the sample variance.
 
+\begin{block}{Calibration weighting standard errors: (sketch)
+    \footnote{E.g.~, \textcite{deville:1993:generalizedraking,fuller:2011:sampling}.}
+}
+
+Suppose we have $\muhatcw = \surcol{\meansur \w_i \y_i}$ and a
+consistent residual estimate $\surcol{\varepsilon_i}$.
+
+Then $\varemp{\w_i \varepsilon_i} \approx \var{}{\sqrt{\Nsur} \muhatcw}$.
+
+\end{block}
+\pause
 
 \begin{block}{Standard error consistency theorm: (sketch)}
 
 For Bayesian hierarchical logictic regression, define
-$$
-\surcol{\varepsilon_i = \y_i - \expect{\post}{\m(\x_i^\trans \theta)}}
-\quad\textrm{and}\quad
-\surcol{\psi_i := \Nsur \w_i^\mrp \varepsilon_i}.
-$$
+$\surcol{\varepsilon_i = \y_i - \expect{\post}{\m(\x_i^\trans \theta)}}$.
+% \quad\textrm{and}\quad
+% \surcol{\psi_i := \Nsur \w_i^\mrp \varepsilon_i}.
 
 We state mild conditions under which, as $\Nsur \rightarrow \infty$,
 for some $\tarcol{\mu_\infty}$ and variance $V$,
@@ -54,8 +63,10 @@ $$
 \begin{aligned}
     \sqrt{\Nsur}\left(\muhatmrp - \tarcol{\mu_\infty} \right) \rightarrow{}&
     \mathcal{N}\left(0, V\right)
-    \textrm{ and }
-\surcol{\meansur (\psi_i - \overline{\psi})^2} \rightarrow{}& V.
+    \quad\textrm{ and }\quad
+    \varemp{ \w_i^\mrp \varepsilon_i}
+%\surcol{\meansur (\psi_i - \overline{\psi})^2}
+    \rightarrow{} V.
 \end{aligned}
 $$
 \end{block}
@@ -85,18 +96,15 @@ infinitesimal jackknife.\footcite{giordano:2024:bayesij}
 \begin{frame}[c]{Other uses}
 \centering
 
-\onslide<1->{
-\textbf{Covariate balance }corresponds by BISC.\\
-\textbf{Weight spread }measures frequentist standard errors.\\[1em]
-}
 
-\onslide<2->{
-\textbf{Partial pooling }is BISC with different targets (e.g. sub--populations).\\
-\textbf{Negative weights }indicate \emph{non--monotonicity} of $\Ysur \mapsto \muhatmrp$.\\[1em]
-}
+Does this mean anything?\\
+% \textbf{Yes: }We can meaningful sum these weights against regressors.\\[1em]
+% What else might it mean?\\
+Yes: The ``spread'' relates to frequentist variance just as in calibration weighting.\\[1em]
 
-\onslide<3->{
-\textbf{Other checks?}
+\onslide<2->
+{
+\textbf{What about covariate balance?}
 }
 
 \splitpagenoline{
