@@ -146,13 +146,16 @@ Now I need to evaluate \surcol{$\muhatmrp[\ytil] - \muhatmrp$}.
 \begin{block}{Balance informed sensitivity check with MrPlew:}
 For a wide set of judiciously chosen $\f(\cdot)$, check
 $$
-\muhatmrp[\Ytil] - \muhatmrp \approx
-    \surcol{\sumsur \w_i^\mrp (\ytil_i - \y_i)} \approx
+\begin{aligned}
+\muhatmrp[\Ytil] - \muhatmrp \approx{}&
+    \surcol{\meansur \w_i^\mrp (\ytil_i - \y_i)}
+    \\\approx{}&
     \underbrace{
-        \delta  \surcol{\sumsur \w_i^\mrp \f(\x_i)}
-            \overset{\textrm{check}}{\approx}
+        \delta  \surcol{\meansur \w_i^\mrp \f(\x_i)}
+            \overset{\textrm{\textbf{check}}}{\approx}
         \delta \tarcol{\meantar f(\x_j).}
     }_{\textrm{What you actually check}}
+\end{aligned}
 $$
 \end{block}
 
@@ -211,6 +214,7 @@ How to get such a $\ytil$?  \textbf{Recall $\y$ is binary!}  \onslide<2->{
             \item Set \surcol{$\ytil_i = \y_i + \delta \f(\x_i)$}.
             \item Then you're done.
             \item There is nothing else to do.
+            \item This space deliberately left blank.
         \end{enumerate}
     }
 }
@@ -265,8 +269,10 @@ $$
 \onslide<3->{\textrm{ as }N \rightarrow \infty}
 $$
 \onslide<4->{
-    For a very broad class\footnote{Donsker class of measurable functions with uniformly bounded
-    $\expect{}{\x \f(\x)}$.} of $\mathcal{F}$.
+    ...for a very broad class of $\mathcal{F}$.
+    \footnote{$\mathcal{F}$ can be any Donsker class of measurable functions
+    with uniformly bounded
+    $\expect{}{\x \f(\x)}$.}
 }
 \end{block}
 

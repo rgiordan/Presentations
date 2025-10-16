@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 OCT 2025 16:42
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  16 OCT 2025 16:48
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2188,35 +2188,118 @@ Package luatex.def Info: figure/laxweightplot-1.png  used on input line 115.
 (luatex.def)             Requested size: 135.50867pt x 81.30519pt.
  [37
 
-]) (./future_work.tex [38
+]) (./balance.tex
+Overfull \hbox (1.30382pt too wide) detected at line 41
+[][] \OMS/cmsy/m/n/8  [][]
+ []
 
-] [39
-
-] [40
+[38
 
 ]
-<static_figures/vladimir_palmin.jpg, id=323, 2020.54875pt x 2409.0pt>
+Overfull \hbox (1.30382pt too wide) detected at line 41
+[][] \OMS/cmsy/m/n/8  [][]
+ []
+
+[39
+
+]
+Overfull \hbox (1.30382pt too wide) detected at line 41
+[][] \OMS/cmsy/m/n/8  [][]
+ []
+
+[40
+
+] [41
+
+] [42
+
+]
+Overfull \vbox (14.78406pt too high) detected at line 121
+ []
+
+[43
+
+]
+Overfull \vbox (14.78406pt too high) detected at line 121
+ []
+
+[44
+
+] [45
+
+] [46
+
+] [47
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 248
+ []
+
+[48
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 248
+ []
+
+[49
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 248
+ []
+
+[50
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 248
+ []
+
+[51
+
+]
+Overfull \vbox (14.67451pt too high) detected at line 248
+ []
+
+[52
+
+] [53
+
+] [54
+
+] [55
+
+] [56
+
+] [57
+
+]) (./future_work.tex [58
+
+] [59
+
+] [60
+
+]
+<static_figures/vladimir_palmin.jpg, id=452, 2020.54875pt x 2409.0pt>
 File: static_figures/vladimir_palmin.jpg Graphic file (type jpg)
 <use static_figures/vladimir_palmin.jpg>
 Package luatex.def Info: static_figures/vladimir_palmin.jpg  used on input line
  128.
 (luatex.def)             Requested size: 55.65004pt x 66.37567pt.
-<static_figures/sequoia.jpg, id=324, 131.74219pt x 131.74219pt>
+<static_figures/sequoia.jpg, id=453, 131.74219pt x 131.74219pt>
 File: static_figures/sequoia.jpg Graphic file (type jpg)
 <use static_figures/sequoia.jpg>
 Package luatex.def Info: static_figures/sequoia.jpg  used on input line 128.
 (luatex.def)             Requested size: 66.37749pt x 66.37567pt.
-<static_figures/lucas.jpg, id=325, 131.74219pt x 131.74219pt>
+<static_figures/lucas.jpg, id=454, 131.74219pt x 131.74219pt>
 File: static_figures/lucas.jpg Graphic file (type jpg)
 <use static_figures/lucas.jpg>
 Package luatex.def Info: static_figures/lucas.jpg  used on input line 128.
 (luatex.def)             Requested size: 66.37749pt x 66.37567pt.
- [41
+ [61
 
 <./static_figures/vladimir_palmin.jpg><./static_figures/sequoia.jpg><./static_fi
-gures/lucas.jpg>]) [42
+gures/lucas.jpg>]) [62
 
-</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [43
+</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [63
 
 
 ]
@@ -2229,8 +2312,7 @@ gures/lucas.jpg>]) [42
 \tf@snm=\write9
 
 \openout9 = main.snm
-
-(./main.aux)
+ (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -2242,16 +2324,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54433 strings out of 477805
+ 54516 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 3162 words of node memory still in use:
-   24 hlist, 8 vlist, 6 rule, 14 disc, 2 local_par, 52 glue, 11 kern, 14 penalty
-, 141 glyph, 100 attribute, 121 glue_spec, 100 attribute_list, 5 write, 1 pdf_de
-st, 28 pdf_colorstack nodes
-   avail lists: 1:5,2:1824,3:394,4:526,5:314,6:115,7:5897,8:89,9:1458,10:23,11:4
+ 7299 words of node memory still in use:
+   33 hlist, 8 vlist, 8 rule, 34 disc, 4 local_par, 4 math, 146 glue, 25 kern, 3
+8 penalty, 487 glyph, 205 attribute, 121 glue_spec, 205 attribute_list, 7 write,
+ 2 pdf_start_link, 2 pdf_end_link, 3 pdf_dest, 2 pdf_action, 48 pdf_colorstack n
+odes
+   avail lists: 1:5,2:1638,3:421,4:506,5:336,6:113,7:5899,8:85,9:1447,10:23,11:4
 09
- 72596 multiletter control sequences out of 65536+600000
- 94 fonts using 21876287 bytes
+ 72632 multiletter control sequences out of 65536+600000
+ 100 fonts using 22248471 bytes
  128i,23n,134p,1852b,2000s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Medium.otf></
 usr/share/fonts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/
@@ -2260,24 +2343,26 @@ dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fonts/truetype/
 liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/liberation2/L
 iberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
-m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (63 pages, 1837089 bytes).
 
-Output written on main.pdf (43 pages, 1760475 bytes).
-
-PDF statistics: 447 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 103 named destinations out of 1000 (max. 131072)
+PDF statistics: 589 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 145 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
