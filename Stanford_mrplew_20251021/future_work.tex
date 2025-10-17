@@ -81,6 +81,7 @@ Checks of this form can recover generalized versions of many standard diagnostic
 
 \def\res{\varepsilon}
 \def\w{w}
+\def\eqcheck{\overset{\textrm{check}}{=}}
 \def\wtil{\tilde{\w}}
 \def\reshat{\hat{\res}}
 
@@ -90,7 +91,7 @@ $$
 \begin{aligned}
     \y ={}& \theta^\trans \x + \res \\
     \ytil ={}& (\theta + \delta)^\trans \x + \res \\
-    \thetahat(\y) ={}& \thetahat(\ytil) + \delta
+    \thetahat(\y) \eqcheck{}& \thetahat(\ytil) + \delta
 \end{aligned}
 $$
 }{
@@ -99,7 +100,7 @@ $$
 \begin{aligned}
     \y ={}& \f(\x, \varepsilon, \theta) \\
     \ytil ={}& \f(\x, \varepsilon, \theta + \delta) \\
-    \thetahat(\y) \overset{\textrm{check}}{=}{}& \thetahat(\ytil) + \delta
+    \thetahat(\y) \eqcheck{}& \thetahat(\ytil) + \delta
 \end{aligned}
 $$
 }
@@ -111,7 +112,7 @@ $$
 \begin{aligned}
     %\y ={}& \theta^\trans \x + \res \\
     \ytil ={}& \y + \res \z \\
-    \thetahat(\y) ={}& \thetahat(\ytil)
+    \thetahat(\y) \eqcheck{}& \thetahat(\ytil)
 \end{aligned}
 $$
 }{
@@ -120,7 +121,7 @@ $$
 \begin{aligned}
     \y \sim{}& \p(\y \vert \x) \textrm{ and } \p(\x) ={} \w \\
     \wtil ={}& \w + \delta \\
-    \thetahat(\wtil) \overset{\textrm{check}}{=}{}& \thetahat(\w)
+    \thetahat(\wtil) \eqcheck{}& \thetahat(\w)
 \end{aligned}
 $$
 }
@@ -133,7 +134,7 @@ $$
     %\y ={}& \theta^\trans \x + \res \\
     \mathcal{I} :={}& \textrm{Fisher information}\\
     \Sigma :={}& \textrm{Score covariance} \\
-    \mathcal{I}^{-1} ={}& \Sigma
+    \mathcal{I}^{-1} \eqcheck{}& \Sigma
 \end{aligned}
 $$
 }{
@@ -142,8 +143,8 @@ $$
 \begin{aligned}
     \y \sim{}& \p(\y \vert \theta) \\
     \ytil \sim{}& \textrm{Importance sample using }\wtil\textrm{ where}\\
-    &\wtil ={} \frac{\p(\y \vert \thetahat + \delta)}{\p(\y \vert \thetahat)} \\
-    \thetahat(\wtil) \overset{\textrm{check}}{=}{}& \thetahat(1) + \delta
+    \wtil ={}& \frac{\p(\y \vert \thetahat + \delta)}{\p(\y \vert \thetahat)} \\
+    \thetahat(\wtil) \eqcheck{}& \thetahat(1) + \delta
 \end{aligned}
 $$
 }
