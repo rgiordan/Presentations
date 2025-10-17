@@ -47,6 +47,6 @@ plt <- boot_df %>%
   scale_fill_manual(values=method_colors) +
   xlab(NULL) +
   labs(fill="") +
-  ylab("Frequentist standard error")
+  ylab("Frequentist standard deviation")
 
 print(plt)

@@ -33,12 +33,12 @@ Does this mean anything?  \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Standard error estimation}
+\begin{frame}[c]{Frequentist variance estimation}
 
 
 Let $\varemp{\cdot}$ denote the sample variance.
 
-\begin{block}{Calibration weighting standard errors: (sketch)
+\begin{block}{Calibration weighting standard errors sketch:
     \footnote{E.g.~, \textcite{deville:1993:generalizedraking,fuller:2011:sampling}.}
 }
 
@@ -50,7 +50,9 @@ Then $\varemp{\w_i \varepsilon_i} \approx \var{}{\sqrt{\Nsur} \muhatcw}$.
 \end{block}
 \pause
 
-\begin{block}{Standard error consistency theorm: (sketch)}
+\begin{block}{MrPlew Standard error consistency theorem sketch (Our contribution):\footnote{
+This is essentially a corollary of our earlier work on the Bayesian infinitesimal jackknife.\footcite{giordano:2024:bayesij}
+}}
 
 For Bayesian hierarchical logictic regression, define
 $\surcol{\varepsilon_i = \y_i - \expect{\post}{\m(\x_i^\trans \theta)}}$.
@@ -71,11 +73,9 @@ $$
 $$
 \end{block}
 
-The use of $\surcol{\w_i^\mrp}$ is exactly analogous to the use of raking weights
-for standard error estimation.
+\textbf{The use of $\surcol{\w_i^\mrp}$ is analogous to the use of $\surcol{\w_i}$
+for frequentist variance estimation.}
 
-This builds on our earlier work on the Bayesian
-infinitesimal jackknife.\footcite{giordano:2024:bayesij}
 
 \end{frame}
 

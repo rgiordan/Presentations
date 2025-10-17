@@ -123,10 +123,10 @@ but don't observe target $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, 
     $\blacktriangleright$ Weights give interpretable diagnostics:
     %
     \begin{itemize}
-        \item Regressor balance
         \item Frequentist variability
+        \item Regressor balance
         \item Partial pooling
-        \item Extraplolation
+        %\item Extrapolation
     \end{itemize}
     %
 }{
@@ -134,7 +134,7 @@ but don't observe target $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, 
     $\blacktriangleright$ \textbf{Black box}\\
     \pause
     \vspace{1em}
-    $\leftarrow$ We open this box, providing analogues of all these diagnostics
+    $\leftarrow$ We open the box, providing analogues of all these diagnostics
 }
 
 
@@ -317,13 +317,17 @@ directly.\pause
 
 \begin{block}{Key idea (informal)}
 \centering
-If $\muhatmrp$ is approximately linear, then
+If $\muhatmrp$ is approximately linear, then\footnote{
+For MLEs, $\frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
+is given by the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019:swiss}
+}
 $\surcol{\w_i^\mrp} \approx \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.$
 \\[1em]
 \end{block}\pause
 
-For logistic regression, compute and analyze $\frac{\partial \muhatmrp}{\partial \surcol{\y_i}}$
-using the implicit function theorem.\footcite{krantz:2012:implicit,giordano:2019:swiss}
+\vspace{0.5em}
+\textbf{Note:} The derivatives $\surcol{\w_i^\mrp}$ are both \emph{implicit} and \emph{equivalent} weights.
+\vspace{1em}
 
 \end{frame}
 
