@@ -64,7 +64,7 @@ But the high level idea can be extended much more widely:
 
 \vspace{2em}
 \textbf{
-Checks of this form can recover generalized versions of many standard diagnostics for linear models.
+Checks of this form give generalized versions of many standard linear model diagnostics.
 }
 \end{frame}
 
@@ -72,12 +72,7 @@ Checks of this form can recover generalized versions of many standard diagnostic
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Future work}
 
-%     {
-% \centering
-% \textbf{Bias}\\
-%     }
 
 \def\res{\varepsilon}
 \def\w{w}
@@ -85,50 +80,87 @@ Checks of this form can recover generalized versions of many standard diagnostic
 \def\wtil{\tilde{\w}}
 \def\reshat{\hat{\res}}
 
-\splitpage{
-\textbf{Regression bias:}\\
+\def\methodrow#1#2#3{
+\begin{minipage}[t]{0.15\textwidth}
+    \centering
+    %\rotatebox{90}{#1}
+    #1
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+    \centering
+    \vspace{-2em}
+    #2
+    \pause
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+    \centering
+    \vspace{-2em}
+    #3
+    \pause
+\end{minipage}
+}
+
+
+\def\methodspacer{
+    \vspace{1em}
+    \hrule
+    \vspace{1em}
+}
+
+\begin{frame}{Future work}
+
+
+\vspace{2em}
+\methodrow{\,}{\textbf{Regression}}{\textbf{General models}}
+
+\methodrow{Consistency /\\ Unbiased}
+{
 $$
 \begin{aligned}
     \y ={}& \theta^\trans \x + \res \\
     \ytil ={}& (\theta + \delta)^\trans \x + \res \\
-    \thetahat(\y) \eqcheck{}& \thetahat(\ytil) + \delta
+    \thetahat(\ytil) \eqcheck{}& \thetahat(\y) + \delta
 \end{aligned}
 $$
 }{
-\textbf{General models ``bias check''}\\
 $$
 \begin{aligned}
     \y ={}& \f(\x, \varepsilon, \theta) \\
     \ytil ={}& \f(\x, \varepsilon, \theta + \delta) \\
-    \thetahat(\y) \eqcheck{}& \thetahat(\ytil) + \delta
+    \thetahat(\ytil) \eqcheck{}& \thetahat(\y) + \delta
 \end{aligned}
 $$
 }
 
+\methodspacer
 
-\splitpage{
-\textbf{Regression residual exogeneity:}\\
+\methodrow{Exogonous\\residuals}
+{
 $$
 \begin{aligned}
-    %\y ={}& \theta^\trans \x + \res \\
+    \y ={}& \theta^\trans \x + \res \\
     \ytil ={}& \y + \res \z \\
-    \thetahat(\y) \eqcheck{}& \thetahat(\ytil)
+    \thetahat(\ytil) \eqcheck{}& \thetahat(\y)
 \end{aligned}
 $$
 }{
-\textbf{General models ``exogeneity check'':}\\
 $$
 \begin{aligned}
     \y \sim{}& \p(\y \vert \x) \textrm{ and } \p(\x) ={} \w \\
-    \wtil ={}& \w + \delta \\
+    \wtil ={}& \w + \delta z \\
     \thetahat(\wtil) \eqcheck{}& \thetahat(\w)
 \end{aligned}
 $$
 }
 
 
-\splitpage{
-\textbf{Regression fisher information:}\\
+\methodspacer
+
+
+\methodrow{Fisher information}
+{
 $$
 \begin{aligned}
     %\y ={}& \theta^\trans \x + \res \\
@@ -138,22 +170,16 @@ $$
 \end{aligned}
 $$
 }{
-\textbf{General models ``information check'':}\\
 $$
 \begin{aligned}
     \y \sim{}& \p(\y \vert \theta) \\
-    \ytil \sim{}& \textrm{Importance sample using }\wtil\textrm{ where}\\
-    \wtil ={}& \frac{\p(\y \vert \thetahat + \delta)}{\p(\y \vert \thetahat)} \\
+    \ytil \sim{}& \textrm{Importance sample }\y\\
+    &\textrm{ using }\wtil ={} \frac{\p(\y \vert \thetahat + \delta)}{\p(\y \vert \thetahat)} \\
     \thetahat(\wtil) \eqcheck{}& \thetahat(1) + \delta
 \end{aligned}
 $$
 }
 
-% \begin{itemize}
-% \item Additive parameter shifts $\quad\leftrightarrow\quad$ Unbiasedness
-% \item Invariance to survey data weighting $\quad\leftrightarrow\quad$ Regressor + residual orthogonality
-% \item Importance sampling $\quad\leftrightarrow\quad$ Sandwich covariance $\overset{?}{=}$ Inverse Fisher information
-% \end{itemize}
 
 \vspace{2em}
 
