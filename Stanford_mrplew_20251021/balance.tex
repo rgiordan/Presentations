@@ -130,14 +130,14 @@ and want to check whether our estimator can capture this variability.
 
 Suppose I have
 $\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.\\
-Now I need to evaluate \surcol{$\muhatmrp[\ytil] - \muhatmrp$}.
+Now I need to evaluate \surcol{$\muhatmrp[\Ytil] - \muhatmrp$}.
 \pause
 
 \textbf{Problem:} \surcol{$\muhatmrp[\cdot]$} is computed with MCMC.
 %
 \begin{itemize}
 \item Each MCMC run typically takes hours, and
-\item Output is noisy, and \surcol{$\muhatmrp[\ytil] - \muhatmrp$} may be small.
+\item MCMC output is noisy, and \surcol{$\muhatmrp[\Ytil] - \muhatmrp$} may be small.
 \end{itemize}
 %
 \pause

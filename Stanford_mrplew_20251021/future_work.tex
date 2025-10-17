@@ -63,13 +63,96 @@ But the high level idea can be extended much more widely:
 \pause
 
 \vspace{2em}
-Such checks recover generlized versions of many standard diagnostics for linear models.\\[1em]
-Examples:
-\begin{itemize}
-\item Additive parameter shifts $\quad\leftrightarrow\quad$ Unbiasedness
-\item Invariance to survey data weighting $\quad\leftrightarrow\quad$ Regressor + residual orthogonality
-\item Importance sampling $\quad\leftrightarrow\quad$ Sandwich covariance $\overset{?}{=}$ Inverse Fisher information
-\end{itemize}
+\textbf{
+Checks of this form can recover generalized versions of many standard diagnostics for linear models.
+}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Future work}
+
+%     {
+% \centering
+% \textbf{Bias}\\
+%     }
+
+\def\res{\varepsilon}
+\def\w{w}
+\def\wtil{\tilde{\w}}
+\def\reshat{\hat{\res}}
+
+\splitpage{
+\textbf{Regression bias:}\\
+$$
+\begin{aligned}
+    \y ={}& \theta^\trans \x + \res \\
+    \ytil ={}& (\theta + \delta)^\trans \x + \res \\
+    \thetahat(\y) ={}& \thetahat(\ytil) + \delta
+\end{aligned}
+$$
+}{
+\textbf{General models ``bias check''}\\
+$$
+\begin{aligned}
+    \y ={}& \f(\x, \varepsilon, \theta) \\
+    \ytil ={}& \f(\x, \varepsilon, \theta + \delta) \\
+    \thetahat(\y) \overset{\textrm{check}}{=}{}& \thetahat(\ytil) + \delta
+\end{aligned}
+$$
+}
+
+
+\splitpage{
+\textbf{Regression residual exogeneity:}\\
+$$
+\begin{aligned}
+    %\y ={}& \theta^\trans \x + \res \\
+    \ytil ={}& \y + \res \z \\
+    \thetahat(\y) ={}& \thetahat(\ytil)
+\end{aligned}
+$$
+}{
+\textbf{General models ``exogeneity check'':}\\
+$$
+\begin{aligned}
+    \y \sim{}& \p(\y \vert \x) \textrm{ and } \p(\x) ={} \w \\
+    \wtil ={}& \w + \delta \\
+    \thetahat(\wtil) \overset{\textrm{check}}{=}{}& \thetahat(\w)
+\end{aligned}
+$$
+}
+
+
+\splitpage{
+\textbf{Regression fisher information:}\\
+$$
+\begin{aligned}
+    %\y ={}& \theta^\trans \x + \res \\
+    \mathcal{I} :={}& \textrm{Fisher information}\\
+    \Sigma :={}& \textrm{Score covariance} \\
+    \mathcal{I}^{-1} ={}& \Sigma
+\end{aligned}
+$$
+}{
+\textbf{General models ``information check'':}\\
+$$
+\begin{aligned}
+    \y \sim{}& \p(\y \vert \theta) \\
+    \ytil \sim{}& \textrm{Importance sample using }\wtil\textrm{ where}\\
+    &\wtil ={} \frac{\p(\y \vert \thetahat + \delta)}{\p(\y \vert \thetahat)} \\
+    \thetahat(\wtil) \overset{\textrm{check}}{=}{}& \thetahat(1) + \delta
+\end{aligned}
+$$
+}
+
+% \begin{itemize}
+% \item Additive parameter shifts $\quad\leftrightarrow\quad$ Unbiasedness
+% \item Invariance to survey data weighting $\quad\leftrightarrow\quad$ Regressor + residual orthogonality
+% \item Importance sampling $\quad\leftrightarrow\quad$ Sandwich covariance $\overset{?}{=}$ Inverse Fisher information
+% \end{itemize}
 
 \vspace{2em}
 
