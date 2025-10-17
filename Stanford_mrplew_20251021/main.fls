@@ -862,6 +862,10 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./experiments.tex
 INPUT ./experiments.tex
+INPUT ./static_figures/guinea_pig.png
+INPUT ./static_figures/guinea_pig.png
+INPUT ./static_figures/guinea_pig.png
+INPUT ./static_figures/guinea_pig.png
 INPUT ./figure/alexanderprimary-1.png
 INPUT ./figure/alexanderprimary-1.png
 INPUT ./figure/alexanderprimary-1.png
@@ -897,6 +901,9 @@ INPUT ./static_figures/sequoia.jpg
 INPUT ./static_figures/lucas.jpg
 INPUT ./static_figures/lucas.jpg
 INPUT ./static_figures/lucas.jpg
+INPUT ./static_figures/folded-hands.png
+INPUT ./static_figures/folded-hands.png
+INPUT ./static_figures/folded-hands.png
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm
