@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  19 OCT 2025 14:34
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  19 OCT 2025 15:58
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1706,7 +1706,11 @@ echnical note
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `fig:alexanderweightplot' multiply defined.
+
+)
 \openout1 = main.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -1962,31 +1966,58 @@ Overfull \vbox (10.92494pt too high) detected at line 42
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./static_figures/ryan_giorda
 no.jpeg><./static_figures/alice.jpg><./static_figures/erin_hartman.jpg><./static
 _figures/jared_murray.png><./static_figures/avi_feller.jpg>]
-(./methods_intro.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+(./introduction.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
 
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<static_figures/survey_man.jpg, id=27, 597.23125pt x 803.0pt>
+Overfull \vbox (16.35776pt too high) detected at line 62
+ []
+
+[2
+
+]
+Overfull \vbox (16.35776pt too high) detected at line 62
+ []
+
+[3
+
+]
+Overfull \vbox (16.35776pt too high) detected at line 62
+ []
+
+[4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
+
+]) (./methods_intro.tex
+<static_figures/survey_man.jpg, id=76, 597.23125pt x 803.0pt>
 File: static_figures/survey_man.jpg Graphic file (type jpg)
 <use static_figures/survey_man.jpg>
 Package luatex.def Info: static_figures/survey_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 92.94957pt.
-<static_figures/voting_man.jpg, id=28, 606.265pt x 803.0pt>
+<static_figures/voting_man.jpg, id=77, 606.265pt x 803.0pt>
 File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [2
+ [9
 
 <./static_figures/survey_man.jpg><./static_figures/voting_man.jpg>]
-<static_figures/guinea_pig.png, id=38, 395.4775pt x 507.8975pt>
+<static_figures/guinea_pig.png, id=86, 395.4775pt x 507.8975pt>
 File: static_figures/guinea_pig.png Graphic file (type png)
 <use static_figures/guinea_pig.png>
 Package luatex.def Info: static_figures/guinea_pig.png  used on input line 50.
@@ -1995,7 +2026,7 @@ File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [3
+ [10
 
 <./static_figures/guinea_pig.png>]
 File: static_figures/guinea_pig.png Graphic file (type png)
@@ -2006,123 +2037,273 @@ File: static_figures/voting_man.jpg Graphic file (type jpg)
 <use static_figures/voting_man.jpg>
 Package luatex.def Info: static_figures/voting_man.jpg  used on input line 50.
 (luatex.def)             Requested size: 69.13974pt x 91.565pt.
- [4
+ [11
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 142
  []
 
-[5
+[12
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 142
  []
 
-[6
+[13
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 142
  []
 
-[7
+[14
 
 ]
 Overfull \vbox (4.18842pt too high) detected at line 142
- []
-
-[8
-
-]
-Overfull \vbox (4.18842pt too high) detected at line 142
- []
-
-[9
-
-]
-Overfull \vbox (4.18842pt too high) detected at line 142
- []
-
-[10
-
-] [11
-
-] [12
-
-] [13
-
-] [14
-
-]
-Overfull \vbox (6.77217pt too high) detected at line 282
  []
 
 [15
 
 ]
-Overfull \vbox (6.77217pt too high) detected at line 282
+Overfull \vbox (4.18842pt too high) detected at line 142
  []
 
 [16
 
 ]
-Overfull \vbox (6.77217pt too high) detected at line 282
+Overfull \vbox (4.18842pt too high) detected at line 142
  []
 
 [17
 
-]
-Overfull \vbox (6.77217pt too high) detected at line 282
- []
+] [18
 
-[18
+] [19
 
-]
-Overfull \vbox (6.77217pt too high) detected at line 282
- []
+] [20
 
-[19
+] [21
 
 ]
 Overfull \vbox (6.77217pt too high) detected at line 282
  []
 
-[20
+[22
 
 ]
 Overfull \vbox (6.77217pt too high) detected at line 282
  []
 
-[21
-
-] [22
-
-] [23
+[23
 
 ]
-
-Package biblatex Warning: Nested notes on input line 344.
+Overfull \vbox (6.77217pt too high) detected at line 282
+ []
 
 [24
 
 ]
-
-Package biblatex Warning: Nested notes on input line 344.
+Overfull \vbox (6.77217pt too high) detected at line 282
+ []
 
 [25
 
-] [26
+]
+Overfull \vbox (6.77217pt too high) detected at line 282
+ []
 
-] [27
+[26
 
-] [28
+]
+Overfull \vbox (6.77217pt too high) detected at line 282
+ []
+
+[27
+
+]
+Overfull \vbox (6.77217pt too high) detected at line 282
+ []
+
+[28
 
 ] [29
 
 ] [30
 
-]) [31
+]
 
-</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+Package biblatex Warning: Nested notes on input line 344.
+
+[31
+
+]
+
+Package biblatex Warning: Nested notes on input line 344.
+
+[32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+]
+File: static_figures/guinea_pig.png Graphic file (type png)
+<use static_figures/guinea_pig.png>
+Package luatex.def Info: static_figures/guinea_pig.png  used on input line 512.
+
+(luatex.def)             Requested size: 62.28802pt x 80.0pt.
+
+Overfull \hbox (16.19643pt too wide) in paragraph at lines 512--512
+[][] 
+ []
+
+[38
+
+]
+File: static_figures/guinea_pig.png Graphic file (type png)
+<use static_figures/guinea_pig.png>
+Package luatex.def Info: static_figures/guinea_pig.png  used on input line 512.
+
+(luatex.def)             Requested size: 62.28802pt x 80.0pt.
+
+Overfull \hbox (16.19643pt too wide) in paragraph at lines 512--512
+[][] 
+ []
+
+[39
+
+]) (./bootstrap.tex
+<figure/alexanderweightplot-1.png, id=313, 469.755pt x 281.853pt>
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 3
+0.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+Overfull \vbox (11.14459pt too high) detected at line 30
+ []
+
+[40
+
+<./figure/alexanderweightplot-1.png>]
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 3
+0.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+Overfull \vbox (11.14459pt too high) detected at line 30
+ []
+
+[41
+
+] [42
+
+]
+
+Package biblatex Warning: Nested notes on input line 85.
+
+[43
+
+]
+<figure/bootplot-1.png, id=347, 469.755pt x 281.853pt>
+File: figure/bootplot-1.png Graphic file (type png)
+<use figure/bootplot-1.png>
+Package luatex.def Info: figure/bootplot-1.png  used on input line 105.
+(luatex.def)             Requested size: 240.91228pt x 144.55165pt.
+ [44
+
+<./figure/bootplot-1.png>]
+File: figure/bootplot-1.png Graphic file (type png)
+<use figure/bootplot-1.png>
+Package luatex.def Info: figure/bootplot-1.png  used on input line 105.
+(luatex.def)             Requested size: 240.91228pt x 144.55165pt.
+ [45
+
+]
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 1
+33.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'fig:alexan
+derweightplot'
+
+Overfull \vbox (28.4875pt too high) detected at line 133
+ []
+
+[46
+
+]
+File: figure/alexanderweightplot-1.png Graphic file (type png)
+<use figure/alexanderweightplot-1.png>
+Package luatex.def Info: figure/alexanderweightplot-1.png  used on input line 1
+33.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+Overfull \vbox (28.4875pt too high) detected at line 133
+ []
+
+[47
+
+]) [48
+
+] [49
+
+</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [50
+
+
+] (./extra_slides.tex
+Overfull \hbox (0.69998pt too wide) detected at line 33
+ []
+ []
+
+[51
+
+]
+<figure/laxprimary-1.png, id=414, 469.755pt x 281.853pt>
+File: figure/laxprimary-1.png Graphic file (type png)
+<use figure/laxprimary-1.png>
+Package luatex.def Info: figure/laxprimary-1.png  used on input line 45.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [52
+
+<./figure/laxprimary-1.png>]
+<figure/laxinteraction-1.png, id=421, 469.755pt x 281.853pt>
+File: figure/laxinteraction-1.png Graphic file (type png)
+<use figure/laxinteraction-1.png>
+Package luatex.def Info: figure/laxinteraction-1.png  used on input line 50.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+ [53
+
+<./figure/laxinteraction-1.png>]
+<figure/laxcontpred-1.png, id=428, 469.755pt x 281.853pt>
+File: figure/laxcontpred-1.png Graphic file (type png)
+<use figure/laxcontpred-1.png>
+Package luatex.def Info: figure/laxcontpred-1.png  used on input line 57.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+[54
+
+<./figure/laxcontpred-1.png>]
+<figure/laxdiscretepred-1.png, id=435, 469.755pt x 281.853pt>
+File: figure/laxdiscretepred-1.png Graphic file (type png)
+<use figure/laxdiscretepred-1.png>
+Package luatex.def Info: figure/laxdiscretepred-1.png  used on input line 69.
+(luatex.def)             Requested size: 301.14392pt x 180.69064pt.
+
+Overfull \vbox (2.59439pt too high) detected at line 69
+ []
+
+[55
+
+<./figure/laxdiscretepred-1.png>])
 \tf@nav=\write7
 
 \openout7 = main.nav
@@ -2133,6 +2314,9 @@ Package biblatex Warning: Nested notes on input line 344.
 
 \openout9 = main.snm
  (./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2141,21 +2325,21 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54032 strings out of 477805
+ 54561 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 16963 words of node memory still in use:
-   64 hlist, 8 vlist, 15 rule, 119 disc, 11 local_par, 2 math, 352 glue, 36 kern
-, 91 penalty, 1264 glyph, 436 attribute, 121 glue_spec, 436 attribute_list, 14 w
-rite, 1 pdf_start_link, 1 pdf_end_link, 10 pdf_dest, 1 pdf_action, 118 pdf_color
-stack nodes
-   avail lists: 1:5,2:1139,3:218,4:424,5:267,6:95,7:3359,8:79,9:1406,10:21,11:23
-8
- 72415 multiletter control sequences out of 65536+600000
- 86 fonts using 21028247 bytes
+ 4543 words of node memory still in use:
+   64 hlist, 14 vlist, 12 rule, 18 disc, 5 local_par, 10 math, 95 glue, 15 kern,
+ 25 penalty, 178 glyph, 139 attribute, 121 glue_spec, 139 attribute_list, 6 writ
+e, 1 pdf_dest, 28 pdf_colorstack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nod
+es
+   avail lists: 1:5,2:1756,3:545,4:551,5:291,6:107,7:7426,8:92,9:1406,10:26,11:4
+41
+ 72673 multiletter control sequences out of 65536+600000
+ 88 fonts using 21861607 bytes
  128i,23n,134p,1852b,2229s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/fonts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/shar
-e/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/texlive/texm
-f-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fonts/truetyp
+</usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
+xlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fon
+ts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/share/fonts/truetyp
 e/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/liberation2
 /LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
@@ -2171,10 +2355,10 @@ sfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on main.pdf (31 pages, 1077766 bytes).
+Output written on main.pdf (55 pages, 1712060 bytes).
 
-PDF statistics: 339 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 73 named destinations out of 1000 (max. 131072)
+PDF statistics: 525 PDF objects out of 1000 (max. 8388607)
+ 408 compressed objects within 5 object streams
+ 137 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

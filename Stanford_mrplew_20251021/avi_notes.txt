@@ -142,18 +142,6 @@ same?
 
 
 
-Slide 15:
-
-- I’d drop the word “calibration” from “You can check covariate balance for any
-…” —> since this holds for any weighting estimator
-
-q Not sure you need that last reveal on raking. Can mention it much more
-briefly? e.g., “Reminder: Raking weights directly target covariate balance”
-
-
-
-
-
 Slide 16:
 
 - I think you can move the “formal” version of this to an appendix

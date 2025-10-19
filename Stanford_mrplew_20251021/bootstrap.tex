@@ -20,11 +20,13 @@ Does this mean anything?  \\
 \textbf{Does the spread relate to frequentist variance?}
 }
 
-\splitpagenoline{
-    \AlexanderWeightPlot{}
-}{
-    \LaxWeightPlot{}
-}
+\AlexanderWeightPlot{}
+
+%     \splitpagenoline{
+%     \AlexanderWeightPlot{}
+% }{
+%     \LaxWeightPlot{}
+% }
 \end{frame}
 
 
@@ -33,7 +35,7 @@ Does this mean anything?  \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Frequentist variance estimation}
+\begin{frame}[t]{Frequentist variance estimation}
 
 
 Let $\varemp{\cdot}$ denote the sample variance.
@@ -42,13 +44,16 @@ Let $\varemp{\cdot}$ denote the sample variance.
     \footnote{E.g.~, \textcite{deville:1993:generalizedraking,fuller:2011:sampling}.}
 }
 
-Suppose we have $\muhatcw = \surcol{\meansur \w_i \y_i}$ and a
-consistent residual estimate $\surcol{\varepsilon_i}$.
+If we have $\muhatcw = \surcol{\meansur \w_i \y_i}$ and a
+consistent residual estimate $\surcol{\varepsilon_i}$, then
 
-Then $\varemp{\w_i \varepsilon_i} \approx \var{}{\sqrt{\Nsur} \muhatcw}$.
+$$
+\varemp{\surcol{\w_i \varepsilon_i}} \approx \var{}{\sqrt{\Nsur} \muhatcw}.
+$$
 
 \end{block}
-\pause
+
+\only<2->{
 
 \begin{block}{MrPlew Standard error consistency theorem sketch (Our contribution):\footnote{
 This is essentially a corollary of our earlier work on the Bayesian infinitesimal jackknife.\footcite{giordano:2024:bayesij}
@@ -65,8 +70,8 @@ $$
 \begin{aligned}
     \sqrt{\Nsur}\left(\muhatmrp - \tarcol{\mu_\infty} \right) \rightarrow{}&
     \mathcal{N}\left(0, V\right)
-    \quad\textrm{ and }\quad
-    \varemp{ \w_i^\mrp \varepsilon_i}
+    \quad\textrm{ and }\\
+    \varemp{ \surcol{\w_i^\mrp \varepsilon_i}}
 %\surcol{\meansur (\psi_i - \overline{\psi})^2}
     \rightarrow{} V.
 \end{aligned}
@@ -75,7 +80,7 @@ $$
 
 \textbf{The use of $\surcol{\w_i^\mrp}$ is analogous to the use of $\surcol{\w_i}$
 for frequentist variance estimation.}
-
+}
 
 \end{frame}
 
@@ -85,7 +90,18 @@ for frequentist variance estimation.}
 
 
 \begin{frame}[t]{Standard error estimation}
-\BootstrapPlot{}
+
+\wholeslidefig{\BootstrapPlot{}}
+
+%\vspace{-3em}
+% It's last minute so put in the manual estimate of the time
+\pause
+$$
+\begin{aligned}
+    \textrm{Running fifty MCMC parametric bootstraps:}\quad & \approx 79 \textrm{ hours} \\
+    \textrm{Computing approximate weights:}\quad &\AlexMrPawTimeSecs \textrm{ seconds}\\
+\end{aligned}
+$$
 \end{frame}
 
 
@@ -100,16 +116,18 @@ for frequentist variance estimation.}
 Does this mean anything?\\
 % \textbf{Yes: }We can meaningful sum these weights against regressors.\\[1em]
 % What else might it mean?\\
-Yes: The ``spread'' relates to frequentist variance just as in calibration weighting.\\[1em]
+Yes: The ``spread'' relates to frequentist variance just as in weighting estimators.\\[1em]
 
 \onslide<2->
 {
 \textbf{What about covariate balance?}
 }
 
-\splitpagenoline{
-    \AlexanderWeightPlot{}
-}{
-    \LaxWeightPlot{}
-}
+\AlexanderWeightPlot{}
+
+% \splitpagenoline{
+%     \AlexanderWeightPlot{}
+% }{
+%     \LaxWeightPlot{}
+% }
 \end{frame}

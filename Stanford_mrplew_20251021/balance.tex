@@ -287,5 +287,40 @@ for Bernstein--von Mises theorem--like results
 \footcite{giordano:2024:bayesij,kasprzak:2025:laplace}.
 }
 
-
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Covariate balance for primary effects}
+\AlexanderImbalancePrimary{}
+\end{frame}
+
+
+\begin{frame}{Covariate balance for interaction effects}
+\AlexanderImbalanceInteraction{}
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Predictions}
+    \AlexanderPredictionFigOne{}
+\end{frame}
+
+
+\begin{frame}[t]{Predictions and actual MCMC results}
+    \AlexanderPredictionFigTwo{}
+    \vspace{-3em}
+    $$
+    \begin{aligned}
+        \textrm{Running ten MCMC refits:}\quad & \AlexRefitTimeHours \textrm{ hours} &
+        \textrm{Computing approximate weights:}\quad &\AlexMrPawTimeSecs \textrm{ seconds}\\
+    \end{aligned}
+    $$
+\end{frame}
+

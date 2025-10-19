@@ -467,16 +467,48 @@ The derivatives $\surcol{\w_i^\mrp}$ \emph{again} have two potentially distinct 
 
 
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{The weights can look very different!}
 
-%     \centering
-%     Does this mean anything?  Are the differences important?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%     \AlexanderWeightPlot{}
-% \end{frame}
+\begin{frame}{Real Data: Marital Name Change Survey}
+Analysis of changing names after marriage\footnote{
+    Based on \textcite{alexander:2019:namechange}.}.
+
+\begin{itemize}
+    %
+    \item \textbf{Target population:} ACS survey of US population 2017--2022 \footcite{ipumsusa}
+    \item \textbf{Survey population:} Marital Name Change Survey (from Twitter)\footnote{
+        \textcite{cohen:2019:namechange}
+    }
+    \item \textbf{Respose:}  Did the female partner keep their name after marriage?
+    \item For regressors, use bins of age, education, state, and decade married.
+    %
+\end{itemize}
+
+\begin{minipage}{0.8\textwidth}
+$$
+\begin{aligned}
+    \textrm{Survey observations:} &&  \surcol{\Nsur} ={}& \AlexNSur  \\
+    \textrm{Target observations (rows):} &&  \tarcol{\Ntar} ={}& \AlexNTar \\
+    \\
+    \textrm{Uncorrected survey mean:} && \surcol{\meansur \y_i} ={}& \AlexSurmean \\
+    \textrm{Raking:} && \muhatcw ={}& \AlexRaking \\
+    \textrm{MrP:} && \muhatmrp ={}& \AlexMrp
+        \quad(\textrm{Post. sd} = \AlexMrpSD)\\
+\end{aligned}
+$$
+\end{minipage}
+%
+\hfill
+%
+\begin{minipage}{0.15\textwidth} % Doesn't work with footnotes
+\pause
+\includegraphics[height=10em]{static_figures/guinea_pig.png}
+\end{minipage}
+%
+\end{frame}
 
 

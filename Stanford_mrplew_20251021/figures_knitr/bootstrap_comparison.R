@@ -28,7 +28,8 @@ method_colors <- c(
 
 boot_df <-
   boot_env$mrp_df %>%
-  filter(analysis %in% c("alexander", "laxphilips")) %>%
+  #filter(analysis %in% c("alexander", "laxphilips")) %>%
+  filter(analysis %in% c("alexander")) %>%
   left_join(data.frame(
     analysis=c("alexander", "laxphilips"),
     raking_sd=c(
