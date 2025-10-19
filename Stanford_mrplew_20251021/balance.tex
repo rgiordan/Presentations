@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{What are we weighting for?\footnote{Pun attributable to \textcite{solon:2015:weightingfor}}}
+\begin{frame}[t]{Introduction to covariate balance: What are we weighting for?\footnote{Pun borrowed from \textcite{solon:2015:weightingfor}}}
 $$
 \tarcol{\textrm{Target average response} =
 \meantar \y_j} \approx \surcol{\meansur \w_i \y_i
@@ -12,29 +12,32 @@ $$
 We can't check this, because we don't observe $\tarcol{\y_j}$.  \pause But we can check whether:
 $$
 % \textrm{Target average regeressor} =
-    \tarcol{\meantar \x_j} = \surcol{\meansur \w_i \x_i}
+    \tarcol{\meantar \x_j} \eqcheck \surcol{\meansur \w_i \x_i}
 % =    \textrm{Weighted survey average regressor}
 $$
 
-Such weights satisfy ``covariate balance'' for $\x$.
+Weights that pass this check satisfy ``covariate balance'' for $\x$.
+
+\pause
+
+\vspace{1em}
 
 You can check covariate balance for any weighting estimator,
 and any function $\f(\x)$.
 
-\pause
-Even more, covariate balance is the criterion for a popular class of calibration
-weight estimators.
+Recall that \textbf{raking calibration weights} aim to exactly balance some set of regressors.
 
-\begin{block}{Raking calibration weights}
-% Select calibration weights to satisfy
-``Raking'' selects weights that
-\vspace{-0.5em}
-\begin{itemize}
-    \item Are as ``close as possible'' to some reference weights
-    \item Under the constraint that they balance some selected regressors.
-\end{itemize}
+
+% \begin{block}{Raking calibration weights}
+% % Select calibration weights to satisfy
+% ``Raking'' selects weights that
+% \vspace{-0.5em}
+% \begin{itemize}
+%     \item Are as ``close as possible'' to some reference weights
+%     \item Under the constraint that they balance some selected regressors.
+% \end{itemize}
 %
-\end{block}
+% \end{block}
 
 
 
