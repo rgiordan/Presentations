@@ -157,6 +157,38 @@
       \field{title}{Did Non-Voters Really Flip {Republican} in 2024? {The} Evidence Says No.}
       \field{year}{2025}
     \endentry
+    \entry{brms}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
+           family={Bürkner},
+           familyi={B\bibinitperiod},
+           given={Paul-Christian},
+           giveni={P\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{fullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{bibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorbibnamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authornamehash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \strng{authorfullhash}{ec69dfaa36b99b02d1d9a3733eae1d23}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{number}{1}
+      \field{title}{{brms}: An {R} Package for {Bayesian} Multilevel Models Using {Stan}}
+      \field{volume}{80}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 28}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.18637/jss.v080.i01
+      \endverb
+    \endentry
     \entry{chattopadhyay:2023:implied}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=e504975fe938395866c8f6413737cabe}{%
@@ -738,6 +770,31 @@
       \field{year}{2009}
       \field{pages}{367\bibrangedash 386}
       \range{pages}{20}
+    \endentry
+    \entry{lumley:2025:survey}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0b3393ef36c345aac202941c72b2ca41}{%
+           family={Lumley},
+           familyi={L\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0b3393ef36c345aac202941c72b2ca41}
+      \strng{fullhash}{0b3393ef36c345aac202941c72b2ca41}
+      \strng{bibnamehash}{0b3393ef36c345aac202941c72b2ca41}
+      \strng{authorbibnamehash}{0b3393ef36c345aac202941c72b2ca41}
+      \strng{authornamehash}{0b3393ef36c345aac202941c72b2ca41}
+      \strng{authorfullhash}{0b3393ef36c345aac202941c72b2ca41}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{R package version 4.4}
+      \field{title}{{survey}: Analysis of complex survey samples}
+      \field{year}{2024}
     \endentry
     \entry{ipumsusa}{misc}{}
       \name{author}{9}{}{%

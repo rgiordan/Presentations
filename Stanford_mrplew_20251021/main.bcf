@@ -2382,11 +2382,15 @@
     <bcf:citekey order="18">efron:2015:frequentist</bcf:citekey>
     <bcf:citekey order="18">giordano:2018:covariances</bcf:citekey>
     <bcf:citekey order="19">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="20">ipumsusa</bcf:citekey>
-    <bcf:citekey order="21">cohen:2019:namechange</bcf:citekey>
+    <bcf:citekey order="19">cohen:2019:namechange</bcf:citekey>
+    <bcf:citekey order="19">ipumsusa</bcf:citekey>
+    <bcf:citekey order="20">brms</bcf:citekey>
+    <bcf:citekey order="21">lumley:2025:survey</bcf:citekey>
     <bcf:citekey order="22">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="23">ipumsusa</bcf:citekey>
-    <bcf:citekey order="24">cohen:2019:namechange</bcf:citekey>
+    <bcf:citekey order="22">cohen:2019:namechange</bcf:citekey>
+    <bcf:citekey order="22">ipumsusa</bcf:citekey>
+    <bcf:citekey order="23">brms</bcf:citekey>
+    <bcf:citekey order="24">lumley:2025:survey</bcf:citekey>
     <bcf:citekey order="25">deville:1993:generalizedraking</bcf:citekey>
     <bcf:citekey order="25">fuller:2011:sampling</bcf:citekey>
     <bcf:citekey order="26">deville:1993:generalizedraking</bcf:citekey>
@@ -2420,15 +2424,17 @@
     <bcf:citekey order="48">efron:2015:frequentist</bcf:citekey>
     <bcf:citekey order="49">giordano:2018:covariances</bcf:citekey>
     <bcf:citekey order="50">alexander:2019:namechange</bcf:citekey>
-    <bcf:citekey order="51">ipumsusa</bcf:citekey>
-    <bcf:citekey order="52">cohen:2019:namechange</bcf:citekey>
-    <bcf:citekey order="53">deville:1993:generalizedraking</bcf:citekey>
-    <bcf:citekey order="54">fuller:2011:sampling</bcf:citekey>
-    <bcf:citekey order="55">giordano:2024:bayesij</bcf:citekey>
-    <bcf:citekey order="56">solon:2015:weightingfor</bcf:citekey>
-    <bcf:citekey order="57">kasprzak:2025:laplace</bcf:citekey>
-    <bcf:citekey order="58">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="59">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="51">cohen:2019:namechange</bcf:citekey>
+    <bcf:citekey order="52">ipumsusa</bcf:citekey>
+    <bcf:citekey order="53">brms</bcf:citekey>
+    <bcf:citekey order="54">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="55">deville:1993:generalizedraking</bcf:citekey>
+    <bcf:citekey order="56">fuller:2011:sampling</bcf:citekey>
+    <bcf:citekey order="57">giordano:2024:bayesij</bcf:citekey>
+    <bcf:citekey order="58">solon:2015:weightingfor</bcf:citekey>
+    <bcf:citekey order="59">kasprzak:2025:laplace</bcf:citekey>
+    <bcf:citekey order="60">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="61">lax:2009:gay</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

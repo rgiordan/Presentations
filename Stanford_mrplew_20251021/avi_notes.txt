@@ -144,9 +144,9 @@ same?
 
 Slide 16:
 
-- I think you can move the “formal” version of this to an appendix
+X I think you can move the “formal” version of this to an appendix
 
-- Still don’t love the BISC name? 
+X Still don’t love the BISC name?
 
 - I really liked your linear regression example from Friday. Could you explain
 why that makes sense here and connect it to classical Omitted Variable Bias
@@ -155,29 +155,6 @@ formula?
 
 
 
-
-Slide 17:
-
-- This slide turned out well, I think. 
-
-
-
-
-
-Slide 18:
-
-- I think this is an appendix slide. If anyone asks you about it, you can
-discuss at length. But I don’t think this adds to your overall story.
-
-
-
-
-
-Slide 19:
-
-- I also think this slide turned out well. (It’s of course not where I’d
-personally focus. But I think it’s important to flex this for the
-Berkeley/Stanford colloquium)
 
 
 
