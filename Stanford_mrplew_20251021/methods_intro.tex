@@ -67,7 +67,7 @@ but don't observe target $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, 
 
 \splitpagenoline{
     \centering
-    \textbf{Calibration weighting (CW)}
+    \textbf{Calibration weighting}
 }{
     \centering
     %\textbf{Multilevel regression and poststratification (MrP)}
@@ -134,7 +134,8 @@ but don't observe target $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, 
     $\blacktriangleright$ \textbf{Black box}\\
     \pause
     \vspace{1em}
-    $\leftarrow$ We open the box, providing analogues of all these diagnostics
+    $\leftarrow$ Today, we'll open the box and provide
+        MrP analogues of all these diagnostics
 }
 
 
@@ -147,8 +148,8 @@ but don't observe target $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, 
 
 \begin{frame}{Prior work: Equivalent weights for linear models}
 
-\textcite{gelman:2007:struggles} observes that MrP is a CW estimator when
-one uses linear regression to form $\yhat$:
+\textcite{gelman:2007:struggles} observes that MrP is a weighting estimator when
+$\yhat$ is computed with OLS:
 $$
 \begin{aligned}
 % \yhat_j ={}& \x_j^\trans \thetahat  =
@@ -168,7 +169,7 @@ $$
 \end{aligned}
 $$
 
-Most existing literature on comparing CW and MrP focus on such linear models.
+Most existing literature on comparing weighting and MrP focus on such linear models.
 \footnote{
     For example,
     \textcite{gelman:2007:struggles,benmichael:2021:multilevel,chattopadhyay:2023:implied}.}
@@ -285,7 +286,7 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Nearly equivalent weights for (some) logistic regression MrP}
+\begin{frame}[t]{Approximately equivalent weights for (some) logistic regression MrP}
 
 \def\alphav{\mathbf{\alpha}}
 %
@@ -310,11 +311,13 @@ $$
     }  + \textrm{Small error}
 \end{aligned}
 $$
-\pause
+\only<2>{
 But what are the weights?
 We don't observe $\frac{\ptar(\x)}{\psur(\x)}$, so can't estimate $\alpha$
-directly.\pause
+directly.
+}
 
+\only<3->{
 \begin{block}{Key idea (informal)}
 \centering
 If $\muhatmrp$ is approximately linear, then\footnote{
@@ -323,11 +326,20 @@ is given by the implicit function theorem.\footcite{krantz:2012:implicit,giordan
 }
 $\surcol{\w_i^\mrp} \approx \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.$
 \\[1em]
-\end{block}\pause
+\end{block}
+}
 
+\onslide<4->{
 \vspace{0.5em}
-\textbf{Note:} The derivatives $\surcol{\w_i^\mrp}$ are both \emph{implicit} and \emph{equivalent} weights.
+\textbf{Note:} The derivatives $\surcol{\w_i^\mrp}$ now have two potentially distinct interpretations:
+%
+\begin{itemize}
+\item \textbf{Equivalent weights: }A characterization of $\Ysur \mapsto \muhatmrp$ for diagnostics
+\item \textbf{Implicit weights: }An estimate of $\ptar(\x) / \psur(\x)$
+\end{itemize}
+%
 \vspace{1em}
+}
 
 \end{frame}
 
@@ -337,7 +349,7 @@ $\surcol{\w_i^\mrp} \approx \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Locally equivalent weights for hierarchical logistic regression MrP}
+\begin{frame}[t]{Local weights for nonlinear hierarchical logistic regression MrP}
 %
 \vspace{-1em}
 \begin{itemize}
@@ -375,20 +387,33 @@ $$
 }
 
 \onslide<3->{
-\textbf{What do these weights mean?}  There are now two distinct possibilities:
+
+\vspace{0.5em}
+The derivatives $\surcol{\w_i^\mrp}$ \emph{again} have two potentially distinct interpretations:
 %
 \begin{itemize}
-    \item ``Locally implicit weights''
-    %
-\begin{itemize}
-\item An estimator of $\ptar(\x) / \psur(\x)$ (via Riesz regression applied to the Gateaux derivative)
+\item \textbf{Locally equivalent weights: }A characterization of $\Ysur \mapsto \muhatmrp$ for diagnostics
+\item \textbf{Locally implicit weights: }An estimate of $\ptar(\x) / \psur(\x)$
 \end{itemize}
 %
-    \item ``Locally equivalent weights'' \onslide<4->{ $\leftarrow$ \textbf{The present talk will focus on this interpretation}}
-\begin{itemize}
-\item A characterization of $\Ysur \mapsto \muhatmrp$ for diagnostics and interpretation
-\end{itemize}
-\end{itemize}
+\onslide<4->{
+    \textbf{This talk will focus only on locally equivalent weights.  }(Implicit weights is ongoing work!)
+}
+%
+% \textbf{Note:} The derivatives $\surcol{\w_i^\mrp}$ \emph{again} have two potentially distinct interpretations:
+% %
+% \begin{itemize}
+% %
+% \item ``Locally equivalent weights'' \onslide<4->{ $\leftarrow$ \textbf{The present talk will focus on this interpretation}}
+% \begin{itemize}
+% \item A \emph{local} characterization of $\Ysur \mapsto \muhatmrp$ for diagnostics and interpretation
+% \end{itemize}
+% \item ``Implicit weights''
+% %
+% \begin{itemize}
+% \item An estimator of $\ptar(\x) / \psur(\x)$ (via Riesz regression applied to the Gateaux derivative)
+% \end{itemize}
+% \end{itemize}
 %
 }
 

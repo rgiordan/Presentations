@@ -1,0 +1,242 @@
+
+After slide 1:
+
+— Maybe add in an aspirational slide right this about all the areas where these
+sorts of diagnostics will be useful? Emphasize that we’re starting with the
+simplest non-trivial case, but that this is an exciting research area. e.g., you
+can mention that this is simply “outcome modeling for obs studies” in causal
+inference? Or mention you’re doing this for lme4 (etc)
+
+
+
+— Also, maybe consider a “sneak peek” slide here for the technical results,
+showing that (eg) this isn’t as simple as just-do-taylor-expansion-and-pray ?
+
+
+
+Slide 5:
+
+— One terminology point: to me, “calibration weighting” is a specific thing? In
+general, I think you could just replace “CW” by “weighting” (otherwise, there’s
+the implicit point that these weights are calibrating *something*, and I don’t
+think you’ve shown that yet?)
+
+
+
+— I might regret this. But consider adding subscript “S” to \hat{\theta}, to
+emphasize that this is from the source distribution
+
+
+
+— This is silly, but maybe write out theta-hat? Just make very explicit that
+this is linear in Y
+
+— Maybe also cite the surveys literature on “regression weights”? 
+
+
+
+
+
+Slide 7:
+
+— This is still my favorite slide.
+
+— That last step still sorta feels like magic. Does it get too crowded if you
+make that last jump a bit more explicit?
+
+
+
+
+
+
+
+Slide 8:
+
+— Why the change in title from “approximate” to “nearly”? 
+
+
+
+— We talked about this a bit on Friday. But I don’t think that the terms
+“implicit” and “equivalent” have obvious meanings on their own. I think you’ll
+need to define what you mean by both here.  —> Ah, I see you do this on the next
+slide! So maybe hold off on that here?
+
+
+
+
+
+Slide 9:
+
+— OK, now the title is “local”? A lot of jumping here…?
+
+— There’s a lot going on for this slide — it’s very busy! I wonder if a quick
+picture might illustrate the key point about the lack of global linearity?
+
+— (Could move local implicit vs. local equivalent weights to another slide?
+Honestly, I don’t think this distinction is particularly central to the pitch —
+important to be explicit, but don’t want to get bogged down on this, I don’t
+think.)
+
+
+
+
+
+Slide 10:
+
+— This is a good slide!
+
+
+
+
+
+Slide 11:
+
+— Super minor, but it’s pretty hard to see the axis labels. Maybe worth writing
+out (eg) “Calibration weights” in big letters.
+
+
+
+—> I know I’m a broken record on this. But I think this would be an excellent
+point in the talk to emphasize that simply inspecting the weights for MRP wasn’t
+previously feasible. And maybe zoom in a bit to do some basic descriptives/EDA
+on the weights.
+
+
+
+— Also, as a presentation matter, maybe remind the audience here of all the
+things you’re gonna look at for the weights (e.g., variance, balance, etc)
+
+
+
+
+
+[FWIW, I’d move current slide 20 and/or slide 25 waaaay up here. Make this all
+concrete with an application first.]
+
+
+
+
+
+
+
+Slide 12:
+
+- typo on “logistic”
+
+- Maybe want the words Bernstein-von Mises here somewhere? I think for the
+non-Bayesians in the room, you need to emphasize that this is a pretty big deal!
+
+
+
+
+
+Slide 13:
+
+- I’m not totally sure what my takeaway should be from this figure. Is the
+parametric bootstrap good? Bad? Is it just to show that these are broadly the
+same?
+
+
+
+
+
+
+
+Slide 15:
+
+- I’d drop the word “calibration” from “You can check covariate balance for any
+…” —> since this holds for any weighting estimator
+
+q Not sure you need that last reveal on raking. Can mention it much more
+briefly? e.g., “Reminder: Raking weights directly target covariate balance”
+
+
+
+
+
+Slide 16:
+
+- I think you can move the “formal” version of this to an appendix
+
+- Still don’t love the BISC name? 
+
+- I really liked your linear regression example from Friday. Could you explain
+why that makes sense here and connect it to classical Omitted Variable Bias
+formula?
+
+
+
+
+
+Slide 17:
+
+- This slide turned out well, I think. 
+
+
+
+
+
+Slide 18:
+
+- I think this is an appendix slide. If anyone asks you about it, you can
+discuss at length. But I don’t think this adds to your overall story.
+
+
+
+
+
+Slide 19:
+
+- I also think this slide turned out well. (It’s of course not where I’d
+personally focus. But I think it’s important to flex this for the
+Berkeley/Stanford colloquium)
+
+
+
+
+
+Slide 20: 
+
+- Maybe include the lme4-style or Stan-style specification here as a reference?
+
+
+
+Slide 21:
+
+- Are all these primary effects really included as regressors in the MRP fit?
+That’s wild!
+
+- Can we (at least informally) tie these large imbalances to the level of
+regularization on these coefs? e.g., the coef on BA / >BA must be pretty heavily
+regularized if the imbalances are this large?
+
+
+
+
+
+Slide 24:
+
+- I think this is great, and I don’t think you need Slide 18 to tell this story?
+
+
+
+
+
+
+
+Slide 25:
+
+- So I think this example is way more than enough for the current talk. But… I’m
+not really sure what to make of it? It’s obviously a classic example, but the
+uncorrected mean is 0.333 and the target is… basically the same? Does this
+change if you’re trying to look at state-specific estimates instead of national
+estimates? (Maybe @Erin has thoughts?)
+
+
+
+Slide 29:
+
+- This is great too!
+
+
+
