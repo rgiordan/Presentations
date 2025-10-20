@@ -52,22 +52,10 @@ make that last jump a bit more explicit?
 
 Slide 8:
 
-— Why the change in title from “approximate” to “nearly”? 
-
-
-
-— We talked about this a bit on Friday. But I don’t think that the terms
-“implicit” and “equivalent” have obvious meanings on their own. I think you’ll
-need to define what you mean by both here.  —> Ah, I see you do this on the next
-slide! So maybe hold off on that here?
-
-
 
 
 
 Slide 9:
-
-— OK, now the title is “local”? A lot of jumping here…?
 
 — There’s a lot going on for this slide — it’s very busy! I wonder if a quick
 picture might illustrate the key point about the lack of global linearity?
@@ -162,46 +150,7 @@ formula?
 
 Slide 20: 
 
-- Maybe include the lme4-style or Stan-style specification here as a reference?
-
-
-
-Slide 21:
-
-- Are all these primary effects really included as regressors in the MRP fit?
-That’s wild!
-
-- Can we (at least informally) tie these large imbalances to the level of
-regularization on these coefs? e.g., the coef on BA / >BA must be pretty heavily
-regularized if the imbalances are this large?
-
-
-
-
-
-Slide 24:
-
-- I think this is great, and I don’t think you need Slide 18 to tell this story?
-
-
-
-
-
-
-
-Slide 25:
-
-- So I think this example is way more than enough for the current talk. But… I’m
-not really sure what to make of it? It’s obviously a classic example, but the
-uncorrected mean is 0.333 and the target is… basically the same? Does this
-change if you’re trying to look at state-specific estimates instead of national
-estimates? (Maybe @Erin has thoughts?)
-
-
-
-Slide 29:
-
-- This is great too!
+X Maybe include the lme4-style or Stan-style specification here as a reference?
 
 
 

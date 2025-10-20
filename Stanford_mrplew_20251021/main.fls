@@ -719,6 +719,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/pgfplotsthe
 INPUT /usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/pgfplotsthemetol.sty
 INPUT ./main.aux
 INPUT ./main.aux
+INPUT ./experiment_intro.aux
+INPUT ./experiment_intro.aux
 OUTPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
@@ -823,6 +825,14 @@ INPUT ./static_figures/guinea_pig.png
 INPUT ./static_figures/guinea_pig.png
 INPUT ./static_figures/voting_man.jpg
 INPUT ./static_figures/voting_man.jpg
+INPUT ./figure/simplot-1.png
+INPUT ./figure/simplot-1.png
+INPUT ./figure/simplot-1.png
+INPUT ./figure/simplot-1.png
+INPUT ./figure/simplot-1.png
+OUTPUT experiment_intro.aux
+INPUT ./experiment_intro.tex
+INPUT ./experiment_intro.tex
 INPUT ./static_figures/guinea_pig.png
 INPUT ./static_figures/guinea_pig.png
 INPUT ./static_figures/guinea_pig.png
@@ -901,6 +911,8 @@ OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm
 INPUT ./main.aux
+INPUT ./experiment_intro.aux
+INPUT ./experiment_intro.aux
 INPUT ./main.out
 INPUT ./main.run.xml
 OUTPUT main.run.xml

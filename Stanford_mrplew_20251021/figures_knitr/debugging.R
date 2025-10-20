@@ -1,6 +1,6 @@
 # Use this script to debug and edit the knit graphs without re-compiling in latex.
 
-base_dir <- "/home/rgiordan/Documents/git_repos/Presentations/Austin_mrplew_20250926"
+base_dir <- "/home/rgiordan/Documents/git_repos/Presentations/Stanford_mrplew_20251021"
 
 knitr_debug <- FALSE # Set to true to see error output
 cache <- FALSE
@@ -10,39 +10,4 @@ source(file.path(base_dir, "figures_knitr/initialize.R"))
 source(file.path(paper_directory, "figures_knitr/load_data.R"))
 source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 
-source("figures_knitr/predictions_plot.R")
-source("figures_knitr/imbalance_plots.R")
-
-source(file.path(paper_directory, "figures_knitr/weights_plot.R"), print.eval=TRUE)
-
-#lax_weight_scatterplot
-
-# source("figures_knitr/predictions_plot.R")
-# alex_refit_plots$base_plot
-# alex_refit_plots$plt1
-
-
-# ggplot(boot_env$samples_df) +
-#   geom_point(aes(x=diff, y=diff_pred)) +
-#   facet_grid(~ analysis) +
-#   geom_abline()
-
-#source(file.path(paper_directory, "figures_knitr/bootstrap_comparison.R"), print.eval=TRUE)
-
-
-# source("figures_knitr/imbalance_plots.R")
-# alex_imb_plots$interaction_plt
-# lax_imb_plots$interaction_plt
-# 
-# 
-# lax_imb_plots$primary_plt
-
-
-analysis_list <- alex
-
-lax_imb_plots$primary_plt
-alex_imb_plots$primary_plt
-
-
-alex_imb_plots$interaction_plt
-lax_imb_plots$interaction_plt
+source(file.path(paper_directory, "figures_knitr/simulation_fig.R"))

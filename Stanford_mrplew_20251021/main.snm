@@ -1,3 +1,4 @@
+\beamer@slide {fig:simplot}{20}
 \beamer@slide {fig:alexanderweightplot}{40}
 \beamer@slide {fig:bootplot}{44}
 \beamer@slide {fig:alexanderweightplot}{46}
@@ -5,7 +6,7 @@
 \beamer@slide {fig:alexanderinteraction}{64}
 \beamer@slide {fig:alexandercontpred}{65}
 \beamer@slide {fig:alexanderdiscretepred}{66}
-\beamer@slide {fig:laxprimary}{89}
-\beamer@slide {fig:laxinteraction}{90}
-\beamer@slide {fig:laxcontpred}{91}
-\beamer@slide {fig:laxdiscretepred}{92}
+\beamer@slide {fig:laxprimary}{80}
+\beamer@slide {fig:laxinteraction}{81}
+\beamer@slide {fig:laxcontpred}{82}
+\beamer@slide {fig:laxdiscretepred}{83}

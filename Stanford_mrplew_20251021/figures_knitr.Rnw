@@ -165,3 +165,17 @@ figcap <- paste0("Frequentist standard deviation estimates")
 source("figures_knitr/bootstrap_comparison.R", print.eval=TRUE)
 @
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand{\SimulationPlot}{
+<<>>=
+figcap <- paste0("Simulated path through the space of responses")
+@
+<<simplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/simulation_fig.R", print.eval=TRUE)
+@
+}

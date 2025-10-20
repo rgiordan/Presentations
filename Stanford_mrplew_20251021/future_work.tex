@@ -63,126 +63,16 @@ But the high level idea can be extended much more widely:
 \pause
 
 \vspace{2em}
-\textbf{
-Checks of this form give generalized versions of many standard linear model diagnostics.
-}
+Checks of this form give generalized versions of many standard linear model diagnostics:
+%
+\begin{itemize}
+\item Local ``Fisher consistency'' checks
+\item Checks for exogeneity of residuals (even without residuals)
+\item Checks for whether inverse Fisher information $\eqcheck$ score covariance (even without scores)
+\end{itemize}
+%
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\def\res{\varepsilon}
-\def\w{w}
-\def\wtil{\tilde{\w}}
-\def\reshat{\hat{\res}}
-
-\def\methodrow#1#2#3{
-\begin{minipage}[t]{0.15\textwidth}
-    \centering
-    %\rotatebox{90}{#1}
-    #1
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.4\textwidth}
-    \centering
-    \vspace{-2em}
-    #2
-    \pause
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.4\textwidth}
-    \centering
-    \vspace{-2em}
-    #3
-    \pause
-\end{minipage}
-}
-
-
-\def\methodspacer{
-    \vspace{1em}
-    \hrule
-    \vspace{1em}
-}
-
-\begin{frame}{Some generalized diagnostics}
-
-\vspace{2em}
-\methodrow{\,}{\textbf{Regression}}{\textbf{General models}}
-
-\methodrow{Consistency /\\ Unbiased}
-{
-$$
-\begin{aligned}
-    \y ={}& \theta^\trans \x + \res \\
-    \ytil ={}& (\theta + \delta)^\trans \x + \res \\
-    \thetahat(\ytil) \eqcheck{}& \thetahat(\y) + \delta
-\end{aligned}
-$$
-}{
-$$
-\begin{aligned}
-    \y ={}& \f(\x, \varepsilon, \theta) \\
-    \ytil ={}& \f(\x, \varepsilon, \theta + \delta) \\
-    \thetahat(\ytil) \eqcheck{}& \thetahat(\y) + \delta
-\end{aligned}
-$$
-}
-
-\methodspacer
-
-\methodrow{Exogonous\\residuals}
-{
-$$
-\begin{aligned}
-    \y ={}& \theta^\trans \x + \res \\
-    \ytil ={}& \y + \res \z \\
-    \thetahat(\ytil) \eqcheck{}& \thetahat(\y)
-\end{aligned}
-$$
-}{
-$$
-\begin{aligned}
-    \y \sim{}& \p(\y \vert \x) \textrm{ and } \p(\x) ={} \w \\
-    \wtil ={}& \w + \delta z \\
-    \thetahat(\wtil) \eqcheck{}& \thetahat(\w)
-\end{aligned}
-$$
-}
-
-
-\methodspacer
-
-
-\methodrow{Fisher information}
-{
-$$
-\begin{aligned}
-    %\y ={}& \theta^\trans \x + \res \\
-    \mathcal{I} :={}& \textrm{Fisher information}\\
-    \Sigma :={}& \textrm{Score covariance} \\
-    \mathcal{I}^{-1} \eqcheck{}& \Sigma
-\end{aligned}
-$$
-}{
-$$
-\begin{aligned}
-    \y \sim{}& \p(\y \vert \theta) \\
-    \ytil \sim{}& \textrm{Importance sample }\y\\
-    &\textrm{ using }\wtil ={} \frac{\p(\y \vert \thetahat + \delta)}{\p(\y \vert \thetahat)} \\
-    \thetahat(\wtil) \eqcheck{}& \thetahat(1) + \delta
-\end{aligned}
-$$
-}
-
-
-\vspace{2em}
-
-
-\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,7 +89,7 @@ Student contributions and ongoing work:
 \item \textbf{Vladimir Palmin} is working on extending MrPlew to \texttt{lme4}
 \item \textbf{Sequoia Andrade} is working on generalizing to other local sensitivity checks
 \item \textbf{Lucas Schwengber} is working on novel flow--based techniques for local sensitivity
-\item \textbf{(Currently recruiting!)} Doubly--robust Bayesian MrP (the ``implicit weights'' path)
+\item \textbf{(Currently recruiting!)} Doubly--robust Bayesian MrP (the ``implicit weights'' version)
 \end{itemize}
 
 

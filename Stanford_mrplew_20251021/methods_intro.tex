@@ -156,7 +156,7 @@ $$
 %     \x_j^\trans \left(\sumsur \x_i \x_i^\trans \right)^{-1} \sumsur \x_i \y_i \Rightarrow \\
 \muhatmrp ={}& \tarcol{\meantar \yhat_j} =
 \tarcol{\meantar }
-\underbrace{\tarcol{\x_j^\trans} \surcol{\thetahat}}_{\textrm{Linear in }\surcol{\Ysur}}
+\underbrace{\tarcol{\x_j^\trans} \surcol{\betahat}}_{\textrm{Linear in }\surcol{\Ysur}}
 % =
 % \surcol{\sumsur}
 % \underbrace{
@@ -208,21 +208,26 @@ would seem to be completely incompatible methods.''
     \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
 \end{itemize}
 
-\pause
-The map from $\surcol{\Ysur} \mapsto \m(\x_j^\trans \thetahat)$ is
-\emph{inherently nonlinear}.
+The map from $\surcol{\Ysur} \mapsto \tarcol{\m(\x_j^\trans \thetahat)}$ is
+\emph{typically nonlinear}.
 
-But \emph{some sample averages}
-of $\m(\x_j^\trans \thetahat)$ can be approximately linear.
-% \pause
-% %
-% \begin{block}{Example}
-% Suppose
-%     $\frac{\tarcol{\ptar}(\x)}{\surcol{\psur}(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
-%     \textbf{Then MrP is a \emph{approximately} a CW estimator.}
-% \end{block}
+\pause
+\textbf{Example:} $x_i \sim \mathrm{Unif}[-0.5, 0.5]$, $\y_i \iid \mathrm{Binomial}(1/2)$.
+%
+Let $\ytil_i(\delta) = \y_i + \delta \ind{x_i > 2}$.
+
+Each $\delta$ gives a different OLS fit $\betahat(\delta)$ and logistic regression coefficient $\thetahat(\delta)$.
+
+For OLS, $\delta \mapsto \betahat(\delta) x_j$ is linear.
+%
+For logistic regression $\delta \mapsto m(\thetahat(\delta) x_j)$ is non-linear.
+\wholeslidefig{
+\SimulationPlot{}
+}
 
 \end{frame}
+
+
 
 
 
@@ -239,11 +244,21 @@ of $\m(\x_j^\trans \thetahat)$ can be approximately linear.
     \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
 \end{itemize}
 
+\only<1>{
+The map from $\surcol{\Ysur} \mapsto \tarcol{\m(\x_j^\trans \thetahat)}$ is
+\emph{typically nonlinear}.
+
+But \emph{some sample averages}
+of $\m(\x_j^\trans \thetahat)$ can be approximately linear.
+}
+
+\only<2->{
 \begin{block}{Example}
 Suppose
     $\frac{\tarcol{\ptar}(\x)}{\surcol{\psur}(\x)} \approx \alphav^\trans \x$ for some $\alpha$.
     \textbf{Then MrP is a \emph{approximately} a CW estimator.}
 \end{block}
+}
 \pause
 $$
 \vspace{-1em}
@@ -464,60 +479,4 @@ The derivatives $\surcol{\w_i^\mrp}$ \emph{again} have two potentially distinct 
 % }
 
 \end{frame}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Real Data: Marital Name Change Survey}
-Analysis of changing names after marriage\footnote{
-    Based on \textcite{alexander:2019:namechange,cohen:2019:namechange,ipumsusa}.}.
-
-\begin{itemize}
-    %
-    \item \textbf{Target population:} ACS survey of US population 2017--2022
-    \item \textbf{Survey population:} Marital Name Change Survey (from Twitter)
-    \item \textbf{Respose:}  Did the female partner keep their name after marriage?
-    \item For regressors, use bins of age, education, state, and decade married.
-    %
-\end{itemize}
-
-{
-MrP computed with \texttt{brms} \parencite{brms}:\\
-\tiny
-\texttt{kept\_name $\sim$ (1 | age\_group) + (1 | educ\_group) + (1 | state\_name) + (1 | decade\_married)}
-}
-
-CW used raking on all regressor marginals ({\small{\texttt{survey::calibrate}}} from \textcite{lumley:2025:survey})
-
-\begin{minipage}{0.8\textwidth}
-$$
-\surcol{\Nsur} ={}\AlexNSur \quad\quad \tarcol{\Ntar} ={} \AlexNTar
-$$
-$$
-\begin{aligned}
-    % \textrm{Survey observations:} &&  \surcol{\Nsur} ={}& \AlexNSur  \\
-    % \textrm{Target observations (rows):} &&  \tarcol{\Ntar} ={}& \AlexNTar \\
-    \textrm{Uncorrected survey mean:} && \surcol{\meansur \y_i} ={}& \AlexSurmean \\
-    \textrm{Raking:} && \muhatcw ={}& \AlexRaking \\
-    \textrm{MrP:} && \muhatmrp ={}& \AlexMrp
-        \quad(\textrm{Post. sd} = \AlexMrpSD)\\
-\end{aligned}
-$$
-\end{minipage}
-%
-\hfill
-%
-\begin{minipage}{0.15\textwidth} % Doesn't work with footnotes
-\pause
-\includegraphics[height=10em]{static_figures/guinea_pig.png}
-\end{minipage}
-\vspace{1em}
-%
-\end{frame}
-
 
