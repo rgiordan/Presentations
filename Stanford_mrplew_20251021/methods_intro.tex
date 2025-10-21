@@ -199,7 +199,7 @@ would seem to be completely incompatible methods.''
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Approximately equivalent weights for (some) logistic regression MrP}
+\begin{frame}[t]{Logistic regression is generally nonlinear}
 
 \def\alphav{\mathbf{\alpha}}
 %
@@ -214,16 +214,26 @@ The map from $\surcol{\Ysur} \mapsto \tarcol{\m(\x_j^\trans \thetahat)}$ is
 \onslide<2->{
 \textbf{Example:} $x_i \sim \mathrm{Unif}[-0.5, 0.5]$, $\y_i \iid \mathrm{Binomial}(1/2)$.
 %
-Let $\ytil_i(\delta) = \y_i + \delta \ind{x_i > 2}$.
+Let $\ytil_i(\delta) = \y_i + \delta \ind{x_i > 0.2}$.
 
-Each $\delta$ gives a different OLS fit $\betahat(\delta)$ and logistic regression coefficient $\thetahat(\delta)$.
+The path $\surcol{\delta \mapsto \Ysur(\delta)}$ is well-defined even when $\y$ is supposed to be binary!
+}
+
+\only<3>{
+Many estimators are also well-defined for small enough $\delta$ under mild conditions.\\
+
+(E.g., OLS, logistic regression MLE, Bayesian posterior.)
+
+% $\Rightarrow$ Each $\delta$ gives a different OLS fit $\betahat(\delta)$ and logistic regression coefficient $\thetahat(\delta)$.
+
+% $\Rightarrow$ Each $\delta$ gives a different prediction $\yhat(\delta)$ at a given $\x$.
 }
 
 
-\only<3>{
-For OLS, $\delta \mapsto \betahat(\delta) x_j$ is linear.
+\only<4>{
+For OLS, $\delta \mapsto \tarcol{\betahat(\delta) x}$ is linear.
 %
-For logistic regression $\delta \mapsto m(\thetahat(\delta) x_j)$ is non-linear.
+For logistic regression $\delta \mapsto \tarcol{m(\thetahat(\delta) x_j)}$ is non-linear.
 \wholeslidefig{
 \SimulationPlot{}
 }
