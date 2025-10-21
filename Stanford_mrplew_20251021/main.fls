@@ -828,8 +828,6 @@ INPUT ./static_figures/voting_man.jpg
 INPUT ./figure/simplot-1.png
 INPUT ./figure/simplot-1.png
 INPUT ./figure/simplot-1.png
-INPUT ./figure/simplot-1.png
-INPUT ./figure/simplot-1.png
 OUTPUT experiment_intro.aux
 INPUT ./experiment_intro.tex
 INPUT ./experiment_intro.tex

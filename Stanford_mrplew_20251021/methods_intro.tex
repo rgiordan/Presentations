@@ -205,24 +205,28 @@ would seem to be completely incompatible methods.''
 %
 \begin{itemize}
     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
-    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
+%    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
 \end{itemize}
 
 The map from $\surcol{\Ysur} \mapsto \tarcol{\m(\x_j^\trans \thetahat)}$ is
 \emph{typically nonlinear}.
 
-\pause
+\onslide<2->{
 \textbf{Example:} $x_i \sim \mathrm{Unif}[-0.5, 0.5]$, $\y_i \iid \mathrm{Binomial}(1/2)$.
 %
 Let $\ytil_i(\delta) = \y_i + \delta \ind{x_i > 2}$.
 
 Each $\delta$ gives a different OLS fit $\betahat(\delta)$ and logistic regression coefficient $\thetahat(\delta)$.
+}
 
+
+\only<3>{
 For OLS, $\delta \mapsto \betahat(\delta) x_j$ is linear.
 %
 For logistic regression $\delta \mapsto m(\thetahat(\delta) x_j)$ is non-linear.
 \wholeslidefig{
 \SimulationPlot{}
+}
 }
 
 \end{frame}

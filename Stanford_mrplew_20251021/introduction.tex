@@ -62,6 +62,33 @@ MrP and calibration weighting.}
 \end{frame}
 
 
+
+
+\begin{frame}{Outline}
+%
+Weighting (linear) estimators are great --- they come with easy-to-understand diagnostics.\\[1em]
+
+This talk is about making versions of such diagnostics for \textbf{complicated
+non-linear models}.\\[2em]
+
+\pause
+
+The key idea is to convert the diagnostic into a \emph{local sensitivity analysis} of this form:
+
+%
+\begin{enumerate}
+\item Assume your initial model was accurate
+\item Select some perturbation your model should be able to capture
+\item Use local sensitivity to detect whether the change is what you expect
+\item If the change is not what you expect, either (1) or (2) was wrong
+\end{enumerate}
+%
+\pause
+\vspace{2em}
+I'll do this carefully for covariate balance and MCMC.\\[1em]
+But many other variants are possible!
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
