@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  21 OCT 2025 12:46
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  21 OCT 2025 12:51
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2401,7 +2401,7 @@ Overfull \vbox (2.59439pt too high) detected at line 277
 <figure/poolingplot-1.png, id=554, 469.755pt x 281.853pt>
 File: figure/poolingplot-1.png Graphic file (type png)
 <use figure/poolingplot-1.png>
-Package luatex.def Info: figure/poolingplot-1.png  used on input line 288.
+Package luatex.def Info: figure/poolingplot-1.png  used on input line 289.
 (luatex.def)             Requested size: 240.91228pt x 144.55165pt.
  [76
 
@@ -2597,7 +2597,7 @@ am10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (97 pages, 2605619 bytes).
+Output written on main.pdf (97 pages, 2605628 bytes).
 
 PDF statistics: 811 PDF objects out of 1000 (max. 8388607)
  633 compressed objects within 7 object streams
