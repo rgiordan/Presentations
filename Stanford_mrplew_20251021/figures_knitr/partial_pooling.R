@@ -1,11 +1,22 @@
 pp_df <- pp_env$pp_df
 
+# print(
+#     ggplot(pp_df) +
+#   geom_raster(aes(x=region_pop, y=region_sur, fill=infl_norm)) +
+#   scale_fill_gradient(low="black", high = "white", limits = c(0, 1)) +
+#   labs(fill = "Proportion of total weight") +
+#   xlab("Population region") +
+#   ylab("Survey region")
+# )
+
+
 print(
-    ggplot(pp_df) +
-  geom_raster(aes(x=region_pop, y=region_sur, fill=infl_norm)) +
-  scale_fill_gradient(low="black", high = "white", limits = c(0, 1)) +
-  labs(fill = "Proportion of total weight") +
-  xlab("Population region") +
-  ylab("Survey region")
+  ggplot(pp_df) +
+    geom_point(aes(x=region_pop, y=region_sur, size=infl_norm)) +
+    #scale_fill_gradient(low="black", high = "white", limits = c(0, 1)) +
+    labs(size = "Proportion of total weight") +
+    xlab("Population region") +
+    scale_size_area(limits = c(0, 1), max_size=20) +
+    ylab("Survey region")
 )
 
