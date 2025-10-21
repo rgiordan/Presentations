@@ -180,3 +180,14 @@ figcap <- paste0("Simulated path through the space of responses")
 source("figures_knitr/simulation_fig.R", print.eval=TRUE)
 @
 }
+
+
+
+\newcommand{\PartialPoolingPlot}{
+<<>>=
+figcap <- paste0("Region partial pooling for the Name Change dataset")
+@
+<<poolingplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+source("figures_knitr/partial_pooling.R")
+@
+}

@@ -81,3 +81,6 @@ boot_env <- LoadIntoEnvironment(file.path(data_path, "bootstrap_results.Rdata"))
 
 # Simulation data
 sim_env <- LoadIntoEnvironment(file.path(data_path, "simulation.Rdata"))
+
+# Parital pooling data
+pp_env <- LoadIntoEnvironment(file.path(data_path, "partial_pooling.Rdata"))
