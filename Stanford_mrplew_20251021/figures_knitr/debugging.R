@@ -10,4 +10,6 @@ source(file.path(base_dir, "figures_knitr/initialize.R"))
 source(file.path(paper_directory, "figures_knitr/load_data.R"))
 source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 
-source(file.path(paper_directory, "figures_knitr/simulation_fig.R"))
+source(file.path(paper_directory, "figures_knitr/weights_plot.R"))
+
+

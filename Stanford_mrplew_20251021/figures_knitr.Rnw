@@ -32,7 +32,7 @@ source("figures_knitr/define_macros.R")
 <<graph_setup, cache=cache>>=
 source("figures_knitr/predictions_plot.R")
 source("figures_knitr/imbalance_plots.R")
-source("figures_knitr/weights_plot.R")
+#source("figures_knitr/weights_plot.R")
 @
 
 
@@ -44,17 +44,18 @@ source("figures_knitr/weights_plot.R")
 
 \newcommand{\AlexanderWeightPlot}{
 <<>>=
-figcap <- paste0("Comparison between raking and MrPlew weights for the Name Change dataset")
+figcap <- paste0("Weight comparison for the Name Change dataset")
 @
 <<alexanderweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(alex_weight_scatterplot)
+#print(alex_weight_scatterplot)
+source("figures_knitr/weights_plot.R")
 @
 }
 
 
 \newcommand{\LaxWeightPlot}{
 <<>>=
-figcap <- paste0("Comparison between raking and MrPlew weights for the Gay Marriage dataset")
+figcap <- paste0("Weight comparison for the Gay Marriage dataset")
 @
 <<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
 print(lax_weight_scatterplot)
