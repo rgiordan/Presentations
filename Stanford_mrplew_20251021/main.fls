@@ -842,13 +842,6 @@ INPUT ./figure/alexanderweightplot-1.png
 INPUT ./figure/alexanderweightplot-1.png
 INPUT ./figure/alexanderweightplot-1.png
 INPUT ./figure/alexanderweightplot-1.png
-INPUT ./figure/bootplot-1.png
-INPUT ./figure/bootplot-1.png
-INPUT ./figure/bootplot-1.png
-INPUT ./figure/bootplot-1.png
-INPUT ./figure/bootplot-1.png
-INPUT ./figure/alexanderweightplot-1.png
-INPUT ./figure/alexanderweightplot-1.png
 INPUT ./figure/alexanderweightplot-1.png
 INPUT ./figure/alexanderweightplot-1.png
 INPUT ./balance.tex
@@ -898,6 +891,11 @@ INPUT ./static_figures/folded-hands.png
 INPUT ./static_figures/folded-hands.png
 INPUT ./extra_slides.tex
 INPUT ./extra_slides.tex
+INPUT ./figure/bootplot-1.png
+INPUT ./figure/bootplot-1.png
+INPUT ./figure/bootplot-1.png
+INPUT ./figure/bootplot-1.png
+INPUT ./figure/bootplot-1.png
 INPUT ./figure/laxprimary-1.png
 INPUT ./figure/laxprimary-1.png
 INPUT ./figure/laxprimary-1.png
