@@ -865,6 +865,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
+INPUT ./binary_y.tex
+INPUT ./binary_y.tex
 INPUT ./figure/alexanderprimary-1.png
 INPUT ./figure/alexanderprimary-1.png
 INPUT ./figure/alexanderprimary-1.png

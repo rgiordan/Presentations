@@ -1,0 +1,84 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Generating $\ytil$}
+%
+\begin{itemize}
+\item We have defined BISC in terms of $\ytil$ such that
+$\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$
+\item We have approximated $\muhatmrp[\Ytil] - \muhatmrp$ for $\ytil \approx \y$
+\end{itemize}
+%
+
+How to get such a $\ytil$?  \textbf{Recall $\y$ is binary!}  \onslide<2->{
+    \textbf{Two solutions, with their own pros and cons:}
+}
+\splitpagenoline{
+    \centering
+    \onslide<2->{
+        \textbf{Option 1:} Force $\ytil$ to be binary.
+    }
+    %
+    \onslide<3->{
+        \begin{enumerate}
+        \item Make \textit{some} guess $\hat{m}(\x) \approx \expect{}{\y \vert \x}$
+        %
+        \begin{itemize}
+        \item E.g.~Posterior mean, or
+        \item Shrunken posterior mean, or
+        \item Some values that gives the same posterior
+        \end{itemize}
+        %
+        \item Take \surcol{$u_i \iid \mathrm{Unif}(0,1)$}
+        \item Assume \surcol{$\y_i = \ind{u_i \le \hat{m}(\x_i)}$}
+        \item Draw \surcol{$u_n \vert \y_n$}
+        \item Set \surcol{$\ytil_i = \ind{u_i \le \hat{m}(\x_i)+ \delta \x_i}$}
+    }
+%
+\end{enumerate}
+%
+} {
+    \centering
+    \onslide<2->{
+        \textbf{Option 2:} Allow $\ytil$ to take generic values.
+    }
+    \onslide<4->{
+        \begin{enumerate}
+            \item Set \surcol{$\ytil_i = \y_i + \delta \f(\x_i)$}.
+            \item Then you're done.
+            \item There is nothing else to do.
+            \item This space deliberately left blank.
+        \end{enumerate}
+    }
+}
+%
+\\[1em]
+\onslide<5->{
+    \splitpagenoline{
+    %
+\textbf{Pros and cons:}
+    \begin{itemize}
+    \item Realistic
+    \item Have to pick $\hat{m}(\x)$
+    \item \surcol{$\Ytil - \Ysur$} not infinitesimally small
+    \item \textbf{Use for checks \& experiments}
+    \end{itemize}
+    %
+    }
+    {
+\textbf{Pros and cons:}
+    \begin{itemize}
+    \item Not realistic
+    \item No additional assumptions
+    \item \surcol{$\Ytil - \Ysur$} may be infinitesimally small
+    \item \textbf{Use for theory}
+    \end{itemize}
+    }
+}
+
+
+
+\end{frame}
+

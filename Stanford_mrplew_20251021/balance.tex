@@ -50,17 +50,7 @@ Recall that \textbf{raking calibration weights} aim to exactly balance some set 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Balance checks as local consistency}
-
-% Why would you want covariate balance?  Some commonly stated reasons:
-% %
-% \begin{itemize}
-% \item To reduce the variance of inverse propensity weights (IPW)
-% \item To check the accuracy of IPW
-% \item To exactly balance ``important regressors''
-% \end{itemize}
-%
-% Common to these motivations is the following concen:
+\begin{frame}[t]{Balance checks as local sensitivity}
 
 One reason to balance $f(\x)$ is because we think
 $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
@@ -119,14 +109,49 @@ and want to check whether our estimator can capture this variability.
 \end{block}
 }
 
-\onslide<4->{
-    When $\tarcol{\muhat}(\cdot) = \muhatcw[\cdot]$,
-    BISC recovers the standard covariate balance check. \\[1em]
-    We will study $\tarcol{\muhat}(\cdot) = \muhatmrp[\cdot]$.
-}
 
 \end{frame}
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Balance checks as local sensitivity}
+
+
+When $\tarcol{\muhat}(\cdot) = \muhatcw[\cdot]$,
+BISC recovers the standard covariate balance check.
+
+$$
+\begin{aligned}
+    \underbrace{
+        \muhatcw[\Ytil] - \muhatcw
+    }_{
+        \substack{
+            \text{Replace weighted averages} \\
+            \text{with changes in an estimator}
+        }
+    }
+    ={}&
+    \surcol{\meansur \w_i \ytil_i - \meansur \w_i \y_i}
+    \\={}&
+    \surcol{\meansur \w_i (\y_i + \f(\x_i)) - \meansur \w_i \y_i}
+    \\={}&
+    \surcol{\meansur \w_i \f(\x_i)}
+    \\\eqcheck{}&
+    \tarcol{
+    \delta \meantar f(\x_j).}
+\end{aligned}
+$$
+
+
+We will study $\tarcol{\muhat}(\cdot) = \muhatmrp[\cdot]$.
+
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,10 +191,13 @@ $$
 $$
 \end{block}
 
-
-
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{binary_y}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
