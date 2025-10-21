@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  21 OCT 2025 15:49
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.4.18)  21 OCT 2025 16:02
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2532,7 +2532,16 @@ Overfull \vbox (40.04704pt too high) detected at line 268
 
 [97
 
-])
+]
+<static_figures/w_educ_hist.png, id=722, 973.6375pt x 653.44125pt>
+File: static_figures/w_educ_hist.png Graphic file (type png)
+<use static_figures/w_educ_hist.png>
+Package luatex.def Info: static_figures/w_educ_hist.png  used on input line 279
+.
+(luatex.def)             Requested size: 245.83282pt x 164.98512pt.
+ [98
+
+<./static_figures/w_educ_hist.png>])
 \tf@nav=\write7
 
 \openout7 = main.nav
@@ -2542,7 +2551,8 @@ Overfull \vbox (40.04704pt too high) detected at line 268
 \tf@snm=\write9
 
 \openout9 = main.snm
- (./main.aux (./experiment_intro.aux))
+ (./main.aux
+(./experiment_intro.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2551,15 +2561,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 55056 strings out of 477805
+ 55072 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 15222 words of node memory still in use:
-   355 hlist, 81 vlist, 33 rule, 30 disc, 25 local_par, 88 math, 423 glue, 129 k
-ern, 46 penalty, 406 glyph, 595 attribute, 121 glue_spec, 595 attribute_list, 4 
-write, 64 pdf_literal, 16 pdf_colorstack nodes
-   avail lists: 1:5,2:950,3:494,4:583,5:280,6:97,7:7283,8:93,9:1030,10:26,11:451
-
- 72923 multiletter control sequences out of 65536+600000
+ 2472 words of node memory still in use:
+   28 hlist, 8 vlist, 6 rule, 5 disc, 2 local_par, 35 glue, 8 kern, 10 penalty, 
+48 glyph, 155 attribute, 121 glue_spec, 155 attribute_list, 4 write, 16 pdf_colo
+rstack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
+   avail lists: 1:5,2:1830,3:591,4:583,5:401,6:120,7:8117,8:93,9:1457,10:26,11:4
+76
+ 72931 multiletter control sequences out of 65536+600000
  103 fonts using 23319695 bytes
  128i,23n,134p,1852b,2229s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Medium.otf></
@@ -2583,10 +2593,10 @@ am10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (97 pages, 2623747 bytes).
+Output written on main.pdf (98 pages, 2645674 bytes).
 
-PDF statistics: 823 PDF objects out of 1000 (max. 8388607)
- 645 compressed objects within 7 object streams
- 230 named destinations out of 1000 (max. 131072)
+PDF statistics: 830 PDF objects out of 1000 (max. 8388607)
+ 649 compressed objects within 7 object streams
+ 232 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

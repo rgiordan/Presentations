@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1761079292 "main.bcf" "main.bbl" "main" 1761086975
-  "main.bcf" 1761086975 113477 a24b54f262399c3f1b3f8c8f52b89ba9 "lualatex"
+["biber main"] 1761087751 "main.bcf" "main.bbl" "main" 1761087767
+  "main.bcf" 1761087767 113477 a24b54f262399c3f1b3f8c8f52b89ba9 "lualatex"
   "references.bib" 1760916854 6991 e8d0ccead38aa266319aca6e8e84be0c ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1761086970 "main.tex" "main.pdf" "main" 1761086975
+["lualatex"] 1761087762 "main.tex" "main.pdf" "main" 1761087767
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -429,9 +429,9 @@
   "balance.tex" 1761076313 8439 5209693db07116457f4c8c26d59bf6c1 ""
   "binary_y.tex" 1761073457 2238 838d30c66292152a21b0993de513e004 ""
   "bootstrap.tex" 1761079347 1676 c153f74b15c1cd70b4995c7e56e9e933 ""
-  "experiment_intro.aux" 1761086973 4415 e8fb245c8627915d9b09d80a04994af2 "lualatex"
+  "experiment_intro.aux" 1761087765 4415 e8fb245c8627915d9b09d80a04994af2 "lualatex"
   "experiment_intro.tex" 1760991778 1779 c208474bf3bcf5307232c6c9978f8659 ""
-  "extra_slides.tex" 1761079189 6707 2b9d65ed294ce8688a7d2cecc3a19f07 ""
+  "extra_slides.tex" 1761087745 6986 ebb9a5340493930ff3fc41b1f2d63438 ""
   "figure/alexandercontpred-1.png" 1761086969 90784 e161f3b7d16031c697df7e4d9e22ffc1 ""
   "figure/alexanderdiscretepred-1.png" 1761086969 110984 27ab1ce2b4eca316bee0425aea0d08cc ""
   "figure/alexanderinteraction-1.png" 1761086969 101553 f564bc3ed89113e1ea96b5ebfde15117 ""
@@ -447,11 +447,11 @@
   "figures_knitr.tex" 1761086970 6374 04c6f934d4fba7e7640eeec087673fe3 ""
   "future_work.tex" 1761003284 3701 4c147adee352d43c29647fcf8b35f9f8 ""
   "introduction.tex" 1761073361 3862 2e08597106c9b7df1d04254263c42ad2 ""
-  "main.aux" 1761086975 18552 4dc6c18817dee2fc56cd0eab982a6a7c "lualatex"
-  "main.bbl" 1761079293 36447 97fc612056d3de68c5ef9492c36406aa "biber main"
-  "main.nav" 1761086975 3735 543541f19a7b724023001a00b013aa34 "lualatex"
-  "main.out" 1761086972 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1761086975 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
+  "main.aux" 1761087767 18681 52bcf85f3cd0c641cd09ab7f69001ce1 "lualatex"
+  "main.bbl" 1761087751 36447 97fc612056d3de68c5ef9492c36406aa "biber main"
+  "main.nav" 1761087767 3828 a282c9610e9ccf2e4157e04e1deb3f25 "lualatex"
+  "main.out" 1761087763 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1761087767 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
   "main.tex" 1760991710 2145 f3c496b16bf1de85c6812503b7fcd52d ""
   "methods_intro.tex" 1761080712 14160 d70d2f08287c6fd3003ad82a2e48e9cc ""
   "static_figures/alice.jpg" 1759869479 13170 bee87fd4d96042960ced90e03e7db734 ""
@@ -466,6 +466,7 @@
   "static_figures/survey_man.jpg" 1759869479 21961 ad68661d4066e24c0413d3db3837ca8c ""
   "static_figures/vladimir_palmin.jpg" 1759869479 222623 f4e61624dd4e033ad9f2378f2512b0c5 ""
   "static_figures/voting_man.jpg" 1759869479 22321 ba1b893f73b1be3cf5861bc7922d9d47 ""
+  "static_figures/w_educ_hist.png" 1761087654 22128 3d8ca61eb00e524f090a55432780a467 ""
   (generated)
   "experiment_intro.aux"
   "main.aux"
