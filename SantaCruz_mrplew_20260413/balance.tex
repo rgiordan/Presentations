@@ -72,6 +72,12 @@ The key idea is to convert the diagnostic into a \emph{local sensitivity analysi
 %
 \onslide<3->{
 \vspace{2em}
+\begin{block}{Key idea applied to covariate balance}
+%
+What data perturbation is covariate balance implicitly checking?
+%
+\end{block}
+
 One reason to balance $f(\x)$ is because we think
 $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
 and want to check whether our estimator can capture this variability.
@@ -88,11 +94,11 @@ variability in $\expect{}{\y \vert \x}$ that is proportional to the regressors.
 
 \begin{frame}[t]{Balance checks as local sensitivity}
 
-One reason to balance $f(\x)$ is because we think
-$\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
-and want to check whether our estimator can capture this variability.
+% One reason to balance $f(\x)$ is because we think
+% $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
+% and want to check whether our estimator can capture this variability.
 
-\only<2>{
+\only<1>{
 \begin{block}{Covariate balance as local sensitivity (informal)}
     Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
     $$
@@ -105,7 +111,7 @@ and want to check whether our estimator can capture this variability.
 \end{block}
 }
 %
-\only<3->{
+\only<2->{
 \begin{block}{Covariate balance as local sensitivity (formal)}
     Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
     $$
