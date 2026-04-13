@@ -25,19 +25,18 @@ Weights that pass this check satisfy ``covariate balance'' for $\x$.
 You can check covariate balance for any weighting estimator,
 and any function $\f(\x)$.
 
-Recall that \textbf{raking calibration weights} aim to exactly balance some set of regressors.
+\textbf{Raking calibration weights} aim to exactly balance some set of regressors.
 
 
-% \begin{block}{Raking calibration weights}
-% % Select calibration weights to satisfy
-% ``Raking'' selects weights that
-% \vspace{-0.5em}
-% \begin{itemize}
-%     \item Are as ``close as possible'' to some reference weights
-%     \item Under the constraint that they balance some selected regressors.
-% \end{itemize}
+\pause
+
+\begin{block}{Key question}
 %
-% \end{block}
+Covariate balance seems inherently linear. 
+
+How can the there be an analogue of it for non-linear estimators?
+%
+\end{block}
 
 
 \end{frame}
@@ -157,7 +156,7 @@ and want to check whether our estimator can capture this variability.
 
 
 When $\tarcol{\muhat}(\cdot) = \muhatcw[\cdot]$,
-BISC recovers the standard covariate balance check.
+we recover the standard covariate balance check.
 
 $$
 \begin{aligned}
@@ -191,7 +190,7 @@ We will study $\tarcol{\muhat}(\cdot) = \muhatmrp[\cdot]$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{BISC for MrP}
+\begin{frame}[t]{Balance checks for MrP}
 
 Suppose I have
 $\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.\\
@@ -240,7 +239,7 @@ $$
 
 \textbf{When is the local approximation accurate?}
 
-\begin{block}{BISC Theorem: (sketch)}
+\begin{block}{Theorem: (sketch)}
     Take $\surcol{\ytil_i = \y_i + \delta \f(\x_i)}$.\\[1em]
     We state conditions for Bayesian hierarchical logistic regression under which
 $$

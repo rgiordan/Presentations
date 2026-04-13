@@ -158,7 +158,7 @@ $\muhatmrp = \tarcol{\meantar \yhat_j}$
 }
 
 \onslide<2->{
-    \vspace[1em]
+\vspace{1em}
 \textbf{...sometimes coincide!}\\[1em]
 \textcite{gelman:2007:struggles} observes that MrP is a weighting estimator when
 $\yhat$ is computed with OLS:
@@ -170,14 +170,15 @@ $$
 \surcol{\meansur} \surcol{\w_i^{\ols} \y_i}
 \end{aligned}
 $$
+}
 
+\only<3>{
 Most existing literature on comparing weighting and MrP focus on such linear models.
 \footnote{
     For example,
     \textcite{gelman:2007:struggles,benmichael:2021:multilevel,chattopadhyay:2023:implied}.}
-}
 
-\only<3>{
+
 But what if you use a non--linear link function?  Or a hierarchical model?\\
 \vspace{2em}
 \hrulefill
@@ -193,10 +194,10 @@ would seem to be completely incompatible methods.''
 
 
 \only<4>{
-\textbf{Useful note.}  We know the OLS formula, so we can write out $\surcol{\w_i^{\ols}}$ by hand.
+\textbf{Useful note.}  We know the OLS formula, so we can write out $\surcol{\w_i^{\ols}}$ by hand.\\[1em]
 But we only had access to $\muhatmrp$ as a black box, we could compute
 $$
-\surcol{\w_i^{\ols}} = \frac{\partial}{\partial \surcol{\y_i}} \muhatmrp.
+\surcol{\w_i^{\ols}} = \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.
 $$
 }
 
