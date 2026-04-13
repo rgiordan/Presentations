@@ -1,0 +1,314 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Introduction to covariate balance: What are we weighting for?\footnote{Pun borrowed from \textcite{solon:2015:weightingfor}}}
+$$
+\tarcol{\textrm{Target average response} =
+\meantar \y_j} \approx \surcol{\meansur \w_i \y_i
+= \textrm{Weighted survey average response }}
+$$
+We can't check this, because we don't observe $\tarcol{\y_j}$.  \pause But we can check whether:
+$$
+% \textrm{Target average regeressor} =
+    \tarcol{\meantar \x_j} \eqcheck \surcol{\meansur \w_i \x_i}
+% =    \textrm{Weighted survey average regressor}
+$$
+
+Weights that pass this check satisfy ``covariate balance'' for $\x$.
+
+\pause
+
+\vspace{1em}
+
+You can check covariate balance for any weighting estimator,
+and any function $\f(\x)$.
+
+Recall that \textbf{raking calibration weights} aim to exactly balance some set of regressors.
+
+
+% \begin{block}{Raking calibration weights}
+% % Select calibration weights to satisfy
+% ``Raking'' selects weights that
+% \vspace{-0.5em}
+% \begin{itemize}
+%     \item Are as ``close as possible'' to some reference weights
+%     \item Under the constraint that they balance some selected regressors.
+% \end{itemize}
+%
+% \end{block}
+
+
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Balance checks as local sensitivity}
+
+One reason to balance $f(\x)$ is because we think
+$\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
+and want to check whether our estimator can capture this variability.
+\only<1>{
+    \vspace{2em}\\
+    \textbf{Key idea: }Define a data perturbation that captures this intuition.
+}
+%
+\only<2>{
+\begin{block}{Balance--informed sensitivity check (BISC) (informal)}
+    Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
+    $$
+    \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
+    $$
+    We know the change this is supposed to induce in the target population.\\[1em]
+
+    Covariate balance checks whether our estimators produce the same change.
+    %
+\end{block}
+}
+%
+\only<3->{
+\begin{block}{Balance--informed sensitivity check (BISC) (formal)}
+    Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
+    $$
+    \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
+    $$
+    We know the expected change this perturbation produces in the target distribution:
+    $$
+    \begin{aligned}
+        \tarcol{
+            \expect{}{\mu(\ytil) - \mu(\y) | \x} =
+            \meantar \left(\expect{}{\ytil | \x_p} - \expect{}{\y | \x_p}\right) =
+            \delta \meantar f(\x_j)}
+    \end{aligned}
+    $$
+    Then, check whether your estimator $\muhat(\cdot)$ produces
+    the same change for observed $\Ytil, \Ysur$:
+    $$
+    \begin{aligned}
+        \underbrace{
+            \tarcol{\muhat}(\Ytil) -
+            \tarcol{\muhat}(\Ysur)
+        }_{
+            \substack{
+                \text{Replace weighted averages} \\
+                \text{with changes in an estimator}
+            }
+        }
+        \overset{\textrm{\textbf{check}}}{\approx}
+        \tarcol{
+        \delta \meantar f(\x_j).}
+    \end{aligned}
+    $$
+\end{block}
+}
+
+
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Balance checks as local sensitivity}
+
+
+When $\tarcol{\muhat}(\cdot) = \muhatcw[\cdot]$,
+BISC recovers the standard covariate balance check.
+
+$$
+\begin{aligned}
+    \underbrace{
+        \muhatcw[\Ytil] - \muhatcw
+    }_{
+        \substack{
+            \text{Replace weighted averages} \\
+            \text{with changes in an estimator}
+        }
+    }
+    ={}&
+    \surcol{\meansur \w_i \ytil_i - \meansur \w_i \y_i}
+    \\={}&
+    \surcol{\meansur \w_i (\y_i + \f(\x_i)) - \meansur \w_i \y_i}
+    \\={}&
+    \surcol{\meansur \w_i \f(\x_i)}
+    \\\eqcheck{}&
+    \tarcol{
+    \delta \meantar f(\x_j).}
+\end{aligned}
+$$
+
+
+We will study $\tarcol{\muhat}(\cdot) = \muhatmrp[\cdot]$.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{BISC for MrP}
+
+Suppose I have
+$\ytil$ such that $\expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x)$.\\
+Now I need to evaluate \surcol{$\muhatmrp[\Ytil] - \muhatmrp$}.
+\pause
+
+\textbf{Problem:} \surcol{$\muhatmrp[\cdot]$} is computed with MCMC.
+%
+\begin{itemize}
+\item Each MCMC run typically takes hours, and
+\item MCMC output is noisy, and \surcol{$\muhatmrp[\Ytil] - \muhatmrp$} may be small.
+\end{itemize}
+%
+\pause
+\textbf{Solution:} Use our local approximation, MrPlew!
+
+\begin{block}{Balance informed sensitivity check with MrPlew:}
+For a wide set of judiciously chosen $\f(\cdot)$, check
+$$
+\begin{aligned}
+\muhatmrp[\Ytil] - \muhatmrp \approx{}&
+    \surcol{\meansur \w_i^\mrp (\ytil_i - \y_i)}
+    \\\approx{}&
+    \underbrace{
+        \delta  \surcol{\meansur \w_i^\mrp \f(\x_i)}
+            \overset{\textrm{\textbf{check}}}{\approx}
+        \delta \tarcol{\meantar f(\x_j).}
+    }_{\textrm{What you actually check}}
+\end{aligned}
+$$
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{binary_y}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Theory}
+
+\textbf{When is the local approximation accurate?}
+
+\begin{block}{BISC Theorem: (sketch)}
+    Take $\surcol{\ytil_i = \y_i + \delta \f(\x_i)}$.\\[1em]
+    We state conditions for Bayesian hierarchical logistic regression under which
+$$
+\onslide<4->{\sup_{f \in \mathcal{F}}}
+\abs{
+    \muhatmrp[\Ytil] - \muhatmrp
+    - \delta \surcol{\sumsur \w_i^\mrp \f(\x_i)}
+}
+\only<1>{ = \textrm{Small}}
+\only<2->{ = O(\delta^2)}
+\onslide<3->{\textrm{ as }N \rightarrow \infty}
+$$
+\onslide<4->{
+    ...for a very broad class of $\mathcal{F}$.
+    \footnote{$\mathcal{F}$ can be any Donsker class of measurable functions
+    with uniformly bounded
+    $\expect{}{\norm{\x} \f(\x)}_2^2 $.}
+}
+\end{block}
+
+\onslide<4->{
+    \textbf{Uniformity justifies searching for ``imbalanced'' $\f$.}
+}
+
+\onslide<5->{
+The uniformity result builds on our earlier work on uniform
+and finite--sample error bounds
+for Bernstein--von Mises theorem--like results
+\footcite{giordano:2024:bayesij,kasprzak:2025:laplace}.
+}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Covariate balance for primary effects}
+\AlexanderImbalancePrimary{}
+\end{frame}
+
+
+\begin{frame}{Covariate balance for interaction effects}
+\AlexanderImbalanceInteraction{}
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Predictions}
+    \AlexanderPredictionFigOne{}
+\end{frame}
+
+
+\begin{frame}[t]{Predictions and actual MCMC results}
+    \AlexanderPredictionFigTwo{}
+    \vspace{-3em}
+    $$
+    \begin{aligned}
+        \textrm{Running ten MCMC refits:}\quad & \AlexRefitTimeHours \textrm{ hours} &
+        \textrm{Computing approximate weights:}\quad &\AlexMrPawTimeSecs \textrm{ seconds}\\
+    \end{aligned}
+    $$
+\end{frame}
+
+
+
+\begin{frame}[t]{Partial Pooling}
+
+\centering
+By applying the same idea to subsets of the target population, \\you can measure
+\emph{MrP partial pooling}.\\[3em]
+\wholeslidefig{
+\PartialPoolingPlot{}
+}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{frame}[c]{Other uses}
+% \centering
+
+
+% Applying the idea to the observations negative weights measures
+% \emph{non-monotonicity}.
+
+% \wholeslidefig{
+% \AlexanderWeightPlot{}
+% }
+
+% % \splitpagenoline{
+% %     \AlexanderWeightPlot{}
+% % }{
+% %     \LaxWeightPlot{}
+% % }
+% \end{frame}
