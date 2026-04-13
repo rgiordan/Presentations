@@ -40,7 +40,6 @@ Recall that \textbf{raking calibration weights} aim to exactly balance some set 
 % \end{block}
 
 
-
 \end{frame}
 
 
@@ -52,16 +51,50 @@ Recall that \textbf{raking calibration weights} aim to exactly balance some set 
 
 \begin{frame}[t]{Balance checks as local sensitivity}
 
+\begin{block}{Key question}
+%
+Covariate balance seems inherently linear. 
+
+How can the there be an analogue of it for non-linear estimators?
+%
+\end{block}
+
+\onslide<2->{
+\textbf{Key idea:}\\
+The key idea is to convert the diagnostic into a \emph{local sensitivity analysis} of this form:
+
+\begin{enumerate}
+\item Assume your initial model was accurate
+\item Select some perturbation your model should be able to capture
+\item Use local sensitivity to detect whether the change is what you expect
+\item If the change is not what you expect, either (1) or (2) was wrong
+\end{enumerate}
+}
+%
+\onslide<3->{
+\vspace{2em}
 One reason to balance $f(\x)$ is because we think
 $\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
 and want to check whether our estimator can capture this variability.
-\only<1>{
-    \vspace{2em}\\
-    \textbf{Key idea: }Define a data perturbation that captures this intuition.
+
+For example, linear regression balances regressors, and captures
+variability in $\expect{}{\y \vert \x}$ that is proportional to the regressors.
 }
-%
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Balance checks as local sensitivity}
+
+One reason to balance $f(\x)$ is because we think
+$\expect{}{\y \vert \x}$ might plausibly vary $\propto f(\x)$,
+and want to check whether our estimator can capture this variability.
+
 \only<2>{
-\begin{block}{Balance--informed sensitivity check (BISC) (informal)}
+\begin{block}{Covariate balance as local sensitivity (informal)}
     Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
@@ -74,7 +107,7 @@ and want to check whether our estimator can capture this variability.
 }
 %
 \only<3->{
-\begin{block}{Balance--informed sensitivity check (BISC) (formal)}
+\begin{block}{Covariate balance as local sensitivity (formal)}
     Pick a small $\delta > 0$ and an $\f(\cdot)$.  Define a \emph{new response variable} $\ytil$ such that
     $$
     \expect{}{\ytil \vert \x} = \expect{}{\y \vert \x} + \delta f(\x).
