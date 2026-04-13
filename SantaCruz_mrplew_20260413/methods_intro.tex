@@ -146,26 +146,28 @@ but don't observe target $\tarcol{\y_j}$.  Let $\surcol{\Ysur = \{\y_1, \ldots, 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Prior work: Equivalent weights for linear models}
+\begin{frame}[t]{Prior work: Equivalent weights for linear models}
 
+\splitpagenoline{
+\centering
+Calibration weighting estimators:\\[1em]
+$\muhatcw = \surcol{\meansur w_i y_i}$.}{
+\centering
+MrP estimators:\\[1em]
+$\muhatmrp = \tarcol{\meantar \yhat_j}$
+}
+
+\onslide<2->{
+    \vspace[1em]
+\textbf{...sometimes coincide!}\\[1em]
 \textcite{gelman:2007:struggles} observes that MrP is a weighting estimator when
 $\yhat$ is computed with OLS:
 $$
 \begin{aligned}
-% \yhat_j ={}& \x_j^\trans \thetahat  =
-%     \x_j^\trans \left(\sumsur \x_i \x_i^\trans \right)^{-1} \sumsur \x_i \y_i \Rightarrow \\
 \muhatmrp ={}& \tarcol{\meantar \yhat_j} =
 \tarcol{\meantar }
-\underbrace{\tarcol{\x_j^\trans} \surcol{\betahat}}_{\textrm{Linear in }\surcol{\Ysur}}
-% =
-% \surcol{\sumsur}
-% \underbrace{
-% \left(\tarcol{\meantar \x_j^\trans}
-%     \surcol{
-%         \left(\sum_{i'=1}^{\Nsur} \x_{i'} \x_{i'}^\trans \right)^{-1} \x_i
-%     }
-% \right)
-% }_{\surcol{\w^\mrp_i}}  \surcol{\y_i} \\
+\underbrace{\tarcol{\x_j^\trans} \surcol{\betahat}}_{\textrm{Linear in }\surcol{\Ysur}} =
+\surcol{\meansur} \surcol{\w_i^{\ols} \y_i}
 \end{aligned}
 $$
 
@@ -173,8 +175,9 @@ Most existing literature on comparing weighting and MrP focus on such linear mod
 \footnote{
     For example,
     \textcite{gelman:2007:struggles,benmichael:2021:multilevel,chattopadhyay:2023:implied}.}
+}
 
-\onslide<2->{
+\only<3>{
 But what if you use a non--linear link function?  Or a hierarchical model?\\
 \vspace{2em}
 \hrulefill
@@ -185,8 +188,17 @@ even approximately equivalent weights.  Weighting and fully nonlinear models
 would seem to be completely incompatible methods.''
 --- \parencite{gelman:2007:strugglesrejoinder}
 \end{displayquote}
-}
 \vspace{1em}
+}
+
+
+\only<4>{
+\textbf{Useful note.}  We know the OLS formula, so we can write out $\surcol{\w_i^{\ols}}$ by hand.
+But we only had access to $\muhatmrp$ as a black box, we could compute
+$$
+\surcol{\w_i^{\ols}} = \frac{\partial}{\partial \surcol{\y_i}} \muhatmrp.
+$$
+}
 
 \end{frame}
 
