@@ -787,6 +787,15 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
+INPUT ./static_figures/variance.png
+INPUT ./static_figures/variance.png
+INPUT ./static_figures/variance.png
+INPUT ./static_figures/prior.png
+INPUT ./static_figures/prior.png
+INPUT ./static_figures/prior.png
+INPUT ./static_figures/influence.png
+INPUT ./static_figures/influence.png
+INPUT ./static_figures/influence.png
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm

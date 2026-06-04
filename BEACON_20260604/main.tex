@@ -68,6 +68,8 @@ $$
 \end{aligned}
 $$
 
+\pause
+
 Inversions estimate $\xhat = \expect{\post}{\x}$ at great expense!   
 
 Would also like, without a ton of extra computation:
@@ -114,6 +116,8 @@ $$
 \end{aligned}
 $$
 
+\pause
+
 Inversions estimate $\xhat = \expect{\post}{\x}$.  This is slow because of
 %
 \begin{itemize}
@@ -124,7 +128,8 @@ Inversions estimate $\xhat = \expect{\post}{\x}$.  This is slow because of
 %
 Sequoia has sped these up, and also saved to disk what she can.
 
-\textbf{Assume we can re-use these computations.}  How can we use them?
+\textbf{Assume we can re-use these computations.}  Let's get posterior
+uncertainty, prior sensitivity, and data influence.
 
 
 \end{frame}
@@ -141,9 +146,9 @@ $$
    \textrm{ where }\Vhat \textrm{ is huge }(N \times N)\\
 \end{aligned}
 $$
-Obviously we can't compute $\Vhat$. But just as obviously don't actually want all of $\Vhat$!
+\textbf{Problem:} Obviously we can't compute $\Vhat$, it is huge. 
 
-\textbf{Key idea:} We actually want to know is not $\x$, but
+\textbf{Idea:} We actually want to know is not $\x$, but
 linear combinations of $\x$.
 
 %%%%%%%%%
@@ -246,6 +251,18 @@ stuff we already computed.}
 \end{frame}   
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Variance}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{static_figures/variance.png}
+\end{center}
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -262,7 +279,7 @@ $$
    \right)^{-1} \left(\y - \m \right) 
 \end{aligned}
 $$
-
+\pause
 \textbf{Problem:}
 %
 \begin{itemize}
@@ -271,6 +288,7 @@ $$
 \end{itemize}
 %
 
+\pause
 \textbf{Idea:} Starting from a solution at the initial guess $\rho_0$, form a 
 Taylor series expansion
 $$
@@ -296,6 +314,17 @@ stuff we already computed.}
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Prior sensitivity}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{static_figures/prior.png}
+\end{center}
+
+\end{frame}
 
 
 
@@ -306,13 +335,13 @@ stuff we already computed.}
 
 \begin{frame}[t]{Data influence}
 
-\textbf{Problem: }In inversion problems, the prior is informative,
-and the model does smoothing.
-
-How is your data being used?  What patterns are possible to identify?
+\textbf{Problem: }In inversion problems, the prior is informative, and the model
+does smoothing. How is your data being used?  What patterns are possible to
+identify?
 
 \textbf{Example question: }Can I detect emissions from road pixels?
 
+\pause
 \textbf{Idea: }Let $\r$ be an $N$-vector encoding road pixels.
 $$
 \r_n = 
@@ -358,11 +387,14 @@ stuff we already computed.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
-\footnotesize
+\begin{frame}[c]{Data influence}
 
-% \printbibliography[heading=none]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{static_figures/influence.png}
+\end{center}
+
 \end{frame}
+
 
 
 
