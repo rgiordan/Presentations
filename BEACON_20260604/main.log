@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  4 JUN 2026 16:41
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  4 JUN 2026 16:42
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1996,7 +1996,7 @@ Overfull \vbox (10.70317pt too high) detected at line 383
 <static_figures/influence.png, id=110, 1416.29124pt x 614.295pt>
 File: static_figures/influence.png Graphic file (type png)
 <use static_figures/influence.png>
-Package luatex.def Info: static_figures/influence.png  used on input line 396.
+Package luatex.def Info: static_figures/influence.png  used on input line 397.
 (luatex.def)             Requested size: 245.83282pt x 106.62213pt.
  [17
 
@@ -2021,11 +2021,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of LuaTeX's memory you used:
  53427 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 2013 words of node memory still in use:
-   29 hlist, 8 vlist, 6 rule, 2 disc, 2 local_par, 38 glue, 7 kern, 13 penalty, 
-16 glyph, 94 attribute, 121 glue_spec, 94 attribute_list, 4 write, 18 pdf_colors
-tack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:5,2:903,3:146,4:152,5:196,6:35,7:3241,8:49,9:821,10:19,11:193
+ 2367 words of node memory still in use:
+   29 hlist, 8 vlist, 6 rule, 8 disc, 2 local_par, 41 glue, 10 kern, 13 penalty,
+ 52 glyph, 94 attribute, 121 glue_spec, 94 attribute_list, 4 write, 18 pdf_color
+stack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
+   avail lists: 1:5,2:903,3:146,4:152,5:193,6:35,7:3202,8:49,9:821,10:19,11:187
  71908 multiletter control sequences out of 65536+600000
  80 fonts using 18882119 bytes
  128i,18n,134p,1852b,847s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2039,7 +2039,7 @@ s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (17 pages, 937043 bytes).
+Output written on main.pdf (17 pages, 937542 bytes).
 
 PDF statistics: 164 PDF objects out of 1000 (max. 8388607)
  116 compressed objects within 2 object streams
