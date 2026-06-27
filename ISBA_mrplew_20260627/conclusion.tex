@@ -1,0 +1,77 @@
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Taken from 
+% https://tex.stackexchange.com/questions/135331/how-to-draw-a-big-red-cross-through-large-parts-of-a-text
+\newtcolorbox{cross}{blank,breakable,parbox=false,
+  overlay={\draw[red,line width=5pt] (interior.south west)--(interior.north east);
+    \draw[red,line width=5pt] (interior.north west)--(interior.south east);}}
+
+
+
+\begin{frame}{Conclusion}
+
+\only<2->{\begin{cross}}
+\textbf{By defining MrP locally equivlanent weights, we can rigorously provide
+a novel class of model checking metrics for non-linear MrP estimators.}    
+\only<2->{\end{cross}}
+
+\onslide<2->{
+\includegraphics[width=1em]{static_figures/warning.png}
+\textbf{Stop!  That is a misleading conclusion!}\\[1em]
+}
+
+\onslide<3->{
+MrP is modeling the response, not the sampling bias. \\[1em]
+
+CW-like checks are not diagnostics for the response model.  \\[1em]
+
+A correctly specified response model can do badly on CW checks, and vice-versa!  (See paper.)\\[1em]
+}
+
+
+\onslide<3->{
+This work is best thought of as \textit{model interrogation} for MrP.\\[1em]
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Conclusion (let's try that again)}
+
+\textbf{
+By defining \textit{MrP locally equivlanent weights}, we can rigorously provide
+analogues of many CW diagnostics for non-linear MrP estimators for model interrogation.\\[2em]
+}
+
+(Similar ideas can to lead to actual checks of MrP model misspecification.  Coming soon...)
+
+\onslide<2->{
+
+\hrulefill\\
+
+\textbf{R package available at }\\
+\url{https://github.com/rgiordan/mrplew} 
+
+\textbf{Preprint at }\\
+\url{https://rgiordan.github.io/assets/mrplew_paper.pdf} 
+
+}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

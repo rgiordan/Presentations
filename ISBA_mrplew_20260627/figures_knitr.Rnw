@@ -1,0 +1,422 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not edit the TeX file your work
+% will be overwritten.  Edit the RnW
+% file instead.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<setup, include=FALSE, cache=FALSE>>=
+knitr_debug <- FALSE # Set to true to see error output
+
+rerun_all <- TRUE
+
+# Set to true to cache knitr output for this analysis.
+cache <- TRUE && (!rerun_all)
+
+
+source("figures_knitr/initialize.R", echo=FALSE)
+@
+
+<<load_data>>=
+source(GetScriptLoc("load_data.R"))
+
+@
+
+\newcommand{\DefineMacros}{
+<<define_macros, results="asis">>=
+source(GetScriptLoc("define_macros.R"))
+@
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\YpathPlot}{
+<<>>=
+figcap <- paste0("Path through response space")
+SetImageSize(aspect_ratio=1.3, image_width=3.0)
+@
+<<ypath, cache=cache, fig.show='hold', fig.pos="H">>=
+print(ypath_plt)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+\newcommand{\YpathRegionPlot}{
+<<>>=
+figcap <- paste0("Path through response space")
+SetImageSize(aspect_ratio=1.3, image_width=3.0)
+@
+<<ypathregion, cache=cache, fig.show='hold', fig.pos="H">>=
+print(ypath_region_plt)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+
+
+\newcommand{\CWPathPlot}{
+<<>>=
+figcap <- paste0("Path through response space")
+SetImageSize(aspect_ratio=1.3, image_width=3.0)
+@
+<<cwpath, cache=cache, fig.show='hold', fig.pos="H">>=
+print(cw_plt)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+\newcommand{\MrPPathPlot}{
+<<>>=
+figcap <- paste0("Path through response space")
+SetImageSize(aspect_ratio=1.3, image_width=3.0)
+@
+<<mrppath, cache=cache, fig.show='hold', fig.pos="H">>=
+print(mrp_plt)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+
+\newcommand{\MrPlewPathPlot}{
+<<>>=
+figcap <- paste0("Path through response space")
+SetImageSize(aspect_ratio=1.3, image_width=3.0)
+@
+<<mrplewpath, cache=cache, fig.show='hold', fig.pos="H">>=
+print(mrplew_plt)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\IntroPlot}{
+<<>>=
+figcap <- paste0("Preview of MrP Diagnostics made possible by MrPlew for the Name Change analysis")
+@
+<<introplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+source(GetScriptLoc("intro_plot.R"), print.eval=TRUE)
+@
+}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ExperimentTable}{
+<<experimenttable, cache=cache, results='asis', echo=FALSE>>=
+source(GetScriptLoc("experiment_table.R"), print.eval=TRUE)
+@
+}
+
+
+\newcommand{\AlexanderResidualTable}{
+<<alexanderresidtable, cache=cache, results='asis', echo=FALSE>>=
+source(GetScriptLoc("resid_table.R"), print.eval=TRUE) 
+@
+}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%
+
+
+% fig.scap prevents math in the caption optional argument
+\newcommand{\VariancePlot}{
+<<>>=
+figcap <- paste0("Estimates of the frequentist standard deviation of ",
+                 "$\\sqrt{\\nsur} \\muhat[\\mrp]$ and ",
+                 "$\\sqrt{\\nsur} \\muhat[\\cal]$")
+@
+<<varplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+print(var_plt)
+@
+}
+
+
+% fig.scap prevents math in the caption optional argument
+\newcommand{\BootstrapPlot}{
+<<>>=
+figcap <- paste0("Estimates of the frequentist standard deviation of ",
+                 "$\\sqrt{\\nsur} \\muhat[\\mrp]$")
+@
+<<bootplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+print(boot_plt)
+@
+}
+
+
+% \newcommand{\WeightsPlot}{
+% <<>>=
+% figcap <- paste0("Comparison of weights")
+% @
+% <<weightsplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+% print(weight_plt)
+% @
+% }
+
+
+\newcommand{\WeightsPlotLax}{
+<<>>=
+figcap <- paste0("Comparison of weights for the Same-Sex Marriage analysis")
+SetImageSize(aspect_ratio=0.8, image_width=6.0)
+@
+<<weightsplotlax, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+print(weight_plt_lax)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+\newcommand{\WeightsBivPlotLax}{
+<<>>=
+figcap <- paste0("Comparison of weights for the Same-Sex Marriage analysis")
+SetImageSize(aspect_ratio=0.8, image_width=6.0)
+@
+<<weightsbivplotlax, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+print(weight_plt_biv_lax)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+\newcommand{\VarPlotLax}{
+<<>>=
+figcap <- paste0("Comparison of weights for the Same-Sex Marriage analysis")
+SetImageSize(aspect_ratio=0.8, image_width=6.0)
+@
+<<varplotlax, cache=cache, fig.show='hold', fig.pos="H", fig.scap="">>=
+print(lax_var_plt)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+\newcommand{\BayesVarPlotLax}{
+<<>>=
+figcap <- paste0("Comparison of weights for the Same-Sex Marriage analysis")
+SetImageSize(aspect_ratio=0.8, image_width=6.0)
+@
+<<bayesvarplotlax, cache=cache, fig.show='hold', fig.pos="H", fig.scap="">>=
+print(lax_var_bayes_plt)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% Balance plots
+
+% \newcommand{\AlexanderBalance}{
+% <<>>=
+% figcap <- paste0("Balance")
+% @
+% <<alexanderbalanceplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+% PlotBalanceForEnv(alexander, interactions=FALSE)
+% @
+% }
+
+
+% \newcommand{\AlexanderBalanceInteractions}{
+% <<>>=
+% figcap <- paste0("Balance")
+% @
+% <<alexanderbalanceplotinteractions, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+% PlotBalanceForEnv(alexander, interactions=TRUE, threshold=3)
+% @
+% }
+
+
+
+\newcommand{\LaxphilipsBalance}{
+<<>>=
+figcap <- paste0("Balance plot for Same-Sex marriage analysis")
+SetImageSize(0.7)
+@
+<<laxphilipsbalanceplot, cache=cache, fig.show='hold', fig.pos="H", fig.scap="">>=
+  PlotBalanceForEnv(laxphilips, interactions=FALSE)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+\newcommand{\LaxphilipsBalanceInteractions}{
+<<>>=
+figcap <- paste0("Balance plot for Same-Sex marriage analysis")
+SetImageSize(0.7)
+@
+<<laxphilipsbalanceplotinteractions, cache=cache, fig.show='hold', fig.pos="H", fig.scap="">>=
+  PlotBalanceForEnv(laxphilips, interactions=TRUE, threshold=10)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+% \newcommand{\StoriesBalance}{
+% <<>>=
+% figcap <- paste0("Balance")
+% @
+% <<storiesbalanceplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+% PlotBalanceForEnv(stories, interactions=FALSE)
+% @
+% }
+
+
+
+% \newcommand{\StoriesBalanceInteractions}{
+% <<>>=
+% figcap <- paste0("Balance")
+% @
+% <<storiesbalanceplotinteractions, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+% PlotBalanceForEnv(stories, interactions=TRUE, threshold=0.5)
+% @
+% }
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\newcommand{\AlexanderRefitPlot}{
+<<>>=
+figcap <- paste0("Refit")
+@
+<<alexanderrefitplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+print(alexander_refit_plot)
+@
+}
+
+
+\newcommand{\LaxRefitPlot}{
+<<>>=
+figcap <- paste0("Refit")
+@
+<<laxphilipsrefitplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+print(laxphilips_refit_plot)
+@
+}
+
+
+
+
+\newcommand{\LaxphilipsCAPoolingPlot}{
+<<>>=
+figcap <- paste0("Subgroup contribution for Same-Sex Marriage in California")
+SetImageSize(0.3)
+@
+<<laxphilipscapoolingplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+MakeUSPoolingPlot(laxphilips_CA_pooling)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+\newcommand{\LaxphilipsMOPoolingPlot}{
+<<>>=
+figcap <- paste0("Subgroup contribution for Same-Sex Marriage in Missouri")
+SetImageSize(0.3)
+@
+<<laxphilipsmopoolingplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+MakeUSPoolingPlot(laxphilips_MO_pooling)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+
+
+\newcommand{\AlexanderPoolingPlot}{
+<<>>=
+figcap <- paste0("Subgroup contribution for Name Change")
+@
+<<alexanderpoolingplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+source(GetScriptLoc("pooling_plots_alexander.R"), print.eval=TRUE)
+@
+}
+
+
+\newcommand{\PoolingComparisonPlot}{
+<<>>=
+figcap <- paste0("Different variability in per-state subgroup contribution weights for Same-Sex Marriage. Each point is a state.")
+@
+<<poolingcompplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+source(GetScriptLoc("pooling_comparison_laxphilips.R"), print.eval=TRUE)
+@
+}
+
+
+
+\newcommand{\ImportanceSamplingPlot}{
+<<>>=
+figcap <- paste0("Local behavior of the Same-Sex Marriage perturbation.  We ",
+                 "only consider $\\epsilon$ with at least 1000 effective ",
+                 "self-normalized importance samples.")
+@
+<<isplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+source(GetScriptLoc("importance_sampling_plot.R"), print.eval=TRUE)
+@
+}
+
+
+
+\newcommand{\AlexanderModelsBalancePlot}{
+<<>>=
+figcap <- paste0("The effect of adding random and fixed effects for an ",
+                 "imbalanced interaction in the Name Change analysis.  ",
+                 "Any regressor showing an imbalance in any of the models ",
+                 "above a certain threshold is shown in each plot, ",
+                 "so regressors that are not shown can be assumed to be ",
+                 "reasonably balanced.")
+SetImageSize(1.0)
+@
+<<alexandermodelsbalance, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
+source(file.path(paper_directory, "figures_knitr/balance_plots_alexander_models.R"))
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+

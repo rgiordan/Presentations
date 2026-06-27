@@ -1,0 +1,173 @@
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Same-Sex Marriage Survey Weights}
+
+\centering
+
+\begin{minipage}{0.7\textwidth}
+\WeightsPlotLax{}        
+\end{minipage}
+
+\onslide<2->{
+    What does the difference between these weights mean in terms of
+    \begin{itemize}
+        \item Frequentist sampling variance (standard errors)?
+        \item Subgroup contributions?
+        \item Covariate balance / external validity?
+    \end{itemize}
+}
+
+\end{frame}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Same-Sex Marriage frequentist variance}
+
+\centering
+
+\begin{block}{Theorem \parencite{giordano:2026:mrplew} (informal):}
+You can use the weights for frequentist variance as if MrP were linear
+if (and only if) $\y_i$ is a sufficient statistic of the model.
+\end{block}
+
+Frequentist variance of $\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\mrp]}$ and %
+$\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\cal]}$\\
+under re-sampling of survey data (keeping the target fixed)
+
+\begin{minipage}{0.5\textwidth}
+    \centering
+\VarPlotLax{}        
+\end{minipage}
+
+
+\onslide<2->{
+    TODO: put Bayes and bootstrap plots in 
+}
+
+
+\onslide<3->{
+    The posterior standard deviation of $\sqrt{\nsur} \tarcol{\muhat[\mrp]}$ was $\surcol{\LaxMrPPostSd{}}$, which is 
+    very different from the frequentist standard errors.
+}
+
+\end{frame}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Same-Sex Marriage subgroup contribution}
+
+Note that both methods use \emph{national data} to infer public opinion \emph{in California}.
+
+TODO: put in plot of CA with question mark in Texas.
+
+\begin{block}{Question:}
+    How do responses in Texas affect our estimate of public opinion in CA?
+\end{block}
+
+\begin{block}{More specific question:}
+    Suppose we \emph{increased} the responses $\y_i$ in Texas.
+
+    How would our estimate of public opinion in CA change?
+\end{block}
+
+
+
+\begin{block}{Theorem: \parencite{giordano:2026:mrplew} (informal)}
+    Take $\surcol{\ytil_i = \y_i + \delta \f(\x_i)}$.
+    We state conditions under which
+$$
+\onslide<4->{\sup_{f \in \mathcal{F}}}
+\abs{
+    \muhatmrp[\Ytil] - \muhatmrp
+    - \delta \surcol{\sumsur \w_i^\mrp \f(\x_i)}
+}
+\only<1>{ = \textrm{Small}}
+\only<2->{ = O(\delta^2)}
+\onslide<3->{\textrm{ as }N \rightarrow \infty}
+$$
+\onslide<4->{
+    ...for a very broad class of $\mathcal{F}$.
+    \footnote{$\mathcal{F}$ can be any Donsker class of measurable functions
+    with uniformly bounded
+    $\expect{}{\norm{\x} \f(\x)}_2^2 $.}
+}
+\end{block}
+
+\textbf{Uniformity helps justify searching over a large class of perturbations $\f$.}
+
+
+
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Same-Sex Marriage subgroup contribution}
+Summarize state contribution: $\sum_{n \textrm{ in state}} \w_n$
+\centering
+\begin{minipage}{0.9\textwidth}
+    \centering
+\LaxphilipsCAPoolingPlot{}
+\only<2->{
+\LaxphilipsMOPoolingPlot{}
+}
+\end{minipage}
+
+\end{frame}
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{frame}{Same-Sex Marriage covariate balance}
+
+% \centering
+% Covariate balance / external consistency:
+% $\tarcol{\meantar \f(\x_j)} \eqcheck \surcol{\meansur \w_i \f(\x_i)}$\\[1em]
+% \pause
+% \begin{minipage}{0.9\textwidth}
+%     \centering
+% \LaxphilipsBalance{}        
+% \end{minipage}
+
+% \end{frame}

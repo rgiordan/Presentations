@@ -1,0 +1,180 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Prior work: Equivalent weights for linear models}
+
+\splitpagenoline{
+    \centering
+    Observe \surcol{$(\x_i, y_i)$ for $i = 1, \ldots, \nsur$}\\
+    Let $\surcol{\Ysur = \{\y_1, \ldots, \y_{\Nsur}\}}$.
+}{
+    \centering
+    Observe \tarcol{$\x_j$ for $j = 1, \ldots, \ntar$}.\\
+    We want $\tarcol{\mu := \meantar \y_j}$,
+    but don't observe $\tarcol{\y_j}$.  
+}
+
+
+
+\hrulefill
+
+\splitpagereveal{2-}{5-}{
+\centering
+\textbf{Calibration weighting estimators:}\\[1em]
+$\muhatcw = \surcol{\meansur w_i y_i}$.}{
+\centering
+\textbf{MrP estimators:}\\[1em]
+$\muhatmrp = \tarcol{\meantar \yhat_j}\surcol{(\Ysur)}$
+}
+
+
+\splitpagereveal{3-}{6-}{
+    \centering
+    Dependence %of \surcol{$\muhat_{\cal}$}
+    on \surcol{$\y_i$} is clear\\
+    % (\surcol{$\w_i$} typically chosen using only $\x$)
+}{
+    \centering
+    Dependence %of \surcol{$\muhat_\mrp$}
+    on \surcol{$\y_i$} can be complicated\\
+    (E.g.,~via MCMC draws from $\postsur$)
+}
+%
+\vspace{1em}
+
+\splitpagereveal{4-}{7-}{
+    \centering
+    Weights give interpretable diagnostics:
+    %
+    \begin{itemize}
+        \item Frequentist variability
+        \item Regressor balance / External consistency
+        \item Subgroup contribution
+        %\item Extrapolation
+    \end{itemize}
+    %
+}{
+    \centering
+    Black box!
+    % \\
+    % \vspace{1em}
+    % $\leftarrow$ Today, we'll open the box and provide
+    %     MrP analogues of all these diagnostics
+}
+
+
+\onslide<8->{
+\vspace{1em}
+
+When using OLS, $\tarcol{\yhat_j}\surcol{(\Ysur)}$ is linear 
+\parencite{gelman:2007:struggles,benmichael:2021:multilevel,chattopadhyay:2023:implied},
+so MrP is a CW estimator.
+
+% \footnote{
+%     Most existing literature on comparing CW and MrP focus on linear models. For example,
+%     \textcite{gelman:2007:struggles,benmichael:2021:multilevel,chattopadhyay:2023:implied}.}
+
+
+But currently, for (ubiquitous) MrP models like hierarchical 
+logistic regression, no such equivalent weights are available.\parencite{gelman:2007:strugglesrejoinder}
+}
+% \vspace{2em}
+% \hrulefill
+% \begin{displayquote}
+% ``It would also be desirable to use nonlinear methods  ...
+% but then it would seem difficult to construct
+% even approximately equivalent weights.  Weighting and fully nonlinear models
+% would seem to be completely incompatible methods.''
+% --- \parencite{gelman:2007:strugglesrejoinder}
+% \end{displayquote}
+% \vspace{1em}
+
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Linear and nonlinear models}
+
+\splitpagenoline{
+\centering
+Calibration weighting estimators:\\[1em]
+$\muhatcw = \surcol{\meansur w_i y_i}$.}{
+\centering
+MrP estimators:\\[1em]
+$\muhatmrp = \tarcol{\meantar \yhat_j}\surcol{(\Ysur)}$
+}
+
+\vspace{1em}
+
+\begin{minipage}{0.3\textwidth}
+\only<1-4>{
+\YpathPlot{}
+}
+\only<5->{
+\YpathRegionPlot{}
+}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\onslide<2->{
+\CWPathPlot{}
+}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\only<3>{
+\MrPPathPlot{}
+}
+\only<4->{
+\MrPlewPathPlot{}
+}
+\end{minipage}
+
+
+\onslide<5->{
+    The slope is a \textit{MrP locally equivalent weight}, or \textit{MrPlew}.
+}
+\only<6>{
+\\[1em]
+The weight $\surcol{\w_i^\mrp}$ measures the effect of local perturbations to $\surcol{\y_i}$ on the estimator $\tarcol{\muhat[\mrp]}$.\\[1em]
+Our main contribution is to rigorously connect this idea to CW diagnostics!
+}
+\only<7->{
+$$
+\begin{aligned}
+\surcol{\w_i^\mrp} :={} 
+    \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}} 
+        \onslide<8->{
+        =
+        \nsur  \cov{\post}{
+            \tarcol{\meantar \m(\theta^\trans \x_j)},
+            \surcol{\frac{\partial}{\partial \y_i} \log \p(\y_i \vert \x_i, \theta)}
+        }
+    }
+\end{aligned}
+$$
+}
+%
+\only<8>{
+Can estimate $\surcol{\w_i^\mrp}$ \textit{without re-running MCMC}
+\parencite{gustafson:1996:localposterior,giordano:2018:covariances}.
+
+}
+
+\end{frame}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
