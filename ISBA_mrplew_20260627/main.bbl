@@ -19,43 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{benmichael:2021:multilevel}{misc}{}
-      \name{author}{3}{}{%
-        {{hash=002098d4f02069e5bb8d356f24aa10a8}{%
-           family={B.},
-           familyi={B\bibinitperiod},
-           given={Eli},
-           giveni={E\bibinitperiod}}}%
-        {{hash=5e635e79316fdf9c435924f13052f1e6}{%
-           family={F.},
-           familyi={F\bibinitperiod},
-           given={Avi},
-           giveni={A\bibinitperiod}}}%
-        {{hash=64c4095a0ceb0077b2b5dfaedf21620e}{%
-           family={H.},
-           familyi={H\bibinitperiod},
-           given={Erin},
-           giveni={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{ea477c82ac24a80b2321849d3acef0e3}
-      \strng{fullhash}{ea477c82ac24a80b2321849d3acef0e3}
-      \strng{bibnamehash}{ea477c82ac24a80b2321849d3acef0e3}
-      \strng{authorbibnamehash}{ea477c82ac24a80b2321849d3acef0e3}
-      \strng{authornamehash}{ea477c82ac24a80b2321849d3acef0e3}
-      \strng{authorfullhash}{ea477c82ac24a80b2321849d3acef0e3}
-      \field{labelalpha}{BFH21}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{stat.ME}
-      \field{eprinttype}{arXiv}
-      \field{title}{Multilevel calibration weighting for survey data}
-      \field{year}{2021}
-      \verb{eprint}
-      \verb 2102.09052
-      \endverb
-    \endentry
     \entry{brms}{article}{}
       \name{author}{1}{}{%
         {{hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
@@ -85,41 +48,6 @@
       \verb{doi}
       \verb 10.18637/jss.v080.i01
       \endverb
-    \endentry
-    \entry{chattopadhyay:2023:implied}{article}{}
-      \name{author}{2}{}{%
-        {{hash=e504975fe938395866c8f6413737cabe}{%
-           family={Chattopadhyay},
-           familyi={C\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=af7d8838b9448f3a6a242f660d603b53}{%
-           family={Zubizarreta},
-           familyi={Z\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Oxford University Press}%
-      }
-      \strng{namehash}{2bdd722d0f02a653b320d070681fff23}
-      \strng{fullhash}{2bdd722d0f02a653b320d070681fff23}
-      \strng{bibnamehash}{2bdd722d0f02a653b320d070681fff23}
-      \strng{authorbibnamehash}{2bdd722d0f02a653b320d070681fff23}
-      \strng{authornamehash}{2bdd722d0f02a653b320d070681fff23}
-      \strng{authorfullhash}{2bdd722d0f02a653b320d070681fff23}
-      \field{labelalpha}{CZ23}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biometrika}
-      \field{number}{3}
-      \field{title}{On the implied weights of linear regression for causal inference}
-      \field{volume}{110}
-      \field{year}{2023}
-      \field{pages}{615\bibrangedash 629}
-      \range{pages}{15}
     \endentry
     \entry{giordano:2018:covariances}{article}{}
       \name{author}{3}{}{%
@@ -153,59 +81,6 @@
       \field{title}{Covariances, robustness and variational bayes}
       \field{volume}{19}
       \field{year}{2018}
-    \endentry
-    \entry{gelman:2007:strugglesrejoinder}{article}{}
-      \name{author}{1}{}{%
-        {{hash=ba82e2f52cafc6076f0de4ae6be66db0}{%
-           family={Gelman},
-           familyi={G\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{fullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{bibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{authorbibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{authornamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{authorfullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \field{extraname}{1}
-      \field{labelalpha}{Gel07}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extraalpha}{1}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Statistical Science}
-      \field{number}{2}
-      \field{title}{{Rejoinder:} {Struggles} with survey weighting and regression modelling}
-      \field{volume}{22}
-      \field{year}{2007}
-      \field{pages}{184\bibrangedash 188}
-      \range{pages}{5}
-    \endentry
-    \entry{gelman:2007:struggles}{article}{}
-      \name{author}{1}{}{%
-        {{hash=ba82e2f52cafc6076f0de4ae6be66db0}{%
-           family={Gelman},
-           familyi={G\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{fullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{bibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{authorbibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{authornamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \strng{authorfullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
-      \field{extraname}{2}
-      \field{labelalpha}{Gel07}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extraalpha}{2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Struggles with survey weighting and regression modeling}
-      \field{year}{2007}
     \endentry
     \entry{giordano:2026:mrplew}{article}{}
       \name{author}{5}{}{%

@@ -3,6 +3,42 @@
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Same-Sex Marriage frequentist variance}
+
+\centering
+
+\begin{block}{Theorem \parencite{giordano:2026:mrplew} (informal):}
+You can use the weights for frequentist variance as if MrP were linear
+if (and only if) $\y_i$ is a sufficient statistic of the model.
+\end{block}
+
+Frequentist variance of $\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\mrp]}$ and %
+$\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\cal]}$\\
+under re-sampling of survey data (keeping the target fixed)
+
+\begin{minipage}{0.9\textwidth}
+    \centering
+    \only<2>{\VarPlotLax{}}
+    \only<3>{\BootVarPlotLax{}}
+    \only<4>{\BayesVarPlotLax{}}
+\end{minipage}
+
+\only<4>{
+    Note that frequentist and posterior variance can be very different
+    in misspecified models with many random effects!
+}
+
+\end{frame}
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
