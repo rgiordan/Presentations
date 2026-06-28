@@ -20,46 +20,9 @@
     What does the difference between these weights mean in terms of
     \begin{itemize}
         \item Frequentist sampling variance (standard errors)?
-        \item Subgroup contributions?
         \item Covariate balance / external validity?
+        \item Subgroup contributions?
     \end{itemize}
-}
-
-\end{frame}
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Same-Sex Marriage frequentist variance}
-
-\centering
-
-\begin{block}{Theorem \parencite{giordano:2026:mrplew} (informal):}
-You can use the weights for frequentist variance as if MrP were linear
-if (and only if) $\y_i$ is a sufficient statistic of the model.
-\end{block}
-
-Frequentist variance of $\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\mrp]}$ and %
-$\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\cal]}$\\
-under re-sampling of survey data (keeping the target fixed)
-
-\begin{minipage}{0.9\textwidth}
-    \centering
-    \only<2>{\VarPlotLax{}}
-    \only<3>{\BootVarPlotLax{}}
-    \only<4>{\BayesVarPlotLax{}}
-\end{minipage}
-
-\only<4>{
-    Note that frequentist and posterior variance can be very different
-    in misspecified models with many random effects!
 }
 
 \end{frame}
@@ -79,13 +42,20 @@ under re-sampling of survey data (keeping the target fixed)
 
 Note that both methods use \emph{national data} to infer public opinion \emph{in California}.
 
-
 \only<2>{
 \begin{block}{Question:}
     How do responses in Texas affect our estimate of public opinion in CA?
-
-    \phantom{}
 \end{block}
+}
+
+
+%
+\only<2>{
+\centering
+\includegraphics[width=0.5\textwidth]{static_figures/ca_query.png}
+% \begin{minipage}{0.7\textwidth}
+% %\MapQuery{} % Too much whitespace, include by hand
+% \end{minipage}
 }
 
 \only<3->{
@@ -94,20 +64,28 @@ Note that both methods use \emph{national data} to infer public opinion \emph{in
 
     How would our estimate of public opinion in CA change?
 \end{block}
-
-Summarize state contribution: $\sum_{n \textrm{ in state}} \w_n$.
-
 }
+
+\only<3>{
+Take $\surcol{\ytil_i = \y_i + \delta \ind{i \textrm{ is in Texas}}}$.
 %
-\only<2-3>{
-\centering
-\begin{minipage}{0.7\textwidth}
-\MapQuery{}
-\end{minipage}
+Then $
+\muhatcw[\ytil] - \muhatcw[\y] = \delta \underbrace{
+        \surcol{\sum_{i \textrm{ in Texas}} \w_i}
+    }_{\textrm{Texas's contribution}}$.
+}
+
+\only<4->{
+Take $\surcol{\ytil_i = \y_i + \delta \ind{i \textrm{ is in Texas}}}$.
+%
+Then $
+\muhatmrp[\ytil] - \muhatmrp[\y] \approx \delta \underbrace{
+        \surcol{\sum_{i \textrm{ in Texas}} \w^\mrp_i}
+    }_{\textrm{Texas's contribution}}$.
 }
 
 
-\only<4>{
+\only<5>{
 \begin{block}{Theorem: \parencite{giordano:2026:mrplew} (informal)}
     Take $\surcol{\ytil_i = \y_i + \delta \f(\x_i)}$.
     We state conditions under which
@@ -151,17 +129,56 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Same-Sex Marriage subgroup contribution}
-Summarize state contribution: $\sum_{n \textrm{ in state}} \w_n$
+Summarize state contribution: $\sum_{i \textrm{ in state}} \w_i$
 \centering
 \begin{minipage}{0.9\textwidth}
     \centering
 \LaxphilipsCAPoolingPlot{}
-\only<2->{
+\onslide<2->{
 \LaxphilipsMOPoolingPlot{}
 }
 \end{minipage}
 
 \end{frame}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Same-Sex Marriage frequentist variance}
+
+\centering
+
+\begin{block}{Theorem \parencite{giordano:2026:mrplew} (informal):}
+You can use the weights for frequentist variance as if MrP were linear
+if (and only if) $\y_i$ is a sufficient statistic of the model.
+\end{block}
+
+Frequentist variance of $\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\mrp]}$ and %
+$\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\cal]}$\\
+under re-sampling of survey data (keeping the target fixed)
+
+\begin{minipage}{0.9\textwidth}
+    \centering
+    \only<2>{\VarPlotLax{}}
+    \only<3>{\BootVarPlotLax{}}
+    \only<4>{\BayesVarPlotLax{}}
+\end{minipage}
+
+\only<4>{
+    Note that frequentist and posterior variance can be very different
+    in misspecified models with many random effects!
+}
+
+\end{frame}
+
+
 
 
 

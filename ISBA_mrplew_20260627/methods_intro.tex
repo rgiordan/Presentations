@@ -1,18 +1,49 @@
 
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Running example: Same-Sex Marriage Survey}
+Analysis of US state-level support for same-sex marriage\footnote{
+    Based on \textcite{lax:2009:gay,kastellec:2010:laxmrp}.}.
+
+\begin{itemize}
+    %
+    \item \surcol{\textbf{Survey population:}} Five consistently-coded national polls from 2004 
+        ($\surcol{\Nsur ={}\LaxNSur}$)
+    \item \surcol{\textbf{Response:}}  $\y = 1$ encodes support for same-sex marriage, $\y = 0$ opposition
+       or no opinion.
+    \item \tarcol{\textbf{Target population:}} US Census 5\% PUMS data for CA from 2000
+    %
+\end{itemize}
+
+\pause
+We'll analyze this data with two methods: \textbf{calibration weighting} (CW) and \textbf{MrP}
+(multilevel regression and poststratification).
+%
+\end{frame}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Prior work: Equivalent weights for linear models}
+\begin{frame}[t]{Two methods}
 
 \splitpagenoline{
     \centering
-    Observe \surcol{$(\x_i, y_i)$ for $i = 1, \ldots, \nsur$}\\
+    \surcol{Survey:}
+    Observe \surcol{$(\x_i, y_i)$} for \surcol{$i = 1, \ldots, \nsur$}\\
     Let $\surcol{\Ysur = \{\y_1, \ldots, \y_{\Nsur}\}}$.
 }{
     \centering
-    Observe \tarcol{$\x_j$ for $j = 1, \ldots, \ntar$}.\\
+    \tarcol{Target:}
+    Observe \tarcol{$\x_j$} for \tarcol{$j = 1, \ldots, \ntar$}.\\
     We want $\tarcol{\mu := \meantar \y_j}$,
     but don't observe $\tarcol{\y_j}$.  
 }
@@ -24,9 +55,12 @@
 \splitpagereveal{2-}{5-}{
 \centering
 \textbf{Calibration weighting estimators:}\\[1em]
-$\muhatcw = \surcol{\meansur w_i y_i}$.}{
+Choose weights $\surcol{\w_i}$ using $\x$'s, and take\\
+$\muhatcw = \surcol{\meansur \w_i y_i}$.
+}{
 \centering
 \textbf{MrP estimators:}\\[1em]
+Estimate $\tarcol{\yhat_j}\surcol{(\Ysur)} = \expect{\post}{\m(\theta^\trans \tarcol{\x_j})}$\\
 $\muhatmrp = \tarcol{\meantar \yhat_j}\surcol{(\Ysur)}$
 }
 
@@ -95,6 +129,75 @@ logistic regression, no such equivalent weights are available.\parencite{gelman:
 
 
 \end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Running example: Same-Sex Marriage Survey}
+Analysis of US state-level support for same-sex marriage\footnote{
+    Based on \textcite{lax:2009:gay,kastellec:2010:laxmrp}.}.
+
+\begin{itemize}
+    %
+    \item \surcol{\textbf{Survey population:}} Five consistently-coded national polls from 2004 
+        ($\surcol{\Nsur ={}\LaxNSur}$)
+    \item \surcol{\textbf{Response:}}  $\y = 1$ encodes support for same-sex marriage, $\y = 0$ opposition
+       or no opinion.
+    \item \tarcol{\textbf{Target population:}} US Census 5\% PUMS data for CA from 2000
+    %
+\end{itemize}
+
+Let's analyze this data with two methods: \textbf{MrP} and \textbf{calibration weighting} (CW).
+
+\pause
+MrP computed with \texttt{brms} \parencite{brms}:\\
+{
+\tiny
+$$
+\begin{aligned}
+\y \sim{}& \texttt{logit}\Big(~\texttt{(1 | race.female) + (1 | age.cat) + 
+  (1 | edu.cat) + (1 | age.edu.cat) +}
+  \\{}&\qquad\quad\;\; \texttt{(1 | state) + (1 | region) + (1 | poll) +
+  p.relig.full + p.kerry.full}~\Big)
+\end{aligned}
+$$
+}
+%
+CW used raking on the following coarsened regressors:
+({\tiny{\texttt{survey::calibrate}}} \textcite{lumley:2025:survey}):
+{
+\tiny
+$$
+\texttt{female, edu.cat, age.cat, race.wbh, race.w.female, age.edu.low}
+$$
+}
+%
+\pause
+%
+\begin{minipage}{0.5\textwidth}
+\vspace{-1.5em}
+$$
+\begin{aligned}
+    \textrm{Raw survey mean:} && \surcol{\meansur \y_i} ={}& \LaxYbar \\
+    \textrm{Raking:} && \muhatcw ={}& \LaxRakingMu \\
+    \textrm{MrP:} && \muhatmrp ={}& \LaxMrpMu\\
+\end{aligned}
+$$
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\vspace{-1.5em}
+    \pause
+    \textbf{How are MrP and raking are using the data differently?}
+\end{minipage}
+%
+%
+\end{frame}
+
 
 
 
