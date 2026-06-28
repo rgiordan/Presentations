@@ -11,6 +11,8 @@ source(file.path(paper_directory, "figures_knitr/load_data.R"))
 source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 
 source(file.path(paper_directory, "figures_knitr/bootstrap_plot.R"))
-boot_df
-lax_var_bayes_plt
-laxphilips$save_list$mrp_sd_rootn
+boot_df %>% pull(method_name) %>% unique()
+
+lax_var_plt
+lax_var_boot_plt
+lax_var_boot_bayes_plt

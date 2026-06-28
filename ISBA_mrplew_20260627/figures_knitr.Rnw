@@ -208,7 +208,7 @@ SetFullImageSize()
 \newcommand{\VarPlotLax}{
 <<>>=
 figcap <- paste0("Comparison of weights for the Same-Sex Marriage analysis")
-SetImageSize(aspect_ratio=0.8, image_width=6.0)
+SetImageSize(aspect_ratio=0.4, image_width=6.0)
 @
 <<varplotlax, cache=cache, fig.show='hold', fig.pos="H", fig.scap="">>=
 print(lax_var_plt)
@@ -222,10 +222,25 @@ SetFullImageSize()
 \newcommand{\BayesVarPlotLax}{
 <<>>=
 figcap <- paste0("Comparison of weights for the Same-Sex Marriage analysis")
-SetImageSize(aspect_ratio=0.8, image_width=6.0)
+SetImageSize(aspect_ratio=0.4, image_width=6.0)
 @
 <<bayesvarplotlax, cache=cache, fig.show='hold', fig.pos="H", fig.scap="">>=
-print(lax_var_bayes_plt)
+print(lax_var_boot_bayes_plt)
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
+
+
+\newcommand{\BootVarPlotLax}{
+<<>>=
+figcap <- paste0("Comparison of weights for the Same-Sex Marriage analysis")
+SetImageSize(aspect_ratio=0.4, image_width=6.0)
+@
+<<bootvarplotlax, cache=cache, fig.show='hold', fig.pos="H", fig.scap="">>=
+print(lax_var_boot_plt)
 @
 <<>>=
 SetFullImageSize()

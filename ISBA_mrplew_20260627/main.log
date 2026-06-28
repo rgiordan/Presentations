@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  27 JUN 2026 16:47
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  28 JUN 2026 13:31
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2250,72 +2250,77 @@ Overfull \vbox (15.67648pt too high) detected at line 28
 
 [24
 
-]
-<figure/varplotlax-1.png, id=245, 433.62pt x 346.896pt>
-File: figure/varplotlax-1.png Graphic file (type png)
-<use figure/varplotlax-1.png>
-Package luatex.def Info: figure/varplotlax-1.png  used on input line 69.
-(luatex.def)             Requested size: 150.57169pt x 120.45734pt.
- [25
+] [25
 
-<./figure/varplotlax-1.png>]
+]
+<figure/varplotlax-1.png, id=253, 433.62pt x 173.448pt>
 File: figure/varplotlax-1.png Graphic file (type png)
 <use figure/varplotlax-1.png>
-Package luatex.def Info: figure/varplotlax-1.png  used on input line 69.
-(luatex.def)             Requested size: 150.57169pt x 120.45734pt.
+Package luatex.def Info: figure/varplotlax-1.png  used on input line 65.
+(luatex.def)             Requested size: 271.0383pt x 108.41002pt.
  [26
 
-]
-File: figure/varplotlax-1.png Graphic file (type png)
-<use figure/varplotlax-1.png>
-Package luatex.def Info: figure/varplotlax-1.png  used on input line 69.
-(luatex.def)             Requested size: 150.57169pt x 120.45734pt.
+<./figure/varplotlax-1.png>]
+<figure/bootvarplotlax-1.png, id=261, 433.62pt x 173.448pt>
+File: figure/bootvarplotlax-1.png Graphic file (type png)
+<use figure/bootvarplotlax-1.png>
+Package luatex.def Info: figure/bootvarplotlax-1.png  used on input line 65.
+(luatex.def)             Requested size: 271.0383pt x 108.41002pt.
  [27
 
-] [28
+<./figure/bootvarplotlax-1.png>]
+<figure/bayesvarplotlax-1.png, id=269, 433.62pt x 173.448pt>
+File: figure/bayesvarplotlax-1.png Graphic file (type png)
+<use figure/bayesvarplotlax-1.png>
+Package luatex.def Info: figure/bayesvarplotlax-1.png  used on input line 65.
+(luatex.def)             Requested size: 271.0383pt x 108.41002pt.
 
-] [29
+[28
+
+<./figure/bayesvarplotlax-1.png>] [29
 
 ] [30
 
 ] [31
 
+] [32
+
 ]
-<figure/laxphilipscapoolingplot-1.png, id=299, 469.755pt x 140.9265pt>
+<figure/laxphilipscapoolingplot-1.png, id=308, 469.755pt x 140.9265pt>
 File: figure/laxphilipscapoolingplot-1.png Graphic file (type png)
 <use figure/laxphilipscapoolingplot-1.png>
 Package luatex.def Info: figure/laxphilipscapoolingplot-1.png  used on input li
-ne 153.
+ne 149.
 (luatex.def)             Requested size: 271.02452pt x 81.31165pt.
- [32
+ [33
 
 <./figure/laxphilipscapoolingplot-1.png>]
 File: figure/laxphilipscapoolingplot-1.png Graphic file (type png)
 <use figure/laxphilipscapoolingplot-1.png>
 Package luatex.def Info: figure/laxphilipscapoolingplot-1.png  used on input li
-ne 153.
+ne 149.
 (luatex.def)             Requested size: 271.02452pt x 81.31165pt.
-<figure/laxphilipsmopoolingplot-1.png, id=306, 469.755pt x 140.9265pt>
+<figure/laxphilipsmopoolingplot-1.png, id=315, 469.755pt x 140.9265pt>
 File: figure/laxphilipsmopoolingplot-1.png Graphic file (type png)
 <use figure/laxphilipsmopoolingplot-1.png>
 Package luatex.def Info: figure/laxphilipsmopoolingplot-1.png  used on input li
-ne 153.
+ne 149.
 (luatex.def)             Requested size: 271.02452pt x 81.31165pt.
 
-Overfull \vbox (9.20775pt too high) detected at line 153
+Overfull \vbox (9.20775pt too high) detected at line 149
  []
 
-[33
+[34
 
 <./figure/laxphilipsmopoolingplot-1.png>])
 \openout2 = conclusion.aux
  (./conclusion.tex
-<static_figures/warning.png, id=312, 596.2275pt x 516.93124pt>
+<static_figures/warning.png, id=321, 596.2275pt x 516.93124pt>
 File: static_figures/warning.png Graphic file (type png)
 <use static_figures/warning.png>
 Package luatex.def Info: static_figures/warning.png  used on input line 43.
 (luatex.def)             Requested size: 8.0pt x 6.9333pt.
- [34
+ [35
 
 
 
@@ -2325,43 +2330,43 @@ File: static_figures/warning.png Graphic file (type png)
 <use static_figures/warning.png>
 Package luatex.def Info: static_figures/warning.png  used on input line 43.
 (luatex.def)             Requested size: 8.0pt x 6.9333pt.
- [35
+ [36
 
 ]
 File: static_figures/warning.png Graphic file (type png)
 <use static_figures/warning.png>
 Package luatex.def Info: static_figures/warning.png  used on input line 43.
 (luatex.def)             Requested size: 8.0pt x 6.9333pt.
- [36
-
-] [37
+ [37
 
 ] [38
 
-]) [39
+] [39
+
+]) [40
 
 
 
-] [40
+] [41
 
 ] (./extra_slides.tex
-<figure/weightsbivplotlax-1.png, id=359, 433.62pt x 346.896pt>
+<figure/weightsbivplotlax-1.png, id=369, 433.62pt x 346.896pt>
 File: figure/weightsbivplotlax-1.png Graphic file (type png)
 <use figure/weightsbivplotlax-1.png>
 Package luatex.def Info: figure/weightsbivplotlax-1.png  used on input line 21.
 
 (luatex.def)             Requested size: 210.80168pt x 168.64134pt.
- [41
+ [42
 
 <./figure/weightsbivplotlax-1.png>]
-<figure/laxphilipsbalanceplotinteractions-1.png, id=367, 469.755pt x 328.8285pt
+<figure/laxphilipsbalanceplotinteractions-1.png, id=376, 469.755pt x 328.8285pt
 >
 File: figure/laxphilipsbalanceplotinteractions-1.png Graphic file (type png)
 <use figure/laxphilipsbalanceplotinteractions-1.png>
 Package luatex.def Info: figure/laxphilipsbalanceplotinteractions-1.png  used o
 n input line 40.
 (luatex.def)             Requested size: 271.02452pt x 189.72719pt.
- [42
+ [43
 
 <./figure/laxphilipsbalanceplotinteractions-1.png>])
 \tf@nav=\write7
@@ -2383,15 +2388,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 58930 strings out of 477805
+ 58965 strings out of 477805
  125031,2373549 words of node,token memory allocated
  3682 words of node memory still in use:
    66 hlist, 14 vlist, 8 rule, 12 disc, 4 local_par, 4 math, 62 glue, 21 kern, 1
 3 penalty, 118 glyph, 120 attribute, 123 glue_spec, 120 attribute_list, 4 write,
  30 pdf_colorstack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:4,2:1167,3:325,4:438,5:205,6:95,7:5321,8:109,9:727,10:22,11:34
+   avail lists: 1:4,2:1167,3:325,4:438,5:205,6:96,7:5321,8:109,9:727,10:22,11:34
 2
- 76570 multiletter control sequences out of 65536+600000
+ 76603 multiletter control sequences out of 65536+600000
  88 fonts using 21861607 bytes
  128i,14n,134p,1852b,1943s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/shar
@@ -2411,10 +2416,10 @@ pe1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm7.pfb>
-Output written on main.pdf (42 pages, 2026548 bytes).
+Output written on main.pdf (43 pages, 2124110 bytes).
 
-PDF statistics: 452 PDF objects out of 1000 (max. 8388607)
- 350 compressed objects within 4 object streams
- 99 named destinations out of 1000 (max. 131072)
+PDF statistics: 461 PDF objects out of 1000 (max. 8388607)
+ 356 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

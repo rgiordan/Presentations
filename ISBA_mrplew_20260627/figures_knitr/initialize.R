@@ -13,7 +13,7 @@ library(mapproj) # Ensure this is installed
 
 # This must be run from within the git repo, obviously.
 git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
-paper_directory <- file.path(git_repo_loc, "aapor")
+paper_directory <- file.path(git_repo_loc, "ISBA_mrplew_20260627")
 data_path <- file.path(paper_directory, "applications_data")
 script_directory <- file.path(paper_directory, "figures_knitr")
 

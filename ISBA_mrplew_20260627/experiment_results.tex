@@ -37,7 +37,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Same-Sex Marriage frequentist variance}
+\begin{frame}[t]{Same-Sex Marriage frequentist variance}
 
 \centering
 
@@ -50,20 +50,16 @@ Frequentist variance of $\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\mrp]}$ and %
 $\tarcol{\surcol{\sqrt{\Nsur}} \muhat[\cal]}$\\
 under re-sampling of survey data (keeping the target fixed)
 
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.9\textwidth}
     \centering
-\VarPlotLax{}        
+    \only<2>{\VarPlotLax{}}
+    \only<3>{\BootVarPlotLax{}}
+    \only<4>{\BayesVarPlotLax{}}
 \end{minipage}
 
-
-\onslide<2->{
-    TODO: put Bayes and bootstrap plots in 
-}
-
-
-\onslide<3->{
-    The posterior standard deviation of $\sqrt{\nsur} \tarcol{\muhat[\mrp]}$ was $\surcol{\LaxMrPPostSd{}}$, which is 
-    very different from the frequentist standard errors.
+\only<4>{
+    Note that frequentist and posterior variance can be very different
+    in misspecified models with many random effects!
 }
 
 \end{frame}

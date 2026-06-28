@@ -57,17 +57,18 @@ lax_var_plt <- boot_df %>%
 
 
 lax_var_boot_plt <- boot_df %>%
-  filter(name != "boot_nonpar", name != "boot_par", name != "post") %>%
+  filter(name != "boot_nonpar", name != "post") %>%
   filter(analysis == "Same-Sex Marriage") %>%
   ggplot(aes(fill=method_name, y=value, x=analysis)) +
     geom_bar(position="dodge", stat="identity") +
     labs(fill="Method") +
     ylab("Frequentist standard deviation estimate") +
     theme(axis.title.x=element_blank()) +
-    MethodColorScale(aesthetic="fill")
+    MethodColorScale(aesthetic="fill",
+    extra_levels=c("Bootstrap of MCMC (parametric)"))
 
 lax_var_boot_bayes_plt <- boot_df %>%
-  filter(name != "boot_par") %>%
+  filter(name != "boot_nonpar") %>%
   filter(analysis == "Same-Sex Marriage") %>%
   ggplot(aes(fill=method_name, y=value, x=analysis)) +
     geom_bar(position="dodge", stat="identity") +
@@ -75,4 +76,4 @@ lax_var_boot_bayes_plt <- boot_df %>%
     ylab("Frequentist standard deviation estimate") +
     theme(axis.title.x=element_blank()) +
     MethodColorScale(aesthetic="fill", 
-                     extra_levels="Posterior")
+                     extra_levels=c("Bootstrap of MCMC (parametric)", "Posterior"))

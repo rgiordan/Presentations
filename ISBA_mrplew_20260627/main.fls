@@ -898,10 +898,12 @@ INPUT ./figure/weightsplotlax-1.png
 INPUT ./figure/varplotlax-1.png
 INPUT ./figure/varplotlax-1.png
 INPUT ./figure/varplotlax-1.png
-INPUT ./figure/varplotlax-1.png
-INPUT ./figure/varplotlax-1.png
-INPUT ./figure/varplotlax-1.png
-INPUT ./figure/varplotlax-1.png
+INPUT ./figure/bootvarplotlax-1.png
+INPUT ./figure/bootvarplotlax-1.png
+INPUT ./figure/bootvarplotlax-1.png
+INPUT ./figure/bayesvarplotlax-1.png
+INPUT ./figure/bayesvarplotlax-1.png
+INPUT ./figure/bayesvarplotlax-1.png
 INPUT ./figure/laxphilipscapoolingplot-1.png
 INPUT ./figure/laxphilipscapoolingplot-1.png
 INPUT ./figure/laxphilipscapoolingplot-1.png

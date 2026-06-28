@@ -2420,17 +2420,18 @@
     <bcf:citekey order="47">giordano:2026:mrplew</bcf:citekey>
     <bcf:citekey order="48">giordano:2026:mrplew</bcf:citekey>
     <bcf:citekey order="49">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="50">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="51">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="52">brms</bcf:citekey>
-    <bcf:citekey order="53">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="54">gelman:2007:struggles</bcf:citekey>
-    <bcf:citekey order="55">benmichael:2021:multilevel</bcf:citekey>
-    <bcf:citekey order="56">chattopadhyay:2023:implied</bcf:citekey>
-    <bcf:citekey order="57">gelman:2007:strugglesrejoinder</bcf:citekey>
-    <bcf:citekey order="58">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="59">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="60">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="50">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="51">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="52">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="53">brms</bcf:citekey>
+    <bcf:citekey order="54">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="55">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="56">benmichael:2021:multilevel</bcf:citekey>
+    <bcf:citekey order="57">chattopadhyay:2023:implied</bcf:citekey>
+    <bcf:citekey order="58">gelman:2007:strugglesrejoinder</bcf:citekey>
+    <bcf:citekey order="59">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="60">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="61">giordano:2026:mrplew</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
