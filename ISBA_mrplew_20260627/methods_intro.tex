@@ -201,6 +201,79 @@ $$
 
 
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{frame}[t]{Linear and nonlinear models}
+
+% \splitpagenoline{
+% \centering
+% Calibration weighting estimators:\\[1em]
+% $\muhatcw = \surcol{\meansur w_i y_i}$.}{
+% \centering
+% MrP estimators:\\[1em]
+% $\muhatmrp = \tarcol{\meantar \yhat_j}\surcol{(\Ysur)}$
+% }
+
+% \vspace{1em}
+
+% \begin{minipage}{0.3\textwidth}
+% \only<1-4>{
+% \YpathPlot{}
+% }
+% \only<5->{
+% \YpathRegionPlot{}
+% }
+% \end{minipage}
+% \begin{minipage}{0.3\textwidth}
+% \onslide<2->{
+% \CWPathPlot{}
+% }
+% \end{minipage}
+% \begin{minipage}{0.3\textwidth}
+% \only<3>{
+% \MrPPathPlot{}
+% }
+% \only<4->{
+% \MrPlewPathPlot{}
+% }
+% \end{minipage}
+
+
+% \onslide<5->{
+%     The slope is a \textit{MrP locally equivalent weight}, or \textit{MrPlew}.
+% }
+% \only<6>{
+% \\[1em]
+% The weight $\surcol{\w_i^\mrp}$ measures the effect of local perturbations to $\surcol{\y_i}$ on the estimator $\tarcol{\muhat[\mrp]}$.\\[1em]
+% Our main contribution is to rigorously connect this idea to CW diagnostics!
+% }
+% \only<7->{
+% $$
+% \begin{aligned}
+% \surcol{\w_i^\mrp} :={} 
+%     \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}} 
+%         \onslide<8->{
+%         =
+%         \nsur  \cov{\post}{
+%             \tarcol{\meantar \m(\theta^\trans \x_j)},
+%             \surcol{\frac{\partial}{\partial \y_i} \log \p(\y_i \vert \x_i, \theta)}
+%         }
+%     }
+% \end{aligned}
+% $$
+% }
+% %
+% \only<8>{
+% Can estimate $\surcol{\w_i^\mrp}$ \textit{without re-running MCMC}
+% \parencite{gustafson:1996:localposterior,giordano:2018:covariances}.
+
+% }
+
+% \end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -215,65 +288,43 @@ $\muhatcw = \surcol{\meansur w_i y_i}$.}{
 MrP estimators:\\[1em]
 $\muhatmrp = \tarcol{\meantar \yhat_j}\surcol{(\Ysur)}$
 }
+\pause
 
-\vspace{1em}
-
-\begin{minipage}{0.3\textwidth}
-\only<1-4>{
-\YpathPlot{}
-}
-\only<5->{
-\YpathRegionPlot{}
-}
-\end{minipage}
-\begin{minipage}{0.3\textwidth}
-\onslide<2->{
-\CWPathPlot{}
-}
-\end{minipage}
-\begin{minipage}{0.3\textwidth}
-\only<3>{
-\MrPPathPlot{}
-}
-\only<4->{
-\MrPlewPathPlot{}
-}
-\end{minipage}
+\begin{block}{Key idea}
+Noting that 
+$
+\surcol{\w_i} :={} \nsur \frac{\partial \muhatcw}{\partial \surcol{\y_i}},
+$
+take
+$
+\surcol{\w_i^\mrp} :={} \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}}.
+$
+\end{block}
 
 
-\onslide<5->{
-    The slope is a \textit{MrP locally equivalent weight}, or \textit{MrPlew}.
-}
-\only<6>{
-\\[1em]
-The weight $\surcol{\w_i^\mrp}$ measures the effect of local perturbations to $\surcol{\y_i}$ on the estimator $\tarcol{\muhat[\mrp]}$.\\[1em]
-Our main contribution is to rigorously connect this idea to CW diagnostics!
-}
-\only<7->{
+\pause
+The slope $\surcol{\w_i^\mrp}$ is a \textit{MrP locally equivalent weight}, or \textit{MrPlew}.\\[1em]
+It measures the effect of local perturbations to $\surcol{\y_i}$ on the estimator $\tarcol{\muhat[\mrp]}$.\\[1em]
+
+\textbf{Our main contribution is to rigorously connect this idea to CW diagnostics!}
+
+\pause
 $$
 \begin{aligned}
 \surcol{\w_i^\mrp} :={} 
     \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_i}} 
-        \onslide<8->{
         =
         \nsur  \cov{\post}{
             \tarcol{\meantar \m(\theta^\trans \x_j)},
             \surcol{\frac{\partial}{\partial \y_i} \log \p(\y_i \vert \x_i, \theta)}
         }
-    }
 \end{aligned}
 $$
-}
 %
-\only<8>{
 Can estimate $\surcol{\w_i^\mrp}$ \textit{without re-running MCMC}
 \parencite{gustafson:1996:localposterior,giordano:2018:covariances}.
 
-}
-
 \end{frame}
-
-
 
 
 

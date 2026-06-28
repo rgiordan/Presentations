@@ -2382,18 +2382,24 @@
     <bcf:citekey order="24">lumley:2025:survey</bcf:citekey>
     <bcf:citekey order="25">gustafson:1996:localposterior</bcf:citekey>
     <bcf:citekey order="25">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="26">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="27">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="28">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="26">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="26">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="27">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="27">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="28">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="28">giordano:2018:covariances</bcf:citekey>
     <bcf:citekey order="29">giordano:2026:mrplew</bcf:citekey>
     <bcf:citekey order="30">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="31">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="32">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="33">brms</bcf:citekey>
-    <bcf:citekey order="34">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="35">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="36">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="37">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="31">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="32">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="33">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="34">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="35">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="36">brms</bcf:citekey>
+    <bcf:citekey order="37">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="38">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="39">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="40">giordano:2026:mrplew</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
