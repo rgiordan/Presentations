@@ -91,7 +91,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>10</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
@@ -99,7 +99,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>10</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -317,7 +317,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>10</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
@@ -325,7 +325,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>10</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -2352,54 +2352,62 @@
     <bcf:citekey order="3">kastellec:2010:laxmrp</bcf:citekey>
     <bcf:citekey order="4">lax:2009:gay</bcf:citekey>
     <bcf:citekey order="4">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="5">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="5">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="6">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="6">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="7">brms</bcf:citekey>
-    <bcf:citekey order="8">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="9">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="10">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="10">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="11">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="11">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="12">brms</bcf:citekey>
-    <bcf:citekey order="13">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="14">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="15">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="15">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="16">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="16">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="17">brms</bcf:citekey>
-    <bcf:citekey order="18">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="19">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="20">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="20">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="21">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="21">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="22">brms</bcf:citekey>
-    <bcf:citekey order="23">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="24">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="25">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="25">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="26">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="26">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="27">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="27">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="28">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="28">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="29">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="30">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="31">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="32">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="33">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="34">lax:2009:gay</bcf:citekey>
-    <bcf:citekey order="35">kastellec:2010:laxmrp</bcf:citekey>
-    <bcf:citekey order="36">brms</bcf:citekey>
-    <bcf:citekey order="37">lumley:2025:survey</bcf:citekey>
-    <bcf:citekey order="38">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="39">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="5">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="6">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="7">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="8">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="9">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="10">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="11">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="12">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="12">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="13">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="13">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="14">brms</bcf:citekey>
+    <bcf:citekey order="15">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="16">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="17">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="17">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="18">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="18">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="19">brms</bcf:citekey>
+    <bcf:citekey order="20">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="21">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="22">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="22">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="23">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="23">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="24">brms</bcf:citekey>
+    <bcf:citekey order="25">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="26">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="27">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="27">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="28">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="28">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="29">brms</bcf:citekey>
+    <bcf:citekey order="30">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="31">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="32">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="32">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="33">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="33">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="34">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="34">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="35">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="35">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="36">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="37">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="38">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="39">giordano:2026:mrplew</bcf:citekey>
     <bcf:citekey order="40">giordano:2026:mrplew</bcf:citekey>
+    <bcf:citekey order="41">lax:2009:gay</bcf:citekey>
+    <bcf:citekey order="42">kastellec:2010:laxmrp</bcf:citekey>
+    <bcf:citekey order="43">gelman:2007:struggles</bcf:citekey>
+    <bcf:citekey order="44">brms</bcf:citekey>
+    <bcf:citekey order="45">lumley:2025:survey</bcf:citekey>
+    <bcf:citekey order="46">gustafson:1996:localposterior</bcf:citekey>
+    <bcf:citekey order="47">giordano:2018:covariances</bcf:citekey>
+    <bcf:citekey order="48">giordano:2026:mrplew</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

@@ -51,9 +51,11 @@
     \endentry
     \entry{giordano:2018:covariances}{article}{}
       \name{author}{3}{}{%
-        {{hash=87ea7e10b7efd4496291cf69d187d0a6}{%
-           family={\textbf{G.}},
-           familyi={G\bibinitperiod}}}%
+        {{hash=5826925894a0d58142c30cfa901c7dac}{%
+           family={Giordano},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
         {{hash=ef0c0022763a515dfddd0f863d3ce32d}{%
            family={Broderick},
            familyi={B\bibinitperiod},
@@ -65,12 +67,12 @@
            given={M.\bibnamedelimi I.},
            giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
       }
-      \strng{namehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{fullhash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{bibnamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{authorbibnamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{authornamehash}{3efc6c7b93520a4e81a2eb98513f4c5c}
-      \strng{authorfullhash}{3efc6c7b93520a4e81a2eb98513f4c5c}
+      \strng{namehash}{2429af76baf6a52918444be0920fadc4}
+      \strng{fullhash}{2429af76baf6a52918444be0920fadc4}
+      \strng{bibnamehash}{2429af76baf6a52918444be0920fadc4}
+      \strng{authorbibnamehash}{2429af76baf6a52918444be0920fadc4}
+      \strng{authornamehash}{2429af76baf6a52918444be0920fadc4}
+      \strng{authorfullhash}{2429af76baf6a52918444be0920fadc4}
       \field{labelalpha}{GBJ18}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
@@ -81,6 +83,33 @@
       \field{title}{Covariances, robustness and variational bayes}
       \field{volume}{19}
       \field{year}{2018}
+    \endentry
+    \entry{gelman:2007:struggles}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ba82e2f52cafc6076f0de4ae6be66db0}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{fullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{bibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authorbibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authornamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authorfullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \field{labelalpha}{Gel07}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Science}
+      \field{number}{2}
+      \field{title}{Struggles with survey weighting and regression modeling}
+      \field{volume}{22}
+      \field{year}{2007}
+      \field{pages}{153\bibrangedash 164}
+      \range{pages}{12}
     \endentry
     \entry{giordano:2026:mrplew}{article}{}
       \name{author}{5}{}{%
@@ -94,8 +123,8 @@
            familyi={C\bibinitperiod},
            given={A.},
            giveni={A\bibinitperiod}}}%
-        {{hash=32c14f72ee9a2b856a76255d7479d2b4}{%
-           family={Millman},
+        {{hash=208dd9aecffb2abc7c88d16b0de0eda0}{%
+           family={Murray},
            familyi={M\bibinitperiod},
            given={J.},
            giveni={J\bibinitperiod}}}%
@@ -111,19 +140,29 @@
            giveni={A\bibinitperiod}}}%
       }
       \strng{namehash}{037850bb7d258014b077177460842119}
-      \strng{fullhash}{85343afbaee6d9141dd5964a65f5bec6}
-      \strng{bibnamehash}{037850bb7d258014b077177460842119}
-      \strng{authorbibnamehash}{037850bb7d258014b077177460842119}
+      \strng{fullhash}{2f249440c030481e464635270f4d68e1}
+      \strng{bibnamehash}{2f249440c030481e464635270f4d68e1}
+      \strng{authorbibnamehash}{2f249440c030481e464635270f4d68e1}
       \strng{authornamehash}{037850bb7d258014b077177460842119}
-      \strng{authorfullhash}{85343afbaee6d9141dd5964a65f5bec6}
+      \strng{authorfullhash}{2f249440c030481e464635270f4d68e1}
       \field{labelalpha}{Gio+26}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arxiv}
-      \field{title}{MrPlew}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{Locally Equivalent Weights for Multilevel Regression and Poststratification}
       \field{year}{2026}
+      \verb{eprint}
+      \verb 2606.04250
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2606.04250
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2606.04250
+      \endverb
     \endentry
     \entry{gustafson:1996:localposterior}{article}{}
       \name{author}{1}{}{%
