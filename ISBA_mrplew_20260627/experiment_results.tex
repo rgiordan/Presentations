@@ -79,20 +79,35 @@ under re-sampling of survey data (keeping the target fixed)
 
 Note that both methods use \emph{national data} to infer public opinion \emph{in California}.
 
+
+\only<2>{
 \begin{block}{Question:}
     How do responses in Texas affect our estimate of public opinion in CA?
-\end{block}
 
+    \phantom{}
+\end{block}
+}
+
+\only<3->{
 \begin{block}{More specific question:}
     Suppose we \emph{increased} the responses $\y_i$ in Texas.
 
     How would our estimate of public opinion in CA change?
 \end{block}
 
+Summarize state contribution: $\sum_{n \textrm{ in state}} \w_n$.
+
+}
+%
+\only<2-3>{
+\centering
+\begin{minipage}{0.7\textwidth}
 \MapQuery{}
+\end{minipage}
+}
 
 
-
+\only<4>{
 \begin{block}{Theorem: \parencite{giordano:2026:mrplew} (informal)}
     Take $\surcol{\ytil_i = \y_i + \delta \f(\x_i)}$.
     We state conditions under which
@@ -116,7 +131,7 @@ $$
 
 \textbf{Uniformity helps justify searching over a large class of perturbations $\f$.}
 
-
+}
 
 
 
