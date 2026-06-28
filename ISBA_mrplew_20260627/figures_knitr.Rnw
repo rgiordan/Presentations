@@ -272,6 +272,23 @@ SetFullImageSize()
 % }
 
 
+\newcommand{\MapQuery}{
+<<>>=
+figcap <- paste0("Balance plot for Same-Sex marriage analysis")
+SetImageSize(0.7)
+@
+<<mapquery, cache=cache, fig.show='hold', fig.pos="H", fig.scap="">>=
+map_df <- laxphilips_CA_pooling$map_df
+make_us_plot(map_df, map_df$region == "california") +
+  annotate("text", x = -99, y = 32,
+           label = "?", color = "red", size = 8) +
+  theme(legend.position  = "none")
+@
+<<>>=
+SetFullImageSize()
+@
+}
+
 
 \newcommand{\LaxphilipsBalance}{
 <<>>=

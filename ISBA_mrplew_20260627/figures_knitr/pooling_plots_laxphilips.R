@@ -33,7 +33,7 @@ MakeUSPoolingPlot <- function(pooling_env) {
 
   raking_plt <-
     make_us_plot(map_df, map_df$w_raking) +
-    labs(title = TeX("Raking weight / $N_S$"))+
+    labs(title = TeX("Raking weight / $N_S$")) +
     theme(legend.position  = "none")
 
   mrp_plt <-

@@ -10,9 +10,8 @@ source(file.path(base_dir, "figures_knitr/initialize.R"))
 source(file.path(paper_directory, "figures_knitr/load_data.R"))
 source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 
-source(file.path(paper_directory, "figures_knitr/bootstrap_plot.R"))
-boot_df %>% pull(method_name) %>% unique()
-
-lax_var_plt
-lax_var_boot_plt
-lax_var_boot_bayes_plt
+map_df <- laxphilips_CA_pooling$map_df
+make_us_plot(map_df, map_df$region == "california") +
+  annotate("text", x = -99, y = 32,
+           label = "?", color = "red", size = 8) +
+  theme(legend.position  = "none")
