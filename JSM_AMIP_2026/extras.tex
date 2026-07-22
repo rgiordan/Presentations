@@ -1,0 +1,276 @@
+
+\begin{frame}{}
+\begin{center}
+    {\Huge \textbf{Extra slides}}
+\end{center}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Selected related classical ideas}
+
+Our work is most closely related to ``infinitesimal robustness''
+\citep{hampel1974influence, hampel1986robustbook}, which is based on the
+influence function, the first term in the Taylor series expansion
+of functionals of a distribution function.
+%
+%\vspace{1em}
+\begin{itemize}
+    \item We diagnose an existing analysis rather than designing
+    estimators.
+    \item We use autodiff to automate the influence function computation.
+    \item We relate sensitivity to the signal-to-noise ratio, improving intuition.
+\end{itemize}
+
+\vspace{1em} Our work is also related to the ``global robustness'' concept of a
+``breakdown point'' \citep{huber1981robust, huber:1983:notion}.
+%
+%\vspace{1em}
+\begin{itemize}
+    \item We consider data dropping and a particular qualitative conclusion,
+    rather than arbitrarily large changes.
+    \item We use infinitesimal robustness for automaticity and generality,
+    but recover non-local robustness properties by controlling the residual.
+\end{itemize}
+
+\vspace{1em} Our work shares some formal similarity with outlier detection
+\citep{cook1977detection, belsley2005regression}.
+%
+\begin{itemize}
+    \item We consider $O(N)$-sized sets rather than individual points.
+    \item We study a specific intervention, not vaguely defined
+    ``outliers.''
+    \item We consider settings far beyond regression.
+\end{itemize}
+
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{A simulation}
+
+For $N=\SimNumObs$ data points, compute the OLS estimator from:
+
+\vspace{1em}
+\begin{tabularx}{\textwidth}{YYY}
+%\begin{tabular}{ccc}
+    Regressors  &   Residuals   &   Responses \\
+    $x_n \sim \mathcal{N}(0, \sigma_x^2)$   &
+    $\varepsilon_n \sim \mathcal{N}(0, \sigma_\varepsilon^2)$   &
+    $y_n = \SimTrueTheta x_n + \varepsilon_n$
+\end{tabularx}
+%
+
+\SimGridNormalGraph{}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Influence function}
+
+The present work is based on the {\em empirical influence function}.
+%
+Consider:
+%
+\begin{itemize}
+%
+\item True, unknown distribution function $\flim(x) = p(X \le x)$
+\item Empirical distribution function $\fhat(x) = \meann \ind{\x_n \le x}$
+\item A statistical functional $T(F)$.
+%
+\end{itemize}
+
+\only<2>{
+We estimate with $T(\flim)$ with $T(\fhat)$.
+
+Sample means are an example:
+%
+\begin{align*}
+%
+T(F) := \int \x \, F(\dee x).
+%
+\end{align*}
+%
+
+Z-estimators are, too:
+%
+\begin{align*}
+%
+T(F) := \theta\textrm{  such that  }\int G(\theta, \x) F(\dee x) = 0.
+%
+\end{align*}
+%
+}
+\only<3->{
+
+Form an (infinite-dimensional) Taylor series expansion at some $F_0$:
+%
+\begin{align*}
+%
+T(F) = T(F_0) + T'(F_0) (F - F_0) + \mathrm{residual}.
+%
+\end{align*}
+%
+When the derivative operator takes the form of an integral
+%
+\begin{align*}
+%
+T'(F_0) \Delta = \int \infl(\x; F_0) \Delta(\dee x)
+%
+\end{align*}
+%
+then $\infl(\x; F_0)$ is known as the {\em influence function}.
+
+{
+Where to form the expansion? There are at least two reasonable choices:
+%
+\begin{itemize}
+%
+\item The limiting influence function $\infl(\x, \flim)$
+\item The empirical influence function $\infl(\x, \fhat)$
+%
+\end{itemize}
+%
+}
+
+}
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Influence function}
+
+\begin{itemize}
+%
+\item The limiting influence function (LIF) $\infl(\x, \flim)$
+    \begin{itemize}
+        \item Used in a lot of classical statistics
+            \citep{
+                mises1947asymptotic,
+                huber1981robust, hampel1986robustbook,
+                bickel1993semiparametric}
+        \item Unobserved, asymptotic
+        \item Requires careful functional analysis
+            \citep{reeds1976thesis}
+    \end{itemize}
+\item The empirical influence function (EIF) $\infl(\x, \fhat)$
+    \begin{itemize}
+        \item The basis of the present work
+            (also \citep{giordano2019swiss, giordano2019higherorder})
+        \item Computable, finite-sample
+        \item Requires only finite-dimensional calculus
+    \end{itemize}
+%
+\end{itemize}
+
+\vspace{1em}
+Typically the {\em semantics} of the EIF derive from study of the LIF.
+
+Example: $\meann (N \infl_n)^2 \approx \var{}{\sqrt{N}\thetafun(\thetahat)}$.
+
+\vspace{1em}
+But the EIF measures what happens when you perturb the data at hand.
+
+\vspace{1em}
+Other data perturbations will admit an analysis similar to ours!
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Local robustness}
+
+The present work is an application of {\em local robustness}.  Consider:
+%
+\begin{itemize}
+%
+\item Model parameter $\lambda$  (e.g., data weights $\lambda = \w$)
+\item Set of plausible models $\mathcal{S}_\lambda$
+    (e.g. $\mathcal{S}_\lambda = W_\alpha$)
+\item Estimator $\thetahat(x, \lambda)$ for data $\x$ and
+    $\lambda \in \mathcal{S}_\lambda$
+    (e.g. a Z-estimator)
+%
+\end{itemize}
+%
+% Specify data $x$, a set of plausible models $\lambda \in \mathcal{S}_\lambda$,
+% and an estimator $\thetahat(x, \lambda)$.
+
+\hrulefill
+
+\begin{tabular}{ccc}
+    Global robustness:   &
+%
+$
+\left(
+\inf_{\lambda \in \mathcal{S}_\lambda} \thetahat(x, \lambda),
+\sup_{\lambda \in \mathcal{S}_\lambda} \thetahat(x, \lambda)
+\right)
+$
+& (Hard in general!)
+\end{tabular}
+
+
+\hrulefill
+
+\begin{tabular}{cc}
+Local robustness:
+&
+$
+\left(
+\inf_{\lambda \in \mathcal{S}_\lambda} \thetahat^{lin}(x, \lambda),
+\sup_{\lambda \in \mathcal{S}_\lambda} \thetahat^{lin}(x, \lambda)
+\right)
+$
+%
+\end{tabular}
+
+...where $\thetahat^{lin}(\x, \lambda) :=
+\thetahat^{lin}(\x, \lambda_0) +
+    \fracat{\partial \thetahat^{lin}(\x, \lambda)}{\partial \lambda}{\lambda_0}
+        (\lambda  - \lambda_0)$.
+
+\hrulefill
+
+\textbf{Many variants are possible!}
+
+\begin{itemize}
+    \item Cross-validation \citep{giordano2019swiss}
+    \item Prior sensitivity in Bayesian nonparametrics \citep{giordano2021bnp}
+    \item Model sensitivity of MCMC output \citep{giordano2018covariances}
+    \item Frequentist variances of MCMC posteriors (in progress)
+\end{itemize}
+
+% My work emphasizes \textbf{efficient computation of the derivative}
+% and \textbf{accuracy as an approximation to global robustness}.
+
+\end{frame}

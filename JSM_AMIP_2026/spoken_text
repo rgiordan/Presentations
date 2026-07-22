@@ -1,0 +1,86 @@
+
+Slide 1
+
+Thanks for having me.
+
+Would you be concerned if a study's qualitative conclusions could be overturned
+or even reversed by dropping a small fraction of the data? Today I'll provide
+you with a tool to quickly and automatically identify small but highly
+influential sets of data, and to understand how they arise.
+
+-------------
+
+Slide 2
+
+Statistical modeling increasingly informs important, real-life decisions.
+To ensure that we make the right decisions, we need to make sure that our
+analyses are robust to subjectively minor changes to our model or data.
+
+I'll use a particular published study as an running example. It's a study of
+microcredit in Mexico.  Microcredit is an intervention in development economics
+in which families and small business get increased access to credit markets in
+hopes of improving their economic outcomes.  This particular study involved over
+16k households, which were randomly assigned to receive or not receive increased
+microcredit access.
+
+At the end of the day, the authors ran an OLS regression, and found that the
+coefficient on the treatment indicator was statistically insignificant with
+relatively narrow confidence interval. What does this mean?  One might imagine a
+general reader coming to the conclusion that there is no evidence that
+microcredit is effective, and that we should disinvest.
+
+However, we show that by dropping no more than fifteen data points --- less
+than 0.1% of the sample --- we can produce statistically significant effects
+in both directions.  In a nutshell, the standard errors are failing to capture
+a high degree of sensitivity to a small number of datapoints.
+
+I would argue that the policy implication is very different in light of this
+fact.  Rather than believing we have found positive evidence for the
+ineffectiveness of microcredit, we should think of the study as under-powered,
+and try to measure the effect microcredit more effectively.
+And in case you're wondering how to make a study less sensitive to
+dropping data, I'll tell you towards the end of the talk, though I'll mention
+now that larger samples sizes will _not_ do the trick.
+
+I'd like to emphasize that this is a great study with great data sharing.  To
+the extent that I will be criticizing it, I will be criticizing widespread
+statistical practices that are by no means idiosyncratic to this paper.
+
+First, though, how did we find these influential sets?  I will show that finding
+them by brute force is computationally impossible, even for very simple problems
+like this one.  We provide a fast, automatic tool to approximately identify
+influential sets of points, with finite-sample theoretical guarantees.
+
+-------------
+
+-------------
+
+Slide 5
+
+How does our approximation work and when is it accurate?  We will need to
+formalize the problem.  Along the way, I will articulate precisely the wide
+class of estimators to which our approximation applies.  Let me begin
+with the specific case of OLS, as in the microcredit example.
+
+
+....
+
+
+-------------
+
+-------------
+
+Slide 12
+
+Now that we can trust our methods, let's see how it does in practice. I'll
+discuss a number of published studies, all with great data sharing, which
+allow us to reproduce and study the original analyses. I'll focus on trying to
+drop data points in order to produce a statistically significant result of the
+opposite sign as the original study's estimate.
+
+Throughout, a star indicates statistical significance at the 95% level.
+
+After MX: Is every study sensitive to data dropping?
+After Cash: Is sensitivity to data dropping just due to statistical
+insignificance?
+After Medicaid: So what's going on?
