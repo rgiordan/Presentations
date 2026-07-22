@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1784742778 "main.aux" "main.bbl" "main" 1784742886
+["bibtex main"] 1784742778 "main.aux" "main.bbl" "main" 1784745564
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibliography.bib" 1784742723 16808 53e6cbfd3a741cb3b271cfa0468ef14e ""
-  "main.aux" 1784742885 8091 0dd4c06f56562d262d1eaccee1234397 "lualatex"
+  "main.aux" 1784745563 8091 0dd4c06f56562d262d1eaccee1234397 "lualatex"
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1784742882 "main.tex" "main.pdf" "main" 1784742886
+["lualatex"] 1784745561 "main.tex" "main.pdf" "main" 1784745564
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1721332138 77648 635edc0fb9f622fbc9be2006018b3690 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc" 1732145088 77255 7f746d2a5545f020a416095cec8f6f1a ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmono9-regular.luc" 1731523581 77690 6ddaa6024a6cd1bfe9b61b63591c4502 ""
@@ -358,12 +358,12 @@
   "figure/sim-refit-two-1.png" 1784742723 94192 6c5a09d09c365fae5c29e0c58e009921 ""
   "figures_knitr.tex" 1784742723 5170 42d94f836d317426913eeaaa3fa05682 ""
   "introduction.tex" 1784742880 4241 97e811ff3fd650170e994ab1d5c5039e ""
-  "main.aux" 1784742885 8091 0dd4c06f56562d262d1eaccee1234397 "lualatex"
+  "main.aux" 1784745563 8091 0dd4c06f56562d262d1eaccee1234397 "lualatex"
   "main.bbl" 1784742778 4817 fa49319e163a29c25ffff5b7aeaf051c "bibtex main"
-  "main.nav" 1784742885 2526 c1f3369d03a24d0859cb9642b4def0d8 "lualatex"
-  "main.out" 1784742883 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.tex" 1784742723 2400 b7c974d573971a49a6f3d3f4a893698a ""
-  "main.vrb" 1784742884 1273 62a309af2b5ac3695df379715170c0f2 "lualatex"
+  "main.nav" 1784745563 2526 c1f3369d03a24d0859cb9642b4def0d8 "lualatex"
+  "main.out" 1784745561 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.tex" 1784745554 2404 9c18486d9f23a7c27ef638a11c46f4ed ""
+  "main.vrb" 1784745562 1273 62a309af2b5ac3695df379715170c0f2 "lualatex"
   "static_figures/loo_weights_v2.png" 1784742723 7033 7421bd8fe3bae48f5c62f937e6d1ab99 ""
   "static_figures/orig_weights_v2.png" 1784742723 7156 8dfd8df4d490b23ba4b0f860e65f2ee0 ""
   (generated)

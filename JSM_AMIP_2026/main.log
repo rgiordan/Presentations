@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  22 JUL 2026 10:54
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  22 JUL 2026 11:39
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1895,14 +1895,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 Here is how much of LuaTeX's memory you used:
  34370 strings out of 477805
- 156270,953878 words of node,token memory allocated
+ 156265,953878 words of node,token memory allocated
  11857 words of node memory still in use:
    157 hlist, 22 vlist, 18 rule, 49 disc, 18 local_par, 24 math, 305 glue, 85 ke
 rn, 50 penalty, 630 glyph, 300 attribute, 107 glue_spec, 300 attribute_list, 4 w
 rite, 35 pdf_literal, 3 pdf_start_link, 3 pdf_end_link, 5 pdf_action, 42 pdf_col
 orstack nodes
-   avail lists: 1:1,2:2185,3:1015,4:300,5:2735,6:70,7:8969,8:70,9:5530,10:28,11:
-721
+   avail lists: 2:2185,3:1016,4:299,5:2735,6:70,7:8981,8:70,9:5530,10:28,11:721
  52873 multiletter control sequences out of 65536+600000
  90 fonts using 7545311 bytes
  128i,15n,115p,519b,969s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1931,7 +1930,7 @@ sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (78 pages, 659848 bytes).
+Output written on main.pdf (78 pages, 660792 bytes).
 
 PDF statistics: 842 PDF objects out of 1000 (max. 8388607)
  669 compressed objects within 7 object streams

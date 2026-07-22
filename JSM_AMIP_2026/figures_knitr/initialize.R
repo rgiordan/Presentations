@@ -15,10 +15,11 @@ paper_directory <- file.path(git_repo_loc, "JSM_AMIP_2026")
 source(file.path(paper_directory, "figures_knitr", "table_formatting_lib.R"))
 
 # Load data from the paper's repo.
-data_path <- file.path(
-  "/home/rgiordan/Documents/git_repos/AdversarialInfluenceWorkbench/",
-  "writing/output/",
-  "applications_data")
+# data_path <- file.path(
+#   "/home/rgiordan/Documents/git_repos/AdversarialInfluenceWorkbench/",
+#   "writing/output/",
+#   "applications_data")
+data_path <- file.path(paper_directory, "figures_knitr", "data")
 
 # Set some figure defaults.
 # opts_chunk$set(fig.width=4.9, fig.height=3)

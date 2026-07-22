@@ -1,3 +1,11 @@
+# Data note:
+# These load data from the old local paper repository, and so these
+# files are likely no longer available.  I have checked into github
+# copies of the needed Rdata files in the JSM_AMIP_2026 subdirectory
+# of the presentations repo.  If you ever need to regenerate the
+# figures, consider looking there for data files instead of the old repo.
+
+
 # sim_env <- LoadIntoEnvironment(
 #     file.path(data_path, "simulations", "simulations.Rdata"))
 sim_env <- LoadIntoEnvironment(
