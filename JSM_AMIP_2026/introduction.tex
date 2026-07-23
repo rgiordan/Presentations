@@ -81,65 +81,54 @@ most influential set of points.}
 
 \begin{frame}{Outline}
 \begin{itemize}
-    \item Why and when might you care about sensitivity to data dropping?
     \item How do we identify influential sets?  When is our method accurate?
-    \begin{itemize}
-        \item[] (A formalization of the problem and the
-            class of estimators we study.)
-    \end{itemize}
-    \item Examine real-life examples of analyses: some sensitive, some not.
-    \begin{itemize}
-        \item[] (The results may defy your intuition.)
-    \end{itemize}
-    \item What kinds of analyses are sensitive to data dropping?
-    \begin{itemize}
-    \item[] (Comparison to standard errors, gross errors, and how to mitigate.)
-    \end{itemize}
+    \item Data dropping as distributional robustness
+    \item Do we identify ``the most important datapoints?''
 \end{itemize}
 \end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Dropping data: Motivation}
+% \begin{frame}{Dropping data: Motivation}
 
-When do you care that you can \textbf{reverse your conclusion} by removing a
-\textbf{small proportion} of your data?
+% When do you care that you can \textbf{reverse your conclusion} by removing a
+% \textbf{small proportion} of your data?
 
-\pause \vspace{1em} Not always!  But sometimes you surely do, especially when
-you want to \textbf{generalize to unseen, systematically different populations}.
+% \pause \vspace{1em} Not always!  But sometimes you surely do, especially when
+% you want to \textbf{generalize to unseen, systematically different populations}.
 
-\vspace{1em}
-Suppose you have a farm, and want to know whether
-your average yield is $>$ 170 bushels per acre.
-At harvest, you measure 200 bushels per acre.
+% \vspace{1em}
+% Suppose you have a farm, and want to know whether
+% your average yield is $>$ 170 bushels per acre.
+% At harvest, you measure 200 bushels per acre.
 
-\pause
-\begin{itemize}
-    \item Scenario one: $>$ 170 bushels
-        per acre means you make a profit.
-        \begin{itemize}
-            \item Don’t care about sensitivity to small subsets.
-        \end{itemize}
-    \pause
-    \item Scenario two: Want to recommend methods to a distant friend.
-    \begin{itemize}
-        \item Might care about sensitivity to small subsets!
-    \end{itemize}
-\end{itemize}
+% \pause
+% \begin{itemize}
+%     \item Scenario one: $>$ 170 bushels
+%         per acre means you make a profit.
+%         \begin{itemize}
+%             \item Don’t care about sensitivity to small subsets.
+%         \end{itemize}
+%     \pause
+%     \item Scenario two: Want to recommend methods to a distant friend.
+%     \begin{itemize}
+%         \item Might care about sensitivity to small subsets!
+%     \end{itemize}
+% \end{itemize}
 
-\pause
+% \pause
 
-\vspace{1em}
-Specifically, often in statistical applications:
-%
-\begin{itemize}
-\item Policy population is different from analyzed population,
-\item Small fractions of data are missing not-at-random,
-\item We report a convenient summary (e.g. mean) of a complex effect.
-% \item Models are stylized proxies of reality.
-\end{itemize}
+% \vspace{1em}
+% Specifically, often in statistical applications:
+% %
+% \begin{itemize}
+% \item Policy population is different from analyzed population,
+% \item Small fractions of data are missing not-at-random,
+% \item We report a convenient summary (e.g. mean) of a complex effect.
+% % \item Models are stylized proxies of reality.
+% \end{itemize}
 
 
-\end{frame}
+% \end{frame}

@@ -7,6 +7,138 @@
 
 
 
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\input{examples}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{determination}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{How to compute the influence scores?}
+
+How can we compute the influence scores
+%
+%\begin{align*}
+%
+$
+\infl_n =
+\fracat{\partial \thetafun(\thetahat(\w))}
+       {\partial\w_n}{\w = \onevec}
+%
+$?
+%\end{align*}
+%
+
+\pause
+\vspace{1em}
+By the \textbf{chain rule},
+$
+\infl_n =
+\fracat{\partial \thetafun(\theta)}
+      {\partial\theta}{\thetahat(\onevec)}
+\fracat{\partial \thetahat(\w)}
+    {\partial\w_n}{\w = \onevec}
+%
+$.
+
+\pause
+\vspace{1em}
+Recall that
+$\sumn \w_n G(\thetahat(\w), \d_{n}) =  \zP$ for all $\w$ near $\onevec$.
+
+\vspace{1em}
+$\Rightarrow$
+By the \textbf{implicit function theorem}, we can write
+$\fracat{\partial\thetahat(\w)}{\partial\w_n}{\w=\onevec}$ as a linear system
+involving $G(\cdot, \cdot)$ and its derivatives.
+
+\pause
+\vspace{1em}
+$\Rightarrow$
+The $\infl_n$ are automatically computable from $\thetahat(\onevec)$ and
+software implementations of $G(\cdot, \cdot)$ and $\thetafun(\cdot)$
+using \textbf{automatic differentiation}.
+
+\begin{lstlisting}
+> import jax
+> import jax.numpy as np
+> def phi(theta):
+>     ... computations using np and theta ...
+>     return value
+>
+> # Exact gradient of phi (first term in the chain rule above):
+> jax.grad(phi)(theta_opt)
+\end{lstlisting}
+
+See \texttt{rgiordan/vittles} on \texttt{github}.
+
+\end{frame}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{How accurate is the approximation?}
+
+\begin{minipage}{0.45\textwidth}
+    By conrolling the curvature,
+    we can control the error in the linear approximation.
+\end{minipage}
+%
+\begin{minipage}{0.45\textwidth}
+\LinearGraph{1}
+\end{minipage}
+
+\vspace{1em}
+We provide \textbf{finite-sample theory}
+\citep{giordano2019swiss}
+showing that
+$\abs{\thetafun(\thetahat(\w)) - \thetafunlin(\w)} =
+O\left(\vnorm{\frac{1}{N}(\w - \onevec)}^2_2\right) =
+O\left(\alpha\right)$ as $\alpha \rightarrow 0$.
+
+\vspace{1em}
+
+\hrulefill
+
+\pause
+\vspace{1em}
+\textbf{But you don't need to rely on the theory to show non-robustness!}
+
+\vspace{1em}
+Our method returns which points to drop.  \textbf{Re-running once}
+without those points provides an \textbf{exact lower bound} on the worst-case
+sensitivity.
+
+% \pause
+% \vspace{1em}
+% (Let $\wdom$ denote weight vectors dropping $\alphan$ points, and
+% $\w^* := \mathrm{argsup}_{\w \in \wdom} \thetafunlin(\w)$.
+% Then $\thetafun(\w^*) \le \sup_{\w \in \wdom} \thetafun(\w)$.)
+%
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
