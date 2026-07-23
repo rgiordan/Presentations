@@ -38,9 +38,11 @@ mx_data %>%
     labels = c(-profit_break_vals, profit_break_vals) 
   ) +
   annotate("text", 
-           x = c(threshold + 100, -threshold - 2000),
-           y = c(50, 50), 
-           label = "Shaded regions are\nlog-transformed ", 
-           hjust = -0.1, vjust = 1, 
+        #    x = c(threshold + 100, -threshold - 2000),
+        #    y = c(50, 50), 
+           x = c(-threshold - 2000),
+           y = c(50), 
+           label = "Shaded regions are\nlog-transformed.\nSpikes at zero have been omitted.", 
+           hjust = 0, vjust = 1, 
            size = 2, color = "black") +
   theme(legend.position = "none")  # Hides all legends

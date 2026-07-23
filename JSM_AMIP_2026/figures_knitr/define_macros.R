@@ -11,13 +11,13 @@ DefineMacro <- function(macro_name, value, digits=3) {
 }
 
 
-DefineMacro("SimNumObs", sim_env$grid_list$num_obs, digits=0)
+DefineMacro("SimNumObs", sim_env$grid_list$num_obs)
 DefineMacro("SimTrueTheta", sim_env$grid_list$theta0, digits=1)
 
-DefineMacro("SimAccNumObs", sim_env$acc_list$num_obs, digits=0)
-DefineMacro("SimAccSigx", sim_env$acc_list$sig_x, digits=0)
-DefineMacro("SimAccSigeps", sim_env$acc_list$sig_eps, digits=0)
-DefineMacro("SimAccPercentMax", 100 * sim_env$acc_list$alpha_max, digits=0)
+DefineMacro("SimAccNumObs", sim_env$acc_list$num_obs)
+DefineMacro("SimAccSigx", sim_env$acc_list$sig_x)
+DefineMacro("SimAccSigeps", sim_env$acc_list$sig_eps)
+DefineMacro("SimAccPercentMax", 100 * sim_env$acc_list$alpha_max)
 
 
 mx_analysis_df <- filter(microcredit_refit_env$analysis_df, site == "Mexico")

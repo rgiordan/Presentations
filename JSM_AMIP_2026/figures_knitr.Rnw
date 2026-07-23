@@ -178,7 +178,7 @@ SetFullImageSize()
 
 \newcommand{\MxProfitHistogram}{
 <<mx-hist-cap>>=
-SetImageSize(aspect_ratio=base_aspect_ratio)
+SetImageSize(aspect_ratio=0.8 * base_aspect_ratio)
 @
 <<mx-hist, cache=coreset_cache, fig.show='hold'>>=
 source("figures_knitr/coresets/mx_histogram.R",
