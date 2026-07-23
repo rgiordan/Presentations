@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  23 JUL 2026 15:29
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  23 JUL 2026 15:35
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1747,28 +1747,28 @@ Overfull \hbox (24.12657pt too wide) in paragraph at lines 271--271
 
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-<figure/sim-refit-one-1.png, id=261, 397.485pt x 280.4076pt>
+<figure/sim-refit-one-1.png, id=261, 397.485pt x 186.9384pt>
 File: figure/sim-refit-one-1.png Graphic file (type png)
 <use figure/sim-refit-one-1.png>
 Package luatex.def Info: figure/sim-refit-one-1.png  used on input line 348.
-(luatex.def)             Requested size: 301.15164pt x 212.64133pt.
+(luatex.def)             Requested size: 301.15164pt x 141.6582pt.
  [28
 
 <./figure/sim-refit-one-1.png>]
-<figure/sim-refit-two-1.png, id=269, 397.485pt x 280.4076pt>
+<figure/sim-refit-two-1.png, id=269, 397.485pt x 186.9384pt>
 File: figure/sim-refit-two-1.png Graphic file (type png)
 <use figure/sim-refit-two-1.png>
 Package luatex.def Info: figure/sim-refit-two-1.png  used on input line 348.
-(luatex.def)             Requested size: 301.15164pt x 212.64133pt.
+(luatex.def)             Requested size: 301.15164pt x 141.6582pt.
  [29
 
 <./figure/sim-refit-two-1.png>])
 (./robustness.tex
-<figure/mx-hist-1.png, id=277, 397.485pt x 186.9384pt>
+<figure/mx-hist-1.png, id=277, 397.485pt x 280.4076pt>
 File: figure/mx-hist-1.png Graphic file (type png)
 <use figure/mx-hist-1.png>
 Package luatex.def Info: figure/mx-hist-1.png  used on input line 9.
-(luatex.def)             Requested size: 301.15164pt x 141.6582pt.
+(luatex.def)             Requested size: 301.15164pt x 212.64133pt.
  [30
 
 <./figure/mx-hist-1.png>]) (./conclusion.tex [31
@@ -1831,7 +1831,7 @@ c/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (35 pages, 513043 bytes).
+Output written on main.pdf (35 pages, 463997 bytes).
 
 PDF statistics: 472 PDF objects out of 1000 (max. 8388607)
  356 compressed objects within 4 object streams

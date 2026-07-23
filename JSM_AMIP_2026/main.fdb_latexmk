@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1784845784 "main.aux" "main.bbl" "main" 1784845786
+["bibtex main"] 1784845784 "main.aux" "main.bbl" "main" 1784846138
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibliography.bib" 1784742723 16808 53e6cbfd3a741cb3b271cfa0468ef14e ""
-  "main.aux" 1784845786 3575 06a43a16a8bbf674fa89cbf44f10a2dd "lualatex"
+  "main.aux" 1784846137 3575 06a43a16a8bbf674fa89cbf44f10a2dd "lualatex"
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1784845784 "main.tex" "main.pdf" "main" 1784845786
+["lualatex"] 1784846136 "main.tex" "main.pdf" "main" 1784846138
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1721332138 77648 635edc0fb9f622fbc9be2006018b3690 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc" 1732145088 77255 7f746d2a5545f020a416095cec8f6f1a ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmonolt10-bold.luc" 1740519547 77887 dedde80919eab63e9ae103795497ab41 ""
@@ -347,15 +347,15 @@
   "_reference_defs.tex" 1784742723 2963 8d1fffe8dd416923f0d364e18088850e ""
   "approximation.tex" 1784843194 8512 82ea00d9a2058073eb836d7c26ec4de9 ""
   "conclusion.tex" 1784742723 3134 fc534586e174b12bcc1a7717a6e3877d ""
-  "figure/mx-hist-1.png" 1784845778 89739 dfb981a4b28fc649dd1ce817910067ec ""
-  "figure/sim-refit-one-1.png" 1784845777 80842 77b1dd6565361356af4a0e601fa300fc ""
-  "figure/sim-refit-two-1.png" 1784845777 93646 bd551439122589d6be8677ae830ac88a ""
-  "figures_knitr.tex" 1784845778 5038 ae7a0453359ffad9951b14df9fe03592 ""
+  "figure/mx-hist-1.png" 1784846135 64334 4d78531827d8b5b95795aa550ec43b7d ""
+  "figure/sim-refit-one-1.png" 1784845885 70832 2c9e1fb920025fb8a308f9c608abc3c5 ""
+  "figure/sim-refit-two-1.png" 1784845886 79929 2c54319e7693e44436cb20654df4e104 ""
+  "figures_knitr.tex" 1784846136 5038 fea4ba6a772456a2bfbdb5987880254b ""
   "introduction.tex" 1784842827 3863 e332345169f8715cf8c8c259147f630e ""
-  "main.aux" 1784845786 3575 06a43a16a8bbf674fa89cbf44f10a2dd "lualatex"
+  "main.aux" 1784846137 3575 06a43a16a8bbf674fa89cbf44f10a2dd "lualatex"
   "main.bbl" 1784845784 2379 4ecc583f54e31e169bf465eed867ef4e "bibtex main"
-  "main.nav" 1784845786 1224 4195932e775e926c2e6f903fee7d03c9 "lualatex"
-  "main.out" 1784845785 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.nav" 1784846137 1224 4195932e775e926c2e6f903fee7d03c9 "lualatex"
+  "main.out" 1784846136 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   "main.tex" 1784843229 2385 0eec22a61f372e0e957745db64ef5f4e ""
   "robustness.tex" 1784845769 302 5ecb01f8d7ddc2fa04da09e1af594141 ""
   "static_figures/loo_weights_v2.png" 1784742723 7033 7421bd8fe3bae48f5c62f937e6d1ab99 ""
