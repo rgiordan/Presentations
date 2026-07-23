@@ -540,6 +540,8 @@ INPUT ./figures_knitr.tex
 INPUT ./figures_knitr.tex
 INPUT ./_reference_defs.tex
 INPUT ./_reference_defs.tex
+INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
+INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmonolt10-bold.luc
 INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
@@ -594,7 +596,6 @@ INPUT ./introduction.tex
 INPUT ./introduction.tex
 INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmsans12-regular.luc
 INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-bold.luc
-INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
@@ -698,6 +699,11 @@ INPUT ./figure/sim-refit-one-1.png
 INPUT ./figure/sim-refit-two-1.png
 INPUT ./figure/sim-refit-two-1.png
 INPUT ./figure/sim-refit-two-1.png
+INPUT ./robustness.tex
+INPUT ./robustness.tex
+INPUT ./figure/mx-hist-1.png
+INPUT ./figure/mx-hist-1.png
+INPUT ./figure/mx-hist-1.png
 INPUT ./conclusion.tex
 INPUT ./conclusion.tex
 INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc

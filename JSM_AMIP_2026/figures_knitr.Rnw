@@ -17,6 +17,7 @@ cash_cache <- TRUE && (!rerun_all)
 ohie_cache <- TRUE && (!rerun_all)
 microcredit_cache <- TRUE && (!rerun_all)
 mcmix_cache <- FALSE && (!rerun_all)
+coreset_cache <- FALSE && (!rerun_all)
 
 source("figures_knitr/initialize.R", echo=FALSE)
 @
@@ -169,6 +170,19 @@ SetImageSize(aspect_ratio=base_aspect_ratio / 1.8)
 source("figures_knitr/simulations/graphs_comb.R",
        echo=knitr_debug, print.eval=TRUE)
 print(plot1)
+SetFullImageSize()
+@
+}
+
+
+
+\newcommand{\MxProfitHistogram}{
+<<mx-hist-cap>>=
+SetImageSize(aspect_ratio=base_aspect_ratio / 1.5)
+@
+<<mx-hist, cache=coreset_cache, fig.show='hold'>>=
+source("figures_knitr/coresets/mx_histogram.R",
+       echo=knitr_debug, print.eval=TRUE)
 SetFullImageSize()
 @
 }

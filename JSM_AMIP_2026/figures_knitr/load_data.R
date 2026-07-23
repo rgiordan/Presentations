@@ -16,3 +16,5 @@ microcredit_env <- LoadIntoEnvironment(
 microcredit_refit_env <- LoadIntoEnvironment(
     file.path(data_path, "microcredit_fit_paths.Rdata"))
 
+coreset_env <- LoadIntoEnvironment(
+    file.path(data_path, "microcredit_coreset_data.Rdata"))
