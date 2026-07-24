@@ -1,0 +1,28 @@
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Do we identify ``the most important datapoints?''}
+
+\def\S{\mathcal{S}}
+Let $\S$ denote sets of data, $[N]$ denote all points, and $\delta(\S)$ the
+change induced when dropping $\S$.\\[1em]
+
+Informally, AMIP solves:
+$$
+\S_{AMIP} := \textrm{The smallest $\S$ with $\delta(\S) \ge \Delta$}
+$$
+
+Contrast this with the problem of finding a ``coreset'' \parencite{ting:2018:OptimalSubsamplingInfluence2018,chen:2024:CoresetMarkovChain2024}
+$$
+\begin{aligned}
+\S_{NON-CORE} :={}& \textrm{The largest $\S$ with $\delta(\S) \le \Delta$},\textrm{ with }\\
+\S_{CORE} :={}& [N] \setminus \S_{NON-CORE}.
+\end{aligned}
+$$
+
+Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different senses. 
+
+\end{frame}

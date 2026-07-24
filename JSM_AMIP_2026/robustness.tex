@@ -1,4 +1,9 @@
 
+
+\def\glim{G_\infty}
+\def\shift{\mathcal{E}}
+
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -79,7 +84,7 @@ T(\fhat) :={}& \theta\textrm{  such that  }\meann G(\theta, \d_n)  = 0\\
 % %
 % \begin{align*}
 % %
-% T'(F_0) \Delta = \int \infl(\x; F_0) \Delta(\dee d)
+% T'(F_0) \shift = \int \infl(\x; F_0) \shift(\dee d)
 % %
 % \end{align*}
 % %
@@ -111,21 +116,20 @@ T(\fhat) :={}& \theta\textrm{  such that  }\meann G(\theta, \d_n)  = 0\\
 
 \begin{frame}[t]{Distributional robustness}
 
-\def\glim{G_\infty}
 
 Let $T(F)$ denote our estimator of the causal effect of microcredit.\\[1em]
 
 Suppose Mexico's population is $\flim$ and our experiment gave us $\fhat$.\\
-But suppose we are interested in Bolivia, with population $\flim + \Delta$!
+But suppose we are interested in Bolivia, with population $\flim + \shift$!
 %
 \begin{align*}
-\textrm{Error} ={}& T(\fhat) - T(\flim + \Delta)\\
+\textrm{Error} ={}& T(\fhat) - T(\flim + \shift)\\
 ={}&
 \underbrace{T(\fhat) - T(\flim)}_{\textrm{Sampling variability }\rightarrow 0} + 
-\underbrace{T(\flim) - T(\flim + \Delta)}_{\textrm{Distribution shift } \ne 0} 
+\underbrace{T(\flim) - T(\flim + \shift)}_{\textrm{Distribution shift } \ne 0} 
 \end{align*}
 
-\textbf{How big can $\Delta$ be?}\\[1em]
+\textbf{How big can $\shift$ be?}\\[1em]
 
 \only<1>{
 Classical robustness mostly considers
@@ -146,33 +150,42 @@ Levy-Prohorov distance, etc.) \parencite{huber1981robust,hansen2008robustness}.\
 
 \begin{frame}[t]{Distributional robustness}
 
-\textbf{How big can $\Delta$ be?}
-Data dropping is simple notion of ``size'' that is
-\begin{itemize}
-    \item Easy to think about and 
-    \item Cognizant of the task at hand.
-\end{itemize}
-%
+\textbf{How big can $\shift$ be?}
+Data dropping gives a simple notion of ``size:''
 
+\textbf{Define} $\vnorm{\shift}$ = Proportion of points you need to drop to approximately
+produce a change in $T$ as large as $\shift$ does. 
+
+%  that is
+% \begin{itemize}
+%     \item Easy to think about and 
+%     \item Cognizant of the task at hand.
+% \end{itemize}
+%
 \begin{minipage}{0.47\textwidth}
 Define the ``perturbation--inducing proportion,''
 $$
-\alpha^*(\delta) = \inf\{\alpha: \textrm{AMIP}(\alpha) \ge \delta\},
+\alpha^*(\shift) = \inf\{\alpha: \textrm{AMIP}(\alpha) \ge \shift\},
 $$
-with $\alpha^*(\delta) = 0$ for $\delta = 0$ and $\infty$ if
+with $\alpha^*(\shift) = 0$ for $\shift = 0$ and $\infty$ if
 the set is empty.
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.42\textwidth}
 \SimRefitOne{}
 \end{minipage}
 
-Noting that $T(\flim + \Delta) - T(\flim) \approx \int \Delta(\d) \infl(\d) \flim(\dee \d)$,
+Noting that $T(\flim + \shift) - T(\flim) \approx \int \shift(\d) \infl(\d) \flim(\dee \d)$,
 define
 $$
-\vnorm{\Delta} := \alpha^*\left(  \int \Delta(\d) \infl(\d) \flim(\dee \d)\right).
+\vnorm{\shift} := \alpha^*\left(  \int \shift(\d) \infl(\d) \flim(\dee \d)\right).
 $$
-\textbf{Intepretation:} $\vnorm{\Delta}$ = Proportion of points you need to drop to approximately
-produce a change in $T$ as large as $\Delta$ does. 
+
+\begin{itemize}
+    \item Easy to compute (but only locally meaningful)
+    \item Non-negative, sub-additive, multiplicatively non-decreasing
+    \item Not a norm ($\Delta \ne 0$ can have $\vnorm{\Delta} = 0$) nor a
+    semi-norm (not symmetric, not homogeneous)
+\end{itemize}
 
 \end{frame}
 
