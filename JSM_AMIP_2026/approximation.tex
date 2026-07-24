@@ -336,13 +336,16 @@ We can use $\infl_n$ to form a Taylor series approximation:
 % Mexico example:
 
 % See \texttt{microcredit\_profit\_sandbox.R}.
-
 \begin{center}
 Checking the approximation for Mexico microcredit.
+\begin{minipage}{0.8\textheight}
+    \only<1>{\SimRefitOne{}}
+    \only<2->{\SimRefitTwo{}}
+\end{minipage}
 \end{center}
 
-% \includegraphics[width=0.9\textwidth]{static_figures/mx_refit_example}
-\only<1>{\SimRefitOne{}}
-\only<2>{\SimRefitTwo{}}
+In Theorem 1 of \citet{broderick:2025:automaticpart2}, we prove that
+the linear approximation is accurate for small \% dropped under
+standard asymptotic conditions.
 
 \end{frame}

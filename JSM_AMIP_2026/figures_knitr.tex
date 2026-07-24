@@ -30,10 +30,23 @@
 
 \newcommand{\CashTransfersResultsTable}{
 % \input{figures/cash_transfers_re_run_table.tex}
-\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `pivot\_wider()`:\\\#\# ! `id\_cols` can't select a column already selected by `names\_from`.\\\#\# i Column `metric` has already been selected.}}\end{kframe}
+\begin{table}\small 
+\begin{tabular}{|ccc|}
+\toprule
+ Original estimate (SE) & Refit estimate (SE)  & Observations dropped \\
+\midrule
+\midrule
+33.861 (4.468)* &  -9.416 (3.296)* &  986 = 9.37\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Cash transfers results (N = 10518) \citep{angelucci2009indirect} }
+\label{table:cash_transfers_re_run_table}
+\end{table}
+
+
 }
 
 %%%%%%%%%%%%%%%%%%%
@@ -49,9 +62,15 @@
  Original estimate (SE) & Refit estimate (SE)  & Observations dropped \\
 \midrule
 \midrule
-\begin{kframe}
+0.029 (0.005)* &  -0.009 (0.004)* &  224 = 0.96\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Medicaid profit results (N = 23361) \citep{finkelstein2012oregon} }
+\label{table:ohie_profit_results_reg}
+\end{table}
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `pivot\_wider()`:\\\#\# ! `id\_cols` can't select a column already selected by `names\_from`.\\\#\# i Column `metric` has already been selected.}}\end{kframe}
+
 }
 
 
@@ -60,10 +79,23 @@
 %
 \newcommand{\MicrocreditProfitResultsTable}{
 % \input{figures/microcredit_profit_re_run_table.tex}
-\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `pivot\_wider()`:\\\#\# ! `id\_cols` can't select a column already selected by `names\_from`.\\\#\# i Column `metric` has already been selected.}}\end{kframe}
+\begin{table}\small 
+\begin{tabular}{|ccc|}
+\toprule
+ Original estimate (SE) & Refit estimate (SE)  & Observations dropped \\
+\midrule
+\midrule
+-4.549 (5.879) &  7.030 (2.549)* &  15 = 0.09\%\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{ Microcredit Mexico results (N = 16560) \citep{angelucci2015microcredit}. }
+\label{table:mc_profit_results}
+\end{table}
+
+
 }
 %
 %
@@ -119,7 +151,7 @@
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
-{\centering \includegraphics[width=0.98\linewidth,height=0.461\linewidth]{figure/sim-refit-one-1} 
+{\centering \includegraphics[width=0.98\linewidth,height=0.692\linewidth]{figure/sim-refit-one-1} 
 
 }
 
@@ -131,7 +163,7 @@
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
-{\centering \includegraphics[width=0.98\linewidth,height=0.461\linewidth]{figure/sim-refit-two-1} 
+{\centering \includegraphics[width=0.98\linewidth,height=0.692\linewidth]{figure/sim-refit-two-1} 
 
 }
 

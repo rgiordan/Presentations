@@ -122,13 +122,13 @@ source(file.path(paper_directory,
 
 
 \newcommand{\SimRefitOne}{
-<<sim-refit-one, cache=sim_cache, fig.show='hold'>>=
+<<sim-refit-one, fig.align='center', cache=sim_cache, fig.show='hold'>>=
 print(plot1)
 @
 }
 
 \newcommand{\SimRefitTwo}{
-<<sim-refit-two, cache=sim_cache, fig.show='hold'>>=
+<<sim-refit-two, fig.align='center', cache=sim_cache, fig.show='hold'>>=
 print(plot2)
 SetFullImageSize()
 @

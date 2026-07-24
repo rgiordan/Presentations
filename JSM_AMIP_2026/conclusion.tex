@@ -87,18 +87,36 @@ Some of my work on other forms of robustness:
 \end{frame}
 
 
-\begin{frame}{References}
 
-\bibliographystyle{plainnat}
-% Hide the references header
-% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
-\begingroup
-\renewcommand{\section}[2]{}%
-{
-\tiny
-%\scriptsize
-\bibliography{bibliography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Conclusion (let's try that again)}
+
+\textbf{
+By defining \textit{MrP locally equivlanent weights}, we can rigorously provide
+analogues of many CW diagnostics for non-linear MrP estimators for model interrogation.\\[1em]
 }
-\endgroup
 
+(Similar ideas can to lead to actual checks of MrP model misspecification.  Coming soon...)
+
+\onslide<2->{
+
+\hrulefill\\
+
+\textbf{R package available at }\\
+\url{https://github.com/rgiordan/mrplew} 
+
+\textbf{Preprint at }\\
+\url{https://arxiv.org/abs/2606.04250} 
+
+}
+\end{frame}
+
+
+
+\begin{frame}{References}
+\renewcommand*{\bibfont}{\normalfont\tiny}
+\printbibliography[heading=none]
 \end{frame}
