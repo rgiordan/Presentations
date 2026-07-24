@@ -17,8 +17,7 @@ RefitAchieved <- function(beta0, beta_mzse0, beta_pzse0,
 
 FormatValues <- function(results_df) {
     results_df %>%
-        pivot_wider(id_cols=c(-metric),
-                    names_from=metric,
+        pivot_wider(names_from=metric,
                     values_from=value) %>%
         mutate(
             sig=(sign(param_pzse) == sign(param_mzse)),
@@ -37,8 +36,6 @@ FormatRefitTable <- function(results_df, base_df) {
             base_df %>% FormatValues(),
             by=c("param_name", "study_case"),
             suffix=c("_rerun", "_base"))
-
-    names(results_wide_df)
 
     # Don't bold successful reruns for the selected results shown here
     results_formatted_df <-
