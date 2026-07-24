@@ -7,9 +7,172 @@
 \begin{frame}{Distributional robustness}
 \MxProfitHistogram{}
 
-We are trying to estimate the difference in means in the MX profit data.
+We are trying to estimate the difference in means in the MX profit data.\\[1em]
 
-Why do we think we can do so with such a high-signal to noise ratio?
+Why do we think we can do so with such a high-signal to noise ratio?\\[1em]
 
-Only because $N = $\MxNobs is very large!  But this does not tell us about other distributions.
+Only because $N = $\MxNobs{} is very large!  We can learn the effect in MX
+with arbitrary accuracy --- but this does not tell us about other countries.
+
 \end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Distributional robustness}
+
+Connnect AMIP with classical robustness through \emph{statistical functionals}.
+%
+\begin{itemize}
+%
+\item True, unknown distribution function $\flim(d) = p(D \le d)$
+\item Empirical distribution function $\fhat(d) = \meann \ind{\d_n \le d}$
+\item A statistical functional $T(F)$ (takes in $F$, returns a number).
+%
+\end{itemize}
+
+Classical statistics estimates $T(\flim)$ with $T(\fhat)$.
+
+\onslide<2->{
+Sample means are an example:
+%
+\begin{align*}
+%
+T(\flim) :={}& \int \d \, \flim(\dee d)\\
+\quad\quad
+T(\fhat) :={}& \meann \d_n
+%
+\end{align*}
+%
+}
+
+\onslide<3->{
+Z-estimators are, too:
+%
+\begin{align*}
+%
+T(\flim) :={}& \theta\textrm{  such that  }\int G(\theta, \d) \flim(\dee d) = 0\\
+T(\fhat) :={}& \theta\textrm{  such that  }\meann G(\theta, \d_n)  = 0\\
+%
+\end{align*}
+%
+}
+
+% \only<4->{
+
+% The influence function is just the first term in a 
+% an (infinite-dimensional) Taylor series expansion.
+% }
+
+% Form an (infinite-dimensional) Taylor series expansion at some $F_0$:
+% %
+% \begin{align*}
+% %
+% T(F) = T(F_0) + T'(F_0) (F - F_0) + \mathrm{residual}.
+% %
+% \end{align*}
+% %
+% When the derivative operator takes the form of an integral
+% %
+% \begin{align*}
+% %
+% T'(F_0) \Delta = \int \infl(\x; F_0) \Delta(\dee d)
+% %
+% \end{align*}
+% %
+% then $\infl(\x; F_0)$ is known as the {\em influence function}.
+
+% {
+% Where to form the expansion? There are at least two reasonable choices:
+% %
+% \begin{itemize}
+% %
+% \item The limiting influence function $\infl(\x, \flim)$
+% \item The empirical influence function $\infl(\x, \fhat)$
+% %
+% \end{itemize}
+% %
+% }
+% }
+
+    
+\end{frame}
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Distributional robustness}
+
+\def\glim{G_\infty}
+
+Let $T(F)$ denote our estimator of the causal effect of microcredit.\\[1em]
+
+Suppose Mexico's population is $\flim$ and our experiment gave us $\fhat$.\\
+But suppose we are interested in Bolivia, with population $\flim + \Delta$!
+%
+\begin{align*}
+\textrm{Error} ={}& T(\fhat) - T(\flim + \Delta)\\
+={}&
+\underbrace{T(\fhat) - T(\flim)}_{\textrm{Sampling variability }\rightarrow 0} + 
+\underbrace{T(\flim) - T(\flim + \Delta)}_{\textrm{Distribution shift } \ne 0} 
+\end{align*}
+
+\textbf{How big can $\Delta$ be?}\\[1em]
+
+\only<1>{
+Classical robustness mostly considers
+distribution space neighborhoods (contamination neighborhoods,
+total variation distnace, KL divergence, Kolmogorov distance,
+Levy-Prohorov distance, etc.) \parencite{huber1981robust,hansen2008robustness}.\\[1em]
+
+\textbf{Can be hard for practitioners to think and talk about! }\\[1em] 
+
+(What is the Levy-Prohorov distance between MX and Bolivia?)
+}
+\end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Distributional robustness}
+
+\textbf{How big can $\Delta$ be?}
+Data dropping is simple notion of ``size'' that is
+\begin{itemize}
+    \item Easy to think about and 
+    \item Cognizant of the task at hand.
+\end{itemize}
+%
+
+\begin{minipage}{0.47\textwidth}
+Define the ``perturbation--inducing proportion,''
+$$
+\alpha^*(\delta) = \inf\{\alpha: \textrm{AMIP}(\alpha) \ge \delta\},
+$$
+with $\alpha^*(\delta) = 0$ for $\delta = 0$ and $\infty$ if
+the set is empty.
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\SimRefitOne{}
+\end{minipage}
+
+Noting that $T(\flim + \Delta) - T(\flim) \approx \int \Delta(\d) \infl(\d) \flim(\dee \d)$,
+define
+$$
+\vnorm{\Delta} := \alpha^*\left(  \int \Delta(\d) \infl(\d) \flim(\dee \d)\right).
+$$
+\textbf{Intepretation:} $\vnorm{\Delta}$ = Proportion of points you need to drop to approximately
+produce a change in $T$ as large as $\Delta$ does. 
+
+\end{frame}
+
