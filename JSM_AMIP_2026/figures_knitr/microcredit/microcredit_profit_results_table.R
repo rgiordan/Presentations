@@ -22,7 +22,7 @@ RenderSimpleLatexTable(
     label="mc_profit_results",
     caption=paste0(
         "Microcredit Mexico results (N = ", n_obs,
-        ") \\citep{angelucci2015microcredit}."
+        ") \\parencite{angelucci2015microcredit}."
     ))
 
     #

@@ -45,7 +45,7 @@ RenderSimpleLatexTable(
     table_df,
     label="cash_transfers_re_run_table",
     caption=paste0("Cash transfers results (N = ", n_obs,
-      ") \\citep{angelucci2009indirect}"))
+      ") \\parencite{angelucci2009indirect}"))
 
 # caption=paste0(
 #     "Cash transfers results for the final study period. ",

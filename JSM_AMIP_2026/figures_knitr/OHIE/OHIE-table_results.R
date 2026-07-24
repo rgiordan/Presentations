@@ -59,7 +59,7 @@ filter(table_df, method == "regression") %>%
     label="ohie_profit_results_reg",
     caption=paste0(
         "Medicaid profit results (N = ", n_obs,
-        ") \\citep{finkelstein2012oregon}")
+        ") \\parencite{finkelstein2012oregon}")
     )
 
     # caption=paste0(

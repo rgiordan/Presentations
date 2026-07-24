@@ -108,7 +108,7 @@ See \texttt{rgiordan/vittles} on \texttt{github}.
 
 \vspace{1em}
 We provide \textbf{finite-sample theory}
-\citep{giordano2019swiss}
+\parencite{giordano2019swiss}
 showing that
 $\abs{\thetafun(\thetahat(\w)) - \thetafunlin(\w)} =
 O\left(\vnorm{\frac{1}{N}(\w - \onevec)}^2_2\right) =
@@ -144,7 +144,7 @@ sensitivity.
 \begin{frame}{Selected related classical ideas}
 
 Our work is most closely related to ``infinitesimal robustness''
-\citep{hampel1974influence, hampel1986robustbook}, which is based on the
+\parencite{hampel1974influence, hampel1986robustbook}, which is based on the
 influence function, the first term in the Taylor series expansion
 of functionals of a distribution function.
 %
@@ -157,7 +157,7 @@ of functionals of a distribution function.
 \end{itemize}
 
 \vspace{1em} Our work is also related to the ``global robustness'' concept of a
-``breakdown point'' \citep{huber1981robust, huber:1983:notion}.
+``breakdown point'' \parencite{huber1981robust, huber:1983:notion}.
 %
 %\vspace{1em}
 \begin{itemize}
@@ -168,7 +168,7 @@ of functionals of a distribution function.
 \end{itemize}
 
 \vspace{1em} Our work shares some formal similarity with outlier detection
-\citep{cook1977detection, belsley2005regression}.
+\parencite{cook1977detection, belsley2005regression}.
 %
 \begin{itemize}
     \item We consider $O(N)$-sized sets rather than individual points.
@@ -298,18 +298,18 @@ Where to form the expansion? There are at least two reasonable choices:
 \item The limiting influence function (LIF) $\infl(\x, \flim)$
     \begin{itemize}
         \item Used in a lot of classical statistics
-            \citep{
+            \parencite{
                 mises1947asymptotic,
                 huber1981robust, hampel1986robustbook,
                 bickel1993semiparametric}
         \item Unobserved, asymptotic
         \item Requires careful functional analysis
-            \citep{reeds1976thesis}
+            \parencite{reeds1976thesis}
     \end{itemize}
 \item The empirical influence function (EIF) $\infl(\x, \fhat)$
     \begin{itemize}
         \item The basis of the present work
-            (also \citep{giordano2019swiss, giordano2019higherorder})
+            (also \parencite{giordano2019swiss, giordano2019higherorder})
         \item Computable, finite-sample
         \item Requires only finite-dimensional calculus
     \end{itemize}
@@ -393,9 +393,9 @@ $
 \textbf{Many variants are possible!}
 
 \begin{itemize}
-    \item Cross-validation \citep{giordano2019swiss}
-    \item Prior sensitivity in Bayesian nonparametrics \citep{giordano2021bnp}
-    \item Model sensitivity of MCMC output \citep{giordano2018covariances}
+    \item Cross-validation \parencite{giordano2019swiss}
+    \item Prior sensitivity in Bayesian nonparametrics \parencite{giordano2021bnp}
+    \item Model sensitivity of MCMC output \parencite{giordano2018covariances}
     \item Frequentist variances of MCMC posteriors (in progress)
 \end{itemize}
 
