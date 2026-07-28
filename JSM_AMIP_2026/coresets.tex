@@ -1,16 +1,18 @@
 
 
+\def\S{\mathcal{S}}
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{Do we identify ``the most important datapoints?''}
 
-\def\S{\mathcal{S}}
-Let $\S$ denote sets of data, $[N]$ denote all points, and $\delta(\S)$ the
-change induced when dropping $\S$.\\[1em]
 
-Informally, AMIP solves:
+Let $\S$ denote sets of data, $[N]$ denote all points, and $\delta(\S)$ the
+change induced when dropping $\S$.\\[3em]
+
+Informally, AMIP uses the influence function (IF) to solve:
 $$
 \S_{AMIP} := \textrm{The smallest $\S$ with $\delta(\S) \ge \Delta$}
 $$
@@ -22,8 +24,77 @@ $$
 \S_{CORE} :={}& [N] \setminus \S_{NON-CORE}.
 \end{aligned}
 $$
+%
+\vspace{2em}
 
 Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different senses. 
+\end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Do we identify ``the most important datapoints?''}
+
+\textbf{Bad idea:} Use the IF to drop a large \% of low-influence points.\\[1em]
+
+\centering
+\begin{minipage}{0.85\textwidth}
+\GreedyDrop{}
+\end{minipage}
+
+\textbf{Problem:} The IF is not accurate for large \% of dropped data.
+
+\end{frame}
+
+
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{frame}[t]{Do we identify ``the most important datapoints?''}
+
+% \textbf{Bad idea:} Use the IF to identify a coreset of high-influence points.\\[1em]
+
+% \centering
+% \begin{minipage}{0.85\textwidth}
+% \InfluentialKeep{}
+% \end{minipage}
+
+% \textbf{Problem:} The IF is not accurate for large \% of dropped data\\
+% \textbf{and} the most influential points are not selected to give
+% the original result.
+
+% \end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Do we identify ``the most important datapoints?''}
+
+\textbf{Better idea:} Use the IF to reach a coreset with ``gradient descent''.\\[1em]
+
+\centering
+\begin{minipage}{0.85\textwidth}
+\only<1>{\GDPath{}}
+% \only<3>{\GDRefit{}}
+\end{minipage}
+
+\onslide<1->{
+\textbf{Problem:} You have to re-run OLS at each step, and eventually
+run out of low-influence points.
+}
+
+\end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Do we identify ``the most important datapoints?''}
 
 \begin{itemize}
     \item $\S_{AMIP}$ is not, in general a good coreset

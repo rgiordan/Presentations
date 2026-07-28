@@ -176,6 +176,12 @@ SetFullImageSize()
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+% Coreset graphs
+
 \newcommand{\MxProfitHistogram}{
 <<mx-hist-cap>>=
 SetImageSize(aspect_ratio=0.8 * base_aspect_ratio)
@@ -186,3 +192,52 @@ source("figures_knitr/coresets/mx_histogram.R",
 SetFullImageSize()
 @
 }
+
+
+\newcommand{\GreedyDrop}{
+<<>>=
+SetImageSize(aspect_ratio=0.8 * base_aspect_ratio)
+@
+<<greedy-drop, cache=coreset_cache, fig.show='hold', fig.cap='MX profit analysis'>>=
+print(greedy_coreset_plot)
+SetFullImageSize()
+@
+}
+
+
+
+\newcommand{\InfluentialKeep}{
+<<>>=
+SetImageSize(aspect_ratio=0.8 * base_aspect_ratio)
+@
+<<influential-keep, cache=coreset_cache, fig.show='hold', fig.cap='MX profit analysis'>>=
+print(influential_coreset_plot)
+SetFullImageSize()
+@
+}
+
+
+
+\newcommand{\GDPath}{
+<<>>=
+SetImageSize(aspect_ratio=0.8 * base_aspect_ratio)
+@
+<<gd-path, cache=coreset_cache, fig.show='hold', fig.cap='MX profit analysis'>>=
+print(gd_plot)
+SetFullImageSize()
+@
+}
+
+
+
+
+\newcommand{\GDRefit}{
+<<>>=
+SetImageSize(aspect_ratio=0.8 * base_aspect_ratio)
+@
+<<gd-refit, cache=coreset_cache, fig.show='hold', fig.cap='MX profit analysis'>>=
+print(gd_refit_plot)
+SetFullImageSize()
+@
+}
+

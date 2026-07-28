@@ -1,21 +1,20 @@
-# Use this script to debug and edit the knit graphs without re-compiling in latex.
 
-#base_dir <- "/home/rgiordan/Documents/git_repos/AdversarialInfluenceWorkbench"
-base_dir <- "/home/rgiordan/Documents/git_repos/Presentations"
+PlotRefitDf <- function(refit_df) {
+  ggplot(refit_df, 
+         aes(x=regs, color=fit)) +
+    geom_point(aes(y=Estimate), position=position_dodge(width = 0.5)) +
+    geom_errorbar(aes(ymin=Estimate - 2 * se, ymax=Estimate + 2 * se),
+                  position=position_dodge(width = 0.5)) +
+    xlab("Regressor") + ylab("OLS estimate") +
+    scale_color_discrete(name="")
+}
 
-paper_directory <- file.path(base_dir, "JSM_AMIP_2026")
+greedy_coreset_plot <- PlotRefitDf(coreset_env$greedy_drop$refit_df) + 
+  ggtitle(sprintf(paste0(
+    "Effect of using the influence function to drop the\n ",
+    "%0.0f%% least influential datapoints"),
+    100 * coreset_env$greedy_drop$alpha))
 
-knitr_debug <- FALSE # Set to true to see error output
-cash_cache <- FALSE
-ohie_cache <- FALSE
-microcredit_cache <- FALSE
-
-setwd(paper_directory)
-source(file.path(paper_directory, "figures_knitr/initialize.R"))
-source(file.path(paper_directory, "figures_knitr/load_data.R"))
-
-source("figures_knitr/cash_transfers/cash_transfers_results_table.R",
-       echo=knitr_debug, print.eval=TRUE)
 
 influential_coreset_plot <- PlotRefitDf(coreset_env$influential_keep$refits_df) + 
   ggtitle(
@@ -25,15 +24,13 @@ influential_coreset_plot <- PlotRefitDf(coreset_env$influential_keep$refits_df) 
       100 * coreset_env$influential_keep$alpha)
   )
 
-
-ggplot(coreset_env$gradient_descent$descent_df) +
+gd_plot <- ggplot(coreset_env$gradient_descent$descent_df) +
   geom_point(aes(x=100 * (1 - data_prop), y=par)) +
   xlab("% of points dropped") +
   ylab("OLS estimate of treatment effect") +
   xlim(0, 100)
 
 gd_alpha <- min(coreset_env$gradient_descent$descent_df$data_prop)
-
 gd_refit_plot <- 
   PlotRefitDf(coreset_env$influential_keep$refits_df) + 
   ggtitle(

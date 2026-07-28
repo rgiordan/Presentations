@@ -18,3 +18,7 @@ microcredit_refit_env <- LoadIntoEnvironment(
 
 coreset_env <- LoadIntoEnvironment(
     file.path(data_path, "microcredit_coreset_data.Rdata"))
+
+
+# Define coreset plots
+source(file.path(paper_directory, "figures_knitr", "coresets/refits.R"))
