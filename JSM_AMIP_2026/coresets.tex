@@ -8,26 +8,40 @@
 
 \begin{frame}[t]{Do we identify ``the most important datapoints?''}
 
+\begin{exampleblock}{}
+``Unraveling the intricate connections between data and model predictions
+is critical in machine learning...''
+  \hspace*\fill{\small \textcite{hu:2024:MostInfluentialSubset}}
+\end{exampleblock}
 
+\onslide<2->{
 Let $\S$ denote sets of data, $[N]$ denote all points, and $\delta(\S)$ the
-change induced when dropping $\S$.\\[3em]
+change induced when dropping $\S$.\\[1em]
 
 Informally, AMIP uses the influence function (IF) to solve:
 $$
 \S_{AMIP} := \textrm{The smallest $\S$ with $\delta(\S) \ge \Delta$}
 $$
+}
 
-Contrast this with the problem of finding a ``coreset'' \parencite{ting:2018:OptimalSubsamplingInfluence2018,chen:2024:CoresetMarkovChain2024}
+\onslide<3->{
+Contrast this with the problem of finding a
+``coreset'' 
+\parencite{
+    feldman:2011:UnifiedFrameworkApproximating2011,
+    chen:2012:SuperSamplesKernelHerding2012,
+    ting:2018:OptimalSubsamplingInfluence2018,
+    chen:2024:CoresetMarkovChain2024}
 $$
 \begin{aligned}
-\S_{NON-CORE} :={}& \textrm{The largest $\S$ with $\delta(\S) \le \Delta$},\textrm{ with }\\
-\S_{CORE} :={}& [N] \setminus \S_{NON-CORE}.
+\S_{CORE} :={}& \textrm{The smallest $\S$ with $\delta([N] \setminus \S) \le \Delta$}.
 \end{aligned}
 $$
 %
-\vspace{2em}
+\vspace{1em}
 
 Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different senses. 
+}
 \end{frame}
 
 
@@ -39,12 +53,14 @@ Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different sens
 
 \textbf{Bad idea:} Use the IF to drop a large \% of low-influence points.\\[1em]
 
+\onslide<2->{
 \centering
 \begin{minipage}{0.85\textwidth}
 \GreedyDrop{}
 \end{minipage}
 
 \textbf{Problem:} The IF is not accurate for large \% of dropped data.
+}
 
 \end{frame}
 
@@ -76,34 +92,17 @@ Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different sens
 
 \textbf{Better idea:} Use the IF to reach a coreset with ``gradient descent''.\\[1em]
 
+\onslide<2->{
 \centering
 \begin{minipage}{0.85\textwidth}
-\only<1>{\GDPath{}}
+\GDPath{}
 % \only<3>{\GDRefit{}}
 \end{minipage}
 
 \onslide<1->{
-\textbf{Problem:} You have to re-run OLS at each step, and eventually
+\textbf{Problem:} You have to re-fit at each step, and eventually
 run out of low-influence points.
 }
-
-\end{frame}
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Do we identify ``the most important datapoints?''}
-
-\begin{itemize}
-    \item $\S_{AMIP}$ is not, in general a good coreset
-    \item The influence function is unreliable for large $\alpha$, and
-          so is insufficient to identify $\S_{NON-CORE}$
-\end{itemize}
-
-Some authors use the influence function to perform \emph{gradient descent}
-to identify coresets \parencite{borsos:2020:CoresetsBilevelOptimization2020,ting:2018:OptimalSubsamplingInfluence2018}.
-
+}
 
 \end{frame}

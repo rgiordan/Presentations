@@ -151,39 +151,37 @@ Levy-Prohorov distance, etc.) \parencite{huber1981robust,hansen2008robustness}.\
 \begin{frame}[t]{Distributional robustness}
 
 \textbf{How big can $\shift$ be?}
-Data dropping gives a simple notion of ``size:''
+Data dropping gives a simple notion of ``size:''\\[1em]
 
-\textbf{Define} $\vnorm{\shift}$ = Proportion of points you need to drop to approximately
-produce a change in $T$ as large as $\shift$ does. 
+\textbf{Define} $\vnorm{\shift}$ = Proportion of points you need to drop to
+produce a local change in $T$ as large as $\shift$ does. 
 
-%  that is
-% \begin{itemize}
-%     \item Easy to think about and 
-%     \item Cognizant of the task at hand.
-% \end{itemize}
-%
-\begin{minipage}{0.47\textwidth}
-Define the ``perturbation--inducing proportion,''
-$$
-\alpha^*(\shift) = \inf\{\alpha: \textrm{AMIP}(\alpha) \ge \shift\},
-$$
-with $\alpha^*(\shift) = 0$ for $\shift = 0$ and $\infty$ if
-the set is empty.
-\end{minipage}
-\begin{minipage}{0.42\textwidth}
+% \begin{minipage}{0.47\textwidth}
+% Define the ``perturbation--inducing proportion,''
+% $$
+% \alpha^*(\shift) = \inf\{\alpha: \textrm{AMIP}(\alpha) \ge \shift\},
+% $$
+% with $\alpha^*(\shift) = 0$ for $\shift = 0$ and $\infty$ if
+% the set is empty.
+% \end{minipage}
+{
+\begin{center}
+\begin{minipage}{0.8\textwidth}
 \SimRefitOne{}
 \end{minipage}
+\end{center}
+}
 
-Noting that $T(\flim + \shift) - T(\flim) \approx \int \shift(\d) \infl(\d) \flim(\dee \d)$,
-define
-$$
-\vnorm{\shift} := \alpha^*\left(  \int \shift(\d) \infl(\d) \flim(\dee \d)\right).
-$$
+% Noting that $T(\flim + \shift) - T(\flim) \approx \int \shift(\d) \infl(\d) \flim(\dee \d)$,
+% define
+% $$
+% \vnorm{\shift} := \alpha^*\left(  \int \shift(\d) \infl(\d) \flim(\dee \d)\right).
+% $$
 
 \begin{itemize}
-    \item Easy to compute (but only locally meaningful)
     \item Non-negative, sub-additive, multiplicatively non-decreasing
-    \item Not a norm ($\Delta \ne 0$ can have $\vnorm{\Delta} = 0$) nor a
+    \item Easy to compute (but only locally meaningful)
+    \item Not a norm ($\shift \ne 0$ can have $\vnorm{\shift} = 0$) nor a
     semi-norm (not symmetric, not homogeneous)
 \end{itemize}
 

@@ -13,11 +13,13 @@
 a small proportion of your data.
 
 \pause \item We can quickly and automatically find an approximate influential
-set which is accurate for small sets.
+set which is accurate for small sets in well-behaved problems.
 
-\pause \item Data dropping robustness is principally determined by the
-signal to noise ratio, and captures sensitivity distinct from sampling
-and gross error sensitivity.
+\pause \item Data dropping is not a metric on distributions, but it
+can define a notion of ``size'' of a distribution shift.
+
+\pause \item Influential points are not a coreset, but the influence
+function can be used like a gradient to help find coresets.
 
 \end{itemize}
 
@@ -35,10 +37,11 @@ and gross error sensitivity.
 \footnotesize
 
 % {\bf A workshop paper: }\newline
-Tamara Broderick, Ryan Giordano, Rachael Meager
-(alphabetical authors) \\
+Ryan Giordano, Rafe Meager, Tamara Broderick
+(Giordano and Meager are joint first authors) \\
 ``An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data Change Conclusions?''
 \newline {\color{blue}\url{https://arxiv.org/abs/2011.14999}}
+\parencite{broderick:2025:automaticpart1,broderick:2025:automaticpart2}
 
 \hrulefill
 
@@ -63,56 +66,13 @@ Related software on \texttt{github}:
 \begin{itemize}
 \item \href{https://github.com/rgiordan/zaminfluence}
 {rgiordan/zaminfluence (for \texttt{R})}
-\item \href{https://github.com/rgiordan/vittles}
-{rgiordan/vittles (for \texttt{Python})}
 \end{itemize}
 
 \hrulefill
 
-Some of my work on other forms of robustness:
-%
-%\vspace{1em}
-\begin{itemize}
-    \item Prior sensitivity in Bayesian nonparametrics
-        \parencite{giordano2021bnp}
-    \item Approximate cross-validation (and other reweightings)
-        \parencite{giordano2019swiss, giordano2019higherorder}
-    \item Covariances and prior sensitivity for mean field VB
-        \parencite{giordano2015lrvbnips, giordano2018covariances}
-    \item Model sensitivity of MCMC output \parencite{giordano2018covariances}
-    \item Frequentist variances of MCMC posteriors (in progress)
-\end{itemize}
-
-%\vspace{-0.5em}
 \end{frame}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Conclusion (let's try that again)}
-
-\textbf{
-By defining \textit{MrP locally equivlanent weights}, we can rigorously provide
-analogues of many CW diagnostics for non-linear MrP estimators for model interrogation.\\[1em]
-}
-
-(Similar ideas can to lead to actual checks of MrP model misspecification.  Coming soon...)
-
-\onslide<2->{
-
-\hrulefill\\
-
-\textbf{R package available at }\\
-\url{https://github.com/rgiordan/mrplew} 
-
-\textbf{Preprint at }\\
-\url{https://arxiv.org/abs/2606.04250} 
-
-}
-\end{frame}
 
 
 
