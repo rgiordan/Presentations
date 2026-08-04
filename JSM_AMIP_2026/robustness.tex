@@ -29,7 +29,8 @@ with arbitrary accuracy --- but this does not tell us about other countries.
 
 \begin{frame}[t]{Distributional robustness}
 
-Connnect AMIP with classical robustness through \emph{statistical functionals}.
+Formalization of distributional robustness:
+% Connnect AMIP with classical robustness through \emph{statistical functionals}.
 %
 \begin{itemize}
 %
@@ -121,9 +122,10 @@ Let $T(F)$ denote our estimator of the causal effect of microcredit.\\[1em]
 
 Suppose Mexico's population is $\flim$ and our experiment gave us $\fhat$.\\
 But suppose we are interested in Bolivia, with population $\flim + \shift$!
+\pause
 %
 \begin{align*}
-\textrm{Error} ={}& T(\fhat) - T(\flim + \shift)\\
+\textrm{Error for Bolivia} ={}& T(\fhat) - T(\flim + \shift)\\
 ={}&
 \underbrace{T(\fhat) - T(\flim)}_{\textrm{Sampling variability }\rightarrow 0} + 
 \underbrace{T(\flim) - T(\flim + \shift)}_{\textrm{Distribution shift } \ne 0} 
@@ -131,16 +133,22 @@ But suppose we are interested in Bolivia, with population $\flim + \shift$!
 
 \textbf{How big can $\shift$ be?}\\[1em]
 
-\only<1>{
+\only<3->{
 Classical robustness mostly considers
 distribution space neighborhoods (contamination neighborhoods,
-total variation distnace, KL divergence, Kolmogorov distance,
+total variation distance, KL divergence, Kolmogorov distance,
 Levy-Prohorov distance, etc.) \parencite{huber1981robust,hansen2008robustness}.\\[1em]
-
+}
+\onslide<4->{
 \textbf{Can be hard for practitioners to think and talk about! }\\[1em] 
 
-(What is the Levy-Prohorov distance between MX and Bolivia?)
+(What is the Levy-Prohorov distance between MX and Bolivia?)\\[1em]
+
+\onslide<5->{
+    Note that you can't get Bolivia by dropping points from Mexico, either.
 }
+}
+
 \end{frame}
 
 
@@ -154,7 +162,9 @@ Levy-Prohorov distance, etc.) \parencite{huber1981robust,hansen2008robustness}.\
 Data dropping gives a simple notion of ``size:''\\[1em]
 
 \textbf{Define} $\vnorm{\shift}$ = Proportion of points you need to drop to
-produce a local change in $T$ as large as $\shift$ does. 
+produce a local change in $T$ as large as that produced by $\shift$. 
+
+\pause
 
 % \begin{minipage}{0.47\textwidth}
 % Define the ``perturbation--inducing proportion,''
@@ -178,9 +188,12 @@ produce a local change in $T$ as large as $\shift$ does.
 % \vnorm{\shift} := \alpha^*\left(  \int \shift(\d) \infl(\d) \flim(\dee \d)\right).
 % $$
 
+\pause
+
 \begin{itemize}
-    \item Non-negative, sub-additive, multiplicatively non-decreasing
+    \item Easy to think about
     \item Easy to compute (but only locally meaningful)
+    \item Non-negative, sub-additive, multiplicatively non-decreasing
     \item Not a norm ($\shift \ne 0$ can have $\vnorm{\shift} = 0$) nor a
     semi-norm (not symmetric, not homogeneous)
 \end{itemize}

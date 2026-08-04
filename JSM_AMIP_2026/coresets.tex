@@ -18,7 +18,7 @@ is critical in machine learning...''
 Let $\S$ denote sets of data, $[N]$ denote all points, and $\delta(\S)$ the
 change induced when dropping $\S$.\\[1em]
 
-Informally, AMIP uses the influence function (IF) to solve:
+Informally, we use the influence function (IF) to solve:
 $$
 \S_{AMIP} := \textrm{The smallest $\S$ with $\delta(\S) \ge \Delta$}
 $$
@@ -26,7 +26,7 @@ $$
 
 \onslide<3->{
 Contrast this with the problem of finding a
-``coreset'' 
+``coreset:''\\ 
 \parencite{
     feldman:2011:UnifiedFrameworkApproximating2011,
     chen:2012:SuperSamplesKernelHerding2012,
@@ -38,9 +38,11 @@ $$
 \end{aligned}
 $$
 %
-\vspace{1em}
-
+%\vspace{1em}
+%
+\onslide<4->{
 Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different senses. 
+}
 }
 \end{frame}
 
@@ -103,6 +105,9 @@ Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different sens
 \textbf{Problem:} You have to re-fit at each step, and eventually
 run out of low-influence points.
 }
+
+(See also \textcite{ting:2018:OptimalSubsamplingInfluence2018} for another way to use
+the IF for coreset construction.)
 }
 
 \end{frame}
