@@ -64,6 +64,11 @@ Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different sens
 \textbf{Problem:} The IF is not accurate for large \% of dropped data.
 }
 
+\onslide<3->{
+  There are other ways to use the IF for coreset construction, e.g.~\textcite{ting:2018:OptimalSubsamplingInfluence2018}.
+}
+
+
 \end{frame}
 
 
@@ -85,29 +90,3 @@ Both $\S_{AMIP}$ and $\S_{CORE}$ are ``important points,'' but in different sens
 % the original result.
 
 % \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Do we identify ``the most important datapoints?''}
-
-\textbf{Better idea:} Use the IF to reach a coreset with ``gradient descent''.\\[1em]
-
-\onslide<2->{
-\centering
-\begin{minipage}{0.85\textwidth}
-\GDPath{}
-% \only<3>{\GDRefit{}}
-\end{minipage}
-
-\onslide<1->{
-\textbf{Problem:} You have to re-fit at each step, and eventually
-run out of low-influence points.
-}
-
-(See also \textcite{ting:2018:OptimalSubsamplingInfluence2018} for another way to use
-the IF for coreset construction.)
-}
-
-\end{frame}

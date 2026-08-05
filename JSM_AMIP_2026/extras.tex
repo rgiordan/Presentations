@@ -14,6 +14,31 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Do we identify ``the most important datapoints?''}
+
+\textbf{Better idea:} Use the IF to reach a coreset with ``gradient descent''.\\[1em]
+
+\onslide<2->{
+\centering
+\begin{minipage}{0.85\textwidth}
+\GDPath{}
+% \only<3>{\GDRefit{}}
+\end{minipage}
+
+\onslide<1->{
+\textbf{Problem:} You have to re-fit at each step, and eventually
+run out of low-influence points.
+}
+
+
+}
+
+\end{frame}
+
 
 
 
