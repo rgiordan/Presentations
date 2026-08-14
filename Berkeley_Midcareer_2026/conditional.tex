@@ -1,0 +1,57 @@
+\begin{frame}{Marginal vs Conditional variances}
+
+\vspace{-1em}
+\begin{align*}
+%
+y_n | r_n, g_n \iid{}& \mathrm{Poisson}(\exp(\theta r_n + \log \z_{g_n}))
+    & n=1,\ldots,N\\
+z_g \iid{}& \mathrm{Gamma}(25, 2.5) & g=1,\ldots,G\\
+g_n \iid{}& \mathrm{Categorical}(1,\ldots,G)
+\textrm{, }r_n \iid \mathrm{Normal}(3, 1)
+%
+\end{align*}
+%
+
+\begin{tabular}{|l|c|c|}
+\hline
+    & Conditional   & Marginal \\ \hline
+Exchangeable unit ($\x$):
+    & $\x_n = \{y_n, r_n, g_n\}$
+    & $\x_g = \{y_n, r_n : g_n = g \}$\\ \hline
+Units $\x$ are IID given:
+    & $\theta, \z$
+    & $\theta$ \\ \hline
+Influence score ($\infl$):
+    & $\cov{p(\theta, \z \vert \xvec)}{\theta, \log p(\x_n \vert \theta, \z)}$
+    & $\cov{p(\theta \vert \xvec)}{\theta, \log p(\x_g \vert \theta)}$.\\ \hline
+\end{tabular}
+
+\pause
+\vspace{1em}
+For marginal variances, $\log p(\x_g \vert \theta)$ is typically unavailable
+from MCMC.  \pause However,
+%
+\begin{align*}
+%
+\cov{p(\theta, \z \vert \xvec)}{\theta, \log p(\x_g, \z \vert \theta)}
+={}&
+\cov{p(\theta \vert \xvec)}
+    {\theta, \expect{p(\z \vert \theta, \xvec)}
+                    {\log p(\x_g, \z \vert \theta)}}
+    %& \textrm{(Total variance)}
+\\={}&
+\cov{p(\theta \vert \xvec)}
+    {\theta, \expect{p(\z_g \vert \theta, \x_g)}
+                    {\log p(\x_g \vert \theta) +
+                     \log p(\z_g \vert \theta, \x_g)}}
+    %& \textrm{(Bayes)}
+\\\approx{}&
+\cov{p(\theta \vert \xvec)}{\theta, \log p(\x_g \vert \theta)},
+%
+\end{align*}
+%
+when the posterior entropy $\expect{p(\z_g \vert \theta, \x_g)}{\log p(\z_g
+\vert \theta, \x_g)}$ is small.
+
+
+\end{frame}

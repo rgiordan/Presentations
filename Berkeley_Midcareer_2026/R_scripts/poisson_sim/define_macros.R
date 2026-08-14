@@ -1,0 +1,5 @@
+DefineMacro("reNumSims", min(re_sim_env$save_list$num_sims), digits=0)
+DefineMacro("reNumBoots", min(re_sim_env$save_list$num_boots), digits=0)
+DefineMacro("reThetaTrue", min(re_sim_env$save_list$theta_true), digits=0)
+DefineMacro("reZPriorMean", min(re_sim_env$save_list$z_mean), digits=0)
+DefineMacro("reZPriorSD", min(re_sim_env$save_list$z_sd), digits=0)

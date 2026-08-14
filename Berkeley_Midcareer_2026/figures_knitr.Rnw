@@ -1,0 +1,345 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not edit the TeX file your work
+% will be overwritten.  Edit the RnW
+% file instead.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<set_single_column, echo=FALSE>>=
+# We can't use the for_arxiv toggle because knitr processes before main is
+# run.  So set the appropriate variable here.
+single_column <- TRUE       # for the arxiv
+#single_column <- FALSE      # for a two-column conference paper.
+@
+
+<<setup, include=FALSE, cache=FALSE>>=
+knitr_debug <- FALSE # Set to true to see error output
+knitr_cache <- FALSE # Set to true to cache knitr output for this analysis.
+
+cache_arm <- FALSE && knitr_cache
+cache_pilots <- FALSE && knitr_cache
+cache_bats <- FALSE && knitr_cache
+cache_potus <- FALSE && knitr_cache
+cache_nuisance <- FALSE && knitr_cache
+cache_singular <- FALSE && knitr_cache
+
+source("R_scripts/initialize.R", echo=FALSE)
+@
+
+
+<<load_data>>=
+source("R_scripts/ARM/load_data.R")
+source("R_scripts/ARM/load_pilots_data.R")
+source("R_scripts/BPA/load_data.R")
+source("R_scripts/election/load_data.R")
+source("R_scripts/poisson_sim/load_data.R")
+source("R_scripts/singular_example/load_data.R")
+@
+
+<<define_macros, results="asis">>=
+source("R_scripts/ARM/define_macros.R")
+source("R_scripts/ARM/define_pilots_macros.R")
+source("R_scripts/BPA/define_macros.R")
+source("R_scripts/election/define_macros.R")
+source("R_scripts/poisson_sim/define_macros.R")
+source("R_scripts/singular_example/define_macros.R")
+@
+
+
+
+\def\ARMTable{
+\begin{table}[h]
+<<arm_model_table, cache=cache_arm, results='asis'>>=
+source("R_scripts/ARM/model_table.R", echo=knitr_debug, print.eval=TRUE)
+@
+\caption{Models from \cite{gelman:2006:arm}\tablabel{arm_models}}
+\end{table}
+}
+
+
+\def\ARMGraphZ{
+%
+<<graph_fig_cap1>>=
+figcap <- paste(
+    "The distribution of the z-statistics $\\zdiff$.  ",
+    "Red lines indicate the boundaries of a normal test for significance ",
+    "with level $0.1$, and ``Rejected'' counts the number of covariances ",
+    "in the rejection region.  ",
+    "Log scale parameters include all variances or covariances that involve ",
+    "at least one log scale parameters.",
+    sep="")
+SetFullImageSize()
+@
+<<relerr_graph, cache=cache_arm, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/ARM/z_score_graph.R", echo=knitr_debug, print.eval=TRUE)
+@
+}
+
+
+\def\ARMGraphDiff{
+%
+<<graph_fig_cap2>>=
+figcap <- paste(
+    "The distribution of the relative errors.  ",
+    "Log scale parameters include all variances or covariances that involve ",
+    "at least one log scale parameters.",
+    sep="")
+SetFullImageSize()
+@
+<<normerr_graph, cache=cache_arm, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/ARM/standardized_difference_graph.R", echo=knitr_debug, print.eval=TRUE)
+@
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\PilotsIntervalsGraph{
+<<graph_fig_cap3>>=
+figcap <- paste(
+    "Means and standard errors for the pilots data. ",
+    "Note that one may make different decisions about the evidence ",
+    "when using the frequentist versus the Bayesian ",
+    "credible intervals, particularly in the first panel.",
+    sep="")
+SetFullImageSize()
+@
+<<interval_graph, cache=cache_pilots, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/ARM/arm_pilots_interval_comparison_graph.R", echo=knitr_debug, print.eval=TRUE)
+@
+}
+
+
+\def\PilotsSEGraph{
+<<graph_fig_cap4>>=
+    figcap <- paste(
+    "Standard errors (square root of variance estimates / $N$) for the pilots data.",
+    sep="")
+SetFullImageSize()
+@
+<<width_graph, cache=cache_pilots, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/ARM/arm_pilots_se_comparison_graph.R", echo=knitr_debug, print.eval=TRUE)
+@
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\BatsData{
+<<graph_fig_cap5>>=
+figcap <- paste(
+    "The ragged array counting the number of bats at re-observed a ",
+    "certain number of time periods after each time period.",
+    sep="")
+SetShortImageSize()
+@
+<<bats_data, cache=cache_bats, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/BPA/data_graph.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+%
+}
+
+
+
+\def\BatsResults{
+<<graph_fig_cap6>>=
+figcap <- paste(
+    "Comparison between $\\gcovbayeshat$, $\\gcovijhat$, and $\\gcovboothat$ ",
+    "for the Leisleri Bats dataset.  ",
+    "The first row shows the diagonal entries (variances), and the second row ",
+    "shows the off-diagonal entries (covariances).  Error bars are ",
+    "$2 \\sebayes$, $2 \\seij$, and $2 \\seboot$, respectively.  ",
+    "Note that the scales of the y axes are all different to allow for joint ",
+    "plotting.",
+    sep="")
+SetFullImageSize()
+@
+<<bats_result, cache=cache_bats, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/BPA/result_graph.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Broken --- missing predictions dataframe
+% \def\POTUSData{
+% <<graph_fig_cap7>>=
+% figcap <- paste(
+%     "Some real data. ",
+%     "of the IJ and simulation, frequentist error.",
+%     sep="")
+% SetShortImageSize()
+% @
+% <<election_data, cache=cache_potus, fig.show='hold', fig.cap=figcap>>=
+% source("R_scripts/election/data_graph.R",
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }
+
+
+\def\POTUSStatesGraph{
+
+<<graph_fig_cap8>>=
+figcap <- paste(
+    "Selected for the national vote and the two states in which the IJ ",
+    "performed worst and best.  Note the log10 scale of the y-axis.  ",
+    "The upper and lower extent of the error bars were computed using ",
+    "$2 \\seij$, $2 \\sebayes$, and $2 \\seboot$ before transforming by ",
+    "log10 for plotting.",
+    sep="")
+SetShortImageSize()
+@
+<<election_result, cache=cache_potus, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/election/result_graph.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+%
+}
+
+\def\POTUSScatterGraph{
+<<graph_fig_cap9>>=
+figcap <- paste(
+    "Scatterplot of the diagonals of $\\gcovbayeshat$, $\\gcovijhat$, and ",
+    "$\\gcovboothat$ for all the states except DC.  ",
+    "Note the log10 scale of the y-axis.  ",
+    "The extent of the confidence ellipses (shown in gray) were computed using ",
+    "$2 \\seij$, $2 \\sebayes$, and $2 \\seboot$ before transforming by ",
+    "log10 for plotting.",
+    sep="")
+SetShortImageSize()
+@
+<<election_state_result, cache=cache_potus, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/election/all_states_result_graph.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+%
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\SingularResultsGraph{
+<<graph_fig_cap12>>=
+figcap <- paste(
+    "The difference from the simulation, IJ, and Bayesian covariances. ",
+    "Standard include variation due to both Monte Carlo and, in the case ",
+    "of the IJ and simulation, frequentist error.",
+    sep="")
+SetShortImageSize()
+@
+<<simple_sim_result, cache=cache_singular, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/singular_example/result_graph.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% <<sim_ar_vars>>=
+% sim_ar <- 1.
+% sim_img_over_legend <- 2
+% sim_r_width <- 2.7
+% @
+
+\newcommand{\PoissonREGraph}{
+<<graph_fig_cap13>>=
+SetImageSize(aspect_ratio=10/10)
+figcap <- paste(
+    "The error of the IJ and bootstrap covariances for different values of ",
+    "$N$ and $G$.  The y-axis shows the difference between $N (V - \\hat{V}_{\\mathrm{sim}})$, where $V$ is either $\\gcovijhat$ or $\\gcovboothat$.",
+    sep="")
+@
+<<poisson_re_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+source("R_scripts/poisson_sim/comparison_graph.R",
+       echo=knitr_debug, print.eval=TRUE)
+@
+}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Presentation graphs
+
+
+% \newcommand{\LowDimAccuracyGraph}{
+% %<<mult_path, cache=cache, fig.show='hold', fig.cap=fig_cap>>=
+% <<lowdim_accuracy, cache=knitr_cache, fig.show='hold'>>=
+
+% bclt_df <- df %>%
+%     filter(!as.logical(is_cond), num_obs == num_g)
+
+% num_obs <- 800
+% ggplot(bclt_df %>% filter(num_obs == !!num_obs)) +
+%     geom_point(aes(x=diff_refit, diff_pred)) +
+%     geom_abline(aes(slope=1, intercept=0)) +
+%     xlab(TeX("Actual difference in $E\\[\\gamma | X\\]$")) +
+%     ylab(TeX("Linear approximation")) +
+%     ggtitle(sprintf(paste0(
+%         "Negative Binomial model \n",
+%         "leaving out single datapoints with N = %d"
+%         ), num_obs))
+% @
+% }
+
+
+
+% \newcommand{\HighDimAccuracyGraph}{
+% %<<mult_path, cache=cache, fig.show='hold', fig.cap=fig_cap>>=
+% <<highdim_accuracy, cache=knitr_cache, fig.show='hold'>>=
+
+% nonbclt_df <- df %>%
+%     filter(as.logical(is_cond), num_obs == num_g)
+
+% num_obs <- 800
+% ggplot(nonbclt_df %>% filter(num_obs == !!num_obs)) +
+%     geom_point(aes(x=diff_refit, diff_pred)) +
+%     geom_abline(aes(slope=1, intercept=0)) +
+%     xlab(TeX("Actual difference in $E\\[\\gamma | X\\]$")) +
+%     ylab(TeX("Linear approximation")) +
+%     ggtitle(sprintf(paste0(
+%         "Poisson random effect model \n",
+%         "leaving out single datapoints with N = %d"
+%         ), num_obs))
+% @
+% }
+
+
+
+% \newcommand{\ElectionResultsGlobal}{
+% <<graph_fig_cap2_presentation>>=
+% SetSlideImageSize(aspect_ratio=1.2, width=0.98)
+% @
+% <<election_result_presentation, cache=knitr_cache, fig.show='hold'>>=
+% source(file.path(r_script_dir, "election/result_national_graph.R"),
+%        echo=knitr_debug, print.eval=TRUE)
+% @
+% }

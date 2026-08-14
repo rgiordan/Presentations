@@ -1,0 +1,18 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Giordano and Broderick(2023)]{giordano:2023:bayesij}
+R.~Giordano and T.~Broderick.
+\newblock The {Bayesian} infinitesimal jackknife for variance.
+\newblock \emph{arXiv preprint arXiv:2305.06466}, 2023.
+
+\bibitem[Kleijn and Van~der Vaart(2012)]{kleijn:2012:bvm}
+B.~Kleijn and A.~Van~der Vaart.
+\newblock The {B}ernstein-von-{M}ises theorem under misspecification.
+\newblock \emph{Electronic Journal of Statistics}, 6:\penalty0 354--381, 2012.
+
+\end{thebibliography}
