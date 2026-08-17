@@ -14,3 +14,5 @@ source(file.path(base_dir, "R_scripts/logistic_otto_sim/load_data.R"))
 source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_histogram_plots.R"))
 
 
+source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_shift_plots.R"))
+

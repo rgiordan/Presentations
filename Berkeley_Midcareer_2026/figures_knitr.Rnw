@@ -97,6 +97,34 @@ print(plot3)
 }
 
 
+
+
+<<shiftgraphs, cache=cache_otto>>=
+source("R_scripts/logistic_otto_sim/generate_shift_plots.R")
+SetShortImageSize()
+@
+
+\def\ShiftGraphZero{
+%
+<<>>=
+figcap <- paste("A covariate shift diagnostic", sep="")
+@
+<<shiftplot0, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(shift_plot0)
+@
+}
+
+
+\def\ShiftGraphOne{
+%
+<<>>=
+figcap <- paste("A covariate shift diagnostic", sep="")
+@
+<<shiftplot1, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(shift_plot1)
+@
+}
+
 <<>>=
 SetFullImageSize()
 @

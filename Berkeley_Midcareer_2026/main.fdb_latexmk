@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1787001863 "main.tex" "main.pdf" "main" 1787001865
+["lualatex"] 1787005634 "main.tex" "main.pdf" "main" 1787005636
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -371,15 +371,17 @@
   "_defs.tex" 1786644771 4419 5723ac66cb490677c208ef90ec6894a7 ""
   "_headers.tex" 1786644771 3237 456294555a5b1c57b77168fe0b0362e3 ""
   "figs_non_knitr.tex" 1786644771 3271 00ede193c58771b72569c0f461d58a08 ""
-  "figure/ottograph0-1.png" 1787001862 23374 db143ec88b09a71ec3553c30f29f3497 ""
-  "figure/ottograph1-1.png" 1787001863 74564 4814021c1a815f162511f604863ed807 ""
-  "figure/ottograph2-1.png" 1787001863 95614 0dd180fc1b434e4690d45db81fbad055 ""
-  "figure/ottograph3-1.png" 1787001863 113546 51d36de75b5a9df7bb6936cad9954ee2 ""
-  "figures_knitr.tex" 1787001863 1914 4f9b4fbc7f018f37b4b62cbbd5b4803a ""
-  "introduction.tex" 1787001860 564 9051ac516fad16ceef1b372813677064 ""
-  "main.aux" 1787001865 1719 33c60b931c8dff174ad52f462dad5ec6 "lualatex"
-  "main.nav" 1787001865 571 e4e46198e9e8b89ae894a3c6446a56c3 "lualatex"
-  "main.out" 1787001864 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "figure/ottograph0-1.png" 1787005631 23374 db143ec88b09a71ec3553c30f29f3497 ""
+  "figure/ottograph1-1.png" 1787005631 74564 4814021c1a815f162511f604863ed807 ""
+  "figure/ottograph2-1.png" 1787005631 95614 0dd180fc1b434e4690d45db81fbad055 ""
+  "figure/ottograph3-1.png" 1787005632 113546 51d36de75b5a9df7bb6936cad9954ee2 ""
+  "figure/shiftplot0-1.png" 1787005633 79565 d10e571ccb9cf2a3fdc177455edaab7c ""
+  "figure/shiftplot1-1.png" 1787005633 79703 4d40b39af569988eea4033fc405d62fa ""
+  "figures_knitr.tex" 1787005633 2616 aa29fb42c89a981b47176eb845f6ad77 ""
+  "introduction.tex" 1787005536 725 df252685ba5793c09d7f9238c4082e13 ""
+  "main.aux" 1787005636 1972 beb5e9db4f9a60879c02ad5d46ccb04f "lualatex"
+  "main.nav" 1787005636 659 3b247358722a6d936dfd734884709237 "lualatex"
+  "main.out" 1787005635 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   "main.tex" 1787001598 766 f3c29448ab22a5414c71d6feed0f756e ""
   (generated)
   "main.aux"
