@@ -75,10 +75,11 @@ stopifnot(length(mrp_change_1) == 1)
 plot0 <- 
   ggplot(diag_df) +
     geom_vline(aes(xintercept=mrp_change_0,
-                   linetype="Correct specification"), lwd=1.4) +
-    geom_vline(aes(xintercept=mrp_change_1, 
-                   linetype="Misspecified"), lwd=1.4) +
-    geom_vline(aes(xintercept=0), color="gray") +
+                   linetype="Actual data: Correct specification"), lwd=1.1) +
+    geom_vline(aes(xintercept=mrp_change_1,
+                   linetype="Actual data: Misspecified"), lwd=1.1) +
+    geom_vline(aes(xintercept=0, 
+                   linetype="Null value"), color="dark gray") +
   scale_linetype(name="Specification") +
   OttoMethodColorScale(aesthetic="color") +
   xlim(xmin=min(diag_df$mrp_change_ij),

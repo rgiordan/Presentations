@@ -1,11 +1,92 @@
 
-\begin{frame}{MrP Analysis}
 
-    \textbf{Copy over MrP analysis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\begin{frame}{The basic problem}
+
+%\adjincludegraphics[width=0.9\textwidth,trim={0 {.5\height} 0 0 }, clip]{static_figures/survey_and_voting.jpg}
+
+We have a survey population, for whom we observe:
+%
+\begin{itemize}
+ \item Covariates $\x$ (e.g.~race, gender, zip code, age, education level)
+ \item Responses $\y$ (e.g.~A binary response to ``do you support candidate Z'')
+\end{itemize}
+%
+
+We want the average response in a target population,
+in which we observe only covariates.
+
+
+\onslide<2->{
+\textbf{The problem is that the populations may be very different, maybe leading to bias.}
+}
+
+\splitpage{
+    \centering
+    \only<1>{
+    \includegraphics[width=0.3\textwidth]{static_figures/survey_man.jpg}
+    }
+    \only<2->{
+    %\includegraphics[width=0.5\textwidth]{static_figures/survey_crazy_man.jpg}
+    \includegraphics[width=0.3\textwidth]{static_figures/guinea_pig_copyright.png}
+    }
+}{
+    \centering
+    \includegraphics[width=0.3\textwidth]{static_figures/voting_man.jpg}
+}
+
+\splitpage{
+    \centering
+    Observe \surcol{$(\x_i, y_i)$ for $i = 1, \ldots, \nsur$}\\
+}{
+    \centering
+    Observe \tarcol{$\x_j$ for $j = 1, \ldots, \ntar$}\\
+}
+
+\onslide<3->{
+% \hrulefill
+
+This talk will study ``Multilevel regression and poststratification'' estimators:
+
+\quad$\bullet$ Set $\expect{}{\y \vert \x, \theta} = m(\theta^\trans \x)$ and prior $\p(\theta)$
+(e.g.~Hierarchical logistic regression)\\[1em]
+
+\quad$\bullet$ Estimate the posterior $\postsur$ with Markov Chain Monte Carlo (MCMC)\\[1em]
+
+\quad$\bullet$ Take
+$\muhatmrp = \tarcol{\meantar \yhat_j}$
+where     $\tarcol{\yhat_j} =
+    \expect{\postsur}{\y | \tarcol{\x_j}}$.
+}
+
+
+\onslide<4->{
+\textbf{Problem: }MCMC is time consuming and the regression model is surely misspecified.\\
+\textbf{Goal: }Meaningful regression specification checks with frequentist uncertainty.
+}
+%
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Introduction}
+    \begin{minipage}{0.95\textwidth}
+    \only<1>{\ShiftGraphZero{}}
+    \only<2>{\ShiftGraphOne{}}
+    \end{minipage}
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{frame}{Outline}
@@ -21,19 +102,46 @@
 \end{frame}
 
 
-\begin{frame}{Introduction}
-    \begin{minipage}{0.95\textwidth}
-    \only<1>{\OttoGraphZero{}}
-    \only<2>{\OttoGraphOne{}}
-    \only<3>{\OttoGraphTwo{}}
-    \only<4>{\OttoGraphThree{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Result preview}
+    \begin{minipage}{0.90\textwidth}
+    \only<1>{
+        \OttoGraphZero{}
+        \vspace{-1em}
+        Here is the check for two models on the same simulated data: one correctly specified
+        and one misspecified.  The misspecied model is more extreme.\\[1em]
+        \textbf{Problem: }What is ``large enough'' to be real evidence of misspecification?\\
+        \textbf{Possible answer: }Frequentist confidence intervals via the parametric bootstrap.
+    }
+    \only<2>{
+        \OttoGraphOne{}
+        \vspace{-1em}
+        The frequentist interval based on the parametric bootstrap rejects the misspecified
+        model but not the correctly specified model.\\[1em]
+        \textbf{Problem: }Expensive: each bootstrap sample required a new MCMC run.\\
+        \textbf{Possible answer: }Infintesimal jackknife confidence intervals? %\citep{giordano:2023:bayesij}
+    }
+    \only<3>{
+        \OttoGraphTwo{}
+        \vspace{-1em}
+        IJ confidence intervals are fast and often work well for posterior means
+        but are not accurate for this more complex diagnostic (due in part to
+        Monte Carlo error).\\[1em]
+    }
+    \only<4>{
+        \OttoGraphThree{}
+        \vspace{-1em}
+        IJ confidence intervals are fast and often work well for posterior means
+        but are not accurate for this more complex diagnostic (due in part to
+        Monte Carlo error).\\[1em]
+        \textbf{Answer: }Flow-based local sensitivity measures (``Otto grad'')
+        produce good approximations to the bootstrap at negligible computational
+        expense.
+    }
     \end{minipage}
 \end{frame}
 
-
-\begin{frame}{Introduction}
-    \begin{minipage}{0.95\textwidth}
-    \only<1>{\ShiftGraphZero{}}
-    \only<2>{\ShiftGraphOne{}}
-    \end{minipage}
-\end{frame}
