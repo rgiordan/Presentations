@@ -76,26 +76,66 @@ where     $\tarcol{\yhat_j} =
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}{Introduction}
-    \begin{minipage}{0.95\textwidth}
-    \only<1>{\ShiftGraphZero{}}
-    \only<2>{\ShiftGraphOne{}}
+
+\begin{frame}[t]{Result preview}
+    \begin{minipage}{0.90\textwidth}
+    \only<1>{
+        \OttoGraphZero{}
+        \vspace{-1em}
+        Here is our check for two models on the same simulated data: one correctly specified
+        and one misspecified.  The misspecied model is more extreme.\\[1em]
+        \textbf{Problem: }What is ``large enough'' to be real evidence of misspecification?\\
+        \textbf{Possible answer: }Frequentist confidence intervals via the parametric bootstrap.
+    }
+    \only<2>{
+        \OttoGraphOne{}
+        \vspace{-1em}
+        The frequentist interval based on the parametric bootstrap rejects the misspecified
+        model but not the correctly specified model.\\[1em]
+        \textbf{Problem: }Expensive: each bootstrap sample required a new MCMC run.\\
+        \textbf{Possible answer: }Infintesimal jackknife confidence intervals? \citep{giordano:2023:bayesij}
+    }
+    \only<3>{
+        \OttoGraphTwo{}
+        \vspace{-1em}
+        IJ confidence intervals are fast and often work well for posterior means.\\
+        But they are not accurate for this more complex diagnostic (high
+        Monte Carlo error).\\[1em]
+    }
+    \only<4>{
+        \OttoGraphThree{}
+        \vspace{-1em}
+        IJ confidence intervals are fast and often work well for posterior means.\\
+        But they are not accurate for this more complex diagnostic (high
+        Monte Carlo error).\\[1em]
+        \textbf{Answer: }Our flow-based local sensitivity measures (``Otto grad'')
+        produce good approximations to the bootstrap at negligible computational
+        expense.
+    }
     \end{minipage}
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{frame}{Outline}
 %
 \begin{itemize}
 %
-\item Meaningful Bayesian local specification diagnostics
+\item Bayesian local regression specification checks
+%
+\begin{itemize}
+\item (With Avi Feller, Erin Hartman, Jared Miller, Alice Cima, Lucas Schwengber)
+\end{itemize}
+%
 \item Frequentist variability of Bayesian posteriors with the inifinitesimal jackknife
-\item Flow-based Bayesian local robustness
+\begin{itemize}
+\item (With Tamara Broderick)
+\end{itemize}
+\item Flow-based Bayesian local robustness: ``Otto grad''
+\begin{itemize}
+\item (With Lucas Schwengber)
+\end{itemize}
 %
 \end{itemize}
 %
@@ -107,41 +147,9 @@ where     $\tarcol{\yhat_j} =
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[t]{Result preview}
-    \begin{minipage}{0.90\textwidth}
-    \only<1>{
-        \OttoGraphZero{}
-        \vspace{-1em}
-        Here is the check for two models on the same simulated data: one correctly specified
-        and one misspecified.  The misspecied model is more extreme.\\[1em]
-        \textbf{Problem: }What is ``large enough'' to be real evidence of misspecification?\\
-        \textbf{Possible answer: }Frequentist confidence intervals via the parametric bootstrap.
-    }
-    \only<2>{
-        \OttoGraphOne{}
-        \vspace{-1em}
-        The frequentist interval based on the parametric bootstrap rejects the misspecified
-        model but not the correctly specified model.\\[1em]
-        \textbf{Problem: }Expensive: each bootstrap sample required a new MCMC run.\\
-        \textbf{Possible answer: }Infintesimal jackknife confidence intervals? %\citep{giordano:2023:bayesij}
-    }
-    \only<3>{
-        \OttoGraphTwo{}
-        \vspace{-1em}
-        IJ confidence intervals are fast and often work well for posterior means
-        but are not accurate for this more complex diagnostic (due in part to
-        Monte Carlo error).\\[1em]
-    }
-    \only<4>{
-        \OttoGraphThree{}
-        \vspace{-1em}
-        IJ confidence intervals are fast and often work well for posterior means
-        but are not accurate for this more complex diagnostic (due in part to
-        Monte Carlo error).\\[1em]
-        \textbf{Answer: }Flow-based local sensitivity measures (``Otto grad'')
-        produce good approximations to the bootstrap at negligible computational
-        expense.
-    }
+\begin{frame}{Introduction}
+    \begin{minipage}{0.95\textwidth}
+    \only<1>{\ShiftGraphZero{}}
+    \only<2>{\ShiftGraphOne{}}
     \end{minipage}
 \end{frame}
-

@@ -381,6 +381,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamericononline.20.pdf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty
+INPUT ./_headers.tex
+INPUT ./_headers.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
@@ -414,8 +416,6 @@ INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/liber
 INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/liberationserif-bolditalic.luc
 INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/liberationserif-bold.luc
 INPUT /home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/liberationserif-italic.luc
-INPUT ./_headers.tex
-INPUT ./_headers.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
@@ -506,9 +506,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption-beamer.sto
 INPUT /usr/share/texlive/texmf-dist/tex/latex/caption/caption-beamer.sto
-INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tikz-bayesnet/tikzlibrarybayesnet.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tikz-bayesnet/tikzlibrarybayesnet.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
@@ -652,6 +649,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
@@ -748,12 +748,6 @@ INPUT ./static_figures/guinea_pig_copyright.png
 INPUT ./static_figures/guinea_pig_copyright.png
 INPUT ./static_figures/voting_man.jpg
 INPUT ./static_figures/voting_man.jpg
-INPUT ./figure/shiftplot0-1.png
-INPUT ./figure/shiftplot0-1.png
-INPUT ./figure/shiftplot0-1.png
-INPUT ./figure/shiftplot1-1.png
-INPUT ./figure/shiftplot1-1.png
-INPUT ./figure/shiftplot1-1.png
 INPUT ./figure/ottograph0-1.png
 INPUT ./figure/ottograph0-1.png
 INPUT ./figure/ottograph0-1.png
@@ -766,6 +760,12 @@ INPUT ./figure/ottograph2-1.png
 INPUT ./figure/ottograph3-1.png
 INPUT ./figure/ottograph3-1.png
 INPUT ./figure/ottograph3-1.png
+INPUT ./figure/shiftplot0-1.png
+INPUT ./figure/shiftplot0-1.png
+INPUT ./figure/shiftplot0-1.png
+INPUT ./figure/shiftplot1-1.png
+INPUT ./figure/shiftplot1-1.png
+INPUT ./figure/shiftplot1-1.png
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT main.nav

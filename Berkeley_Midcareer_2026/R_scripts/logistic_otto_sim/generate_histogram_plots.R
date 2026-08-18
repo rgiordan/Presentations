@@ -71,7 +71,8 @@ stopifnot(length(mrp_change_1) == 1)
 # plots
 
 
-
+# Including the y scale forces the tick marks so the spacing is the
+# same for all subsequent graphs
 plot0 <- 
   ggplot(diag_df) +
     geom_vline(aes(xintercept=mrp_change_0,
@@ -82,6 +83,7 @@ plot0 <-
                    linetype="Null value"), color="dark gray") +
   scale_linetype(name="Specification") +
   OttoMethodColorScale(aesthetic="color") +
+  scale_y_continuous(breaks = seq(from = 0, to = 30, by = 10), limits=c(0, 35)) +
   xlim(xmin=min(diag_df$mrp_change_ij),
        xmax=max(diag_df$mrp_change_true)) +
        xlab("Covariate shift diagnostic") +

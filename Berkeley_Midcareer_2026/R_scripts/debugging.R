@@ -14,5 +14,9 @@ source(file.path(base_dir, "R_scripts/logistic_otto_sim/load_data.R"))
 source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_histogram_plots.R"))
 
 
-source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_shift_plots.R"))
+source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_histogram_plots.R"))
+
+plot0 +
+  scale_y_continuous(breaks = seq(from = 0, to = 30, by = 10), limits=c(0, 35)) 
+
 
