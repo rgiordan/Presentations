@@ -1,0 +1,203 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[plain]
+  \vfill
+  \begin{block}{}
+    \centering
+    \Huge Frequentist variance with the infinitesimal jackknife
+  \end{block}
+  \vfill
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Why frequentist variance?}
+
+For the remainder of the talk, focus on approximating the
+\emph{frequentist} sampling distribution under
+$\x_i,\y_i \iid \psur(\x, \y)$ of quantities like
+our diagnostic:
+
+$$
+\begin{aligned}
+    \Delta = \cov{\post}{
+        \meantar \m(\theta^\trans \x_j),
+        \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
+    } 
+\end{aligned}
+$$
+
+\textbf{No need to commit to our covariate shift diagnostic to care!}
+
+%
+\begin{itemize}
+\item Frequentist variablity of \emph{any} model checking diagnostic is interesting
+\item Frequentist variablity remains meaningful under model misspecification
+  (Huggins and Miller, IJ papers)
+\end{itemize}
+%
+
+We will form \emph{local approximations} computable only from \emph{the original posterior}.\\[1em]
+
+We will compare with computationally expensive bootstrap:
+%
+\begin{itemize}
+\item Compute $\Delta$ on the original dataset
+\item For $B=1, \ldots, 100$:
+%
+\begin{enumerate}
+\item Sample $(\x_1^*, \y_1^*), \ldots (\x_\nsur^*, \y_\nsur^*)$
+     (parametric or nonparametric bootstrap)
+\item Run MCMC to estimate $\p(\theta | (\x_1^*, \y_1^*), \ldots (\x_\nsur^*, \y_\nsur^*))$
+\item Use the draws to estimate $\Delta^*_B$
+\end{enumerate}
+%
+\item Compare $\Delta$ with quantiles of $\Delta^*_B - \Delta$
+%
+\end{itemize}
+%
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Bayesian von--Mises Expansion}
+
+\generalizedpost{}
+%
+% For $\p$ fixed, as $N \rightarrow \infty$, $\p(\theta \vert \p, N) \rightarrow $a point
+% (Bayesian concentration).\\
+% As $N \rightarrow \infty$, $\psurhat \rightarrow \psur$ (frequentist concentration).\\
+% \pause
+%
+
+To derive frequentist variance estimates, study the \textit{von Mises expansion}.\\
+Let $\p_\t  = \t \psurhat + (1 - \t) \psur$.   Then
+%
+\begin{align*}
+    \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\fdist, \nsur) \right) ={}&
+        \blue{\sqrt{N} \fracat{\partial \T(\p_\t, \nsur)}{\partial \t}{\t = 0} (\psurhat - \psur)}
+        & + \red{\err(\ttil)}
+\\={}&
+\undernote{
+    \blue{\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} }
+    {\textrm{\blue{Infinitesimal jackknife estimator}}} + o_p(1) 
+    & + \red{\err(\ttil)}.
+\end{align*}
+%
+where
+$$
+\infl_i := \nsur \cov{\post}{\g(\theta), \ell(\y_i \vert \x_i)}
+$$
+%
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{frame}[t]{Bayesian von--Mises Expansion Results}
+%
+\begin{align*}
+    \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\psur, \nsur) \right) 
+={}&
+    \blue{\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} + o_p(1) 
+    & + \red{\err(\ttil)}.
+\end{align*}
+%
+
+
+\begin{itemize}
+    \item Assume (sketch): A well--behaved MAP \textit{maximum a posteriori} estimator $\thetahat$ exists.
+    \begin{itemize}
+        \item The dimension of $\theta$ is fixed as $N \rightarrow \infty$
+        \item The expected log likelihood has a strict maximum at $\thetatrue$
+        \item The observed log likelihood statisfies $\thetahat \rightarrow \thetatrue$
+        \item The expected log likelihood Hessian is negative definite at $\thetatrue$ 
+    \end{itemize}
+    \item Assume (sketch): We can apply standard asymptotics.
+    \begin{itemize}
+    \item The log prior and log likelihood are four times continuously differentiable
+    \item The prior is proper, and a technical set of prior expectations are finite
+    \item The log likelihood and its derivatives are dominated by a square--integrable envelope function 
+          for all $\theta$ in a neighborhood of $\theta_\infty$.
+    \end{itemize}
+\end{itemize}
+%
+
+\theorem{
+    \textbf{Theorem 3 \citep{giordano:2023:bayesij} (sketch): }
+    % \textbf{(Consistency of the von--Mises expansion in finite dimensions) }
+    %
+\begin{align*}
+    \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \overset{p}{\rightarrow} 0
+    \quad\textrm{in the Bayesian von--Mises expansion}.
+\end{align*}
+%
+}
+
+\theorem{
+    \textbf{Corollary: }Let 
+         $\meansur (\infl_i - \overline{\infl})^2 \overset{p}{\rightarrow} V$.
+By the CLT applied to $\infl_i$,
+\begin{align*}
+     \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\psur, \nsur) \right)
+     \overset{d}{\rightarrow}
+     \mathcal{N}\left(
+        0, V
+     \right).
+\end{align*}
+}
+
+
+
+% \pause
+
+% \theorem{
+% \textbf{Theorem 4 \citep{giordano:2023:bayesij} (sketch, not yet on arxiv):}\\
+% \textbf{(Inconsistency of the von--Mises expansion in high dimensional exponential families) }\\
+%     Assume that $\x_n$ comes with a equiprobable group assignment $g_n \in 1,\ldots,G$.\\    
+%     Conditional on $g$, $\x_n$ is modeled as a finite-dimensional exponential
+%     family given $\lambda,\gamma$:
+%     %
+%     \begin{align*}
+%         \log \p(x_n \vert g_n=g, \gamma, \lambda) = 
+%             \tau(x_n)^\trans \eta_{g}(\gamma, \lambda) + \textrm{Constant}.
+%     \end{align*}
+%     %
+% Define the average product of second moments:
+% %
+% \begin{align*}
+%     \mathcal{V}_N(\gamma) :=
+%     \frac{1}{G} \sum_{g=1}^G 
+%     \trace{
+%         \expect{\fdist(\x_n)}{\tau(\x_n) \tau(\x_n)^\trans}
+%         \cov{\p(\lambda \vert \gamma, \fdist)}{\eta_{g}(\gamma, \lambda)}
+%     }.
+% \end{align*}
+% %
+% If $N \expect{\p(\gamma \vert \fdist)}{\fbar(\gamma) \mathcal{V}_N(\gamma)}$ is 
+% strictly bounded away from $0$ as $N\rightarrow \infty$, then
+% %
+% \begin{align*}
+%     \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \rightarrow \infty
+%     \quad\textrm{in the Bayesian von--Mises expansion.}
+% \end{align*}
+% %
+% }
+
+\end{frame}

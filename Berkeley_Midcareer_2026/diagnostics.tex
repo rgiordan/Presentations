@@ -97,18 +97,7 @@ Let $\psurhat$ the empirical distribution on the survey data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Bayesian posterior functionals}
-
-We are interested in $\expect{\post}{\g(\theta)}$ where
-$\g(\theta) := \meantar \m(\theta^\trans \x_j)$.\\
-
-Let the regression log likelihood be $\ell(\y \vert \x, \theta)$.\\
-
+\def\generalizedpost{
 Define the ``generalized posterior'' functional:
 %
 \begin{align*}
@@ -128,7 +117,7 @@ Define the ``generalized posterior'' functional:
     %
 \end{align*}
 %
-Let $\fndist$ denote the empirical distribution over $\x_i, \y_i$.  Then
+Let $\psurhat$ denote the empirical distribution over $\x_i, \y_i$.  Then
 %
 \begin{align*}
     \expect{\post}{\g(\theta)} =
@@ -141,6 +130,23 @@ Let $\fndist$ denote the empirical distribution over $\x_i, \y_i$.  Then
         \prior(\theta) d\theta
     } = \T(\psurhat, N).
 \end{align*}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Bayesian posterior functionals}
+
+We are interested in $\expect{\post}{\g(\theta)}$ where
+$\g(\theta) := \meantar \m(\theta^\trans \x_j)$.\\
+
+Let the regression log likelihood be $\ell(\y \vert \x, \theta)$.\\
+
+\generalizedpost{}
+
 %
 % For some function $\w(\xn)$, set
 % $$
@@ -179,21 +185,29 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}{Introduction}
+\begin{frame}{Simulation}
     \begin{minipage}{0.95\textwidth}
     \only<1>{\ShiftGraphZero{}}
     \only<2>{\ShiftGraphOne{}}
+    \only<3>{\OttoGraphOne{}}
     \end{minipage}
 
 Simulation data: Logistic regression with five active regressors, each
 with covariate shift.
+\onslide<1->{
 $$
 \begin{aligned}
     \textrm{Model 0} \textrm{ (correct)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
     \textrm{Model 1} \textrm{ (misspecified)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
 \end{aligned}
 $$
-
-Comput diagnostic with $\w(\x) = \ind{\texttt{X2} > 0.878}$
+}
+\onslide<2->{
+Compute diagnostic with $\w(\x) = \ind{\texttt{X2} > 0.878}$
+}
 
 \end{frame}
+
+
+
+
