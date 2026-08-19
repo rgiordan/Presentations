@@ -1,0 +1,199 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[plain]
+  \vfill
+  \begin{block}{}
+    \centering
+    \Huge Bayesian local regression specification checks
+  \end{block}
+  \vfill
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Local specification checks}
+
+% \textbf{Setup}
+% % \begin{itemize}
+% %  \item Covariates $\x$ (e.g.~race, gender, zip code, age, education level)
+% %  \item Responses $\y$ (e.g.~A binary response to ``do you support candidate Z'')
+% % \end{itemize}
+% %
+% \textbf{Survey population:}    Observe \surcol{$(\x_i, y_i)$ for $i = 1, \ldots, \nsur$}\\
+% \textbf{Target population:}    Observe \tarcol{$\x_j$ for $j = 1, \ldots, \ntar$}\\[1em]
+
+
+% \quad$\bullet$ Set $\expect{}{\y \vert \x, \theta} = m(\theta^\trans \x)$ and prior $\p(\theta)$
+% (e.g.~Hierarchical logistic regression)\\[1em]
+
+% \quad$\bullet$ Estimate the posterior $\postsur$ with Markov Chain Monte Carlo (MCMC)\\[1em]
+
+% \quad$\bullet$ Take
+$\muhatmrp = \tarcol{\meantar \yhat_j}$
+where
+$\tarcol{\yhat_j} =
+    \underbrace{
+        \expect{\postsur}{\m(\theta^\trans \tarcol{\x_j})}            
+    }_{\textrm{Want to check without re--running MCMC}}
+$.
+
+
+% Standard local approaches:
+% %
+% \begin{itemize}
+% \item Specify an alternative model + test with Bayes factor (CITE LOCAL BF)
+% %
+% \begin{itemize}
+%     \item The model is definitely misspecified, we want to check whether it's \emph{importantly} misspecified
+%     \item Bayes factors use prior information (Lindley's paradox)
+%     \item Articulating a family of models is inconvenient
+%     \item Doesn't assess shrinkage
+% \end{itemize}
+% %
+% \item Use out-of-sample checking (CITE GELMAN)
+% \begin{itemize}
+%     \item The task is not to predict on a new survey datapoint
+% \end{itemize}
+% \end{itemize}
+%
+
+This model of \emph{survey data} is definitely misspecified.\\[1em]
+
+Why do we care about correct specification? We want to use $\psur(\x)$ to learn about $\ptar(\x)$.\\[1em]
+
+\begin{center}
+Correct specification $\Rightarrow$ Regression estimates are invariant to $\psur(\x)$
+\end{center}
+
+\textbf{Idea:}  Check invariance to $\psur(\x)$ directly.\\[1em]
+
+Let $\p(\x,\y)$ denote a generic joint density of $\x, \y$.\\
+Let $\psurhat$ the empirical distribution on the survey data.
+%
+\begin{enumerate}
+\item Write our estimand as a functional $\mu(\p)$ that takes in a density and returns a MrP estimate
+\item Define a covariate density perturbation $\w(\x)$
+\item Define $\p_\epsilon(\x, \y) = 
+    \p(\x, \y) + \epsilon \w(\x) \p(\y | \x) = 
+    \left(\p(\x) + \epsilon \w(\x) \right) \p(\y | \x)$
+\item Compute the derivative $\Delta(\w, \p) = \partial \mu(\p_\epsilon) / \partial \epsilon$
+\item Plug the empirical distribution into $\Delta(\w, \psurhat)$ and check whether $\approx 0$
+\end{enumerate}
+%
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Bayesian posterior functionals}
+
+We are interested in $\expect{\post}{\g(\theta)}$ where
+$\g(\theta) := \meantar \m(\theta^\trans \x_j)$.\\
+
+Let the regression log likelihood be $\ell(\y \vert \x, \theta)$.\\
+
+Define the ``generalized posterior'' functional:
+%
+\begin{align*}
+    %
+    \T(\p, N) := \frac{
+        \int \g(\theta) \exp\left( 
+            N \int \ell(\yn \vert \x, \theta) \p(\xn, \yn) d\xn d\yn
+        \right)
+        \prior(\theta) d\theta
+    }
+    {
+    \int \exp\left( 
+            N \int \ell(\yn \vert \x, \theta) \p(\xn, \yn) d\xn d\yn
+    \right)
+    \prior(\theta) d\theta
+    }.
+    %
+\end{align*}
+%
+Let $\fndist$ denote the empirical distribution over $\x_i, \y_i$.  Then
+%
+\begin{align*}
+    \expect{\post}{\g(\theta)} =
+    \frac{
+        \int \g(\theta) \exp\left( N \meann \ell(\y_i \vert \x_i, \theta) \right)
+            \prior(\theta) d\theta
+    }
+    {
+    \int \exp\left( N \meann \ell(\y_i \vert \x_i, \theta) \right)
+        \prior(\theta) d\theta
+    } = \T(\psurhat, N).
+\end{align*}
+%
+% For some function $\w(\xn)$, set
+% $$
+% \gdist_\epsilon(d \xn, d\yn) = 
+%     \gdist(d\xn, d\yn) + \epsilon \w(d \xn) \gdist(d \yn \vert \xn) =
+%     \left( \gdist(d \xn) + \epsilon \w(d \xn) \right) \gdist(d \yn \vert \xn).
+% $$
+% This is a shift in the marginal distribution of $\x$ in the direction $\w(\x)$.\\[1em]
+
+The directional derivative is
+$$
+\begin{aligned}
+\fracat{\partial \T(\p_\epsilon, N)}{\partial \epsilon}{\epsilon=0} ={}&
+    \cov{\p(\theta \vert \p, N)}{
+        \g(\theta), 
+        N \int \ell(\yn \vert \xn, \theta) \w(d \xn) \p(\yn \vert \xn) d\xn d\yn
+        }
+\end{aligned}
+$$
+
+Our diagnostic is then given by
+$$
+\Delta(\w, \psurhat) =
+    \cov{\post}{
+        \meantar \m(\theta^\trans \x_j),
+        \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
+        }
+$$
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Introduction}
+    \begin{minipage}{0.95\textwidth}
+    \only<1>{\ShiftGraphZero{}}
+    \only<2>{\ShiftGraphOne{}}
+    \end{minipage}
+
+Simulation data: Logistic regression with five active regressors, each
+with covariate shift.
+$$
+\begin{aligned}
+    \textrm{Model 0} \textrm{ (correct)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
+    \textrm{Model 1} \textrm{ (misspecified)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
+\end{aligned}
+$$
+
+Comput diagnostic with $\w(\x) = \ind{\texttt{X2} > 0.878}$
+
+\end{frame}

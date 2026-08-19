@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  18 AUG 2026 13:32
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  18 AUG 2026 17:21
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1751,23 +1751,37 @@ Overfull \vbox (5.84865pt too high) detected at line 116
 
 <./figure/ottograph3-1.png>] [10
 
+]) (./diagnostics.tex [11
+
+] [12
+
+] [13
+
 ]
-<figure/shiftplot0-1.png, id=91, 397.485pt x 222.3507pt>
+<figure/shiftplot0-1.png, id=108, 397.485pt x 222.3507pt>
 File: figure/shiftplot0-1.png Graphic file (type png)
 <use figure/shiftplot0-1.png>
-Package luatex.def Info: figure/shiftplot0-1.png  used on input line 155.
+Package luatex.def Info: figure/shiftplot0-1.png  used on input line 199.
 (luatex.def)             Requested size: 286.09193pt x 160.2688pt.
- [11
+
+Overfull \vbox (16.37898pt too high) detected at line 199
+ []
+
+[14
 
 <./figure/shiftplot0-1.png>]
-<figure/shiftplot1-1.png, id=99, 397.485pt x 222.3507pt>
+<figure/shiftplot1-1.png, id=115, 397.485pt x 222.3507pt>
 File: figure/shiftplot1-1.png Graphic file (type png)
 <use figure/shiftplot1-1.png>
-Package luatex.def Info: figure/shiftplot1-1.png  used on input line 155.
+Package luatex.def Info: figure/shiftplot1-1.png  used on input line 199.
 (luatex.def)             Requested size: 286.09193pt x 160.2688pt.
- [12
 
-<./figure/shiftplot1-1.png>]) (./main.bbl) [13
+Overfull \vbox (16.37898pt too high) detected at line 199
+ []
+
+[15
+
+<./figure/shiftplot1-1.png>]) (./main.bbl) [16
 
 ]
 \tf@nav=\write6
@@ -1785,16 +1799,16 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45870 strings out of 477805
+ 45930 strings out of 477805
  125031,1648299 words of node,token memory allocated
- 2815 words of node memory still in use:
-   25 hlist, 8 vlist, 5 rule, 10 disc, 2 local_par, 52 glue, 13 kern, 17 penalty
-, 126 glyph, 65 attribute, 113 glue_spec, 65 attribute_list, 4 write, 1 pdf_dest
-, 1 pdf_action, 18 pdf_colorstack nodes
-   avail lists: 1:2,2:773,3:201,4:224,5:173,6:55,7:3432,8:25,9:493,10:14,11:242
- 64398 multiletter control sequences out of 65536+600000
- 81 fonts using 19121647 bytes
- 128i,13n,134p,1852b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 2883 words of node memory still in use:
+   26 hlist, 8 vlist, 5 rule, 10 disc, 2 local_par, 52 glue, 13 kern, 17 penalty
+, 5 sub_mlist, 126 glyph, 76 attribute, 113 glue_spec, 76 attribute_list, 4 writ
+e, 1 pdf_dest, 1 pdf_action, 18 pdf_colorstack nodes
+   avail lists: 1:2,2:751,3:196,4:272,5:382,6:55,7:3432,8:97,9:817,10:17,11:242
+ 64447 multiletter control sequences out of 65536+600000
+ 86 fonts using 20670327 bytes
+ 128i,15n,134p,1852b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
 xlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/l
@@ -1808,10 +1822,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (13 pages, 926956 bytes).
+Output written on main.pdf (16 pages, 944161 bytes).
 
-PDF statistics: 171 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 131072)
+PDF statistics: 188 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

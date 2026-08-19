@@ -760,6 +760,8 @@ INPUT ./figure/ottograph2-1.png
 INPUT ./figure/ottograph3-1.png
 INPUT ./figure/ottograph3-1.png
 INPUT ./figure/ottograph3-1.png
+INPUT ./diagnostics.tex
+INPUT ./diagnostics.tex
 INPUT ./figure/shiftplot0-1.png
 INPUT ./figure/shiftplot0-1.png
 INPUT ./figure/shiftplot0-1.png
