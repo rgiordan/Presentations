@@ -117,19 +117,6 @@ Define the ``generalized posterior'' functional:
     %
 \end{align*}
 %
-Let $\psurhat$ denote the empirical distribution over $\x_i, \y_i$.  Then
-%
-\begin{align*}
-    \expect{\post}{\g(\theta)} =
-    \frac{
-        \int \g(\theta) \exp\left( N \meann \ell(\y_i \vert \x_i, \theta) \right)
-            \prior(\theta) d\theta
-    }
-    {
-    \int \exp\left( N \meann \ell(\y_i \vert \x_i, \theta) \right)
-        \prior(\theta) d\theta
-    } = \T(\psurhat, N).
-\end{align*}
 }
 
 
@@ -146,6 +133,20 @@ $\g(\theta) := \meantar \m(\theta^\trans \x_j)$.\\
 Let the regression log likelihood be $\ell(\y \vert \x, \theta)$.\\
 
 \generalizedpost{}
+
+Let $\psurhat$ denote the empirical distribution over $\x_i, \y_i$.  Then
+%
+\begin{align*}
+    \expect{\post}{\g(\theta)} =
+    \frac{
+        \int \g(\theta) \exp\left( \nsur \meansur \ell(\y_i \vert \x_i, \theta) \right)
+            \prior(\theta) d\theta
+    }
+    {
+    \int \exp\left( \nsur \meansur \ell(\y_i \vert \x_i, \theta) \right)
+        \prior(\theta) d\theta
+    } = \T(\psurhat, \nsur).
+\end{align*}
 
 %
 % For some function $\w(\xn)$, set

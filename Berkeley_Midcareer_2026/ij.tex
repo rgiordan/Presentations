@@ -73,6 +73,8 @@ We will compare with computationally expensive bootstrap:
 \begin{frame}[t]{Bayesian von--Mises Expansion}
 
 \generalizedpost{}
+
+Recall that $\expect{\post}{\g(\theta)} = \T(\psurhat, \nsur)$
 %
 % For $\p$ fixed, as $N \rightarrow \infty$, $\p(\theta \vert \p, N) \rightarrow $a point
 % (Bayesian concentration).\\
@@ -81,22 +83,24 @@ We will compare with computationally expensive bootstrap:
 %
 
 To derive frequentist variance estimates, study the \textit{von Mises expansion}.\\
-Let $\p_\t  = \t \psurhat + (1 - \t) \psur$.   Then
+Let $\p_\t  = \t \psurhat + (1 - \t) \psur$.   Then form the series expansion in $\t$:
 %
 \begin{align*}
-    \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\fdist, \nsur) \right) ={}&
-        \blue{\sqrt{N} \fracat{\partial \T(\p_\t, \nsur)}{\partial \t}{\t = 0} (\psurhat - \psur)}
-        & + \red{\err(\ttil)}
+    \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\psur, \nsur) \right) ={}&
+    \sqrt{\nsur} \left(\T(\psurhat, \nsur) - \T(\psur, \nsur) \right) \\={}&
+        \blue{\sqrt{\nsur} \fracat{\partial \T(\p_\t, \nsur)}{\partial \t}{\t = 0}}(1 - 0)
+         + \red{\err(\ttil)}
 \\={}&
 \undernote{
     \blue{\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} }
     {\textrm{\blue{Infinitesimal jackknife estimator}}} + o_p(1) 
-    & + \red{\err(\ttil)}.
+    + \red{\err(\ttil)}.
 \end{align*}
 %
 where
 $$
 \infl_i := \nsur \cov{\post}{\g(\theta), \ell(\y_i \vert \x_i)}
+\textrm{ and }\ttil \in [0,1].
 $$
 %
 \end{frame}
