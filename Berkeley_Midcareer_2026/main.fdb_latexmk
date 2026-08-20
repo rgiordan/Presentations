@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1787184381 "main.aux" "main.bbl" "main" 1787184384
+["bibtex main"] 1787184664 "main.aux" "main.bbl" "main" 1787184926
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1787184383 4114 b19b4e4bdaeca964accd5982acecc1cb "lualatex"
+  "main.aux" 1787184925 4372 aa52a85d6263cff7d013b0367d2e31f1 "lualatex"
   "references.bib" 1787084732 22538 3cb408b1d92c40fdc98eee1997089516 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1787184381 "main.tex" "main.pdf" "main" 1787184384
+["lualatex"] 1787184923 "main.tex" "main.pdf" "main" 1787184926
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -410,11 +410,12 @@
   "figures_knitr.tex" 1787184298 3854 098b6b0807856e912092b0bd0967ce8e ""
   "ij.tex" 1787184377 10923 fc1b9d2a385c6b62d4140d2c108231a2 ""
   "introduction.tex" 1787090775 4330 018262d722d5dc8d253773c62ff1bde3 ""
-  "main.aux" 1787184383 4114 b19b4e4bdaeca964accd5982acecc1cb "lualatex"
-  "main.bbl" 1787184381 487 558b33f5beb39baad0e5eec103105c1a "bibtex main"
-  "main.nav" 1787184383 1877 8b70632d3c0ce6c7306f08fe6a39b0f8 "lualatex"
-  "main.out" 1787184382 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.tex" 1787099086 955 afc6edba70dac39acc7d896c619337a2 ""
+  "main.aux" 1787184925 4372 aa52a85d6263cff7d013b0367d2e31f1 "lualatex"
+  "main.bbl" 1787184664 487 558b33f5beb39baad0e5eec103105c1a "bibtex main"
+  "main.nav" 1787184925 2063 a61ffc6d3a1c2de402197a579d2dc15e "lualatex"
+  "main.out" 1787184924 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.tex" 1787184660 882 005daf2d3fdc299f011394fe813d0337 ""
+  "otto.tex" 1787184922 1555 9c7cf5adfc679301c63836a603d2e2b1 ""
   "static_figures/boot_weights.png" 1786644771 37379 803250e2a9c9ab5f85a9c8248e0f2e1d ""
   "static_figures/e_beta_w.png" 1786644771 13636 69efeda3bdea3f69a2fdaee946b7f957 ""
   "static_figures/guinea_pig_copyright.png" 1787076884 162492 f6d84ded8b8676b19144f72cd6451114 ""

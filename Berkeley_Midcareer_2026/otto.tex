@@ -1,4 +1,3 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -7,7 +6,7 @@
   \vfill
   \begin{block}{}
     \centering
-    \Huge Frequentist variance with the infinitesimal jackknife
+    \Huge Local robustness with flows
   \end{block}
   \vfill
 \end{frame}
@@ -18,364 +17,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Why frequentist variance?}
 
-For the remainder of the talk, focus on approximating the
-\emph{frequentist} sampling distribution under
-$\x_i,\y_i \iid \psur(\x, \y)$ of quantities like
-our diagnostic:
-
+\begin{frame}[t]{Why flows for sensitivity analysis?}
+%
+The IJ is built around linearizing posterior expectations:
 $$
-\begin{aligned}
-    \Delta = \cov{\post}{
-        \meantar \m(\theta^\trans \x_j),
-        \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
-    } 
-\end{aligned}
+\expect{\p^\epsilon(\theta)}{\g(\theta)} \approx
+\expect{\p}{\g(\theta)} +
+\fracat{\partial \expect{\p^\epsilon(\theta)}{\g(\theta)}}
+       {\partial \epsilon}{\epsilon = 0}(\epsilon - 0),
 $$
+%
+where the derivative is estimated --- with noise --- from MCMC draws.
 
-\textbf{No need to commit to our covariate shift diagnostic to care!}
-
+This has some shortcomings:
 %
 \begin{itemize}
-\item Frequentist variablity of \emph{any} model checking diagnostic is interesting
-\item Frequentist variablity remains meaningful under model misspecification
-  (Huggins and Miller, IJ papers)
+\item Potential MCMC variance, not obvious how to smooth
+\item Linear extrapolation can lead to impossible values (e.g.~negative variances)
+\item Complex quantities like posterior quantities are hard to linearize
+\item Bayesians like to work with draws, not analytic expectations
 \end{itemize}
 %
 
-We will form \emph{local approximations} computable only from \emph{the original posterior}.\\[1em]
+\textbf{Idea:} Instead of linearizing expectations, learn a flow
+from $\p$ to $\p^\epsilon$.\\[1em]
 
-We will compare with computationally expensive bootstrap:
+There's a large literatue on learning flows between distant
+distributions.  Our problem is easier:\\
 %
 \begin{itemize}
-\item Compute $\Delta$ on the original dataset
-\item For $B=1, \ldots, 100$:
-%
-\begin{enumerate}
-\item Sample $(\x_1^*, \y_1^*), \ldots (\x_\nsur^*, \y_\nsur^*)$
-     (parametric or nonparametric bootstrap)
-\item Run MCMC to estimate $\p(\theta | (\x_1^*, \y_1^*), \ldots (\x_\nsur^*, \y_\nsur^*))$
-\item Use the draws to estimate $\Delta^*_B$
-\end{enumerate}
-%
-\item Compare $\Delta$ with quantiles of $\Delta^*_B - \Delta$
-%
-\end{itemize}
-%
-\end{frame}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{Data re-weighting.}
-
-
-\onslide<1->{
-Augment the problem with {\em data weights} $\w_1, \ldots, \w_N$.
-We can write $\expect{\p(\theta \vert \xvec; \w)}{f(\theta)}$.
-}
-\onslide<1->{
-%
-\begin{align*}
-%
-\ell_n(\theta) :={}& \log \p(\x_n \vert \theta)
-&
-\log \p(\xvec \vert \theta; \w) ={}&
-    \sumn \w_n \ell_n(\theta)
-%
-\end{align*}
-}
-
-\begin{minipage}{0.49\textwidth}
-    \onslide<2-> {
-    Original weights: \par
-    \includegraphics[width=0.78\textwidth]{static_figures/orig_weights}
-    }
-    \onslide<3-> {
-    \par Leave-one-out weights: \par
-    \includegraphics[width=0.78\textwidth]{static_figures/weights_loo}
-    }
-    \onslide<4-> {
-    \par Bootstrap weights: \par
-    \includegraphics[width=0.78\textwidth]{static_figures/boot_weights}
-    }
-\end{minipage}
-%\onslide<1->{
-\begin{minipage}{0.49\textwidth}
-    % https://www.overleaf.com/learn/latex/TikZ_package
-    % https://latexdraw.com/how-to-annotate-an-image-in-latex/
-    % https://tex.stackexchange.com/questions/9559/drawing-on-an-image-with-tikz
-    \begin{tikzpicture}
-        \onslide<5-> {
-        \node[anchor=south west,inner sep=0] (image) at (0,0) {
-            %\includegraphics[width=0.98\textwidth]{static_figures/weight_slope}
-            \includegraphics[width=0.98\textwidth]{static_figures/e_beta_w}
-        };
-        }
-        \onslide<7->{
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[gray, thick, <-] (0.20,0.23) -- ++(0.15,0.3)
-                    node[above,black,fill=white]
-                    {\small $\expect{p(\theta \vert \xvec)}{f(\theta)}$};
-        \end{scope}
-        }
-        \onslide<6->{
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[gray, thick, <-] (0.8,0.8) -- ++(-0.1,0.1)
-                    node[left,black,fill=white]
-                    {\small $\expect{p(\theta \vert \xvec; \w_n)}{f(\theta)}$};
-        \end{scope}
-        }
-        \onslide<8->{
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[blue, thick, -] (0.18,0.18) -- ++(1.2 * 0.6, 1.2 * 0.48);
-        \end{scope}
-        }
-        \onslide<9->{
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[gray, thick, <-] (0.4,0.35) -- ++(0.2,-0.08)
-                    node[right,black,fill=white]
-                    {\small Slope $ = \blue{\infl_n}$};
-        \end{scope}
-        }
-        \onslide<10->{
-        \begin{scope}[x={(image.south east)},y={(image.north west)}]
-            \draw[gray, thick, <-] (0.8,0.65) -- ++(0.02,-0.2)
-                    node[below,black,fill=white]
-                    {\small Error $ = \red{\err_n(\w_n)}$};
-            \draw[red, to-to] (0.8,0.76) -- ++(0,-0.07);
-        \end{scope}
-        }
-    \end{tikzpicture}
-%}
-\end{minipage}
-
-\onslide<11->{
-The re-scaled slope $N \infl_n$ is known as the
-``influence function'' at data point $\x_n$.
-%
-\vspace{-0.5em}
-\begin{align*}
-\expect{p(\theta \vert \xvec; \w)}{f(\theta)} -
-    \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
-    \sumn \blue{\infl_n} (\w_n - 1) +
-    \red{\err_n(\w)}
-    % \textrm{Higher order derivatives}
-%
-\end{align*}
-}
-%
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-\begin{frame}[t]{Data re-weighting.}
-
-\question{How can we use the approximation?}
-
-Assume the \blue{slope} is computable and \red{error} is small.
-%
-%
-\begin{align*}
-    \expect{p(\theta \vert \xvec; \w)}{f(\theta)} -
-    \expect{p(\theta \vert \xvec)}{f(\theta)} ={}&
-    \sumn \blue{\infl_n} (\w_n - 1) + \red{\err_n(\w)}
-\end{align*}
-%
-%
-\pause
-\textbf{Bootstrap.}
-Draw bootstrap
-weights $\w \sim \p(\w) = \textrm{Multinomial}(N, N^{-1})$.
-%
-\begin{align*}
-%
-\textrm{Bootstrap variance} ={}&
-\var{\p(\w)}{\expect{p(\theta \vert \xvec; \w)}{f(\theta)}}
-\onslide<3->{
-\\={}&
-\var{\p(\w)}{
-    \sumn \blue{\infl_n} (\w_n - 1) + \red{\err_n(\w)}
-}
-\\=& 
-\frac{1}{N^2} \sumn \left(
-    \blue{\infl_n - \overline{\infl}}
-\right)^2 +
-\red{\textrm{Term involving }
-    \red{\err_n}(\w)
-    \textrm{ for }n =1,\dots,N
-}
-\\\red{\approx}{}&
-\frac{1}{N}
-\undernote{
-    \left( 
-    \frac{1}{N} \sumn \left(
-        \blue{\infl_n - \overline{\infl}}
-    \right)^2
-    \right)
-}{\textrm{``Infinitesimal jackknife variance estimate''}}
-}
-%
-\end{align*}
-    
-\end{frame}
-
-    
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Bayesian von--Mises Expansion}
-
-\generalizedpost{}
-
-Recall that $\expect{\post}{\g(\theta)} = \T(\psurhat, \nsur)$
-%
-% For $\p$ fixed, as $N \rightarrow \infty$, $\p(\theta \vert \p, N) \rightarrow $a point
-% (Bayesian concentration).\\
-% As $N \rightarrow \infty$, $\psurhat \rightarrow \psur$ (frequentist concentration).\\
-% \pause
-%
-
-To derive frequentist variance estimates, study the \textit{von Mises expansion}.\\
-Let $\p_\t  = \t \psurhat + (1 - \t) \psur$.   Then form the series expansion in $\t$:
-%
-\begin{align*}
-    \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\psur, \nsur) \right) ={}&
-    \sqrt{\nsur} \left(\T(\psurhat, \nsur) - \T(\psur, \nsur) \right) \\={}&
-        \blue{\sqrt{\nsur} \fracat{\partial \T(\p_\t, \nsur)}{\partial \t}{\t = 0}}(1 - 0)
-         + \red{\err(\ttil)}
-\\={}&
-\undernote{
-    \blue{\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} }
-    {\textrm{\blue{Infinitesimal jackknife estimator}}} + o_p(1) 
-    + \red{\err(\ttil)}.
-\end{align*}
-%
-where
-$$
-\infl_i := \nsur \cov{\post}{\g(\theta), \ell(\y_i \vert \x_i)}
-\textrm{ and }\ttil \in [0,1].
-$$
-%
-\end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-\begin{frame}[t]{Bayesian von--Mises Expansion Results}
-%
-\begin{align*}
-    \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\psur, \nsur) \right) 
-={}&
-    \blue{\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} + o_p(1) 
-    & + \red{\err(\ttil)}.
-\end{align*}
-%
-
-
-\begin{itemize}
-    \item Assume (sketch): A well--behaved MAP \textit{maximum a posteriori} estimator $\thetahat$ exists.
-    \begin{itemize}
-        \item The dimension of $\theta$ is fixed as $N \rightarrow \infty$
-        \item The expected log likelihood has a strict maximum at $\thetatrue$
-        \item The observed log likelihood statisfies $\thetahat \rightarrow \thetatrue$
-        \item The expected log likelihood Hessian is negative definite at $\thetatrue$ 
-    \end{itemize}
-    \item Assume (sketch): We can apply standard asymptotics.
-    \begin{itemize}
-    \item The log prior and log likelihood are four times continuously differentiable
-    \item The prior is proper, and a technical set of prior expectations are finite
-    \item The log likelihood and its derivatives are dominated by a square--integrable envelope function 
-          for all $\theta$ in a neighborhood of $\theta_\infty$.
-    \end{itemize}
+\item Only need ``local'' flows
+\item Our perturbations have a lot of structure (e.g.~bootstraps)
 \end{itemize}
 %
 
-\theorem{
-    \textbf{Theorem 3 \citep{giordano:2023:bayesij} (sketch): }
-    % \textbf{(Consistency of the von--Mises expansion in finite dimensions) }
-    %
-\begin{align*}
-    \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \overset{p}{\rightarrow} 0
-    \quad\textrm{in the Bayesian von--Mises expansion}.
-\end{align*}
-%
-}
-
-\theorem{
-    \textbf{Corollary: }Let 
-         $\meansur (\infl_i - \overline{\infl})^2 \overset{p}{\rightarrow} V$.
-By the CLT applied to $\infl_i$,
-\begin{align*}
-     \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\psur, \nsur) \right)
-     \overset{d}{\rightarrow}
-     \mathcal{N}\left(
-        0, V
-     \right).
-\end{align*}
-}
-
 
 \end{frame}
 
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{Data re-weighting.}
-
-Recall that our covariate shift diagnostic is given by
-$$
-\Delta(\w, \psurhat) =
-    \cov{\post}{
-        \meantar \m(\theta^\trans \x_j),
-        \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
-    } = \sumsur \infl_i \w(\x_i).
-$$
-%
-In other words, we are checking whether the influence function
-aligns with any of the regressors.
-
-\end{frame}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}{Accuracy}
-
-
-
-\end{frame}

@@ -873,6 +873,8 @@ INPUT ./figure/ijgraphmrpvar-1.png
 INPUT ./figure/ijgraphdiag-1.png
 INPUT ./figure/ijgraphdiag-1.png
 INPUT ./figure/ijgraphdiag-1.png
+INPUT ./otto.tex
+INPUT ./otto.tex
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT main.nav
