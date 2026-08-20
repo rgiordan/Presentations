@@ -12,36 +12,63 @@ source(file.path(base_dir, "R_scripts/initialize.R"))
 
 source(file.path(base_dir, "R_scripts/logistic_otto_sim/load_data.R"))
 source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_histogram_plots.R"))
-
-
 source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_shift_plots.R"))
 
 
-shift_base_plt + survey_hist + correct_reg
-
-shift_base_plt + survey_hist + correct_reg
-
-shift_base_plt + survey_hist + misspec_reg + correct_reg
-
-shift_base_plt + survey_hist + misspec_reg + correct_reg + x2_zone
 
 
 
-source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_shift_plots.R"))
-survey_shifted_hist <-
-  geom_histogram(aes(x=.data[[col]], 
-                     y=..density.. / max(..density..), 
-                     fill="shifted survey"), 
-                 data=survey_df %>% filter(X2 > x2_thresh),
-                 alpha=1.0)
 
-misspec_shifted_reg <-
-  geom_smooth(aes(x=.data[[col]], y=yhat1 + 0.02 * (.data[[col]] - mean(.data[[col]])), 
-                  linetype="Misspecification (shifted)"),
-              data=survey_df, se = FALSE)
 
-shift_base_plt + survey_hist + poststrat_hist
-shift_base_plt + survey_hist + correct_reg
-shift_base_plt + survey_hist + misspec_reg + correct_reg
-shift_base_plt + survey_shifted_hist + survey_hist + misspec_reg + correct_reg + misspec_shifted_reg
-shift_base_plt + survey_shifted_hist + survey_hist + misspec_reg + correct_reg + misspec_shifted_reg
+
+
+
+
+
+#####################################
+# Reproduce in generality
+
+source(file.path(base_dir, "R_scripts/logistic_otto_sim/generate_histogram_plots.R"))
+
+# Make the sequence of IJ plots 
+mrp_df <- logistic_env$mrp_df
+#glimpse(mrp_df)
+
+ij_plots <- list()
+
+# For some reason piping doesn't work
+base_plot <- 
+  get_base_plot(mrp_df, "mrp_orig") +
+  xlab("MrP point estimate") +
+  ylab("")
+ij_plots$mrp <- base_plot %>%
+  append_result_panel("mrp_pert", "boot", hist=FALSE) %>%
+  append_result_panel("mrp_ij", "ij", hist=TRUE)
+ij_plots$mrp
+
+
+# For some reason piping doesn't work
+base_plot <- 
+  get_base_plot(mrp_df, "mrp_var_orig") +
+  xlab("MrP variance estimate") +
+  ylab("")
+ij_plots$mrp_var <- base_plot %>%
+  append_result_panel("mrp_var_pert", "boot", hist=FALSE) %>%
+  append_result_panel("mrp_var_ij", "ij", hist=TRUE)
+ij_plots$mrp_var
+
+
+base_plot <- 
+  get_base_plot(diag_df, "mrp_change_orig") +
+  xlab("Covariate shift diagnostic") +
+  ylab("")
+ij_plots$diag1 <- base_plot %>%
+  append_result_panel("mrp_change_true", "boot", hist=FALSE) %>%
+  append_result_panel("mrp_change_ij", "ij", hist=TRUE)
+
+ij_plots$diag2 <-
+  append_result_panel(ij_plots$diag1, "mrp_change_otto", "otto", hist=TRUE)
+
+
+
+  

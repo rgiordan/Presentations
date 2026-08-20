@@ -60,7 +60,7 @@ SetShortImageSize()
 figcap <- paste("A covariate shift diagnostic", sep="")
 @
 <<ottograph0, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-print(plot0)
+print(intro_plots$plot0)
 @
 }
 
@@ -70,7 +70,7 @@ print(plot0)
 figcap <- paste("A covariate shift diagnostic", sep="")
 @
 <<ottograph1, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-print(plot1)
+print(intro_plots$plot1)
 @
 }
 
@@ -81,7 +81,7 @@ print(plot1)
 figcap <- paste("A covariate shift diagnostic", sep="")
 @
 <<ottograph2, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-print(plot2)
+print(intro_plots$plot2)
 @
 }
 
@@ -92,11 +92,57 @@ print(plot2)
 figcap <- paste("A covariate shift diagnostic", sep="")
 @
 <<ottograph3, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-print(plot3)
+print(intro_plots$plot3)
 @
 }
 
 
+\def\IJGraphMrP{
+%
+<<>>=
+figcap <- paste("MrP Posterior Mean", sep="")
+@
+<<ijgraphmrp, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(ij_plots$mrp)
+@
+}
+
+\def\IJGraphMrPVar{
+%
+<<>>=
+figcap <- paste("MrP Posterior Variance", sep="")
+@
+<<ijgraphmrpvar, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(ij_plots$mrp_var)
+@
+}
+
+\def\IJGraphDiagIJ{
+%
+<<>>=
+figcap <- paste("Covariate Shift Diagnostic", sep="")
+@
+<<ijgraphdiag, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(ij_plots$diag1)
+@
+}
+
+
+
+\def\IJGraphDiagIJOtto{
+%
+<<>>=
+figcap <- paste("Covariate Shift Diagnostic", sep="")
+@
+<<ijgraphdiagotto, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(ij_plots$diag2)
+@
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 <<shiftgraphs, cache=cache_otto>>=

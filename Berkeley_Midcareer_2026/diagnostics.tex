@@ -98,7 +98,7 @@ Let $\psurhat$ the empirical distribution on the survey data.
 
 
 \def\generalizedpost{
-Define the ``generalized posterior'' functional:
+Define the ``generalized posterior'' functional \citep{giordano:2023:bayesij}:
 %
 \begin{align*}
     %
@@ -127,17 +127,15 @@ Define the ``generalized posterior'' functional:
 
 \begin{frame}[t]{Bayesian posterior functionals}
 
-We are interested in $\expect{\post}{\g(\theta)}$ where
-$\g(\theta) := \meantar \m(\theta^\trans \x_j)$.\\
-
-Let the regression log likelihood be $\ell(\y \vert \x, \theta)$.\\
+Supppose we are interested in $\expect{\post}{\g(\theta)}$.
+Let the regression log likelihood be $\ell(\y \vert \x, \theta)$.\\[1em]
 
 \generalizedpost{}
 
 Let $\psurhat$ denote the empirical distribution over $\x_i, \y_i$.  Then
 %
 \begin{align*}
-    \expect{\post}{\g(\theta)} =
+    \T(\psurhat, \nsur) =
     \frac{
         \int \g(\theta) \exp\left( \nsur \meansur \ell(\y_i \vert \x_i, \theta) \right)
             \prior(\theta) d\theta
@@ -145,26 +143,57 @@ Let $\psurhat$ denote the empirical distribution over $\x_i, \y_i$.  Then
     {
     \int \exp\left( \nsur \meansur \ell(\y_i \vert \x_i, \theta) \right)
         \prior(\theta) d\theta
-    } = \T(\psurhat, \nsur).
+    } = \expect{\post}{\g(\theta)}.
 \end{align*}
 
-%
-% For some function $\w(\xn)$, set
-% $$
-% \gdist_\epsilon(d \xn, d\yn) = 
-%     \gdist(d\xn, d\yn) + \epsilon \w(d \xn) \gdist(d \yn \vert \xn) =
-%     \left( \gdist(d \xn) + \epsilon \w(d \xn) \right) \gdist(d \yn \vert \xn).
-% $$
-% This is a shift in the marginal distribution of $\x$ in the direction $\w(\x)$.\\[1em]
 
-The directional derivative is
+Consider a smooth path of densities $\epsilon \mapsto \p^\epsilon$. 
+The directional derivative in general is
 $$
 \begin{aligned}
-\fracat{\partial \T(\p_\epsilon, N)}{\partial \epsilon}{\epsilon=0} ={}&
+\fracat{\partial \T(\p^\epsilon, N)}{\partial \epsilon}{\epsilon=0} ={}&
     \cov{\p(\theta \vert \p, N)}{
         \g(\theta), 
-        N \int \ell(\yn \vert \xn, \theta) \w(d \xn) \p(\yn \vert \xn) d\xn d\yn
-        }
+        N \int \ell(\yn \vert \xn, \theta) \w(d \xn)
+        \fracat{\partial \p_\epsilon(\yn \vert \xn)}
+               {\partial \epsilon}{\epsilon = 0} d\xn d\yn
+    }
+\\\Rightarrow
+\fracat{\partial \T({\psurhat}^\epsilon, \nsur)}{\partial \epsilon}{\epsilon=0} ={}&
+    \cov{\post}{
+        \g(\theta), 
+        \sumsur \ell(\y_i \vert \x_i, \theta)
+        \fracat{\partial {\psurhat}^\epsilon(\y_i \vert \x_i)}
+               {\partial \epsilon}{\epsilon = 0}
+    }
+\end{aligned}
+$$
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Bayesian posterior functionals}
+
+We're interested in $\g(\theta) = \meantar \m(\theta^\trans \x_j)$.
+
+For some function $\w(\xn)$, set
+$$
+\psur^\epsilon(\xn, yn) = 
+    \psur(\xn, \yn) + \epsilon \w(d \xn) \psur(\xn, \yn) =
+    \left( \psur(\xn) + \epsilon \w(\xn) \right) \psur(\yn \vert \xn).
+$$
+This is a shift in the marginal distribution of $\x$ in the direction $\w(\x)$,
+with\\[1em]
+$$
+\begin{aligned}
+    \fracat{\partial \psur^\epsilon(\yn \vert \xn)}
+               {\partial \epsilon}{\epsilon = 0} =
+               \w(\xn) \psur(\yn \vert \xn).
 \end{aligned}
 $$
 
@@ -176,8 +205,11 @@ $$
         \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
         }
 $$
+%
+We expect $\Delta(\w, \psurhat)$ to be close to zero when the model is correctly
+specified and posterior estimation is accurate.
+%
 \end{frame}
-
 
 
 
