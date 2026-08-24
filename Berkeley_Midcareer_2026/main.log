@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  24 AUG 2026 15:15
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  24 AUG 2026 16:47
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2173,7 +2173,15 @@ Overfull \vbox (20.23059pt too high) detected at line 184
 
 [40
 
-]) (./main.bbl) [41
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 241.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 241.
+ [41
+
+]) (./main.bbl) [42
 
 ]
 \tf@nav=\write6
@@ -2191,40 +2199,41 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 47143 strings out of 477805
+ 47151 strings out of 477805
  125031,1648299 words of node,token memory allocated
- 2967 words of node memory still in use:
+ 2979 words of node memory still in use:
    26 hlist, 8 vlist, 5 rule, 10 disc, 2 local_par, 52 glue, 13 kern, 17 penalty
-, 9 sub_mlist, 126 glyph, 94 attribute, 113 glue_spec, 94 attribute_list, 4 writ
+, 9 sub_mlist, 126 glyph, 97 attribute, 113 glue_spec, 97 attribute_list, 4 writ
 e, 1 pdf_dest, 1 pdf_action, 18 pdf_colorstack nodes
-   avail lists: 1:3,2:1941,3:856,4:370,5:319,6:55,7:4166,8:87,9:937,10:17,11:248
+   avail lists: 1:3,2:1935,3:856,4:370,5:327,6:55,7:4166,8:87,9:937,10:17,11:248
 
- 64771 multiletter control sequences out of 65536+600000
- 92 fonts using 21042511 bytes
- 128i,22n,134p,1852b,1198s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64777 multiletter control sequences out of 65536+600000
+ 98 fonts using 21414695 bytes
+ 128i,22n,134p,1852b,1200s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
 xlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/l
 iberation2/LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7
-.pfb>
-Output written on main.pdf (41 pages, 1355895 bytes).
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (42 pages, 1375733 bytes).
 
-PDF statistics: 356 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
- 87 named destinations out of 1000 (max. 131072)
+PDF statistics: 369 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 89 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -119,7 +119,7 @@ $$
 
 \def\lotto{\mathcal{L}_{\p}}
 
-\begin{frame}[t]{Flow}
+\begin{frame}[t]{When does such a $\v(\theta)$ exist?}
 
 Consider a family of distributions
 $
@@ -180,5 +180,62 @@ there exists a differentiable flow potential $\v(\theta)$ that locally
 approximates $\posteps$.
 }
 
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\b{b}
+\def\B{B}
+
+\begin{frame}[t]{How can we find $\v(\theta)$ in practice?}
+
+Fix $\h(\theta)$.  Specify
+%
+\begin{itemize}
+\item A family of real-valued test functions $\phi_n(\theta)$ for $n \in [N]$
+\item A family of real-valued basis functions $\b_m(\theta)$ for $m \in [M]$
+\end{itemize}
+%
+$$
+\textrm{Let }\v(\theta; \beta) := \sum_{m=1}^M \beta_m \b_m(\theta).
+\textrm{ Then}
+$$
+%
+$$
+\begin{aligned}
+\underbrace{
+  \expect{\p(\theta)}{\phi_n(\theta) \h(\theta)}
+}_{\textrm{Estimate with MCMC!}}
+={}&
+\sum_{m=1}^M
+  \beta_m
+\underbrace{
+  \expect{\p(\theta)}{\nabla \phi_n(\theta)^\trans 
+                      \nabla \b_m(\theta) }
+}_{\textrm{Estimate with MCMC!}}
+\end{aligned}
+$$
+This gives $N$ linear equations in $M$ unknowns.
+% $$
+% F = B \beta
+% $$
+Unlike standard linear regression:\\[1em]
+%
+\begin{itemize}
+\item We are free to choose $\phi_n$ and $\b_m$
+\item Both $F$ and $B$ are measured with noise
+\item We have a lot of information about the covariance of $F$ and $B$
+\end{itemize}
+%
+%
+\theorem{ \textbf{Theorem (Schewengber): } The solution
+gives the best L2 approximation to $\norm{\nabla \v(\theta)}_{L^2(\p)}$
+in the span of $\phi_n(\theta)$.  When $\p$ is Gaussian, the ordered Hermite
+polynomials give the best finite-rank approximation.
+}
 
 \end{frame}
