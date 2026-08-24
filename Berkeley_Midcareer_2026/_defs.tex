@@ -55,16 +55,13 @@
 \def\Ntar{{\tarcol{N_T}}}
 
 
-\def\postsur{\surcol{\p(\theta \vert \textrm{Data})}}
+\def\p{\mathcal{P}}
+\def\peps{\p^\epsilon}
+\def\postsur{\p(\theta \vert \textrm{Data})}
 \def\post{\postsur}
+\def\posteps{\p^\epsilon(\theta \vert \textrm{Data})}
 
-\def\f{f}
-\def\sumn{\sum_{n=1}^N}
-\def\meann{\frac{1}{N} \sum_{n=1}^N}
-\def\sumsur{\sum_{i=1}^\Nsur}
-\def\sumtar{\sum_{j=1}^\Ntar}
-\def\meansur{\frac{1}{\Nsur} \sumsur}
-\def\meantar{\frac{1}{\Ntar} \sumtar}
+\def\h{h}
 
 
 % Distributions of x or (x, y) in the survey and target
@@ -73,8 +70,18 @@
 \def\psurhat{\surcol{{\hat{\mathcal{P}}_{S}}}}
 \def\ptar{\tarcol{\mathcal{P}_{T}}}
 %\def\ptarhat{{\hat{\mathcal{P}}_{T}}}
-\def\p{\mathcal{P}}
 \newcommand{\postd}[1][\delta]{\p(\beta \vert \sur, #1)}
+
+
+
+
+\def\f{f}
+\def\sumn{\sum_{n=1}^N}
+\def\meann{\frac{1}{N} \sum_{n=1}^N}
+\def\sumsur{\sum_{i=1}^\Nsur}
+\def\sumtar{\sum_{j=1}^\Ntar}
+\def\meansur{\frac{1}{\Nsur} \sumsur}
+\def\meantar{\frac{1}{\Ntar} \sumtar}
 
 
 

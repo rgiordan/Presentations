@@ -92,9 +92,77 @@ Let $\psurhat$ the empirical distribution on the survey data.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\sensitivitysetup{
+Consider a family of distributions
+$
+% $$
+\peps(\theta) 
+%:= \frac{\p(\theta) \exp(\epsilon \h(\theta))}{\int \p(\theta') \exp(\epsilon \h(\theta')) d\theta'}
+\propto \p(\theta) \exp(\epsilon \h(\theta))
+% $$
+$
+and a test function $\phi(\theta)$.
+%  where we are interested in 
+% $$
+% \expect{\peps(\theta)}{\phi(\theta)}.
+% $$
+Then, by interchange of integration and differentiation,
+$$
+\fracat{\partial\expect{\peps(\theta)}{\phi(\theta)}}
+       {\partial \epsilon}{\epsilon = 0} =
+\cov{\p(\theta)}{\phi(\theta), \h(\theta)}.
+$$
+}
+
+
+\begin{frame}[t]{Bayesian sensitivity analysis}
+
+\sensitivitysetup{}
+
+\hrulefill
+
+Let the regression log likelihood be $\ell(\y \vert \x, \theta)$, so that
+$$
+\post \propto \exp\left(\sumsur \ell(\y_i \vert \x_i, \theta) \right)
+\textrm{ and }
+\posteps \propto 
+%\exp\left(\sumsur (1 + \epsilon \w(\x_i))\ell(\y_i \vert \x_i, \theta) \right)
+\post \exp\left(\sumsur \epsilon \w(\x_i) \ell(\y_i \vert \x_i, \theta) \right)
+$$
+%
+\begin{itemize}
+\item $\p(\theta) = \post$
+\item $\phi(\theta) = \meantar \m(\theta^\trans \x_j)$  (so that $\muhatmrp = \expect{\post}{\phi(\theta)})$
+\item $\h(\theta) = \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)$ \Rightarrow
+\end{itemize}
+%
+Our diagnostic is then given by
+$$
+\begin{aligned}
+    \Delta(\w, \psurhat) :=
+    \fracat{\partial \muhatmrp}{\partial \epsilon}{\epsilon = 0} =
+    \cov{\post}{\meantar \m(\theta^\trans \x_j), \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)}
+\end{aligned}
+$$
+We expect $\Delta(\w, \psurhat)$ to be close to zero when the model is correctly
+specified and posterior estimation is accurate.
+
+
+\end{frame}
+
+
+
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \def\generalizedpost{
@@ -121,95 +189,95 @@ Define the ``generalized posterior'' functional \citep{giordano:2023:bayesij}:
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Bayesian posterior functionals}
+% \begin{frame}[t]{Bayesian posterior functionals}
 
-Supppose we are interested in $\expect{\post}{\g(\theta)}$.
-Let the regression log likelihood be $\ell(\y \vert \x, \theta)$.\\[1em]
+% Supppose we are interested in $\expect{\post}{\g(\theta)}$.
+% Let the regression log likelihood be $\ell(\y \vert \x, \theta)$.\\[1em]
 
-\generalizedpost{}
+% \generalizedpost{}
 
-Let $\psurhat$ denote the empirical distribution over $\x_i, \y_i$.  Then
-%
-\begin{align*}
-    \T(\psurhat, \nsur) =
-    \frac{
-        \int \g(\theta) \exp\left( \nsur \meansur \ell(\y_i \vert \x_i, \theta) \right)
-            \prior(\theta) d\theta
-    }
-    {
-    \int \exp\left( \nsur \meansur \ell(\y_i \vert \x_i, \theta) \right)
-        \prior(\theta) d\theta
-    } = \expect{\post}{\g(\theta)}.
-\end{align*}
-
-
-Consider a smooth path of densities $\epsilon \mapsto \p^\epsilon$. 
-The directional derivative in general is
-$$
-\begin{aligned}
-\fracat{\partial \T(\p^\epsilon, N)}{\partial \epsilon}{\epsilon=0} ={}&
-    \cov{\p(\theta \vert \p, N)}{
-        \g(\theta), 
-        N \int \ell(\yn \vert \xn, \theta) \w(d \xn)
-        \fracat{\partial \p_\epsilon(\yn \vert \xn)}
-               {\partial \epsilon}{\epsilon = 0} d\xn d\yn
-    }
-\\\Rightarrow
-\fracat{\partial \T({\psurhat}^\epsilon, \nsur)}{\partial \epsilon}{\epsilon=0} ={}&
-    \cov{\post}{
-        \g(\theta), 
-        \sumsur \ell(\y_i \vert \x_i, \theta)
-        \fracat{\partial {\psurhat}^\epsilon(\y_i \vert \x_i)}
-               {\partial \epsilon}{\epsilon = 0}
-    }
-\end{aligned}
-$$
-
-\end{frame}
+% Let $\psurhat$ denote the empirical distribution over $\x_i, \y_i$.  Then
+% %
+% \begin{align*}
+%     \T(\psurhat, \nsur) =
+%     \frac{
+%         \int \g(\theta) \exp\left( \nsur \meansur \ell(\y_i \vert \x_i, \theta) \right)
+%             \prior(\theta) d\theta
+%     }
+%     {
+%     \int \exp\left( \nsur \meansur \ell(\y_i \vert \x_i, \theta) \right)
+%         \prior(\theta) d\theta
+%     } = \expect{\post}{\g(\theta)}.
+% \end{align*}
 
 
+% Consider a smooth path of densities $\epsilon \mapsto \p^\epsilon$. 
+% The directional derivative in general is
+% $$
+% \begin{aligned}
+% \fracat{\partial \T(\p^\epsilon, N)}{\partial \epsilon}{\epsilon=0} ={}&
+%     \cov{\p(\theta \vert \p, N)}{
+%         \g(\theta), 
+%         N \int \ell(\yn \vert \xn, \theta) \w(d \xn)
+%         \fracat{\partial \log \p_\epsilon(\yn \vert \xn)}
+%                {\partial \epsilon}{\epsilon = 0} d\xn d\yn
+%     }
+% \\\Rightarrow
+% \fracat{\partial \T({\psurhat}^\epsilon, \nsur)}{\partial \epsilon}{\epsilon=0} ={}&
+%     \cov{\post}{
+%         \g(\theta), 
+%         \sumsur \ell(\y_i \vert \x_i, \theta)
+%         \fracat{\partial \log {\psurhat}^\epsilon(\y_i \vert \x_i)}
+%                {\partial \epsilon}{\epsilon = 0}
+%     }
+% \end{aligned}
+% $$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \end{frame}
 
-\begin{frame}[t]{Bayesian posterior functionals}
 
-We're interested in $\g(\theta) = \meantar \m(\theta^\trans \x_j)$.
 
-For some function $\w(\xn)$, set
-$$
-\psur^\epsilon(\xn, yn) = 
-    \psur(\xn, \yn) + \epsilon \w(d \xn) \psur(\xn, \yn) =
-    \left( \psur(\xn) + \epsilon \w(\xn) \right) \psur(\yn \vert \xn).
-$$
-This is a shift in the marginal distribution of $\x$ in the direction $\w(\x)$,
-with\\[1em]
-$$
-\begin{aligned}
-    \fracat{\partial \psur^\epsilon(\yn \vert \xn)}
-               {\partial \epsilon}{\epsilon = 0} =
-               \w(\xn) \psur(\yn \vert \xn).
-\end{aligned}
-$$
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Our diagnostic is then given by
-$$
-\Delta(\w, \psurhat) =
-    \cov{\post}{
-        \meantar \m(\theta^\trans \x_j),
-        \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
-        }
-$$
-%
-We expect $\Delta(\w, \psurhat)$ to be close to zero when the model is correctly
-specified and posterior estimation is accurate.
-%
-\end{frame}
+% \begin{frame}[t]{Bayesian posterior functionals}
+
+% We're interested in $\g(\theta) = \meantar \m(\theta^\trans \x_j)$.
+
+% For some function $\w(\xn)$, set
+% $$
+% \psur^\epsilon(\xn, yn) = 
+%     \psur(\xn, \yn) + \epsilon \w(d \xn) \psur(\xn, \yn) =
+%     \left( \psur(\xn) + \epsilon \w(\xn) \right) \psur(\yn \vert \xn).
+% $$
+% This is a shift in the marginal distribution of $\x$ in the direction $\w(\x)$,
+% with\\[1em]
+% $$
+% \begin{aligned}
+%     \fracat{\partial \psur^\epsilon(\yn \vert \xn)}
+%                {\partial \epsilon}{\epsilon = 0} =
+%                \w(\xn) \psur(\yn \vert \xn).
+% \end{aligned}
+% $$
+
+% Our diagnostic is then given by
+% $$
+% \Delta(\w, \psurhat) =
+%     \cov{\post}{
+%         \meantar \m(\theta^\trans \x_j),
+%         \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
+%         }
+% $$
+% %
+% We expect $\Delta(\w, \psurhat)$ to be close to zero when the model is correctly
+% specified and posterior estimation is accurate.
+% %
+% \end{frame}
 
 
 
@@ -220,9 +288,9 @@ specified and posterior estimation is accurate.
 
 \begin{frame}{Simulation}
     \begin{minipage}{0.95\textwidth}
-    \only<1>{\ShiftGraphZero{}}
-    \only<2>{\ShiftGraphOne{}}
-    \only<3>{\OttoGraphOne{}}
+    % \only<1>{\ShiftGraphZero{}}
+    % \only<2>{\ShiftGraphOne{}}
+    \only<1>{\OttoGraphOne{}}
     \end{minipage}
 
 Simulation data: Logistic regression with five active regressors, each
@@ -235,7 +303,7 @@ $$
 \end{aligned}
 $$
 }
-\onslide<2->{
+\onslide<1->{
 Compute diagnostic with $\w(\x) = \ind{\texttt{X2} > 0.878}$
 }
 

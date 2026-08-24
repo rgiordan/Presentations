@@ -56,3 +56,129 @@ distributions.  Our problem is easier:\\
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\feps{f^\epsilon}
+\def\verteq{\rotatebox{90}{$\,=$}}
+\def\v{v}
+
+\begin{frame}[t]{Flow}
+
+\sensitivitysetup{}
+
+We want a flow $\theta \mapsto \feps(\theta)$ such that,
+for small $\epsilon$, $\feps(\theta) \sim \peps(\theta)$
+and $\f^0(\theta) = \theta$.\\[1em]
+
+\hrulefill
+
+Suppose there is a scalar-valued potential function $\v(\theta)$ such that
+$$
+\feps(\theta) = \theta + \epsilon \nabla \v(\theta) + O(\epsilon^2)
+\quad\textrm{as }\epsilon \rightarrow 0. \textrm{ Then:}
+$$
+%
+$$
+\begin{aligned}
+  \expect{\peps(\theta)}{\phi(\theta)} ={}& \expect{\p(\theta)}{\phi(\feps(\theta))}
+\Rightarrow \\
+\fracat{\partial}{\partial \epsilon}{\epsilon = 0}  
+  \expect{\peps(\theta)}{\phi(\theta)} ={}&
+\fracat{\partial}{\partial \epsilon}{\epsilon = 0}
+  \expect{\p(\theta)}{\phi(\theta + \epsilon \nabla \v(\theta))}
+\\
+\verteq \quad\quad\quad & \quad\quad\quad \verteq
+\\
+%\cov{\p(\theta)}{\phi(\theta), \h(\theta)}
+\expect{\p(\theta)}{\phi(\theta) \h(\theta)}
+={}&
+  \expect{\p(\theta)}{\nabla \phi(\theta)^\trans 
+                      \nabla \v(\theta) }\\
+\end{aligned}
+$$
+
+\hrulefill
+
+%
+\begin{itemize}
+\item When does such a $\v(\theta)$ exist?
+\item How can we find it in practice?
+\end{itemize}
+%
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\lotto{\mathcal{L}_{\p}}
+
+\begin{frame}[t]{Flow}
+
+Consider a family of distributions
+$
+% $$
+\peps(\theta) 
+%:= \frac{\p(\theta) \exp(\epsilon \h(\theta))}{\int \p(\theta') \exp(\epsilon \h(\theta')) d\theta'}
+\propto \p(\theta) \exp(\epsilon \h(\theta)).
+% $$
+$\\
+% and \emph{family} of test functions $\phi_n(\theta)$ for $n \in [N]$.
+Integration by parts (with compactly supported $\phi$) gives:
+%
+$$
+\begin{aligned}
+\expect{\p(\theta)}{\phi(\theta) \h(\theta)}
+={}&
+  \expect{\p(\theta)}{\nabla \phi(\theta)^\trans 
+                      \nabla \v(\theta) }\\
+={}&
+  \expect{\p(\theta)}{\phi(\theta)
+  \left(
+    -\nabla \v(\theta)^\trans \nabla \log \p(\theta) 
+    -\Delta \v(\theta)
+  \right)
+  }
+\\=:{}&
+  \expect{\p(\theta)}{\phi(\theta) \lotto(\v)(\theta)
+  }
+\textrm{ for }\\
+\lotto(\v) :={}&
+-\nabla \v(\theta)^\trans \nabla \log \p(\theta) 
+    -\Delta \v(\theta). 
+\end{aligned}
+$$
+%
+This is a weak formulation of the linear differential equation
+$$
+\lotto(\v) = \h.
+$$
+%
+Note that $\lotto$ is the drift operator, generator of Langevin diffusion,
+trace of the Stein operator.
+%
+\theorem{ \textbf{Theorem (Schewengber): } Assume that $\log \p(\theta) \in
+    C^2(\mathcal{R}^d)$ and
+    $$
+    \lim_{\theta \to \infty} \left( \frac{1}{2}\| \nabla \log
+    \p(\theta) \|^2 - \Delta \log \p(\theta) \right) = +\infty.
+    $$
+%
+Then $\lotto^{-1}$ is bounded as a map from $\dot{H}^1(p) \mapsto \dot{H}^1(p)$.
+}
+
+\theorem{ \textbf{Corollary: } If $\log \post$ is sufficiently
+regular, $\expect{\post}{\norm{\nabla \h(\theta)}_2^2} < \infty$, 
+and $\abs{\expect{\post}{\h(\theta)}} < \infty$, then
+there exists a differentiable flow potential $\v(\theta)$ that locally
+approximates $\posteps$.
+}
+
+
+\end{frame}
