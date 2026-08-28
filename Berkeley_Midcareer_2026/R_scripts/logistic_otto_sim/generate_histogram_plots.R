@@ -87,7 +87,6 @@ base_plot <-
 ij_plots$mrp <- base_plot %>%
   append_result_panel("mrp_pert", "boot", hist=FALSE) %>%
   append_result_panel("mrp_ij", "ij", hist=TRUE)
-ij_plots$mrp
 
 
 # For some reason piping doesn't work
@@ -98,7 +97,6 @@ base_plot <-
 ij_plots$mrp_var <- base_plot %>%
   append_result_panel("mrp_var_pert", "boot", hist=FALSE) %>%
   append_result_panel("mrp_var_ij", "ij", hist=TRUE)
-ij_plots$mrp_var
 
 
 base_plot <- 
@@ -115,5 +113,50 @@ ij_plots$diag2 <-
 
 
   
+
+
+##############################
+# Make the sequence of Otto plots 
+mrp_df <- logistic_env$mrp_df
+#glimpse(mrp_df)
+
+otto_plots <- list()
+
+# For some reason piping doesn't work
+base_plot <- 
+  get_base_plot(mrp_df, "mrp_orig") +
+  xlab("MrP point estimate") +
+  ylab("")
+otto_plots$mrp <- base_plot %>%
+  append_result_panel("mrp_pert", "boot", hist=FALSE) %>%
+  append_result_panel("mrp_ij", "ij", hist=FALSE) %>%
+  append_result_panel("mrp_otto", "otto", hist=TRUE)
+otto_plots$mrp
+
+
+# For some reason piping doesn't work
+base_plot <- 
+  get_base_plot(mrp_df, "mrp_var_orig") +
+  xlab("MrP variance estimate") +
+  ylab("")
+otto_plots$mrp_var <- base_plot %>%
+  append_result_panel("mrp_var_pert", "boot", hist=FALSE) %>%
+  append_result_panel("mrp_var_ij", "ij", hist=FALSE) %>%
+  append_result_panel("mrp_var_otto", "otto", hist=TRUE)
+otto_plots$mrp_var
+
+
+base_plot <- 
+  get_base_plot(diag_df, "mrp_change_orig") +
+  xlab("Covariate shift diagnostic") +
+  ylab("")
+otto_plots$diag1 <- base_plot %>%
+  append_result_panel("mrp_change_true", "boot", hist=FALSE) %>%
+  append_result_panel("mrp_change_ij", "ij", hist=FALSE) %>%
+  append_result_panel("mrp_change_otto", "otto", hist=TRUE)
+  
+otto_plots$diag1
+
+
 
 

@@ -881,6 +881,15 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT ./figure/ottographmrp-1.png
+INPUT ./figure/ottographmrp-1.png
+INPUT ./figure/ottographmrp-1.png
+INPUT ./figure/ottographmrpvar-1.png
+INPUT ./figure/ottographmrpvar-1.png
+INPUT ./figure/ottographmrpvar-1.png
+INPUT ./figure/ottographdiag-1.png
+INPUT ./figure/ottographdiag-1.png
+INPUT ./figure/ottographdiag-1.png
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT main.nav
@@ -888,6 +897,7 @@ OUTPUT main.toc
 OUTPUT main.snm
 INPUT ./main.aux
 INPUT ./main.out
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
@@ -905,4 +915,5 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb

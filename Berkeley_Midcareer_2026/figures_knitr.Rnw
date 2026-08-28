@@ -97,6 +97,8 @@ print(intro_plots$plot3)
 }
 
 
+%%%%%%%%%%%%%%%
+
 \def\IJGraphMrP{
 %
 <<>>=
@@ -134,10 +136,47 @@ print(ij_plots$diag1)
 <<>>=
 figcap <- paste("Covariate Shift Diagnostic", sep="")
 @
-<<ijgraphdiagotto, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-print(ij_plots$diag2)
+<<ottographdiagotto, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(otto_plots$diag2)
 @
 }
+
+
+
+
+%%%%%%%%%%%%%%%
+
+\def\OttoGraphMrP{
+%
+<<>>=
+figcap <- paste("MrP Posterior Mean", sep="")
+@
+<<ottographmrp, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(otto_plots$mrp)
+@
+}
+
+\def\OttoGraphMrPVar{
+%
+<<>>=
+figcap <- paste("MrP Posterior Variance", sep="")
+@
+<<ottographmrpvar, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(otto_plots$mrp_var)
+@
+}
+
+\def\OttoGraphDiag{
+%
+<<>>=
+figcap <- paste("Covariate Shift Diagnostic", sep="")
+@
+<<ottographdiag, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(otto_plots$diag1)
+@
+}
+
+
 
 
 
