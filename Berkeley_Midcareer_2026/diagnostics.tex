@@ -121,6 +121,36 @@ transfer learning
 \end{frame}
 
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Simple visual example}
+
+\begin{minipage}{0.9\textwidth}
+    \only<1>{\ShiftGraphZero{}}
+    \only<2>{\ShiftGraphOne{}}
+    \only<3>{\ShiftGraphTwo{}}
+\end{minipage}
+
+\only<1->{
+Consider logistic regression with two regressors, $\x_1$ and $\x_2$. \\[1em]
+}
+
+\only<2->{
+Taking $\w(x) = \ind{\x_1 > 1}$, we upweight positive examples.\\[1em]
+}
+
+\only<3->{
+With enough data, a regression that omits $\x_1$ will change its
+coefficient of $\x_2$ under re-weighting, whereas a correctly specified
+regression will not need to.
+}
+
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,42 +179,61 @@ $$
 }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}[t]{Bayesian sensitivity analysis}
 
-\sensitivitysetup{}
-
-\hrulefill
-
-Let the regression log likelihood be $\ell(\y \vert \x, \theta)$, so that
+Let the regression log likelihood be $\ell(\y \vert \x, \theta)$, and
+fix $\w(\x)$.  Then define
 $$
-\post \propto \exp\left(\sumsur \ell(\y_i \vert \x_i, \theta) \right)
+\post \propto \exp\left(\sumsur \ell(\y_i \vert \x_i, \theta) \right) \prior(\theta)
 \textrm{ and }
+% $$
+% For a given $\w(\x)$, define
+% $$
 \posteps \propto 
-%\exp\left(\sumsur (1 + \epsilon \w(\x_i))\ell(\y_i \vert \x_i, \theta) \right)
 \post \exp\left(\sumsur \epsilon \w(\x_i) \ell(\y_i \vert \x_i, \theta) \right)
 $$
+
+\pause 
+
+\theorem{
+    \textbf{Theorem (\citet{giordano:2018:covariances}, others): }
+Consider a family of distributions\\
+$
+\peps(\theta) \propto \p(\theta) \exp(\epsilon \h(\theta))
+$
+and a function $\phi(\theta)$.  By interchange of integration and differentiation,
+$$
+\fracat{\partial\expect{\peps(\theta)}{\phi(\theta)}}
+       {\partial \epsilon}{\epsilon = 0} =
+\cov{\p(\theta)}{\phi(\theta), \h(\theta)}.
+$$
 %
-\begin{itemize}
-\item $\p(\theta) = \post$
-\item $\phi(\theta) = \meantar \m(\theta^\trans \x_j)$  (so that $\muhatmrp = \expect{\post}{\phi(\theta)})$
-\item $\h(\theta) = \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)$ \Rightarrow
-\end{itemize}
-%
+}
+
+\pause 
+
 Our diagnostic is then given by
 $$
 \begin{aligned}
-    \Delta(\w, \psurhat) :=
+    \Delta(\w, \data) :=
     \fracat{\partial \muhatmrp}{\partial \epsilon}{\epsilon = 0} =
     \cov{\post}{\meantar \m(\theta^\trans \x_j), \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)}
 \end{aligned}
 $$
-We expect $\Delta(\w, \psurhat)$ to be close to zero when the model is correctly
-specified and posterior estimation is accurate.
+We expect $\Delta(\w, \data)$ to be \emph{close} to zero when the model is correctly
+specified.
+
+\pause 
+
+To assess closeness to zero, compare with $\Delta(\w, \data^*)$, where $\data^*$ 
+is a parametric bootstrap.
 
 
 \end{frame}
-
-
 
 
 

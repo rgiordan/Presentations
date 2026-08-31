@@ -20,45 +20,45 @@ Warning--empty year in rojas-carulla::InvariantModelsCausal
 Warning--empty journal in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
-You've used 7 entries,
+You've used 8 entries,
             2773 wiz_defined-function locations,
-            647 strings with 6748 characters,
-and the built_in function-call counts, 3612 in all, are:
-= -- 332
-> -- 199
+            655 strings with 6929 characters,
+and the built_in function-call counts, 4136 in all, are:
+= -- 380
+> -- 229
 < -- 3
-+ -- 67
-- -- 60
-* -- 330
-:= -- 552
-add.period$ -- 33
-call.type$ -- 7
-change.case$ -- 41
-chr.to.int$ -- 7
-cite$ -- 31
-duplicate$ -- 153
-empty$ -- 278
-format.name$ -- 69
-if$ -- 737
++ -- 77
+- -- 69
+* -- 380
+:= -- 631
+add.period$ -- 36
+call.type$ -- 8
+change.case$ -- 47
+chr.to.int$ -- 8
+cite$ -- 33
+duplicate$ -- 174
+empty$ -- 321
+format.name$ -- 79
+if$ -- 845
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 7
-newline$ -- 54
-num.names$ -- 28
-pop$ -- 104
+missing$ -- 8
+newline$ -- 59
+num.names$ -- 32
+pop$ -- 114
 preamble$ -- 1
-purify$ -- 34
+purify$ -- 39
 quote$ -- 0
-skip$ -- 93
+skip$ -- 108
 stack$ -- 0
-substring$ -- 144
-swap$ -- 10
+substring$ -- 177
+swap$ -- 11
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 77
+type$ -- 88
 warning$ -- 17
-while$ -- 32
+while$ -- 37
 width$ -- 0
-write$ -- 109
+write$ -- 122
 (There were 17 warnings)

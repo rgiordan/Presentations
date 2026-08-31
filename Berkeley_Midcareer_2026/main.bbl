@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -26,6 +26,13 @@ Rafael Cabral, David Bolin, and Håvard Rue.
 R.~Giordano and T.~Broderick.
 \newblock The {Bayesian} infinitesimal jackknife for variance.
 \newblock \emph{arXiv preprint arXiv:2305.06466}, 2026.
+
+\bibitem[Giordano et~al.(2018)Giordano, Broderick, and
+  Jordan]{giordano:2018:covariances}
+R.~Giordano, T.~Broderick, and M.~Jordan.
+\newblock Covariances, robustness and variational {B}ayes.
+\newblock \emph{The Journal of Machine Learning Research}, 19\penalty0
+  (1):\penalty0 1981--2029, 2018.
 
 \bibitem[Kuh et~al.()Kuh, Kennedy, Chen, and
   Gelman]{kuhUsingLeaveoneoutCross2024}

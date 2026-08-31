@@ -215,10 +215,7 @@
 
 
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -227,10 +224,15 @@
 %
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
 
+{\centering \includegraphics[width=0.98\linewidth,height=0.549\linewidth]{figure/shiftplot0-1} 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'shift\_plot0' not found}}\end{kframe}
+}
+
+\caption[A covariate shift diagnostic]{A covariate shift diagnostic}\label{fig:shiftplot0}
+\end{figure}
+
 \end{knitrout}
 }
 
@@ -239,11 +241,68 @@
 %
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
 
+{\centering \includegraphics[width=0.98\linewidth,height=0.549\linewidth]{figure/shiftplot1-1} 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'shift\_plot1' not found}}\end{kframe}
+}
+
+\caption[A covariate shift diagnostic]{A covariate shift diagnostic}\label{fig:shiftplot1}
+\end{figure}
+
+\end{knitrout}
+}
+
+\def\ShiftGraphTwo{
+%
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.549\linewidth]{figure/shiftplot2-1} 
+
+}
+
+\caption[A covariate shift diagnostic]{A covariate shift diagnostic}\label{fig:shiftplot2}
+\end{figure}
+
 \end{knitrout}
 }
 
 
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% <<shiftgraphs, cache=cache_otto>>=
+% source("R_scripts/logistic_otto_sim/generate_shift_plots.R")
+% SetShortImageSize()
+% @
+
+% \def\ShiftGraphZero{
+% %
+% <<>>=
+% figcap <- paste("A covariate shift diagnostic", sep="")
+% @
+% <<shiftplot0, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+% print(shift_plot0)
+% @
+% }
+
+
+% \def\ShiftGraphOne{
+% %
+% <<>>=
+% figcap <- paste("A covariate shift diagnostic", sep="")
+% @
+% <<shiftplot1, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+% print(shift_plot1)
+% @
+% }
+
+% <<>>=
+% SetFullImageSize()
+% @
