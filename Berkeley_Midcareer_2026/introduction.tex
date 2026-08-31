@@ -28,20 +28,20 @@ in which we observe only covariates.
 \splitpage{
     \centering
     \only<1>{
-    \includegraphics[width=0.3\textwidth]{static_figures/survey_man.jpg}
+    \includegraphics[width=0.27\textwidth]{static_figures/survey_man.jpg}
     }
     \only<2->{
     %\includegraphics[width=0.5\textwidth]{static_figures/survey_crazy_man.jpg}
-    \includegraphics[width=0.3\textwidth]{static_figures/guinea_pig_copyright.png}
+    \includegraphics[width=0.27\textwidth]{static_figures/guinea_pig_copyright.png}
     }
 }{
     \centering
-    \includegraphics[width=0.3\textwidth]{static_figures/voting_man.jpg}
+    \includegraphics[width=0.27\textwidth]{static_figures/voting_man.jpg}
 }
 
 \splitpage{
     \centering
-    Observe \surcol{$(\x_i, y_i)$ for $i = 1, \ldots, \nsur$}\\
+    Observe \surcol{$(\x_i, y_i)$ for $i = 1, \ldots, \nsur$} \\(This is the ``Data'', $\data$)\\
 }{
     \centering
     Observe \tarcol{$\x_j$ for $j = 1, \ldots, \ntar$}\\
@@ -54,9 +54,9 @@ This talk will study ``Multilevel regression and poststratification'' estimators
 
 \quad$\bullet$ Set $\expect{}{\y \vert \x, \theta} = m(\theta^\trans \x)$ and prior $\p(\theta)$
 (e.g.~Hierarchical logistic regression)\\[1em]
-
+%
 \quad$\bullet$ Estimate the posterior $\postsur$ with Markov Chain Monte Carlo (MCMC)\\[1em]
-
+%
 \quad$\bullet$ Take
 $\muhatmrp = \tarcol{\meantar \yhat_j}$
 where     $\tarcol{\yhat_j} =
@@ -139,4 +139,5 @@ where     $\tarcol{\yhat_j} =
 %
 \end{itemize}
 %
+\textbf{TODO: put in pictures}
 \end{frame}

@@ -890,6 +890,8 @@ INPUT ./figure/ottographmrpvar-1.png
 INPUT ./figure/ottographdiag-1.png
 INPUT ./figure/ottographdiag-1.png
 INPUT ./figure/ottographdiag-1.png
+INPUT ./conclusion.tex
+INPUT ./conclusion.tex
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT main.nav

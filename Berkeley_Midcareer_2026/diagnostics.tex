@@ -19,60 +19,79 @@
 
 \begin{frame}[t]{Local specification checks}
 
-% \textbf{Setup}
-% % \begin{itemize}
-% %  \item Covariates $\x$ (e.g.~race, gender, zip code, age, education level)
-% %  \item Responses $\y$ (e.g.~A binary response to ``do you support candidate Z'')
-% % \end{itemize}
-% %
-% \textbf{Survey population:}    Observe \surcol{$(\x_i, y_i)$ for $i = 1, \ldots, \nsur$}\\
-% \textbf{Target population:}    Observe \tarcol{$\x_j$ for $j = 1, \ldots, \ntar$}\\[1em]
-
-
-% \quad$\bullet$ Set $\expect{}{\y \vert \x, \theta} = m(\theta^\trans \x)$ and prior $\p(\theta)$
-% (e.g.~Hierarchical logistic regression)\\[1em]
-
-% \quad$\bullet$ Estimate the posterior $\postsur$ with Markov Chain Monte Carlo (MCMC)\\[1em]
-
-% \quad$\bullet$ Take
-$\muhatmrp = \tarcol{\meantar \yhat_j}$
-where
-$\tarcol{\yhat_j} =
+$$
+\begin{aligned}
+\muhatmrp = \meantar \yhat_j =
     \underbrace{
-        \expect{\postsur}{\m(\theta^\trans \tarcol{\x_j})}            
-    }_{\textrm{Want to check without re--running MCMC}}
-$.
+        \expect{\post}{\meantar \m(\theta^\trans \x_j)}.
+    }_{\textrm{
+        \shortstack{Want to check specification \\ without re--running MCMC}
+    }}
+\end{aligned}
+$$
 
 
-% Standard local approaches:
-% %
-% \begin{itemize}
-% \item Specify an alternative model + test with Bayes factor (CITE LOCAL BF)
-% %
-% \begin{itemize}
-%     \item The model is definitely misspecified, we want to check whether it's \emph{importantly} misspecified
-%     \item Bayes factors use prior information (Lindley's paradox)
-%     \item Articulating a family of models is inconvenient
-%     \item Doesn't assess shrinkage
-% \end{itemize}
-% %
-% \item Use out-of-sample checking (CITE GELMAN)
-% \begin{itemize}
-%     \item The task is not to predict on a new survey datapoint
-% \end{itemize}
-% \end{itemize}
+Some existing local approaches:
 %
+\begin{itemize}
+\item Specify an alternative model + test with Bayes factor
+\citep{cabral:2025:RobustnessModelChecking2025}
+%
+\begin{itemize}
+    \item Bayes factors can depend strongly on priors (Lindley's paradox)
+    \item Articulating a family of models is inconvenient
+    \item Doesn't take the target into account
+\end{itemize}
+%
+\item Use out-of-sample checking \citep{vehtariPracticalBayesianModel2017,kuhUsingLeaveoneoutCross2024}
+\begin{itemize}
+    \item The task is not to predict on a new IID survey datapoint
+\end{itemize}
+\end{itemize}
 
-This model of \emph{survey data} is definitely misspecified.\\[1em]
+\pause
+The model is definitely misspecified, we want to check whether it's \emph{importantly} misspecified.
 
-Why do we care about correct specification? We want to use $\psur(\x)$ to learn about $\ptar(\x)$.\\[1em]
+\end{frame}
 
-\begin{center}
-Correct specification $\Rightarrow$ Regression estimates are invariant to $\psur(\x)$
-\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Idea:}  Check invariance to $\psur(\x)$ directly.\\[1em]
+\begin{frame}[t]{Local specification checks}
 
+$$
+\begin{aligned}
+\muhatmrp = \meantar \yhat_j =
+    \underbrace{
+        \expect{\post}{\meantar \m(\theta^\trans \tarcol{\x_j})}.
+    }_{\textrm{
+        \shortstack{Want to check specification \\ without re--running MCMC}
+    }}
+\end{aligned}
+$$
+
+Why do we care about correct specification? We want to use 
+$\psur(\x)$ to learn about $\ptar(\x)$.\\[1em]
+
+$$
+\begin{aligned}
+    \textrm{Correct specification} && \Rightarrow &&
+    \only<1>{
+        {\textrm{Regression estimates are invariant to }\psur(\x)}
+    }
+    \only<2->{
+        \underbrace
+        {\textrm{Regression estimates are invariant to }\psur(\x)}_{
+                    \textrm{This is what we actually want --- let's check this directly.}
+        }
+    }
+\end{aligned}
+$$
+
+
+
+\onslide<3->{
 Let $\p(\x,\y)$ denote a generic joint density of $\x, \y$.\\
 Let $\psurhat$ the empirical distribution on the survey data.
 %
@@ -85,8 +104,19 @@ Let $\psurhat$ the empirical distribution on the survey data.
 \item Compute the derivative $\Delta(\w, \p) = \partial \mu(\p_\epsilon) / \partial \epsilon$
 \item Plug the empirical distribution into $\Delta(\w, \psurhat)$ and check whether $\approx 0$
 \end{enumerate}
+}
 %
 
+
+\onslide<4->{
+Lots of similar
+ideas in causal inference,
+kernel learning,
+transfer learning 
+\citep{buhlmann:2020:InvarianceCausalityRobustness2020,
+  rojas-carulla::InvariantModelsCausal,
+  muandet:2020:KernelConditionalMoment2020}.  This is just a local Bayesian diagnostics version.
+}
 
 \end{frame}
 

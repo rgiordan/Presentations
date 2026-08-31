@@ -35,16 +35,17 @@ This has some shortcomings:
 \begin{itemize}
 \item Potential MCMC variance, not obvious how to smooth
 \item Linear extrapolation can lead to impossible values (e.g.~negative variances)
-\item Complex quantities like posterior quantities are hard to linearize
-\item Bayesians like to work with draws, not analytic expectations
+\item Complex quantities like posterior quantiles are hard to linearize
+\item Bayesians like to work with draws, not analytic expectations (CITE)
 \end{itemize}
 %
 
 \textbf{Idea:} Instead of linearizing expectations, learn a flow
 from $\p$ to $\p^\epsilon$.\\[1em]
 
-There's a large literatue on learning flows between distant
-distributions.  Our problem is easier:\\
+There's a large literature on learning flows between distant
+distributions.  (CITE)\\
+Our problem is easier:\\
 %
 \begin{itemize}
 \item Only need ``local'' flows
@@ -342,4 +343,8 @@ and compute any posterior quantities from these samples.
     \only<2>{\OttoGraphMrPVar{}}
     \only<3>{\OttoGraphDiag{}}    
 \end{minipage}
+
+\onslide<3>{
+  Understanding the gap between IJ and Otto is ongoing work!
+}
 \end{frame}
