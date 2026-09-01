@@ -202,7 +202,7 @@ $$
 Our diagnostic is then given by
 $$
 \begin{aligned}
-    \Delta(\w, \data) :=
+    \Delta(\data) :=
     \fracat{\partial \muhatmrp}{\partial \epsilon}{\epsilon = 0} =
     \cov{\post}{\meantar \m(\theta^\trans \x_j), \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)}
 \end{aligned}
@@ -210,16 +210,80 @@ $$
 We expect $\Delta(\w, \data)$ to be \emph{close} to zero when the model is correctly
 specified.
 
-\pause 
-
-To assess closeness to zero, compare with $\Delta(\w, \data^*)$, where $\data^*$ 
-is a parametric bootstrap.
-
-
 \end{frame}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Bootstrapping Bayesian sensitivity analysis}
+
+We expect $\Delta(\w, \data)$ to be \emph{close} to zero when the model is correctly
+specified.\\[1em]
+
+But on any actual dataset, $\Delta(\w, \data)$ will typically not be precisely
+zero, even under correct specification.
+
+\only<2>{
+\begin{center}
+\begin{minipage}{0.6\textwidth}
+\OttoGraphZero{}
+\end{minipage}
+\end{center}
+
+Simulation data: Logistic regression with five active regressors, each
+with covariate shift.
+$$
+\begin{aligned}
+    \textrm{Model 0} \textrm{ (correct)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
+    \textrm{Model 1} \textrm{ (misspecified)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
+\end{aligned}
+$$
+}
+
+\only<3>{
+%
+To assess ``closeness to zero,'' compare with $\Delta(\data^*)$, where $\data^*$ 
+is a bootstrap sample.\\[1em]
+%
+\begin{itemize}
+\item Compute $\Delta(\data)$ on the original dataset
+\item For $b=1, \ldots, 100$:
+%
+\begin{enumerate}
+\item Sample $\data^*_b := (\x_1^*, \y_1^*), \ldots (\x_\nsur^*, \y_\nsur^*)$
+     (parametric or nonparametric bootstrap)
+\item Run MCMC to estimate $\p(\theta | \data^*_b)$ \textbf{(time consuming!)}
+\item Use the draws to estimate $\Delta(\data^*_b)$
+\end{enumerate}
+%
+\item Compare $\Delta$ with distribution of $\Delta(\data^*_b)$.
+%
+\end{itemize}
+%
+}
+
+\only<4>{
+\begin{center}
+\begin{minipage}{0.6\textwidth}
+\OttoGraphOne{}
+\end{minipage}
+\end{center}
+
+Simulation data: Logistic regression with five active regressors, each
+with covariate shift.
+$$
+\begin{aligned}
+    \textrm{Model 0} \textrm{ (correct)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
+    \textrm{Model 1} \textrm{ (misspecified)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
+\end{aligned}
+$$
+}
+
+
+\end{frame}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -348,28 +412,28 @@ Define the ``generalized posterior'' functional \citep{giordano:2023:bayesij}:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}{Simulation}
-    \begin{minipage}{0.95\textwidth}
-    % \only<1>{\ShiftGraphZero{}}
-    % \only<2>{\ShiftGraphOne{}}
-    \only<1>{\OttoGraphOne{}}
-    \end{minipage}
+% \begin{frame}{Simulation}
+%     \begin{minipage}{0.95\textwidth}
+%     % \only<1>{\ShiftGraphZero{}}
+%     % \only<2>{\ShiftGraphOne{}}
+%     \only<1>{\OttoGraphOne{}}
+%     \end{minipage}
 
-Simulation data: Logistic regression with five active regressors, each
-with covariate shift.
-\onslide<1->{
-$$
-\begin{aligned}
-    \textrm{Model 0} \textrm{ (correct)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
-    \textrm{Model 1} \textrm{ (misspecified)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
-\end{aligned}
-$$
-}
-\onslide<1->{
-Compute diagnostic with $\w(\x) = \ind{\texttt{X2} > 0.878}$
-}
+% Simulation data: Logistic regression with five active regressors, each
+% with covariate shift.
+% \onslide<1->{
+% $$
+% \begin{aligned}
+%     \textrm{Model 0} \textrm{ (correct)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
+%     \textrm{Model 1} \textrm{ (misspecified)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
+% \end{aligned}
+% $$
+% }
+% \onslide<1->{
+% Compute diagnostic with $\w(\x) = \ind{\texttt{X2} > 0.878}$
+% }
 
-\end{frame}
+% \end{frame}
 
 
 

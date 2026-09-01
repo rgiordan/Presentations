@@ -40,25 +40,8 @@ We will form \emph{local approximations} computable only from
 \end{itemize}
 %
 
-\pause
 
-We will compare with computationally expensive bootstrap:
-%
-\begin{itemize}
-\item Compute $\Delta$ on the original dataset
-\item For $B=1, \ldots, 100$:
-%
-\begin{enumerate}
-\item Sample $(\x_1^*, \y_1^*), \ldots (\x_\nsur^*, \y_\nsur^*)$
-     (parametric or nonparametric bootstrap)
-\item Run MCMC to estimate $\p(\theta | (\x_1^*, \y_1^*), \ldots (\x_\nsur^*, \y_\nsur^*))$
-\item Use the draws to estimate $\Delta^*_B$
-\end{enumerate}
-%
-\item Compare $\Delta$ with distribution of $\Delta^*_B$.
-%
-\end{itemize}
-%
+We will compare with computationally expensive full bootstrap.
 \end{frame}
 
 
@@ -184,16 +167,38 @@ We will compare with computationally expensive bootstrap:
 \pause
 
 If we let $\w(\x_i)$ denote a \emph{bootstrap weight}, then
-$\peps$ is the bootstrapped posterior!
+$\peps$ at $\epsilon = 1$ is the bootstrapped posterior!
 
 \pause
 
+We can form a series approximation:
 $$
-\expect{\p(\theta \vert \data^*)}{\phi(\theta)} \approx
+\begin{aligned}
+\expect{\p(\theta \vert \data^*)}{\phi(\theta)} \approx{}&
 \expect{\p(\theta \vert \data)}{\phi(\theta)} +
-\fracat{\partial \expect{\peps(\theta)}{\phi(\theta)}}{\partial \epsilon}{\epsilon=0}(1 - 0).
+\fracat{\partial \expect{\peps(\theta)}{\phi(\theta)}}{\partial \epsilon}{\epsilon=0}(1 - 0)
+\\={}&
+\onslide<4->{
+\expect{\p(\theta \vert \data)}{\phi(\theta)} +
+\sumsur
+\underbrace{
+    \fracat{\partial \expect{\peps(\theta)}{\phi(\theta)}}{\partial \w_i}{\w_i=0}
+}_{\textrm{"Empirical influence function" }\frac{\infl_i}{\nsur}}
+ \w_i
+}
+\onslide<5->{
+\\={}&
+\expect{\p(\theta \vert \data)}{\phi(\theta)} +
+\meansur \infl_i \w_i
+}
+\end{aligned}
 $$
 
+\vspace{1em}
+\onslide<6->{
+    If this series is accurate, then we can compute $\infl_i$ using the
+    original posterior and quickly approximate bootstrap draws.
+}
 
 \end{frame}
 
@@ -277,7 +282,7 @@ To derive frequentist variance estimates, we study the \textit{von Mises expansi
 Let $\p_\t  = \t \psurhat + (1 - \t) \psur$.   Then form the series expansion in $\t$:
 %
 \begin{align*}
-    \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\psur, \nsur) \right) ={}&
+    \sqrt{\nsur} \left(\expect{\post}{\phi(\theta)} - \T(\psur, \nsur) \right) ={}&
     \sqrt{\nsur} \left(\T(\psurhat, \nsur) - \T(\psur, \nsur) \right) \\={}&
         \blue{\sqrt{\nsur} \fracat{\partial \T(\p_\t, \nsur)}{\partial \t}{\t = 0}}(1 - 0)
          + \red{\err(\ttil)}
@@ -290,7 +295,7 @@ Let $\p_\t  = \t \psurhat + (1 - \t) \psur$.   Then form the series expansion in
 %
 where
 $$
-\infl_i := \nsur \cov{\post}{\g(\theta), \ell(\y_i \vert \x_i)}
+\infl_i := \nsur \cov{\post}{\phi(\theta), \ell(\y_i \vert \x_i)}
 \textrm{ and }\ttil \in [0,1].
 $$
 %
@@ -374,32 +379,6 @@ $$
 
 
 \end{frame}
-
-
-
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% \begin{frame}{Data re-weighting.}
-
-% Recall that our covariate shift diagnostic is given by
-% $$
-% \Delta(\w, \psurhat) =
-%     \cov{\post}{
-%         \meantar \m(\theta^\trans \x_j),
-%         \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
-%     } = \sumsur \infl_i \w(\x_i).
-% $$
-% %
-% In other words, we are checking whether the influence function
-% aligns with any of the regressors.\\[1em]
-
-
-% \end{frame}
 
 
 
