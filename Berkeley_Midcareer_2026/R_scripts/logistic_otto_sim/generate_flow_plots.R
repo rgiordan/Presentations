@@ -90,15 +90,17 @@ mean_arrow <-
                color = "red")
 
 posterior_plots$mean_plot <-
-  posterior_plots$h_plot + mean_arrow + mean_loc
+  posterior_plots$h_plot + mean_arrow + mean_loc +
+  xlim(-3, 4) + ylim(-2, 2.5)
 
 posterior_plots$translation_plot <-
   posterior_plots$h_plot + 
   geom_segment(aes(x = t1, y = t2, 
                    xend = t1 + dt1, 
                    yend = t2 + dt2),
-               arrow = arrow(length = unit(0.5, "cm")),
-               color = "black", alpha=0.8) +
-  mean_arrow + mean_loc
+               arrow = arrow(length = unit(0.2, "cm")),
+               color = "black", alpha=0.4) +
+  mean_arrow + mean_loc +
+  xlim(-3, 4) + ylim(-2, 2.5)
 
 posterior_plots$translation_plot

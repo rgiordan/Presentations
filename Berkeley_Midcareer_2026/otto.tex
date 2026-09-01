@@ -475,15 +475,19 @@ Using the $1^{st}$ order Hermite polynomials
 $\phi_n(\theta) = \b_n(\theta) = \theta_m$,
 the estimated flow is given by
 $$
-\theta_\epsilon = \theta +
+\begin{aligned}
+\theta_\epsilon ={}& \theta +
   \epsilon \underbrace{\cov{\post}{\theta, \h(\theta)}}_{
     \fracat{\partial \expect{\post}{\theta}}{\partial \epsilon}{\epsilon = 0}
   }
-$$
-%
-\only<2-3>{
-  This just translates the posterior in the direction of the mean changes!
+&
+\quad\quad\quad\quad
+\substack{
+\textrm{This just moves all points in the}\\
+\textrm{direction of the mean shift!}
 }
+\end{aligned}
+$$
 %
 
 
@@ -492,21 +496,23 @@ $$
 \begin{center}
   \begin{minipage}{0.6\textwidth}
     \only<2>{\FlowGraphMean{}}
-    \only<3>{\FlowGraphTranslation{}}
+    \only<3->{\FlowGraphTranslation{}}
   \end{minipage}
 \end{center}
 
 
-\only<4>{
+\only<4->{
 Suppose we have $\theta_m \sim \post$, and bootstrap
-weights $\w_i$.  Set
+weights $\w_i$.  
+
+Set
 %
-$$
+$
 \theta_m^* = \theta_m + \meansur \w_i \infl_i
   % \underbrace{\covhat{\post}{\theta, \ell(\y_i \vert \x_i, \theta)}}_{
   %   \textrm{Influence score }\infl_i / N
   %   }
-$$
+$
 %
 and compute any posterior quantities from these samples.
 }

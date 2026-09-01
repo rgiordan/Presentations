@@ -278,7 +278,7 @@ print(posterior_plots$flow_plot)
 <<>>=
 figcap <- paste("A posterior perturbation with a flow", sep="")
 @
-<<flowplot5, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+<<flowplot5, cache=cache_otto, fig.show='hold'>>=
 print(posterior_plots$mean_plot)
 @
 }
@@ -288,7 +288,7 @@ print(posterior_plots$mean_plot)
 <<>>=
 figcap <- paste("A posterior perturbation with a flow", sep="")
 @
-<<flowplot6, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+<<flowplot6, cache=cache_otto, fig.show='hold'>>=
 print(posterior_plots$translation_plot)
 @
 }
