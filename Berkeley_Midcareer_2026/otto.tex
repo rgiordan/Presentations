@@ -471,9 +471,9 @@ $L_2(\p)$. }
 
 Suppose we believe that $\post$ is approximately Gaussian.
 
-Take the basis functions $\b_m(\theta) = \theta_m$ (1st Hermite polynomial)
-and test functions $\phi_n(\theta) = \b_m(\theta)$.  Then the optimal
-flow is given by
+Using the $1^{st}$ order Hermite polynomials
+$\phi_n(\theta) = \b_n(\theta) = \theta_m$,
+the estimated flow is given by
 $$
 \theta_\epsilon = \theta +
   \epsilon \underbrace{\cov{\post}{\theta, \h(\theta)}}_{
@@ -481,10 +481,23 @@ $$
   }
 $$
 %
-\textbf{This just translates the posterior in the direction of the mean changes.}
+\only<2-3>{
+  This just translates the posterior in the direction of the mean changes!
+}
 %
+
+
 \pause
 
+\begin{center}
+  \begin{minipage}{0.6\textwidth}
+    \only<2>{\FlowGraphMean{}}
+    \only<3>{\FlowGraphTranslation{}}
+  \end{minipage}
+\end{center}
+
+
+\only<4>{
 Suppose we have $\theta_m \sim \post$, and bootstrap
 weights $\w_i$.  Set
 %
@@ -496,6 +509,7 @@ $$
 $$
 %
 and compute any posterior quantities from these samples.
+}
 \end{frame}
 
 

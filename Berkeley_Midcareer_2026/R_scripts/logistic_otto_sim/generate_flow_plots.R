@@ -75,3 +75,30 @@ posterior_plots$w_plot <-
   geom_point(aes(x = t1, y = t2, size=w))
 
 
+
+t1bar <- mean(df$t1)
+t2bar <- mean(df$t2)
+dt1 <- - 0.8 * (t1bar - x0)
+dt2 <- - 0.8 * (t2bar - y0)
+mean_loc <- 
+  geom_point(aes(x=t1bar, y=t2bar), size=5, color="red", shape=10, stroke=2)
+mean_arrow <- 
+  geom_segment(aes(x = t1bar, y = t2bar, 
+                   xend = t1bar + dt1, 
+                   yend = t2bar + dt2),
+               arrow = arrow(length = unit(0.6, "cm")),
+               color = "red")
+
+posterior_plots$mean_plot <-
+  posterior_plots$h_plot + mean_arrow + mean_loc
+
+posterior_plots$translation_plot <-
+  posterior_plots$h_plot + 
+  geom_segment(aes(x = t1, y = t2, 
+                   xend = t1 + dt1, 
+                   yend = t2 + dt2),
+               arrow = arrow(length = unit(0.5, "cm")),
+               color = "black", alpha=0.8) +
+  mean_arrow + mean_loc
+
+posterior_plots$translation_plot

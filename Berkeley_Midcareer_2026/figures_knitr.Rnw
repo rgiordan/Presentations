@@ -272,6 +272,29 @@ print(posterior_plots$flow_plot)
 @
 }
 
+
+\def\FlowGraphMean{
+%
+<<>>=
+figcap <- paste("A posterior perturbation with a flow", sep="")
+@
+<<flowplot5, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(posterior_plots$mean_plot)
+@
+}
+
+\def\FlowGraphTranslation{
+%
+<<>>=
+figcap <- paste("A posterior perturbation with a flow", sep="")
+@
+<<flowplot6, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(posterior_plots$translation_plot)
+@
+}
+
+
+
 <<>>=
 SetFullImageSize()
 @
