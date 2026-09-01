@@ -279,25 +279,27 @@ Note that $\expect{\post}{\phi(\theta)} = \T(\psurhat, \nsur)$
 
 To derive frequentist variance estimates, we study the \textit{von Mises expansion}
 \citep{mises:1947:asymptotic}.\\
-Let $\p_\t  = \t \psurhat + (1 - \t) \psur$.   Then form the series expansion in $\t$:
+Let $\tilde\p^\t  = \t \psurhat + (1 - \t) \psur$.   Then 
+form the series expansion in $\t$:
 %
 \begin{align*}
     \sqrt{\nsur} \left(\expect{\post}{\phi(\theta)} - \T(\psur, \nsur) \right) ={}&
     \sqrt{\nsur} \left(\T(\psurhat, \nsur) - \T(\psur, \nsur) \right) \\={}&
-        \blue{\sqrt{\nsur} \fracat{\partial \T(\p_\t, \nsur)}{\partial \t}{\t = 0}}(1 - 0)
-         + \red{\err(\ttil)}
+        {\sqrt{\nsur} \fracat{\partial \T(\tilde\p^\t, \nsur)}{\partial \t}{\t = 0}}(1 - 0)
+         + {\err(\ttil)} 
+         & \textrm{(}\ttil \in [0,1]\textrm{)}
 \\={}&
 \undernote{
-    \blue{\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} }
-    {\textrm{\blue{Infinitesimal jackknife estimator}}} + o_p(1) 
-    + \red{\err(\ttil)}.
+    {\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} }
+    {\textrm{{Infinitesimal jackknife estimator}}} + o_p(1) 
+    + {\err(\ttil)}.
 \end{align*}
 %
-where
-$$
-\infl_i := \nsur \cov{\post}{\phi(\theta), \ell(\y_i \vert \x_i)}
-\textrm{ and }\ttil \in [0,1].
-$$
+% where
+% $$
+% \infl_i := \nsur \cov{\post}{\phi(\theta), \ell(\y_i \vert \x_i)}
+% \textrm{ and }.
+% $$
 %
 \end{frame}
 
@@ -313,10 +315,10 @@ $$
 \begin{frame}[t]{Bayesian von--Mises Expansion Results}
 %
 \begin{align*}
-    \sqrt{\nsur} \left(\expect{\post}{\g(\theta)} - \T(\psur, \nsur) \right) 
+    \sqrt{\nsur} \left(\expect{\post}{\phi(\theta)} - \T(\psur, \nsur) \right) 
 ={}&
-    \blue{\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} + o_p(1) 
-    & + \red{\err(\ttil)}.
+    {\sqrt{\nsur} \sumn (\infl_i - \overline{\infl})} + o_p(1) 
+     + {\err(\ttil)}.
 \end{align*}
 %
 
@@ -344,15 +346,15 @@ $$
     Under Bernstein-von Mises-like conditions,
     % \textbf{(Consistency of the von--Mises expansion in finite dimensions) }
     %
-\begin{align*}
-    \sup_{\ttil \in [0,1]} | \red{\err(\ttil)} | \overset{p}{\rightarrow} 0
-    \quad\textrm{in the Bayesian von--Mises expansion}.
-\end{align*}
+% \begin{align*}
+    $\sup_{\ttil \in [0,1]} | {\err(\ttil)} | \overset{p}{\rightarrow} 0$.
+    % \quad\textrm{in the Bayesian von--Mises expansion}.
+% \end{align*}
 %
 }
 
 \theorem{
-    \textbf{Corollary: }Let 
+    \textbf{Corollary \citep{mises:1947:asymptotic}:} Let 
          $\meansur (\infl_i - \overline{\infl})^2 \overset{p}{\rightarrow} V$.
 By the CLT applied to $\infl_i$,
 \begin{align*}
@@ -366,7 +368,7 @@ By the CLT applied to $\infl_i$,
 
 \pause
 
-To compute the parametric bootstrap instead is a simple change:
+To compute and study the parametric bootstrap instead is a simple change:
 %
 $$
 \posteps \propto 
@@ -377,6 +379,12 @@ $$
 % 
 (See, e.g., \citet{giordano:2026:mrplew} Theorem 4.1).
 
+\pause
+\textbf{Note:} The von-Mises expansion is stronger than necessary for 
+consistency \citep{giordano:2023:bayesij}.  But it can be used to
+prove \emph{lower bounds}
+on $\err(\ttil)$ and so \emph{inconsistency} when no BVM
+theorem holds.
 
 \end{frame}
 
@@ -395,6 +403,11 @@ $$
     \only<3>{\IJGraphDiagIJ{}}    
 \end{minipage}
 
-\onslide<3>{Need something better for noisier / more complex
+\only<1>{The IJ does great for the MrP point estimate.  See also
+\citet{luo:2026:RobustStandardErrors2026,ji:2025:ValidStandardErrors2025}.}
+
+\only<2>{The IJ does pretty well for the MrP posterior variance.}
+
+\only<3>{Need something better than the IJ for noisier / more complex
 posterior quantities!}
 \end{frame}

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  1 SEP 2026 10:06
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  1 SEP 2026 10:36
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1778,7 +1778,7 @@ Overfull \vbox (7.32639pt too high) detected at line 121
 [17
 
 ]
-<figure/shiftplot0-1.png, id=158, 397.485pt x 222.3507pt>
+<figure/shiftplot0-1.png, id=161, 397.485pt x 222.3507pt>
 File: figure/shiftplot0-1.png Graphic file (type png)
 <use figure/shiftplot0-1.png>
 Package luatex.def Info: figure/shiftplot0-1.png  used on input line 151.
@@ -1786,7 +1786,7 @@ Package luatex.def Info: figure/shiftplot0-1.png  used on input line 151.
  [18
 
 <./figure/shiftplot0-1.png>]
-<figure/shiftplot1-1.png, id=167, 397.485pt x 222.3507pt>
+<figure/shiftplot1-1.png, id=170, 397.485pt x 222.3507pt>
 File: figure/shiftplot1-1.png Graphic file (type png)
 <use figure/shiftplot1-1.png>
 Package luatex.def Info: figure/shiftplot1-1.png  used on input line 151.
@@ -1794,7 +1794,7 @@ Package luatex.def Info: figure/shiftplot1-1.png  used on input line 151.
  [19
 
 <./figure/shiftplot1-1.png>]
-<figure/shiftplot2-1.png, id=173, 397.485pt x 222.3507pt>
+<figure/shiftplot2-1.png, id=176, 397.485pt x 222.3507pt>
 File: figure/shiftplot2-1.png Graphic file (type png)
 <use figure/shiftplot2-1.png>
 Package luatex.def Info: figure/shiftplot2-1.png  used on input line 151.
@@ -1806,7 +1806,7 @@ Overfull \vbox (15.47449pt too high) detected at line 151
 [20
 
 <./figure/shiftplot2-1.png>]
-Overfull \hbox (3.40558pt too wide) detected at line 213
+Overfull \hbox (3.40558pt too wide) detected at line 220
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -1815,13 +1815,13 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 213.
+(mdframed)              on input line 220.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 213.
+ mdframed uses option nobreak mdframed on input line 220.
 [21
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 213
+Overfull \hbox (3.40558pt too wide) detected at line 220
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -1830,13 +1830,13 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 213.
+(mdframed)              on input line 220.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 213.
+ mdframed uses option nobreak mdframed on input line 220.
 [22
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 213
+Overfull \hbox (3.40558pt too wide) detected at line 220
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -1845,9 +1845,9 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 213.
+(mdframed)              on input line 220.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 213.
+ mdframed uses option nobreak mdframed on input line 220.
 [23
 
 ] [24
@@ -1855,10 +1855,10 @@ Package mdframed Info: mdframed inside a box
 ]
 File: figure/ottograph0-1.png Graphic file (type png)
 <use figure/ottograph0-1.png>
-Package luatex.def Info: figure/ottograph0-1.png  used on input line 286.
+Package luatex.def Info: figure/ottograph0-1.png  used on input line 293.
 (luatex.def)             Requested size: 180.6922pt x 101.224pt.
 
-Overfull \vbox (2.5026pt too high) detected at line 286
+Overfull \vbox (2.5026pt too high) detected at line 293
  []
 
 [25
@@ -1868,10 +1868,10 @@ Overfull \vbox (2.5026pt too high) detected at line 286
 ]
 File: figure/ottograph1-1.png Graphic file (type png)
 <use figure/ottograph1-1.png>
-Package luatex.def Info: figure/ottograph1-1.png  used on input line 286.
+Package luatex.def Info: figure/ottograph1-1.png  used on input line 293.
 (luatex.def)             Requested size: 180.6922pt x 101.224pt.
 
-Overfull \vbox (2.5026pt too high) detected at line 286
+Overfull \vbox (2.5026pt too high) detected at line 293
  []
 
 [27
@@ -1942,134 +1942,157 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
 
 [36
 
-] [37
+]
+Overfull \hbox (18.13411pt too wide) detected at line 304
+[]
+ []
 
-] [38
+[37
+
+]
+Overfull \hbox (18.13411pt too wide) detected at line 304
+[]
+ []
+
+[38
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 381.
+(mdframed)              on input line 389.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 381.
+ mdframed uses option nobreak mdframed on input line 389.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 381.
+(mdframed)              on input line 389.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 381.
+ mdframed uses option nobreak mdframed on input line 389.
  [39
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 381.
+(mdframed)              on input line 389.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 381.
+ mdframed uses option nobreak mdframed on input line 389.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 381.
+(mdframed)              on input line 389.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 381.
+ mdframed uses option nobreak mdframed on input line 389.
  [40
 
 ]
-<figure/ijgraphmrp-1.png, id=324, 397.485pt x 222.3507pt>
-File: figure/ijgraphmrp-1.png Graphic file (type png)
-<use figure/ijgraphmrp-1.png>
-Package luatex.def Info: figure/ijgraphmrp-1.png  used on input line 400.
-(luatex.def)             Requested size: 271.03223pt x 151.83092pt.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 389.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 389.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 389.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 389.
  [41
 
-<./figure/ijgraphmrp-1.png>]
-<figure/ijgraphmrpvar-1.png, id=332, 397.485pt x 222.3507pt>
-File: figure/ijgraphmrpvar-1.png Graphic file (type png)
-<use figure/ijgraphmrpvar-1.png>
-Package luatex.def Info: figure/ijgraphmrpvar-1.png  used on input line 400.
+]
+<figure/ijgraphmrp-1.png, id=353, 397.485pt x 222.3507pt>
+File: figure/ijgraphmrp-1.png Graphic file (type png)
+<use figure/ijgraphmrp-1.png>
+Package luatex.def Info: figure/ijgraphmrp-1.png  used on input line 413.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [42
 
-<./figure/ijgraphmrpvar-1.png>]
-<figure/ijgraphdiag-1.png, id=338, 397.485pt x 222.3507pt>
-File: figure/ijgraphdiag-1.png Graphic file (type png)
-<use figure/ijgraphdiag-1.png>
-Package luatex.def Info: figure/ijgraphdiag-1.png  used on input line 400.
+<./figure/ijgraphmrp-1.png>]
+<figure/ijgraphmrpvar-1.png, id=363, 397.485pt x 222.3507pt>
+File: figure/ijgraphmrpvar-1.png Graphic file (type png)
+<use figure/ijgraphmrpvar-1.png>
+Package luatex.def Info: figure/ijgraphmrpvar-1.png  used on input line 413.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [43
 
-<./figure/ijgraphdiag-1.png>]) (./otto.tex [44
+<./figure/ijgraphmrpvar-1.png>]
+<figure/ijgraphdiag-1.png, id=369, 397.485pt x 222.3507pt>
+File: figure/ijgraphdiag-1.png Graphic file (type png)
+<use figure/ijgraphdiag-1.png>
+Package luatex.def Info: figure/ijgraphdiag-1.png  used on input line 413.
+(luatex.def)             Requested size: 271.03223pt x 151.83092pt.
+ [44
 
-] [45
+<./figure/ijgraphdiag-1.png>]) (./otto.tex [45
+
+] [46
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 113
+Overfull \hbox (3.40558pt too wide) detected at line 114
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
 /m/n/8 ) \OMS/cmsy/m/n/8 / P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/n/8 ) [] []
  []
 
-[46
-
-]
-Overfull \hbox (3.40558pt too wide) detected at line 228
-\OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
-n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
-\OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
-/m/n/8 ) \OMS/cmsy/m/n/8 / P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/n/8 ) [] []
- []
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 228.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 228.
 [47
 
 ]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 290.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 290.
-
-Overfull \vbox (7.23633pt too high) detected at line 290
+Overfull \hbox (3.40558pt too wide) detected at line 229
+\OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
+n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
+\OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
+/m/n/8 ) \OMS/cmsy/m/n/8 / P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/n/8 ) [] []
  []
 
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 229.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 229.
 [48
 
-] [49
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 291.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 291.
+
+Overfull \vbox (7.23633pt too high) detected at line 291
+ []
+
+[49
+
+] [50
 
 ]
-<figure/ottographmrp-1.png, id=378, 397.485pt x 222.3507pt>
+<figure/ottographmrp-1.png, id=415, 397.485pt x 222.3507pt>
 File: figure/ottographmrp-1.png Graphic file (type png)
 <use figure/ottographmrp-1.png>
-Package luatex.def Info: figure/ottographmrp-1.png  used on input line 350.
-(luatex.def)             Requested size: 271.03223pt x 151.83092pt.
- [50
-
-<./figure/ottographmrp-1.png>]
-<figure/ottographmrpvar-1.png, id=385, 397.485pt x 222.3507pt>
-File: figure/ottographmrpvar-1.png Graphic file (type png)
-<use figure/ottographmrpvar-1.png>
-Package luatex.def Info: figure/ottographmrpvar-1.png  used on input line 350.
+Package luatex.def Info: figure/ottographmrp-1.png  used on input line 351.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [51
 
-<./figure/ottographmrpvar-1.png>]
-<figure/ottographdiag-1.png, id=392, 397.485pt x 222.3507pt>
-File: figure/ottographdiag-1.png Graphic file (type png)
-<use figure/ottographdiag-1.png>
-Package luatex.def Info: figure/ottographdiag-1.png  used on input line 350.
+<./figure/ottographmrp-1.png>]
+<figure/ottographmrpvar-1.png, id=423, 397.485pt x 222.3507pt>
+File: figure/ottographmrpvar-1.png Graphic file (type png)
+<use figure/ottographmrpvar-1.png>
+Package luatex.def Info: figure/ottographmrpvar-1.png  used on input line 351.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [52
 
-<./figure/ottographdiag-1.png>]) (./conclusion.tex [53
+<./figure/ottographmrpvar-1.png>]
+<figure/ottographdiag-1.png, id=429, 397.485pt x 222.3507pt>
+File: figure/ottographdiag-1.png Graphic file (type png)
+<use figure/ottographdiag-1.png>
+Package luatex.def Info: figure/ottographdiag-1.png  used on input line 351.
+(luatex.def)             Requested size: 271.03223pt x 151.83092pt.
+ [53
+
+<./figure/ottographdiag-1.png>]) (./conclusion.tex [54
 
 ]) (./main.bbl)
-Overfull \vbox (17.47173pt too high) detected at line 48
+Overfull \vbox (65.77147pt too high) detected at line 48
  []
 
-[54
+[55
 
 ]
 \tf@nav=\write6
@@ -2087,16 +2110,16 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 46555 strings out of 477805
+ 46573 strings out of 477805
  125031,1648299 words of node,token memory allocated
- 30035 words of node memory still in use:
-   113 hlist, 8 vlist, 5 rule, 191 disc, 15 local_par, 25 math, 688 glue, 71 ker
-n, 198 penalty, 36 sub_mlist, 2560 glyph, 410 attribute, 113 glue_spec, 410 attr
-ibute_list, 4 write, 9 pdf_start_link, 9 pdf_end_link, 14 pdf_dest, 12 pdf_actio
-n, 44 pdf_colorstack nodes
-   avail lists: 1:5,2:1441,3:620,4:186,5:256,6:34,7:6723,8:65,9:796,10:20,11:382
-
- 64804 multiletter control sequences out of 65536+600000
+ 35593 words of node memory still in use:
+   141 hlist, 8 vlist, 5 rule, 224 disc, 18 local_par, 29 math, 814 glue, 87 ker
+n, 236 penalty, 36 sub_mlist, 3058 glyph, 473 attribute, 113 glue_spec, 473 attr
+ibute_list, 4 write, 10 pdf_start_link, 10 pdf_end_link, 17 pdf_dest, 16 pdf_act
+ion, 50 pdf_colorstack nodes
+   avail lists: 1:7,2:1347,3:615,4:180,5:240,6:40,7:7986,8:124,9:783,10:20,11:44
+8
+ 64817 multiletter control sequences out of 65536+600000
  98 fonts using 21414695 bytes
  128i,22n,134p,1852b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
@@ -2120,10 +2143,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on main.pdf (54 pages, 1857295 bytes).
+Output written on main.pdf (55 pages, 1863860 bytes).
 
-PDF statistics: 509 PDF objects out of 1000 (max. 8388607)
- 393 compressed objects within 4 object streams
- 127 named destinations out of 1000 (max. 131072)
+PDF statistics: 550 PDF objects out of 1000 (max. 8388607)
+ 432 compressed objects within 5 object streams
+ 132 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

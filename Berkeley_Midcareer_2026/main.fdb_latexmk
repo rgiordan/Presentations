@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1788282327 "main.aux" "main.bbl" "main" 1788282411
+["bibtex main"] 1788284180 "main.aux" "main.bbl" "main" 1788284183
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1788282411 8014 303bb9267e01da2d6b018543901d6bef "lualatex"
-  "references.bib" 1788220816 27978 b5e75b95ebafe96f909057717f27f053 ""
+  "main.aux" 1788284183 9211 a145d5d523f9b6139a77fe12f874e218 "lualatex"
+  "references.bib" 1788284175 28827 23d09eb168d96c5bfec97be5737f2367 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1788282409 "main.tex" "main.pdf" "main" 1788282411
+["lualatex"] 1788284180 "main.tex" "main.pdf" "main" 1788284183
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -405,7 +405,7 @@
   "_defs.tex" 1788218697 8457 629d5a973430b6febddf98b144515312 ""
   "_headers.tex" 1787084656 3379 f5290acff64081d987340625f1d39f1f ""
   "conclusion.tex" 1787941989 606 9fa638112e1df8f1353f2a674819a5c9 ""
-  "diagnostics.tex" 1788280415 12441 b8db4d39ad6eecff9d60380249dbc997 ""
+  "diagnostics.tex" 1788284045 12708 0b4ccf5ea5bfb4109bdb8248cc317ed2 ""
   "figs_non_knitr.tex" 1786644771 3271 00ede193c58771b72569c0f461d58a08 ""
   "figure/ijgraphdiag-1.png" 1788218079 111961 68266b0a65a3e3c4793424f869d0dbcd ""
   "figure/ijgraphmrp-1.png" 1788218078 98183 174b7b0608163f999a97b0936e416aca ""
@@ -421,14 +421,14 @@
   "figure/shiftplot1-1.png" 1788218080 77780 5bc879ec86f02a4c4d6cfe1f6eed4362 ""
   "figure/shiftplot2-1.png" 1788218080 82832 faaa8ebbbd632c2a904c613becc59372 ""
   "figures_knitr.tex" 1788218080 5908 e7f7959db9037304826c6a434341dc61 ""
-  "ij.tex" 1788282407 11748 fc52d4bcf8bf0267a373af997fc6bd23 ""
+  "ij.tex" 1788284130 12278 119b88374c626c74267e7bab962f5115 ""
   "introduction.tex" 1788208340 4400 0c2b403eccd196eccce6d96a48d37bdb ""
-  "main.aux" 1788282411 8014 303bb9267e01da2d6b018543901d6bef "lualatex"
-  "main.bbl" 1788282327 4867 097909df714a1d3070661daeeee4b502 "bibtex main"
-  "main.nav" 1788282411 2528 e6c1b8296be2c020021f77264cce9f6e "lualatex"
-  "main.out" 1788282410 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.aux" 1788284183 9211 a145d5d523f9b6139a77fe12f874e218 "lualatex"
+  "main.bbl" 1788284180 5784 d9430d413fad95a9b7323aae7fe38e24 "bibtex main"
+  "main.nav" 1788284183 2528 f205ad061494844cb4781a634687faec "lualatex"
+  "main.out" 1788284181 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   "main.tex" 1787941784 901 f90e7a2589b4b3902505738a3aca35d0 ""
-  "otto.tex" 1787942710 9430 8a572116a3363fa204548ddaaf3901ac ""
+  "otto.tex" 1788283733 9633 e8b275de43c21f924ec15bb1b179979b ""
   "static_figures/guinea_pig_copyright.png" 1787076884 162492 f6d84ded8b8676b19144f72cd6451114 ""
   "static_figures/survey_man.jpg" 1787076210 21961 ad68661d4066e24c0413d3db3837ca8c ""
   "static_figures/voting_man.jpg" 1787076210 22321 ba1b893f73b1be3cf5861bc7922d9d47 ""

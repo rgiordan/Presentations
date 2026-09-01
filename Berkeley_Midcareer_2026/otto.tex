@@ -20,15 +20,16 @@
 
 \begin{frame}[t]{Why flows for sensitivity analysis?}
 %
-The IJ is built around linearizing posterior expectations:
+Current Bayesian local robustness is built around linearizing posterior expectations:
 $$
-\expect{\p^\epsilon(\theta)}{\g(\theta)} \approx
-\expect{\p}{\g(\theta)} +
-\fracat{\partial \expect{\p^\epsilon(\theta)}{\g(\theta)}}
+\expect{\p^\epsilon(\theta)}{\phi(\theta)} \approx
+\expect{\p}{\phi(\theta)} +
+\fracat{\partial \expect{\p^\epsilon(\theta)}{\phi(\theta)}}
        {\partial \epsilon}{\epsilon = 0}(\epsilon - 0),
 $$
 %
-where the derivative is estimated --- with noise --- from MCMC draws.
+where the derivative is estimated --- with noise --- from MCMC draws
+\citep{gustafson:1996:localposterior,giordano:2018:covariances,cabral:2025:RobustnessModelChecking2025,dinoia:2025:LikelihoodDistortionBayesian2025,giordano:2026:mrplew}.
 
 This has some shortcomings:
 %

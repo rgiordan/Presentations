@@ -34,8 +34,8 @@ $$
 Some existing local approaches:
 %
 \begin{itemize}
-\item Specify an alternative model + test with Bayes factor
-\citep{cabral:2025:RobustnessModelChecking2025}
+\item Specify an alternative model, maybe test with Bayes factor
+\citep{dinoia:2025:LikelihoodDistortionBayesian2025,cabral:2025:RobustnessModelChecking2025}
 %
 \begin{itemize}
     \item Bayes factors can depend strongly on priors (Lindley's paradox)
@@ -169,8 +169,8 @@ $$
 
 \def\sensitivitytheorem{
 \theorem{
-    \textbf{Theorem (\citet{giordano:2018:covariances}, others): }
-Consider a family of distributions\\
+    \textbf{Theorem (\citet{diaconis:1986:ConsistencyBayesEstimates1986,gustafson:1996:localposterior,giordano:2018:covariances}): }\\
+Consider a family of distributions
 $
 \peps(\theta) \propto \p(\theta) \exp(\epsilon \h(\theta))
 $
@@ -204,7 +204,14 @@ $$
 \begin{aligned}
     \Delta(\data) :=
     \fracat{\partial \muhatmrp}{\partial \epsilon}{\epsilon = 0} =
-    \cov{\post}{\meantar \m(\theta^\trans \x_j), \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)}
+    \cov{\post}{
+        \underbrace{
+            \meantar \m(\theta^\trans \x_j)
+        }_{\textrm{Estimand}}, 
+        \underbrace{
+            \sumsur \w(\x_i) \ell(\y_i \vert \x_i, \theta)
+        }_{\textrm{Log model perturbation}}
+        }
 \end{aligned}
 $$
 We expect $\Delta(\w, \data)$ to be \emph{close} to zero when the model is correctly

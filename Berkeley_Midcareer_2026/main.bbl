@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,6 +22,21 @@ Rafael Cabral, David Bolin, and Håvard Rue.
 \newblock \doi{10.1093/jrsssb/qkae107}.
 \newblock URL \url{https://academic.oup.com/jrsssb/article/87/3/632/7914952}.
 
+\bibitem[Di~Noia et~al.()Di~Noia, Ruggeri, and
+  Mira]{dinoia:2025:LikelihoodDistortionBayesian2025}
+Antonio Di~Noia, Fabrizio Ruggeri, and Antonietta Mira.
+\newblock Likelihood {{Distortion}} and {{Bayesian Local Robustness}}.
+\newblock 20\penalty0 (4).
+\newblock ISSN 1936-0975.
+\newblock \doi{10.1214/25-BA1526}.
+\newblock URL
+  \url{https://projecteuclid.org/journals/bayesian-analysis/volume-20/issue-4/Likelihood-Distortion-and-Bayesian-Local-Robustness/10.1214/25-BA1526.full}.
+
+\bibitem[Diaconis and Freedman()]{diaconis:1986:ConsistencyBayesEstimates1986}
+P.~Diaconis and D.~Freedman.
+\newblock On the consistency of {{Bayes}} estimates.
+\newblock pages 1--26.
+
 \bibitem[Giordano and Broderick(2026)]{giordano:2023:bayesij}
 R.~Giordano and T.~Broderick.
 \newblock The {Bayesian} infinitesimal jackknife for variance.
@@ -41,16 +56,23 @@ R.~Giordano, A.~Cima, J.~Murray, E.~Hartman, and A.~Feller.
   poststratification, 2026.
 \newblock URL \url{https://arxiv.org/abs/2606.04250}.
 
+\bibitem[Gustafson(1996)]{gustafson:1996:localposterior}
+P.~Gustafson.
+\newblock Local sensitivity of posterior expectations.
+\newblock \emph{The Annals of Statistics}, 24\penalty0 (1):\penalty0 174--195,
+  1996.
+
 \bibitem[Huggins and Miller(2023)]{huggins:2023:bayesbag}
 J.~Huggins and J.~Miller.
 \newblock Reproducible model selection using bagged posteriors.
 \newblock \emph{Bayesian Analysis}, 18\penalty0 (1):\penalty0 79--104, 2023.
 
-\bibitem[Ji et~al.()Ji, Lee, and Rabe-Hesketh]{ji:2025:ValidStandardErrors2025}
+\bibitem[Ji et~al.(2025)Ji, Lee, and
+  Rabe-Hesketh]{ji:2025:ValidStandardErrors2025}
 Feng Ji, JoonHo Lee, and Sophia Rabe-Hesketh.
 \newblock Valid {{Standard Errors}} for {{Bayesian Quantile Regression With
   Clustered}} and {{Independent Data}}.
-\newblock page 10769986251379738.
+\newblock page 10769986251379738, 2025.
 \newblock ISSN 1076-9986.
 \newblock \doi{10.3102/10769986251379738}.
 \newblock URL \url{https://doi.org/10.3102/10769986251379738}.
@@ -65,10 +87,10 @@ Swen Kuh, Lauren Kennedy, Qixuan Chen, and Andrew Gelman.
 \newblock \doi{10.1002/sim.9964}.
 \newblock URL \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.9964}.
 
-\bibitem[Luo and Ji()]{luo:2026:RobustStandardErrors2026}
+\bibitem[Luo and Ji(2026)]{luo:2026:RobustStandardErrors2026}
 Nanyu Luo and Feng Ji.
 \newblock Robust {{Standard Errors}} for {{Bayesian Posterior Functionals}} via
-  the {{Infinitesimal Jackknife}}.
+  the {{Infinitesimal Jackknife}}, 2026.
 \newblock URL \url{http://arxiv.org/abs/2604.03398}.
 
 \bibitem[Muandet et~al.()Muandet, Jitkrittum, and
@@ -102,11 +124,11 @@ R.~{von Mises}.
 \newblock \emph{The Annals of Mathematical Statistics}, 18\penalty0
   (3):\penalty0 309--348, 1947.
 
-\bibitem[Wang et~al.()Wang, Ding, and
+\bibitem[Wang et~al.(2026)Wang, Ding, and
   Huggins]{wang:2026:AccurateLargesampleUncertainty2026}
 Yu~Wang, Jie Ding, and Jonathan~H. Huggins.
 \newblock Accurate {{Large-sample Uncertainty Quantification}} using
-  {{Stochastic Gradient Markov Chain Monte Carlo}}.
+  {{Stochastic Gradient Markov Chain Monte Carlo}}, 2026.
 \newblock URL \url{http://arxiv.org/abs/2606.00293}.
 
 \end{thebibliography}

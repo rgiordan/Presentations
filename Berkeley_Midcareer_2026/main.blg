@@ -13,13 +13,16 @@ Warning--empty year in buhlmann:2020:InvarianceCausalityRobustness2020
 Warning--empty journal in cabral:2025:RobustnessModelChecking2025
 Warning--empty year in cabral:2025:RobustnessModelChecking2025
 Warning--empty year in cabral:2025:RobustnessModelChecking2025
+Warning--empty journal in dinoia:2025:LikelihoodDistortionBayesian2025
+Warning--empty year in dinoia:2025:LikelihoodDistortionBayesian2025
+Warning--empty year in dinoia:2025:LikelihoodDistortionBayesian2025
+Warning--empty journal in diaconis:1986:ConsistencyBayesEstimates1986
+Warning--empty year in diaconis:1986:ConsistencyBayesEstimates1986
+Warning--empty year in diaconis:1986:ConsistencyBayesEstimates1986
 Warning--empty journal in ji:2025:ValidStandardErrors2025
-Warning--empty year in ji:2025:ValidStandardErrors2025
-Warning--empty year in ji:2025:ValidStandardErrors2025
 Warning--empty journal in kuhUsingLeaveoneoutCross2024
 Warning--empty year in kuhUsingLeaveoneoutCross2024
 Warning--empty year in kuhUsingLeaveoneoutCross2024
-Warning--empty year in luo:2026:RobustStandardErrors2026
 Warning--empty year in muandet:2020:KernelConditionalMoment2020
 Warning--empty year in muandet:2020:KernelConditionalMoment2020
 Warning--empty journal in rojas-carulla::InvariantModelsCausal
@@ -28,46 +31,45 @@ Warning--empty year in rojas-carulla::InvariantModelsCausal
 Warning--empty journal in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
-Warning--empty year in wang:2026:AccurateLargesampleUncertainty2026
-You've used 14 entries,
+You've used 17 entries,
             2773 wiz_defined-function locations,
-            695 strings with 8349 characters,
-and the built_in function-call counts, 7080 in all, are:
-= -- 658
-> -- 389
-< -- 7
-+ -- 131
-- -- 117
-* -- 593
-:= -- 1047
-add.period$ -- 57
-call.type$ -- 14
-change.case$ -- 81
-chr.to.int$ -- 14
-cite$ -- 50
-duplicate$ -- 317
-empty$ -- 549
-format.name$ -- 137
-if$ -- 1488
+            716 strings with 9016 characters,
+and the built_in function-call counts, 8418 in all, are:
+= -- 786
+> -- 450
+< -- 10
++ -- 152
+- -- 135
+* -- 699
+:= -- 1251
+add.period$ -- 69
+call.type$ -- 17
+change.case$ -- 96
+chr.to.int$ -- 17
+cite$ -- 58
+duplicate$ -- 382
+empty$ -- 661
+format.name$ -- 160
+if$ -- 1771
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 11
-newline$ -- 92
-num.names$ -- 56
-pop$ -- 196
+missing$ -- 14
+newline$ -- 110
+num.names$ -- 68
+pop$ -- 225
 preamble$ -- 1
-purify$ -- 67
+purify$ -- 79
 quote$ -- 0
-skip$ -- 248
+skip$ -- 297
 stack$ -- 0
-substring$ -- 270
-swap$ -- 51
-text.length$ -- 2
+substring$ -- 320
+swap$ -- 57
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
-warning$ -- 22
-while$ -- 60
+type$ -- 187
+warning$ -- 24
+while$ -- 74
 width$ -- 0
-write$ -- 199
-(There were 24 warnings)
+write$ -- 243
+(There were 26 warnings)
