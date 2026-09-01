@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1788298755 "main.aux" "main.bbl" "main" 1788298946
+["bibtex main"] 1788299010 "main.aux" "main.bbl" "main" 1788299013
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1788298945 10712 4183c1882e58c3f67d263886346d85ec "lualatex"
+  "main.aux" 1788299013 10841 d55be14a26b6c0d0e535877f72be8ec5 "lualatex"
   "references.bib" 1788297387 30563 515cdecee8f9d2d143156cbc1eb6ed0b ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1788298942 "main.tex" "main.pdf" "main" 1788298946
+["lualatex"] 1788299010 "main.tex" "main.pdf" "main" 1788299013
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -429,11 +429,11 @@
   "figures_knitr.tex" 1788298942 7217 4a99c3bf0a639a0714a297185d268f2a ""
   "ij.tex" 1788284130 12278 119b88374c626c74267e7bab962f5115 ""
   "introduction.tex" 1788208340 4400 0c2b403eccd196eccce6d96a48d37bdb ""
-  "main.aux" 1788298945 10712 4183c1882e58c3f67d263886346d85ec "lualatex"
-  "main.bbl" 1788298755 7014 41916e9373bff7e98d959d246ce7c453 "bibtex main"
-  "main.nav" 1788298945 2528 ed4475b53f0875a1af24aae5d21ac9e6 "lualatex"
-  "main.out" 1788298943 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.tex" 1787941784 901 f90e7a2589b4b3902505738a3aca35d0 ""
+  "main.aux" 1788299013 10841 d55be14a26b6c0d0e535877f72be8ec5 "lualatex"
+  "main.bbl" 1788299010 7014 41916e9373bff7e98d959d246ce7c453 "bibtex main"
+  "main.nav" 1788299013 2621 68afaffcf9a1b8dffc44c06f17cc18d9 "lualatex"
+  "main.out" 1788299011 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.tex" 1788299003 919 3e2fe3a969c255337fba26795eceb9a1 ""
   "otto.tex" 1788298829 14265 8f1de8488b85a40224cb0f30bba24087 ""
   "static_figures/guinea_pig_copyright.png" 1787076884 162492 f6d84ded8b8676b19144f72cd6451114 ""
   "static_figures/survey_man.jpg" 1787076210 21961 ad68661d4066e24c0413d3db3837ca8c ""
