@@ -157,48 +157,17 @@ regression will not need to.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\sensitivitysetup{
-Consider a family of distributions
-$
-% $$
-\peps(\theta) 
-%:= \frac{\p(\theta) \exp(\epsilon \h(\theta))}{\int \p(\theta') \exp(\epsilon \h(\theta')) d\theta'}
-\propto \p(\theta) \exp(\epsilon \h(\theta))
-% $$
-$
-and a test function $\phi(\theta)$.
-%  where we are interested in 
-% $$
-% \expect{\peps(\theta)}{\phi(\theta)}.
-% $$
-Then, by interchange of integration and differentiation,
-$$
-\fracat{\partial\expect{\peps(\theta)}{\phi(\theta)}}
-       {\partial \epsilon}{\epsilon = 0} =
-\cov{\p(\theta)}{\phi(\theta), \h(\theta)}.
-$$
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[t]{Bayesian sensitivity analysis}
-
 Let the regression log likelihood be $\ell(\y \vert \x, \theta)$, and
 fix $\w(\x)$.  Then define
 $$
 \post \propto \exp\left(\sumsur \ell(\y_i \vert \x_i, \theta) \right) \prior(\theta)
 \textrm{ and }
-% $$
-% For a given $\w(\x)$, define
-% $$
 \posteps \propto 
 \post \exp\left(\sumsur \epsilon \w(\x_i) \ell(\y_i \vert \x_i, \theta) \right)
 $$
+}
 
-\pause 
-
+\def\sensitivitytheorem{
 \theorem{
     \textbf{Theorem (\citet{giordano:2018:covariances}, others): }
 Consider a family of distributions\\
@@ -213,6 +182,20 @@ $$
 $$
 %
 }
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Bayesian sensitivity analysis}
+
+\sensitivitysetup{}
+
+\pause 
+
+\sensitivitytheorem{}
 
 \pause 
 
@@ -250,14 +233,14 @@ Define the ``generalized posterior'' functional \citep{giordano:2023:bayesij}:
 \begin{align*}
     %
     \T(\p, N) := \frac{
-        \int \g(\theta) \exp\left( 
-            N \int \ell(\yn \vert \x, \theta) \p(\xn, \yn) d\xn d\yn
+        \int \phi(\theta) \exp\left( 
+            N \int \ell(\yn \vert \x, \theta) \p(\xn, \yn) d\xn \, d\yn
         \right)
         \prior(\theta) d\theta
     }
     {
     \int \exp\left( 
-            N \int \ell(\yn \vert \x, \theta) \p(\xn, \yn) d\xn d\yn
+            N \int \ell(\yn \vert \x, \theta) \p(\xn, \yn) d\xn \, d\yn
     \right)
     \prior(\theta) d\theta
     }.
