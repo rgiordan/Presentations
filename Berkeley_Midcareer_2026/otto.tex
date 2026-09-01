@@ -23,7 +23,7 @@
 Current Bayesian local robustness is built around linearizing posterior expectations:
 $$
 \expect{\p^\epsilon(\theta)}{\phi(\theta)} \approx
-\expect{\p}{\phi(\theta)} +
+\expect{\p(\theta)}{\phi(\theta)} +
 \fracat{\partial \expect{\p^\epsilon(\theta)}{\phi(\theta)}}
        {\partial \epsilon}{\epsilon = 0}(\epsilon - 0),
 $$
@@ -69,7 +69,7 @@ Our problem is easier:\\
 
 \begin{frame}[t]{Flow}
 
-\sensitivitysetup{}
+Consider $\peps(\theta) \propto \p(\theta) \exp(\epsilon \h(\theta))$.
 
 We want a flow $\theta \mapsto \feps(\theta)$ such that,
 for small $\epsilon$, $\feps(\theta) \sim \peps(\theta)$

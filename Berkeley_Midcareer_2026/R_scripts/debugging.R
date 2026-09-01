@@ -41,3 +41,33 @@ data_plot +
   geom_point(aes(x=x1, y=x2, shape=y), stroke=2, size=5,
              data=filter(df, x1 > x1_thresh))
   
+
+
+
+#####################################
+# Simulated data for flows
+
+set.seed(42)
+n_obs <- 200
+df <- 
+  data.frame(t1 = rnorm(n_obs) + 0.3) %>%
+  mutate(t2 = 0.5 * t1 + 0.6 * rnorm(n_obs)) 
+
+data_plot <- ggplot(df) +
+  geom_point(aes(x=t1, y=t2))  +
+  theme(legend.position="none")
+data_plot
+
+# a few "anchor" points in the upper-right quadrant to define the blob's extent
+blob_pts <- data.frame(
+  x = c(1.5, 2.2, 1.8, 2.6, 1.9, 1.3, 2.4, 2.0, 1.6, 2.8, 1.4, 2.1),
+  y = c(1.0, 1.4, 1.8, 1.1, 1.6, 1.3, 0.9, 2.0, 0.7, 1.5, 1.9, 1.2)
+)
+
+ggplot(df) +
+  geom_mark_hull(data = blob_pts, aes(x = x, y = y),
+                 fill = "purple", color = NA, alpha = 0.3,
+                 concavity = 1, expand = unit(4, "mm")) +
+  geom_point(aes(x = t1, y = t2)) +
+  theme(legend.position = "none")
+
