@@ -1,9 +1,15 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ambrosio et~al.(2021)Ambrosio, Bru{\'e}, Semola,
+  et~al.]{ambrosio2021lectures}
+Luigi Ambrosio, Elia Bru{\'e}, Daniele Semola, et~al.
+\newblock \emph{Lectures on optimal transport}, volume 130.
+\newblock Springer Cham, 2021.
 
 \bibitem[Bühlmann()]{buhlmann:2020:InvarianceCausalityRobustness2020}
 Peter Bühlmann.
@@ -102,10 +108,35 @@ Krikamol Muandet, Wittawat Jitkrittum, and Jonas Kübler.
   {{Artificial Intelligence}} ({{UAI}})}, pages 41--50. PMLR.
 \newblock URL \url{https://proceedings.mlr.press/v124/muandet20a.html}.
 
+\bibitem[Otto(2001)]{otto_geometry_2001}
+Felix Otto.
+\newblock The {Geometry} of {Dissipative} {Evolution} {Equations}: {The}
+  {Porous} {Medium} {Equation}.
+\newblock \emph{Communications in Partial Differential Equations}, 26\penalty0
+  (1-2):\penalty0 101--174, January 2001.
+\newblock ISSN 0360-5302.
+\newblock \doi{10.1081/PDE-100002243}.
+\newblock URL \url{https://doi.org/10.1081/PDE-100002243}.
+\newblock Publisher: Taylor \& Francis \_eprint:
+  https://doi.org/10.1081/PDE-100002243.
+
 \bibitem[Rojas-Carulla et~al.()Rojas-Carulla, Scholkopf, Turner, and
   Peters]{rojas-carulla::InvariantModelsCausal}
 Mateo Rojas-Carulla, Bernhard Scholkopf, Richard Turner, and Jonas Peters.
 \newblock Invariant {{Models}} for {{Causal Transfer Learning}}.
+
+\bibitem[Ross(2011)]{ross2011fundamentals}
+Nathan Ross.
+\newblock Fundamentals of {Stein’s} method.
+\newblock 2011.
+
+\bibitem[Song et~al.(2021)Song, Sohl-Dickstein, Kingma, Kumar, Ermon, and
+  Poole]{song2021scorebasedgenerativemodelingstochastic}
+Yang Song, Jascha Sohl-Dickstein, Diederik~P. Kingma, Abhishek Kumar, Stefano
+  Ermon, and Ben Poole.
+\newblock Score-based generative modeling through stochastic differential
+  equations, 2021.
+\newblock URL \url{https://arxiv.org/abs/2011.13456}.
 
 \bibitem[Vehtari et~al.()Vehtari, Gelman, and
   Gabry]{vehtariPracticalBayesianModel2017}

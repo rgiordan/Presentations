@@ -58,14 +58,57 @@ Our problem is easier:\\
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\feps{f^\epsilon}
 \def\verteq{\rotatebox{90}{$\,=$}}
 \def\v{v}
+\def\lotto{\mathcal{L}_{\p}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Flow}
+
+Consider $\peps(\theta) \propto \p(\theta) \exp(\epsilon \h(\theta))$,
+with draws $\theta \sim \p(\theta)$.
+
+\begin{center}
+  \begin{minipage}{0.8\textwidth}
+    \only<1>{\FlowGraphZero{}}
+    \only<2>{\FlowGraphOne{}}
+    \only<3>{\FlowGraphTwo{}}
+    \only<4>{\FlowGraphThree{}}    
+  \end{minipage}
+\end{center}
+
+\only<2>{
+  Imagine the density $\p(\theta)$ coming out of the page.
+  The perturbation $\h(\theta)$ is defined ``vertically.'' 
+}
+
+\only<3>{
+  Plug-in estimates for the covariance are equivalent to 
+  producing the perturbation by weighting
+  (Appendix B \citet{giordano:2018:covariances})
+}
+
+
+\only<4>{
+  We will try, instead, try to effect the perturbation with a flow
+  $\theta \mapsto \feps(\theta)$
+}
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]{Flow}
 
@@ -75,7 +118,7 @@ We want a flow $\theta \mapsto \feps(\theta)$ such that,
 for small $\epsilon$, $\feps(\theta) \sim \peps(\theta)$
 and $\f^0(\theta) = \theta$.\\[1em]
 
-\hrulefill
+\pause
 
 Suppose there is a scalar-valued potential function $\v(\theta)$ such that
 $$
@@ -83,33 +126,60 @@ $$
 \quad\textrm{as }\epsilon \rightarrow 0. \textrm{ Then:}
 $$
 %
+\pause
 $$
 \begin{aligned}
   \expect{\peps(\theta)}{\phi(\theta)} ={}& \expect{\p(\theta)}{\phi(\feps(\theta))}
-\Rightarrow \\
+\Rightarrow & \textrm{(good flow)} \pause \\
 \fracat{\partial}{\partial \epsilon}{\epsilon = 0}  
   \expect{\peps(\theta)}{\phi(\theta)} ={}&
 \fracat{\partial}{\partial \epsilon}{\epsilon = 0}
-  \expect{\p(\theta)}{\phi(\theta + \epsilon \nabla \v(\theta))}
+  \expect{\p(\theta)}{\phi(\theta + \epsilon \nabla \v(\theta))} \Rightarrow
+  & \textrm{(smoothness)} \pause 
 \\
-\verteq \quad\quad\quad & \quad\quad\quad \verteq
-\\
+% \\
+% \verteq \quad\quad\quad & \quad\quad\quad \verteq
+% \\
 %\cov{\p(\theta)}{\phi(\theta), \h(\theta)}
-\expect{\p(\theta)}{\phi(\theta) \h(\theta)}
+(\star) \quad\quad\quad 
+\cov{\p(\theta)}{\phi(\theta), \h(\theta)}
 ={}&
   \expect{\p(\theta)}{\nabla \phi(\theta)^\trans 
-                      \nabla \v(\theta) }\\
+                      \nabla \v(\theta) }
+  & \textrm{(Connecting $\h$ and $\v$)}
+\\
 \end{aligned}
 $$
-
-\hrulefill
-
 %
-\begin{itemize}
-\item When does such a $\v(\theta)$ exist?
-\item How can we find it in practice?
-\end{itemize}
+\pause
 %
+\theorem{\textbf{Theorem (Schewengber 2026): } \\
+% Assume that
+% %
+% \begin{itemize}
+% \item $\log \p(\theta) \in C^2(\mathcal{R}^d)$
+% \item  $\lim_{\theta \to \infty} \left( \frac{1}{2}\| \nabla \log
+%        \p(\theta) \|^2 - \Delta \log \p(\theta) \right) = +\infty$.
+% \item $\expect{\p(\theta)}{\h(\theta)^2} < \infty$
+% \end{itemize}
+%
+Under mild regularity conditions there exists a solution $\v$ to the differential
+equation
+$$
+\lotto(\v) :={}
+- \nabla \v^\trans \nabla \log \p 
+    - \Delta \v = \h
+$$
+such that  $\norm{\nabla \v}_{L^2(\p)} <  \infty$ and
+the flow $\theta_\epsilon = \theta + \epsilon \nabla \v(\theta)$
+satsifes Equation $(\star)$.
+%
+}
+
+Note that $\lotto$ is well-known: it's the drift operator, generator of Langevin
+diffusion, and the trace of the Stein
+operator.\citep{ambrosio2021lectures,song2021scorebasedgenerativemodelingstochastic,ross2011fundamentals}
+
 
 \end{frame}
 
@@ -189,44 +259,44 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\lotto{\mathcal{L}_{\p}}
 
-\begin{frame}[t]{When does such a $\v(\theta)$ exist?}
 
-\sensitivitysetup{}
+% \begin{frame}[t]{When does such a $\v(\theta)$ exist?}
 
-We want a flow $\theta \mapsto \feps(\theta)$ such that,
-for small $\epsilon$, $\feps(\theta) \sim \peps(\theta)$
-and $\f^0(\theta) = \theta$.\\[1em]
+% \sensitivitysetup{}
 
-\textbf{When does such a $\v(\theta)$ exist?}
+% We want a flow $\theta \mapsto \feps(\theta)$ such that,
+% for small $\epsilon$, $\feps(\theta) \sim \peps(\theta)$
+% and $\f^0(\theta) = \theta$.\\[1em]
 
-\theorem{\textbf{Theorem (Schewengber 2026): } Assume that
-%
-\begin{itemize}
-\item $\log \p(\theta) \in C^2(\mathcal{R}^d)$
-\item  $\lim_{\theta \to \infty} \left( \frac{1}{2}\| \nabla \log
-       \p(\theta) \|^2 - \Delta \log \p(\theta) \right) = +\infty$.
-\item $\expect{\p(\theta)}{\h(\theta)^2} < \infty$
-\end{itemize}
-%
-Then there exists a solution $\v$ to the differential
-equation
-$$
--\lotto(\v) :={}
-\nabla \v^\trans \nabla \log \p 
-    + \Delta \v = \h
-$$
-such that  $\norm{\nabla \v}_{L^2(\p)} <  \infty$, and
-the flow $\theta_\epsilon = \theta + \epsilon \nabla \v(\theta)$
-satsifes $\theta_\epsilon \sim \peps(\theta)$ for small $\epsilon$.
-%
-}
+% \textbf{When does such a $\v(\theta)$ exist?}
 
-Note that $\lotto$ is the drift operator, generator of Langevin diffusion,
-trace of the Stein operator.
+% \theorem{\textbf{Theorem (Schewengber 2026): } Assume that
+% %
+% \begin{itemize}
+% \item $\log \p(\theta) \in C^2(\mathcal{R}^d)$
+% \item  $\lim_{\theta \to \infty} \left( \frac{1}{2}\| \nabla \log
+%        \p(\theta) \|^2 - \Delta \log \p(\theta) \right) = +\infty$.
+% \item $\expect{\p(\theta)}{\h(\theta)^2} < \infty$
+% \end{itemize}
+% %
+% Then there exists a solution $\v$ to the differential
+% equation
+% $$
+% -\lotto(\v) :={}
+% \nabla \v^\trans \nabla \log \p 
+%     + \Delta \v = \h
+% $$
+% such that  $\norm{\nabla \v}_{L^2(\p)} <  \infty$, and
+% the flow $\theta_\epsilon = \theta + \epsilon \nabla \v(\theta)$
+% satsifes $\theta_\epsilon \sim \peps(\theta)$ for small $\epsilon$.
+% %
+% }
 
-\end{frame}
+% Note that $\lotto$ is the drift operator, generator of Langevin diffusion,
+% trace of the Stein operator.
+
+% \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -238,55 +308,152 @@ trace of the Stein operator.
 
 \begin{frame}[t]{How can we find $\v(\theta)$ in practice?}
 
-Fix $\h(\theta)$.  Specify
+Solving PDEs is hard.  How can we easily find $\v(\theta)$ in practice?
+$$
+\begin{aligned}
+(\star) \quad\quad\quad 
+\cov{\p(\theta)}{\phi(\theta), \h(\theta)}
+={}&
+  \expect{\p(\theta)}{\nabla \phi(\theta)^\trans 
+                      \nabla \v(\theta) }
+  & \textrm{(Identity connecting $\h$ and $\v$)}
+\end{aligned}
+$$
+Basis expansion approach (Otto's calculus \citep{otto_geometry_2001}):
 %
 \begin{itemize}
-\item A family of real-valued test functions $\phi_n(\theta)$ for $n \in [N]$
-\item A family of real-valued basis functions $\b_m(\theta)$ for $m \in [M]$
+\item Specify a family of real-valued test functions $\phi_n(\theta)$ for $n \in [N]$
+\item Specify a family of real-valued basis functions $\b_m(\theta)$ for $m \in [M]$
 \end{itemize}
 %
-$$
-\textrm{Let }\v(\theta; \beta) := \sum_{m=1}^M \beta_m \b_m(\theta).
-\textrm{ Then}
-$$
+Let $\v(\theta; \beta) := \sum_{m=1}^M \beta_m \b_m(\theta)$ and
+plug into Equation $(\star)$.
+
+\pause
 %
+Stacking in matrices:
 $$
 \begin{aligned}
 \underbrace{
-  \expect{\p(\theta)}{\phi_n(\theta) \h(\theta)}
-}_{\textrm{Estimate with MCMC!}}
-={}&
-\sum_{m=1}^M
-  \beta_m
+\begin{bmatrix}
+  \vdots\\
+  \cov{\p(\theta)}{\phi_n(\theta), \h(\theta)} \\
+  \vdots\\
+\end{bmatrix}%_{n \in [N]}
+}_{
+  \shortstack{$N \times 1$ matrix}
+}
+%
+%
 \underbrace{
-  \expect{\p(\theta)}{\nabla \phi_n(\theta)^\trans 
-                      \nabla \b_m(\theta) }
-}_{\textrm{Estimate with MCMC!}}
+\begin{bmatrix}
+  & \vdots & \\
+\hdots &
+\expect{\p(\theta)}{\nabla \phi_n(\theta)^\trans 
+                      \nabla \b_m(\theta) } &
+\hdots \\
+  & \vdots & \\
+\end{bmatrix}%_{n \in [N], m \in [M]}
+}_{
+  \shortstack{$N \times M$ matrix}
+}
+\begin{bmatrix}
+  \vdots \\
+  \beta_m \\
+  \vdots
+\end{bmatrix}%_{m \in [M]}.
 \end{aligned}
 $$
-This gives $N$ linear equations in $M$ unknowns.
-Known as ``Otto's calculus'' in differential equations.   Formally
-similar to numerical PDE solutions known as Galerkin methods,
-except we have a stochastic grid ($\theta \sim \p(\theta)$) 
-rather than a deterministic one.
+%
 % $$
-% F = B \beta
+% \begin{aligned}
+% \MoveEqLeft
+% \underbrace{
+% \begin{pmatrix}
+%   \cov{\p(\theta)}{\phi_1(\theta), \h(\theta)} \\
+%   \vdots\\
+%   \cov{\p(\theta)}{\phi_N(\theta), \h(\theta)} \\
+% \end{pmatrix}
+% }_{
+%   \shortstack{$N \times 1$ matrix}
+% }
+% %
+% \\&=
+% %
+% \underbrace{
+% \begin{pmatrix}
+% \expect{\p(\theta)}{\nabla \phi_1(\theta)^\trans 
+%                       \nabla \b_1(\theta) } &
+%               \hdots &
+% \expect{\p(\theta)}{\nabla \phi_1(\theta)^\trans 
+%                       \nabla \b_M(\theta) } \\
+%   \vdots & \vdots & \vdots \\
+% \expect{\p(\theta)}{\nabla \phi_N(\theta)^\trans 
+%                       \nabla \b_1(\theta) } &
+%               \hdots &
+% \expect{\p(\theta)}{\nabla \phi_N(\theta)^\trans 
+%                       \nabla \b_M(\theta) } \\
+% \end{pmatrix}
+% }_{
+%   \shortstack{$N \times M$ matrix}
+% }
+% \begin{pmatrix}
+%   \beta_1 \\
+%   \vdots \\
+%   \beta_M
+% \end{pmatrix}.
+% \end{aligned}
 % $$
 
-Unlike standard linear regression:\\[1em]
-%
-\begin{itemize}
-\item We are free to choose $\phi_n$ and $\b_m$
-\item Both $F$ and $B$ are measured with noise
-\item We have a lot of information about the covariance of $F$ and $B$
-\end{itemize}
-%
-%
-\theorem{ \textbf{Theorem (Schewengber 2026, sketch): } The solution
-gives the best L2 approximation to $\norm{\nabla \v(\theta)}_{L^2(\p)}$
-in the span of $\phi_n(\theta)$.  When $\p$ is Gaussian, the ordered Hermite
-polynomials give the best finite-rank approximation.
-}
+
+% $$
+% \begin{aligned}
+% \underbrace{
+%   \expect{\p(\theta)}{\phi_n(\theta) \h(\theta)}
+% }_{\textrm{Estimate with MCMC!}}
+% ={}&
+% \sum_{m=1}^M
+%   \beta_m
+% \underbrace{
+%   \expect{\p(\theta)}{\nabla \phi_n(\theta)^\trans 
+%                       \nabla \b_m(\theta) }
+% }_{\textrm{Estimate with MCMC!}}
+% \end{aligned}
+% $$
+
+% \shortstack{Want to check specification \\ without re--running MCMC}
+
+This gives $N$ linear equations in $M$ unknowns, and the matrices
+can be estimated with MCMC.\\[1em]
+\pause
+\theorem{ \textbf{Theorem (Schewengber 2026): }  When $\p(\theta)$ is Gaussian,
+taking $N = M$ and $\phi_n(\theta) = \b_n(\theta)$ to be the Hermite
+polynomials give the best finite-rank approximation to $\v(\theta)$ in
+$L_2(\p)$. }
+
+
+% Known as ``Otto's calculus'' in differential equations.   Formally
+% similar to numerical PDE solutions known as Galerkin methods,
+% except we have a stochastic grid ($\theta \sim \p(\theta)$) 
+% rather than a deterministic one.
+% % $$
+% % F = B \beta
+% % $$
+
+% Unlike standard linear regression:\\[1em]
+% %
+% \begin{itemize}
+% \item We are free to choose $\phi_n$ and $\b_m$
+% \item Both $F$ and $B$ are measured with noise
+% \item We have a lot of information about the covariance of $F$ and $B$
+% \end{itemize}
+% %
+% %
+% \theorem{ \textbf{Theorem (Schewengber 2026, sketch): } The solution
+% gives the best L2 approximation to $\norm{\nabla \v(\theta)}_{L^2(\p)}$
+% in the span of $\phi_n(\theta)$.  When $\p$ is Gaussian, the ordered Hermite
+% polynomials give the best finite-rank approximation.
+% }
 
 \end{frame}
 
@@ -316,6 +483,7 @@ $$
 %
 \textbf{This just translates the posterior in the direction of the mean changes.}
 %
+\pause
 
 Suppose we have $\theta_m \sim \post$, and bootstrap
 weights $\w_i$.  Set

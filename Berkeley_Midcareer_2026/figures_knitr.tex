@@ -272,37 +272,76 @@
 
 
 
-
-
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% <<shiftgraphs, cache=cache_otto>>=
-% source("R_scripts/logistic_otto_sim/generate_shift_plots.R")
-% SetShortImageSize()
-% @
-
-% \def\ShiftGraphZero{
-% %
-% <<>>=
-% figcap <- paste("A covariate shift diagnostic", sep="")
-% @
-% <<shiftplot0, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-% print(shift_plot0)
-% @
-% }
 
 
-% \def\ShiftGraphOne{
-% %
-% <<>>=
-% figcap <- paste("A covariate shift diagnostic", sep="")
-% @
-% <<shiftplot1, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-% print(shift_plot1)
-% @
-% }
+\def\FlowGraphZero{
+%
 
-% <<>>=
-% SetFullImageSize()
-% @
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.549\linewidth]{figure/flowplot0-1} 
+
+}
+
+\caption[Draws from a posterior]{Draws from a posterior}\label{fig:flowplot0}
+\end{figure}
+
+\end{knitrout}
+}
+
+\def\FlowGraphOne{
+%
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.549\linewidth]{figure/flowplot1-1} 
+
+}
+
+\caption[A posterior perturbation]{A posterior perturbation}\label{fig:flowplot1}
+\end{figure}
+
+\end{knitrout}
+}
+
+
+\def\FlowGraphTwo{
+%
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.549\linewidth]{figure/flowplot2-1} 
+
+}
+
+\caption[A posterior perturbation with weights]{A posterior perturbation with weights}\label{fig:flowplot2}
+\end{figure}
+
+\end{knitrout}
+}
+
+
+\def\FlowGraphThree{
+%
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.549\linewidth]{figure/flowplot4-1} 
+
+}
+
+\caption[A posterior perturbation with a flow]{A posterior perturbation with a flow}\label{fig:flowplot4}
+\end{figure}
+
+\end{knitrout}
+}
+
+
+

@@ -222,37 +222,57 @@ SetFullImageSize()
 @
 
 
-
-
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% <<shiftgraphs, cache=cache_otto>>=
-% source("R_scripts/logistic_otto_sim/generate_shift_plots.R")
-% SetShortImageSize()
-% @
+<<flowgraphs, cache=cache_otto>>=
+source("R_scripts/logistic_otto_sim/generate_flow_plots.R")
+SetShortImageSize()
+@
 
-% \def\ShiftGraphZero{
-% %
-% <<>>=
-% figcap <- paste("A covariate shift diagnostic", sep="")
-% @
-% <<shiftplot0, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-% print(shift_plot0)
-% @
-% }
+\def\FlowGraphZero{
+%
+<<>>=
+figcap <- paste("Draws from a posterior", sep="")
+@
+<<flowplot0, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(posterior_plots$base_plot)
+@
+}
+
+\def\FlowGraphOne{
+%
+<<>>=
+figcap <- paste("A posterior perturbation", sep="")
+@
+<<flowplot1, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(posterior_plots$h_plot)
+@
+}
 
 
-% \def\ShiftGraphOne{
-% %
-% <<>>=
-% figcap <- paste("A covariate shift diagnostic", sep="")
-% @
-% <<shiftplot1, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
-% print(shift_plot1)
-% @
-% }
+\def\FlowGraphTwo{
+%
+<<>>=
+figcap <- paste("A posterior perturbation with weights", sep="")
+@
+<<flowplot2, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(posterior_plots$w_plot)
+@
+}
 
-% <<>>=
-% SetFullImageSize()
-% @
+
+\def\FlowGraphThree{
+%
+<<>>=
+figcap <- paste("A posterior perturbation with a flow", sep="")
+@
+<<flowplot4, cache=cache_otto, fig.show='hold', fig.cap=figcap>>=
+print(posterior_plots$flow_plot)
+@
+}
+
+<<>>=
+SetFullImageSize()
+@
+

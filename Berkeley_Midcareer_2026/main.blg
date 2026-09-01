@@ -28,48 +28,49 @@ Warning--empty year in muandet:2020:KernelConditionalMoment2020
 Warning--empty journal in rojas-carulla::InvariantModelsCausal
 Warning--empty year in rojas-carulla::InvariantModelsCausal
 Warning--empty year in rojas-carulla::InvariantModelsCausal
+Warning--empty journal in ross2011fundamentals
 Warning--empty journal in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
-You've used 17 entries,
+You've used 21 entries,
             2773 wiz_defined-function locations,
-            716 strings with 9016 characters,
-and the built_in function-call counts, 8418 in all, are:
-= -- 786
-> -- 450
-< -- 10
-+ -- 152
-- -- 135
-* -- 699
-:= -- 1251
-add.period$ -- 69
-call.type$ -- 17
-change.case$ -- 96
-chr.to.int$ -- 17
-cite$ -- 58
-duplicate$ -- 382
-empty$ -- 661
-format.name$ -- 160
-if$ -- 1771
+            742 strings with 9808 characters,
+and the built_in function-call counts, 10178 in all, are:
+= -- 936
+> -- 565
+< -- 13
++ -- 192
+- -- 171
+* -- 843
+:= -- 1535
+add.period$ -- 85
+call.type$ -- 21
+change.case$ -- 118
+chr.to.int$ -- 21
+cite$ -- 67
+duplicate$ -- 458
+empty$ -- 797
+format.name$ -- 200
+if$ -- 2130
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 14
-newline$ -- 110
-num.names$ -- 68
-pop$ -- 225
+missing$ -- 18
+newline$ -- 134
+num.names$ -- 84
+pop$ -- 274
 preamble$ -- 1
-purify$ -- 79
+purify$ -- 98
 quote$ -- 0
-skip$ -- 297
+skip$ -- 357
 stack$ -- 0
-substring$ -- 320
-swap$ -- 57
-text.length$ -- 3
+substring$ -- 353
+swap$ -- 62
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 187
-warning$ -- 24
-while$ -- 74
+type$ -- 226
+warning$ -- 25
+while$ -- 88
 width$ -- 0
-write$ -- 243
-(There were 26 warnings)
+write$ -- 300
+(There were 27 warnings)
