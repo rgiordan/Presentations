@@ -6,7 +6,7 @@ logistic_env$plot_reg <- "X2_rk(0.878, Inf]"
 OTTO_METHOD_LABELS <-
   c(boot="Parametric bootstrap",
     ij="IJ approximation",
-    otto="Otto-grad approximation")
+    otto="Local flow approximation")
 
 
 # Return a scale_color_manual or scale_fill_manual layer with consistent colors

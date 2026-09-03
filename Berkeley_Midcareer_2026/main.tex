@@ -6,8 +6,23 @@
 
 \usepackage[style=alphabetic,backend=biber]{biblatex}
 \addbibresource{references.bib}
-% Color any reference with Giordano as an author (tagged keywords={selfcite} in references.bib)
-\AtEveryBibitem{\ifkeyword{selfcite}{\color{blue}}{}}
+% Color any reference with Giordano as an author (tagged keywords={selfcite} in references.bib).
+% Beamer patches biblatex to recolor each bibliography field via these
+% beamer color slots (see beamerbaselocalstructure.sty), which overrides a
+% plain \color declaration, so the override has to go through the same slots.
+\newcommand{\ResetBibColors}{%
+  \setbeamercolor{bibliography entry author}{use=structure,fg=structure.fg}%
+  \setbeamercolor{bibliography entry title}{use=normal text,fg=normal text.fg}%
+  \setbeamercolor{bibliography entry location}{use=structure,fg=structure.fg!65!bg}%
+  \setbeamercolor{bibliography entry note}{use=structure,fg=structure.fg!65!bg}%
+}
+\newcommand{\SelfciteBibColors}{%
+  \setbeamercolor{bibliography entry author}{fg=blue}%
+  \setbeamercolor{bibliography entry title}{fg=blue}%
+  \setbeamercolor{bibliography entry location}{fg=blue}%
+  \setbeamercolor{bibliography entry note}{fg=blue}%
+}
+\AtEveryBibitem{\ifkeyword{selfcite}{\SelfciteBibColors}{\ResetBibColors}}
 
 \title{Next-generation Bayesian local robustness}
 

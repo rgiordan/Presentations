@@ -677,56 +677,6 @@
       \verb https://doi.org/10.3102/10769986251379738
       \endverb
     \endentry
-    \entry{johnsen:2000:SpectralPropertiesWittenLaplacians2000}{article}{}
-      \name{author}{1}{}{%
-        {{hash=b3c13ce25af45f9d8fcf9c7e9234b283}{%
-           family={Johnsen},
-           familyi={J\bibinitperiod},
-           given={Jon},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{b3c13ce25af45f9d8fcf9c7e9234b283}
-      \strng{fullhash}{b3c13ce25af45f9d8fcf9c7e9234b283}
-      \strng{bibnamehash}{b3c13ce25af45f9d8fcf9c7e9234b283}
-      \strng{authorbibnamehash}{b3c13ce25af45f9d8fcf9c7e9234b283}
-      \strng{authornamehash}{b3c13ce25af45f9d8fcf9c7e9234b283}
-      \strng{authorfullhash}{b3c13ce25af45f9d8fcf9c7e9234b283}
-      \field{labelalpha}{Joh00}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{math-ph}
-      \field{eprinttype}{arXiv}
-      \field{issn}{0378-620X, 1420-8989}
-      \field{journaltitle}{Integral Equations and Operator Theory}
-      \field{month}{9}
-      \field{number}{3}
-      \field{shortjournal}{Integr equ oper theory}
-      \field{title}{On the Spectral Properties of {{Witten-Laplacians}}, Their Range Projections and {{Brascamp-Lieb}}'s Inequality}
-      \field{urlday}{3}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{volume}{36}
-      \field{year}{2000}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{288\bibrangedash 324}
-      \range{pages}{37}
-      \verb{doi}
-      \verb 10.1007/BF01213926
-      \endverb
-      \verb{eprint}
-      \verb 1703.10011
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/1703.10011
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1703.10011
-      \endverb
-      \keyw{Mathematical Physics}
-    \endentry
     \entry{kuhUsingLeaveoneoutCross2024}{article}{}
       \name{author}{4}{}{%
         {{hash=e8d1001bf09cbf72883e471afb0784db}{%
@@ -937,6 +887,101 @@
       \verb{url}
       \verb https://proceedings.mlr.press/v124/muandet20a.html
       \endverb
+    \endentry
+    \entry{maurais:2024:SamplingUnitTime2024}{online}{}
+      \name{author}{2}{}{%
+        {{hash=4ccdd426577f92e5407f9f61127fc3f7}{%
+           family={Maurais},
+           familyi={M\bibinitperiod},
+           given={Aimee},
+           giveni={A\bibinitperiod}}}%
+        {{hash=507032ac2af40126c0a0335ecb85b947}{%
+           family={Marzouk},
+           familyi={M\bibinitperiod},
+           given={Youssef},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{79143157aa6851cb0850cb87a05044b4}
+      \strng{fullhash}{79143157aa6851cb0850cb87a05044b4}
+      \strng{bibnamehash}{79143157aa6851cb0850cb87a05044b4}
+      \strng{authorbibnamehash}{79143157aa6851cb0850cb87a05044b4}
+      \strng{authornamehash}{79143157aa6851cb0850cb87a05044b4}
+      \strng{authorfullhash}{79143157aa6851cb0850cb87a05044b4}
+      \field{labelalpha}{MM24}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{eprintclass}{stat.CO}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{pubstate}{prepublished}
+      \field{title}{Sampling in {{Unit Time}} with {{Kernel Fisher-Rao Flow}}}
+      \field{urlday}{3}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2401.03892
+      \endverb
+      \verb{eprint}
+      \verb 2401.03892
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2401.03892
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2401.03892
+      \endverb
+      \keyw{Computer Science - Machine Learning,Statistics - Computation,Statistics - Machine Learning}
+    \endentry
+    \entry{nusken:2024:SteinTransportBayesian2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1809e073002f6b361a45b910e990e573}{%
+           family={Nüsken},
+           familyi={N\bibinitperiod},
+           given={Nikolas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{1809e073002f6b361a45b910e990e573}
+      \strng{fullhash}{1809e073002f6b361a45b910e990e573}
+      \strng{bibnamehash}{1809e073002f6b361a45b910e990e573}
+      \strng{authorbibnamehash}{1809e073002f6b361a45b910e990e573}
+      \strng{authornamehash}{1809e073002f6b361a45b910e990e573}
+      \strng{authorfullhash}{1809e073002f6b361a45b910e990e573}
+      \field{labelalpha}{Nüs24}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{28}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{month}{11}
+      \field{pubstate}{prepublished}
+      \field{title}{Stein Transport for {{Bayesian}} Inference}
+      \field{urlday}{3}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2409.01464
+      \endverb
+      \verb{eprint}
+      \verb 2409.01464
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2409.01464
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2409.01464
+      \endverb
+      \keyw{Computer Science - Machine Learning,Mathematics - Numerical Analysis,Mathematics - Statistics Theory,Statistics - Machine Learning,Statistics - Methodology}
     \endentry
     \entry{papamakarios:2021:normalizingflows}{article}{}
       \name{author}{5}{}{%

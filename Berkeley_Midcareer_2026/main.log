@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  2 SEP 2026 19:02
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  3 SEP 2026 09:42
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1649,31 +1649,31 @@ echnical note
  (./main.aux)
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-1.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
+6.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1731,7 +1731,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1744,9 +1744,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count506
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
@@ -1783,65 +1783,65 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 21.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 21.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 21.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 21.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 21.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 21.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 21.
-LaTeX Font Info:    Redeclaring math accent \check on input line 21.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 21.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 21.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 21.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 36.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 36.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 36.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 36.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 36.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 36.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 36.
+LaTeX Font Info:    Redeclaring math accent \check on input line 36.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 36.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 36.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 36.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 36.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 21.
+(Font)              `operators' in the math version `normal' on input line 36.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/LiberationSerif(0)/m/n on input line
- 21.
+ 36.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 21.
+(Font)              `operators' in the math version `bold' on input line 36.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/m/n on input lin
-e 21.
+e 36.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/m/n
- on input line 21.
+ on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/LiberationSerif(0)/m/it on input li
-ne 21.
+ne 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/b/n on input lin
-e 21.
+e 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/FiraSansLight(0)/m/n on input line 
-21.
+36.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 21.
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/m/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/b/n
- on input line 21.
+ on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/LiberationSerif(0)/b/it on input l
-ine 21.
+ine 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/FiraSansLight(0)/b/n on input line
- 21.
+ 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/b/n on input line 21.
+(Font)                  OT1/cmtt/m/n --> TU/FiraMono(0)/b/n on input line 36.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1862,10 +1862,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 21.
-Package biblatex Info: Reference segment=0 on input line 21.
+Package biblatex Info: Reference section=0 on input line 36.
+Package biblatex Info: Reference segment=0 on input line 36.
 (./main.nav)
-Overfull \vbox (10.92494pt too high) detected at line 23
+Overfull \vbox (10.92494pt too high) detected at line 38
  []
 
 [1
@@ -2346,7 +2346,7 @@ Package luatex.def Info: figure/flowplot4-1.png  used on input line 104.
  [52
 
 <./figure/flowplot4-1.png>]
-Overfull \hbox (15.29558pt too wide) detected at line 183
+Overfull \hbox (14.89037pt too wide) detected at line 183
 [][]
  []
 
@@ -2362,7 +2362,7 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [53
 
 ]
-Overfull \hbox (15.29558pt too wide) detected at line 183
+Overfull \hbox (14.89037pt too wide) detected at line 183
 [][]
  []
 
@@ -2378,7 +2378,7 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [54
 
 ]
-Overfull \hbox (15.29558pt too wide) detected at line 183
+Overfull \hbox (14.89037pt too wide) detected at line 183
 [][]
  []
 
@@ -2394,7 +2394,7 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [55
 
 ]
-Overfull \hbox (15.29558pt too wide) detected at line 183
+Overfull \hbox (14.89037pt too wide) detected at line 183
 [][]
  []
 
@@ -2410,7 +2410,7 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [56
 
 ]
-Overfull \hbox (15.29558pt too wide) detected at line 183
+Overfull \hbox (14.89037pt too wide) detected at line 183
 [][]
  []
 
@@ -2426,7 +2426,7 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [57
 
 ]
-Overfull \hbox (15.29558pt too wide) detected at line 183
+Overfull \hbox (14.89037pt too wide) detected at line 183
 [][]
  []
 
@@ -2448,74 +2448,74 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 514.
+(mdframed)              on input line 319.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 514.
+ mdframed uses option nobreak mdframed on input line 319.
  [61
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 514.
+(mdframed)              on input line 319.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 514.
-<figure/flowplot5-1.png, id=567, 397.485pt x 222.3507pt>
+ mdframed uses option nobreak mdframed on input line 319.
+<figure/flowplot5-1.png, id=566, 397.485pt x 222.3507pt>
 File: figure/flowplot5-1.png Graphic file (type png)
 <use figure/flowplot5-1.png>
-Package luatex.def Info: figure/flowplot5-1.png  used on input line 514.
+Package luatex.def Info: figure/flowplot5-1.png  used on input line 319.
 (luatex.def)             Requested size: 180.6922pt x 101.224pt.
  [62
 
 <./figure/flowplot5-1.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 514.
+(mdframed)              on input line 319.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 514.
-<figure/flowplot6-1.png, id=576, 397.485pt x 222.3507pt>
+ mdframed uses option nobreak mdframed on input line 319.
+<figure/flowplot6-1.png, id=575, 397.485pt x 222.3507pt>
 File: figure/flowplot6-1.png Graphic file (type png)
 <use figure/flowplot6-1.png>
-Package luatex.def Info: figure/flowplot6-1.png  used on input line 514.
+Package luatex.def Info: figure/flowplot6-1.png  used on input line 319.
 (luatex.def)             Requested size: 180.6922pt x 101.224pt.
  [63
 
 <./figure/flowplot6-1.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 514.
+(mdframed)              on input line 319.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 514.
+ mdframed uses option nobreak mdframed on input line 319.
 File: figure/flowplot6-1.png Graphic file (type png)
 <use figure/flowplot6-1.png>
-Package luatex.def Info: figure/flowplot6-1.png  used on input line 514.
+Package luatex.def Info: figure/flowplot6-1.png  used on input line 319.
 (luatex.def)             Requested size: 180.6922pt x 101.224pt.
 
-Overfull \vbox (10.90916pt too high) detected at line 514
+Overfull \vbox (10.90916pt too high) detected at line 319
  []
 
 [64
 
 ]
-<figure/ottographmrp-1.png, id=591, 397.485pt x 222.3507pt>
+<figure/ottographmrp-1.png, id=590, 397.485pt x 222.3507pt>
 File: figure/ottographmrp-1.png Graphic file (type png)
 <use figure/ottographmrp-1.png>
-Package luatex.def Info: figure/ottographmrp-1.png  used on input line 534.
+Package luatex.def Info: figure/ottographmrp-1.png  used on input line 339.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [65
 
 <./figure/ottographmrp-1.png>]
-<figure/ottographmrpvar-1.png, id=598, 397.485pt x 222.3507pt>
+<figure/ottographmrpvar-1.png, id=597, 397.485pt x 222.3507pt>
 File: figure/ottographmrpvar-1.png Graphic file (type png)
 <use figure/ottographmrpvar-1.png>
-Package luatex.def Info: figure/ottographmrpvar-1.png  used on input line 534.
+Package luatex.def Info: figure/ottographmrpvar-1.png  used on input line 339.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [66
 
 <./figure/ottographmrpvar-1.png>]
-<figure/ottographdiag-1.png, id=604, 397.485pt x 222.3507pt>
+<figure/ottographdiag-1.png, id=603, 397.485pt x 222.3507pt>
 File: figure/ottographdiag-1.png Graphic file (type png)
 <use figure/ottographdiag-1.png>
-Package luatex.def Info: figure/ottographdiag-1.png  used on input line 534.
+Package luatex.def Info: figure/ottographdiag-1.png  used on input line 339.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
 
 [67
@@ -2562,18 +2562,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53789 strings out of 477805
+ 53796 strings out of 477805
  125031,2373549 words of node,token memory allocated
  10670 words of node memory still in use:
    40 hlist, 8 vlist, 5 rule, 51 disc, 4 local_par, 10 math, 202 glue, 19 kern, 
 68 penalty, 36 sub_mlist, 767 glyph, 330 attribute, 125 glue_spec, 330 attribute
 _list, 4 write, 5 pdf_start_link, 5 pdf_end_link, 3 pdf_dest, 9 pdf_action, 48 p
 df_colorstack nodes
-   avail lists: 1:19,2:2560,3:786,4:470,5:301,6:137,7:9547,8:151,9:892,10:39,11:
-539,12:13
- 71710 multiletter control sequences out of 65536+600000
+   avail lists: 1:20,2:2638,3:787,4:476,5:310,6:137,7:9700,8:151,9:892,10:42,11:
+533,12:13
+ 71716 multiletter control sequences out of 65536+600000
  97 fonts using 20996447 bytes
- 128i,22n,134p,1852b,1836s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,22n,134p,1852b,1751s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
 xlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fon
 ts/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/l
@@ -2595,10 +2595,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on main.pdf (75 pages, 3634339 bytes).
+Output written on main.pdf (75 pages, 3635145 bytes).
 
-PDF statistics: 790 PDF objects out of 1000 (max. 8388607)
- 636 compressed objects within 7 object streams
- 184 named destinations out of 1000 (max. 131072)
+PDF statistics: 792 PDF objects out of 1000 (max. 8388607)
+ 638 compressed objects within 7 object streams
+ 185 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
