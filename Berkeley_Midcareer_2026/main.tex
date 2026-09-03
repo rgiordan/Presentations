@@ -6,8 +6,8 @@
 
 \usepackage[style=alphabetic,backend=biber]{biblatex}
 \addbibresource{references.bib}
-% Bold any reference with Giordano as an author (tagged keywords={selfcite} in references.bib)
-\AtEveryBibitem{\ifkeyword{selfcite}{\bfseries}{}}
+% Color any reference with Giordano as an author (tagged keywords={selfcite} in references.bib)
+\AtEveryBibitem{\ifkeyword{selfcite}{\color{blue}}{}}
 
 \title{Next-generation Bayesian local robustness}
 

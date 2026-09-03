@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1788400821 "main.bcf" "main.bbl" "main" 1788400826
-  "main.bcf" 1788400825 119177 effb076f273c7ac8746add27a75cb11e "lualatex"
+["biber main"] 1788400948 "main.bcf" "main.bbl" "main" 1788400953
+  "main.bcf" 1788400953 119177 effb076f273c7ac8746add27a75cb11e "lualatex"
   "references.bib" 1788400241 43044 fdc1b7876609a100236e164d5ad81178 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1788400821 "main.tex" "main.pdf" "main" 1788400826
+["lualatex"] 1788400949 "main.tex" "main.pdf" "main" 1788400953
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -26,7 +26,6 @@
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1778696069 7555 cc769773fde31512fa1a7b59107f0a4e ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1713476529 1566981 bf1161d049aa0667064a743d2b5ce372 ""
   "/usr/share/fonts/truetype/liberation2/LiberationSerif-Bold.ttf" 1634812302 370096 d30913780d9a1bb9725063dd4b321e8e ""
-  "/usr/share/fonts/truetype/liberation2/LiberationSerif-BoldItalic.ttf" 1634812302 376772 0ca48283dec2f74d955ea7a4b977719a ""
   "/usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf" 1634812302 375632 b4eda57993e3e4402fce98d8db4cacbb ""
   "/usr/share/fonts/truetype/liberation2/LiberationSerif-Regular.ttf" 1634812302 393576 a946634692bb26e6043f8de10018d31f ""
   "/usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf" 1559682857 134144 0dbe9b0c7c283d9ade3352c00f2fc3db ""
@@ -442,12 +441,12 @@
   "figures_knitr.tex" 1788298942 7217 4a99c3bf0a639a0714a297185d268f2a ""
   "ij.tex" 1788400809 12294 111dc3b82856865b75bc54368557cbff ""
   "introduction.tex" 1788400579 4898 a0bba6cdfd9fcfbe50874bbc009dbda8 ""
-  "main.aux" 1788400825 23115 b818490bcd4792f6e4a2adbf0b9344ad "lualatex"
-  "main.bbl" 1788400821 49733 0675187b6403f6c3d0aefaa9ca8b2a58 "biber main"
-  "main.nav" 1788400825 3086 02a1dac040aa030468c69a32515a7b50 "lualatex"
-  "main.out" 1788400823 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1788400825 2346 a92eb0f297ccf74f51e282d944c30a10 "lualatex"
-  "main.tex" 1788400352 923 7bcfc4e766a2b857fb84dbe365941316 ""
+  "main.aux" 1788400953 23115 b818490bcd4792f6e4a2adbf0b9344ad "lualatex"
+  "main.bbl" 1788400949 49733 0675187b6403f6c3d0aefaa9ca8b2a58 "biber main"
+  "main.nav" 1788400953 3086 02a1dac040aa030468c69a32515a7b50 "lualatex"
+  "main.out" 1788400950 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1788400953 2346 a92eb0f297ccf74f51e282d944c30a10 "lualatex"
+  "main.tex" 1788400944 927 cd2e2b349ecc80e5846e40cb065369a7 ""
   "otto.tex" 1788400753 14506 1fae5642a4973889ee7dbc58030dca89 ""
   "static_figures/alice.jpg" 1787076210 13170 bee87fd4d96042960ced90e03e7db734 ""
   "static_figures/avi_feller.jpg" 1787076210 13270 1893adb88ca0fbc19284e37e996c5e9b ""

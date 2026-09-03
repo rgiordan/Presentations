@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  2 SEP 2026 19:00
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  2 SEP 2026 19:02
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2562,44 +2562,43 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53790 strings out of 477805
+ 53789 strings out of 477805
  125031,2373549 words of node,token memory allocated
  10670 words of node memory still in use:
    40 hlist, 8 vlist, 5 rule, 51 disc, 4 local_par, 10 math, 202 glue, 19 kern, 
 68 penalty, 36 sub_mlist, 767 glyph, 330 attribute, 125 glue_spec, 330 attribute
 _list, 4 write, 5 pdf_start_link, 5 pdf_end_link, 3 pdf_dest, 9 pdf_action, 48 p
 df_colorstack nodes
-   avail lists: 1:19,2:2552,3:786,4:466,5:301,6:137,7:9551,8:151,9:892,10:39,11:
+   avail lists: 1:19,2:2560,3:786,4:470,5:301,6:137,7:9547,8:151,9:892,10:39,11:
 539,12:13
- 71711 multiletter control sequences out of 65536+600000
- 98 fonts using 21413575 bytes
+ 71710 multiletter control sequences out of 65536+600000
+ 97 fonts using 20996447 bytes
  128i,22n,134p,1852b,1836s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/fonts/truetype/liberation2/LiberationSerif-BoldItalic.ttf></usr/shar
-e/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/texlive/texm
-f-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fonts/truetyp
-e/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/liberation2
-/LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on main.pdf (75 pages, 3644837 bytes).
+</usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
+xlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/share/fon
+ts/truetype/liberation2/LiberationSerif-Regular.ttf></usr/share/fonts/truetype/l
+iberation2/LiberationSerif-Bold.ttf></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
+Output written on main.pdf (75 pages, 3634339 bytes).
 
-PDF statistics: 797 PDF objects out of 1000 (max. 8388607)
- 640 compressed objects within 7 object streams
+PDF statistics: 790 PDF objects out of 1000 (max. 8388607)
+ 636 compressed objects within 7 object streams
  184 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
