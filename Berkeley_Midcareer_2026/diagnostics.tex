@@ -89,35 +89,32 @@ $$
 \end{aligned}
 $$
 
-
-
-\onslide<3->{
-Let $\p(\x,\y)$ denote a generic joint density of $\x, \y$.\\
-Let $\psurhat$ the empirical distribution on the survey data.
-%
-\begin{enumerate}
-\item Write our estimand as a functional $\mu(\p)$ that takes in a density and returns a MrP estimate
-\item Define a covariate density perturbation $\w(\x)$
-\item Define $\p_\epsilon(\x, \y) = 
-    \p(\x, \y) + \epsilon \w(\x) \p(\y | \x) = 
-    \left(\p(\x) + \epsilon \w(\x) \right) \p(\y | \x)$
-\item Compute the derivative $\Delta(\w, \p) = \partial \mu(\p_\epsilon) / \partial \epsilon$
-\item Plug the empirical distribution into $\Delta(\w, \psurhat)$ and check whether $\approx 0$
-\end{enumerate}
-}
-%
-
-
-\onslide<4->{
-Lots of similar
-ideas in causal inference,
+\onslide<2->{
+Old idea in causal inference,
 kernel learning,
 transfer learning 
 \parencite{shimodaira:2000:ImprovingPredictiveInference2000,
   buhlmann:2020:InvarianceCausalityRobustness2020,
   rojas-carulla::InvariantModelsCausal,
-  muandet:2020:KernelConditionalMoment2020}.  This is just a local Bayesian diagnostics version.
+  muandet:2020:KernelConditionalMoment2020}.
 }
+
+
+\onslide<3->{
+This is just a local Bayesian diagnostics version:\\[1em]
+
+Let $\p_\data(\x,\y)$ denote a generic joint density of $\x, \y$.\\
+%
+\begin{enumerate}
+\item Write our estimand as a functional $\mu(\p_\data)$
+\item Define a covariate density perturbation $\w(\x)$
+\item Define $\p_\data^\epsilon(\x, \y) = 
+    \left(\p_\data(\x) + \epsilon \w(\x) \right) \p_\data(\y | \x)$
+\item Compute the derivative $\Delta(\data) = \partial \mu(\p_\data^\epsilon) / \partial \epsilon$ and check whether $\approx 0$
+\end{enumerate}
+}
+%
+
 
 \end{frame}
 
@@ -216,7 +213,7 @@ $$
         }
 \end{aligned}
 $$
-We expect $\Delta(\w, \data)$ to be \emph{close} to zero when the model is correctly
+We expect $\Delta(\data)$ to be \emph{close} to zero when the model is correctly
 specified.
 
 \end{frame}
@@ -229,10 +226,10 @@ specified.
 
 \begin{frame}[t]{Bootstrapping Bayesian sensitivity analysis}
 
-We expect $\Delta(\w, \data)$ to be \emph{close} to zero when the model is correctly
+We expect $\Delta(\data)$ to be \emph{close} to zero when the model is correctly
 specified.\\[1em]
 
-But on any actual dataset, $\Delta(\w, \data)$ will typically not be precisely
+But on actual data, $\Delta(\data)$ will not be precisely
 zero, even under correct specification.
 
 \only<2>{

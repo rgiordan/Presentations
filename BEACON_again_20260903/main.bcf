@@ -40,7 +40,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
@@ -66,7 +66,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldateparts</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
@@ -163,7 +163,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
-      <bcf:value>anyt</bcf:value>
+      <bcf:value>nyt</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortsets</bcf:key>
@@ -171,11 +171,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>true</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>full</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -274,7 +274,7 @@
   <bcf:options component="biblatex" type="online">
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
@@ -300,7 +300,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldateparts</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
@@ -381,11 +381,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>true</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>full</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -625,7 +625,8 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">dashed</bcf:option>
+    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -707,7 +708,7 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
@@ -794,7 +795,7 @@
     <bcf:option datatype="boolean" backendout="1">doi</bcf:option>
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">subentry</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">mergedate</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -2344,180 +2345,16 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">gelman:1997:PoststratificationManyCategories1997</bcf:citekey>
-    <bcf:citekey order="2">gelman:1997:PoststratificationManyCategories1997</bcf:citekey>
-    <bcf:citekey order="3">gelman:1997:PoststratificationManyCategories1997</bcf:citekey>
-    <bcf:citekey order="4">gelman:1997:PoststratificationManyCategories1997</bcf:citekey>
-    <bcf:citekey order="5">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="6">dinoia:2025:LikelihoodDistortionBayesian2025</bcf:citekey>
-    <bcf:citekey order="6">cabral:2025:RobustnessModelChecking2025</bcf:citekey>
-    <bcf:citekey order="7">vehtariPracticalBayesianModel2017</bcf:citekey>
-    <bcf:citekey order="7">kuhUsingLeaveoneoutCross2024</bcf:citekey>
-    <bcf:citekey order="8">dinoia:2025:LikelihoodDistortionBayesian2025</bcf:citekey>
-    <bcf:citekey order="8">cabral:2025:RobustnessModelChecking2025</bcf:citekey>
-    <bcf:citekey order="9">vehtariPracticalBayesianModel2017</bcf:citekey>
-    <bcf:citekey order="9">kuhUsingLeaveoneoutCross2024</bcf:citekey>
-    <bcf:citekey order="10">shimodaira:2000:ImprovingPredictiveInference2000</bcf:citekey>
-    <bcf:citekey order="10">buhlmann:2020:InvarianceCausalityRobustness2020</bcf:citekey>
-    <bcf:citekey order="10">rojas-carulla::InvariantModelsCausal</bcf:citekey>
-    <bcf:citekey order="10">muandet:2020:KernelConditionalMoment2020</bcf:citekey>
-    <bcf:citekey order="11">shimodaira:2000:ImprovingPredictiveInference2000</bcf:citekey>
-    <bcf:citekey order="11">buhlmann:2020:InvarianceCausalityRobustness2020</bcf:citekey>
-    <bcf:citekey order="11">rojas-carulla::InvariantModelsCausal</bcf:citekey>
-    <bcf:citekey order="11">muandet:2020:KernelConditionalMoment2020</bcf:citekey>
-    <bcf:citekey order="12">shimodaira:2000:ImprovingPredictiveInference2000</bcf:citekey>
-    <bcf:citekey order="12">buhlmann:2020:InvarianceCausalityRobustness2020</bcf:citekey>
-    <bcf:citekey order="12">rojas-carulla::InvariantModelsCausal</bcf:citekey>
-    <bcf:citekey order="12">muandet:2020:KernelConditionalMoment2020</bcf:citekey>
-    <bcf:citekey order="13">diaconis:1986:ConsistencyBayesEstimates1986</bcf:citekey>
-    <bcf:citekey order="13">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="13">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="14">diaconis:1986:ConsistencyBayesEstimates1986</bcf:citekey>
-    <bcf:citekey order="14">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="14">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="15">diaconis:1986:ConsistencyBayesEstimates1986</bcf:citekey>
-    <bcf:citekey order="15">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="15">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="16">huggins:2023:bayesbag</bcf:citekey>
-    <bcf:citekey order="16">wang:2026:AccurateLargesampleUncertainty2026</bcf:citekey>
-    <bcf:citekey order="16">luo:2026:RobustStandardErrors2026</bcf:citekey>
-    <bcf:citekey order="16">ji:2025:ValidStandardErrors2025</bcf:citekey>
-    <bcf:citekey order="17">huggins:2023:bayesbag</bcf:citekey>
-    <bcf:citekey order="17">wang:2026:AccurateLargesampleUncertainty2026</bcf:citekey>
-    <bcf:citekey order="17">luo:2026:RobustStandardErrors2026</bcf:citekey>
-    <bcf:citekey order="17">ji:2025:ValidStandardErrors2025</bcf:citekey>
-    <bcf:citekey order="18">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="19">mises:1947:asymptotic</bcf:citekey>
-    <bcf:citekey order="20">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="21">mises:1947:asymptotic</bcf:citekey>
-    <bcf:citekey order="22">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="23">mises:1947:asymptotic</bcf:citekey>
-    <bcf:citekey order="24">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="25">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="26">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="27">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="28">mises:1947:asymptotic</bcf:citekey>
-    <bcf:citekey order="29">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="30">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="31">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="32">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="33">mises:1947:asymptotic</bcf:citekey>
-    <bcf:citekey order="34">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="35">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="36">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="37">luo:2026:RobustStandardErrors2026</bcf:citekey>
-    <bcf:citekey order="37">ji:2025:ValidStandardErrors2025</bcf:citekey>
-    <bcf:citekey order="38">luo:2026:RobustStandardErrors2026</bcf:citekey>
-    <bcf:citekey order="38">ji:2025:ValidStandardErrors2025</bcf:citekey>
-    <bcf:citekey order="39">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="39">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="39">cabral:2025:RobustnessModelChecking2025</bcf:citekey>
-    <bcf:citekey order="39">dinoia:2025:LikelihoodDistortionBayesian2025</bcf:citekey>
-    <bcf:citekey order="39">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="40">han:2025:EfficientScenarioAnalysis2025</bcf:citekey>
-    <bcf:citekey order="41">papamakarios:2021:normalizingflows</bcf:citekey>
-    <bcf:citekey order="42">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="42">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="42">cabral:2025:RobustnessModelChecking2025</bcf:citekey>
-    <bcf:citekey order="42">dinoia:2025:LikelihoodDistortionBayesian2025</bcf:citekey>
-    <bcf:citekey order="42">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="43">han:2025:EfficientScenarioAnalysis2025</bcf:citekey>
-    <bcf:citekey order="44">papamakarios:2021:normalizingflows</bcf:citekey>
-    <bcf:citekey order="45">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="45">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="45">cabral:2025:RobustnessModelChecking2025</bcf:citekey>
-    <bcf:citekey order="45">dinoia:2025:LikelihoodDistortionBayesian2025</bcf:citekey>
-    <bcf:citekey order="45">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="46">han:2025:EfficientScenarioAnalysis2025</bcf:citekey>
-    <bcf:citekey order="47">papamakarios:2021:normalizingflows</bcf:citekey>
-    <bcf:citekey order="48">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="49">kipnis:1986:CentralLimitTheorem1986</bcf:citekey>
-    <bcf:citekey order="49">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="50">ambrosio2021lectures</bcf:citekey>
-    <bcf:citekey order="50">song2021scorebasedgenerativemodelingstochastic</bcf:citekey>
-    <bcf:citekey order="50">ross2011fundamentals</bcf:citekey>
-    <bcf:citekey order="51">kipnis:1986:CentralLimitTheorem1986</bcf:citekey>
-    <bcf:citekey order="51">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="52">ambrosio2021lectures</bcf:citekey>
-    <bcf:citekey order="52">song2021scorebasedgenerativemodelingstochastic</bcf:citekey>
-    <bcf:citekey order="52">ross2011fundamentals</bcf:citekey>
-    <bcf:citekey order="53">kipnis:1986:CentralLimitTheorem1986</bcf:citekey>
-    <bcf:citekey order="53">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="54">ambrosio2021lectures</bcf:citekey>
-    <bcf:citekey order="54">song2021scorebasedgenerativemodelingstochastic</bcf:citekey>
-    <bcf:citekey order="54">ross2011fundamentals</bcf:citekey>
-    <bcf:citekey order="55">kipnis:1986:CentralLimitTheorem1986</bcf:citekey>
-    <bcf:citekey order="55">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="56">ambrosio2021lectures</bcf:citekey>
-    <bcf:citekey order="56">song2021scorebasedgenerativemodelingstochastic</bcf:citekey>
-    <bcf:citekey order="56">ross2011fundamentals</bcf:citekey>
-    <bcf:citekey order="57">kipnis:1986:CentralLimitTheorem1986</bcf:citekey>
-    <bcf:citekey order="57">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="58">ambrosio2021lectures</bcf:citekey>
-    <bcf:citekey order="58">song2021scorebasedgenerativemodelingstochastic</bcf:citekey>
-    <bcf:citekey order="58">ross2011fundamentals</bcf:citekey>
-    <bcf:citekey order="59">kipnis:1986:CentralLimitTheorem1986</bcf:citekey>
-    <bcf:citekey order="59">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="60">ambrosio2021lectures</bcf:citekey>
-    <bcf:citekey order="60">song2021scorebasedgenerativemodelingstochastic</bcf:citekey>
-    <bcf:citekey order="60">ross2011fundamentals</bcf:citekey>
-    <bcf:citekey order="61">ern_theory_2004</bcf:citekey>
-    <bcf:citekey order="61">nusken:2024:SteinTransportBayesian2024</bcf:citekey>
-    <bcf:citekey order="61">maurais:2024:SamplingUnitTime2024</bcf:citekey>
-    <bcf:citekey order="62">ern_theory_2004</bcf:citekey>
-    <bcf:citekey order="62">nusken:2024:SteinTransportBayesian2024</bcf:citekey>
-    <bcf:citekey order="62">maurais:2024:SamplingUnitTime2024</bcf:citekey>
-    <bcf:citekey order="63">gohberg1969introduction</bcf:citekey>
-    <bcf:citekey order="63">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="64">gohberg1969introduction</bcf:citekey>
-    <bcf:citekey order="64">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="65">gohberg1969introduction</bcf:citekey>
-    <bcf:citekey order="65">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="66">gohberg1969introduction</bcf:citekey>
-    <bcf:citekey order="66">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="67">gelman:1997:PoststratificationManyCategories1997</bcf:citekey>
-    <bcf:citekey order="68">giordano:2023:bayesij</bcf:citekey>
-    <bcf:citekey order="69">dinoia:2025:LikelihoodDistortionBayesian2025</bcf:citekey>
-    <bcf:citekey order="70">cabral:2025:RobustnessModelChecking2025</bcf:citekey>
-    <bcf:citekey order="71">vehtariPracticalBayesianModel2017</bcf:citekey>
-    <bcf:citekey order="72">kuhUsingLeaveoneoutCross2024</bcf:citekey>
-    <bcf:citekey order="73">shimodaira:2000:ImprovingPredictiveInference2000</bcf:citekey>
-    <bcf:citekey order="74">buhlmann:2020:InvarianceCausalityRobustness2020</bcf:citekey>
-    <bcf:citekey order="75">rojas-carulla::InvariantModelsCausal</bcf:citekey>
-    <bcf:citekey order="76">muandet:2020:KernelConditionalMoment2020</bcf:citekey>
-    <bcf:citekey order="77">diaconis:1986:ConsistencyBayesEstimates1986</bcf:citekey>
-    <bcf:citekey order="78">gustafson:1996:localposterior</bcf:citekey>
-    <bcf:citekey order="79">giordano:2018:covariances</bcf:citekey>
-    <bcf:citekey order="80">huggins:2023:bayesbag</bcf:citekey>
-    <bcf:citekey order="81">wang:2026:AccurateLargesampleUncertainty2026</bcf:citekey>
-    <bcf:citekey order="82">luo:2026:RobustStandardErrors2026</bcf:citekey>
-    <bcf:citekey order="83">ji:2025:ValidStandardErrors2025</bcf:citekey>
-    <bcf:citekey order="84">mises:1947:asymptotic</bcf:citekey>
-    <bcf:citekey order="85">giordano:2026:mrplew</bcf:citekey>
-    <bcf:citekey order="86">han:2025:EfficientScenarioAnalysis2025</bcf:citekey>
-    <bcf:citekey order="87">papamakarios:2021:normalizingflows</bcf:citekey>
-    <bcf:citekey order="88">kipnis:1986:CentralLimitTheorem1986</bcf:citekey>
-    <bcf:citekey order="89">bakry2014analysis</bcf:citekey>
-    <bcf:citekey order="90">ambrosio2021lectures</bcf:citekey>
-    <bcf:citekey order="91">song2021scorebasedgenerativemodelingstochastic</bcf:citekey>
-    <bcf:citekey order="92">ross2011fundamentals</bcf:citekey>
-    <bcf:citekey order="93">ern_theory_2004</bcf:citekey>
-    <bcf:citekey order="94">nusken:2024:SteinTransportBayesian2024</bcf:citekey>
-    <bcf:citekey order="95">maurais:2024:SamplingUnitTime2024</bcf:citekey>
-    <bcf:citekey order="96">gohberg1969introduction</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="anyt">
+  <bcf:sortingtemplate name="nyt">
     <bcf:sort order="1">
       <bcf:sortitem order="1">presort</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="2">
-      <bcf:sortitem order="1">labelalpha</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3" final="1">
+    <bcf:sort order="2" final="1">
       <bcf:sortitem order="1">sortkey</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="4">
+    <bcf:sort order="3">
       <bcf:sortitem order="1">sortname</bcf:sortitem>
       <bcf:sortitem order="2">author</bcf:sortitem>
       <bcf:sortitem order="3">editor</bcf:sortitem>
@@ -2525,27 +2362,18 @@
       <bcf:sortitem order="5">sorttitle</bcf:sortitem>
       <bcf:sortitem order="6">title</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="5">
+    <bcf:sort order="4">
       <bcf:sortitem order="1">sortyear</bcf:sortitem>
       <bcf:sortitem order="2">year</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="6">
+    <bcf:sort order="5">
       <bcf:sortitem order="1">sorttitle</bcf:sortitem>
       <bcf:sortitem order="2">title</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="7">
+    <bcf:sort order="6">
       <bcf:sortitem order="1">volume</bcf:sortitem>
       <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="anyt/global//global/global"
-                type="entry"
-                sortingtemplatename="anyt"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

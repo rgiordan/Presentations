@@ -426,6 +426,33 @@
       \range{pages}{49}
       \keyw{selfcite}
     \endentry
+    \entry{gelman:1997:PoststratificationManyCategories1997}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ba82e2f52cafc6076f0de4ae6be66db0}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{fullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{bibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authorbibnamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authornamehash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \strng{authorfullhash}{ba82e2f52cafc6076f0de4ae6be66db0}
+      \field{labelalpha}{Gel97}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Survey Methodology}
+      \field{title}{Poststratification into Many Categories Using Hierarchical Logistic Regression}
+      \field{volume}{23}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{pages}{127}
+      \range{pages}{1}
+    \endentry
     \entry{giordano:2026:mrplew}{misc}{}
       \name{author}{5}{}{%
         {{hash=5826925894a0d58142c30cfa901c7dac}{%
@@ -478,7 +505,7 @@
       \verb{url}
       \verb https://arxiv.org/abs/2606.04250
       \endverb
-      \keyw{preprint}
+      \keyw{selfcite,preprint}
     \endentry
     \entry{gohberg1969introduction}{article}{}
       \name{author}{2}{}{%
