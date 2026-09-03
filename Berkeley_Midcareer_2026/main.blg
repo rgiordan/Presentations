@@ -7,6 +7,8 @@ Warning--entry type for "wang:2026:AccurateLargesampleUncertainty2026" isn't sty
 --line 933 of file references.bib
 Warning--entry type for "luo:2026:RobustStandardErrors2026" isn't style-file defined
 --line 947 of file references.bib
+Warning--entry type for "han:2025:EfficientScenarioAnalysis2025" isn't style-file defined
+--line 1140 of file references.bib
 Warning--empty journal in buhlmann:2020:InvarianceCausalityRobustness2020
 Warning--empty year in buhlmann:2020:InvarianceCausalityRobustness2020
 Warning--empty year in buhlmann:2020:InvarianceCausalityRobustness2020
@@ -36,48 +38,51 @@ Warning--empty journal in rojas-carulla::InvariantModelsCausal
 Warning--empty year in rojas-carulla::InvariantModelsCausal
 Warning--empty year in rojas-carulla::InvariantModelsCausal
 Warning--empty journal in ross2011fundamentals
+Warning--empty journal in shimodaira:2000:ImprovingPredictiveInference2000
+Warning--empty year in shimodaira:2000:ImprovingPredictiveInference2000
+Warning--empty year in shimodaira:2000:ImprovingPredictiveInference2000
 Warning--empty journal in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
-You've used 25 entries,
+You've used 28 entries,
             2773 wiz_defined-function locations,
-            771 strings with 10743 characters,
-and the built_in function-call counts, 11849 in all, are:
-= -- 1082
-> -- 658
-< -- 18
-+ -- 223
-- -- 198
-* -- 985
-:= -- 1796
-add.period$ -- 102
-call.type$ -- 25
-change.case$ -- 137
-chr.to.int$ -- 25
-cite$ -- 82
-duplicate$ -- 539
-empty$ -- 930
-format.name$ -- 237
-if$ -- 2472
+            793 strings with 11570 characters,
+and the built_in function-call counts, 13275 in all, are:
+= -- 1210
+> -- 746
+< -- 19
++ -- 253
+- -- 225
+* -- 1113
+:= -- 2017
+add.period$ -- 114
+call.type$ -- 28
+change.case$ -- 155
+chr.to.int$ -- 28
+cite$ -- 91
+duplicate$ -- 596
+empty$ -- 1041
+format.name$ -- 267
+if$ -- 2763
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 24
-newline$ -- 159
-num.names$ -- 100
-pop$ -- 323
+missing$ -- 26
+newline$ -- 177
+num.names$ -- 112
+pop$ -- 362
 preamble$ -- 1
-purify$ -- 115
+purify$ -- 130
 quote$ -- 0
-skip$ -- 414
+skip$ -- 457
 stack$ -- 0
-substring$ -- 377
-swap$ -- 67
+substring$ -- 424
+swap$ -- 69
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 260
-warning$ -- 32
-while$ -- 102
+type$ -- 293
+warning$ -- 35
+while$ -- 115
 width$ -- 0
-write$ -- 358
-(There were 34 warnings)
+write$ -- 400
+(There were 38 warnings)

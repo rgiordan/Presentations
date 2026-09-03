@@ -1120,3 +1120,132 @@ institution = {Google}
   year={1969},
   publisher={American Mathematical Society}
 }
+
+@article{shimodaira:2000:ImprovingPredictiveInference2000,
+  title = {Improving Predictive Inference under Covariate Shift by Weighting the Log-Likelihood Function},
+  author = {Shimodaira, Hidetoshi},
+  date = {2000-10},
+  journaltitle = {Journal of Statistical Planning and Inference},
+  shortjournal = {Journal of Statistical Planning and Inference},
+  volume = {90},
+  number = {2},
+  pages = {227--244},
+  issn = {03783758},
+  doi = {10.1016/S0378-3758(00)00115-4},
+  url = {https://linkinghub.elsevier.com/retrieve/pii/S0378375800001154},
+  urldate = {2026-09-03},
+  langid = {english}
+}
+
+@online{han:2025:EfficientScenarioAnalysis2025,
+  title = {Efficient Scenario Analysis in Real-Time {{Bayesian}} Election Forecasting via Sequential Meta-Posterior Sampling},
+  author = {Han, Geonhee and Gelman, Andrew and Vehtari, Aki},
+  date = {2025-10-21},
+  year={2025},
+  url = {https://arxiv.org/abs/2510.19133v1},
+  urldate = {2026-05-27},
+  langid = {english},
+  organization = {arXiv.org}
+}
+
+
+
+@inproceedings{maurais_sampling_2024,
+	address = {Vienna, Austria},
+	series = {{ICML}'24},
+	title = {Sampling in unit time with kernel {Fisher}-{Rao} flow},
+	volume = {235},
+	abstract = {We introduce a new mean-field ODE and corresponding interacting particle systems (IPS) for sampling from an unnormalized target density. The IPS are gradient-free, available in closed form, and only require the ability to sample from a reference density and compute the (unnormalized) target-to-reference density ratio. The mean-field ODE is obtained by solving a Poisson equation for a velocity field that transports samples along the geometric mixture of the two densities, π1-t0 πt1, which is the path of a particular Fisher-Rao gradient flow. We employ a RKHS ansatz for the velocity field, which makes the Poisson equation tractable and enables discretization of the resulting mean-field ODE over finite samples. The mean-field ODE can be additionally be derived from a discrete-time perspective as the limit of successive linearizations of the Monge-Ampère equations within a framework known as sampledriven optimal transport. We introduce a stochastic variant of our approach and demonstrate empirically that our IPS can produce high-quality samples from varied target distributions, outperforming comparable gradient-free particle systems and competitive with gradient-based alternatives.},
+	urldate = {2025-11-20},
+	booktitle = {Proceedings of the 41st {International} {Conference} on {Machine} {Learning}},
+	publisher = {JMLR.org},
+	author = {Maurais, Aimee and Marzouk, Youssef},
+	month = jul,
+	year = {2024},
+	pages = {35138--35162},
+}
+
+@misc{gelman_bayesian_2020,
+	title = {Bayesian {Workflow}},
+	url = {http://arxiv.org/abs/2011.01808},
+	doi = {10.48550/arXiv.2011.01808},
+	abstract = {The Bayesian approach to data analysis provides a powerful way to handle uncertainty in all observations, model parameters, and model structure using probability theory. Probabilistic programming languages make it easier to specify and fit Bayesian models, but this still leaves us with many options regarding constructing, evaluating, and using these models, along with many remaining challenges in computation. Using Bayesian inference to solve real-world problems requires not only statistical skills, subject matter knowledge, and programming, but also awareness of the decisions made in the process of data analysis. All of these aspects can be understood as part of a tangled workflow of applied Bayesian statistics. Beyond inference, the workflow also includes iterative model building, model checking, validation and troubleshooting of computational problems, model understanding, and model comparison. We review all these aspects of workflow in the context of several examples, keeping in mind that in practice we will be fitting many models for any given problem, even if only a subset of them will ultimately be relevant for our conclusions.},
+	urldate = {2025-11-18},
+	publisher = {arXiv},
+	author = {Gelman, Andrew and Vehtari, Aki and Simpson, Daniel and Margossian, Charles C. and Carpenter, Bob and Yao, Yuling and Kennedy, Lauren and Gabry, Jonah and Bürkner, Paul-Christian and Modrák, Martin},
+	month = nov,
+	year = {2020},
+	note = {arXiv:2011.01808 [stat]},
+	keywords = {Statistics - Methodology},
+}
+
+
+@article{del_moral_sequential_2006,
+	title = {Sequential {Monte} {Carlo} samplers},
+	volume = {68},
+	issn = {1467-9868},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9868.2006.00553.x},
+	doi = {10.1111/j.1467-9868.2006.00553.x},
+	abstract = {Summary. We propose a methodology to sample sequentially from a sequence of probability distributions that are defined on a common space, each distribution being known up to a normalizing constant. These probability distributions are approximated by a cloud of weighted random samples which are propagated over time by using sequential Monte Carlo methods. This methodology allows us to derive simple algorithms to make parallel Markov chain Monte Carlo algorithms interact to perform global optimization and sequential Bayesian estimation and to compute ratios of normalizing constants. We illustrate these algorithms for various integration tasks arising in the context of Bayesian inference.},
+	language = {en},
+	number = {3},
+	urldate = {2025-11-22},
+	journal = {Journal of the Royal Statistical Society: Series B (Statistical Methodology)},
+	author = {Del Moral, Pierre and Doucet, Arnaud and Jasra, Ajay},
+	year = {2006},
+	note = {\_eprint: https://rss.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-9868.2006.00553.x},
+	keywords = {Importance sampling, Markov chain Monte Carlo methods, Ratio of normalizing constants, Resampling, Sequential Monte Carlo methods, Simulated annealing},
+	pages = {411--436},
+}
+
+
+@inproceedings{rezende:2015:normalizingflows,
+  title={Variational inference with normalizing flows},
+  author={Rezende, D. and Mohamed, S.},
+  booktitle={International conference on machine learning},
+  pages={1530--1538},
+  year={2015},
+  organization={PMLR}
+}
+
+
+@article{papamakarios:2021:normalizingflows,
+  title={Normalizing flows for probabilistic modeling and inference},
+  author={Papamakarios, G. and Nalisnick, E. and Rezende, D. and Mohamed, S. and Lakshminarayanan, B.},
+  journal={Journal of Machine Learning Research},
+  volume={22},
+  number={57},
+  pages={1--64},
+  year={2021}
+}
+
+
+@misc{ho_denoising_2020,
+	title = {Denoising {Diffusion} {Probabilistic} {Models}},
+	url = {http://arxiv.org/abs/2006.11239},
+	doi = {10.48550/arXiv.2006.11239},
+	abstract = {We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics. Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and our models naturally admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding. On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality similar to ProgressiveGAN. Our implementation is available at https://github.com/hojonathanho/diffusion},
+	urldate = {2025-11-22},
+	publisher = {arXiv},
+	author = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+	month = dec,
+	year = {2020},
+	note = {arXiv:2006.11239 [cs]},
+	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+}
+
+
+
+@misc{song_score-based_2021,
+	title = {Score-{Based} {Generative} {Modeling} through {Stochastic} {Differential} {Equations}},
+	url = {http://arxiv.org/abs/2011.13456},
+	doi = {10.48550/arXiv.2011.13456},
+	abstract = {Creating noise from data is easy; creating data from noise is generative modeling. We present a stochastic differential equation (SDE) that smoothly transforms a complex data distribution to a known prior distribution by slowly injecting noise, and a corresponding reverse-time SDE that transforms the prior distribution back into the data distribution by slowly removing the noise. Crucially, the reverse-time SDE depends only on the time-dependent gradient field ({\textbackslash}aka, score) of the perturbed data distribution. By leveraging advances in score-based generative modeling, we can accurately estimate these scores with neural networks, and use numerical SDE solvers to generate samples. We show that this framework encapsulates previous approaches in score-based generative modeling and diffusion probabilistic modeling, allowing for new sampling procedures and new modeling capabilities. In particular, we introduce a predictor-corrector framework to correct errors in the evolution of the discretized reverse-time SDE. We also derive an equivalent neural ODE that samples from the same distribution as the SDE, but additionally enables exact likelihood computation, and improved sampling efficiency. In addition, we provide a new way to solve inverse problems with score-based models, as demonstrated with experiments on class-conditional generation, image inpainting, and colorization. Combined with multiple architectural improvements, we achieve record-breaking performance for unconditional image generation on CIFAR-10 with an Inception score of 9.89 and FID of 2.20, a competitive likelihood of 2.99 bits/dim, and demonstrate high fidelity generation of 1024 x 1024 images for the first time from a score-based generative model.},
+	urldate = {2025-11-22},
+	publisher = {arXiv},
+	author = {Song, Yang and Sohl-Dickstein, Jascha and Kingma, Diederik P. and Kumar, Abhishek and Ermon, Stefano and Poole, Ben},
+	month = feb,
+	year = {2021},
+	note = {arXiv:2011.13456 [cs]},
+	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+}
