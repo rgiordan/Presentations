@@ -4,9 +4,10 @@
 \input{_headers}
 % \input{_knitr_header}
 
-% \usepackage[authoryear]{natbib}
 \usepackage[style=alphabetic,backend=biber]{biblatex}
-\addbibresource{references.bib} % Replace with your .bib file name
+\addbibresource{references.bib}
+% Bold any reference with Giordano as an author (tagged keywords={selfcite} in references.bib)
+\AtEveryBibitem{\ifkeyword{selfcite}{\bfseries}{}}
 
 \title{Next-generation Bayesian local robustness}
 
@@ -38,14 +39,7 @@
 
 \footnotesize
 
-% \bibliographystyle{plainnat}
-% Hide the references header
-% https://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography/370784
-% \begingroup
-% \renewcommand{\section}[2]{}%
-% \bibliography{references}
-\printbibliography
-% \endgroup
+\printbibliography[heading=none]
 
 \end{frame}
 

@@ -383,6 +383,7 @@
       \field{journaltitle}{arXiv preprint arXiv:2305.06466}
       \field{title}{The {Bayesian} Infinitesimal Jackknife for Variance}
       \field{year}{2026}
+      \keyw{selfcite}
     \endentry
     \entry{giordano:2018:covariances}{article}{}
       \name{author}{3}{}{%
@@ -423,6 +424,7 @@
       \field{year}{2018}
       \field{pages}{1981\bibrangedash 2029}
       \range{pages}{49}
+      \keyw{selfcite}
     \endentry
     \entry{giordano:2026:mrplew}{misc}{}
       \name{author}{5}{}{%
