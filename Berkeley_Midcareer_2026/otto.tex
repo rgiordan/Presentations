@@ -29,7 +29,7 @@ $$
 $$
 %
 where the derivative is estimated --- with noise --- from MCMC draws
-\citep{gustafson:1996:localposterior,giordano:2018:covariances,cabral:2025:RobustnessModelChecking2025,dinoia:2025:LikelihoodDistortionBayesian2025,giordano:2026:mrplew}.
+\parencite{gustafson:1996:localposterior,giordano:2018:covariances,cabral:2025:RobustnessModelChecking2025,dinoia:2025:LikelihoodDistortionBayesian2025,giordano:2026:mrplew}.
 
 \pause
 This has some shortcomings:
@@ -39,7 +39,7 @@ This has some shortcomings:
 \item Linear extrapolation can lead to impossible values (e.g.~negative variances)
 \item Complex quantities like posterior quantiles are hard to linearize
 \item Bayesians like to work with draws, not analytic expectations
-  \citep{han:2025:EfficientScenarioAnalysis2025}
+  \parencite{han:2025:EfficientScenarioAnalysis2025}
 \end{itemize}
 %
 
@@ -48,7 +48,7 @@ This has some shortcomings:
 from $\p$ to $\p^\epsilon$.\\[1em]
 
 There's a large literature on learning flows between distant
-distributions.  \citep{papamakarios:2021:normalizingflows}\\
+distributions.  \parencite{papamakarios:2021:normalizingflows}\\
 Our problem is easier:\\
 %
 \begin{itemize}
@@ -91,7 +91,7 @@ with draws $\theta \sim \p(\theta)$.
 \only<3>{
   Plug-in estimates for the covariance are equivalent to 
   producing the perturbation by weighting
-  (Appendix B \citet{giordano:2018:covariances})
+  (Appendix B \textcite{giordano:2018:covariances})
 }
 
 
@@ -152,7 +152,7 @@ $$
 \pause
 %
 \theorem{\textbf{Theorem (
-  \citet{johnsen:2000:SpectralPropertiesWittenLaplacians2000,kipnis:1986:CentralLimitTheorem1986,bakry2014analysis}, Schwengber 2026): } \\
+  \textcite{johnsen:2000:SpectralPropertiesWittenLaplacians2000,kipnis:1986:CentralLimitTheorem1986,bakry2014analysis}, Schwengber 2026): } \\
 Assume that $\expect{\p(\theta)}{\h(\theta)^2} < \infty$ and
 $\p(\theta)$ has sub-Gaussian tails.
 % %
@@ -177,7 +177,7 @@ satisfes Equation $(\star)$.
 }
 
 Note that $\lotto$ is well-known: it's the drift operator, generator of a Langevin
-diffusion, and a Stein operator.\citep{ambrosio2021lectures,song2021scorebasedgenerativemodelingstochastic,ross2011fundamentals}
+diffusion, and a Stein operator.\parencite{ambrosio2021lectures,song2021scorebasedgenerativemodelingstochastic,ross2011fundamentals}
 
 
 \end{frame}
@@ -315,7 +315,7 @@ $$
   & \textrm{(Identity connecting $\h$ and $\v$)}
 \end{aligned}
 $$
-Basis expansion approach (the Galerkin method \citep{ern_theory_2004}):
+Basis expansion approach (the Galerkin method \parencite{ern_theory_2004}):
 %
 \begin{itemize}
 \item Specify a family of real-valued target functions $\phi_n(\theta)$ for $n \in [N]$
@@ -459,7 +459,7 @@ can be estimated with MCMC.\\[1em]
 
 \begin{frame}[t]{An elegant flow}
 
-\theorem{ \textbf{Theorem (\citet{gohberg1969introduction,bakry2014analysis},Schwengber 2026): }  When $\p(\theta)$ is Gaussian,
+\theorem{ \textbf{Theorem (\textcite{gohberg1969introduction,bakry2014analysis},Schwengber 2026): }  When $\p(\theta)$ is Gaussian,
 taking $N = M$ and $\phi_n(\theta) = \b_n(\theta)$ to be the Hermite
 polynomials give the best finite-rank approximation to $\lotto^{-1}$ in
 its operator norm. }

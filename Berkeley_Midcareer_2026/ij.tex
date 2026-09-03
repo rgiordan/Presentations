@@ -35,7 +35,7 @@ We will form \emph{local approximations} computable only from
 \begin{itemize}
 \item Frequentist variablity of \emph{any} model checking diagnostic is interesting
 \item Frequentist variablity remains meaningful under model misspecification
-  \citep{huggins:2023:bayesbag,wang:2026:AccurateLargesampleUncertainty2026,
+  \parencite{huggins:2023:bayesbag,wang:2026:AccurateLargesampleUncertainty2026,
          luo:2026:RobustStandardErrors2026,ji:2025:ValidStandardErrors2025}
 \end{itemize}
 %
@@ -278,7 +278,7 @@ Note that $\expect{\post}{\phi(\theta)} = \T(\psurhat, \nsur)$
 \pause
 
 To derive frequentist variance estimates, we study the \textit{von Mises expansion}
-\citep{mises:1947:asymptotic}.\\
+\parencite{mises:1947:asymptotic}.\\
 Let $\tilde\p^\t  = \t \psurhat + (1 - \t) \psur$.   Then 
 form the series expansion in $\t$:
 %
@@ -342,7 +342,7 @@ form the series expansion in $\t$:
 %
 
 \theorem{
-    \textbf{Theorem 3 \citep{giordano:2023:bayesij} (sketch): }\\
+    \textbf{Theorem 3 \parencite{giordano:2023:bayesij} (sketch): }\\
     Under Bernstein-von Mises-like conditions,
     % \textbf{(Consistency of the von--Mises expansion in finite dimensions) }
     %
@@ -354,7 +354,7 @@ form the series expansion in $\t$:
 }
 
 \theorem{
-    \textbf{Corollary \citep{mises:1947:asymptotic}:} Let 
+    \textbf{Corollary \parencite{mises:1947:asymptotic}:} Let 
          $\meansur (\infl_i - \overline{\infl})^2 \overset{p}{\rightarrow} V$.
 By the CLT applied to $\infl_i$,
 \begin{align*}
@@ -377,11 +377,11 @@ $$
            \ell(\y_i \vert \x_i, \theta)\right) \right).
 $$
 % 
-(See, e.g., \citet{giordano:2026:mrplew} Theorem 4.1).
+(See, e.g., \textcite{giordano:2026:mrplew} Theorem 4.1).
 
 \pause
 \textbf{Note:} The von-Mises expansion is stronger than necessary for 
-consistency \citep{giordano:2023:bayesij}.  But it can be used to
+consistency \parencite{giordano:2023:bayesij}.  But it can be used to
 prove \emph{lower bounds}
 on $\err(\ttil)$ and so \emph{inconsistency} when no BVM
 theorem holds.
@@ -404,7 +404,7 @@ theorem holds.
 \end{minipage}
 
 \only<1>{The IJ does great for the MrP point estimate.  See also
-\citet{luo:2026:RobustStandardErrors2026,ji:2025:ValidStandardErrors2025}.}
+\textcite{luo:2026:RobustStandardErrors2026,ji:2025:ValidStandardErrors2025}.}
 
 \only<2>{The IJ does pretty well for the MrP posterior variance.}
 

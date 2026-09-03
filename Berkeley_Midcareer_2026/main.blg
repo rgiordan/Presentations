@@ -1,88 +1,29 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
-The style file: plainnat.bst
-Database file #1: references.bib
-Warning--entry type for "wang:2026:AccurateLargesampleUncertainty2026" isn't style-file defined
---line 933 of file references.bib
-Warning--entry type for "luo:2026:RobustStandardErrors2026" isn't style-file defined
---line 947 of file references.bib
-Warning--entry type for "han:2025:EfficientScenarioAnalysis2025" isn't style-file defined
---line 1140 of file references.bib
-Warning--empty journal in buhlmann:2020:InvarianceCausalityRobustness2020
-Warning--empty year in buhlmann:2020:InvarianceCausalityRobustness2020
-Warning--empty year in buhlmann:2020:InvarianceCausalityRobustness2020
-Warning--empty journal in cabral:2025:RobustnessModelChecking2025
-Warning--empty year in cabral:2025:RobustnessModelChecking2025
-Warning--empty year in cabral:2025:RobustnessModelChecking2025
-Warning--empty journal in dinoia:2025:LikelihoodDistortionBayesian2025
-Warning--empty year in dinoia:2025:LikelihoodDistortionBayesian2025
-Warning--empty year in dinoia:2025:LikelihoodDistortionBayesian2025
-Warning--empty journal in diaconis:1986:ConsistencyBayesEstimates1986
-Warning--empty year in diaconis:1986:ConsistencyBayesEstimates1986
-Warning--empty year in diaconis:1986:ConsistencyBayesEstimates1986
-Warning--can't use both author and editor fields in ern_theory_2004
-Warning--empty journal in ji:2025:ValidStandardErrors2025
-Warning--empty journal in johnsen:2000:SpectralPropertiesWittenLaplacians2000
-Warning--empty year in johnsen:2000:SpectralPropertiesWittenLaplacians2000
-Warning--empty year in johnsen:2000:SpectralPropertiesWittenLaplacians2000
-Warning--empty journal in kipnis:1986:CentralLimitTheorem1986
-Warning--empty year in kipnis:1986:CentralLimitTheorem1986
-Warning--empty year in kipnis:1986:CentralLimitTheorem1986
-Warning--empty journal in kuhUsingLeaveoneoutCross2024
-Warning--empty year in kuhUsingLeaveoneoutCross2024
-Warning--empty year in kuhUsingLeaveoneoutCross2024
-Warning--empty year in muandet:2020:KernelConditionalMoment2020
-Warning--empty year in muandet:2020:KernelConditionalMoment2020
-Warning--empty journal in rojas-carulla::InvariantModelsCausal
-Warning--empty year in rojas-carulla::InvariantModelsCausal
-Warning--empty year in rojas-carulla::InvariantModelsCausal
-Warning--empty journal in ross2011fundamentals
-Warning--empty journal in shimodaira:2000:ImprovingPredictiveInference2000
-Warning--empty year in shimodaira:2000:ImprovingPredictiveInference2000
-Warning--empty year in shimodaira:2000:ImprovingPredictiveInference2000
-Warning--empty journal in vehtariPracticalBayesianModel2017
-Warning--empty year in vehtariPracticalBayesianModel2017
-Warning--empty year in vehtariPracticalBayesianModel2017
-You've used 28 entries,
-            2773 wiz_defined-function locations,
-            793 strings with 11570 characters,
-and the built_in function-call counts, 13275 in all, are:
-= -- 1210
-> -- 746
-< -- 19
-+ -- 253
-- -- 225
-* -- 1113
-:= -- 2017
-add.period$ -- 114
-call.type$ -- 28
-change.case$ -- 155
-chr.to.int$ -- 28
-cite$ -- 91
-duplicate$ -- 596
-empty$ -- 1041
-format.name$ -- 267
-if$ -- 2763
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 26
-newline$ -- 177
-num.names$ -- 112
-pop$ -- 362
-preamble$ -- 1
-purify$ -- 130
-quote$ -- 0
-skip$ -- 457
-stack$ -- 0
-substring$ -- 424
-swap$ -- 69
-text.length$ -- 6
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 293
-warning$ -- 35
-while$ -- 115
-width$ -- 0
-write$ -- 400
-(There were 38 warnings)
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[35] biber:340> INFO - === Wed Sep  2, 2026, 18:43:01
+[43] Biber.pm:418> INFO - Reading 'main.bcf'
+[82] Biber.pm:972> INFO - Found 28 citekeys in bib section 0
+[88] Biber.pm:4383> INFO - Processing section 0
+[94] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[96] bibtex.pm:1713> INFO - LaTeX decoding ...
+[144] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[260] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[260] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[260] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[260] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[275] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[284] bbl.pm:757> INFO - Output to main.bbl
+[284] Biber.pm:130> WARN - Duplicate entry key: 'wang_maleki:2018:approximate' in file 'references.bib', skipping ...
+[284] Biber.pm:130> WARN - ISBN '978-1-4419-1918-2 978-1-4757-4355-5' in entry 'ern_theory_2004' is invalid - run biber with '--validate_datamodel' for details.
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 305, warning: 110 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 335, warning: 16 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 359, warning: 42 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 430, warning: 13 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 544, warning: 21 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 605, warning: 58 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 619, warning: 18 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 733, warning: 30 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 742, warning: 13 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 751, warning: 13 characters of junk seen at toplevel
+[284] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_zwpY/33e59b5ca9ec342068223d604c3f8d55_1309950.utf8, line 762, warning: 13 characters of junk seen at toplevel
+[284] Biber.pm:132> INFO - WARNINGS: 13
