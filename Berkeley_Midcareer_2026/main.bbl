@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,12 @@
 Luigi Ambrosio, Elia Bru{\'e}, Daniele Semola, et~al.
 \newblock \emph{Lectures on optimal transport}, volume 130.
 \newblock Springer Cham, 2021.
+
+\bibitem[Bakry et~al.(2014)Bakry, Gentil, and Ledoux]{bakry2014analysis}
+Dominique Bakry, Ivan Gentil, and Michel Ledoux.
+\newblock \emph{Analysis and geometry of Markov diffusion operators}, volume
+  103.
+\newblock Springer, 2014.
 
 \bibitem[Bühlmann()]{buhlmann:2020:InvarianceCausalityRobustness2020}
 Peter Bühlmann.
@@ -43,6 +49,15 @@ P.~Diaconis and D.~Freedman.
 \newblock On the consistency of {{Bayes}} estimates.
 \newblock pages 1--26.
 
+\bibitem[Ern and Guermond(2004)]{ern_theory_2004}
+Alexandre Ern and Jean-Luc Guermond.
+\newblock \emph{Theory and {Practice} of {Finite} {Elements}}, volume 159 of
+  \emph{Applied {Mathematical} {Sciences}}.
+\newblock Springer, New York, NY, 2004.
+\newblock ISBN 978-1-4419-1918-2 978-1-4757-4355-5.
+\newblock \doi{10.1007/978-1-4757-4355-5}.
+\newblock URL \url{http://link.springer.com/10.1007/978-1-4757-4355-5}.
+
 \bibitem[Giordano and Broderick(2026)]{giordano:2023:bayesij}
 R.~Giordano and T.~Broderick.
 \newblock The {Bayesian} infinitesimal jackknife for variance.
@@ -61,6 +76,12 @@ R.~Giordano, A.~Cima, J.~Murray, E.~Hartman, and A.~Feller.
 \newblock Locally equivalent weights for multilevel regression and
   poststratification, 2026.
 \newblock URL \url{https://arxiv.org/abs/2606.04250}.
+
+\bibitem[Gohberg and Kre{\u\i}n(1969)]{gohberg1969introduction}
+Israel Gohberg and M~Kre{\u\i}n.
+\newblock Introduction to the theory of linear nonselfadjoint operators in
+  hilbert space.
+\newblock \emph{Translations of mathematical monographs}, 1969.
 
 \bibitem[Gustafson(1996)]{gustafson:1996:localposterior}
 P.~Gustafson.
@@ -82,6 +103,24 @@ Feng Ji, JoonHo Lee, and Sophia Rabe-Hesketh.
 \newblock ISSN 1076-9986.
 \newblock \doi{10.3102/10769986251379738}.
 \newblock URL \url{https://doi.org/10.3102/10769986251379738}.
+
+\bibitem[Johnsen()]{johnsen:2000:SpectralPropertiesWittenLaplacians2000}
+Jon Johnsen.
+\newblock On the spectral properties of {{Witten-Laplacians}}, their range
+  projections and {{Brascamp-Lieb}}'s inequality.
+\newblock 36\penalty0 (3):\penalty0 288--324.
+\newblock ISSN 0378-620X, 1420-8989.
+\newblock \doi{10.1007/BF01213926}.
+\newblock URL \url{http://arxiv.org/abs/1703.10011}.
+
+\bibitem[Kipnis and Varadhan()]{kipnis:1986:CentralLimitTheorem1986}
+C.~Kipnis and S.~R.~S. Varadhan.
+\newblock Central limit theorem for additive functionals of reversible
+  {{Markov}} processes and applications to simple exclusions.
+\newblock 104\penalty0 (1):\penalty0 1--19.
+\newblock ISSN 0010-3616, 1432-0916.
+\newblock \doi{10.1007/BF01210789}.
+\newblock URL \url{http://link.springer.com/10.1007/BF01210789}.
 
 \bibitem[Kuh et~al.()Kuh, Kennedy, Chen, and
   Gelman]{kuhUsingLeaveoneoutCross2024}
@@ -107,18 +146,6 @@ Krikamol Muandet, Wittawat Jitkrittum, and Jonas Kübler.
 \newblock In \emph{Proceedings of the 36th {{Conference}} on {{Uncertainty}} in
   {{Artificial Intelligence}} ({{UAI}})}, pages 41--50. PMLR.
 \newblock URL \url{https://proceedings.mlr.press/v124/muandet20a.html}.
-
-\bibitem[Otto(2001)]{otto_geometry_2001}
-Felix Otto.
-\newblock The {Geometry} of {Dissipative} {Evolution} {Equations}: {The}
-  {Porous} {Medium} {Equation}.
-\newblock \emph{Communications in Partial Differential Equations}, 26\penalty0
-  (1-2):\penalty0 101--174, January 2001.
-\newblock ISSN 0360-5302.
-\newblock \doi{10.1081/PDE-100002243}.
-\newblock URL \url{https://doi.org/10.1081/PDE-100002243}.
-\newblock Publisher: Taylor \& Francis \_eprint:
-  https://doi.org/10.1081/PDE-100002243.
 
 \bibitem[Rojas-Carulla et~al.()Rojas-Carulla, Scholkopf, Turner, and
   Peters]{rojas-carulla::InvariantModelsCausal}

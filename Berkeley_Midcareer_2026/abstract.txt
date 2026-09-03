@@ -1,0 +1,16 @@
+Next-Generation Bayesian Local Robustness
+
+This talk comprises a trio of related current research projects in Bayesian
+local robustness, with a focus on frequentist diagnostics of Bayesian
+hierarchical regression modeling computed using Markov Chain Monte Carlo (MCMC).
+First, I present a novel Bayesian regression diagnostic based on checking for
+invariance under covariate shift.  This diagnostic, and others like it, motivate
+the development of fast, easy-to-use estimates of the frequentist variability of
+MCMC procedures.  To this end, I use a von Mises expansion for Bayesian
+posterior functionals to prove the asymptotic consistency of the infinitesimal
+jackknife (IJ) variance estimator for smooth functions of posterior means.
+Finally, in response to some theoretical and practical shortcomings of the IJ
+estimator, I propose a flow-based approach to Bayesian local robustness drawing
+on techniques from partial differential equations and optimal transport. In all
+cases, I emphasize practical methods that are theoretically grounded but fast
+and easy to compute from a single run of MCMC.

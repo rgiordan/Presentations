@@ -6,7 +6,7 @@
   \vfill
   \begin{block}{}
     \centering
-    \Huge Local robustness with flows
+    \Huge Bayesian robustness with local flows
   \end{block}
   \vfill
 \end{frame}
@@ -31,6 +31,7 @@ $$
 where the derivative is estimated --- with noise --- from MCMC draws
 \citep{gustafson:1996:localposterior,giordano:2018:covariances,cabral:2025:RobustnessModelChecking2025,dinoia:2025:LikelihoodDistortionBayesian2025,giordano:2026:mrplew}.
 
+\pause
 This has some shortcomings:
 %
 \begin{itemize}
@@ -41,6 +42,7 @@ This has some shortcomings:
 \end{itemize}
 %
 
+\pause
 \textbf{Idea:} Instead of linearizing expectations, learn a flow
 from $\p$ to $\p^\epsilon$.\\[1em]
 
@@ -61,11 +63,6 @@ Our problem is easier:\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\def\feps{f^\epsilon}
-\def\verteq{\rotatebox{90}{$\,=$}}
-\def\v{v}
-\def\lotto{\mathcal{L}_{\p}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,8 +112,8 @@ with draws $\theta \sim \p(\theta)$.
 Consider $\peps(\theta) \propto \p(\theta) \exp(\epsilon \h(\theta))$.
 
 We want a flow $\theta \mapsto \feps(\theta)$ such that,
-for small $\epsilon$, $\feps(\theta) \sim \peps(\theta)$
-and $\f^0(\theta) = \theta$.\\[1em]
+for small $\epsilon$, $\feps(\theta) \sim \peps(\theta)$ and
+$\Phi^0(\theta) = \theta \sim \p(\theta)$.\\[1em]
 
 \pause
 
@@ -153,8 +150,10 @@ $$
 %
 \pause
 %
-\theorem{\textbf{Theorem (Schewengber 2026): } \\
-% Assume that
+\theorem{\textbf{Theorem (
+  \citet{johnsen:2000:SpectralPropertiesWittenLaplacians2000,kipnis:1986:CentralLimitTheorem1986,bakry2014analysis}, Schwengber 2026): } \\
+Assume that $\expect{\p(\theta)}{\h(\theta)^2} < \infty$ and
+$\p(\theta)$ has sub-Gaussian tails.
 % %
 % \begin{itemize}
 % \item $\log \p(\theta) \in C^2(\mathcal{R}^d)$
@@ -163,7 +162,7 @@ $$
 % \item $\expect{\p(\theta)}{\h(\theta)^2} < \infty$
 % \end{itemize}
 %
-Under mild regularity conditions there exists a solution $\v$ to the differential
+Then there exists a solution $\v$ to the differential
 equation
 $$
 \lotto(\v) :={}
@@ -172,13 +171,12 @@ $$
 $$
 such that  $\norm{\nabla \v}_{L^2(\p)} <  \infty$ and
 the flow $\theta_\epsilon = \theta + \epsilon \nabla \v(\theta)$
-satsifes Equation $(\star)$.
+satisfes Equation $(\star)$.
 %
 }
 
-Note that $\lotto$ is well-known: it's the drift operator, generator of Langevin
-diffusion, and the trace of the Stein
-operator.\citep{ambrosio2021lectures,song2021scorebasedgenerativemodelingstochastic,ross2011fundamentals}
+Note that $\lotto$ is well-known: it's the drift operator, generator of a Langevin
+diffusion, and a Stein operator.\citep{ambrosio2021lectures,song2021scorebasedgenerativemodelingstochastic,ross2011fundamentals}
 
 
 \end{frame}
@@ -303,9 +301,6 @@ operator.\citep{ambrosio2021lectures,song2021scorebasedgenerativemodelingstochas
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\b{b}
-\def\B{B}
-
 \begin{frame}[t]{How can we find $\v(\theta)$ in practice?}
 
 Solving PDEs is hard.  How can we easily find $\v(\theta)$ in practice?
@@ -319,10 +314,10 @@ $$
   & \textrm{(Identity connecting $\h$ and $\v$)}
 \end{aligned}
 $$
-Basis expansion approach (Otto's calculus \citep{otto_geometry_2001}):
+Basis expansion approach (the Galerkin method \citep{ern_theory_2004}):
 %
 \begin{itemize}
-\item Specify a family of real-valued test functions $\phi_n(\theta)$ for $n \in [N]$
+\item Specify a family of real-valued target functions $\phi_n(\theta)$ for $n \in [N]$
 \item Specify a family of real-valued basis functions $\b_m(\theta)$ for $m \in [M]$
 \end{itemize}
 %
@@ -357,6 +352,7 @@ $$
 }_{
   \shortstack{$N \times M$ matrix}
 }
+=
 \begin{bmatrix}
   \vdots \\
   \beta_m \\
@@ -425,11 +421,6 @@ $$
 
 This gives $N$ linear equations in $M$ unknowns, and the matrices
 can be estimated with MCMC.\\[1em]
-\pause
-\theorem{ \textbf{Theorem (Schewengber 2026): }  When $\p(\theta)$ is Gaussian,
-taking $N = M$ and $\phi_n(\theta) = \b_n(\theta)$ to be the Hermite
-polynomials give the best finite-rank approximation to $\v(\theta)$ in
-$L_2(\p)$. }
 
 
 % Known as ``Otto's calculus'' in differential equations.   Formally
@@ -464,12 +455,15 @@ $L_2(\p)$. }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\b{b}
-\def\B{B}
 
 \begin{frame}[t]{An elegant flow}
 
-Suppose we believe that $\post$ is approximately Gaussian.
+\theorem{ \textbf{Theorem (\citet{gohberg1969introduction,bakry2014analysis},Schwengber 2026): }  When $\p(\theta)$ is Gaussian,
+taking $N = M$ and $\phi_n(\theta) = \b_n(\theta)$ to be the Hermite
+polynomials give the best finite-rank approximation to $\lotto^{-1}$ in
+its operator norm. }
+
+% Suppose we believe that $\post$ is approximately Gaussian.
 
 Using the $1^{st}$ order Hermite polynomials
 $\phi_n(\theta) = \b_n(\theta) = \theta_m$,
@@ -534,6 +528,6 @@ and compute any posterior quantities from these samples.
 \end{minipage}
 
 \onslide<3>{
-  Understanding the gap between IJ and Otto is ongoing work!
+  Carefully understanding the gap between IJ and the flow is ongoing work!
 }
 \end{frame}

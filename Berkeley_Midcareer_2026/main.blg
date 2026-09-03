@@ -19,7 +19,14 @@ Warning--empty year in dinoia:2025:LikelihoodDistortionBayesian2025
 Warning--empty journal in diaconis:1986:ConsistencyBayesEstimates1986
 Warning--empty year in diaconis:1986:ConsistencyBayesEstimates1986
 Warning--empty year in diaconis:1986:ConsistencyBayesEstimates1986
+Warning--can't use both author and editor fields in ern_theory_2004
 Warning--empty journal in ji:2025:ValidStandardErrors2025
+Warning--empty journal in johnsen:2000:SpectralPropertiesWittenLaplacians2000
+Warning--empty year in johnsen:2000:SpectralPropertiesWittenLaplacians2000
+Warning--empty year in johnsen:2000:SpectralPropertiesWittenLaplacians2000
+Warning--empty journal in kipnis:1986:CentralLimitTheorem1986
+Warning--empty year in kipnis:1986:CentralLimitTheorem1986
+Warning--empty year in kipnis:1986:CentralLimitTheorem1986
 Warning--empty journal in kuhUsingLeaveoneoutCross2024
 Warning--empty year in kuhUsingLeaveoneoutCross2024
 Warning--empty year in kuhUsingLeaveoneoutCross2024
@@ -32,45 +39,45 @@ Warning--empty journal in ross2011fundamentals
 Warning--empty journal in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
 Warning--empty year in vehtariPracticalBayesianModel2017
-You've used 21 entries,
+You've used 25 entries,
             2773 wiz_defined-function locations,
-            742 strings with 9808 characters,
-and the built_in function-call counts, 10178 in all, are:
-= -- 936
-> -- 565
-< -- 13
-+ -- 192
-- -- 171
-* -- 843
-:= -- 1535
-add.period$ -- 85
-call.type$ -- 21
-change.case$ -- 118
-chr.to.int$ -- 21
-cite$ -- 67
-duplicate$ -- 458
-empty$ -- 797
-format.name$ -- 200
-if$ -- 2130
+            771 strings with 10743 characters,
+and the built_in function-call counts, 11849 in all, are:
+= -- 1082
+> -- 658
+< -- 18
++ -- 223
+- -- 198
+* -- 985
+:= -- 1796
+add.period$ -- 102
+call.type$ -- 25
+change.case$ -- 137
+chr.to.int$ -- 25
+cite$ -- 82
+duplicate$ -- 539
+empty$ -- 930
+format.name$ -- 237
+if$ -- 2472
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 18
-newline$ -- 134
-num.names$ -- 84
-pop$ -- 274
+missing$ -- 24
+newline$ -- 159
+num.names$ -- 100
+pop$ -- 323
 preamble$ -- 1
-purify$ -- 98
+purify$ -- 115
 quote$ -- 0
-skip$ -- 357
+skip$ -- 414
 stack$ -- 0
-substring$ -- 353
-swap$ -- 62
-text.length$ -- 4
+substring$ -- 377
+swap$ -- 67
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 226
-warning$ -- 25
-while$ -- 88
+type$ -- 260
+warning$ -- 32
+while$ -- 102
 width$ -- 0
-write$ -- 300
-(There were 27 warnings)
+write$ -- 358
+(There were 34 warnings)
