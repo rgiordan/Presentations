@@ -292,14 +292,16 @@ $$
 \textbf{Idea:} Starting from a solution at the initial guess $\rho_0$, form a 
 Taylor series expansion
 $$
-\xhat(\rho) \approx \xhat + \frac{\partial \xhat(\rho)}{\partial \rho} (\rho - \rho_0)
+\xhat(\rho) \approx \xhat +
+   \frac{\partial \xhat(\rho)}{\partial \rho}_{
+   (\rho - \rho_0)
 $$
 
 $$
 \frac{\partial}{\partial \rho} \left(
    \H \B(\rho) \H^\trans + \R
    \right)^{-1} =
-- 
+-
 \underbrace{\left(
    \H \B \H^\trans + \R
    \right)^{-1}}_{\textrm{done}}
@@ -309,8 +311,6 @@ $$
    \right)^{-1}}_{\textrm{done}}
 $$
 
-\textbf{The Taylor series can be easily estimated from
-stuff we already computed.}
 
 \end{frame}
 

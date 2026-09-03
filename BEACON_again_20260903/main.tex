@@ -269,17 +269,30 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Prior sensitivity}
+\begin{frame}{Prior sensitivity}
 
-The prior $\B$ depends on quantities like $\rho$, an
-assumed lengthscale.  So we might write
-$$
-\begin{aligned}
-\xhat(\rho) ={}& \m + (\H \B(\rho))^\trans \left(
-   \H \B(\rho) \H^\trans + \R
-   \right)^{-1} \left(\y - \H \m \right) 
-\end{aligned}
-$$
+Let $\rho$ denote an assumed lengthscale for the prior.\\[1em]
+
+The estimated $\xhat$ depends on the prior $\B$, and
+the prior $\B$ depends on $\rho$.\\[1em]
+
+Write $\xhat(\rho)$ to denote this dependence.\\[1em]
+
+
+\pause
+
+We pick some $\rho_0$ and estimate $\xhat(\rho_0)$.
+What if we had picked a different $\rho$?
+
+
+% So we might write
+% $$
+% \begin{aligned}
+% \xhat(\rho) ={}& \m + (\H \B(\rho))^\trans \left(
+%    \H \B(\rho) \H^\trans + \R
+%    \right)^{-1} \left(\y - \H \m \right) 
+% \end{aligned}
+% $$
 \pause
 \textbf{Problem:}
 %
@@ -293,25 +306,33 @@ $$
 \textbf{Idea:} Starting from a solution at the initial guess $\rho_0$, form a 
 Taylor series expansion
 $$
-\xhat(\rho) \approx \xhat + \frac{\partial \xhat(\rho)}{\partial \rho} (\rho - \rho_0)
+\xhat(\rho) \approx \xhat + 
+   \underbrace{
+      \frac{\partial \xhat(\rho)}{\partial \rho} 
+   }_{
+      \mathclap{
+      \substack{
+         \textrm{\textbf{The derivative is given easily}} \\
+         \textrm{\textbf{from stuff we already computed.}}
+      }}
+   }
+   (\rho - \rho_0)
 $$
 
-$$
-\frac{\partial}{\partial \rho} \left(
-   \H \B(\rho) \H^\trans + \R
-   \right)^{-1} =
-- 
-\underbrace{\left(
-   \H \B \H^\trans + \R
-   \right)^{-1}}_{\textrm{done}}
-\H \frac{\partial \B(\rho)}{\partial \rho}  \H^\trans
-\underbrace{\left(
-   \H \B \H^\trans + \R
-   \right)^{-1}}_{\textrm{done}}
-$$
+% $$
+% \frac{\partial}{\partial \rho} \left(
+%    \H \B(\rho) \H^\trans + \R
+%    \right)^{-1} =
+% - 
+% \underbrace{\left(
+%    \H \B \H^\trans + \R
+%    \right)^{-1}}_{\textrm{done}}
+% \H \frac{\partial \B(\rho)}{\partial \rho}  \H^\trans
+% \underbrace{\left(
+%    \H \B \H^\trans + \R
+%    \right)^{-1}}_{\textrm{done}}
+% $$
 
-\textbf{The Taylor series can be easily estimated from
-stuff we already computed.}
 
 \end{frame}
 
@@ -334,7 +355,7 @@ stuff we already computed.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Data influence}
+\begin{frame}{Data influence}
 
 \textbf{Problem: }In inversion problems, the prior is informative, and the model
 does smoothing. How is your data being used?  What patterns are possible to
@@ -343,7 +364,7 @@ identify?
 \textbf{Example question: }Can I detect emissions from road pixels?
 
 \pause
-\textbf{Idea: }Let $\r$ be an $N$-vector encoding road pixels.
+Let $\r$ be an $N$-vector encoding road pixels.
 $$
 \r_n = 
 \begin{cases}
@@ -351,35 +372,60 @@ $$
    0 &\textrm{otherwise}\\
 \end{cases}
 $$
-Suppose the flux had been not $\x$, but $\x' = \x + \epsilon \r$. That is, $\x'$
-is a little more ``roady'' than $\x$.
 
-Suppose I used $\y'  = \y + \epsilon \H \r$ to estimate $\xhat'$.  How much more 
-``roady'' is $\xhat'$ than $\xhat$?
+Suppose we learn $\xhat'$ with ``roadier'' observations $\y' = \y + \epsilon \H \r$.\\
+Does $\xhat'$ pick up this change in road emissions?\\[1em]
 
+\pause
+The inferred road pixel change is
 $$
-\begin{aligned}
-\frac{\textrm{Inferred road pixel change}}{\textrm{Actual road pixel change}} ={}&
-\frac{\r^\trans (\xhat' - \xhat)}{\r^\trans (\x' - \x)}
-={}
-\frac{\r^\trans (\xhat' - \xhat)}{\epsilon \r^\trans \r}
-\\={}&
-\frac{
-\r^\trans
-\overbrace{
-(\H \B)^\trans \left(
-      \H \B \H^\trans + \R
-    \right)^{-1}
-}^{\textrm{done}}
-\H \r
-}{\r^\trans \r}
-\end{aligned}
+\r^\trans (\xhat' - \xhat) = 
+\epsilon \r^\trans
+\underbrace{
+   (\H \B)^\trans \left(
+         \H \B \H^\trans + \R
+      \right)^{-1}
+   \H 
+}_{
+   \mathclap{
+   \substack{
+      \textrm{\textbf{The gain matrix is given easily}} \\
+      \textrm{\textbf{from stuff we already computed.}}
+   }}
+}
+\r
 $$
 
-This is just the ``gain matrix'' queried for a particular output (here, ``roadiness'').
+Like the covariance, we don't care about the whole gain matrix.  We
+only really care about linear summaries, and these are easy to compute.
 
-\textbf{The data influence can be easily estimated from
-stuff we already computed.}
+
+
+% Suppose the flux had been not $\x$, but $\x' = \x + \epsilon \r$. That is, $\x'$
+% is a little more ``roady'' than $\x$.
+
+% Suppose I used $\y'  = \y + \epsilon \H \r$ to estimate $\xhat'$.  How much more 
+% ``roady'' is $\xhat'$ than $\xhat$?
+
+% $$
+% \begin{aligned}
+% \frac{\textrm{Inferred road pixel change}}{\textrm{Actual road pixel change}} ={}&
+% \frac{\r^\trans (\xhat' - \xhat)}{\r^\trans (\x' - \x)}
+% ={}
+% \frac{\r^\trans (\xhat' - \xhat)}{\epsilon \r^\trans \r}
+% \\={}&
+% \frac{
+% \r^\trans
+% \overbrace{
+% (\H \B)^\trans \left(
+%       \H \B \H^\trans + \R
+%     \right)^{-1}
+% }^{\textrm{done}}
+% \H \r
+% }{\r^\trans \r}
+% \end{aligned}
+% $$
+
 
 
 \end{frame}
@@ -408,8 +454,20 @@ stuff we already computed.}
 
 \begin{frame}[c]{Future work}
 
-   \centering
-Lots to do!
+%
+By re-using quantities already computed for $\xhat$, we can compute:
+\begin{itemize}
+\item Covariances of linear functions
+\item Derivatives with respect to model parameters (e.g.~prior length scale)
+\item The gain matrix in particular directions
+\end{itemize}
+%
+\pause
+... and other things, including Monte Carlo draws from low-dimensional posterior
+quantities.\\[1em]
+\pause
+Straightforward mathematics, with lots of possibilities!
+
 
 \end{frame}
 

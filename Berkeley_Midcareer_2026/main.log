@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  3 SEP 2026 13:19
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  3 SEP 2026 13:28
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2324,10 +2324,6 @@ Package luatex.def Info: figure/flowplot4-1.png  used on input line 104.
  [51
 
 <./figure/flowplot4-1.png>]
-Overfull \hbox (14.89037pt too wide) detected at line 183
-[][]
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 183.
@@ -2340,10 +2336,6 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [52
 
 ]
-Overfull \hbox (14.89037pt too wide) detected at line 183
-[][]
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 183.
@@ -2356,10 +2348,6 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [53
 
 ]
-Overfull \hbox (14.89037pt too wide) detected at line 183
-[][]
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 183.
@@ -2372,10 +2360,6 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [54
 
 ]
-Overfull \hbox (14.89037pt too wide) detected at line 183
-[][]
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 183.
@@ -2388,10 +2372,6 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [55
 
 ]
-Overfull \hbox (14.89037pt too wide) detected at line 183
-[][]
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 183.
@@ -2404,10 +2384,6 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 [56
 
 ]
-Overfull \hbox (14.89037pt too wide) detected at line 183
-[][]
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 183.
@@ -2426,49 +2402,49 @@ Overfull \vbox (12.16974pt too high) detected at line 183
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 319.
+(mdframed)              on input line 320.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 319.
+ mdframed uses option nobreak mdframed on input line 320.
  [60
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 319.
+(mdframed)              on input line 320.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 319.
+ mdframed uses option nobreak mdframed on input line 320.
 <figure/flowplot5-1.png, id=563, 397.485pt x 222.3507pt>
 File: figure/flowplot5-1.png Graphic file (type png)
 <use figure/flowplot5-1.png>
-Package luatex.def Info: figure/flowplot5-1.png  used on input line 319.
+Package luatex.def Info: figure/flowplot5-1.png  used on input line 320.
 (luatex.def)             Requested size: 180.6922pt x 101.224pt.
  [61
 
 <./figure/flowplot5-1.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 319.
+(mdframed)              on input line 320.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 319.
+ mdframed uses option nobreak mdframed on input line 320.
 <figure/flowplot6-1.png, id=574, 397.485pt x 222.3507pt>
 File: figure/flowplot6-1.png Graphic file (type png)
 <use figure/flowplot6-1.png>
-Package luatex.def Info: figure/flowplot6-1.png  used on input line 319.
+Package luatex.def Info: figure/flowplot6-1.png  used on input line 320.
 (luatex.def)             Requested size: 180.6922pt x 101.224pt.
  [62
 
 <./figure/flowplot6-1.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 319.
+(mdframed)              on input line 320.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 319.
+ mdframed uses option nobreak mdframed on input line 320.
 File: figure/flowplot6-1.png Graphic file (type png)
 <use figure/flowplot6-1.png>
-Package luatex.def Info: figure/flowplot6-1.png  used on input line 319.
+Package luatex.def Info: figure/flowplot6-1.png  used on input line 320.
 (luatex.def)             Requested size: 180.6922pt x 101.224pt.
 
-Overfull \vbox (10.90916pt too high) detected at line 319
+Overfull \vbox (10.90916pt too high) detected at line 320
  []
 
 [63
@@ -2477,7 +2453,7 @@ Overfull \vbox (10.90916pt too high) detected at line 319
 <figure/ottographmrp-1.png, id=589, 397.485pt x 222.3507pt>
 File: figure/ottographmrp-1.png Graphic file (type png)
 <use figure/ottographmrp-1.png>
-Package luatex.def Info: figure/ottographmrp-1.png  used on input line 339.
+Package luatex.def Info: figure/ottographmrp-1.png  used on input line 340.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [64
 
@@ -2485,7 +2461,7 @@ Package luatex.def Info: figure/ottographmrp-1.png  used on input line 339.
 <figure/ottographmrpvar-1.png, id=596, 397.485pt x 222.3507pt>
 File: figure/ottographmrpvar-1.png Graphic file (type png)
 <use figure/ottographmrpvar-1.png>
-Package luatex.def Info: figure/ottographmrpvar-1.png  used on input line 339.
+Package luatex.def Info: figure/ottographmrpvar-1.png  used on input line 340.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [65
 
@@ -2493,7 +2469,7 @@ Package luatex.def Info: figure/ottographmrpvar-1.png  used on input line 339.
 <figure/ottographdiag-1.png, id=602, 397.485pt x 222.3507pt>
 File: figure/ottographdiag-1.png Graphic file (type png)
 <use figure/ottographdiag-1.png>
-Package luatex.def Info: figure/ottographdiag-1.png  used on input line 339.
+Package luatex.def Info: figure/ottographdiag-1.png  used on input line 340.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
 
 [66
@@ -2540,16 +2516,16 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53796 strings out of 477805
+ 53798 strings out of 477805
  125031,2373549 words of node,token memory allocated
  10582 words of node memory still in use:
    40 hlist, 8 vlist, 5 rule, 51 disc, 4 local_par, 10 math, 202 glue, 19 kern, 
 68 penalty, 20 sub_mlist, 767 glyph, 320 attribute, 125 glue_spec, 320 attribute
 _list, 4 write, 5 pdf_start_link, 5 pdf_end_link, 3 pdf_dest, 9 pdf_action, 48 p
 df_colorstack nodes
-   avail lists: 1:20,2:2713,3:786,4:486,5:311,6:138,7:9881,8:151,9:891,10:40,11:
+   avail lists: 1:20,2:2737,3:786,4:486,5:305,6:138,7:9881,8:151,9:891,10:40,11:
 553,12:13
- 71717 multiletter control sequences out of 65536+600000
+ 71719 multiletter control sequences out of 65536+600000
  97 fonts using 20996447 bytes
  128i,22n,134p,1852b,1751s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
@@ -2573,7 +2549,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on main.pdf (74 pages, 3632025 bytes).
+Output written on main.pdf (74 pages, 3631958 bytes).
 
 PDF statistics: 791 PDF objects out of 1000 (max. 8388607)
  638 compressed objects within 7 object streams

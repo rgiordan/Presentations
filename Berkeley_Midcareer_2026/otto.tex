@@ -28,7 +28,7 @@ $$
        {\partial \epsilon}{\epsilon = 0}(\epsilon - 0),
 $$
 %
-where the derivative is estimated from MCMC draws
+where the derivative is estimated with MCMC
 \parencite{gustafson:1996:localposterior,giordano:2018:covariances,cabral:2025:RobustnessModelChecking2025,dinoia:2025:LikelihoodDistortionBayesian2025,giordano:2026:mrplew}.
 
 \pause
@@ -114,7 +114,7 @@ Consider $\peps(\theta) \propto \p(\theta) \exp(\epsilon \h(\theta))$.
 
 We want a flow $\theta \mapsto \feps(\theta)$ such that,
 for small $\epsilon$, $\feps(\theta) \sim \peps(\theta)$ and
-$\Phi^0(\theta) = \theta \sim \p(\theta)$.\\[1em]
+$\feps[0](\theta) = \theta \sim \p(\theta)$.\\[1em]
 
 \pause
 
@@ -132,7 +132,7 @@ $$
 \fracat{\partial}{\partial \epsilon}{\epsilon = 0}  
   \expect{\peps(\theta)}{\phi(\theta)} ={}&
 \fracat{\partial}{\partial \epsilon}{\epsilon = 0}
-  \expect{\p(\theta)}{\phi(\theta + \epsilon \nabla \v(\theta))} \Rightarrow
+  \expect{\p(\theta)}{\phi(\feps(\theta))} \Rightarrow
   & \textrm{(smoothness)} \pause 
 \\
 % \\
@@ -152,7 +152,7 @@ $$
 \pause
 %
 \theorem{\textbf{Theorem:}
-  \parencite{kipnis:1986:CentralLimitTheorem1986,bakry2014analysis}, Schwengber 2026: \\
+  \parencite{kipnis:1986:CentralLimitTheorem1986,bakry2014analysis}, \lucas{}: \\
 Assume that $\expect{\p(\theta)}{\h(\theta)^2} < \infty$ and
 $\p(\theta)$ has sub-Gaussian tails.
 % %
@@ -264,7 +264,8 @@ can be estimated with MCMC.\\[1em]
 
 \begin{frame}[t]{An elegant flow}
 
-\theorem{ \textbf{Theorem \parencite{gohberg1969introduction,bakry2014analysis}, Schwengber 2026: }  When $\p(\theta)$ is Gaussian,
+\theorem{ \textbf{Theorem \parencite{gohberg1969introduction,bakry2014analysis}, \lucas{}: }  
+When $\p(\theta)$ is Gaussian,
 taking $N = M$ and $\phi_n(\theta) = \b_n(\theta)$ to be the Hermite
 polynomials give the best finite-rank approximation to $\lotto^{-1}$ in
 its operator norm. }

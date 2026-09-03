@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber main"] 1788466137 "main.bcf" "main.bbl" "main" 1788466142
-  "main.bcf" 1788466142 106689 dcb1d21fa15f947bca860b866eab08ad "lualatex"
+["biber main"] 1788466137 "main.bcf" "main.bbl" "main" 1788469106
+  "main.bcf" 1788469105 106689 dcb1d21fa15f947bca860b866eab08ad "lualatex"
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1788466140 "main.tex" "main.pdf" "main" 1788466142
+["lualatex"] 1788469103 "main.tex" "main.pdf" "main" 1788469106
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -406,12 +406,12 @@
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1770051154 4555344 26646b766afe068346172ffba00619ad ""
   "_defs.tex" 1788465355 1217 1d6252f6e7fbbe55dc77ddfc3455ebb8 ""
   "_headers.tex" 1788465355 3614 a282fc7b0bde4d84f19549ed4d750b9e ""
-  "main.aux" 1788466142 2448 986662bbbbba02c35ef17e975688b10f "lualatex"
+  "main.aux" 1788469105 2448 e445b3a2c6adb0e359929508c3cbeaa7 "lualatex"
   "main.bbl" 1788466137 466 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.nav" 1788466142 1130 43a80a2a956dd8c2585f1f7d1d3f6bb3 "lualatex"
-  "main.out" 1788466141 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1788466142 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
-  "main.tex" 1788466131 9741 613798ba468a629bd27343fe9445f3bd ""
+  "main.nav" 1788469105 1130 f3dffa63d3cd9cabeb28f7771d53ec0f "lualatex"
+  "main.out" 1788469105 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1788469105 2346 5de0f744871ed2da5be4bd19bbdf404b "lualatex"
+  "main.tex" 1788469101 11048 c9a55b00a40f7874279c840eba5a3ffe ""
   "static_figures/influence.png" 1788465355 348728 f4cb35d3015776847098a329921f24d8 ""
   "static_figures/prior.png" 1788465355 252660 2bfffeb66557f9402c76c72f9be775bc ""
   "static_figures/variance.png" 1788465355 323044 c7a35f8a19876e587c3fb171a42f2858 ""
