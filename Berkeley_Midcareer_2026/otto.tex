@@ -154,7 +154,7 @@ $$
 \theorem{\textbf{Theorem:}
   \parencite{kipnis:1986:CentralLimitTheorem1986,bakry2014analysis}, \lucas{}: \\
 Assume that $\expect{\p(\theta)}{\h(\theta)^2} < \infty$ and
-$\p(\theta)$ has sub-Gaussian tails.
+$\p(\theta)$ satisfies a Poincare inequality.
 % %
 % \begin{itemize}
 % \item $\log \p(\theta) \in C^2(\mathcal{R}^d)$
@@ -225,6 +225,7 @@ $$
 }_{
   \shortstack{$N \times 1$ matrix}
 }
+=
 %
 %
 \underbrace{
@@ -239,7 +240,6 @@ $$
 }_{
   \shortstack{$N \times M$ matrix}
 }
-=
 \begin{bmatrix}
   \vdots \\
   \beta_m \\
@@ -251,6 +251,8 @@ $$
 This gives $N$ linear equations in $M$ unknowns, and the matrices
 can be estimated with MCMC.\\[1em]
 
+\textbf{Note:} Apparently Galerkin methods with stochastic grids
+are not widely studied.
 
 \end{frame}
 

@@ -23,7 +23,15 @@ $$
 \begin{aligned}
 \muhatmrp = \meantar \yhat_j =
     \underbrace{
-        \expect{\post}{\meantar \m(\theta^\trans \x_j)}.
+        \expect{\post}{
+            \overbrace{
+                {
+                \meantar \m(\theta^\trans \x_j)
+                }
+            }^{
+                \textrm{Just a function }\phi(\theta)
+            }
+        }.
     }_{\textrm{
         \shortstack{Want to check specification \\ without re--running MCMC}
     }}
@@ -90,7 +98,7 @@ $$
 $$
 
 \onslide<2->{
-Old idea in causal inference,
+Standard idea in causal,
 kernel learning,
 transfer learning 
 \parencite{shimodaira:2000:ImprovingPredictiveInference2000,
@@ -106,11 +114,11 @@ This is just a local Bayesian diagnostics version:\\[1em]
 Let $\p_\data(\x,\y)$ denote a generic joint density of $\x, \y$.\\
 %
 \begin{enumerate}
-\item Write our estimand as a functional $\mu(\p_\data)$
+\item Write our estimand as a functional $\muhat(\p_\data)$
 \item Define a covariate density perturbation $\w(\x)$
 \item Define $\p_\data^\epsilon(\x, \y) = 
     \left(\p_\data(\x) + \epsilon \w(\x) \right) \p_\data(\y | \x)$
-\item Compute the derivative $\Delta(\data) = \partial \mu(\p_\data^\epsilon) / \partial \epsilon$ and check whether $\approx 0$
+\item Compute the derivative $\Delta(\data) = \partial \muhat(\p_\data^\epsilon) / \partial \epsilon$ and check whether $\approx 0$
 \end{enumerate}
 }
 %
