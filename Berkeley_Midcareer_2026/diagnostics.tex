@@ -51,14 +51,15 @@ Some existing local approaches:
     \item Doesn't take the target into account
 \end{itemize}
 %
-\item Use out-of-sample checking \parencite{vehtariPracticalBayesianModel2017,kuhUsingLeaveoneoutCross2024}
+\item Use out-of-sample checking \parencite{vehtariPracticalBayesianModel2017,gelman:2020:bayesianworkflow,kuhUsingLeaveoneoutCross2024}
 \begin{itemize}
-    \item The task is not to predict on a new IID survey datapoint
+    \item The task is not to predict on a new IID survey datapoint, but to predict in a new population
 \end{itemize}
 \end{itemize}
 
 \pause
-The model is definitely misspecified, we want to check whether it's \emph{importantly} misspecified.
+The model is definitely misspecified, we want to check whether it's \emph{importantly} misspecified.\\[1em]
+We will check the ``stability'' component in the PCS framework \parencite{yu:2024:veridical}.
 
 \end{frame}
 
@@ -109,13 +110,13 @@ transfer learning
 
 
 \onslide<3->{
-This is just a local Bayesian diagnostics version:\\[1em]
+\textbf{We provide a local Bayesian diagnostic version of this idea:}\\[1em]
 
-Let $\p_\data(\x,\y)$ denote a generic joint density of $\x, \y$.\\
 %
 \begin{enumerate}
+\item Let $\p_\data(\x,\y)$ denote a generic joint density of $\x, \y$.
 \item Write our estimand as a functional $\muhat(\p_\data)$
-\item Define a covariate density perturbation $\w(\x)$
+\item Define an additive covariate density perturbation $\w(\x)$
 \item Define $\p_\data^\epsilon(\x, \y) = 
     \left(\p_\data(\x) + \epsilon \w(\x) \right) \p_\data(\y | \x)$
 \item Compute the derivative $\Delta(\data) = \partial \muhat(\p_\data^\epsilon) / \partial \epsilon$ and check whether $\approx 0$
@@ -145,7 +146,7 @@ Consider logistic regression with two regressors, $\x_1$ and $\x_2$. \\[1em]
 }
 
 \only<2->{
-Taking $\w(x) = \ind{\x_1 > 1}$, we upweight positive examples.\\[1em]
+Taking $\w(x) = \ind{\x_1 > 1}$, we tend to upweight more positive examples.\\[1em]
 }
 
 \only<3->{
@@ -181,7 +182,7 @@ Consider a family of distributions
 $
 \peps(\theta) \propto \p(\theta) \exp(\epsilon \h(\theta))
 $
-and a function $\phi(\theta)$.  By interchange of integration and differentiation,
+and a function $\phi(\theta)$.  \\By interchange of integration and differentiation,
 $$
 \fracat{\partial\expect{\peps(\theta)}{\phi(\theta)}}
        {\partial \epsilon}{\epsilon = 0} =
@@ -251,8 +252,8 @@ Simulation data: Logistic regression with five active regressors, each
 with covariate shift.
 $$
 \begin{aligned}
-    \textrm{Model 0} \textrm{ (correct)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
-    \textrm{Model 1} \textrm{ (misspecified)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
+    \textrm{Correctly specified model}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
+    \textrm{Misspecified model}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
 \end{aligned}
 $$
 }
@@ -273,7 +274,7 @@ is a bootstrap sample.\\[1em]
 \item Use the draws to estimate $\Delta(\data^*_b)$
 \end{enumerate}
 %
-\item Compare $\Delta$ with distribution of $\Delta(\data^*_b)$.
+\item Compare $\Delta(\data)$ with distribution of $\Delta(\data^*_b)$.
 %
 \end{itemize}
 %
@@ -290,8 +291,8 @@ Simulation data: Logistic regression with five active regressors, each
 with covariate shift.
 $$
 \begin{aligned}
-    \textrm{Model 0} \textrm{ (correct)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
-    \textrm{Model 1} \textrm{ (misspecified)}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
+    \textrm{Correctly specified model}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
+    \textrm{Misspecified model}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
 \end{aligned}
 $$
 }

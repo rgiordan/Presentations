@@ -64,11 +64,19 @@ intro_plots$plot0 <-
 
 
 intro_plots$plot1 <-
-  append_result_panel(intro_plots$plot0, "mrp_change_true", "boot", hist=FALSE)
-intro_plots$plot2 <-
-  append_result_panel(intro_plots$plot1, "mrp_change_ij", "ij", hist=TRUE)
-intro_plots$plot3 <-
-  append_result_panel(intro_plots$plot2, "mrp_change_otto", "otto", hist=TRUE)
+  intro_plots$plot0 %>%
+  append_result_panel("mrp_change_true", "boot", hist=TRUE)
+
+tmp_plt <- intro_plots$plot0
+tmp_plt <- append_result_panel(tmp_plt, "mrp_change_true", "boot", hist=FALSE)
+tmp_plt <- append_result_panel(tmp_plt, "mrp_change_ij", "ij", hist=TRUE)
+intro_plots$plot2 <- tmp_plt
+
+tmp_plt <- intro_plots$plot0
+tmp_plt <- append_result_panel(tmp_plt, "mrp_change_true", "boot", hist=FALSE)
+tmp_plt <- append_result_panel(tmp_plt, "mrp_change_ij", "ij", hist=FALSE)
+tmp_plt <- append_result_panel(tmp_plt, "mrp_change_otto", "otto", hist=TRUE)
+intro_plots$plot3 <- tmp_plt
 
 
 

@@ -426,6 +426,74 @@
       \range{pages}{49}
       \keyw{selfcite}
     \endentry
+    \entry{gelman:2020:bayesianworkflow}{article}{}
+      \name{author}{10}{}{%
+        {{hash=ba82e2f52cafc6076f0de4ae6be66db0}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1419b7b8934078dd6f6ca4305bffbefe}{%
+           family={Vehtari},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4664a2f265156bfdfb792abf71d5eb6b}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=69a29e864be20a69fb0fcc5a6288021f}{%
+           family={Margossian},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fb62923439b93fa6e3173a27f24f0621}{%
+           family={Carpenter},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=34c1df36e9f676fe341ec67a5a1a511c}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=621cbd03979857ca155d71ce114a4937}{%
+           family={Kennedy},
+           familyi={K\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=af739e7c17dbb860d54ef004cade7239}{%
+           family={Gabry},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=65cb4c3de749564d12dd3d64d7ccc943}{%
+           family={Bürkner},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c206151ab690841727afddd7375ea557}{%
+           family={Modrák},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a428ac65ac4ae3fdbf2c9d0835d9c6f3}
+      \strng{fullhash}{8c4290dae98b07b473f6cb98f39ea7f9}
+      \strng{bibnamehash}{a428ac65ac4ae3fdbf2c9d0835d9c6f3}
+      \strng{authorbibnamehash}{a428ac65ac4ae3fdbf2c9d0835d9c6f3}
+      \strng{authornamehash}{a428ac65ac4ae3fdbf2c9d0835d9c6f3}
+      \strng{authorfullhash}{8c4290dae98b07b473f6cb98f39ea7f9}
+      \field{labelalpha}{Gel+20}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2011.01808}
+      \field{title}{Bayesian workflow}
+      \field{year}{2020}
+    \endentry
     \entry{gelman:1997:PoststratificationManyCategories1997}{article}{}
       \name{author}{1}{}{%
         {{hash=ba82e2f52cafc6076f0de4ae6be66db0}{%
@@ -1357,6 +1425,36 @@
       \verb http://arxiv.org/abs/2606.00293
       \endverb
       \keyw{Computer Science - Machine Learning,Statistics - Machine Learning,Statistics - Methodology}
+    \endentry
+    \entry{yu:2024:veridical}{book}{}
+      \name{author}{2}{}{%
+        {{hash=157b76b236652cb9356cda33d2182911}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ba348739931c3b5183225177018d5cbd}{%
+           family={Barter},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{042a665358379a7656dbf112c657e6c4}
+      \strng{fullhash}{042a665358379a7656dbf112c657e6c4}
+      \strng{bibnamehash}{042a665358379a7656dbf112c657e6c4}
+      \strng{authorbibnamehash}{042a665358379a7656dbf112c657e6c4}
+      \strng{authornamehash}{042a665358379a7656dbf112c657e6c4}
+      \strng{authorfullhash}{042a665358379a7656dbf112c657e6c4}
+      \field{labelalpha}{YB24}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Veridical Data Science: {The} Practice of Responsible Data Analysis and Decision Making}
+      \field{year}{2024}
     \endentry
   \enddatalist
 \endrefsection
