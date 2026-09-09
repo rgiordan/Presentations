@@ -42,6 +42,12 @@ $$
 Some existing local approaches:
 %
 \begin{itemize}
+%
+\item Use out-of-sample checking \parencite{vehtariPracticalBayesianModel2017,gelman:2020:bayesianworkflow,kuhUsingLeaveoneoutCross2024}
+\begin{itemize}
+    \item The task is not to predict on a new IID survey datapoint, but to predict in a new population
+\end{itemize}
+%
 \item Specify an alternative model, maybe test with Bayes factor
 \parencite{dinoia:2025:LikelihoodDistortionBayesian2025,cabral:2025:RobustnessModelChecking2025}
 %
@@ -51,10 +57,6 @@ Some existing local approaches:
     \item Doesn't take the target into account
 \end{itemize}
 %
-\item Use out-of-sample checking \parencite{vehtariPracticalBayesianModel2017,gelman:2020:bayesianworkflow,kuhUsingLeaveoneoutCross2024}
-\begin{itemize}
-    \item The task is not to predict on a new IID survey datapoint, but to predict in a new population
-\end{itemize}
 \end{itemize}
 
 \pause
@@ -229,6 +231,19 @@ specified.
 
 
 
+\def\simulationmodel{
+Simulation data: Logistic regression with five active regressors, each
+with covariate shift.
+$$
+\begin{aligned}
+    \textrm{Correctly specified model:}\quad \texttt{\y} \sim{}& \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
+    \textrm{Misspecified model:}\quad \texttt{\y} \sim{}& \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
+    \textrm{Diagnostic uses }\quad\w(\x) ={}& \ind{\texttt{X2} > 0.878}
+\end{aligned}
+$$
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -248,14 +263,7 @@ zero, even under correct specification.
 \end{minipage}
 \end{center}
 
-Simulation data: Logistic regression with five active regressors, each
-with covariate shift.
-$$
-\begin{aligned}
-    \textrm{Correctly specified model}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
-    \textrm{Misspecified model}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
-\end{aligned}
-$$
+\simulationmodel{}
 }
 
 \only<3>{
@@ -287,14 +295,7 @@ is a bootstrap sample.\\[1em]
 \end{minipage}
 \end{center}
 
-Simulation data: Logistic regression with five active regressors, each
-with covariate shift.
-$$
-\begin{aligned}
-    \textrm{Correctly specified model}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X1 + X2 + X3 + X4 + X5})\\
-    \textrm{Misspecified model}:{}&  \texttt{\y} \sim \textrm{Logistic}(\texttt{1 + X3 + X4 + X5})\\
-\end{aligned}
-$$
+\simulationmodel{}
 }
 
 
