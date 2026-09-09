@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  9 SEP 2026 12:22
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  9 SEP 2026 14:52
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2001,35 +2001,35 @@ Overfull \vbox (5.84865pt too high) detected at line 118
 <static_figures/alice.jpg, id=94, 131.74219pt x 131.74219pt>
 File: static_figures/alice.jpg Graphic file (type jpg)
 <use static_figures/alice.jpg>
-Package luatex.def Info: static_figures/alice.jpg  used on input line 158.
+Package luatex.def Info: static_figures/alice.jpg  used on input line 161.
 (luatex.def)             Requested size: 41.48291pt x 41.48216pt.
 <static_figures/erin_hartman.jpg, id=95, 131.74219pt x 131.74219pt>
 File: static_figures/erin_hartman.jpg Graphic file (type jpg)
 <use static_figures/erin_hartman.jpg>
-Package luatex.def Info: static_figures/erin_hartman.jpg  used on input line 15
-8.
+Package luatex.def Info: static_figures/erin_hartman.jpg  used on input line 16
+1.
 (luatex.def)             Requested size: 41.48291pt x 41.48216pt.
 <static_figures/jared_murray.png, id=96, 130.086pt x 130.086pt>
 File: static_figures/jared_murray.png Graphic file (type png)
 <use static_figures/jared_murray.png>
-Package luatex.def Info: static_figures/jared_murray.png  used on input line 15
-8.
+Package luatex.def Info: static_figures/jared_murray.png  used on input line 16
+1.
 (luatex.def)             Requested size: 41.48148pt x 41.48216pt.
 <static_figures/avi_feller.jpg, id=97, 131.74219pt x 131.74219pt>
 File: static_figures/avi_feller.jpg Graphic file (type jpg)
 <use static_figures/avi_feller.jpg>
-Package luatex.def Info: static_figures/avi_feller.jpg  used on input line 158.
+Package luatex.def Info: static_figures/avi_feller.jpg  used on input line 161.
 
 (luatex.def)             Requested size: 41.48291pt x 41.48216pt.
 <static_figures/tamara.jpg, id=98, 1180.41pt x 1100.11pt>
 File: static_figures/tamara.jpg Graphic file (type jpg)
 <use static_figures/tamara.jpg>
-Package luatex.def Info: static_figures/tamara.jpg  used on input line 158.
+Package luatex.def Info: static_figures/tamara.jpg  used on input line 161.
 (luatex.def)             Requested size: 44.50662pt x 41.48216pt.
 <static_figures/lucas.jpg, id=99, 131.74219pt x 131.74219pt>
 File: static_figures/lucas.jpg Graphic file (type jpg)
 <use static_figures/lucas.jpg>
-Package luatex.def Info: static_figures/lucas.jpg  used on input line 158.
+Package luatex.def Info: static_figures/lucas.jpg  used on input line 161.
 (luatex.def)             Requested size: 41.48291pt x 41.48216pt.
  [10
 
@@ -2154,7 +2154,7 @@ Overfull \vbox (6.79947pt too high) detected at line 302
 ] [29
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 205
+Overfull \hbox (3.40558pt too wide) detected at line 100
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -2162,13 +2162,13 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
  []
 
 
-Overfull \vbox (11.47513pt too high) detected at line 205
+Overfull \vbox (11.47513pt too high) detected at line 100
  []
 
 [30
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 205
+Overfull \hbox (3.40558pt too wide) detected at line 100
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -2176,13 +2176,13 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
  []
 
 
-Overfull \vbox (11.47513pt too high) detected at line 205
+Overfull \vbox (11.47513pt too high) detected at line 100
  []
 
 [31
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 205
+Overfull \hbox (3.40558pt too wide) detected at line 100
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -2190,13 +2190,13 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
  []
 
 
-Overfull \vbox (11.47513pt too high) detected at line 205
+Overfull \vbox (11.47513pt too high) detected at line 100
  []
 
 [32
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 205
+Overfull \hbox (3.40558pt too wide) detected at line 100
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -2204,13 +2204,13 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
  []
 
 
-Overfull \vbox (11.47513pt too high) detected at line 205
+Overfull \vbox (11.47513pt too high) detected at line 100
  []
 
 [33
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 205
+Overfull \hbox (3.40558pt too wide) detected at line 100
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -2218,13 +2218,13 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
  []
 
 
-Overfull \vbox (11.47513pt too high) detected at line 205
+Overfull \vbox (11.47513pt too high) detected at line 100
  []
 
 [34
 
 ]
-Overfull \hbox (3.40558pt too wide) detected at line 205
+Overfull \hbox (3.40558pt too wide) detected at line 100
 \OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 jD\OT1/cmr/m/
 n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 
 \OT1/cmr/m/n/8 )[]\OMS/cmsy/m/n/8 P[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OT1/cmr
@@ -2232,20 +2232,20 @@ n/8 ) \OMS/cmsy/m/n/8 / [] [] \OML/cmm/m/it/8 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8
  []
 
 
-Overfull \vbox (11.47513pt too high) detected at line 205
+Overfull \vbox (11.47513pt too high) detected at line 100
  []
 
 [35
 
 ]
-Overfull \hbox (18.13411pt too wide) detected at line 306
+Overfull \hbox (18.13411pt too wide) detected at line 149
 []
  []
 
 [36
 
 ]
-Overfull \hbox (18.13411pt too wide) detected at line 306
+Overfull \hbox (18.13411pt too wide) detected at line 149
 []
  []
 
@@ -2254,47 +2254,47 @@ Overfull \hbox (18.13411pt too wide) detected at line 306
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 391.
+(mdframed)              on input line 214.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 391.
+ mdframed uses option nobreak mdframed on input line 214.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 391.
+(mdframed)              on input line 214.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 391.
+ mdframed uses option nobreak mdframed on input line 214.
  [38
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 391.
+(mdframed)              on input line 214.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 391.
+ mdframed uses option nobreak mdframed on input line 214.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 391.
+(mdframed)              on input line 214.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 391.
+ mdframed uses option nobreak mdframed on input line 214.
  [39
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 391.
+(mdframed)              on input line 214.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 391.
+ mdframed uses option nobreak mdframed on input line 214.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 391.
+(mdframed)              on input line 214.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 391.
+ mdframed uses option nobreak mdframed on input line 214.
  [40
 
 ]
 <figure/ijgraphmrp-1.png, id=363, 397.485pt x 222.3507pt>
 File: figure/ijgraphmrp-1.png Graphic file (type png)
 <use figure/ijgraphmrp-1.png>
-Package luatex.def Info: figure/ijgraphmrp-1.png  used on input line 416.
+Package luatex.def Info: figure/ijgraphmrp-1.png  used on input line 239.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [41
 
@@ -2302,7 +2302,7 @@ Package luatex.def Info: figure/ijgraphmrp-1.png  used on input line 416.
 <figure/ijgraphmrpvar-1.png, id=374, 397.485pt x 222.3507pt>
 File: figure/ijgraphmrpvar-1.png Graphic file (type png)
 <use figure/ijgraphmrpvar-1.png>
-Package luatex.def Info: figure/ijgraphmrpvar-1.png  used on input line 416.
+Package luatex.def Info: figure/ijgraphmrpvar-1.png  used on input line 239.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [42
 
@@ -2310,7 +2310,7 @@ Package luatex.def Info: figure/ijgraphmrpvar-1.png  used on input line 416.
 <figure/ijgraphdiag-1.png, id=380, 397.485pt x 222.3507pt>
 File: figure/ijgraphdiag-1.png Graphic file (type png)
 <use figure/ijgraphdiag-1.png>
-Package luatex.def Info: figure/ijgraphdiag-1.png  used on input line 416.
+Package luatex.def Info: figure/ijgraphdiag-1.png  used on input line 239.
 (luatex.def)             Requested size: 271.03223pt x 151.83092pt.
  [43
 
@@ -2506,12 +2506,65 @@ Package luatex.def Info: figure/ottographdiag-1.png  used on input line 342.
 
 [66
 
-<./figure/ottographdiag-1.png>]) (./conclusion.tex [67
+<./figure/ottographdiag-1.png>]) (./conclusion.tex
+File: static_figures/alice.jpg Graphic file (type jpg)
+<use static_figures/alice.jpg>
+Package luatex.def Info: static_figures/alice.jpg  used on input line 36.
+(luatex.def)             Requested size: 41.48291pt x 41.48216pt.
+File: static_figures/erin_hartman.jpg Graphic file (type jpg)
+<use static_figures/erin_hartman.jpg>
+Package luatex.def Info: static_figures/erin_hartman.jpg  used on input line 36
+.
+(luatex.def)             Requested size: 41.48291pt x 41.48216pt.
+File: static_figures/jared_murray.png Graphic file (type png)
+<use static_figures/jared_murray.png>
+Package luatex.def Info: static_figures/jared_murray.png  used on input line 36
+.
+(luatex.def)             Requested size: 41.48148pt x 41.48216pt.
+File: static_figures/avi_feller.jpg Graphic file (type jpg)
+<use static_figures/avi_feller.jpg>
+Package luatex.def Info: static_figures/avi_feller.jpg  used on input line 36.
+(luatex.def)             Requested size: 41.48291pt x 41.48216pt.
+File: static_figures/tamara.jpg Graphic file (type jpg)
+<use static_figures/tamara.jpg>
+Package luatex.def Info: static_figures/tamara.jpg  used on input line 36.
+(luatex.def)             Requested size: 44.50662pt x 41.48216pt.
+File: static_figures/lucas.jpg Graphic file (type jpg)
+<use static_figures/lucas.jpg>
+Package luatex.def Info: static_figures/lucas.jpg  used on input line 36.
+(luatex.def)             Requested size: 41.48291pt x 41.48216pt.
+ [67
 
-]) [68
+]
+File: static_figures/alice.jpg Graphic file (type jpg)
+<use static_figures/alice.jpg>
+Package luatex.def Info: static_figures/alice.jpg  used on input line 36.
+(luatex.def)             Requested size: 41.48291pt x 41.48216pt.
+File: static_figures/erin_hartman.jpg Graphic file (type jpg)
+<use static_figures/erin_hartman.jpg>
+Package luatex.def Info: static_figures/erin_hartman.jpg  used on input line 36
+.
+(luatex.def)             Requested size: 41.48291pt x 41.48216pt.
+File: static_figures/jared_murray.png Graphic file (type png)
+<use static_figures/jared_murray.png>
+Package luatex.def Info: static_figures/jared_murray.png  used on input line 36
+.
+(luatex.def)             Requested size: 41.48148pt x 41.48216pt.
+File: static_figures/avi_feller.jpg Graphic file (type jpg)
+<use static_figures/avi_feller.jpg>
+Package luatex.def Info: static_figures/avi_feller.jpg  used on input line 36.
+(luatex.def)             Requested size: 41.48291pt x 41.48216pt.
+File: static_figures/tamara.jpg Graphic file (type jpg)
+<use static_figures/tamara.jpg>
+Package luatex.def Info: static_figures/tamara.jpg  used on input line 36.
+(luatex.def)             Requested size: 44.50662pt x 41.48216pt.
+File: static_figures/lucas.jpg Graphic file (type jpg)
+<use static_figures/lucas.jpg>
+Package luatex.def Info: static_figures/lucas.jpg  used on input line 36.
+(luatex.def)             Requested size: 41.48291pt x 41.48216pt.
+ [68
 
-] [69
-
+]) [69
 
 ] [70
 
@@ -2529,7 +2582,577 @@ Package luatex.def Info: figure/ottographdiag-1.png  used on input line 342.
 ] [74
 
 
+] [75
+
+
+] (./supplement.tex
+<static_figures/isba_poster_sens_fig.png, id=709, 544.1931pt x 367.8543pt>
+File: static_figures/isba_poster_sens_fig.png Graphic file (type png)
+<use static_figures/isba_poster_sens_fig.png>
+Package luatex.def Info: static_figures/isba_poster_sens_fig.png  used on input
+ line 15.
+(luatex.def)             Requested size: 276.559pt x 186.94086pt.
+ [76
+
+<./static_figures/isba_poster_sens_fig.png>]
+<static_figures/orig_weights.png, id=716, 455.7025pt x 91.34125pt>
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+<static_figures/weights_loo.png, id=717, 444.66125pt x 105.39375pt>
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+<static_figures/boot_weights.png, id=718, 452.69125pt x 203.76125pt>
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+<static_figures/e_beta_w.png, id=719, 903.375pt x 903.375pt>
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[77
+
+<./static_figures/orig_weights.png><./static_figures/weights_loo.png><./static_f
+igures/boot_weights.png><./static_figures/e_beta_w.png>]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[78
+
 ]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[79
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[80
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[81
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[82
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[83
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[84
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[85
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[86
+
+]
+File: static_figures/orig_weights.png Graphic file (type png)
+<use static_figures/orig_weights.png>
+Package luatex.def Info: static_figures/orig_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 23.54048pt.
+File: static_figures/weights_loo.png Graphic file (type png)
+<use static_figures/weights_loo.png>
+Package luatex.def Info: static_figures/weights_loo.png  used on input line 125
+.
+(luatex.def)             Requested size: 117.44731pt x 27.83754pt.
+File: static_figures/boot_weights.png Graphic file (type png)
+<use static_figures/boot_weights.png>
+Package luatex.def Info: static_figures/boot_weights.png  used on input line 12
+5.
+(luatex.def)             Requested size: 117.44731pt x 52.86163pt.
+File: static_figures/e_beta_w.png Graphic file (type png)
+<use static_figures/e_beta_w.png>
+Package luatex.def Info: static_figures/e_beta_w.png  used on input line 125.
+(luatex.def)             Requested size: 147.56158pt x 147.56172pt.
+
+Overfull \vbox (17.81802pt too high) detected at line 125
+ []
+
+[87
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 182.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 182.
+ [88
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 182.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 182.
+ [89
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 182.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 182.
+ [90
+
+]
+Overfull \hbox (16.57036pt too wide) detected at line 237
+[][]
+ []
+
+[91
+
+] [92
+
+]
+<static_figures/lowdim_accuracy-1.png, id=810, 433.62pt x 216.81pt>
+File: static_figures/lowdim_accuracy-1.png Graphic file (type png)
+<use static_figures/lowdim_accuracy-1.png>
+Package luatex.def Info: static_figures/lowdim_accuracy-1.png  used on input li
+ne 329.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+[]\TU/LiberationSerif(0)/m/n/8 May still be use-ful when
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 329--329
+\OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 j\OML/cmm/m/i
+t/8 X\OT1/cmr/m/n/8 )$ \TU/LiberationSerif(0)/m/n/8 is \TU/LiberationSerif(0)/m
+/it/8 some-what \TU/LiberationSerif(0)/m/n/8 con-cen-
+ []
+
+<static_figures/highdim_accuracy-1.png, id=811, 433.62pt x 216.81pt>
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 329.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+[93
+
+<./static_figures/lowdim_accuracy-1.png><./static_figures/highdim_accuracy-1.png
+>]
+File: static_figures/lowdim_accuracy-1.png Graphic file (type png)
+<use static_figures/lowdim_accuracy-1.png>
+Package luatex.def Info: static_figures/lowdim_accuracy-1.png  used on input li
+ne 329.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+[]\TU/LiberationSerif(0)/m/n/8 May still be use-ful when
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 329--329
+\OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 j\OML/cmm/m/i
+t/8 X\OT1/cmr/m/n/8 )$ \TU/LiberationSerif(0)/m/n/8 is \TU/LiberationSerif(0)/m
+/it/8 some-what \TU/LiberationSerif(0)/m/n/8 con-cen-
+ []
+
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 329.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+[94
+
+]
+File: static_figures/lowdim_accuracy-1.png Graphic file (type png)
+<use static_figures/lowdim_accuracy-1.png>
+Package luatex.def Info: static_figures/lowdim_accuracy-1.png  used on input li
+ne 329.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+[]\TU/LiberationSerif(0)/m/n/8 May still be use-ful when
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 329--329
+\OMS/cmsy/m/n/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 \OMS/cmsy/m/n/8 j\OML/cmm/m/i
+t/8 X\OT1/cmr/m/n/8 )$ \TU/LiberationSerif(0)/m/n/8 is \TU/LiberationSerif(0)/m
+/it/8 some-what \TU/LiberationSerif(0)/m/n/8 con-cen-
+ []
+
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 329.
+(luatex.def)             Requested size: 195.74252pt x 97.87126pt.
+[95
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 368.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 368.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 368.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 368.
+ [96
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 368.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 368.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 368.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 368.
+ [97
+
+]
+Overfull \hbox (58.66339pt too wide) detected at line 476
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 476.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 476.
+[98
+
+]
+Overfull \hbox (58.66339pt too wide) detected at line 476
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 476.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 476.
+[99
+
+]
+Overfull \hbox (58.66339pt too wide) detected at line 476
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 476.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 476.
+[100
+
+]
+Overfull \hbox (58.66339pt too wide) detected at line 476
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 476.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 476.
+[101
+
+]
+Overfull \hbox (58.66339pt too wide) detected at line 476
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 476.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 476.
+[102
+
+]
+Overfull \hbox (58.66339pt too wide) detected at line 476
+[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 476.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 476.
+[103
+
+]
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 504.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
+
+Overfull \vbox (8.17818pt too high) detected at line 504
+ []
+
+[104
+
+]
+File: static_figures/highdim_accuracy-1.png Graphic file (type png)
+<use static_figures/highdim_accuracy-1.png>
+Package luatex.def Info: static_figures/highdim_accuracy-1.png  used on input l
+ine 504.
+(luatex.def)             Requested size: 301.1566pt x 150.5816pt.
+
+Overfull \vbox (8.17818pt too high) detected at line 504
+ []
+
+[105
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 587.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 587.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 587.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 587.
+
+Overfull \vbox (8.20123pt too high) detected at line 587
+ []
+
+[106
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 587.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 587.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 587.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 587.
+
+Overfull \vbox (8.20123pt too high) detected at line 587
+ []
+
+[107
+
+])
 \tf@nav=\write7
 
 \openout7 = main.nav
@@ -2548,16 +3171,16 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53807 strings out of 477805
+ 55116 strings out of 477805
  125031,2373549 words of node,token memory allocated
- 12034 words of node memory still in use:
-   44 hlist, 8 vlist, 5 rule, 62 disc, 5 local_par, 10 math, 235 glue, 22 kern, 
-75 penalty, 20 sub_mlist, 889 glyph, 350 attribute, 125 glue_spec, 350 attribute
-_list, 4 write, 5 pdf_start_link, 5 pdf_end_link, 4 pdf_dest, 9 pdf_action, 58 p
-df_colorstack nodes
-   avail lists: 1:20,2:2802,3:780,4:497,5:298,6:139,7:9988,8:151,9:887,10:44,11:
-555,12:13
- 71726 multiletter control sequences out of 65536+600000
+ 16031 words of node memory still in use:
+   182 hlist, 23 vlist, 16 rule, 57 disc, 7 local_par, 32 math, 345 glue, 61 ker
+n, 57 penalty, 32 sub_mlist, 809 glyph, 724 attribute, 125 glue_spec, 724 attrib
+ute_list, 6 write, 2 save_pos, 218 pdf_literal, 2 pdf_start_link, 2 pdf_end_link
+, 6 pdf_action, 44 pdf_colorstack nodes
+   avail lists: 1:22,2:2173,3:578,4:516,5:413,6:141,7:9948,8:158,9:1594,10:44,11
+:560,12:13
+ 71950 multiletter control sequences out of 65536+600000
  97 fonts using 20996447 bytes
  128i,27n,134p,1852b,1751s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf></usr/share/te
@@ -2580,11 +3203,12 @@ fonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb>
-Output written on main.pdf (74 pages, 3629860 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (107 pages, 3953651 bytes).
 
-PDF statistics: 797 PDF objects out of 1000 (max. 8388607)
- 644 compressed objects within 7 object streams
- 186 named destinations out of 1000 (max. 131072)
+PDF statistics: 1009 PDF objects out of 1200 (max. 8388607)
+ 806 compressed objects within 9 object streams
+ 252 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

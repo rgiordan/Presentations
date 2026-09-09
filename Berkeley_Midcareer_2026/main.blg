@@ -1,29 +1,29 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[38] biber:340> INFO - === Wed Sep  9, 2026, 12:04:22
-[46] Biber.pm:418> INFO - Reading 'main.bcf'
+[35] biber:340> INFO - === Wed Sep  9, 2026, 14:47:04
+[42] Biber.pm:418> INFO - Reading 'main.bcf'
 [82] Biber.pm:972> INFO - Found 32 citekeys in bib section 0
 [88] Biber.pm:4383> INFO - Processing section 0
-[94] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[93] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
 [96] bibtex.pm:1713> INFO - LaTeX decoding ...
-[146] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[274] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[274] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[274] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[274] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[290] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[300] bbl.pm:757> INFO - Output to main.bbl
-[300] Biber.pm:130> WARN - Duplicate entry key: 'wang_maleki:2018:approximate' in file 'references.bib', skipping ...
-[300] Biber.pm:130> WARN - ISBN '978-1-4419-1918-2 978-1-4757-4355-5' in entry 'ern_theory_2004' is invalid - run biber with '--validate_datamodel' for details.
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 308, warning: 110 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 338, warning: 16 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 362, warning: 42 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 433, warning: 13 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 547, warning: 21 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 608, warning: 58 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 622, warning: 18 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 736, warning: 30 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 745, warning: 13 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 754, warning: 13 characters of junk seen at toplevel
-[300] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_uAqx/33e59b5ca9ec342068223d604c3f8d55_189932.utf8, line 765, warning: 13 characters of junk seen at toplevel
-[300] Biber.pm:132> INFO - WARNINGS: 13
+[148] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[282] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[282] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[282] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[282] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[298] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[309] bbl.pm:757> INFO - Output to main.bbl
+[309] Biber.pm:130> WARN - Duplicate entry key: 'wang_maleki:2018:approximate' in file 'references.bib', skipping ...
+[309] Biber.pm:130> WARN - ISBN '978-1-4419-1918-2 978-1-4757-4355-5' in entry 'ern_theory_2004' is invalid - run biber with '--validate_datamodel' for details.
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 308, warning: 110 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 338, warning: 16 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 362, warning: 42 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 433, warning: 13 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 547, warning: 21 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 608, warning: 58 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 622, warning: 18 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 736, warning: 30 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 745, warning: 13 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 754, warning: 13 characters of junk seen at toplevel
+[309] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_doeV/33e59b5ca9ec342068223d604c3f8d55_316928.utf8, line 765, warning: 13 characters of junk seen at toplevel
+[309] Biber.pm:132> INFO - WARNINGS: 13
