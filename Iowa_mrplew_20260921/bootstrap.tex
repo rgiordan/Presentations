@@ -1,0 +1,95 @@
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{The weights can look very different!}
+\centering
+%\only<1>
+{
+The weights can look very different! Does this mean anything?\\[1em]
+}
+
+\onslide<2->
+{
+\textbf{Does the spread relate to frequentist variance?}
+}
+
+
+\onslide<3->{
+\textbf{Yes:} The ``spread'' relates to frequentist variance just as in weighting estimators.\\
+
+This is essentially a corollary of our earlier work on the Bayesian infinitesimal
+jackknife.\footnote{See \textcite{giordano:2024:bayesij}. For weighting
+variances, see, e.g.~, \textcite{deville:1993:generalizedraking,fuller:2011:sampling}.}
+}
+
+\wholeslidefig{
+    \AlexanderWeightPlot{}
+}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[t]{Standard error estimation experiment}
+
+\wholeslidefig{\BootstrapPlot{}}
+
+%\vspace{-3em}
+% It's last minute so put in the manual estimate of the time
+\pause
+$$
+\begin{aligned}
+    \textrm{Running fifty MCMC parametric bootstraps:}\quad & \approx 79 \textrm{ hours} \\
+    \textrm{Computing approximate weights:}\quad &\AlexMrPawTimeSecs \textrm{ seconds}\\
+\end{aligned}
+$$
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{The weights can look very different!}
+\centering
+
+
+The weights can look very different! Does this mean anything?\\[1em]
+
+% For example, \textbf{does the spread relate to frequentist variance?}
+
+\onslide<1->{
+\textbf{Yes:} The ``spread'' relates to frequentist variance just as in weighting estimators.\\
+}
+
+\onslide<2->
+{
+\vspace{1em}
+\textbf{What about covariate balance?}
+}
+
+\onslide<1->{
+\wholeslidefig{
+\AlexanderWeightPlot{}
+}
+}
+
+% \splitpagenoline{
+%     \AlexanderWeightPlot{}
+% }{
+%     \LaxWeightPlot{}
+% }
+\end{frame}

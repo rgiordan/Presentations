@@ -1,0 +1,25 @@
+Weighting estimator diagnostics for
+
+
+
+
+
+
+
+Calibration weighting--style diagnostics for nonlinear Bayesian hierarchical models
+
+
+Multilevel Regression with Post-stratification (MrP) has become a workhorse
+method for estimating population quantities using non-probability surveys, and
+is the primary alternative to traditional survey calibration weights, e.g.~ as
+computed by raking.  For simple linear regression models, MrP methods admit
+``equivalent weights'', allowing for direct comparisons between MrP and
+traditional calibration weights (Gelman 2006).  In the present work, we develop
+a more general framework for computing and interpreting ``MrP local equivalent
+weights'' (MrPlew), which admit direct comparison with calibration weights in
+terms of important diagnostic quantities such as covariate balance, frequentist
+sampling variability, and partial pooling.  MrPlew is based on a local
+approximation, which we show in theory and practice to be accurate and
+meaningful for the target diagnostics.  Importantly, MrPlew can be easily computed
+based on existing MCMC samples and conveniently wraps standard MrP software
+implementations.

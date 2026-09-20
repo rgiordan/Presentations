@@ -1,0 +1,17 @@
+base
+knitr
+tidyverse
+ggplot2
+tibble
+tidyr
+readr
+purrr
+dplyr
+stringr
+forcats
+xtable
+gridExtra
+latex2exp
+lubridate
+ggpubr
+ggforce
