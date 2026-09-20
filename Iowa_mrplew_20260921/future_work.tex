@@ -1,80 +1,82 @@
 
-% \begin{frame}{Future work}
 
-% Note that there was no talk of correct specification for the
-% data you have.
-
-% That was a foregone conclusion when we started looking at equivalent weights!
-
-% How do you peform model checking with sensitivity analysis?
-
-% Existing methods evaluate whether the analysis changes ``a lot'' when you:
-% %
-% \begin{itemize}
-% \item Parametrically perturb the model (e.g.~fit a richer model class)
-% \item Non--parameterically perturb the data (e.g.~produce gross outliers)
-% \end{itemize}
-% %
-% The problem is:
-% %
-% \begin{itemize}
-% \item How much is ``a lot''?
-% \item Non--parametric data perturbations are hard to reason about
-% \item It's hard to say whether parametric model changes are enough
-% \end{itemize}
-% %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% Instead, we
-% %
-% \begin{itemize}
-% \item Parametrically perturb the data
-% \item Observe whether our model could detect the change
-% \end{itemize}
-% %
-% \begin{itemize}
-% \item Know exactly the expected change (don't have to decide on what ``a lot'' means)
-% \item Easy to reason about whether the data perturbation is reasonable
-% \item Don't need to propose an alternative model, instead study the model you have
-% \end{itemize}
+% Taken from 
+% https://tex.stackexchange.com/questions/135331/how-to-draw-a-big-red-cross-through-large-parts-of-a-text
+\newtcolorbox{cross}{blank,breakable,parbox=false,
+  overlay={\draw[red,line width=5pt] (interior.south west)--(interior.north east);
+    \draw[red,line width=5pt] (interior.north west)--(interior.south east);}}
 
 
-% \end{frame}
 
-\begin{frame}{Future work}
+\begin{frame}[t]{Conclusion}
 
-Notice that there was no discussion of misspecification!\\[1em]
+\only<2->{\begin{cross}}
+\textbf{By defining MrP locally equivlanent weights, we can rigorously provide
+a novel class of model checking metrics for non-linear MrP estimators.}    
+\only<2->{\end{cross}}
 
-\emph{Calibration weights (typically) do not depend on $\Ysur$.}
+\onslide<2->{
+\includegraphics[width=1em]{static_figures/warning.png}
+\textbf{That's not the right conclusion!}\\[1em]
+}
 
-\pause
+\onslide<3->{
+% MrP is modeling the response, not the sampling bias. \\[1em]
 
-\vspace{2em}
-But the high level idea can be extended much more widely:
-%
-\begin{enumerate}
-\item Assume your initial model was accurate
-\item Select some perturbation your model should be able to capture
-\item Use local sensitivity to detect whether the change is what you expect
-\item If the change is not what you expect, either (1) or (2) was wrong
-\end{enumerate}
-%
+% CW-like checks are not diagnostics for the response model.  \\[1em]
 
-\pause
-
-\vspace{2em}
-Checks of this form give generalized versions of many standard linear model diagnostics:
-%
-\begin{itemize}
-\item Local ``Fisher consistency'' checks
-\item Checks for exogeneity of residuals (even without residuals)
-\item Checks for whether inverse Fisher information $\eqcheck$ score covariance (even without scores)
-\end{itemize}
-%
+A correctly specified response model can do badly on CW checks, and vice-versa!  (See paper.)\\[1em]
+}
 
 
-\textbf{Preprint:}\url{https://arxiv.org/abs/2606.04250}
-\textbf{\texttt{R} package:}\url{https://github.com/rgiordan/mrplew}
+\onslide<3->{
+This work is best thought of as \textit{model interrogation} for MrP.\\[1em]
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Conclusion (let's try that again)}
+
+\textbf{
+By defining \textit{MrP locally equivlanent weights}, we can rigorously provide
+analogues of many CW diagnostics for non-linear MrP estimators for model interrogation.\\[1em]
+}
+
+(Similar ideas can to lead to actual checks of MrP model misspecification.  Coming soon...)
+
+\onslide<2->{
+
+\hrulefill\\
+
+\textbf{R package available at }\\
+\url{https://github.com/rgiordan/mrplew} 
+
+\textbf{Preprint at }\\
+\url{https://arxiv.org/abs/2606.04250} 
+
+}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[allowframebreaks]{References}
+
+
+\renewcommand*{\bibfont}{\normalfont\tiny}
+\printbibliography[heading=none]
 
 \end{frame}
 
