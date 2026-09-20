@@ -13,5 +13,6 @@ source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 source(file.path(paper_directory, "figures_knitr/weights_plot.R"), 
        print.eval=TRUE)
 
-print(alexander_refit_plot)
+source("figures_knitr/weights_plot.R")
 
+weight_plt_lax

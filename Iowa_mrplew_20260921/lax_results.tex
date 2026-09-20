@@ -1,0 +1,142 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Same-Sex Marriage Survey Weights}
+
+\centering
+
+\begin{minipage}{0.7\textwidth}
+\WeightsPlotLax{}        
+\end{minipage}
+
+\onslide<2->{
+    What does the difference between these weights mean in terms of
+    \begin{itemize}
+        \item Frequentist sampling variance (standard errors)?
+        \item Covariate balance / external validity?
+        \item Subgroup contributions?
+    \end{itemize}
+}
+
+\end{frame}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[t]{Same-Sex Marriage subgroup contribution}
+
+Note that both methods use \emph{national data} to infer public opinion \emph{in California}.
+
+\only<2>{
+\begin{block}{Question:}
+    How do responses in Texas affect our estimate of public opinion in CA?
+\end{block}
+}
+
+
+%
+\only<2>{
+\centering
+\includegraphics[width=0.5\textwidth]{static_figures/ca_query.png}
+% \begin{minipage}{0.7\textwidth}
+% %\MapQuery{} % Too much whitespace, include by hand
+% \end{minipage}
+}
+
+\only<3->{
+\begin{block}{More specific question:}
+    Suppose we \emph{increased} the responses $\y_i$ in Texas.
+
+    How would our estimate of public opinion in CA change?
+\end{block}
+}
+
+\only<3>{
+Take $\surcol{\ytil_i = \y_i + \delta \ind{i \textrm{ is in Texas}}}$.
+%
+Then $
+\muhatcw[\ytil] - \muhatcw[\y] = \delta \underbrace{
+        \surcol{\sum_{i \textrm{ in Texas}} \w_i}
+    }_{\textrm{Texas's contribution}}$.
+}
+
+\only<4->{
+Take $\surcol{\ytil_i = \y_i + \delta \ind{i \textrm{ is in Texas}}}$.
+%
+Then $
+\muhatmrp[\ytil] - \muhatmrp[\y] \approx \delta \underbrace{
+        \surcol{\sum_{i \textrm{ in Texas}} \w^\mrp_i}
+    }_{\textrm{Texas's contribution}}$.
+}
+
+
+\only<5>{
+\begin{block}{Theorem: \parencite{giordano:2026:mrplew} (informal)}
+    Take $\surcol{\ytil_i = \y_i + \delta \f(\x_i)}$.
+    We state conditions under which
+$$
+\onslide<4->{\sup_{f \in \mathcal{F}}}
+\abs{
+    \muhatmrp[\Ytil] - \muhatmrp
+    - \delta \surcol{\sumsur \w_i^\mrp \f(\x_i)}
+}
+\only<1>{ = \textrm{Small}}
+\only<2->{ = O(\delta^2)}
+\onslide<3->{\textrm{ as }N \rightarrow \infty}
+$$
+\onslide<4->{
+    ...for a very broad class of $\mathcal{F}$.
+    \footnote{$\mathcal{F}$ can be any Donsker class of measurable functions
+    with uniformly bounded
+    $\expect{}{\norm{\x} \f(\x)}_2^2 $.}
+}
+\end{block}
+
+\textbf{Uniformity helps justify searching over a large class of perturbations $\f$.}
+
+}
+
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Same-Sex Marriage subgroup contribution}
+Summarize state contribution: $\sum_{i \textrm{ in state}} \w_i$
+\centering
+\begin{minipage}{0.9\textwidth}
+    \centering
+\LaxphilipsCAPoolingPlot{}
+\onslide<2->{
+\LaxphilipsMOPoolingPlot{}
+}
+\end{minipage}
+
+\end{frame}
+
+
+
+

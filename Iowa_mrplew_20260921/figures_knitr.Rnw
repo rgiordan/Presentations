@@ -306,14 +306,14 @@ print(weight_plt_alexander)
 }
 
 
-\newcommand{\LaxWeightPlot}{
-<<>>=
-figcap <- paste0("Weight comparison for the Gay Marriage dataset")
-@
-<<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(lax_weight_scatterplot)
-@
-}
+% \newcommand{\LaxWeightPlot}{
+% <<>>=
+% figcap <- paste0("Weight comparison for the Gay Marriage dataset")
+% @
+% <<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(lax_weight_scatterplot)
+% @
+% }
 
 
 % \newcommand{\AlexanderPredictionFigOne}{

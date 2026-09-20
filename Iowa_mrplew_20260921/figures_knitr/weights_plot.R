@@ -61,3 +61,14 @@ weight_plt_alexander <-
   xlab("Weights") + ylab(NULL) +
   geom_vline(aes(xintercept=0))
 
+
+weight_plt_lax <-
+  weight_filtered_df %>%
+  filter(analysis_simple == "lax") %>%
+  ggplot() +
+  geom_histogram(aes(x=w_scale), bins=90) +
+  facet_grid(method_name ~ analysis, scales="free") +
+  geom_text(data = annotations, aes(x = x, y = y, label = label),
+            color = "red", size = 3) +
+  xlab("Weights") + 
+  geom_vline(aes(xintercept=0))
