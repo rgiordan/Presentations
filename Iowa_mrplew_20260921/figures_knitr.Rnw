@@ -316,45 +316,45 @@ print(lax_weight_scatterplot)
 }
 
 
-\newcommand{\AlexanderPredictionFigOne}{
-<<>>=
-figcap <- paste0("Predictions on binary data for the Name Change dataset")
-@
-<<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(alex_refit_plots$base_plot)
-@
-}
+% \newcommand{\AlexanderPredictionFigOne}{
+% <<>>=
+% figcap <- paste0("Predictions on binary data for the Name Change dataset")
+% @
+% <<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(alex_refit_plots$base_plot)
+% @
+% }
 
 
 
-\newcommand{\AlexanderPredictionFigTwo}{
-<<>>=
-figcap <- paste0("Predictions and refit on binary data for the Name Change dataset")
-@
-<<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(alex_refit_plots$plt1)
-@
-}
+% \newcommand{\AlexanderPredictionFigTwo}{
+% <<>>=
+% figcap <- paste0("Predictions and refit on binary data for the Name Change dataset")
+% @
+% <<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(alex_refit_plots$plt1)
+% @
+% }
 
 
 
 
-\newcommand{\LaxPredictionFigOne}{
-<<>>=
-figcap <- paste0("Predictions on binary data for the Gay Marriage dataset")
-@
-<<laxcontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(lax_refit_plots$base_plot)
-@
-}
+% \newcommand{\LaxPredictionFigOne}{
+% <<>>=
+% figcap <- paste0("Predictions on binary data for the Gay Marriage dataset")
+% @
+% <<laxcontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(lax_refit_plots$base_plot)
+% @
+% }
 
 
 
-\newcommand{\LaxPredictionFigTwo}{
-<<>>=
-figcap <- paste0("Predictions and refit on binary data for the Gay Marriage dataset")
-@
-<<laxdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
-print(lax_refit_plots$plt1)
-@
-}
+% \newcommand{\LaxPredictionFigTwo}{
+% <<>>=
+% figcap <- paste0("Predictions and refit on binary data for the Gay Marriage dataset")
+% @
+% <<laxdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(lax_refit_plots$plt1)
+% @
+% }

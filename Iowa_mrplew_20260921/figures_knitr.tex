@@ -446,59 +446,56 @@ $\muhat[\cal]$ & $\AlexanderRakingMu{}$ & $\LaxRakingMu{}$ & $\StoriesRakingMu{}
 }
 
 
-% \newcommand{\LaxWeightPlot}{
+\newcommand{\LaxWeightPlot}{
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'lax\_weight\_scatterplot' not found}}\end{kframe}
+\end{knitrout}
+}
+
+
+% \newcommand{\AlexanderPredictionFigOne}{
 % <<>>=
-% figcap <- paste0("Weight comparison for the Gay Marriage dataset")
+% figcap <- paste0("Predictions on binary data for the Name Change dataset")
 % @
-% <<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
-% print(lax_weight_scatterplot)
+% <<alexandercontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(alex_refit_plots$base_plot)
 % @
 % }
 
 
-\newcommand{\AlexanderPredictionFigOne}{
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'alex\_refit\_plots' not found}}\end{kframe}
-\end{knitrout}
-}
-
-
-
-\newcommand{\AlexanderPredictionFigTwo}{
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'alex\_refit\_plots' not found}}\end{kframe}
-\end{knitrout}
-}
+% \newcommand{\AlexanderPredictionFigTwo}{
+% <<>>=
+% figcap <- paste0("Predictions and refit on binary data for the Name Change dataset")
+% @
+% <<alexanderdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(alex_refit_plots$plt1)
+% @
+% }
 
 
 
 
-\newcommand{\LaxPredictionFigOne}{
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'lax\_refit\_plots' not found}}\end{kframe}
-\end{knitrout}
-}
-
+% \newcommand{\LaxPredictionFigOne}{
+% <<>>=
+% figcap <- paste0("Predictions on binary data for the Gay Marriage dataset")
+% @
+% <<laxcontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(lax_refit_plots$base_plot)
+% @
+% }
 
 
-\newcommand{\LaxPredictionFigTwo}{
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'lax\_refit\_plots' not found}}\end{kframe}
-\end{knitrout}
-}
+% \newcommand{\LaxPredictionFigTwo}{
+% <<>>=
+% figcap <- paste0("Predictions and refit on binary data for the Gay Marriage dataset")
+% @
+% <<laxdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(lax_refit_plots$plt1)
+% @
+% }

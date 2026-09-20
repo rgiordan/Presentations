@@ -1,6 +1,6 @@
 # Use this script to debug and edit the knit graphs without re-compiling in latex.
 
-base_dir <- "/home/rgiordan/Documents/git_repos/MrPawPaper/paper"
+base_dir <- "/home/rgiordan/Documents/git_repos/Presentations/Iowa_mrplew_20260921/"
 
 knitr_debug <- FALSE # Set to true to see error output
 cache <- FALSE
@@ -13,6 +13,5 @@ source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 source(file.path(paper_directory, "figures_knitr/weights_plot.R"), 
        print.eval=TRUE)
 
+print(alexander_refit_plot)
 
-alexander$save_list$mrplew_time
-alexander$save_list$mrp_sd

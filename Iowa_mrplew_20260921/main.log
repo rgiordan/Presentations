@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  20 SEP 2026 15:43
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  20 SEP 2026 15:50
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2315,57 +2315,36 @@ Package luatex.def Info: figure/alexanderbalanceplotinteractions-1.png  used on
 
 [62
 
-<./figure/alexanderbalanceplotinteractions-1.png>] [63
+<./figure/alexanderbalanceplotinteractions-1.png>]
+<figure/alexanderrefitplot-1.png, id=468, 469.755pt x 211.2693pt>
+File: figure/alexanderrefitplot-1.png Graphic file (type png)
+<use figure/alexanderrefitplot-1.png>
+Package luatex.def Info: figure/alexanderrefitplot-1.png  used on input line 31
+2.
+(luatex.def)             Requested size: 301.14392pt x 135.51491pt.
+ [63
 
-] [64
+<./figure/alexanderrefitplot-1.png>]) (./future_work.tex [64
 
-])
-(./future_work.tex [65
+] [65
 
 ] [66
 
-] [67
+]) [67
 
-]
-<static_figures/vladimir_palmin.jpg, id=494, 2020.54875pt x 2409.0pt>
-File: static_figures/vladimir_palmin.jpg Graphic file (type jpg)
-<use static_figures/vladimir_palmin.jpg>
-Package luatex.def Info: static_figures/vladimir_palmin.jpg  used on input line
- 129.
-(luatex.def)             Requested size: 55.65004pt x 66.37567pt.
-<static_figures/sequoia.jpg, id=495, 131.74219pt x 131.74219pt>
-File: static_figures/sequoia.jpg Graphic file (type jpg)
-<use static_figures/sequoia.jpg>
-Package luatex.def Info: static_figures/sequoia.jpg  used on input line 129.
-(luatex.def)             Requested size: 66.37749pt x 66.37567pt.
-<static_figures/lucas.jpg, id=496, 131.74219pt x 131.74219pt>
-File: static_figures/lucas.jpg Graphic file (type jpg)
-<use static_figures/lucas.jpg>
-Package luatex.def Info: static_figures/lucas.jpg  used on input line 129.
-(luatex.def)             Requested size: 66.37749pt x 66.37567pt.
-<static_figures/folded-hands.png, id=499, 256.96pt x 256.96pt>
-File: static_figures/folded-hands.png Graphic file (type png)
-<use static_figures/folded-hands.png>
-Package luatex.def Info: static_figures/folded-hands.png  used on input line 12
-9.
-(luatex.def)             Requested size: 7.99861pt x 8.0pt.
- [68
+] [68
 
-<./static_figures/vladimir_palmin.jpg><./static_figures/sequoia.jpg><./static_fi
-gures/lucas.jpg><./static_figures/folded-hands.png>]) [69
-
-] [70
-
-</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [71
+</usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [69
 
 
-] (./extra_slides.tex [72
+] (./extra_slides.tex
+[70
 
 ]
 
 Package biblatex Warning: Nested notes on input line 57.
 
-[73
+[71
 
 ]
 File: figure/bootplot-1.png Graphic file (type png)
@@ -2375,139 +2354,144 @@ Package luatex.def Info: figure/bootplot-1.png  used on input line 77.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'fig:bootpl
 ot'
-[74
+[72
 
 ]
 File: figure/bootplot-1.png Graphic file (type png)
 <use figure/bootplot-1.png>
 Package luatex.def Info: figure/bootplot-1.png  used on input line 77.
 (luatex.def)             Requested size: 240.91228pt x 108.40999pt.
- [75
-
-] [76
-
-] [77
+ [73
 
 ]
-Overfull \vbox (40.04704pt too high) detected at line 216
+<figure/laxphilipsrefitplot-1.png, id=567, 469.755pt x 211.2693pt>
+File: figure/laxphilipsrefitplot-1.png Graphic file (type png)
+<use figure/laxphilipsrefitplot-1.png>
+Package luatex.def Info: figure/laxphilipsrefitplot-1.png  used on input line 9
+2.
+(luatex.def)             Requested size: 301.14392pt x 135.51491pt.
+ [74
+
+<./figure/laxphilipsrefitplot-1.png>]
+Overfull \vbox (40.04704pt too high) detected at line 212
+ []
+
+[75
+
+]
+Overfull \vbox (40.04704pt too high) detected at line 212
+ []
+
+[76
+
+]
+Overfull \vbox (40.04704pt too high) detected at line 212
+ []
+
+[77
+
+]
+Overfull \vbox (40.04704pt too high) detected at line 212
  []
 
 [78
 
 ]
-Overfull \vbox (40.04704pt too high) detected at line 216
+Overfull \vbox (40.04704pt too high) detected at line 212
  []
 
 [79
 
 ]
-Overfull \vbox (40.04704pt too high) detected at line 216
+Overfull \vbox (40.04704pt too high) detected at line 212
  []
 
 [80
 
 ]
-Overfull \vbox (40.04704pt too high) detected at line 216
+Overfull \vbox (40.04704pt too high) detected at line 212
  []
 
 [81
 
 ]
-Overfull \vbox (40.04704pt too high) detected at line 216
+Overfull \vbox (40.04704pt too high) detected at line 212
  []
 
 [82
 
 ]
-Overfull \vbox (40.04704pt too high) detected at line 216
+Overfull \vbox (40.04704pt too high) detected at line 212
  []
 
 [83
 
 ]
-Overfull \vbox (40.04704pt too high) detected at line 216
- []
+<static_figures/w_educ_hist.png, id=620, 973.6375pt x 653.44125pt>
+File: static_figures/w_educ_hist.png Graphic file (type png)
+<use static_figures/w_educ_hist.png>
+Package luatex.def Info: static_figures/w_educ_hist.png  used on input line 223
+.
+(luatex.def)             Requested size: 245.83282pt x 164.98512pt.
+ [84
 
-[84
-
-]
-Overfull \vbox (40.04704pt too high) detected at line 216
+<./static_figures/w_educ_hist.png>]
+Overfull \vbox (0.442pt too high) detected at line 300
  []
 
 [85
 
 ]
-Overfull \vbox (40.04704pt too high) detected at line 216
+Overfull \vbox (6.77217pt too high) detected at line 300
  []
 
 [86
 
 ]
-<static_figures/w_educ_hist.png, id=629, 973.6375pt x 653.44125pt>
-File: static_figures/w_educ_hist.png Graphic file (type png)
-<use static_figures/w_educ_hist.png>
-Package luatex.def Info: static_figures/w_educ_hist.png  used on input line 227
-.
-(luatex.def)             Requested size: 245.83282pt x 164.98512pt.
- [87
+Overfull \vbox (6.77217pt too high) detected at line 300
+ []
 
-<./static_figures/w_educ_hist.png>]
-Overfull \vbox (0.442pt too high) detected at line 304
+[87
+
+]
+Overfull \vbox (6.77217pt too high) detected at line 300
  []
 
 [88
 
 ]
-Overfull \vbox (6.77217pt too high) detected at line 304
+Overfull \vbox (6.77217pt too high) detected at line 300
  []
 
 [89
 
 ]
-Overfull \vbox (6.77217pt too high) detected at line 304
+Overfull \vbox (6.77217pt too high) detected at line 300
  []
 
 [90
 
 ]
-Overfull \vbox (6.77217pt too high) detected at line 304
+Overfull \vbox (6.77217pt too high) detected at line 300
  []
 
 [91
 
-]
-Overfull \vbox (6.77217pt too high) detected at line 304
- []
+] [92
 
-[92
+] [93
 
 ]
-Overfull \vbox (6.77217pt too high) detected at line 304
- []
 
-[93
-
-]
-Overfull \vbox (6.77217pt too high) detected at line 304
- []
+Package biblatex Warning: Nested notes on input line 362.
 
 [94
 
-] [95
-
-] [96
-
 ]
 
-Package biblatex Warning: Nested notes on input line 366.
+Package biblatex Warning: Nested notes on input line 362.
 
-[97
-
-]
-
-Package biblatex Warning: Nested notes on input line 366.
-
-[98
+[95
 
 ])
 \tf@nav=\write7
@@ -2531,7 +2515,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54865 strings out of 477805
+ 54874 strings out of 477805
  125031,2373549 words of node,token memory allocated
  14607 words of node memory still in use:
    241 hlist, 39 vlist, 23 rule, 53 disc, 12 local_par, 32 math, 288 glue, 89 ke
@@ -2540,7 +2524,7 @@ rite, 32 pdf_literal, 2 pdf_start_link, 2 pdf_end_link, 2 pdf_action, 154 pdf_co
 lorstack nodes
    avail lists: 1:5,2:1118,3:505,4:423,5:335,6:106,7:6768,8:88,9:1183,10:26,11:3
 95
- 72805 multiletter control sequences out of 65536+600000
+ 72806 multiletter control sequences out of 65536+600000
  103 fonts using 23319695 bytes
  128i,23n,134p,1852b,2229s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraMono-Medium.otf></
@@ -2567,10 +2551,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (98 pages, 1913293 bytes).
+Output written on main.pdf (95 pages, 1808509 bytes).
 
-PDF statistics: 809 PDF objects out of 1000 (max. 8388607)
- 635 compressed objects within 7 object streams
- 223 named destinations out of 1000 (max. 131072)
+PDF statistics: 800 PDF objects out of 1000 (max. 8388607)
+ 631 compressed objects within 7 object streams
+ 219 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -74,5 +74,5 @@ get_prediction_plots <- function(analysis_list) {
 }
 
 
-alex_refit_plots <- get_prediction_plots(alex)
+alex_refit_plots <- get_prediction_plots(alexander)
 lax_refit_plots <- get_prediction_plots(lax)
