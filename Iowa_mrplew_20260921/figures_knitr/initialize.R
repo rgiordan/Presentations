@@ -2,17 +2,23 @@
 
 library(tidyverse)
 library(knitr)
+library(kableExtra)
 library(xtable)
 library(gridExtra)
 library(latex2exp)
 
+library(maps)
+library(mapproj) # Ensure this is installed
+
 # This must be run from within the git repo, obviously.
 git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
-paper_directory <- file.path(git_repo_loc, "Stanford_mrplew_20251021")
-data_path <- file.path(paper_directory, "figures_knitr/data")
+paper_directory <- file.path(git_repo_loc, "Iowa_mrplew_20260921")
+data_path <- file.path(paper_directory, "applications_data")
 script_directory <- file.path(paper_directory, "figures_knitr")
 
-#source(file.path(script_directory, "common_plots_lib.R"))
+GetScriptLoc <- function(script_name) {
+    file.path(script_directory, script_name)
+}
 
 # Set some figure defaults.
 # opts_chunk$set(fig.width=4.9, fig.height=3)
@@ -22,66 +28,5 @@ opts_chunk$set(echo=knitr_debug, message=knitr_debug, warning=knitr_debug)
 # Set the default ggplot theme.
 theme_set(theme_bw())
 
-# Load into an environment rather than the global space.
-LoadIntoEnvironment <- function(filename) {
-  my_env <- environment()
-  load(filename, envir=my_env)
-  return(my_env)
-}
-
-# Width in rendered units.  High numbers give smaller fonts on the images.
-# Setting base_image_width to the actual width of a page of paper (8.5)
-# lets ggplot pick what it thinks is best.
-
-# Aspect ratio is height / width
-base_aspect_ratio <- 0.6
-base_image_width <- 6.5
-
-SetImageSize <- function(aspect_ratio, image_width=base_image_width) {
-  # Set the size on the page
-  ow <- "0.98\\linewidth"
-  oh <- sprintf("%0.3f\\linewidth", aspect_ratio * 0.98)
-
-  # Set the size in rendering
-  fw <- image_width
-  fh <- image_width * aspect_ratio
-
-  opts_chunk$set(out.width=ow,
-                 out.height=oh,
-                 fig.width=fw,
-                 fig.height=fh)
-}
-
-
-SetFullImageSize <- function() SetImageSize(
-    aspect_ratio=base_aspect_ratio, image_width=base_image_width)
-
-# Default to a full image.
-SetFullImageSize()
-
-# A convenient funciton for extracting only the legend from a ggplot.
-# Taken from
-# https://tinyurl.com/y8c742p6
-GetLegend <- function(myggplot){
-  tmp <- ggplot_gtable(ggplot_build(myggplot))
-  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
-  legend <- tmp$grobs[[leg]]
-  return(legend)
-}
-
-
-# Define common colors.
-GGColorHue <- function(n) {
-  hues = seq(15, 375, length = n + 1)
-  hcl(h = hues, l = 65, c = 100)[1:n]
-}
-
-
-GetGraphColors <- function(legend_breaks) {
-  stopifnot(length(legend_breaks) <= 4)
-  graph_colors <- GGColorHue(4)[1:length(legend_breaks)]
-  names(graph_colors) <- legend_breaks
-  return(graph_colors)
-}
-
+source(file.path(script_directory, "utils_lib.R"))
 

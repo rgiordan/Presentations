@@ -1,86 +1,66 @@
+alexander <- LoadIntoEnvironment(file.path(data_path, "alexander_paper_data.Rdata"))
+laxphilips <- LoadIntoEnvironment(file.path(data_path, "laxphilips_CA_paper_data.Rdata"))
+stories <- LoadIntoEnvironment(file.path(data_path, "stories_paper_data.Rdata"))
+
+alexander$name <- "Name Change"
+laxphilips$name <- "Same-Sex Marriage"
+stories$name <- "Election Forecasting"
+
+alexander$simple_name <- "alexander"
+laxphilips$simple_name <- "laxphilips"
+stories$simple_name <- "stories"
 
 
+# Load individual refit analyses
+alexander_col_pert_clean <- "decade_married_rk2009educ_groupBA"
+alexander_refit <- LoadIntoEnvironment(
+    file.path(data_path, sprintf("alexander_refit_analysis_%s.Rdata",
+                                 alexander_col_pert_clean)))
 
-clean_regressors <- function(reg) {
-  df <- data.frame(reg=reg) %>%
-    mutate(reg_clean=reg) %>%
-    mutate(reg_clean=str_replace(reg_clean, "decade_married_rk", "married ")) %>%
-    mutate(reg_clean=str_replace(reg_clean, "age_group_rk", "age ")) %>%
-    mutate(reg_clean=str_replace(reg_clean, "region_rk", "")) %>%
-    mutate(reg_clean=str_replace(reg_clean, "educ_group", "")) %>%
-    mutate(reg_clean=str_replace(reg_clean, ":", " x "))
-  return(df$reg_clean)
+laxphilips_col_pert_clean <- "educat2"
+laxphilips_refit <- LoadIntoEnvironment(
+    file.path(data_path, sprintf("laxphilips_CA_refit_analysis_%s.Rdata",
+                                 laxphilips_col_pert_clean)))
+
+
+# Partial pooling
+laxphilips_CA_pooling <-  LoadIntoEnvironment(
+    file.path(data_path, "laxphilips_CA_partial_pooling.Rdata"))
+
+laxphilips_MO_pooling <-  LoadIntoEnvironment(
+    file.path(data_path, "laxphilips_MO_partial_pooling.Rdata"))
+
+alexander_pooling <- LoadIntoEnvironment(
+    file.path(data_path, "alexander_partial_pooling.Rdata"))
+
+
+# Importance sampling
+laxphilips_importance_sampling <-  LoadIntoEnvironment(
+    file.path(data_path, 
+    "laxphilips_CA_perteducat2_importance_sampling.Rdata"))
+
+
+# Alexander alternative models
+alexander_model_list <- list()
+for (model in c( "interaction",
+                 "single_interaction",
+                 "fixedeffects",
+                 "fixedeffects_interaction")) {
+    model_balance <- 
+        LoadIntoEnvironment(
+            file.path(data_path, 
+            sprintf("alexander_%s_balance.Rdata", model)))
+    model_balance$simple_name <- "alexander"  # For cleaning regressor namesgit
+    alexander_model_list[[model]] <- model_balance
 }
 
-clean_method <- function(method) {
-  case_when(
-    method == "mrp_x" ~ "MRP",
-    method == "raking_x" ~ "Raking",
-    method == "poststrat_x" ~ "Target",
-    TRUE ~ "UNKNOWN"
-  )
-}
-
-# Alexander data
-
-alex <- list()
-
-alex$col_pert_clean <- "decade_married_rk2009educ_groupBA"
-alex$sim_data <- LoadIntoEnvironment(
-  file.path(data_path,
-  sprintf("alexander_%s_simulations.Rdata", alex$col_pert_clean)))
-
-alex$basic_data <- LoadIntoEnvironment(
-    file.path(data_path, "alexander_basic_data.Rdata"))
-
-alex$refit_data <- LoadIntoEnvironment(
-  file.path(data_path, sprintf("alexander_%s_refit.Rdata", alex$col_pert_clean)))
 
 
-alex$basic_metrics <- alex$basic_data$basic_metrics
-alex$basic_data$imb_plot_df <-
-  alex$basic_metrics$imb_df %>%
-  select(reg, interaction, mrp_x, raking_x, poststrat_x) %>%
-  pivot_longer(cols=c(mrp_x, raking_x, poststrat_x)) %>%
-  mutate(reg_clean=clean_regressors(reg)) %>%
-  mutate(name=clean_method(name))
-
-alex$basic_data$pert_col_clean <- clean_regressors(alex$sim_data$col_pert)
 
 
-# Lax Philips data
-
-lax <- list()
-
-lax$col_pert_clean <- "region_rkwest"
-lax$sim_data <- LoadIntoEnvironment(
-  file.path(data_path,
-  sprintf("laxphilips_%s_simulations.Rdata", lax$col_pert_clean)))
-
-lax$basic_data <- LoadIntoEnvironment(
-    file.path(data_path, "laxphilips_basic_data.Rdata"))
-
-lax$refit_data <- LoadIntoEnvironment(
-  file.path(data_path, sprintf("laxphilips_%s_refit.Rdata", lax$col_pert_clean)))
-
-
-lax$basic_metrics <- lax$basic_data$basic_metrics
-lax$basic_data$imb_plot_df <-
-  lax$basic_metrics$imb_df %>%
-  select(reg, interaction, mrp_x, raking_x, poststrat_x) %>%
-  pivot_longer(cols=c(mrp_x, raking_x, poststrat_x)) %>%
-  mutate(reg_clean=clean_regressors(reg)) %>%
-  mutate(name=clean_method(name))
-
-lax$basic_data$pert_col_clean <- clean_regressors(lax$sim_data$col_pert)
-
-
-# Bootstrap data
-boot_env <- LoadIntoEnvironment(file.path(data_path, "bootstrap_results.Rdata"))
-
-
-# Simulation data
-sim_env <- LoadIntoEnvironment(file.path(data_path, "simulation.Rdata"))
-
-# Parital pooling data
-pp_env <- LoadIntoEnvironment(file.path(data_path, "partial_pooling.Rdata"))
+# Define plot objects and functions
+source(GetScriptLoc("balance_plots.R"))
+source(GetScriptLoc("refit_plots.R"))
+source(GetScriptLoc("pooling_plots_laxphilips.R"))
+source(GetScriptLoc("bootstrap_plot.R"))
+source(GetScriptLoc("weights_plot.R"))

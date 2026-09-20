@@ -70,64 +70,12 @@ for frequentist variance estimation.}
 \pause
 $$
 \begin{aligned}
-    \textrm{Running fifty MCMC parametric bootstraps:}\quad & \approx 79 \textrm{ hours} \\
-    \textrm{Computing approximate weights:}\quad &\AlexMrPawTimeSecs \textrm{ seconds}\\
+    \textrm{Running fifty MCMC parametric bootstraps:}\quad & \approx \AlexanderMCMCTimeMins \textrm{ minutes} \\
+    \textrm{Computing approximate weights:}\quad &\AlexanderMrplewTimeSecs \textrm{ seconds}\\
 \end{aligned}
 $$
 \end{frame}
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Real Data: Lax Philips}
-Analysis of national support for gay marriage.\footnote{Based on \textcite{kastellec:2010:laxmrp},
-see also \textcite{lax:2009:gay}.}
-
-\begin{itemize}
-    %
-    \item \textbf{Target population:} US Census Public Use Microdata Sample 2000
-    \item \textbf{Survey population:} Combined national-level polls from 2004
-    \item \textbf{Respose:}  ``Do you favor allowing gay and lesbian couples to marry legally?''
-    \item For regressors, use race, gender, age, education, state, region,
-        and continuous statewide religion and political characteristics, including
-        some analyst--selected interactions.
-    %
-\end{itemize}
-
-$$
-\begin{aligned}
-    \textrm{Survey observations:} &&  \surcol{\Nsur} ={}& \LaxNSur  \\
-    \textrm{Target observations (rows):} &&  \tarcol{\Ntar} ={}& \LaxNTar \\
-    \\
-    \textrm{Uncorrected survey mean:} && \surcol{\meansur \y_i} ={}& \LaxSurmean \\
-    \textrm{Raking:} && \muhat_\cal ={}& \LaxRaking \\
-    \textrm{MrP:} && \muhat_\mrp ={}& \LaxMrp
-        \quad(\textrm{Post. sd} = \LaxMrpSD)\\
-\end{aligned}
-$$
-%
-\end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\begin{frame}{Covariate balance for primary effects}
-\LaxImbalancePrimary{}
-\end{frame}
-
-
-\begin{frame}{Covariate balance for interaction effects}
-\LaxImbalanceInteraction{}
-\end{frame}
 
 
 
@@ -142,8 +90,8 @@ $$
     \vspace{-3em}
     $$
     \begin{aligned}
-        \textrm{Running ten MCMC refits:}\quad & \LaxRefitTimeHours \textrm{ hours} &
-        \textrm{Computing approximate weights:}\quad &\LaxMrPawTimeSecs \textrm{ seconds}\\
+        \textrm{Running ten MCMC refits:}\quad & \LaxMCMCTimeMins \textrm{ minutes} &
+        \textrm{Computing approximate weights:}\quad &\LaxMrplewTimeSecs \textrm{ seconds}\\
     \end{aligned}
     $$
 \end{frame}
@@ -419,17 +367,4 @@ $\surcol{\w_i^\mrp} \approx \nsur \frac{\partial \muhatmrp}{\partial \surcol{\y_
 
 
 
-
-
-
-
-\begin{frame}[t]{Partial Pooling}
-
-\centering
-By applying the same idea to subsets of the target population, \\you can measure
-\emph{MrP partial pooling}.\\[3em]
-\wholeslidefig{
-\PartialPoolingPlot{}
-}
-\end{frame}
 

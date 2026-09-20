@@ -1,33 +1,63 @@
-# make_weight_scatterplot <- function(analysis_list) {
-#   plt <-
-#     ggplot(analysis_list$basic_data$basic_metrics$weight_df) +
-#     geom_point(aes(x=w_mrpaw, y=w_raking * length(w_raking)), alpha=0.2) +
-#     geom_abline() +
-#     geom_vline(aes(xintercept=0)) +
-#     xlab(TeX("$w^{MRP}_i$")) +
-#     ylab(TeX("$w^{CAL}_i$"))
-#   return(plt)
-# }
 
+method_names <- c(
+  "mrplew"="MrPlew",
+  "raking"="Raking")
 
-# alex_weight_scatterplot <- make_weight_scatterplot(alex)
-# lax_weight_scatterplot <- make_weight_scatterplot(lax)
+GetWeightDf <- function(analysis_env) {
+  weight_df <-
+    data.frame(analysis_env$weight_df) %>%
+    mutate(analysis=analysis_env$name,
+           analysis_simple=analysis_env$simple_name) %>%
+    mutate(w_scale=w * analysis_env$save_list$n_obs_survey) %>%
+    mutate(method_name=method_names[method])
+  return(weight_df)
+}
 
+weight_df <-
+  bind_rows(
+    GetWeightDf(alexander),
+    GetWeightDf(laxphilips),
+    GetWeightDf(stories))
 
-analysis_list <- alex
-grid.arrange(
-  ggplot(analysis_list$basic_data$basic_metrics$weight_df) +
-    geom_histogram(aes(x=w_mrpaw), bins=100) +
-    geom_vline(aes(xintercept=0)) +
-    xlab(TeX("MrPlew weights $w^{MRP}_i$")) +
-    xlim(-6, 20)
-  ,
-  ggplot(analysis_list$basic_data$basic_metrics$weight_df) +
-    geom_histogram(aes(x=w_raking * length(w_raking)), bins=100) +
-    geom_vline(aes(xintercept=0)) +
-    xlab(TeX("Raking weights $w^{WGT}_i$")) +
-    geom_text(aes(x=10, y=1000,
-    label="Note: There are a \nfew outlier\nweights >> 20")) +
-    xlim(-6, 20)
-  , ncol=2
+w_thresh <- 30
+num_over_thresh <-
+  weight_df %>%
+  filter(analysis_simple=="alexander") %>%
+  filter(w_scale > w_thresh) %>%
+  nrow()
+
+weight_filtered_df <-
+  weight_df %>%
+  filter((analysis_simple != "alexander") | (w_scale < w_thresh))
+
+annotations <- data.frame(
+  analysis = alexander$name,
+  method_name = "Raking",
+  x = 15,
+  y = 1000,
+  label = sprintf("(%d raking weights > %0.f\nomitted from plot)",
+                  num_over_thresh, w_thresh)
 )
+
+weight_plt <-
+  ggplot(weight_filtered_df) +
+  geom_histogram(aes(x=w_scale), bins=90) +
+  facet_grid(method_name ~ analysis, scales="free") +
+  geom_text(data = annotations, aes(x = x, y = y, label = label),
+            color = "red", size = 3) +
+  xlab("Weights") + 
+  geom_vline(aes(xintercept=0))
+
+
+
+weight_plt_alexander <-
+  weight_filtered_df %>%
+  filter(analysis_simple == "alexander") %>%
+  ggplot() +
+  geom_histogram(aes(x=w_scale), bins=90) +
+  facet_grid(method_name ~ ., scales="free") +
+  geom_text(data = annotations, aes(x = x, y = y, label = label),
+            color = "red", size = 2) +
+  xlab("Weights") + ylab(NULL) +
+  geom_vline(aes(xintercept=0))
+

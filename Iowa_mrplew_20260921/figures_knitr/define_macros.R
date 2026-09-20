@@ -5,41 +5,56 @@
 # Define LaTeX macros that will let us automatically refer
 # to simulation and model parameters.
 DefineMacro <- function(macro_name, value, digits=3) {
-  #sprintf_code <- paste("%0.", digits, "f", sep="")
   value_string <- format(value, big.mark=",", digits=digits, scientific=FALSE)
   cat("\\newcommand{\\", macro_name, "}{", value_string, "}\n", sep="")
 }
 
-basic_metrics <- alex$basic_data$basic_metrics
-DefineMacro("AlexNSur", basic_metrics$n_survey)
-DefineMacro("AlexNTar", basic_metrics$n_target)
-DefineMacro("AlexSurmean", basic_metrics$survey_mean, digits=3)
-DefineMacro("AlexMrp", basic_metrics$mrp, digits=3)
-DefineMacro("AlexMrpSD", basic_metrics$mrp_sd, digits=3)
-DefineMacro("AlexRaking", basic_metrics$raking, digits=3)
-rm(basic_metrics)
+DefineMacros <- function(analysis_env, prefix) {
+  save_list <- analysis_env$save_list
+  DefineMacro(paste0(prefix, "NSur"), save_list$n_obs_survey)
+  DefineMacro(paste0(prefix, "NTar"), save_list$n_obs_poststrat)
 
-refit_data <- alex$refit_data
-DefineMacro("AlexRefitTimeHours",
-  as.numeric(refit_data$total_refit_time, units = "hours"), digits=1)
-DefineMacro("AlexMrPawTimeSecs",
-  as.numeric(refit_data$mean_mrpaw_time, units = "secs"), digits=1)
-rm(refit_data)
+  DefineMacro(paste0(prefix, "Ybar"), save_list$ybar, digits=3)
+  DefineMacro(paste0(prefix, "MrpMu"), save_list$mrp, digits=3)
+  DefineMacro(paste0(prefix, "RakingMu"), save_list$raking_mrp, digits=3)
+  DefineMacro(paste0(prefix, "NumBoots"), save_list$num_boots)
+  DefineMacro(paste0(prefix, "MCMCTimeMins"),
+              as.numeric(save_list$mcmc_time, units = "mins"),
+              digits=1)
+  DefineMacro(paste0(prefix, "MrplewTimeSecs"),
+              as.numeric(save_list$mrplew_time, units = "secs"),
+              digits=1)
 
-
-basic_metrics <- lax$basic_data$basic_metrics
-DefineMacro("LaxNSur", basic_metrics$n_survey)
-DefineMacro("LaxNTar", basic_metrics$n_target)
-DefineMacro("LaxSurmean", basic_metrics$survey_mean, digits=3)
-DefineMacro("LaxMrp", basic_metrics$mrp, digits=3)
-DefineMacro("LaxMrpSD", basic_metrics$mrp_sd, digits=3)
-DefineMacro("LaxRaking", basic_metrics$raking, digits=3)
-rm(basic_metrics)
+  # All these standard deviations are after scaling by sqrt{N_sur}
+  DefineMacro(paste0(prefix, "MrPSd"), analysis_env$freq_sd_df$mrplew, digits=3)
+  DefineMacro(paste0(prefix, "RakingSd"), analysis_env$freq_sd_df$raking, digits=3)
+  DefineMacro(paste0(prefix, "MrPPostSd"), analysis_env$save_list$mrp_sd_rootn, digits=3)
+}
 
 
-refit_data <- lax$refit_data
-DefineMacro("LaxRefitTimeHours",
-  as.numeric(refit_data$total_refit_time, units = "hours"), digits=1)
-DefineMacro("LaxMrPawTimeSecs",
-  as.numeric(refit_data$mean_mrpaw_time, units = "secs"), digits=1)
-rm(refit_data)
+DefineMacros(alexander, "Alexander")
+DefineMacros(stories, "Stories")
+DefineMacros(laxphilips, "Lax")
+
+
+DefineRefitMacros <- function(refit_env, prefix) {
+  DefineMacro(paste0(prefix, "Colpert"), 
+              paste0("\\texttt{\\detokenize{",
+              refit_env$save_list$col_pert, "}}"))
+
+  n_y <- length(refit_env$y_list)
+  prop_changed <- mean(abs(refit_env$y_list[[n_y]] - refit_env$y_list[[1]]))
+  DefineMacro(paste0(prefix, "Pctflipped"), 100 * prop_changed, digits=1)
+
+  DefineMacro(paste0(prefix, "Shrink"), refit_env$save_list$shrink, digits=1)
+
+}
+# Define the refit macros
+DefineRefitMacros(alexander_refit, "Alexander")
+DefineRefitMacros(laxphilips_refit, "Lax")
+
+# Also consider saving
+# alexander_refit$save_list$delta_max
+# alexander_refit$save_list$delta_max_post_sds
+# alexander_refit$save_list$shrink
+
