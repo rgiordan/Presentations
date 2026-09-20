@@ -282,22 +282,26 @@ SetFullImageSize()
 % Plots that were not in the paper
 
 
-\newcommand{\SimulationPlot}{
+% I think I'll take this one out
+% \newcommand{\SimulationPlot}{
+% <<>>=
+% figcap <- paste0("Simulated path through the space of responses")
+% @
+% <<simplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% source("figures_knitr/simulation_fig.R", print.eval=TRUE)
+% @
+% }
+
 <<>>=
-figcap <- paste0("Simulated path through the space of responses")
+source("figures_knitr/weights_plot.R")
 @
-<<simplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
-source("figures_knitr/simulation_fig.R", print.eval=TRUE)
-@
-}
 
 \newcommand{\AlexanderWeightPlot}{
 <<>>=
 figcap <- paste0("Weight comparison for the Name Change dataset")
 @
 <<alexanderweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
-#print(alex_weight_scatterplot)
-source("figures_knitr/weights_plot.R")
+print(weight_plt_alexander)
 @
 }
 

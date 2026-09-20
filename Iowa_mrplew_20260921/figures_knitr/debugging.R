@@ -13,4 +13,6 @@ source(file.path(paper_directory, "figures_knitr/define_macros.R"))
 source(file.path(paper_directory, "figures_knitr/weights_plot.R"), 
        print.eval=TRUE)
 
-weight_biv_plt_lax
+
+alexander$save_list$mrplew_time
+alexander$save_list$mrp_sd

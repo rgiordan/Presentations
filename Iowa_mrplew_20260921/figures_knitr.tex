@@ -21,7 +21,8 @@
 \newcommand{\AlexanderMrplewTimeSecs}{664}
 \newcommand{\AlexanderMrPSd}{1.06}
 \newcommand{\AlexanderRakingSd}{1.39}
-\newcommand{\AlexanderMrPPostSd}{1.09}
+\newcommand{\AlexanderMrPRootNPostSd}{1.09}
+\newcommand{\AlexanderMrPPostSd}{0.0165}
 \newcommand{\StoriesNSur}{4,803}
 \newcommand{\StoriesNTar}{406,886}
 \newcommand{\StoriesYbar}{0.539}
@@ -32,7 +33,8 @@
 \newcommand{\StoriesMrplewTimeSecs}{5}
 \newcommand{\StoriesMrPSd}{0.523}
 \newcommand{\StoriesRakingSd}{0.523}
-\newcommand{\StoriesMrPPostSd}{0.527}
+\newcommand{\StoriesMrPRootNPostSd}{0.527}
+\newcommand{\StoriesMrPPostSd}{0.0076}
 \newcommand{\LaxNSur}{6,341}
 \newcommand{\LaxNTar}{994,486}
 \newcommand{\LaxYbar}{0.333}
@@ -43,7 +45,8 @@
 \newcommand{\LaxMrplewTimeSecs}{7}
 \newcommand{\LaxMrPSd}{1.27}
 \newcommand{\LaxRakingSd}{0.583}
-\newcommand{\LaxMrPPostSd}{3.07}
+\newcommand{\LaxMrPRootNPostSd}{3.07}
+\newcommand{\LaxMrPPostSd}{0.0386}
 \newcommand{\AlexanderColpert}{\texttt{\detokenize{decade_married_rk2009+:educ_group>BA}}}
 \newcommand{\AlexanderPctflipped}{2}
 \newcommand{\AlexanderShrink}{0}
@@ -415,31 +418,42 @@ $\muhat[\cal]$ & $\AlexanderRakingMu{}$ & $\LaxRakingMu{}$ & $\StoriesRakingMu{}
 % Plots that were not in the paper
 
 
-\newcommand{\SimulationPlot}{
+% I think I'll take this one out
+% \newcommand{\SimulationPlot}{
+% <<>>=
+% figcap <- paste0("Simulated path through the space of responses")
+% @
+% <<simplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% source("figures_knitr/simulation_fig.R", print.eval=TRUE)
+% @
+% }
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'sim\_env' not found}}\end{kframe}
-\end{knitrout}
-}
 
 \newcommand{\AlexanderWeightPlot}{
 
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.441\linewidth]{figure/alexanderweightplot-1} 
 
 }
 
+\caption[Weight comparison for the Name Change dataset]{Weight comparison for the Name Change dataset}\label{fig:alexanderweightplot}
+\end{figure}
 
-\newcommand{\LaxWeightPlot}{
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error:\\\#\# ! object 'lax\_weight\_scatterplot' not found}}\end{kframe}
 \end{knitrout}
 }
+
+
+% \newcommand{\LaxWeightPlot}{
+% <<>>=
+% figcap <- paste0("Weight comparison for the Gay Marriage dataset")
+% @
+% <<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+% print(lax_weight_scatterplot)
+% @
+% }
 
 
 \newcommand{\AlexanderPredictionFigOne}{

@@ -28,7 +28,8 @@ DefineMacros <- function(analysis_env, prefix) {
   # All these standard deviations are after scaling by sqrt{N_sur}
   DefineMacro(paste0(prefix, "MrPSd"), analysis_env$freq_sd_df$mrplew, digits=3)
   DefineMacro(paste0(prefix, "RakingSd"), analysis_env$freq_sd_df$raking, digits=3)
-  DefineMacro(paste0(prefix, "MrPPostSd"), analysis_env$save_list$mrp_sd_rootn, digits=3)
+  DefineMacro(paste0(prefix, "MrPRootNPostSd"), analysis_env$save_list$mrp_sd_rootn, digits=3)
+  DefineMacro(paste0(prefix, "MrPPostSd"), analysis_env$save_list$mrp_sd, digits=3)
 }
 
 

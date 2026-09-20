@@ -834,6 +834,13 @@ INPUT ./static_figures/guinea_pig.png
 INPUT ./static_figures/guinea_pig.png
 INPUT ./bootstrap.tex
 INPUT ./bootstrap.tex
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
 INPUT ./figure/bootplot-1.png
 INPUT ./figure/bootplot-1.png
 INPUT ./figure/bootplot-1.png
@@ -845,6 +852,10 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT ./figure/bootplot-1.png
 INPUT ./figure/bootplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
+INPUT ./figure/alexanderweightplot-1.png
 INPUT ./balance.tex
 INPUT ./balance.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm

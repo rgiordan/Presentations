@@ -40,7 +40,7 @@ variances, see, e.g.~, \textcite{deville:1993:generalizedraking,fuller:2011:samp
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[t]{Standard error estimation experiment}
+\begin{frame}[c]{Standard error estimation experiment}
 
 \wholeslidefig{\BootstrapPlot{}}
 
@@ -49,8 +49,13 @@ variances, see, e.g.~, \textcite{deville:1993:generalizedraking,fuller:2011:samp
 \pause
 $$
 \begin{aligned}
-    \textrm{Running fifty MCMC parametric bootstraps:}\quad & \approx \AlexanderMCMCTimeMins \textrm{ minutes} \\
-    \textrm{Computing approximate weights:}\quad &\AlexanderMrplewTimeSecs \textrm{ seconds}\\
+    \textrm{Running }\AlexanderNumBoots
+        \textrm{ MCMC bootstraps:}\quad & 
+        \approx 
+            \AlexanderNumBoots \times \AlexanderMCMCTimeMins \textrm{ minutes} \\
+    \textrm{Computing approximate weights:}\quad 
+        %&\AlexanderMrplewTimeSecs \textrm{ seconds} \\ % Messed up!
+        &\textrm{ A few seconds} \\
 \end{aligned}
 $$
 \end{frame}

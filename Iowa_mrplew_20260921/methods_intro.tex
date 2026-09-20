@@ -208,51 +208,51 @@ $$
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[t]{Logistic regression is generally nonlinear}
+% \begin{frame}[t]{Logistic regression is generally nonlinear}
 
-\def\alphav{\mathbf{\alpha}}
-%
-\begin{itemize}
-    \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
-%    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
-\end{itemize}
+% \def\alphav{\mathbf{\alpha}}
+% %
+% \begin{itemize}
+%     \item Suppose the model is $\m(\x^\trans \theta) = \mathrm{Logistic}(\x^\trans \theta)$, with MLE $\thetahat$.
+% %    \item MrP is $\muhatmrp = \tarcol{\meantar \m(\x_j^\trans \thetahat)}$.
+% \end{itemize}
 
-The map from $\surcol{\Ysur} \mapsto \tarcol{\m(\x_j^\trans \thetahat(\surcol{\Ysur}))}$ is
-\emph{typically globally nonlinear}.
+% The map from $\surcol{\Ysur} \mapsto \tarcol{\m(\x_j^\trans \thetahat(\surcol{\Ysur}))}$ is
+% \emph{typically globally nonlinear}.
 
-\onslide<2->{
-\textbf{Example:} $x_i \sim \mathrm{Unif}[-0.5, 0.5]$, $\y_i \iid \mathrm{Binomial}(1/2)$.
-%
-Let $\ytil_i(\delta) = \y_i + \delta \ind{x_i > 0.2}$.
+% \onslide<2->{
+% \textbf{Example:} $x_i \sim \mathrm{Unif}[-0.5, 0.5]$, $\y_i \iid \mathrm{Binomial}(1/2)$.
+% %
+% Let $\ytil_i(\delta) = \y_i + \delta \ind{x_i > 0.2}$.
 
-The path $\surcol{\delta \mapsto \Ysur(\delta)}$ is well-defined even when $\y$ is supposed to be binary!
-}
+% The path $\surcol{\delta \mapsto \Ysur(\delta)}$ is well-defined even when $\y$ is supposed to be binary!
+% }
 
-\only<3>{
-Many estimators are also well-defined for small enough $\delta$ under mild conditions.\\
+% \only<3>{
+% Many estimators are also well-defined for small enough $\delta$ under mild conditions.\\
 
-(E.g., OLS, logistic regression MLE, Bayesian posterior.)
+% (E.g., OLS, logistic regression MLE, Bayesian posterior.)
 
-% $\Rightarrow$ Each $\delta$ gives a different OLS fit $\betahat(\delta)$ and logistic regression coefficient $\thetahat(\delta)$.
+% % $\Rightarrow$ Each $\delta$ gives a different OLS fit $\betahat(\delta)$ and logistic regression coefficient $\thetahat(\delta)$.
 
-% $\Rightarrow$ Each $\delta$ gives a different prediction $\yhat(\delta)$ at a given $\x$.
-}
+% % $\Rightarrow$ Each $\delta$ gives a different prediction $\yhat(\delta)$ at a given $\x$.
+% }
 
 
-\only<4>{
-For OLS, $\delta \mapsto \tarcol{\betahat(\delta) x}$ is linear.
-%
-For logistic regression $\delta \mapsto \tarcol{m(\thetahat(\delta) x_j)}$ is non-linear.
-\wholeslidefig{
-\SimulationPlot{}
-}
-}
+% \only<4>{
+% For OLS, $\delta \mapsto \tarcol{\betahat(\delta) x}$ is linear.
+% %
+% For logistic regression $\delta \mapsto \tarcol{m(\thetahat(\delta) x_j)}$ is non-linear.
+% \wholeslidefig{
+% \SimulationPlot{}
+% }
+% }
 
-\end{frame}
+% \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
