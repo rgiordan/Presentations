@@ -541,6 +541,59 @@
       \field{title}{Struggles with survey weighting and regression modeling}
       \field{year}{2007}
     \endentry
+    \entry{giordano:2026:mrplew}{article}{}
+      \name{author}{5}{}{%
+        {{hash=5826925894a0d58142c30cfa901c7dac}{%
+           family={Giordano},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=edd99b6cf7abf727d7c3292719a14567}{%
+           family={Cima},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=208dd9aecffb2abc7c88d16b0de0eda0}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2491cdbced5f8aed44f79e96e75f91dc}{%
+           family={Hartman},
+           familyi={H\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=0e9e22f570a06b82773d02ce4aad5dde}{%
+           family={Feller},
+           familyi={F\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{037850bb7d258014b077177460842119}
+      \strng{fullhash}{2f249440c030481e464635270f4d68e1}
+      \strng{bibnamehash}{2f249440c030481e464635270f4d68e1}
+      \strng{authorbibnamehash}{2f249440c030481e464635270f4d68e1}
+      \strng{authornamehash}{037850bb7d258014b077177460842119}
+      \strng{authorfullhash}{2f249440c030481e464635270f4d68e1}
+      \field{labelalpha}{Gio+26}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{Locally Equivalent Weights for Multilevel Regression and Poststratification}
+      \field{year}{2026}
+      \verb{eprint}
+      \verb 2606.04250
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2606.04250
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2606.04250
+      \endverb
+    \endentry
     \entry{gustafson:1996:localposterior}{article}{}
       \name{author}{1}{}{%
         {{hash=8a755d2d13c958222d8f8fb09da639c9}{%

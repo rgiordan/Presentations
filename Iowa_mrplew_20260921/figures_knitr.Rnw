@@ -170,7 +170,7 @@ PlotBalanceForEnv(stories, interactions=TRUE, threshold=0.5)
 
 \newcommand{\AlexanderRefitPlot}{
 <<>>=
-figcap <- paste0("Refit")
+figcap <- paste0("Name Change dataset refit")
 @
 <<alexanderrefitplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
 print(alexander_refit_plot)
@@ -180,7 +180,7 @@ print(alexander_refit_plot)
 
 \newcommand{\LaxRefitPlot}{
 <<>>=
-figcap <- paste0("Refit")
+figcap <- paste0("Same-sex marriage dataset refit")
 @
 <<laxphilipsrefitplot, cache=cache, fig.show='hold', fig.cap=figcap, fig.pos="H", fig.scap="">>=
 print(laxphilips_refit_plot)
