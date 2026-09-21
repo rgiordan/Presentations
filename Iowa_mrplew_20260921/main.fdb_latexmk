@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber main"] 1789959915 "main.bcf" "main.bbl" "main" 1789959932
-  "main.bcf" 1789959932 117199 a37fd97b3e6641394a072d369aa26b4f "lualatex"
+["biber main"] 1789960093 "main.bcf" "main.bbl" "main" 1789960142
+  "main.bcf" 1789960141 117199 a37fd97b3e6641394a072d369aa26b4f "lualatex"
   "references.bib" 1789959824 7358 a3fd1fcc73bd9a7fea8dc3d9b615d1d6 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1789959926 "main.tex" "main.pdf" "main" 1789959932
+["lualatex"] 1789960136 "main.tex" "main.pdf" "main" 1789960142
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -447,7 +447,7 @@
   "balance.tex" 1789945264 6964 f386c04939b109247552b9a77f76260b ""
   "binary_y.tex" 1789924330 2248 55a31b4f638be06739e1bcdb691378c5 ""
   "bootstrap.tex" 1789959907 2495 94b8e046217bb36a94834d36ee1b9d96 ""
-  "experiment_intro.aux" 1789959929 4615 9386dbabf33578a689e289830ee21b7e "lualatex"
+  "experiment_intro.aux" 1789960139 4615 9386dbabf33578a689e289830ee21b7e "lualatex"
   "experiment_intro.tex" 1789943500 1824 945f4c3135acbe5524f0a759f5ad0bb2 ""
   "extra_slides.tex" 1789945075 8823 e78e470c39bef1509bba1a13167226c2 ""
   "figure/alexanderbalanceplot-1.png" 1789959633 105403 f235f91b1a62d7e476fed5a872b0ba7f ""
@@ -460,14 +460,14 @@
   "figure/laxphilipsrefitplot-1.png" 1789959635 108741 db8dc93c61f4eb5f1bfc536dc12d7138 ""
   "figure/laxweightplot-1.png" 1789959637 28258 ebf9ec689d1d6eb8064628373b95365e ""
   "figures_knitr.tex" 1789959637 12043 ca78dcbb7242c62a071bb5e2c9ecfbf8 ""
-  "future_work.tex" 1789945061 2087 84961d602ace347b0e60e953c12b9880 ""
+  "future_work.tex" 1789960134 2345 337c5fc8f50ef7c816a89d266531f574 ""
   "introduction.tex" 1789959622 3658 58d52b989c87aed458296ce7c2d6f997 ""
   "lax_results.tex" 1789959454 4063 882e63d8aa079320a6b86aa34663430d ""
-  "main.aux" 1789959932 20306 227c07dfa9423fd140057a145d3d9c8b "lualatex"
-  "main.bbl" 1789959915 35044 4cfd2eabd133a8f9e8e33f8f6218326d "biber main"
-  "main.nav" 1789959932 3751 4311252fba859e5ef2c1e098bd0b11b8 "lualatex"
-  "main.out" 1789959928 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.run.xml" 1789959932 2346 a92eb0f297ccf74f51e282d944c30a10 "lualatex"
+  "main.aux" 1789960141 20306 227c07dfa9423fd140057a145d3d9c8b "lualatex"
+  "main.bbl" 1789960094 35044 4cfd2eabd133a8f9e8e33f8f6218326d "biber main"
+  "main.nav" 1789960141 3751 4311252fba859e5ef2c1e098bd0b11b8 "lualatex"
+  "main.out" 1789960138 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.run.xml" 1789960141 2346 a92eb0f297ccf74f51e282d944c30a10 "lualatex"
   "main.tex" 1789945277 1779 ea5f994fd9f41174b9d052b5d64c22b8 ""
   "methods_intro.tex" 1789959360 9054 aa79e078347aa406880fe1d2f4615c82 ""
   "static_figures/alice.jpg" 1789958765 13170 bee87fd4d96042960ced90e03e7db734 ""

@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[35] biber:340> INFO - === Sun Sep 20, 2026, 20:05:15
-[42] Biber.pm:418> INFO - Reading 'main.bcf'
-[77] Biber.pm:972> INFO - Found 25 citekeys in bib section 0
-[83] Biber.pm:4383> INFO - Processing section 0
-[88] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[89] bibtex.pm:1713> INFO - LaTeX decoding ...
-[99] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[190] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[191] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[191] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[191] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[204] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[211] bbl.pm:757> INFO - Output to main.bbl
-[211] Biber.pm:130> WARN - legacy month field 'April' in entry 'datademocracyblog:2025' is not an integer - this will probably not sort properly.
-[211] Biber.pm:130> WARN - legacy month field 'Apr' in entry 'cohen:2019:namechange' is not an integer - this will probably not sort properly.
-[211] Biber.pm:132> INFO - WARNINGS: 2
+[41] biber:340> INFO - === Sun Sep 20, 2026, 20:08:14
+[49] Biber.pm:418> INFO - Reading 'main.bcf'
+[87] Biber.pm:972> INFO - Found 25 citekeys in bib section 0
+[94] Biber.pm:4383> INFO - Processing section 0
+[99] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[100] bibtex.pm:1713> INFO - LaTeX decoding ...
+[111] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[207] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[207] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[207] Biber.pm:4203> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[207] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[220] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[228] bbl.pm:757> INFO - Output to main.bbl
+[228] Biber.pm:130> WARN - legacy month field 'April' in entry 'datademocracyblog:2025' is not an integer - this will probably not sort properly.
+[228] Biber.pm:130> WARN - legacy month field 'Apr' in entry 'cohen:2019:namechange' is not an integer - this will probably not sort properly.
+[228] Biber.pm:132> INFO - WARNINGS: 2
