@@ -15,4 +15,4 @@ source(file.path(paper_directory, "figures_knitr/weights_plot.R"),
 
 source("figures_knitr/weights_plot.R")
 
-weight_plt_lax
+

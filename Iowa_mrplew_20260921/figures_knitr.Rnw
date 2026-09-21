@@ -306,14 +306,14 @@ print(weight_plt_alexander)
 }
 
 
-% \newcommand{\LaxWeightPlot}{
-% <<>>=
-% figcap <- paste0("Weight comparison for the Gay Marriage dataset")
-% @
-% <<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
-% print(lax_weight_scatterplot)
-% @
-% }
+\newcommand{\LaxWeightPlot}{
+<<>>=
+figcap <- paste0("Weight comparison for the Same-sex marriage dataset")
+@
+<<laxweightplot, cache=cache, fig.show='hold', fig.cap=figcap>>=
+print(weight_plt_lax)
+@
+}
 
 
 % \newcommand{\AlexanderPredictionFigOne}{
@@ -341,7 +341,7 @@ print(weight_plt_alexander)
 
 % \newcommand{\LaxPredictionFigOne}{
 % <<>>=
-% figcap <- paste0("Predictions on binary data for the Gay Marriage dataset")
+% figcap <- paste0("Predictions on binary data for the Same-sex marriage dataset")
 % @
 % <<laxcontpred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 % print(lax_refit_plots$base_plot)
@@ -352,7 +352,7 @@ print(weight_plt_alexander)
 
 % \newcommand{\LaxPredictionFigTwo}{
 % <<>>=
-% figcap <- paste0("Predictions and refit on binary data for the Gay Marriage dataset")
+% figcap <- paste0("Predictions and refit on binary data for the Same-sex marriage dataset")
 % @
 % <<laxdiscretepred, cache=cache, fig.show='hold', fig.cap=figcap>>=
 % print(lax_refit_plots$plt1)

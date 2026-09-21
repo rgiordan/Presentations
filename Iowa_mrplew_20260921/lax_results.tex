@@ -1,5 +1,81 @@
 
 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Subgroup contributions: Same-Sex Marriage Survey}
+Analysis of US state-level support for same-sex marriage\footnote{
+    Based on \textcite{lax:2009:gay,kastellec:2010:laxmrp}.}.
+
+\begin{itemize}
+    %
+    \item \surcol{\textbf{Survey population:}} Five consistently-coded national polls from 2004 
+        ($\surcol{\Nsur ={}\LaxNSur}$)
+    \item \surcol{\textbf{Response:}}  $\y = 1$ encodes support for same-sex marriage, $\y = 0$ opposition
+       or no opinion.
+    \item \tarcol{\textbf{Target population:}} US Census 5\% PUMS data for CA from 2000
+    %
+\end{itemize}
+
+\pause
+Let's analyze this data with two methods: \textbf{MrP} and \textbf{calibration weighting} (CW).
+
+\pause
+MrP computed with \texttt{brms} \parencite{brms}:\\
+{
+\tiny
+$$
+\begin{aligned}
+\y \sim{}& \texttt{logit}\Big(~\texttt{(1 | race.female) + (1 | age.cat) + 
+  (1 | edu.cat) + (1 | age.edu.cat) +}
+  \\{}&\qquad\quad\;\; \texttt{(1 | state) + (1 | region) + (1 | poll) +
+  p.relig.full + p.kerry.full}~\Big)
+\end{aligned}
+$$
+}
+%
+CW used raking on the following coarsened regressors:
+({\tiny{\texttt{survey::calibrate}}} \textcite{lumley:2025:survey}):
+{
+\tiny
+$$
+\texttt{female, edu.cat, age.cat, race.wbh, race.w.female, age.edu.low}
+$$
+}
+%
+\pause
+%
+\begin{minipage}{0.5\textwidth}
+\vspace{-1.5em}
+$$
+\begin{aligned}
+    \textrm{Raw survey mean:} && \surcol{\meansur \y_i} ={}& \LaxYbar \\
+    \textrm{Raking:} && \muhatcw ={}& \LaxRakingMu \\
+    \textrm{MrP:} && \muhatmrp ={}& \LaxMrpMu\\
+\end{aligned}
+$$
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\vspace{-1.5em}
+    \pause
+    \textbf{How are MrP and raking are using the data differently?}
+\end{minipage}
+%
+%
+\end{frame}
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,14 +85,14 @@
 \centering
 
 \begin{minipage}{0.7\textwidth}
-\WeightsPlotLax{}        
+\LaxWeightPlot{}        
 \end{minipage}
 
 \onslide<2->{
     What does the difference between these weights mean in terms of
     \begin{itemize}
-        \item Frequentist sampling variance (standard errors)?
-        \item Covariate balance / external validity?
+        \item \sout{Frequentist sampling variance (standard errors)?}
+        \item \sout{Covariate balance / external validity?}
         \item Subgroup contributions?
     \end{itemize}
 }
@@ -80,62 +156,21 @@ Then $
     }_{\textrm{Texas's contribution}}$.
 }
 
-
-\only<5>{
-\begin{block}{Theorem: \parencite{giordano:2026:mrplew} (informal)}
-    Take $\surcol{\ytil_i = \y_i + \delta \f(\x_i)}$.
-    We state conditions under which
-$$
-\onslide<4->{\sup_{f \in \mathcal{F}}}
-\abs{
-    \muhatmrp[\Ytil] - \muhatmrp
-    - \delta \surcol{\sumsur \w_i^\mrp \f(\x_i)}
-}
-\only<1>{ = \textrm{Small}}
-\only<2->{ = O(\delta^2)}
-\onslide<3->{\textrm{ as }N \rightarrow \infty}
-$$
-\onslide<4->{
-    ...for a very broad class of $\mathcal{F}$.
-    \footnote{$\mathcal{F}$ can be any Donsker class of measurable functions
-    with uniformly bounded
-    $\expect{}{\norm{\x} \f(\x)}_2^2 $.}
-}
-\end{block}
-
-\textbf{Uniformity helps justify searching over a large class of perturbations $\f$.}
-
-}
-
-
-
-\end{frame}
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Same-Sex Marriage subgroup contribution}
-Summarize state contribution: $\sum_{i \textrm{ in state}} \w_i$
-\centering
 \begin{minipage}{0.9\textwidth}
     \centering
-\LaxphilipsCAPoolingPlot{}
-\onslide<2->{
-\LaxphilipsMOPoolingPlot{}
+\only<5>{
+    \LaxphilipsCAPoolingPlot{}
+}
+\only<6>{
+    \LaxphilipsMOPoolingPlot{}
 }
 \end{minipage}
 
+
 \end{frame}
+
+
+
 
 
 

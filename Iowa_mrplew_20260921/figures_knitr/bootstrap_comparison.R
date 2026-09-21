@@ -12,7 +12,7 @@ clean_sd_method <- function(method) {
 clean_dataset_name <- function(analysis) {
   case_when(
     analysis == "alexander" ~ "Name change dataset",
-    analysis == "laxphilips" ~ "Gay marriage dataset",
+    analysis == "laxphilips" ~ "Same-sex marriage dataset",
     TRUE ~ "UNKNOWN"
   )
 }

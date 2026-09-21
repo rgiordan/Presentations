@@ -3,6 +3,9 @@
 \beamer@slide {fig:alexanderweightplot}{36}
 \beamer@slide {fig:alexanderbalanceplot}{51}
 \beamer@slide {fig:alexanderbalanceplotinteractions}{52}
-\beamer@slide {fig:alexanderrefitplot}{63}
-\beamer@slide {fig:bootplot}{74}
-\beamer@slide {fig:laxphilipsrefitplot}{76}
+\beamer@slide {fig:laxweightplot}{58}
+\beamer@slide {fig:laxphilipscapoolingplot}{66}
+\beamer@slide {fig:laxphilipsmopoolingplot}{66}
+\beamer@slide {fig:alexanderrefitplot}{78}
+\beamer@slide {fig:bootplot}{89}
+\beamer@slide {fig:laxphilipsrefitplot}{91}
