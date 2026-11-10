@@ -302,79 +302,6 @@ methods to solve it:
 
 
 
-    
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% \begin{frame}[t]{Notation}
-% %
-% % \begin{align*}
-% %     \text{Parameter: }& \theta \in \mathbb{R}^{\thetadim} &
-% %     \text{Data: }& \y &
-% %     \text{Log joint: }& \logjoint
-% % \end{align*}
-% % \hrulefill
-
-
-% We will study \textbf{ADVI}, a particular BBVI method
-% \citep{kucukelbir:2017:advi}.
-
-% ADVI specifies a family $\qdom$ of $\thetadim$-dimensional Gaussian
-% distributions, parameterized by $\eta \in \etadom$, encoding the means and
-% covariances.
-% %
-% The covariances can either be
-% %
-% \begin{itemize}
-% \item Diagonal: ``Mean-field'' (MF) approximation, $\etadim = 2 \thetadim$
-% \item Any PD matrix: 
-%     ``Full-rank'' (FR) approximation, 
-%         $\etadim = \thetadim + \thetadim  (\thetadim - 1) / 2$
-% \end{itemize}
-% %
-
-% \pause
-% \hrulefill
-
-% ADVI tries to find
-% %
-% \begin{align*}
-% %
-% \argmin_{\q \in \qdom} 
-% \mathrm{KL}\left(\q(\theta | \eta) || \post \right) ={}&
-% \argmin_{\eta \in \etadom} \klfullobj{\eta} 
-% \quad\textrm{where }\\
-% \klfullobj{\eta} :={}&
-% % \expect{\q(\theta \vert \eta)}{\log \q(\theta \vert \eta)}
-% % -\expect{\q(\theta \vert \eta)}{\logjoint}
-% \undernote{\expect{\normz}{\log \q(\theta(\z, \eta) \vert \eta)}}
-% {\text{Available in closed form}} -
-% \undernote{\expect{\normz}{\log \p(\theta(\z, \eta), \y)}}
-% {\red{\text{Typically intractable}}}.
-% %
-% \end{align*}
-% %
-% The final line uses the ``reparameterization trick''
-% with standard Gaussian $\z \sim \normz$. 
-
-% \pause
-% \hrulefill
-
-% ADVI is an instance of the \textit{general problem} of finding
-% %
-% \begin{align*}
-% %
-% \argmin_{\eta} F(\eta)
-% \quad\text{ where }\quad F(\eta) := \expect{\normz}{f(\eta, \z)}.
-% %
-% \end{align*}
-
-
-% \end{frame}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -477,6 +404,35 @@ Take \blue{better steps}, easily \green{assess convergence}, with less tuning.
 
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Random objectives}
+  \centering
+  % single panel: use a smaller width
+  \animategraphics[width=0.6\textwidth,controls=all,autoplay]{3}{sg_saa_animations/1_draws}{}{}
+\end{frame}
+
+\begin{frame}{Stochastic gradient}
+  \centering
+  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/2_sg}{}{}
+\end{frame}
+
+\begin{frame}{Sample average approximation}
+  \centering
+  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/3_saa}{}{}
+\end{frame}
+
+\begin{frame}{Both are random}
+  \centering
+  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/4_ensemble}{}{}
+\end{frame}
+
+    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
