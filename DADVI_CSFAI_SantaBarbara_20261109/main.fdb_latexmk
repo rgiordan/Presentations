@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1794614878 "main.aux" "main.bbl" "main" 1794614946
+["bibtex main"] 1794614878 "main.aux" "main.bbl" "main" 1794634210
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1794614946 10907 4754f8a4f1294105833aae00a87cd1c5 "lualatex"
+  "main.aux" 1794634210 10907 4754f8a4f1294105833aae00a87cd1c5 "lualatex"
   "references.bib" 1794614783 15297 c031e7b8105dd818c20f13a806164cc4 ""
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1794614943 "main.tex" "main.pdf" "main" 1794614946
+["lualatex"] 1794634207 "main.tex" "main.pdf" "main" 1794634210
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-bold.luc" 1713476536 156545 55a85c1ac0d2d5ade86d1602b4fbc000 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-boldoblique.luc" 1713476536 158183 fabf98c151f6493d58562b9a1d71b717 ""
   "/home/rgiordan/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/firamono-medium.luc" 1713476536 157056 a864ba04649355f4738829358b19eaa0 ""
@@ -338,11 +338,11 @@
   "figure/posterior_sd_graph-1.png" 1794614823 436480 9c472eaf8e71f89e1b28ae5507f82b22 ""
   "figure/runtimes_graph-1.png" 1794614821 127448 c7d6e7b47bc678ee85c242498126ee6d ""
   "figures_knitr.tex" 1794614824 8507 53d55ba55d8d5161eb62458bf7e38abf ""
-  "main.aux" 1794614946 10907 4754f8a4f1294105833aae00a87cd1c5 "lualatex"
+  "main.aux" 1794634210 10907 4754f8a4f1294105833aae00a87cd1c5 "lualatex"
   "main.bbl" 1794614878 4848 3024112fd043f1ae0c85eaaff7d3aec2 "bibtex main"
-  "main.nav" 1794614946 2619 c4187b0a16cd6a6f1f18957c4b6034b9 "lualatex"
-  "main.out" 1794614944 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "main.tex" 1794614941 26641 4179844b729cd7a9c8f58ce94dec5cc6 ""
+  "main.nav" 1794634210 2619 c4187b0a16cd6a6f1f18957c4b6034b9 "lualatex"
+  "main.out" 1794634208 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "main.tex" 1794634205 27090 0e57718b56fa1de1de88de67982a3969 ""
   "sg_saa_animations/1_draws.pdf" 1794343917 88176 494b782e5e7a5e1450b64491392af4d6 ""
   "sg_saa_animations/2_sg.pdf" 1794343917 187969 8ac4f41c3df764228ae6d58a040cbf02 ""
   "sg_saa_animations/3_saa.pdf" 1794343917 456459 462e2df323346de3bf608727d3113ba6 ""

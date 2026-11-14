@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  13 NOV 2026 16:09
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2026.2.2)  13 NOV 2026 21:30
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1554,91 +1554,91 @@ Overfull \vbox (14.71205pt too high) detected at line 289
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 1>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page1 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr0>
 <sg_saa_animations/1_draws.pdf, id=187, page=2, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 2>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page2 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr1>
 <sg_saa_animations/1_draws.pdf, id=190, page=3, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 3>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page3 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr2>
 <sg_saa_animations/1_draws.pdf, id=193, page=4, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 4>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page4 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr3>
 <sg_saa_animations/1_draws.pdf, id=196, page=5, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 5>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page5 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr4>
 <sg_saa_animations/1_draws.pdf, id=199, page=6, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 6>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page6 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr5>
 <sg_saa_animations/1_draws.pdf, id=202, page=7, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 7>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page7 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr6>
 <sg_saa_animations/1_draws.pdf, id=205, page=8, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 8>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page8 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr7>
 <sg_saa_animations/1_draws.pdf, id=208, page=9, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 9>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page9 used on input li
-ne 302.
+ne 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr8>
 <sg_saa_animations/1_draws.pdf, id=211, page=10, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 10>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page10 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr9>
 <sg_saa_animations/1_draws.pdf, id=214, page=11, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 11>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page11 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr10>
 <sg_saa_animations/1_draws.pdf, id=217, page=12, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 12>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page12 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr11>
 <sg_saa_animations/1_draws.pdf, id=220, page=13, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 13>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page13 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf>
 <a0,fr12>
@@ -1646,49 +1646,49 @@ ine 302.
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 14>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page14 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr13>
 <sg_saa_animations/1_draws.pdf, id=226, page=15, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 15>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page15 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr14>
 <sg_saa_animations/1_draws.pdf, id=229, page=16, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 16>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page16 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr15>
 <sg_saa_animations/1_draws.pdf, id=232, page=17, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 17>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page17 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr16>
 <sg_saa_animations/1_draws.pdf, id=235, page=18, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 18>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page18 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr17>
 <sg_saa_animations/1_draws.pdf, id=238, page=19, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 19>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page19 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr18>
 <sg_saa_animations/1_draws.pdf, id=241, page=20, 260.172pt x 216.81pt>
 File: sg_saa_animations/1_draws.pdf Graphic file (type pdf)
 <use sg_saa_animations/1_draws.pdf, page 20>
 Package luatex.def Info: sg_saa_animations/1_draws.pdf , page20 used on input l
-ine 302.
+ine 304.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/1_draws.pdf> <a0,fr19>
 [15
@@ -1698,14 +1698,14 @@ ine 302.
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 1>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page1 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr0>
 <sg_saa_animations/2_sg.pdf, id=411, page=2, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 2>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page2 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf>
 <a1,fr1>
@@ -1713,14 +1713,14 @@ Package luatex.def Info: sg_saa_animations/2_sg.pdf , page2 used on input line
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 3>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page3 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr2>
 <sg_saa_animations/2_sg.pdf, id=417, page=4, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 4>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page4 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf>
 <a1,fr3>
@@ -1728,14 +1728,14 @@ Package luatex.def Info: sg_saa_animations/2_sg.pdf , page4 used on input line
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 5>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page5 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr4>
 <sg_saa_animations/2_sg.pdf, id=423, page=6, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 6>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page6 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf>
 <a1,fr5>
@@ -1743,14 +1743,14 @@ Package luatex.def Info: sg_saa_animations/2_sg.pdf , page6 used on input line
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 7>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page7 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr6>
 <sg_saa_animations/2_sg.pdf, id=429, page=8, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 8>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page8 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf>
 <a1,fr7>
@@ -1758,14 +1758,14 @@ Package luatex.def Info: sg_saa_animations/2_sg.pdf , page8 used on input line
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 9>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page9 used on input line 
-307.
+311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr8>
 <sg_saa_animations/2_sg.pdf, id=435, page=10, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 10>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page10 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf>
 <a1,fr9>
@@ -1773,14 +1773,14 @@ Package luatex.def Info: sg_saa_animations/2_sg.pdf , page10 used on input line
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 11>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page11 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr10>
 <sg_saa_animations/2_sg.pdf, id=441, page=12, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 12>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page12 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf>
 <a1,fr11>
@@ -1788,210 +1788,210 @@ Package luatex.def Info: sg_saa_animations/2_sg.pdf , page12 used on input line
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 13>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page13 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr12>
 <sg_saa_animations/2_sg.pdf, id=447, page=14, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 14>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page14 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr13>
 <sg_saa_animations/2_sg.pdf, id=450, page=15, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 15>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page15 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr14>
 <sg_saa_animations/2_sg.pdf, id=453, page=16, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 16>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page16 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr15>
 <sg_saa_animations/2_sg.pdf, id=456, page=17, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 17>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page17 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr16>
 <sg_saa_animations/2_sg.pdf, id=459, page=18, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 18>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page18 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr17>
 <sg_saa_animations/2_sg.pdf, id=462, page=19, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 19>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page19 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr18>
 <sg_saa_animations/2_sg.pdf, id=465, page=20, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 20>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page20 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr19>
 <sg_saa_animations/2_sg.pdf, id=468, page=21, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 21>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page21 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr20>
 <sg_saa_animations/2_sg.pdf, id=471, page=22, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 22>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page22 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr21>
 <sg_saa_animations/2_sg.pdf, id=474, page=23, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 23>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page23 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr22>
 <sg_saa_animations/2_sg.pdf, id=477, page=24, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 24>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page24 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr23>
 <sg_saa_animations/2_sg.pdf, id=480, page=25, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 25>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page25 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr24>
 <sg_saa_animations/2_sg.pdf, id=483, page=26, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 26>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page26 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr25>
 <sg_saa_animations/2_sg.pdf, id=486, page=27, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 27>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page27 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr26>
 <sg_saa_animations/2_sg.pdf, id=489, page=28, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 28>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page28 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr27>
 <sg_saa_animations/2_sg.pdf, id=492, page=29, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 29>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page29 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr28>
 <sg_saa_animations/2_sg.pdf, id=495, page=30, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 30>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page30 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr29>
 <sg_saa_animations/2_sg.pdf, id=498, page=31, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 31>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page31 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr30>
 <sg_saa_animations/2_sg.pdf, id=501, page=32, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 32>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page32 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr31>
 <sg_saa_animations/2_sg.pdf, id=504, page=33, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 33>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page33 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr32>
 <sg_saa_animations/2_sg.pdf, id=507, page=34, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 34>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page34 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr33>
 <sg_saa_animations/2_sg.pdf, id=510, page=35, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 35>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page35 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr34>
 <sg_saa_animations/2_sg.pdf, id=513, page=36, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 36>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page36 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr35>
 <sg_saa_animations/2_sg.pdf, id=516, page=37, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 37>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page37 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr36>
 <sg_saa_animations/2_sg.pdf, id=519, page=38, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 38>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page38 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr37>
 <sg_saa_animations/2_sg.pdf, id=522, page=39, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 39>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page39 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr38>
 <sg_saa_animations/2_sg.pdf, id=525, page=40, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 40>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page40 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr39>
 <sg_saa_animations/2_sg.pdf, id=528, page=41, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 41>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page41 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr40>
 <sg_saa_animations/2_sg.pdf, id=531, page=42, 462.528pt x 216.81pt>
 File: sg_saa_animations/2_sg.pdf Graphic file (type pdf)
 <use sg_saa_animations/2_sg.pdf, page 42>
 Package luatex.def Info: sg_saa_animations/2_sg.pdf , page42 used on input line
- 307.
+ 311.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/2_sg.pdf> <a1,fr41> [16
 
@@ -2000,105 +2000,105 @@ Package luatex.def Info: sg_saa_animations/2_sg.pdf , page42 used on input line
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 1>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page1 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr0>
 <sg_saa_animations/3_saa.pdf, id=754, page=2, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 2>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page2 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr1>
 <sg_saa_animations/3_saa.pdf, id=757, page=3, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 3>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page3 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr2>
 <sg_saa_animations/3_saa.pdf, id=760, page=4, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 4>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page4 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr3>
 <sg_saa_animations/3_saa.pdf, id=763, page=5, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 5>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page5 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr4>
 <sg_saa_animations/3_saa.pdf, id=766, page=6, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 6>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page6 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr5>
 <sg_saa_animations/3_saa.pdf, id=769, page=7, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 7>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page7 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr6>
 <sg_saa_animations/3_saa.pdf, id=772, page=8, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 8>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page8 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr7>
 <sg_saa_animations/3_saa.pdf, id=775, page=9, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 9>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page9 used on input line
- 312.
+ 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr8>
 <sg_saa_animations/3_saa.pdf, id=778, page=10, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 10>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page10 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr9>
 <sg_saa_animations/3_saa.pdf, id=781, page=11, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 11>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page11 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr10>
 <sg_saa_animations/3_saa.pdf, id=784, page=12, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 12>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page12 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr11>
 <sg_saa_animations/3_saa.pdf, id=787, page=13, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 13>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page13 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr12>
 <sg_saa_animations/3_saa.pdf, id=790, page=14, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 14>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page14 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr13>
 <sg_saa_animations/3_saa.pdf, id=793, page=15, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 15>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page15 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf>
 <a2,fr14>
@@ -2106,147 +2106,147 @@ e 312.
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 16>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page16 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr15>
 <sg_saa_animations/3_saa.pdf, id=799, page=17, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 17>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page17 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr16>
 <sg_saa_animations/3_saa.pdf, id=802, page=18, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 18>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page18 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr17>
 <sg_saa_animations/3_saa.pdf, id=805, page=19, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 19>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page19 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr18>
 <sg_saa_animations/3_saa.pdf, id=808, page=20, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 20>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page20 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr19>
 <sg_saa_animations/3_saa.pdf, id=811, page=21, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 21>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page21 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr20>
 <sg_saa_animations/3_saa.pdf, id=814, page=22, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 22>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page22 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr21>
 <sg_saa_animations/3_saa.pdf, id=817, page=23, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 23>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page23 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr22>
 <sg_saa_animations/3_saa.pdf, id=820, page=24, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 24>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page24 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr23>
 <sg_saa_animations/3_saa.pdf, id=823, page=25, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 25>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page25 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr24>
 <sg_saa_animations/3_saa.pdf, id=826, page=26, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 26>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page26 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr25>
 <sg_saa_animations/3_saa.pdf, id=829, page=27, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 27>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page27 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr26>
 <sg_saa_animations/3_saa.pdf, id=832, page=28, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 28>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page28 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr27>
 <sg_saa_animations/3_saa.pdf, id=835, page=29, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 29>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page29 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr28>
 <sg_saa_animations/3_saa.pdf, id=838, page=30, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 30>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page30 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr29>
 <sg_saa_animations/3_saa.pdf, id=841, page=31, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 31>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page31 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr30>
 <sg_saa_animations/3_saa.pdf, id=844, page=32, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 32>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page32 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr31>
 <sg_saa_animations/3_saa.pdf, id=847, page=33, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 33>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page33 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr32>
 <sg_saa_animations/3_saa.pdf, id=850, page=34, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 34>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page34 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr33>
 <sg_saa_animations/3_saa.pdf, id=853, page=35, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 35>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page35 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr34>
 <sg_saa_animations/3_saa.pdf, id=856, page=36, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 36>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page36 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf>
 <a2,fr35>
@@ -2254,91 +2254,91 @@ e 312.
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 37>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page37 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr36>
 <sg_saa_animations/3_saa.pdf, id=862, page=38, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 38>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page38 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr37>
 <sg_saa_animations/3_saa.pdf, id=865, page=39, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 39>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page39 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr38>
 <sg_saa_animations/3_saa.pdf, id=868, page=40, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 40>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page40 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr39>
 <sg_saa_animations/3_saa.pdf, id=871, page=41, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 41>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page41 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr40>
 <sg_saa_animations/3_saa.pdf, id=874, page=42, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 42>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page42 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr41>
 <sg_saa_animations/3_saa.pdf, id=877, page=43, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 43>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page43 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr42>
 <sg_saa_animations/3_saa.pdf, id=880, page=44, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 44>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page44 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr43>
 <sg_saa_animations/3_saa.pdf, id=883, page=45, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 45>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page45 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr44>
 <sg_saa_animations/3_saa.pdf, id=886, page=46, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 46>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page46 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr45>
 <sg_saa_animations/3_saa.pdf, id=889, page=47, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 47>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page47 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr46>
 <sg_saa_animations/3_saa.pdf, id=892, page=48, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 48>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page48 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr47>
 <sg_saa_animations/3_saa.pdf, id=895, page=49, 462.528pt x 216.81pt>
 File: sg_saa_animations/3_saa.pdf Graphic file (type pdf)
 <use sg_saa_animations/3_saa.pdf, page 49>
 Package luatex.def Info: sg_saa_animations/3_saa.pdf , page49 used on input lin
-e 312.
+e 318.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/3_saa.pdf> <a2,fr48> [17
 
@@ -2347,14 +2347,14 @@ e 312.
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 1>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page1 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr0>
 <sg_saa_animations/4_ensemble.pdf, id=1052, page=2, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 2>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page2 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf>
 <a3,fr1>
@@ -2362,49 +2362,49 @@ Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page2 used on input
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 3>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page3 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr2>
 <sg_saa_animations/4_ensemble.pdf, id=1058, page=4, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 4>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page4 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr3>
 <sg_saa_animations/4_ensemble.pdf, id=1061, page=5, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 5>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page5 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr4>
 <sg_saa_animations/4_ensemble.pdf, id=1064, page=6, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 6>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page6 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr5>
 <sg_saa_animations/4_ensemble.pdf, id=1067, page=7, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 7>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page7 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr6>
 <sg_saa_animations/4_ensemble.pdf, id=1070, page=8, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 8>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page8 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr7>
 <sg_saa_animations/4_ensemble.pdf, id=1073, page=9, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 9>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page9 used on input
- line 317.
+ line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf>
 <a3,fr8>
@@ -2412,35 +2412,35 @@ Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page9 used on input
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 10>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page10 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr9>
 <sg_saa_animations/4_ensemble.pdf, id=1079, page=11, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 11>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page11 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr10>
 <sg_saa_animations/4_ensemble.pdf, id=1082, page=12, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 12>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page12 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr11>
 <sg_saa_animations/4_ensemble.pdf, id=1085, page=13, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 13>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page13 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr12>
 <sg_saa_animations/4_ensemble.pdf, id=1088, page=14, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 14>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page14 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf>
 <a3,fr13>
@@ -2448,35 +2448,35 @@ t line 317.
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 15>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page15 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr14>
 <sg_saa_animations/4_ensemble.pdf, id=1094, page=16, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 16>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page16 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr15>
 <sg_saa_animations/4_ensemble.pdf, id=1097, page=17, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 17>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page17 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr16>
 <sg_saa_animations/4_ensemble.pdf, id=1100, page=18, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 18>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page18 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr17>
 <sg_saa_animations/4_ensemble.pdf, id=1103, page=19, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 19>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page19 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf>
 <a3,fr18>
@@ -2484,59 +2484,59 @@ t line 317.
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 20>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page20 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr19>
 <sg_saa_animations/4_ensemble.pdf, id=1109, page=21, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 21>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page21 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr20>
 <sg_saa_animations/4_ensemble.pdf, id=1112, page=22, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 22>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page22 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr21>
 <sg_saa_animations/4_ensemble.pdf, id=1115, page=23, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 23>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page23 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf> <a3,fr22>
 <sg_saa_animations/4_ensemble.pdf, id=1118, page=24, 462.528pt x 216.81pt>
 File: sg_saa_animations/4_ensemble.pdf Graphic file (type pdf)
 <use sg_saa_animations/4_ensemble.pdf, page 24>
 Package luatex.def Info: sg_saa_animations/4_ensemble.pdf , page24 used on inpu
-t line 317.
+t line 325.
 (luatex.def)             Requested size: 462.52686pt x 216.80946pt.
 <./sg_saa_animations/4_ensemble.pdf>
 <a3,fr23> [18
 
 ]
-Overfull \vbox (13.48967pt too high) detected at line 421
+Overfull \vbox (13.48967pt too high) detected at line 429
  []
 
 [19
 
 ]
-Overfull \vbox (13.48967pt too high) detected at line 421
+Overfull \vbox (13.48967pt too high) detected at line 429
  []
 
 [20
 
 ]
-Overfull \vbox (13.48967pt too high) detected at line 421
+Overfull \vbox (13.48967pt too high) detected at line 429
  []
 
 [21
 
 ]
-Overfull \vbox (13.48967pt too high) detected at line 421
+Overfull \vbox (13.48967pt too high) detected at line 429
  []
 
 [22
@@ -2590,10 +2590,10 @@ tlig;+tnum;+smcp;"
 File: figure/posterior_mean_graph-1.png Graphic file (type png)
 <use figure/posterior_mean_graph-1.png>
 Package luatex.def Info: figure/posterior_mean_graph-1.png  used on input line 
-563.
+571.
 (luatex.def)             Requested size: 301.14778pt x 200.65958pt.
 
-Overfull \vbox (25.18163pt too high) detected at line 563
+Overfull \vbox (25.18163pt too high) detected at line 571
  []
 
 [27
@@ -2602,10 +2602,10 @@ Overfull \vbox (25.18163pt too high) detected at line 563
 <figure/runtimes_graph-1.png, id=1252, 614.295pt x 409.2891pt>
 File: figure/runtimes_graph-1.png Graphic file (type png)
 <use figure/runtimes_graph-1.png>
-Package luatex.def Info: figure/runtimes_graph-1.png  used on input line 583.
+Package luatex.def Info: figure/runtimes_graph-1.png  used on input line 591.
 (luatex.def)             Requested size: 271.03113pt x 180.59361pt.
 
-Overfull \vbox (6.0717pt too high) detected at line 583
+Overfull \vbox (6.0717pt too high) detected at line 591
  []
 
 [28
@@ -2615,7 +2615,7 @@ Overfull \vbox (6.0717pt too high) detected at line 583
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 1>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page1 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf>
 <a4,fr0>
@@ -2623,21 +2623,21 @@ input line 632.
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 2>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page2 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr1>
 <sg_saa_animations/5_saa_curvature.pdf, id=1318, page=3, 260.172pt x 216.81pt>
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 3>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page3 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr2>
 <sg_saa_animations/5_saa_curvature.pdf, id=1321, page=4, 260.172pt x 216.81pt>
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 4>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page4 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf>
 <a4,fr3>
@@ -2645,21 +2645,21 @@ input line 632.
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 5>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page5 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr4>
 <sg_saa_animations/5_saa_curvature.pdf, id=1327, page=6, 260.172pt x 216.81pt>
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 6>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page6 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr5>
 <sg_saa_animations/5_saa_curvature.pdf, id=1330, page=7, 260.172pt x 216.81pt>
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 7>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page7 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf>
 <a4,fr6>
@@ -2667,14 +2667,14 @@ input line 632.
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 8>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page8 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr7>
 <sg_saa_animations/5_saa_curvature.pdf, id=1336, page=9, 260.172pt x 216.81pt>
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 9>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page9 used on 
-input line 632.
+input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr8>
 <sg_saa_animations/5_saa_curvature.pdf, id=1339, page=10, 260.172pt x 216.81pt>
@@ -2682,7 +2682,7 @@ input line 632.
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 10>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page10 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf>
 <a4,fr9>
@@ -2691,7 +2691,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page10 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 11>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page11 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr10>
 <sg_saa_animations/5_saa_curvature.pdf, id=1345, page=12, 260.172pt x 216.81pt>
@@ -2699,7 +2699,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page11 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 12>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page12 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr11>
 <sg_saa_animations/5_saa_curvature.pdf, id=1348, page=13, 260.172pt x 216.81pt>
@@ -2707,7 +2707,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page12 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 13>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page13 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf>
 <a4,fr12>
@@ -2716,7 +2716,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page13 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 14>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page14 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr13>
 <sg_saa_animations/5_saa_curvature.pdf, id=1354, page=15, 260.172pt x 216.81pt>
@@ -2724,7 +2724,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page14 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 15>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page15 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr14>
 <sg_saa_animations/5_saa_curvature.pdf, id=1357, page=16, 260.172pt x 216.81pt>
@@ -2732,7 +2732,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page15 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 16>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page16 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf>
 <a4,fr15>
@@ -2741,7 +2741,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page16 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 17>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page17 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr16>
 <sg_saa_animations/5_saa_curvature.pdf, id=1363, page=18, 260.172pt x 216.81pt>
@@ -2749,7 +2749,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page17 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 18>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page18 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr17>
 <sg_saa_animations/5_saa_curvature.pdf, id=1366, page=19, 260.172pt x 216.81pt>
@@ -2757,7 +2757,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page18 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 19>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page19 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf>
 <a4,fr18>
@@ -2766,7 +2766,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page19 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 20>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page20 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr19>
 <sg_saa_animations/5_saa_curvature.pdf, id=1372, page=21, 260.172pt x 216.81pt>
@@ -2774,7 +2774,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page20 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 21>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page21 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr20>
 <sg_saa_animations/5_saa_curvature.pdf, id=1375, page=22, 260.172pt x 216.81pt>
@@ -2782,7 +2782,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page21 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 22>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page22 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf>
 <a4,fr21>
@@ -2791,7 +2791,7 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page22 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 23>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page23 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr22>
 <sg_saa_animations/5_saa_curvature.pdf, id=1381, page=24, 260.172pt x 216.81pt>
@@ -2799,10 +2799,10 @@ Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page23 used on
 File: sg_saa_animations/5_saa_curvature.pdf Graphic file (type pdf)
 <use sg_saa_animations/5_saa_curvature.pdf, page 24>
 Package luatex.def Info: sg_saa_animations/5_saa_curvature.pdf , page24 used on
- input line 632.
+ input line 640.
 (luatex.def)             Requested size: 260.17134pt x 216.80946pt.
 <./sg_saa_animations/5_saa_curvature.pdf> <a4,fr23>
-Overfull \vbox (4.54155pt too high) detected at line 632
+Overfull \vbox (4.54155pt too high) detected at line 640
  []
 
 [29
@@ -2812,10 +2812,10 @@ Overfull \vbox (4.54155pt too high) detected at line 632
 File: figure/posterior_sd_graph-1.png Graphic file (type png)
 <use figure/posterior_sd_graph-1.png>
 Package luatex.def Info: figure/posterior_sd_graph-1.png  used on input line 64
-1.
+9.
 (luatex.def)             Requested size: 301.14778pt x 200.65958pt.
 
-Overfull \vbox (15.98167pt too high) detected at line 641
+Overfull \vbox (15.98167pt too high) detected at line 649
  []
 
 [30
@@ -2827,7 +2827,7 @@ Overfull \vbox (15.98167pt too high) detected at line 641
 ] [33
 
 ] (./main.bbl)
-Overfull \vbox (18.89192pt too high) detected at line 737
+Overfull \vbox (18.89192pt too high) detected at line 745
  []
 
 [34
@@ -2889,12 +2889,12 @@ Overfull \vbox (23.61061pt too high) detected at line 97
 ] [49
 
 ])
-Overfull \hbox (7.36436pt too wide) detected at line 808
+Overfull \hbox (7.36436pt too wide) detected at line 816
 []
  []
 
 
-Overfull \vbox (11.71523pt too high) detected at line 808
+Overfull \vbox (11.71523pt too high) detected at line 816
  []
 
 [50
@@ -2944,7 +2944,7 @@ onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (50 pages, 3056342 bytes).
+Output written on main.pdf (50 pages, 3057799 bytes).
 
 PDF statistics: 1738 PDF objects out of 2073 (max. 8388607)
  971 compressed objects within 10 object streams
