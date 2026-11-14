@@ -3,44 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: references.bib
-You've used 12 entries,
+Warning--entry type for "campbell:2026:LargescaleEmpiricalTuning2026" isn't style-file defined
+--line 470 of file references.bib
+You've used 14 entries,
             2773 wiz_defined-function locations,
-            673 strings with 7238 characters,
-and the built_in function-call counts, 6157 in all, are:
-= -- 536
-> -- 422
-< -- 3
-+ -- 140
-- -- 128
-* -- 550
-:= -- 966
-add.period$ -- 42
-call.type$ -- 12
-change.case$ -- 78
-chr.to.int$ -- 12
-cite$ -- 24
-duplicate$ -- 269
-empty$ -- 449
-format.name$ -- 140
-if$ -- 1273
+            685 strings with 7780 characters,
+and the built_in function-call counts, 7279 in all, are:
+= -- 636
+> -- 491
+< -- 4
++ -- 163
+- -- 149
+* -- 638
+:= -- 1124
+add.period$ -- 48
+call.type$ -- 14
+change.case$ -- 91
+chr.to.int$ -- 14
+cite$ -- 28
+duplicate$ -- 320
+empty$ -- 539
+format.name$ -- 163
+if$ -- 1519
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 73
-num.names$ -- 50
-pop$ -- 142
+missing$ -- 13
+newline$ -- 83
+num.names$ -- 58
+pop$ -- 174
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 77
 quote$ -- 0
-skip$ -- 209
+skip$ -- 257
 stack$ -- 0
-substring$ -- 168
-swap$ -- 34
-text.length$ -- 3
+substring$ -- 212
+swap$ -- 48
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 132
+type$ -- 154
 warning$ -- 0
-while$ -- 50
+while$ -- 59
 width$ -- 0
-write$ -- 171
+write$ -- 196
+(There was 1 warning)

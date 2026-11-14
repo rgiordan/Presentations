@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,13 @@ J.~Burroni, J.~Domke, and D.~Sheldon.
 \newblock Sample average approximation for {Black-Box} {VI}.
 \newblock \emph{arXiv preprint arXiv:2304.06803}, 2023.
 
+\bibitem[Campbell et~al.(2026)Campbell, Huggins, Kim, and
+  Margossian]{campbell:2026:LargescaleEmpiricalTuning2026}
+Trevor Campbell, Jonathan~H. Huggins, Kyurae Kim, and Charles~C. Margossian.
+\newblock Large-scale empirical tuning and comparison of default optimizers for
+  variational inference, 2026.
+\newblock URL \url{http://arxiv.org/abs/2606.07841}.
+
 \bibitem[Giordano et~al.(2022)Giordano, Liu, Jordan, and
   Broderick]{giordano:2022:bnp}
 R.~Giordano, R.~Liu, M.~I. Jordan, and T.~Broderick.
@@ -29,6 +36,14 @@ R.~Giordano, M.~Ingram, and T.~Broderick.
 \newblock Black box variational inference with a deterministic objective:
   {Faster}, more accurate, and even more black box.
 \newblock \emph{arXiv preprint arXiv:2304.05527}, 2023.
+
+\bibitem[Giordano et~al.(2015)Giordano, Broderick, and
+  Jordan]{giordano:2015:lrvb}
+R.~J. Giordano, T.~Broderick, and M.~I. Jordan.
+\newblock Linear response methods for accurate covariance estimates from mean
+  field variational {B}ayes.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  1441--1449, 2015.
 
 \bibitem[Giordano et~al.(2018)Giordano, Broderick, and
   Jordan]{giordano:2018:covariances}

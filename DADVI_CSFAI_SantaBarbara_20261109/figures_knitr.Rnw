@@ -103,6 +103,21 @@ source("figures_knitr/runtimes_nonarm.R",
 
 
 
+\newcommand{\RuntimeCombined}{
+<<>>=
+figcap <- paste0(
+    "Runtimes for the experiments ",
+    "divided by the corresponding value for DADVI."
+)
+SetImageSize()
+@
+<<runtimes_graph, cache=knitr_cache, fig.show='hold', fig.cap=figcap>>=
+grid.arrange(runtime_dadvi_plot, runtime_bigmodels_plot, method_legend,
+    widths=c(2,2,1))
+@
+}
+
+
 <<posterior_common_caption>>=
 # Make a function to ensure I don't overwrite it
 GetPostComparisonText <- function() {

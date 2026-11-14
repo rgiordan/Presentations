@@ -98,9 +98,11 @@ N_SAA_GD = len(saa_eta) - 1
 
 ens_sg = [run_sg(draws(SEED_ENS_SG + r, SG_ITERS)) for r in range(N_ENS)]
 ens_saa = []
+ens_saa_h = []
 for r in range(N_ENS):
     Fh, dFh, d2Fh = saa_parts(draws(SEED_ENS_SAA + r, N_SAA))
     ens_saa.append((Fh, newton(dFh, d2Fh, eta_star)))
+    ens_saa_h.append(d2Fh(ens_saa[-1][1]))     # curvature of F-hat at its minimum
 
 # ----------------------------- drawing helpers ------------------------------
 def base_axes(ax, title=None, subtitle=None):
@@ -235,6 +237,22 @@ def frame_ens_saa(ax, j):
                 alpha=1.0 if newest else 0.5, zorder=4)
         mark_min(ax, m, Fh(m), newest)
 
+# ----------------------------- animation 5: SAA curvature -------------------
+QUAD_HALF = 1.6                  # half-width of the plotted quadratic approximation
+
+def frame_saa_curv(ax, j):
+    base_axes(ax, r"SAA: $\hat\eta$ and local curvature", rf"$N={N_SAA}$ draws each; purple = quadratic at first $\hat\eta$")
+    n = min(j + 1, N_ENS)
+    for r in range(n):
+        newest = (r == n - 1 and j < N_ENS)
+        Fh, m = ens_saa[r]
+        ax.plot(grid, Fh(grid), color=RED, ls="--", lw=1.6 if newest else 1.0,
+                alpha=1.0 if newest else 0.5, zorder=4)
+        mark_min(ax, m, Fh(m), newest)
+    Fh, m = ens_saa[0]           # quadratic approximation for the first replicate only
+    xs = np.linspace(m - QUAD_HALF, m + QUAD_HALF, 200)
+    ax.plot(xs, Fh(m) + 0.5 * ens_saa_h[0] * (xs - m) ** 2, color=PURPLE, lw=1.8, zorder=5)
+
 # ----------------------------- rendering ------------------------------------
 _PDF = {"pages": None, "reps": 1}   # multipage-PDF sink for the LaTeX `animate` package
 
@@ -257,6 +275,12 @@ def save_one(path, draw):
     fig.subplots_adjust(left=0.09, right=0.98, bottom=0.09, top=0.97)
     _finish(fig, path)
 
+def save_one_titled(path, draw):
+    fig, ax = plt.subplots(figsize=FIGSIZE_1)
+    draw(ax)
+    fig.subplots_adjust(left=0.09, right=0.98, bottom=0.09, top=0.83)
+    _finish(fig, path)
+
 ANIMATIONS = {
     # name: (n_frames, render(path, k), {frame index: hold ms})
     "1_draws": (N1, lambda p, k: save_one(p, lambda ax: frame_draws(ax, k)), {0: 1500}),
@@ -266,6 +290,7 @@ ANIMATIONS = {
               {N_SAA - 1: 1200, N_SAA: 1500}),
     "4_ensemble": (N4, lambda p, k: save_two(p, lambda ax: frame_ens_sg(ax, k),
                                              lambda ax: frame_ens_saa(ax, k)), {}),
+    "5_saa_curvature": (N4, lambda p, k: save_one_titled(p, lambda ax: frame_saa_curv(ax, k)), {}),
 }
 
 if __name__ == "__main__":

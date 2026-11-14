@@ -5,7 +5,11 @@
 # to simulation and model parameters.
 DefineMacro <- function(macro_name, value, digits=3) {
   #sprintf_code <- paste("%0.", digits, "f", sep="")
-  value_string <- format(value, big.mark=",", digits=digits, scientific=FALSE)
+  # format() requires digits >= 1, so round explicitly for integers.
+  if (is.numeric(value) && digits == 0) {
+    value <- round(value)
+  }
+  value_string <- format(value, big.mark=",", digits=max(digits, 1), scientific=FALSE)
   cat("\\newcommand{\\", macro_name, "}{", value_string, "}\n", sep="")
 }
 

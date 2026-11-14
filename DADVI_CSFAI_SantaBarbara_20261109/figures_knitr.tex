@@ -27,8 +27,8 @@
 \newcommand{\ARMMaxNUTSMinutes}{16}
 \newcommand{\DADVINumDraws}{30}
 \newcommand{\CoverageNumBins}{100}
-\newcommand{\CoverageNumBinsPotus}{95}
-\newcommand{\ArmModels}{wells\_dist100 (2), nes2000\_vote (2), separation (2), wells\_d100ars (3), earn\_height (3), electric\_one\_pred (3), radon\_complete\_pool (3), sesame\_one\_pred\_2b (3), logearn\_height (3), kidscore\_momhs (3), kidscore\_momiq (3), sesame\_one\_pred\_a (3), earnings1 (3), sesame\_one\_pred\_b (3), electric\_multi\_preds (4), earnings2 (4), kidiq\_multi\_preds (4), wells\_interaction\_c (4), wells\_interaction (4), wells\_dae (4), congress (4), logearn\_height\_male (4), logearn\_logheight (4), mesquite\_volume (5), logearn\_interaction (5), earnings\_interactions (5), ideo\_reparam (5), wells\_dae\_inter (5), wells\_dae\_c (5), kidscore\_momwork (5), kidiq\_interaction (5), wells\_daae\_c (6), wells\_dae\_inter\_c (7), mesquite\_vash (7), wells\_predicted\_log (7), mesquite\_log (8), mesquite\_vas (8), mesquite (8), sesame\_multi\_preds\_3b (9), sesame\_multi\_preds\_3a (9), pilots (17), election88 (53), radon\_intercept (88), radon\_no\_pool (89), radon\_group (90), electric (100), electric\_1b (101), electric\_1a (109), electric\_1c (114), hiv (170), hiv\_inter (171), radon\_vary\_si (174), radon\_inter\_vary (176)}
+\newcommand{\CoverageNumBinsPotus}{100}
+\newcommand{\ArmModels}{separation (2), wells\_dist100 (2), nes2000\_vote (2), wells\_d100ars (3), earn\_height (3), sesame\_one\_pred\_b (3), radon\_complete\_pool (3), earnings1 (3), kidscore\_momiq (3), kidscore\_momhs (3), electric\_one\_pred (3), sesame\_one\_pred\_a (3), sesame\_one\_pred\_2b (3), logearn\_height (3), electric\_multi\_preds (4), congress (4), wells\_interaction\_c (4), earnings2 (4), logearn\_logheight (4), kidiq\_multi\_preds (4), wells\_dae (4), wells\_interaction (4), logearn\_height\_male (4), ideo\_reparam (5), logearn\_interaction (5), kidscore\_momwork (5), kidiq\_interaction (5), wells\_dae\_c (5), mesquite\_volume (5), earnings\_interactions (5), wells\_dae\_inter (5), wells\_daae\_c (6), wells\_dae\_inter\_c (7), mesquite\_vash (7), wells\_predicted\_log (7), mesquite (8), mesquite\_vas (8), mesquite\_log (8), sesame\_multi\_preds\_3b (9), sesame\_multi\_preds\_3a (9), pilots (17), election88 (53), radon\_intercept (88), radon\_no\_pool (89), radon\_group (90), electric (100), electric\_1b (101), electric\_1a (109), electric\_1c (114), hiv (170), hiv\_inter (171), radon\_vary\_si (174), radon\_inter\_vary (176)}
 \newcommand{\TennisNumCGParams}{20}
 \newcommand{\OccNumCGParams}{20}
 
@@ -43,15 +43,10 @@
 \newcommand{\TracesARM}{
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
-{\centering \includegraphics[width=0.98\linewidth,height=0.653\linewidth]{figure/traces_arm_graph-1} 
 
-}
-
-\caption[Optimization traces for the ARM models]{Optimization traces for the ARM models.  Black dots show the termination point of each method. Dots above the horizontal black line mean that DADVI found a better ELBO. Dots to the right of the black line mean that DADVI terminated sooner in terms of model evaluations.}\label{fig:traces_arm_graph}
-\end{figure}
-
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `TeX()`:\\\#\# ! Error while converting LaTeX into valid plotmath.\\\#\# Original string: Normalized number of model evaluations \$i\_\{method\} / i\textasciicircum{}\{*\}\_\{DADVI\}\$ \\\#\# \\\#\# (Values > 1 are log10 transformed)\\\#\# Parsed expression: 'Normalized number of model evaluations '*i\_\{method\}/i\textasciicircum{}\{*\}\_\{DADVI\}\$*group('(', phantom(), '.')*Values * \{phantom() > phantom()\} * 1*are*log10*transformed*group(')', phantom(), '.')\\\#\# Error in str2expression(rendered) : <text>:1:45: unexpected '\{'\\\#\# 1: 'Normalized number of model evaluations '*i\_\{\\\#\# \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textasciicircum{}}}\end{kframe}
 \end{knitrout}
 }
 
@@ -59,15 +54,10 @@
 \newcommand{\TracesNonARM}{
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
-{\centering \includegraphics[width=0.98\linewidth,height=0.653\linewidth]{figure/traces_nonarm_graph-1} 
 
-}
-
-\caption[Traces for non-ARM models]{Traces for non-ARM models.  Black dots show the termination point of each method. Dots above the horizontal black line mean that DADVI found a better ELBO. Dots to the right of the black line mean that DADVI terminated sooner in terms of model evaluations.}\label{fig:traces_nonarm_graph}
-\end{figure}
-
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `TeX()`:\\\#\# ! Error while converting LaTeX into valid plotmath.\\\#\# Original string: Normalized number of model evaluations \$i\_\{method\} / i\textasciicircum{}\{*\}\_\{DADVI\}\$ \\\#\# \\\#\# (Values > 1 are log10 transformed)\\\#\# Parsed expression: 'Normalized number of model evaluations '*i\_\{method\}/i\textasciicircum{}\{*\}\_\{DADVI\}\$*group('(', phantom(), '.')*Values * \{phantom() > phantom()\} * 1*are*log10*transformed*group(')', phantom(), '.')\\\#\# Error in str2expression(rendered) : <text>:1:45: unexpected '\{'\\\#\# 1: 'Normalized number of model evaluations '*i\_\{\\\#\# \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textasciicircum{}}}\end{kframe}
 \end{knitrout}
 }
 
@@ -107,6 +97,22 @@
 }
 
 
+
+
+\newcommand{\RuntimeCombined}{
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[!h]
+
+{\centering \includegraphics[width=0.98\linewidth,height=0.653\linewidth]{figure/runtimes_graph-1} 
+
+}
+
+\caption[Runtimes for the experiments divided by the corresponding value for DADVI]{Runtimes for the experiments divided by the corresponding value for DADVI.}\label{fig:runtimes_graph}
+\end{figure}
+
+\end{knitrout}
+}
 
 
 

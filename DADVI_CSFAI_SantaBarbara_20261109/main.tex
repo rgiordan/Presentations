@@ -234,6 +234,7 @@ We will study a particular BBVI method, \textbf{ADVI} \citep{kucukelbir:2017:adv
 \end{itemize}
 \end{itemize}
 %
+\pause
 
 Then variational inference takes the form of
 \begin{align*}
@@ -278,29 +279,44 @@ methods to solve it:
     \item Minimize a stochastic approximations to $F(\eta)$ (with
         exact gradients thereof)
     \begin{itemize}
-        \item The ``sample average approximation'' \textbf{(our proposal)}
+        \item The ``sample average approximation'' \citep{kim:2015:guidetosaa} 
+        \item \textbf{(Our proposal is to use the SAA for BBVI.)}
     \end{itemize}
 \end{itemize}
 %
 
 
-% ADVI specifies a family $\qdom$ of $\thetadim$-dimensional Gaussian
-% distributions, parameterized by $\eta \in \etadom$, encoding the means and
-% covariances.
-% %
-% The covariances can either be
-% %
-% \begin{itemize}
-% \item Diagonal: ``Mean-field'' (MF) approximation, $\etadim = 2 \thetadim$
-% \item Any PD matrix: 
-%     ``Full-rank'' (FR) approximation, 
-%         $\etadim = \thetadim + \thetadim  (\thetadim - 1) / 2$
-% \end{itemize}
-%
-
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Random objectives}
+  \centering
+  % single panel: use a smaller width
+  \animategraphics[width=0.6\textwidth,controls=all,autoplay]{3}{sg_saa_animations/1_draws}{}{}
+\end{frame}
+
+\begin{frame}{Stochastic gradient}
+  \centering
+  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/2_sg}{}{}
+\end{frame}
+
+\begin{frame}{Sample average approximation}
+  \centering
+  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/3_saa}{}{}
+\end{frame}
+
+\begin{frame}{Both are random}
+  \centering
+  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/4_ensemble}{}{}
+\end{frame}
+
+    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -405,34 +421,6 @@ Take \blue{better steps}, easily \green{assess convergence}, with less tuning.
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\begin{frame}{Random objectives}
-  \centering
-  % single panel: use a smaller width
-  \animategraphics[width=0.6\textwidth,controls=all,autoplay]{3}{sg_saa_animations/1_draws}{}{}
-\end{frame}
-
-\begin{frame}{Stochastic gradient}
-  \centering
-  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/2_sg}{}{}
-\end{frame}
-
-\begin{frame}{Sample average approximation}
-  \centering
-  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/3_saa}{}{}
-\end{frame}
-
-\begin{frame}{Both are random}
-  \centering
-  \animategraphics[width=\textwidth,controls=all,autoplay]{3}{sg_saa_animations/4_ensemble}{}{}
-\end{frame}
-
-    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -578,33 +566,45 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Computational cost for ARM models}
-\RuntimeARM{}
+% \begin{frame}{Computational cost for ARM models}
+% \RuntimeARM{}
+% \end{frame}
+
+
+\begin{frame}{Computational cost comparison}
+
+\begin{minipage}{0.9\textwidth}
+\RuntimeCombined{}
+\end{minipage}
+
+Recent work also showed top performance for an SAA LBFGS
+algorithm in a VI optimization bake-off
+\citep{campbell:2026:LargescaleEmpiricalTuning2026}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Computational cost for non-ARM models}
-    \RuntimeNonARM{}
-\end{frame}
+% \begin{frame}{Computational cost for non-ARM models}
+%     \RuntimeNonARM{}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Optimization traces for ARM models}
-    \TracesARM{}
-\end{frame}
+% \begin{frame}{Optimization traces for ARM models}
+%     \TracesARM{}
+% \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Optimization traces for non-ARM models}
-    \TracesNonARM{}
-\end{frame}
+% \begin{frame}{Optimization traces for non-ARM models}
+%     \TracesNonARM{}
+% \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -615,15 +615,19 @@ We terminated unconverged stochastic ADVI after 100,000 iterations.
 
 $\Rightarrow$ DADVI is faster, simpler, and the posterior means are not worse.
 
-\vspace{3em}
 \textbf{But DADVI can additionally provide:}
 %
 \begin{itemize}
 \item Simple estimates of approximation error
-\item Improved (LR) posterior covariance esimates
+\item Improved (LR) posterior covariance esimates \citep{giordano:2015:lrvb}
 \end{itemize}
+\vspace{3em}
 %
-See paper for details!
+\begin{center}
+\begin{minipage}{0.5\textwidth}
+    \animategraphics[width=\linewidth,controls=all,autoplay]{3}{sg_saa_animations/5_saa_curvature}{}{}
+\end{minipage}
+\end{center}
 
 \end{frame}
 
@@ -643,9 +647,9 @@ See paper for details!
 \begin{frame}{Theory and shortcomings (sketch)}
     %
     \begin{itemize}
-        \item SAA is hardly ever used for BBVI.\footnote{Some exceptions I'm
-        aware of:
-        \citet{giordano:2018:covariances,giordano:2022:bnp,wycoff:2022:sparsebayesianlasso,burroni:2023:saabbvi}.}
+        \item SAA is hardly ever used for BBVI.\footnote{Some exceptions:
+        \citet{giordano:2018:covariances,giordano:2022:bnp,wycoff:2022:sparsebayesianlasso,
+               burroni:2023:saabbvi,campbell:2026:LargescaleEmpiricalTuning2026}.}
         Why not?
         %
         \begin{itemize}
@@ -666,6 +670,8 @@ See paper for details!
                 Gaussian approximations
             \item We conjecture analogous problems with other 
                 expressive approximations
+            \item \textbf{Ongoing work:} developing approximations that support
+                 dense covariances without overfitting.
         \end{itemize}
         %
     \end{itemize}
@@ -689,8 +695,7 @@ See paper for details!
 Objective: Faster, More Accurate, and Even More Black Box.}
 
 Giordano, R.$^*$, Ingram, M.$^*$, Broderick, T.
-($^*$ joint first authors), 2023.
-
+($^*$ joint first authors), JMLR 2024.
 (Arxiv \href{https://arxiv.org/pdf/2304.05527.pdf}{\underline{here}}.)
 
 \vspace{2em}

@@ -13,7 +13,7 @@ library(scales)
 git_repo_loc <- system("git rev-parse --show-toplevel", intern=TRUE)
 paper_directory <- file.path(git_repo_loc, "DADVI_flatiron_20230526")
 
-data_repo <- "/home/rgiordan/Documents/git_repos/DADVI/fd-advi-paper"
+data_repo <- "/home/rgiordan/Documents/git_repos/DADVIPaper"
 data_path <- file.path(data_repo, "experiments_data")
 
 # Plotting and processing functions common to multiple figures

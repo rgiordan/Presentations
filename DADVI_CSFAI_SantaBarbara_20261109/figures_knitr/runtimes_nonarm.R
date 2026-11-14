@@ -67,12 +67,14 @@ method_legend <- GetColorLegend(
 #     layout_matrix=plot_layout)
 
 
-# Op count not meaningful for NUTS
-grid.arrange(
+runtime_bigmodels_plot <-
     runtime_comp_df %>% filter(!is_arm) %>%
         ComputationComparisonBarGraph(runtime_vs_dadvi) +
-        ggtitle("Runtime relative to DADVI") +
-        ylab("Runtime / DADVI runtime\n(log10 scale)"),
+        ylab("Runtime / DADVI runtime\n(log10 scale)")
+# Op count not meaningful for NUTS
+grid.arrange(
+    runtime_bigmodels_plot +
+            ggtitle("Runtime relative to DADVI"),
     runtime_comp_df %>%
         filter(!is_arm, method != "NUTS") %>%
         ComputationComparisonBarGraph(op_count_vs_dadvi) +
